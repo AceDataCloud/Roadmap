@@ -6,6 +6,7 @@ This repo can automatically append merged PRs from the `AceDataCloud` GitHub org
 
 - Script: `scripts/sync_merged_prs_to_daily_updates.py`
 - Workflow: `.github/workflows/sync_merged_prs_daily_updates.yml` (runs hourly + supports manual dispatch)
+- The workflow auto-commits and pushes changes so the website updates.
 
 ### Setup
 
