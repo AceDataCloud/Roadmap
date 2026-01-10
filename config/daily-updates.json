@@ -106,6 +106,21 @@
     },
     {
       "date": "2026-01-10",
+      "title": "Fix installation error for plugins in Dify",
+      "url": "https://github.com/AceDataCloud/Dify/pull/54",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "bugfix",
+        "plugin",
+        "installation",
+        "service"
+      ],
+      "summary": "This update addresses an installation error encountered when using plugins in Dify. Modifications were made to the plugin service to enhance error handling and improve the installation process. The changes ensure a smoother user experience when installing plugins from local packages."
+    },
+    {
+      "date": "2026-01-10",
       "title": "Add SERP plugin for Google search results integration",
       "url": "https://github.com/AceDataCloud/Dify/pull/53",
       "tags": [
