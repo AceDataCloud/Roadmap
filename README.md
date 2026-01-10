@@ -99,9 +99,9 @@ The Roadmap site can display a lightweight revenue snapshot (today / last 7d / l
 - Output: `config/revenue.json`
 - Dependencies: `pip install Django psycopg2-binary`
 - Required env vars:
-  - `PGSQL_HOST`, `PGSQL_PORT`, `PGSQL_USER`, `PGSQL_PASSWORD`, `PGSQL_DATABASE_PLATFORM`
+  - `PGSQL_HOST`, `PGSQL_PORT`, `PGSQL_USER`, `PGSQL_PASSWORD`, `PGSQL_DATABASE`
 - GitHub Actions secrets (recommended):
-  - `PGSQL_HOST`, `PGSQL_PORT`, `PGSQL_USER`, `PGSQL_PASSWORD`, `PGSQL_DATABASE_PLATFORM`
+  - `PGSQL_HOST`, `PGSQL_PORT`, `PGSQL_USER`, `PGSQL_PASSWORD`, `PGSQL_DATABASE`
   - Optional: `ORDERS_TABLE` (defaults to `app_order`)
 
 Example:
@@ -111,6 +111,6 @@ export PGSQL_HOST="your-db-host"
 export PGSQL_PORT="5432"
 export PGSQL_USER="postgres"
 export PGSQL_PASSWORD="..."
-export PGSQL_DATABASE_PLATFORM="acedatacloud_platform"
+export PGSQL_DATABASE="acedatacloud_platform"
 python3 scripts/generate_revenue_snapshot.py
 ```
