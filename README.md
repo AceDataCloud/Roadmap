@@ -100,6 +100,9 @@ The Roadmap site can display a lightweight revenue snapshot (today / last 7d / l
 - Dependencies: `pip install Django psycopg2-binary`
 - Required env vars:
   - `PGSQL_HOST`, `PGSQL_PORT`, `PGSQL_USER`, `PGSQL_PASSWORD`, `PGSQL_DATABASE_PLATFORM`
+- GitHub Actions secrets (recommended):
+  - `PGSQL_HOST`, `PGSQL_PORT`, `PGSQL_USER`, `PGSQL_PASSWORD`, `PGSQL_DATABASE_PLATFORM`
+  - Optional: `ORDERS_TABLE` (defaults to `app_order`)
 
 Example:
 

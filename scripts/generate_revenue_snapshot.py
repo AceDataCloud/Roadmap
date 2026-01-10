@@ -16,7 +16,9 @@ def _default_output_path() -> Path:
 def _atomic_write_json(path: Path, payload: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    tmp.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
     tmp.replace(path)
 
 
@@ -113,7 +115,9 @@ def _django_query(
 
     def _sum_between(start_dt):
         return (
-            qs.filter(created_at__gte=start_dt, created_at__lte=now).aggregate(total=Sum("price")).get("total")
+            qs.filter(created_at__gte=start_dt, created_at__lte=now)
+            .aggregate(total=Sum("price"))
+            .get("total")
             or 0
         )
 
@@ -136,8 +140,12 @@ def main() -> int:
         default=_default_output_path(),
         help="Output JSON path (default: Roadmap/config/revenue.json)",
     )
-    parser.add_argument("--currency", default="USD", help="Currency code for display (default: USD)")
-    parser.add_argument("--user-id", dest="user_id", default=None, help="Optional filter: user_id")
+    parser.add_argument(
+        "--currency", default="USD", help="Currency code for display (default: USD)"
+    )
+    parser.add_argument(
+        "--user-id", dest="user_id", default=None, help="Optional filter: user_id"
+    )
     parser.add_argument(
         "--pay-way",
         dest="pay_ways",
@@ -145,15 +153,36 @@ def main() -> int:
         default=[],
         help="Optional filter: pay_way (repeatable), e.g. --pay-way Stripe",
     )
-    parser.add_argument("--orders-table", default="app_order", help="Orders table name (default: app_order)")
-    parser.add_argument("--pgsql-host", default=_env_str("PGSQL_HOST", "localhost"), help="Postgres host (default: $PGSQL_HOST or localhost)")
-    parser.add_argument("--pgsql-port", type=int, default=_env_int("PGSQL_PORT", 5432), help="Postgres port (default: $PGSQL_PORT or 5432)")
-    parser.add_argument("--pgsql-user", default=_env_str("PGSQL_USER", "postgres"), help="Postgres user (default: $PGSQL_USER or postgres)")
-    parser.add_argument("--pgsql-password", default=_env_str("PGSQL_PASSWORD"), help="Postgres password (default: $PGSQL_PASSWORD)")
+    parser.add_argument(
+        "--orders-table",
+        default="app_order",
+        help="Orders table name (default: app_order)",
+    )
+    parser.add_argument(
+        "--pgsql-host",
+        default=_env_str("PGSQL_HOST", "localhost"),
+        help="Postgres host (default: $PGSQL_HOST or localhost)",
+    )
+    parser.add_argument(
+        "--pgsql-port",
+        type=int,
+        default=_env_int("PGSQL_PORT", 5432),
+        help="Postgres port (default: $PGSQL_PORT or 5432)",
+    )
+    parser.add_argument(
+        "--pgsql-user",
+        default=_env_str("PGSQL_USER", "postgres"),
+        help="Postgres user (default: $PGSQL_USER or postgres)",
+    )
+    parser.add_argument(
+        "--pgsql-password",
+        default=_env_str("PGSQL_PASSWORD"),
+        help="Postgres password (default: $PGSQL_PASSWORD)",
+    )
     parser.add_argument(
         "--pgsql-database",
-        default=_env_str("PGSQL_DATABASE_PLATFORM", "acedatacloud_platform"),
-        help="Postgres database (default: $PGSQL_DATABASE_PLATFORM or acedatacloud_platform)",
+        default=_env_str("PGSQL_DATABASE", "acedatacloud_platform"),
+        help="Postgres database (default: $PGSQL_DATABASE or acedatacloud_platform)",
     )
     args = parser.parse_args()
 
@@ -173,13 +202,17 @@ def main() -> int:
         print(
             "[revenue_snapshot] Failed to query Postgres via Django ORM.\n"
             "  - Install deps: `pip install Django psycopg2-binary`\n"
-            "  - Export PGSQL_HOST/PGSQL_PORT/PGSQL_USER/PGSQL_PASSWORD/PGSQL_DATABASE_PLATFORM\n"
+            "  - Export PGSQL_HOST/PGSQL_PORT/PGSQL_USER/PGSQL_PASSWORD/PGSQL_DATABASE\n"
             f"  - Error: {exc}",
             file=sys.stderr,
         )
         return 2
 
-    payload = {"as_of": orm["as_of"], "currency": str(args.currency), **{k: orm[k] for k in ("today", "last_7d", "last_30d", "last_90d")}}
+    payload = {
+        "as_of": orm["as_of"],
+        "currency": str(args.currency),
+        **{k: orm[k] for k in ("today", "last_7d", "last_30d", "last_90d")},
+    }
 
     _atomic_write_json(Path(args.output), payload)
     print(f"[revenue_snapshot] Wrote {args.output}")
