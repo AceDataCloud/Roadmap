@@ -1,7 +1,9 @@
+const path = require('path');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
-  content: ['./index.html', './assets/**/*.js'],
+  content: [path.join(__dirname, 'index.html'), path.join(__dirname, 'assets/**/*.js')],
   theme: {
     extend: {
       fontFamily: {
@@ -33,4 +35,3 @@ module.exports = {
   },
   plugins: []
 };
-
