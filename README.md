@@ -90,3 +90,24 @@ This repo auto-syncs merged PRs in the `AceDataCloud` GitHub org into `config/da
   - Per-day files: `config/daily-updates/YYYY-MM-DD.json`
   - Cursor/state: `config/pr-sync-state.json`
 - Secrets (optional): `REPO_PAT`, `ACEDATACLOUD_OPENAI_KEY`, `OPENAI_MODEL`, `OPENAI_BASE_URL`
+
+## Revenue Snapshot (Automation)
+
+The Roadmap site can display a lightweight revenue snapshot (today / last 7d / last 30d / last 90d) by reading `config/revenue.json`.
+
+- Script: `scripts/generate_revenue_snapshot.py`
+- Output: `config/revenue.json`
+- Dependencies: `pip install Django psycopg2-binary`
+- Required env vars:
+  - `PGSQL_HOST`, `PGSQL_PORT`, `PGSQL_USER`, `PGSQL_PASSWORD`, `PGSQL_DATABASE_PLATFORM`
+
+Example:
+
+```bash
+export PGSQL_HOST="your-db-host"
+export PGSQL_PORT="5432"
+export PGSQL_USER="postgres"
+export PGSQL_PASSWORD="..."
+export PGSQL_DATABASE_PLATFORM="acedatacloud_platform"
+python3 scripts/generate_revenue_snapshot.py
+```

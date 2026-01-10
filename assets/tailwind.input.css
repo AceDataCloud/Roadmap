@@ -32,10 +32,7 @@
   }
 
   body {
-    background: radial-gradient(1200px 600px at 12% 8%, var(--glowEmerald), transparent 58%),
-      radial-gradient(900px 500px at 86% 18%, var(--glowBlue), transparent 62%),
-      radial-gradient(800px 420px at 65% 92%, var(--glowViolet), transparent 60%),
-      linear-gradient(180deg, var(--bg0), var(--bg1));
+    background: linear-gradient(180deg, var(--bg0), var(--bg1));
   }
 }
 
@@ -72,4 +69,3 @@
     filter: drop-shadow(0 10px 20px rgba(2, 6, 23, 0.6));
   }
 }
-

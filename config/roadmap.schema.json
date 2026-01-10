@@ -83,6 +83,32 @@
         }
       }
     },
+    "founder": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "subtitle", "name", "avatar_url", "introductions"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "subtitle": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "avatar_url": { "type": "string", "minLength": 1 },
+        "github": { "$ref": "#/$defs/link" },
+        "x": { "$ref": "#/$defs/link" },
+        "contribution_image_url": { "type": "string" },
+        "introductions": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "revenue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "subtitle", "source", "currency"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "subtitle": { "type": "string", "minLength": 1 },
+        "source": { "type": "string", "minLength": 1 },
+        "currency": { "type": "string", "minLength": 1 }
+      }
+    },
     "guiding_principles": {
       "type": "object",
       "additionalProperties": false,

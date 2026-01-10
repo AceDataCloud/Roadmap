@@ -11,6 +11,14 @@
         <path d="M19 2l.8 2.7L22 6l-2.2.7L19 9l-.8-2.3L16 6l2.2-1.3L19 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" opacity=".7"/>
       </svg>
     `,
+    cash: (className) => `
+      <svg viewBox="0 0 24 24" fill="none" class="${className}" aria-hidden="true">
+        <path d="M4.5 7.5h15a2 2 0 012 2v5a2 2 0 01-2 2h-15a2 2 0 01-2-2v-5a2 2 0 012-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M12 9.3v5.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M13.8 10.1c-.4-.6-1.1-.9-1.8-.9-1 0-1.8.6-1.8 1.4 0 .9.8 1.3 1.8 1.5 1 .2 1.8.6 1.8 1.5 0 .8-.8 1.4-1.8 1.4-.7 0-1.4-.3-1.8-.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+        <path d="M6.2 10.2a1.6 1.6 0 000 3.6M17.8 10.2a1.6 1.6 0 010 3.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".75"/>
+      </svg>
+    `,
     globe: (className) => `
       <svg viewBox="0 0 24 24" fill="none" class="${className}" aria-hidden="true">
         <path d="M12 22a10 10 0 100-20 10 10 0 000 20z" stroke="currentColor" stroke-width="1.8"/>
@@ -62,6 +70,7 @@
 
   const isDark = () => document.documentElement.classList.contains('dark');
   const currentTheme = () => (isDark() ? 'dark' : 'light');
+  const CARD_CLASS = 'glass rounded-3xl p-6 sm:p-7';
 
   function el(tag, attrs = {}, children = []) {
     const node = document.createElement(tag);
@@ -535,6 +544,139 @@
     return wrap;
   }
 
+  function renderFounder(data) {
+    if (!data?.founder) return null;
+
+    const wrap = sectionShell(data.founder.title, data.founder.subtitle);
+    const grid = el('div', { class: 'grid gap-6 lg:grid-cols-3' });
+
+    const info = el('div', { class: 'glass rounded-3xl p-6 sm:p-7' });
+    const profile = el('a', { href: data.founder.github?.href || '#', target: '_blank', rel: 'noreferrer' });
+    profile.appendChild(
+      el('img', {
+        src: data.founder.avatar_url,
+        alt: safeText(data.founder.name || 'Founder'),
+        class: 'h-20 w-20 rounded-2xl object-cover shadow-ring'
+      })
+    );
+    info.appendChild(profile);
+    info.appendChild(el('div', { class: 'mt-4 font-display text-lg font-semibold text-slate-900 dark:text-white/95' }, safeText(data.founder.name)));
+
+    const links = el('div', { class: 'mt-4 space-y-2 text-sm text-slate-700 dark:text-white/90' });
+    if (data.founder.github?.href) {
+      links.appendChild(
+        el(
+          'a',
+          { class: 'block hover:text-slate-900 dark:hover:text-white', href: data.founder.github.href, target: '_blank', rel: 'noreferrer' },
+          `GitHub: ${safeText(data.founder.github.label || data.founder.github.href)}`
+        )
+      );
+    }
+    if (data.founder.x?.href) {
+      links.appendChild(
+        el(
+          'a',
+          { class: 'block hover:text-slate-900 dark:hover:text-white', href: data.founder.x.href, target: '_blank', rel: 'noreferrer' },
+          `X: ${safeText(data.founder.x.label || data.founder.x.href)}`
+        )
+      );
+    }
+    info.appendChild(links);
+
+    const details = el('div', { class: 'glass rounded-3xl p-6 sm:p-7 lg:col-span-2' });
+    if (data.founder.contribution_image_url) {
+      details.appendChild(
+        el('img', {
+          src: data.founder.contribution_image_url,
+          alt: 'Contribution activity',
+          loading: 'lazy',
+          decoding: 'async',
+          class: 'w-full rounded-2xl shadow-ring'
+        })
+      );
+    }
+
+    const ul = el('ul', { class: 'mt-6 space-y-3 text-sm leading-relaxed text-slate-700 dark:text-white/90 sm:text-base' });
+    for (const item of data.founder.introductions || []) {
+      ul.appendChild(
+        el('li', { class: 'flex gap-3' }, [
+          el('span', { class: 'mt-2 h-1.5 w-1.5 flex-none rounded-full bg-slate-900/25 dark:bg-white/40' }),
+          el('span', { class: 'min-w-0', html: String(item) })
+        ])
+      );
+    }
+    details.appendChild(ul);
+
+    grid.appendChild(info);
+    grid.appendChild(details);
+    wrap.appendChild(grid);
+    return wrap;
+  }
+
+  function renderRevenue(data) {
+    if (!data?.revenue) return null;
+
+    const snapshot = data.revenue.snapshot;
+    const loadFailed = !!data.revenue.load_failed;
+    const currency = safeText(snapshot?.currency || data.revenue.currency || 'USD');
+    const asOf = snapshot?.as_of ? safeText(snapshot.as_of) : null;
+
+    const formatMoney = (value) => {
+      const num = Number(value);
+      if (!Number.isFinite(num)) return '—';
+      try {
+        return new Intl.NumberFormat('en-US', { style: 'currency', currency }).format(num);
+      } catch (_err) {
+        return `${num.toFixed(2)} ${currency}`;
+      }
+    };
+
+    const wrap = sectionShell(data.revenue.title, data.revenue.subtitle);
+
+    if (loadFailed || !snapshot) {
+      wrap.appendChild(
+        el('div', { class: CARD_CLASS }, [
+          el(
+            'div',
+            { class: 'rounded-2xl bg-slate-900/5 px-4 py-4 text-sm text-slate-700 shadow-ring dark:bg-white/5 dark:text-white/90' },
+            'Revenue snapshot unavailable right now.'
+          )
+        ])
+      );
+      return wrap;
+    }
+
+    const items = [
+      { key: 'today', label: 'Today' },
+      { key: 'last_7d', label: 'Last 7 days' },
+      { key: 'last_30d', label: 'Last 30 days' },
+      { key: 'last_90d', label: 'Last 90 days' }
+    ];
+
+    const grid = el('div', { class: 'grid gap-6 sm:grid-cols-2 lg:grid-cols-4' });
+    for (const item of items) {
+      const iconWrap = el('div', { class: 'flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-900/5 text-slate-800 shadow-ring dark:bg-white/10 dark:text-white/90' });
+      iconWrap.innerHTML = ICONS.cash('h-5 w-5');
+      grid.appendChild(
+        el('div', { class: CARD_CLASS }, [
+          el('div', { class: 'flex items-center gap-3' }, [
+            iconWrap,
+            el('div', { class: 'min-w-0' }, [
+              el('div', { class: 'text-xs font-semibold text-slate-600 dark:text-white/80' }, item.label),
+              el('div', { class: 'mt-1 font-display text-2xl font-semibold text-slate-900 dark:text-white/95' }, formatMoney(snapshot[item.key]))
+            ])
+          ])
+        ])
+      );
+    }
+
+    wrap.appendChild(grid);
+    if (asOf) {
+      wrap.appendChild(el('div', { class: 'mt-6 text-xs text-slate-600 dark:text-white/80' }, `As of: ${asOf}`));
+    }
+    return wrap;
+  }
+
   function renderPrinciples(data) {
     const wrap = sectionShell(data.guiding_principles.title, 'Principles that shape sequencing and execution.');
     const grid = el('div', { class: 'grid gap-5 sm:grid-cols-2 lg:grid-cols-4' });
@@ -552,7 +694,7 @@
 
   function renderWhatBuilding(data) {
     const wrap = sectionShell(data.what_building.title, 'Products, layers, and how they connect.');
-    const shell = el('div', { class: 'glass rounded-3xl p-6 sm:p-8' });
+    const shell = el('div', { class: CARD_CLASS });
 
     for (const p of data.what_building.intro_paragraphs || []) {
       shell.appendChild(el('p', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/90 sm:text-base' }, p));
@@ -743,7 +885,7 @@
 
   function renderTokenFit(data) {
     const wrap = sectionShell(data.token_fit.title, 'Mechanisms follow adoption—never the other way around.');
-    const card = el('div', { class: 'glass rounded-3xl p-6 sm:p-8' });
+    const card = el('div', { class: CARD_CLASS });
     for (const p of data.token_fit.paragraphs || []) {
       card.appendChild(el('p', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/90 sm:text-base' }, p));
     }
@@ -759,7 +901,7 @@
   function renderDailyUpdates(index, sourceUrl, { load_failed } = {}) {
     const wrap = sectionShell(index?.title || 'Daily Updates', index?.subtitle || 'Short, dated shipping notes — linked to docs, demos, or code.');
 
-    const shell = el('div', { class: 'glass rounded-3xl p-6 sm:p-8' });
+    const shell = el('div', { class: CARD_CLASS });
     const list = el('div', { class: 'space-y-4' });
     shell.appendChild(list);
 
@@ -1026,7 +1168,7 @@
 
   function renderClosing(data) {
     const wrap = sectionShell(data.closing.title, null);
-    const card = el('div', { class: 'glass rounded-3xl p-6 sm:p-8' });
+    const card = el('div', { class: CARD_CLASS });
     for (const p of data.closing.paragraphs || []) {
       card.appendChild(el('p', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/90 sm:text-base' }, p));
     }
@@ -1047,7 +1189,7 @@
   }
 
   function renderFooter(data) {
-    const footer = el('footer', { class: 'mt-16 border-t border-slate-900/10 bg-white/70 dark:border-white/10 dark:bg-slate-950/60' });
+    const footer = el('footer', { class: 'mt-16' });
     const inner = el('div', { class: 'mx-auto max-w-6xl px-4 py-14 sm:px-6' });
 
     const top = el('div', { class: 'grid gap-10 lg:grid-cols-3' });
@@ -1094,7 +1236,7 @@
     top.appendChild(cols);
 
     const year = new Date().getFullYear();
-    const bottom = el('div', { class: 'mt-12 border-t border-slate-900/10 pt-8 text-center text-sm text-slate-600 dark:border-white/10 dark:text-white/80' }, [
+    const bottom = el('div', { class: 'mt-12 text-center text-sm text-slate-600 dark:text-white/80' }, [
       el('div', {}, data.footer.bottom.copyright_text.replace('{year}', String(year))),
       el('a', { class: 'mt-2 inline-block hover:text-slate-900 dark:hover:text-white', href: data.footer.bottom.secondary_href, target: '_blank', rel: 'noreferrer' }, data.footer.bottom.secondary_text)
     ]);
@@ -1118,6 +1260,8 @@
     if (!app) return;
 
     let data;
+    let revenueSnapshot;
+    let revenueLoadFailed = false;
     let dailyUpdatesIndex;
     let dailyUpdatesSourceUrl;
     let dailyUpdatesLoadFailed = false;
@@ -1135,6 +1279,21 @@
         ])
       );
       return;
+    }
+
+    try {
+      if (data?.revenue?.source) {
+        const rr = await fetch(String(data.revenue.source), { cache: 'no-store' });
+        if (rr.ok) revenueSnapshot = await rr.json();
+        else revenueLoadFailed = true;
+      }
+    } catch (_err) {
+      revenueLoadFailed = true;
+      revenueSnapshot = undefined;
+    }
+    if (data?.revenue) {
+      data.revenue.snapshot = revenueSnapshot;
+      data.revenue.load_failed = revenueLoadFailed;
     }
 
     if (data?.daily_updates) {
@@ -1173,10 +1332,14 @@
 
     app.appendChild(renderOverview(data));
     app.appendChild(renderIntro(data));
+    const founder = renderFounder(data);
+    if (founder) app.appendChild(founder);
     app.appendChild(renderPrinciples(data));
     app.appendChild(renderWhatBuilding(data));
     app.appendChild(renderPhases(data));
     app.appendChild(renderTokenFit(data));
+    const revenue = renderRevenue(data);
+    if (revenue) app.appendChild(revenue);
     if (dailyUpdatesIndex) app.appendChild(renderDailyUpdates(dailyUpdatesIndex, dailyUpdatesSourceUrl, { load_failed: dailyUpdatesLoadFailed }));
     app.appendChild(renderClosing(data));
     app.appendChild(renderFooter(data));
