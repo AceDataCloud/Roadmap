@@ -3,6 +3,23 @@
   "date": "2026-01-10",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Dify#56",
+      "title": "Enhance Plugin Daemon Performance in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "optimization",
+        "plugin",
+        "daemon",
+        "testing",
+        "deployment"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/56",
+      "summary": "This update optimizes the plugin daemon by introducing a Redis lock mechanism to prevent duplicate sync tasks during user logins. Additionally, the deployment configuration has been updated to increase resource limits and replicas for better performance. Unit tests have been added to ensure the new functionality works as intended."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#41",
       "title": "Upgrade to Ruff Formatter in Backend 🚀",
       "tags": [
