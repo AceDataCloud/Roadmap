@@ -106,6 +106,21 @@
     },
     {
       "date": "2026-01-10",
+      "title": "Fix mark style in plugin components for improved clarity",
+      "url": "https://github.com/AceDataCloud/Dify/pull/52",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "bugfix",
+        "ui",
+        "testing",
+        "plugins"
+      ],
+      "summary": "This update modifies the mark style in the plugin components to enhance clarity and usability. Key changes include updates to the `PluginItem` and `PluginAuth` components, ensuring that the correct organization name is displayed based on the plugin source. Additionally, a new test case has been added to verify the display of the verified badge for the 'acedatacloud' plugin."
+    },
+    {
+      "date": "2026-01-10",
       "title": "Dify#51: fix: Fix plugin install issue and model initializer",
       "url": "https://github.com/AceDataCloud/Dify/pull/51",
       "tags": [
