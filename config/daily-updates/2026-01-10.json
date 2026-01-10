@@ -3,6 +3,22 @@
   "date": "2026-01-10",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#41",
+      "title": "Upgrade to Ruff Formatter in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "formatter",
+        "ruff",
+        "backend",
+        "ci",
+        "code-quality"
+      ],
+      "public": false,
+      "summary": "This update replaces the previous flake8 formatter with ruff across the codebase. Key changes include modifications to various files, enhancing code quality and consistency. The CI workflow has also been updated to reflect this change, ensuring that future code checks utilize ruff for linting."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Dify#55",
       "title": "Exciting New Producer Plugin Added in Dify 🎉",
       "tags": [
