@@ -652,7 +652,8 @@
       { key: 'last_90d', label: 'Last 90 days' }
     ];
 
-    const grid = el('div', { class: 'grid gap-6 sm:grid-cols-2 lg:grid-cols-4' });
+    const colsLg = items.length >= 4 ? 'lg:grid-cols-4' : items.length === 3 ? 'lg:grid-cols-3' : items.length === 2 ? 'lg:grid-cols-2' : 'lg:grid-cols-1';
+    const grid = el('div', { class: `grid gap-6 sm:grid-cols-2 ${colsLg}` });
     for (const item of items) {
       const iconWrap = el('div', { class: 'flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-900/5 text-slate-800 shadow-ring dark:bg-white/10 dark:text-white/90' });
       iconWrap.innerHTML = ICONS.cash('h-5 w-5');
