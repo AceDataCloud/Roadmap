@@ -26,6 +26,19 @@ def _normalize_base_url(value: str) -> str:
     return f"https://{value}"
 
 
+def _env_or_default(name: str, default: str) -> str:
+    value = os.environ.get(name)
+    if value is None:
+        return default
+    value = value.strip()
+    return value if value else default
+
+
+def _log(verbose: bool, message: str) -> None:
+    if verbose:
+        print(message, file=sys.stderr)
+
+
 def _parse_iso_datetime(value: str) -> dt.datetime:
     value = value.strip()
     if value.endswith("Z"):
@@ -108,8 +121,29 @@ def _load_last_sync(state_path: str, bootstrap_days: int) -> dt.datetime:
     return _parse_iso_datetime(str(last_sync))
 
 
-def _save_last_sync(state_path: str, last_sync: dt.datetime) -> None:
-    _write_json(state_path, {"last_sync": last_sync.astimezone(dt.timezone.utc).isoformat().replace("+00:00", "Z")})
+def _save_state(
+    state_path: str,
+    *,
+    last_sync: dt.datetime,
+    last_run_at: dt.datetime,
+    added_urls: list[str],
+    openai_enabled: bool,
+    openai_model: str | None,
+    openai_base_url: str | None,
+) -> None:
+    _write_json(
+        state_path,
+        {
+            "last_sync": last_sync.astimezone(dt.timezone.utc).isoformat().replace("+00:00", "Z"),
+            "last_run_at": last_run_at.astimezone(dt.timezone.utc).isoformat().replace("+00:00", "Z"),
+            "last_added_urls": added_urls[:50],
+            "openai": {
+                "enabled": bool(openai_enabled),
+                "model": openai_model,
+                "base_url": openai_base_url,
+            },
+        },
+    )
 
 
 def _search_merged_prs(
@@ -377,15 +411,27 @@ def main(argv: list[str]) -> int:
     parser.add_argument("--max-items", type=int, default=200)
     parser.add_argument("--max-new", type=int, default=30, help="Max new PR items to add per run")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--verbose", action="store_true")
     parser.add_argument("--openai-api-key-env", default="ACEDATACLOUD_OPENAI_KEY")
-    parser.add_argument("--openai-base-url", default=os.environ.get("OPENAI_BASE_URL", OPENAI_DEFAULT_BASE_URL))
-    parser.add_argument("--openai-model", default=os.environ.get("OPENAI_MODEL", "gpt-4o-mini"))
+    parser.add_argument("--openai-base-url", default=_env_or_default("OPENAI_BASE_URL", OPENAI_DEFAULT_BASE_URL))
+    parser.add_argument("--openai-model", default=_env_or_default("OPENAI_MODEL", "gpt-4o-mini"))
     parser.add_argument("--openai-max-tokens", type=int, default=260)
     args = parser.parse_args(argv)
 
     token = os.environ.get(args.token_env) or os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
     openai_api_key = os.environ.get(args.openai_api_key_env)
     openai_base_url = _normalize_base_url(str(args.openai_base_url))
+    openai_model = str(args.openai_model or "").strip() or "gpt-4o-mini"
+    verbose = bool(args.verbose)
+    run_at = _utc_now()
+
+    _log(verbose, f"sync: org={args.org} max_items={args.max_items} max_new={args.max_new} dry_run={args.dry_run}")
+    _log(verbose, f"sync: state={args.state}")
+    _log(verbose, f"sync: daily_updates={args.daily_updates}")
+    _log(
+        verbose,
+        f"sync: openai_enabled={bool(openai_api_key)} model={openai_model} base_url={openai_base_url}",
+    )
 
     daily = _read_json(args.daily_updates)
     daily_items = _coerce_daily_updates(daily)
@@ -395,8 +441,10 @@ def main(argv: list[str]) -> int:
 
     # Search query only supports date granularity; subtract 1 day for safety.
     since_date = (last_sync - dt.timedelta(days=1)).date().isoformat()
+    _log(verbose, f"sync: last_sync={last_sync.isoformat()} since_date={since_date} existing_urls={len(existing_urls)}")
 
     raw = _search_merged_prs(org=args.org, since_date=since_date, token=token, max_items=args.max_items)
+    _log(verbose, f"sync: github_search_results={len(raw)}")
 
     new_items: list[tuple[dt.datetime, dict]] = []
     max_seen_sync = last_sync
@@ -438,10 +486,11 @@ def main(argv: list[str]) -> int:
         extra_tags: list[str] = []
         if openai_api_key:
             try:
+                _log(verbose, f"openai: summarizing {repo}#{number} files={digest.get('files_count')}")
                 pretty_title, summary, extra_tags = _summarize_pr_with_openai(
                     api_key=openai_api_key,
                     base_url=openai_base_url,
-                    model=str(args.openai_model),
+                    model=openai_model,
                     org=args.org,
                     repo=repo,
                     number=number,
@@ -450,6 +499,11 @@ def main(argv: list[str]) -> int:
                     digest=digest,
                     max_tokens=int(args.openai_max_tokens),
                 )
+                if pretty_title or summary:
+                    _log(
+                        verbose,
+                        f"openai: result {repo}#{number} title={repr(pretty_title)} summary_len={len(summary or '')}",
+                    )
             except Exception as e:
                 print(f"OpenAI summarization failed for {repo}#{number}: {e}", file=sys.stderr)
 
@@ -467,11 +521,20 @@ def main(argv: list[str]) -> int:
         new_items.append((merged_at, item))
         if merged_at > max_seen_sync:
             max_seen_sync = merged_at
+        _log(verbose, f"add: {repo}#{number} merged_at={merged_at.isoformat()} url={html_url}")
 
     if not new_items:
         print("No new merged PRs found.")
         if not args.dry_run:
-            _save_last_sync(args.state, last_sync)
+            _save_state(
+                args.state,
+                last_sync=last_sync,
+                last_run_at=run_at,
+                added_urls=[],
+                openai_enabled=bool(openai_api_key),
+                openai_model=openai_model if openai_api_key else None,
+                openai_base_url=openai_base_url if openai_api_key else None,
+            )
         return 0
 
     new_items.sort(key=lambda x: x[0], reverse=True)
@@ -487,7 +550,15 @@ def main(argv: list[str]) -> int:
         return 0
 
     _write_json(args.daily_updates, daily)
-    _save_last_sync(args.state, max_seen_sync)
+    _save_state(
+        args.state,
+        last_sync=max_seen_sync,
+        last_run_at=run_at,
+        added_urls=[str(it[1].get("url") or "") for it in new_items if isinstance(it[1], dict)],
+        openai_enabled=bool(openai_api_key),
+        openai_model=openai_model if openai_api_key else None,
+        openai_base_url=openai_base_url if openai_api_key else None,
+    )
     print(f"Added {len(new_items)} items. Updated last_sync to {max_seen_sync.isoformat()}")
     return 0
 
