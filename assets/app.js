@@ -44,7 +44,7 @@
 
   const STATUS = {
     done: {
-      label: 'Completed',
+      label: 'Shipped',
       dot: 'bg-emerald-500 dark:bg-emerald-400',
       text: 'text-emerald-700 dark:text-emerald-200'
     },
@@ -54,7 +54,7 @@
       text: 'text-amber-700 dark:text-amber-200'
     },
     planned: {
-      label: 'Planned',
+      label: 'On track',
       dot: 'bg-slate-400',
       text: 'text-slate-600 dark:text-slate-200'
     }
@@ -651,7 +651,22 @@
       iconWrap.innerHTML = (ICONS[phase.icon] || ICONS.bolt)(`h-6 w-6 ${accent.fg}`);
 
       const titleWrap = el('div', { class: 'min-w-0' });
-      titleWrap.appendChild(el('div', { class: 'text-xs font-semibold tracking-[0.2em] text-slate-600 dark:text-white/80' }, phase.label));
+      const labelRow = el('div', { class: 'flex flex-wrap items-center gap-2' }, [
+        el('div', { class: 'text-xs font-semibold tracking-[0.2em] text-slate-600 dark:text-white/80' }, phase.label)
+      ]);
+      if (phase.status_note) {
+        labelRow.appendChild(
+          el(
+            'span',
+            {
+              class:
+                'rounded-full border border-slate-900/15 bg-slate-900/5 px-2.5 py-1 text-[11px] font-semibold text-slate-700 dark:border-white/20 dark:bg-white/10 dark:text-white/90'
+            },
+            phase.status_note
+          )
+        );
+      }
+      titleWrap.appendChild(labelRow);
       titleWrap.appendChild(el('h3', { class: 'mt-1 truncate font-display text-lg font-semibold text-slate-900 dark:text-white sm:text-xl' }, `${phase.title}`));
       titleWrap.appendChild(el('p', { class: 'mt-2 text-sm text-slate-600 dark:text-white/80' }, `Focus: ${phase.focus}`));
 
@@ -692,9 +707,15 @@
         const ul = el('ul', { class: 'mt-4 space-y-3' });
         for (const task of group.items || []) {
           const meta = STATUS[task.status] || STATUS.planned;
-          let subline = meta.label;
-          if (task.completed_at) subline = `${meta.label} • ${formatIsoDate(task.completed_at)}`;
-          else if (task.target_at) subline = `${meta.label} • Target ${formatIsoDate(task.target_at)}`;
+          const note = typeof task.note === 'string' ? task.note.trim() : '';
+          const targetAt = typeof task.target_at === 'string' ? task.target_at.trim() : '';
+          const completedAt = typeof task.completed_at === 'string' ? task.completed_at.trim() : '';
+
+          const parts = [meta.label];
+          if (note) parts.push(note);
+          if (targetAt) parts.push(`Target ${formatIsoDate(targetAt)}`);
+          if (completedAt) parts.push(`Completed ${formatIsoDate(completedAt)}`);
+          const subline = parts.join(' • ');
           ul.appendChild(
             el('li', { class: 'flex gap-3' }, [
               el('span', { class: `mt-2 h-2 w-2 flex-none rounded-full ${meta.dot}` }),
@@ -735,8 +756,8 @@
     return wrap;
   }
 
-  function renderDailyUpdates(index, sourceUrl) {
-    const wrap = sectionShell(index.title, index.subtitle);
+  function renderDailyUpdates(index, sourceUrl, { load_failed } = {}) {
+    const wrap = sectionShell(index?.title || 'Daily Updates', index?.subtitle || 'Short, dated shipping notes — linked to docs, demos, or code.');
 
     const shell = el('div', { class: 'glass rounded-3xl p-6 sm:p-8' });
     const list = el('div', { class: 'space-y-4' });
@@ -759,7 +780,7 @@
 
     wrap.appendChild(shell);
 
-    const days = Array.isArray(index.days) ? index.days.filter((d) => typeof d === 'string' && d.trim()) : [];
+    const days = Array.isArray(index?.days) ? index.days.filter((d) => typeof d === 'string' && d.trim()) : [];
     const initialOpenDays = Math.max(0, Math.min(days.length, Number(index.initial_open_days) || 3));
     const pageSizeDays = Math.max(1, Math.min(60, Number(index.page_size_days) || 20));
 
@@ -779,6 +800,10 @@
     const state = { cursor: 0, paging: false };
 
     const setUi = () => {
+      if (load_failed) {
+        status.textContent = 'Feed unavailable — check GitHub Actions sync.';
+        return;
+      }
       status.textContent = days.length ? `${Math.min(state.cursor, days.length)} / ${days.length} days listed` : 'No updates yet.';
       const remaining = Math.max(0, days.length - state.cursor);
       btn.disabled = state.paging || remaining <= 0;
@@ -967,6 +992,18 @@
       loadMore({ count: pageSizeDays, open: false });
     });
 
+    if (!days.length) {
+      list.appendChild(
+        el(
+          'div',
+          { class: 'rounded-2xl bg-slate-900/5 px-4 py-4 text-sm text-slate-700 shadow-ring dark:bg-white/5 dark:text-white/80' },
+          load_failed
+            ? 'Daily updates are configured, but the index feed could not be loaded. Run the sync workflow (or check the Pages build output) and refresh.'
+            : 'No updates yet — this section will populate automatically as PRs and commits land.'
+        )
+      );
+    }
+
     setUi();
     queueMicrotask(() => {
       if (!days.length) return;
@@ -1072,6 +1109,7 @@
     let data;
     let dailyUpdatesIndex;
     let dailyUpdatesSourceUrl;
+    let dailyUpdatesLoadFailed = false;
     try {
       const res = await fetch('./config/roadmap.json', { cache: 'no-store' });
       if (!res.ok) throw new Error(`Failed to load config/roadmap.json (${res.status})`);
@@ -1088,6 +1126,16 @@
       return;
     }
 
+    if (data?.daily_updates) {
+      dailyUpdatesIndex = {
+        title: 'Daily Updates',
+        subtitle: 'Short, dated shipping notes — linked to docs, demos, or code.',
+        initial_open_days: 3,
+        page_size_days: 20,
+        days: []
+      };
+    }
+
     try {
       if (data?.daily_updates?.source) {
         const src = String(data.daily_updates.source);
@@ -1095,10 +1143,12 @@
         if (dr.ok) {
           dailyUpdatesIndex = await dr.json();
           dailyUpdatesSourceUrl = dr.url || src;
+        } else {
+          dailyUpdatesLoadFailed = true;
         }
       }
     } catch (_err) {
-      dailyUpdatesIndex = undefined;
+      dailyUpdatesLoadFailed = true;
       dailyUpdatesSourceUrl = undefined;
     }
 
@@ -1116,7 +1166,7 @@
     app.appendChild(renderWhatBuilding(data));
     app.appendChild(renderPhases(data));
     app.appendChild(renderTokenFit(data));
-    if (dailyUpdatesIndex?.days?.length) app.appendChild(renderDailyUpdates(dailyUpdatesIndex, dailyUpdatesSourceUrl));
+    if (dailyUpdatesIndex) app.appendChild(renderDailyUpdates(dailyUpdatesIndex, dailyUpdatesSourceUrl, { load_failed: dailyUpdatesLoadFailed }));
     app.appendChild(renderClosing(data));
     app.appendChild(renderFooter(data));
 

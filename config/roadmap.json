@@ -144,6 +144,7 @@
       "title": "Foundation and Clarity",
       "focus": "Reliable delivery, workflow backbone, and disciplined structure",
       "date_range": "Jan – Mar 2026",
+      "status_note": "In progress",
       "accent": "emerald",
       "icon": "bolt",
       "groups": [
@@ -152,39 +153,45 @@
           "items": [
             {
               "title": "Continue strengthening the unified AI gateway with improved reliability, routing control, and cost visibility",
-              "status": "planned",
-              "target_at": "2026-02-18"
+              "status": "in_progress",
+              "target_at": null,
+              "completed_at": null
             },
             {
               "title": "Finalize and ship Dify as a standalone workflow product with tighter Ace account and API binding",
-              "status": "planned",
-              "target_at": "2026-03-22"
+              "status": "in_progress",
+              "target_at": null,
+              "completed_at": null
             },
             {
               "title": "Strengthen core platform flows including onboarding, usage tracking, billing, and value delivery",
-              "status": "planned",
-              "target_at": "2026-03-10"
+              "status": "in_progress",
+              "target_at": null,
+              "completed_at": null
             },
             {
               "title": "Improve visibility across the platform so users can clearly see what is live, in progress, or planned",
-              "status": "planned",
-              "target_at": "2026-01-31"
+              "status": "in_progress",
+              "target_at": null,
+              "completed_at": null
             }
           ]
         },
         {
           "title": "Mobile App",
           "items": [
-            { "title": "Launch the Ace mobile app on Android and iOS", "status": "planned", "target_at": "2026-03-25" },
+            { "title": "Launch the Ace mobile app on Android and iOS", "status": "in_progress", "target_at": null, "completed_at": null },
             {
               "title": "Focus the app on high-frequency, template-first use cases rather than experimentation",
               "status": "planned",
-              "target_at": "2026-02-20"
+              "target_at": null,
+              "completed_at": null
             },
             {
               "title": "Route app usage directly into workflows and Nexior distribution",
               "status": "planned",
-              "target_at": "2026-03-30"
+              "target_at": null,
+              "completed_at": null
             }
           ]
         },
@@ -193,29 +200,33 @@
           "items": [
             {
               "title": "Establish workflows as a core orchestration layer through Dify",
-              "status": "planned",
-              "target_at": "2026-01-24"
+              "status": "in_progress",
+              "target_at": null,
+              "completed_at": null
             },
             {
               "title": "Enable composable pipelines across model calls, data handling, distribution actions, and billing",
-              "status": "planned",
-              "target_at": "2026-03-08"
+              "status": "in_progress",
+              "target_at": null,
+              "completed_at": null
             },
             {
               "title": "Prepare workflow structures for broader standards alignment later in the year",
               "status": "planned",
-              "target_at": "2026-03-28"
+              "target_at": null,
+              "completed_at": null
             }
           ]
         },
         {
           "title": "Payments and Settlement",
           "items": [
-            { "title": "Base x402 payment integration is live", "status": "done", "completed_at": "2025-12-12" },
+            { "title": "Base x402 payment integration is live", "status": "done", "target_at": null, "completed_at": "2026-01-10" },
             {
               "title": "Finalize Solana x402 payment integration within Q1, enabling call-to-pay settlement for additional live use cases",
-              "status": "planned",
-              "target_at": "2026-03-15"
+              "status": "in_progress",
+              "target_at": null,
+              "completed_at": null
             }
           ]
         },
@@ -224,30 +235,34 @@
           "items": [
             {
               "title": "Continue expanding Nexior templates and publishing flows",
-              "status": "planned",
-              "target_at": "2026-03-18"
+              "status": "in_progress",
+              "target_at": null,
+              "completed_at": null
             },
-            { "title": "Prioritize reproducibility and quality over volume", "status": "planned", "target_at": "2026-01-15" },
+            { "title": "Prioritize reproducibility and quality over volume", "status": "planned", "target_at": null, "completed_at": null },
             {
               "title": "Begin early contributor feedback loops without aggressive incentives",
               "status": "planned",
-              "target_at": "2026-02-26"
+              "target_at": null,
+              "completed_at": null
             }
           ]
         },
         {
           "title": "Token and Market Structure",
           "items": [
-            { "title": "Deprioritize discretionary buybacks at this stage", "status": "planned", "target_at": "2026-01-10" },
+            { "title": "Deprioritize discretionary buybacks at this stage", "status": "planned", "target_at": null, "completed_at": null },
             {
               "title": "Focus on liquidity depth, stability, and conservative capital use",
               "status": "planned",
-              "target_at": "2026-02-12"
+              "target_at": null,
+              "completed_at": null
             },
             {
               "title": "Maintain clear separation between platform operations and market-facing mechanisms",
               "status": "planned",
-              "target_at": "2026-02-28"
+              "target_at": null,
+              "completed_at": null
             }
           ]
         }
@@ -259,6 +274,7 @@
       "title": "Adoption and Usage Signals",
       "focus": "Lower friction, broader entry points, and visible real usage",
       "date_range": "Apr – Jun 2026",
+      "status_note": "On track",
       "accent": "cyan",
       "icon": "spark",
       "groups": [
@@ -268,51 +284,57 @@
             {
               "title": "Expand adoption of the mobile app through improved UX, stability, and workflow depth",
               "status": "planned",
-              "target_at": "2026-05-12"
+              "target_at": null,
+              "completed_at": null
             },
-            { "title": "Increase template-driven usage and real production activity", "status": "planned", "target_at": "2026-06-20" },
+            { "title": "Increase template-driven usage and real production activity", "status": "planned", "target_at": null, "completed_at": null },
             {
               "title": "Strengthen the feedback loop between app usage, workflows, and Nexior distribution",
               "status": "planned",
-              "target_at": "2026-06-28"
+              "target_at": null,
+              "completed_at": null
             }
           ]
         },
         {
           "title": "Payments and Monetization",
           "items": [
-            { "title": "Expand x402-based settlement into more production workflows", "status": "planned", "target_at": "2026-05-25" },
+            { "title": "Expand x402-based settlement into more production workflows", "status": "planned", "target_at": null, "completed_at": null },
             {
               "title": "Improve receipts, billing transparency, and automated settlement for developers and agents",
               "status": "planned",
-              "target_at": "2026-06-12"
+              "target_at": null,
+              "completed_at": null
             }
           ]
         },
         {
           "title": "Data Services",
           "items": [
-            { "title": "Roll out structured data services as a real product line", "status": "planned", "target_at": "2026-05-30" },
+            { "title": "Roll out structured data services as a real product line", "status": "planned", "target_at": null, "completed_at": null },
             {
               "title": "Establish clear standards for ingestion, processing, and delivery",
               "status": "planned",
-              "target_at": "2026-04-22"
+              "target_at": null,
+              "completed_at": null
             },
             {
               "title": "Bind data more tightly into workflows so it becomes part of production pipelines",
               "status": "planned",
-              "target_at": "2026-06-25"
+              "target_at": null,
+              "completed_at": null
             }
           ]
         },
         {
           "title": "Ecosystem and Partnerships",
           "items": [
-            { "title": "Land the first wave of practical partnerships", "status": "planned", "target_at": "2026-06-15" },
+            { "title": "Land the first wave of practical partnerships", "status": "planned", "target_at": null, "completed_at": null },
             {
               "title": "Focus on co-built templates, integrations, and real delivery rather than announcements",
               "status": "planned",
-              "target_at": "2026-05-28"
+              "target_at": null,
+              "completed_at": null
             }
           ]
         }
@@ -324,14 +346,15 @@
       "title": "Scale What Works",
       "focus": "Compounding proven systems, not experimentation",
       "date_range": "Jul – Sep 2026",
+      "status_note": "On track",
       "accent": "violet",
       "icon": "globe",
       "groups": [
         {
           "title": "Platform and APIs",
           "items": [
-            { "title": "Scale routing, fallback strategies, and concurrency support", "status": "planned", "target_at": "2026-08-18" },
-            { "title": "Improve stability under higher and more complex workloads", "status": "planned", "target_at": "2026-09-20" }
+            { "title": "Scale routing, fallback strategies, and concurrency support", "status": "planned", "target_at": null, "completed_at": null },
+            { "title": "Improve stability under higher and more complex workloads", "status": "planned", "target_at": null, "completed_at": null }
           ]
         },
         {
@@ -340,14 +363,16 @@
             {
               "title": "Expand workflow modules into more standardized, reusable components",
               "status": "planned",
-              "target_at": "2026-08-28"
+              "target_at": null,
+              "completed_at": null
             },
             {
               "title": "Strengthen Nexior discovery and recommendation so high-quality contributions are easier to find and adopt",
               "status": "planned",
-              "target_at": "2026-09-25"
+              "target_at": null,
+              "completed_at": null
             },
-            { "title": "Improve contributor earning clarity tied to real usage", "status": "planned", "target_at": "2026-07-30" }
+            { "title": "Improve contributor earning clarity tied to real usage", "status": "planned", "target_at": null, "completed_at": null }
           ]
         },
         {
@@ -356,13 +381,15 @@
             {
               "title": "Continue careful research into staking and long-term participation models",
               "status": "planned",
-              "target_at": "2026-09-30"
+              "target_at": null,
+              "completed_at": null
             },
-            { "title": "No rushed deployments", "status": "planned", "target_at": "2026-07-12" },
+            { "title": "No rushed deployments", "status": "planned", "target_at": null, "completed_at": null },
             {
               "title": "Any pilot remains limited in scope and focused on contribution, not yield",
               "status": "planned",
-              "target_at": "2026-09-10"
+              "target_at": null,
+              "completed_at": null
             }
           ]
         }
@@ -374,15 +401,16 @@
       "title": "Consolidation and Reliability",
       "focus": "Infrastructure-grade stability and long-term trust",
       "date_range": "Oct – Dec 2026",
+      "status_note": "On track",
       "accent": "blue",
       "icon": "shield",
       "groups": [
         {
           "title": "Platform Maturity",
           "items": [
-            { "title": "Deliver predictable release cadence", "status": "planned", "target_at": "2026-11-12" },
-            { "title": "Reduce operational surprises", "status": "planned", "target_at": "2026-12-10" },
-            { "title": "Position Ace as a dependable platform rather than a toolbox", "status": "planned", "target_at": "2026-12-22" }
+            { "title": "Deliver predictable release cadence", "status": "planned", "target_at": null, "completed_at": null },
+            { "title": "Reduce operational surprises", "status": "planned", "target_at": null, "completed_at": null },
+            { "title": "Position Ace as a dependable platform rather than a toolbox", "status": "planned", "target_at": null, "completed_at": null }
           ]
         },
         {
@@ -391,9 +419,10 @@
             {
               "title": "Push toward a more self-sustaining loop of contributors, distribution, and usage",
               "status": "planned",
-              "target_at": "2026-11-28"
+              "target_at": null,
+              "completed_at": null
             },
-            { "title": "Reduce reliance on manual curation or intervention", "status": "planned", "target_at": "2026-12-15" }
+            { "title": "Reduce reliance on manual curation or intervention", "status": "planned", "target_at": null, "completed_at": null }
           ]
         },
         {
@@ -402,12 +431,14 @@
             {
               "title": "Re-evaluate buybacks only if: platform revenue is meaningfully larger, liquidity depth is already strong, and any buyback activity remains small, non-disruptive, and transparently disclosed",
               "status": "planned",
-              "target_at": "2026-12-05"
+              "target_at": null,
+              "completed_at": null
             },
             {
               "title": "Staking, if expanded, follows data from pilots and prioritizes stability",
               "status": "planned",
-              "target_at": "2026-12-20"
+              "target_at": null,
+              "completed_at": null
             }
           ]
         }

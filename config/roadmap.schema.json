@@ -244,6 +244,7 @@
         "title": { "type": "string", "minLength": 1 },
         "focus": { "type": "string", "minLength": 1 },
         "date_range": { "type": "string" },
+        "status_note": { "type": "string", "minLength": 1 },
         "accent": { "type": "string", "minLength": 1 },
         "icon": { "type": "string", "minLength": 1 },
         "groups": {
@@ -273,10 +274,16 @@
         "id": { "type": "string" },
         "title": { "type": "string", "minLength": 1 },
         "status": { "type": "string", "enum": ["done", "in_progress", "planned"] },
-        "completed_at": { "type": "string", "format": "date" },
-        "target_at": { "type": "string", "format": "date" },
-        "note": { "type": "string" }
+        "note": { "type": "string" },
+        "target_at": { "$ref": "#/$defs/isoDateNullable" },
+        "completed_at": { "$ref": "#/$defs/isoDateNullable" }
       }
+    },
+    "isoDateNullable": {
+      "anyOf": [
+        { "type": "string", "format": "date" },
+        { "type": "null" }
+      ]
     },
     "footerLine": {
       "type": "object",
