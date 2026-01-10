@@ -595,6 +595,12 @@ def main(argv: list[str]) -> int:
     parser.add_argument("--daily-updates", default=str(repo_root / "config" / "daily-updates" / "index.json"))
     parser.add_argument("--state", default=str(repo_root / "config" / "pr-sync-state.json"))
     parser.add_argument("--token-env", default="REPO_PAT")
+    parser.add_argument(
+        "--exclude-repo",
+        action="append",
+        default=["Roadmap"],
+        help="Exclude a repo (repeatable). Defaults to Roadmap to avoid self-referential commit loops.",
+    )
     parser.add_argument("--bootstrap-days", type=int, default=14)
     parser.add_argument("--max-items", type=int, default=200)
     parser.add_argument("--max-new", type=int, default=30, help="Max new PR items to add per run")
@@ -620,6 +626,7 @@ def main(argv: list[str]) -> int:
     openai_model = str(args.openai_model or "").strip() or "gpt-4o-mini"
     verbose = bool(args.verbose)
     run_at = _utc_now()
+    excluded_repos = {str(r or "").strip().lower() for r in (args.exclude_repo or []) if str(r or "").strip()}
 
     _log(
         verbose,
@@ -782,6 +789,9 @@ def main(argv: list[str]) -> int:
         owner, repo, number = parsed
         if owner.lower() != args.org.lower():
             continue
+        if repo.lower() in excluded_repos:
+            _log(verbose, f"skip: pr {repo}#{number} reason=repo_excluded url={html_url}")
+            continue
 
         if new_prs_added >= args.max_new:
             break
@@ -881,6 +891,9 @@ def main(argv: list[str]) -> int:
             continue
         owner, repo = full_name.split("/", 1)
         if owner.lower() != args.org.lower():
+            continue
+        if repo.lower() in excluded_repos:
+            _log(verbose, f"skip: commit {repo}@{str(it.get('sha') or '')[:7]} reason=repo_excluded url={html_url}")
             continue
 
         sha = str(it.get("sha") or "").strip()
