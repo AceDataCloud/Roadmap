@@ -1,0 +1,152 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-01-03",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Dify#37",
+      "title": "Enhance Auto Binding for ACE Token in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "feature",
+        "integration",
+        "ace",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/37",
+      "summary": "This update introduces automatic binding of ACE tokens, enhancing the integration with AceDataCloud. Key changes include the addition of new tasks for provisioning plugin credentials and syncing GitHub latest releases upon user login. These improvements streamline the user experience and ensure seamless plugin management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#36",
+      "title": "Enhance GitHub Plugin Integration in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "feature",
+        "plugins",
+        "update",
+        "dify"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/36",
+      "summary": "This update introduces a new feature that allows the automatic installation of the latest non-prerelease GitHub release plugins for newly created workspaces. Key changes include modifications to the configuration files and service logic to support this functionality. Additionally, logging enhancements have been added for better tracking of tenant creation and plugin installation processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#314",
+      "title": "Streamline auto release process in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "automation",
+        "release",
+        "github-actions",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/314",
+      "summary": "This update introduces an automated release pipeline for the Nexior project. Key changes include the addition of a GitHub Actions workflow that handles version tagging, dependency installation, and build processes, enhancing the efficiency of releases. A new JSON file has also been added to track changes related to the release."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#35",
+      "title": "Enhance Plugin Ecosystem in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "plugin",
+        "feature",
+        "enhancement",
+        "ecosystem",
+        "dify"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/35",
+      "summary": "This update introduces a robust plugin ecosystem, allowing for auto-installation of default plugins for new tenants. Key changes include the addition of a new plugin bootstrap service and enhancements to the plugin service for better management and verification. Overall, these improvements aim to streamline plugin integration and enhance user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#34",
+      "title": "Enhance ACE Auth Integration in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "feature",
+        "authentication",
+        "oauth",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/34",
+      "summary": "This update introduces exclusive support for AceDataCloud OAuth login, disabling other login methods when enabled. Key modifications were made to the feature service to enforce this behavior, along with the addition of unit tests to ensure functionality. This change aims to streamline the authentication process for users leveraging AceDataCloud."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#426",
+      "title": "Introducing Sora for Enhanced Video Handling in Platform Service 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "sora",
+        "video",
+        "deployment",
+        "service",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update adds the Sora video handling capability to the Platform Service, including new deployment and service configurations. Key files such as 'sora-deployment.yaml' and 'sora-service.yaml' have been added, alongside modifications to core components to integrate Sora functionality. The changes enhance the platform's ability to manage video content effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#33",
+      "title": "Revamped Logo Design in Dify 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "logo",
+        "design",
+        "update",
+        "frontend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/33",
+      "summary": "This update introduces a fresh logo design for Dify, enhancing the visual identity of the application. Key modifications include the addition of a new AceDataCloud badge and adjustments to the logo component for better responsiveness. These changes aim to improve user experience and brand recognition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#313",
+      "title": "Enhance Language Support in Nexior 🌍",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "language",
+        "localization",
+        "improvement",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/313",
+      "summary": "This update introduces improvements to language support within the Nexior project. Key changes include the addition of a new configuration file for translation optimization and modifications to the OrientationSelector component to utilize translation keys instead of hardcoded labels. These enhancements aim to provide a more flexible and localized user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#31",
+      "title": "Enhance Logout Functionality in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "logout",
+        "authentication",
+        "security",
+        "code-cleanup",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/31",
+      "summary": "This update improves the logout functionality by refining the handling of authentication tokens and cleaning up the codebase. Key changes include the removal of unnecessary cookie settings and adjustments to the login state checks. These enhancements aim to streamline user experience and increase security during the logout process."
+    }
+  ]
+}

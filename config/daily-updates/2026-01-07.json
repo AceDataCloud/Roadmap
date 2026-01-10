@@ -1,0 +1,39 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-01-07",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Dify#39",
+      "title": "Exciting New Veo Plugin Added in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "plugin",
+        "video",
+        "api",
+        "dify",
+        "development"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/39",
+      "summary": "This update introduces the Veo plugin, which integrates the Ace Data Cloud Veo Videos API into Dify. Key features include generating videos from prompts and images, as well as retrieving task statuses. Comprehensive documentation and examples have been added to support developers in utilizing this new functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#38",
+      "title": "Fix plugin error handling in Dify 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "bugfix",
+        "plugin",
+        "testing",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/38",
+      "summary": "This update addresses an error handling issue within the plugin system by enhancing the parsing of installation sources. Key modifications include the addition of a new class method to handle missing values and improved test coverage for installation source parsing. These changes aim to improve the robustness of plugin installations."
+    }
+  ]
+}

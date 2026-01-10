@@ -1,0 +1,53 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-01-06",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#427",
+      "title": "Introducing Veo Deployment and Service in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "deployment",
+        "service",
+        "video",
+        "platform",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update adds the Veo deployment and service configurations to the Platform Service. Key files include new YAML configurations for deployment and service, along with modifications to core handling and persisting logic to support video generation. The changes enhance the platform's capabilities for managing video processing tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#40",
+      "title": "Enhance API Documentation and Structure in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "api",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update significantly improves the API documentation with 95 additions and 21 deletions in the cost API JSON file. Additionally, minor adjustments were made to the development documentation and OpenAPI specifications, enhancing clarity and usability. These changes aim to provide better guidance for developers interacting with the API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#428",
+      "title": "Enhance Vox Functionality in Platform Service 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "audio",
+        "vox",
+        "enhancement",
+        "platform",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update introduces the ACTION_ARTIST_CONSISTENCY_VOX to improve audio generation capabilities. Key modifications were made in core processing and audio handling files, adding new logic for handling Vox-specific actions. These changes enhance the overall functionality and user experience within the Platform Service."
+    }
+  ]
+}

@@ -1,0 +1,348 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-01-02",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Dify#30",
+      "title": "Resolve logout loop issue in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "bugfix",
+        "authentication",
+        "ui",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/30",
+      "summary": "This update addresses a critical logout loop issue by enhancing the login state management. Key changes include modifications to the `useIsLogin` and `useLogout` hooks, ensuring that the UI reflects the correct authentication state. The improvements aim to provide a smoother user experience during the login/logout process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#312",
+      "title": "Enhance Prompt Input Limit in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "user-experience",
+        "input",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/312",
+      "summary": "This update removes the character limit for prompt inputs across multiple components in Nexior, enhancing user experience by allowing longer entries. Key files modified include PromptInput.vue for various components, where the maxlength attribute has been eliminated. This change is expected to improve flexibility and usability for users interacting with the prompt features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#29",
+      "title": "Resolved Login Issues in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "login",
+        "fix",
+        "update",
+        "authentication",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/29",
+      "summary": "This update addresses several login-related issues by removing outdated components and streamlining the sign-in and sign-up processes. Key changes include the removal of the AceDataCloud OAuth initializer and adjustments to the sign-in and sign-up pages for improved functionality. These enhancements aim to provide a smoother user experience during authentication."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#311",
+      "title": "Streamline Chat Deletion Process in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "optimization",
+        "chat",
+        "ui",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/311",
+      "summary": "This update optimizes the conversation deletion process within the chat feature. Key modifications include enhancements to the SidePanel and Navigator components, improving user experience and performance. The changes aim to make conversation management more efficient and user-friendly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#28",
+      "title": "Enhance Plugin Installation Efficiency in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "optimization",
+        "plugin",
+        "deployment",
+        "configuration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/28",
+      "summary": "This update optimizes the plugin installation process by adjusting configuration settings in the deployment files. Key changes include setting consistent maximum package sizes and improving storage management for plugin assets. These enhancements aim to reduce installation timeouts, especially in slower networks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#27",
+      "title": "Resolved login loop issue in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "bugfix",
+        "authentication",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/27",
+      "summary": "This update fixes a persistent login loop issue affecting user authentication. Key modifications were made to the signin and signup pages, streamlining the login process. The changes enhance user experience by ensuring smoother access to the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#310",
+      "title": "Resolve login/logout issue in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "authentication",
+        "ui",
+        "cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/310",
+      "summary": "This update addresses a critical login/logout issue by modifying the authentication logic. Key changes include adjustments in the response handling to ensure proper logout functionality. Additionally, some minor cleanup was performed in the General.vue component to streamline the code."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#25",
+      "title": "Standardize GitHub Actions Workflow Names in Dify 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "workflow",
+        "standardization",
+        "title-case",
+        "consistency"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/25",
+      "summary": "This update standardizes the naming convention of GitHub Actions workflows to Title Case across all relevant files. Key changes include renaming workflows like 'autofix.ci' to 'Autofix.ci' and 'Build docker image' to 'Build Docker Image', enhancing readability and consistency. These adjustments ensure that major words are capitalized while minor words remain lowercase, improving overall clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#309",
+      "title": "Add GitHub Links for Easy Access in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "accessibility",
+        "localization",
+        "settings"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/309",
+      "summary": "This update introduces GitHub icon links in both the General Settings page and the footer, enhancing source code accessibility. The icons are designed to be subtle yet effective, with tooltips for better usability. Localization has been added for both English and Chinese, ensuring a wider reach for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#26",
+      "title": "Enhance Auto-Deploy Workflow for Docker Images in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "docker",
+        "workflow",
+        "deployment",
+        "kubernetes",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/26",
+      "summary": "This update improves the production deployment pipeline by separating the build and push steps for Docker images in the auto-deploy workflow. The explicit addition of a push step ensures that images are reliably pushed to the GitHub Container Registry before Kubernetes deployments. This change addresses previous failures in the deployment process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#308",
+      "title": "Standardize App Logo Icons for Consistency in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "logo",
+        "constants",
+        "refactor",
+        "nexior",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/308",
+      "summary": "This update standardizes app logo icons across the Nexior project by replacing hardcoded URLs with constants. New logo constants have been created for each app, ensuring consistent usage throughout the codebase. The Navigator.vue and Preview.vue components have been updated to utilize these constants, enhancing maintainability and readability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#307",
+      "title": "Streamline Seedance Logo with CDN Integration in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "update",
+        "logo",
+        "cdn",
+        "cleanup",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/307",
+      "summary": "This update replaces the local SVG import for the Seedance logo with a static CDN URL, enhancing consistency across services. The changes were made in the Navigator and Preview components, ensuring that the logo is now referenced directly from the CDN. Additionally, the redundant SVG file has been removed to clean up the project structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#23",
+      "title": "Fix Docker Build and Deploy Steps in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "docker",
+        "deployment",
+        "workflow",
+        "fix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/23",
+      "summary": "This update ensures that the `BUILD_NUMBER` environment variable is passed to both the Docker build and deploy steps. By doing so, it prevents the fallback to `:latest` tags, which can lead to deployment failures. This change enhances the reliability of the auto-deploy workflow for the Dify project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#306",
+      "title": "Exciting New Seedance Support Added in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "seedance",
+        "feature",
+        "update",
+        "nexior",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/306",
+      "summary": "This update introduces full support for Seedance, enhancing the Nexior platform with new features and components. Key additions include multiple configuration panels, a preview feature, and improved navigation elements. The integration aims to streamline user experience and expand functionality for Seedance users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#22",
+      "title": "Enhance Auto-Deployment with Disk Space Management in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "auto-deploy",
+        "workflow",
+        "optimization",
+        "cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/22",
+      "summary": "This update introduces a new step in the auto-deployment workflow to manage disk space effectively. It includes commands to check and clean up specific directories, ensuring smoother deployments. Additionally, the workflow has been optimized to enhance overall performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#21",
+      "title": "Enhance Docker Compose Setup in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "docker",
+        "workflow",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/21",
+      "summary": "This update improves the Docker Compose setup in the project by ensuring the installation of Docker Compose v2. The workflow now checks for the version and installs the necessary plugin if it's not available. These changes streamline the deployment process and enhance compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#20",
+      "title": "Enhance Deployment Configuration in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "deployment",
+        "configuration",
+        "oauth",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/20",
+      "summary": "This update improves the deployment configuration by modifying several YAML files and scripts. Key changes include renaming StatefulSets to Deployments for better scalability and adding OAuth login settings for Ace Data Cloud. These enhancements aim to streamline the deployment process and improve security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#19",
+      "title": "Enhance ACE Login Functionality in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "login",
+        "oauth",
+        "authentication",
+        "bugfix",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/19",
+      "summary": "This update resolves the login issues for AceDataCloud, ensuring a smoother authentication process. Key changes include the addition of OAuth login support and modifications to various components to enforce this new login method. Additionally, documentation has been updated to reflect these changes, enhancing overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#305",
+      "title": "Exciting Seedream Integration in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "seedream",
+        "feature",
+        "update",
+        "nexior",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/305",
+      "summary": "This update introduces the Seedream feature to Nexior, enhancing its capabilities with new components and functionalities. Key additions include the ConfigPanel, RecentPanel, and various configuration options like ImageInput and ModelSelector. These changes aim to improve user experience and expand the application's versatility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#425",
+      "title": "Introducing Sora Integration for Enhanced Video Processing in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "sora",
+        "video",
+        "deployment",
+        "service",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update adds the Sora deployment and service configurations, enhancing the video processing capabilities of the Platform Service. Key files modified include the core logic for handling Sora videos and the introduction of new handlers and models. The changes aim to streamline video uploads and processing, significantly improving the overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#18",
+      "title": "Revamped Build Files for Enhanced Deployment in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "deployment",
+        "build",
+        "configuration",
+        "production",
+        "dify"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/18",
+      "summary": "This update introduces significant enhancements to the build files, including the addition of multiple deployment configurations and services for the Dify application. Key files such as the auto-deploy workflow and various environment configurations have been added to streamline production deployment. These changes aim to improve the overall deployment process and ensure better management of application services."
+    }
+  ]
+}
