@@ -962,14 +962,25 @@
       const items = Array.isArray(itemsRaw) ? itemsRaw : [];
       return items
         .filter((it) => it && typeof it === 'object')
-        .map((it) => ({
-          id: safeText(it.id),
-          title: safeText(it.title),
-          url: it.url ? safeText(it.url) : '',
-          public: it.public !== false,
-          summary: it.summary ? safeText(it.summary) : '',
-          tags: Array.isArray(it.tags) ? it.tags.map((t) => safeText(t)).filter(Boolean).slice(0, 8) : []
-        }))
+        .map((it, idx) => {
+          const title = safeText(it.title);
+          const url = it.url ? safeText(it.url) : '';
+
+          // Back-compat: older day files might miss "id". Use url or a stable per-day fallback.
+          const id = safeText(it.id) || url || `${day}:${idx}:${title.slice(0, 48)}`;
+
+          // If url is missing, treat as non-public for display.
+          const publicFlag = Boolean(url) && it.public !== false;
+
+          return {
+            id,
+            title,
+            url,
+            public: publicFlag,
+            summary: it.summary ? safeText(it.summary) : '',
+            tags: Array.isArray(it.tags) ? it.tags.map((t) => safeText(t)).filter(Boolean).slice(0, 8) : []
+          };
+        })
         .filter((it) => it.id && it.title);
     };
 

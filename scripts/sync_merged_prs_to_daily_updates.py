@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import hashlib
 import json
 import os
 import re
@@ -123,7 +124,6 @@ def _github_get_text(url: str, token: str | None, *, accept: str) -> tuple[str, 
 
 
 _PULL_URL_RE = re.compile(r"^https://github\.com/([^/]+)/([^/]+)/pull/(\d+)(?:/.*)?$")
-_COMMIT_URL_RE = re.compile(r"^https://github\.com/([^/]+)/([^/]+)/commit/([0-9a-f]{7,40})(?:/.*)?$")
 
 
 def _parse_pull_url(html_url: str) -> tuple[str, str, int] | None:
@@ -133,60 +133,39 @@ def _parse_pull_url(html_url: str) -> tuple[str, str, int] | None:
     owner, repo, number = m.group(1), m.group(2), int(m.group(3))
     return owner, repo, number
 
-def _parse_commit_url(html_url: str) -> tuple[str, str, str] | None:
-    m = _COMMIT_URL_RE.match(html_url.strip())
-    if not m:
-        return None
-    owner, repo, sha = m.group(1), m.group(2), m.group(3)
-    return owner, repo, sha
 
-
-def _load_last_sync(state_path: str, bootstrap_days: int) -> dt.datetime:
-    if not os.path.exists(state_path):
-        return _utc_now() - dt.timedelta(days=bootstrap_days)
-    state = _read_json(state_path)
-    last_sync = state.get("last_sync")
-    if not last_sync:
-        return _utc_now() - dt.timedelta(days=bootstrap_days)
-    return _parse_iso_datetime(str(last_sync))
-
-
-def _load_state(state_path: str, bootstrap_days: int) -> tuple[dt.datetime, dt.datetime]:
+def _load_state(state_path: str, bootstrap_days: int) -> dt.datetime:
     """
-    Returns (last_pr_sync, last_commit_sync).
+    Returns last_pr_sync.
 
-    Backwards compatible with the old single cursor `last_sync`.
+    Backwards compatible with older state formats (`last_sync`, `last_commit_sync`).
     """
     fallback = _utc_now() - dt.timedelta(days=bootstrap_days)
     if not os.path.exists(state_path):
-        return fallback, fallback
+        return fallback
     state = _read_json(state_path)
     last_sync_raw = state.get("last_sync")
-    last_pr_raw = state.get("last_pr_sync") or last_sync_raw
-    last_commit_raw = state.get("last_commit_sync") or last_sync_raw
+    last_pr_raw = state.get("last_pr_sync") or last_sync_raw or state.get("last_commit_sync")
     last_pr = _parse_iso_datetime(str(last_pr_raw)) if last_pr_raw else fallback
-    last_commit = _parse_iso_datetime(str(last_commit_raw)) if last_commit_raw else fallback
-    return last_pr, last_commit
+    return last_pr
 
 
 def _save_state(
     state_path: str,
     *,
     last_pr_sync: dt.datetime,
-    last_commit_sync: dt.datetime,
     last_run_at: dt.datetime,
     added_urls: list[str],
     openai_enabled: bool,
     openai_model: str | None,
     openai_base_url: str | None,
 ) -> None:
-    last_sync = max(last_pr_sync, last_commit_sync)
+    last_sync = last_pr_sync
     _write_json(
         state_path,
         {
             "last_sync": last_sync.astimezone(dt.timezone.utc).isoformat().replace("+00:00", "Z"),
             "last_pr_sync": last_pr_sync.astimezone(dt.timezone.utc).isoformat().replace("+00:00", "Z"),
-            "last_commit_sync": last_commit_sync.astimezone(dt.timezone.utc).isoformat().replace("+00:00", "Z"),
             "last_run_at": last_run_at.astimezone(dt.timezone.utc).isoformat().replace("+00:00", "Z"),
             "last_added_urls": added_urls[:50],
             "openai": {
@@ -234,48 +213,6 @@ def _search_merged_prs(
         page += 1
 
     return items[:max_items]
-
-
-def _search_commits(
-    *,
-    org: str,
-    since_date: str,
-    token: str | None,
-    max_items: int,
-    exclude_repos: list[str] | None = None,
-) -> list[dict]:
-    items: list[dict] = []
-    page = 1
-    per_page = 100
-
-    exclude = ""
-    if exclude_repos:
-        exclude = " " + " ".join(f"-repo:{org}/{r}" for r in exclude_repos if str(r or "").strip())
-    query = f"org:{org} committer-date:>={since_date}{exclude}"
-    while len(items) < max_items:
-        params = {
-            "q": query,
-            "sort": "committer-date",
-            "order": "desc",
-            "per_page": str(per_page),
-            "page": str(page),
-        }
-        url = f"{GITHUB_API}/search/commits?{urllib.parse.urlencode(params)}"
-        payload, _headers = _github_get(url, token, accept="application/vnd.github.cloak-preview+json")
-        page_items = payload.get("items") if isinstance(payload, dict) else None
-        if not isinstance(page_items, list) or not page_items:
-            break
-
-        for it in page_items:
-            if isinstance(it, dict):
-                items.append(it)
-        if len(page_items) < per_page:
-            break
-        page += 1
-
-    return items[:max_items]
-
-
 def _github_list(url: str, token: str | None, *, max_items: int = 5000) -> list[dict]:
     items: list[dict] = []
     page = 1
@@ -319,19 +256,6 @@ def _github_get_allowed_logins(*, org: str, token: str | None, verbose: bool) ->
 
     allowed.discard("")
     return allowed
-
-
-def _is_merge_commit(commit_item: dict) -> bool:
-    parents = commit_item.get("parents")
-    if isinstance(parents, list) and len(parents) > 1:
-        return True
-    commit = commit_item.get("commit")
-    if isinstance(commit, dict):
-        message = str(commit.get("message") or "")
-        first = message.splitlines()[0].strip() if message else ""
-        if first.startswith("Merge pull request #") or first.startswith("Merge branch"):
-            return True
-    return False
 
 _DAY_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
@@ -388,22 +312,25 @@ def _coerce_daily_day(doc: dict, *, day: str) -> list[dict]:
         item_id = str(it.get("id") or "").strip()
         url = str(it.get("url") or "").strip()
         title = str(it.get("title") or "").strip()
+        tags_raw = it.get("tags")
+        tags: list[str] = []
+        if isinstance(tags_raw, list):
+            for t in tags_raw:
+                if isinstance(t, str) and t.strip():
+                    tags.append(t.strip())
         if not title:
             continue
         if not item_id:
             if url:
                 parsed_pr = _parse_pull_url(url)
-                parsed_commit = _parse_commit_url(url)
                 if parsed_pr:
                     o, r, n = parsed_pr
                     item_id = f"gh:pr:{o}/{r}#{n}"
-                elif parsed_commit:
-                    o, r, sha = parsed_commit
-                    item_id = f"gh:commit:{o}/{r}@{sha}"
                 else:
                     item_id = url
             else:
-                continue
+                digest_src = "\n".join([day, title, ",".join(tags)]).encode("utf-8", "ignore")
+                item_id = f"local:{day}:{hashlib.sha1(digest_src).hexdigest()[:12]}"
 
         normalized = dict(it)
         normalized["id"] = item_id
@@ -509,164 +436,11 @@ def _past_tense_lead(text: str) -> str:
     return f"{repl} {rest}".strip()
 
 
-def _commit_fallback_title(*, repo: str, subject: str) -> str:
-    area = _repo_display_name(repo)
-    cleaned = _past_tense_lead(_clean_subject(subject))
-    emoji = _guess_emoji(cleaned)
-    # Keep it plain, like: "Fixed postcss build issues in Frontend Web ⚡"
-    return f"{cleaned} in {area} {emoji}"
-
-
 def _pr_fallback_title(*, repo: str, title: str) -> str:
     area = _repo_display_name(repo)
     cleaned = _past_tense_lead(_clean_subject(title))
     emoji = _guess_emoji(cleaned)
     return f"{cleaned} in {area} {emoji}"
-
-
-def _github_get_repo_meta(*, org: str, repo: str, token: str | None) -> dict:
-    url = f"{GITHUB_API}/repos/{org}/{repo}"
-    meta, _headers = _github_get(url, token)
-    if not isinstance(meta, dict):
-        return {"private": False}
-    return meta
-
-
-def _github_get_commit_digest(
-    *,
-    org: str,
-    repo: str,
-    sha: str,
-    token: str | None,
-    max_files: int = 40,
-    max_patch_chars: int = 9000,
-) -> dict:
-    url = f"{GITHUB_API}/repos/{org}/{repo}/commits/{sha}"
-    commit, _headers = _github_get(url, token)
-    if not isinstance(commit, dict):
-        return {"files": [], "patch_excerpt": "", "files_count": 0}
-
-    files = commit.get("files")
-    files_list: list[dict[str, Any]] = files if isinstance(files, list) else []
-    files_list = [f for f in files_list if isinstance(f, dict)]
-    files_list = files_list[:max_files]
-
-    simplified: list[dict[str, Any]] = []
-    patch_buf: list[str] = []
-    for f in files_list:
-        filename = str(f.get("filename") or "")
-        status = str(f.get("status") or "")
-        additions = int(f.get("additions") or 0)
-        deletions = int(f.get("deletions") or 0)
-        changes = int(f.get("changes") or 0)
-        simplified.append(
-            {
-                "filename": filename,
-                "status": status,
-                "additions": additions,
-                "deletions": deletions,
-                "changes": changes,
-            }
-        )
-        patch = f.get("patch")
-        if isinstance(patch, str) and patch.strip():
-            snippet = patch.strip()
-            if len(snippet) > 700:
-                snippet = snippet[:700] + "\n…(truncated)…"
-            patch_buf.append(f"--- {filename} ({status}, +{additions}/-{deletions})\n{snippet}")
-
-    patch_text = "\n\n".join(patch_buf)
-    if len(patch_text) > max_patch_chars:
-        patch_text = patch_text[:max_patch_chars] + "\n…(truncated)…"
-
-    return {
-        "files": simplified,
-        "patch_excerpt": patch_text,
-        "files_count": len(simplified),
-    }
-
-
-def _summarize_commit_with_openai(
-    *,
-    api_key: str,
-    base_url: str,
-    model: str,
-    org: str,
-    repo: str,
-    sha: str,
-    subject: str,
-    digest: dict,
-    max_tokens: int,
-) -> tuple[str | None, str | None, list[str]]:
-    files = digest.get("files") or []
-    patch_excerpt = str(digest.get("patch_excerpt") or "")
-
-    area = _repo_display_name(repo)
-    user_payload = {
-        "org": org,
-        "repo": repo,
-        "sha": sha,
-        "area": area,
-        "subject": subject,
-        "files": files,
-        "patch_excerpt": patch_excerpt,
-        "rules": {
-            "do_not_use_repo_name_in_title_except": ["Nexior"],
-            "title_should_end_with": f"in {area} <emoji>",
-        },
-    }
-
-    messages = [
-        {
-            "role": "system",
-            "content": (
-                "You write energetic, natural-language daily update titles for a single Git commit.\n"
-                "Return ONLY a JSON object with keys: title, summary, tags.\n"
-                "- title: concise, natural English; avoid raw hashes; DO NOT mention the repo name unless repo is Nexior.\n"
-                "- title: MUST end with: \"in <Area> <emoji>\" (emoji at the very end).\n"
-                "- summary: optional 1-2 short sentences, factual.\n"
-                "- tags: 0-6 short lower-case tags.\n"
-                "Use the diff excerpt to be specific (e.g., mention postcss config, build, api, auth, etc.).\n"
-            ),
-        },
-        {
-            "role": "user",
-            "content": json.dumps(user_payload, ensure_ascii=False),
-        },
-    ]
-
-    resp = _openai_chat_completions(
-        api_key=api_key,
-        base_url=base_url,
-        model=model,
-        messages=messages,
-        max_tokens=max_tokens,
-    )
-    choices = resp.get("choices")
-    if not isinstance(choices, list) or not choices:
-        return None, None, []
-    msg = choices[0].get("message") if isinstance(choices[0], dict) else None
-    content = msg.get("content") if isinstance(msg, dict) else None
-    if not isinstance(content, str):
-        return None, None, []
-
-    parsed = _extract_openai_json(content)
-    if not parsed:
-        return None, None, []
-
-    out_title = parsed.get("title")
-    out_summary = parsed.get("summary")
-    out_tags = parsed.get("tags")
-
-    title = str(out_title).strip() if isinstance(out_title, str) and out_title.strip() else None
-    summary = str(out_summary).strip() if isinstance(out_summary, str) and out_summary.strip() else None
-    tags: list[str] = []
-    if isinstance(out_tags, list):
-        for t in out_tags:
-            if isinstance(t, str) and t.strip():
-                tags.append(t.strip())
-    tags = list(dict.fromkeys(tags))
-    return title, summary, tags
 
 
 def _github_get_pr(
@@ -890,7 +664,7 @@ def _summarize_pr_with_openai(
 def main(argv: list[str]) -> int:
     repo_root = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(
-        description="Sync merged PRs + recent commits in an org into config/daily-updates/<YYYY-MM-DD>.json files",
+        description="Sync merged PRs in an org into config/daily-updates/<YYYY-MM-DD>.json files",
     )
     parser.add_argument("--org", default="AceDataCloud")
     parser.add_argument("--daily-updates", default=str(repo_root / "config" / "daily-updates" / "index.json"))
@@ -900,19 +674,17 @@ def main(argv: list[str]) -> int:
         "--exclude-repo",
         action="append",
         default=["Roadmap"],
-        help="Exclude a repo (repeatable). Defaults to Roadmap to avoid self-referential commit loops.",
+        help="Exclude a repo (repeatable). Defaults to Roadmap to avoid self-referential updates.",
     )
     parser.add_argument("--bootstrap-days", type=int, default=14)
     parser.add_argument("--max-items", type=int, default=200)
     parser.add_argument("--max-new", type=int, default=30, help="Max new PR items to add per run")
-    parser.add_argument("--max-new-commits", type=int, default=30, help="Max new commit items to add per run")
     parser.add_argument(
         "--author-filter",
         choices=["org", "none"],
         default="org",
         help='When "org", only include items authored by org members/outside collaborators',
     )
-    parser.add_argument("--include-commits", action=argparse.BooleanOptionalAction, default=True)
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--verbose", action="store_true")
     parser.add_argument("--openai-api-key-env", default="ACEDATACLOUD_OPENAI_KEY")
@@ -936,8 +708,6 @@ def main(argv: list[str]) -> int:
             f" org={args.org}"
             f" max_items={args.max_items}"
             f" max_new_prs={args.max_new}"
-            f" max_new_commits={args.max_new_commits}"
-            f" include_commits={bool(args.include_commits)}"
             f" author_filter={args.author_filter}"
             f" dry_run={args.dry_run}"
         ),
@@ -1048,17 +818,14 @@ def main(argv: list[str]) -> int:
             key = str(it.get("id") or "").strip()
             if key:
                 existing_keys.add(key)
-    last_pr_sync, last_commit_sync = _load_state(args.state, args.bootstrap_days)
+    last_pr_sync = _load_state(args.state, args.bootstrap_days)
 
     # Search query only supports date granularity; subtract 1 day for safety.
     pr_since_date = (last_pr_sync - dt.timedelta(days=1)).date().isoformat()
-    commit_since_date = (last_commit_sync - dt.timedelta(days=1)).date().isoformat()
     _log(
         verbose,
         (
-            f"sync: last_pr_sync={last_pr_sync.isoformat()} pr_since_date={pr_since_date} "
-            f"last_commit_sync={last_commit_sync.isoformat()} commit_since_date={commit_since_date} "
-            f"existing_items={len(existing_keys)}"
+            f"sync: last_pr_sync={last_pr_sync.isoformat()} pr_since_date={pr_since_date} existing_items={len(existing_keys)}"
         ),
     )
 
@@ -1071,35 +838,9 @@ def main(argv: list[str]) -> int:
     )
     _log(verbose, f"sync: github_pr_search_results={len(raw_prs)}")
 
-    raw_commits: list[dict] = []
-    if args.include_commits:
-        raw_commits = _search_commits(
-            org=args.org,
-            since_date=commit_since_date,
-            token=token,
-            max_items=args.max_items,
-            exclude_repos=list(args.exclude_repo or []),
-        )
-        _log(verbose, f"sync: github_commit_search_results={len(raw_commits)}")
-
     new_items: list[tuple[dt.datetime, str, dict]] = []
     max_seen_pr_sync = last_pr_sync
-    max_seen_commit_sync = last_commit_sync
     new_prs_added = 0
-    new_commits_added = 0
-    repo_meta_cache: dict[str, dict] = {}
-
-    def repo_meta(repo: str) -> dict:
-        key = repo.lower()
-        if key in repo_meta_cache:
-            return repo_meta_cache[key]
-        try:
-            meta = _github_get_repo_meta(org=args.org, repo=repo, token=token)
-        except Exception as e:
-            _log(verbose, f"warn: repo meta fetch failed for {repo}: {e}")
-            meta = {"private": True}
-        repo_meta_cache[key] = meta
-        return meta
 
     for it in raw_prs:
         if not isinstance(it, dict):
@@ -1220,134 +961,6 @@ def main(argv: list[str]) -> int:
             f"add: pr {repo}#{number} author={author_login or 'unknown'} merged_at={merged_at.isoformat()} url={html_url}",
         )
 
-    for it in raw_commits:
-        if not isinstance(it, dict):
-            continue
-
-        if new_commits_added >= int(args.max_new_commits):
-            break
-
-        html_url = str(it.get("html_url") or "").strip()
-        if not html_url:
-            continue
-
-        repo_info = it.get("repository")
-        if not isinstance(repo_info, dict):
-            continue
-        full_name = str(repo_info.get("full_name") or "").strip()
-        if not full_name or "/" not in full_name:
-            continue
-        owner, repo = full_name.split("/", 1)
-        if owner.lower() != args.org.lower():
-            continue
-        if repo.lower() in excluded_repos:
-            _log(verbose, f"skip: commit {repo}@{str(it.get('sha') or '')[:7]} reason=repo_excluded url={html_url}")
-            continue
-
-        sha = str(it.get("sha") or "").strip()
-        if not sha:
-            continue
-        item_key = f"gh:commit:{owner}/{repo}@{sha}"
-        if item_key in existing_keys:
-            continue
-
-        commit = it.get("commit")
-        if not isinstance(commit, dict):
-            continue
-        committer = commit.get("committer")
-        if not isinstance(committer, dict):
-            continue
-
-        committed_at_raw = committer.get("date")
-        if not committed_at_raw:
-            continue
-        committed_at = _parse_iso_datetime(str(committed_at_raw))
-        if committed_at <= last_commit_sync:
-            continue
-
-        if _is_merge_commit(it):
-            _log(verbose, f"skip: commit {repo}@{sha[:7]} reason=merge_commit url={html_url}")
-            continue
-
-        author_login = None
-        author = it.get("author")
-        if isinstance(author, dict):
-            author_login = str(author.get("login") or "").strip()
-        if not author_login:
-            committer_user = it.get("committer")
-            if isinstance(committer_user, dict):
-                author_login = str(committer_user.get("login") or "").strip()
-
-        if args.author_filter == "org":
-            if not author_login:
-                _log(verbose, f"skip: commit {repo}@{sha[:7]} reason=no_author_login url={html_url}")
-                continue
-            if author_login.lower() not in allowed_logins:
-                _log(
-                    verbose,
-                    f"skip: commit {repo}@{sha[:7]} reason=author_not_allowed author={author_login} url={html_url}",
-                )
-                continue
-
-        message = str(commit.get("message") or "").strip()
-        subject = message.splitlines()[0].strip() if message else ""
-        if not subject:
-            continue
-        meta = repo_meta(repo)
-        is_private = bool(meta.get("private"))
-
-        try:
-            digest = _github_get_commit_digest(org=args.org, repo=repo, sha=sha, token=token)
-        except Exception as e:
-            _log(verbose, f"warn: commit digest failed for {repo}@{sha[:7]}: {e}")
-            digest = {"files": [], "patch_excerpt": "", "files_count": 0}
-        pretty_title: str | None = None
-        summary: str | None = None
-        extra_tags: list[str] = []
-        if openai_api_key:
-            try:
-                _log(verbose, f"openai: summarizing commit {repo}@{sha[:7]} files={digest.get('files_count')}")
-                pretty_title, summary, extra_tags = _summarize_commit_with_openai(
-                    api_key=openai_api_key,
-                    base_url=openai_base_url,
-                    model=openai_model,
-                    org=args.org,
-                    repo=repo,
-                    sha=sha,
-                    subject=subject,
-                    digest=digest,
-                    max_tokens=int(args.openai_max_tokens),
-                )
-            except Exception as e:
-                print(f"OpenAI summarization failed for {repo}@{sha[:7]}: {e}", file=sys.stderr)
-
-        fallback_title = _commit_fallback_title(repo=repo, subject=subject)
-
-        day = committed_at.date().isoformat()
-        item: dict[str, Any] = {
-            "id": item_key,
-            "title": pretty_title or fallback_title,
-            "tags": ["github", "commit", repo],
-            "public": not is_private,
-        }
-        if not is_private:
-            item["url"] = html_url
-        if summary:
-            item["summary"] = summary
-        if extra_tags:
-            item["tags"] = list(dict.fromkeys([*item["tags"], *extra_tags]))
-        new_items.append((committed_at, day, item))
-        new_commits_added += 1
-        if committed_at > max_seen_commit_sync:
-            max_seen_commit_sync = committed_at
-        _log(
-            verbose,
-            (
-                f"add: commit {repo}@{sha[:7]} author={author_login or 'unknown'} "
-                f"committed_at={committed_at.isoformat()} url={html_url}"
-            ),
-        )
-
     def _index_doc(index: dict[str, Any], *, days: list[str]) -> dict[str, Any]:
         return {
             "$schema": str(index.get("$schema") or "./index.schema.json"),
@@ -1404,11 +1017,11 @@ def main(argv: list[str]) -> int:
         if new_items:
             print(
                 "Would add"
-                f" {len(added_keys)} items (prs={new_prs_added}, commits={new_commits_added})."
-                f" last_pr_sync stays {last_pr_sync.isoformat()} last_commit_sync stays {last_commit_sync.isoformat()}"
+                f" {len(added_keys)} items (prs={new_prs_added})."
+                f" last_pr_sync stays {last_pr_sync.isoformat()}"
             )
         else:
-            print("No new items found (PRs/commits).")
+            print("No new items found (PRs).")
         return 0
 
     # Persist day files first (so index always references existing files).
@@ -1425,20 +1038,18 @@ def main(argv: list[str]) -> int:
         _save_state(
             args.state,
             last_pr_sync=last_pr_sync,
-            last_commit_sync=last_commit_sync,
             last_run_at=run_at,
             added_urls=[],
             openai_enabled=bool(openai_api_key),
             openai_model=openai_model if openai_api_key else None,
             openai_base_url=openai_base_url if openai_api_key else None,
         )
-        print("No new items found (PRs/commits).")
+        print("No new items found (PRs).")
         return 0
 
     _save_state(
         args.state,
         last_pr_sync=max_seen_pr_sync,
-        last_commit_sync=max_seen_commit_sync,
         last_run_at=run_at,
         added_urls=added_keys,
         openai_enabled=bool(openai_api_key),
@@ -1447,8 +1058,8 @@ def main(argv: list[str]) -> int:
     )
     print(
         "Added"
-        f" {len(added_keys)} items (prs={new_prs_added}, commits={new_commits_added})."
-        f" Updated last_pr_sync={max_seen_pr_sync.isoformat()} last_commit_sync={max_seen_commit_sync.isoformat()}"
+        f" {len(added_keys)} items (prs={new_prs_added})."
+        f" Updated last_pr_sync={max_seen_pr_sync.isoformat()}"
     )
     return 0
 
