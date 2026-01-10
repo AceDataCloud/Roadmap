@@ -647,7 +647,6 @@
     }
 
     const items = [
-      { key: 'last_3d', label: 'Last 3 days' },
       { key: 'last_7d', label: 'Last 7 days' },
       { key: 'last_30d', label: 'Last 30 days' },
       { key: 'last_90d', label: 'Last 90 days' }

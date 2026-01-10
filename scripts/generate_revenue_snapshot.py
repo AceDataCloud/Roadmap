@@ -103,7 +103,6 @@ def _django_query(
 
     now = dj_tz.now()
     start_today = now.replace(hour=0, minute=0, second=0, microsecond=0)
-    start_3d = now - timedelta(days=3)
     start_7d = now - timedelta(days=7)
     start_30d = now - timedelta(days=30)
     start_90d = now - timedelta(days=90)
@@ -124,7 +123,6 @@ def _django_query(
 
     return {
         "as_of": now.isoformat(),
-        "last_3d": _sum_between(start_3d),
         "last_7d": _sum_between(start_7d),
         "last_30d": _sum_between(start_30d),
         "last_90d": _sum_between(start_90d),
@@ -212,7 +210,7 @@ def main() -> int:
     payload = {
         "as_of": orm["as_of"],
         "currency": str(args.currency),
-        **{k: orm[k] for k in ("last_3d", "last_7d", "last_30d", "last_90d")},
+        **{k: orm[k] for k in ("last_7d", "last_30d", "last_90d")},
     }
 
     _atomic_write_json(Path(args.output), payload)
