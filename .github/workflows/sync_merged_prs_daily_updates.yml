@@ -15,6 +15,10 @@ permissions:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    env:
+      PGSQL_HOST: ${{ secrets.PGSQL_HOST }}
+      PGSQL_USER: ${{ secrets.PGSQL_USER }}
+      PGSQL_PASSWORD: ${{ secrets.PGSQL_PASSWORD }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -35,12 +39,9 @@ jobs:
           python3 scripts/sync_merged_prs_to_daily_updates.py --org AceDataCloud --author-filter none --max-items 400 --max-new 200 --verbose
 
       - name: Generate revenue snapshot
-        if: ${{ secrets.PGSQL_HOST != '' && secrets.PGSQL_USER != '' && secrets.PGSQL_PASSWORD != '' }}
+        if: ${{ env.PGSQL_HOST != '' && env.PGSQL_USER != '' && env.PGSQL_PASSWORD != '' }}
         env:
-          PGSQL_HOST: ${{ secrets.PGSQL_HOST }}
           PGSQL_PORT: ${{ secrets.PGSQL_PORT != '' && secrets.PGSQL_PORT || '5432' }}
-          PGSQL_USER: ${{ secrets.PGSQL_USER }}
-          PGSQL_PASSWORD: ${{ secrets.PGSQL_PASSWORD }}
           PGSQL_DATABASE: ${{ secrets.PGSQL_DATABASE != '' && secrets.PGSQL_DATABASE || 'acedatacloud_platform' }}
           ORDERS_TABLE: ${{ secrets.ORDERS_TABLE }}
         run: |
