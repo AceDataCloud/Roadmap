@@ -1,0 +1,478 @@
+{
+  "$schema": "./roadmap.schema.json",
+  "site": {
+    "name": "Ace Data Cloud",
+    "page_title": "Ace Data Cloud 2026 Roadmap",
+    "tagline": "Product-first. Usage-driven. Capital disciplined.",
+    "description": "Ace Data Cloud is being built as an AI infrastructure platform for builders and teams who need reliable access, workflows, and monetization across modern AI systems.",
+    "url": "https://platform.acedata.cloud"
+  },
+  "nav": [
+    { "label": "All Services", "href": "https://platform.acedata.cloud/services", "new_tab": true },
+    { "label": "Developer Documentation", "href": "https://platform.acedata.cloud/documents", "new_tab": true },
+    { "label": "Referral Program", "href": "https://platform.acedata.cloud/earning", "new_tab": true },
+    { "label": "Customer Support", "href": "https://platform.acedata.cloud/support", "new_tab": true },
+    { "label": "Try Now", "href": "https://hub.acedata.cloud", "new_tab": true, "primary": true }
+  ],
+  "hero": {
+    "eyebrow": "ACE DATA CLOUD",
+    "title": "2026 Roadmap",
+    "subtitle": "Foundation → Adoption → Scale → Consolidation",
+    "background_image": "./assets/hero.png",
+    "primary_cta": { "label": "Try Now", "href": "https://hub.acedata.cloud", "new_tab": true },
+    "secondary_cta": { "label": "Developer Docs", "href": "https://platform.acedata.cloud/documents", "new_tab": true }
+  },
+  "overview": {
+    "title": "Ace Data Cloud 2026 Roadmap",
+    "sequence": "Foundation → Adoption → Scale → Consolidation",
+    "paragraphs": [
+      "Ace Data Cloud is being built as an AI infrastructure platform for builders and teams who need reliable access, workflows, and monetization across modern AI systems.",
+      "Our roadmap prioritizes:"
+    ],
+    "priorities": [
+      "Product delivery before narratives",
+      "Usage before token mechanics",
+      "Stability before experimentation",
+      "Transparency over speculation"
+    ]
+  },
+  "intro": {
+    "title": "Platform Overview",
+    "subtitle": "The Ace Data Cloud platform is a global SaaS service provider that offers stable and comprehensive digital services for both enterprises and individuals.",
+    "cards": [
+      {
+        "title": "For enterprises and developers",
+        "paragraphs": [
+          "Ace Data Cloud provides a range of production-grade API services and infrastructure capabilities for modern AI systems."
+        ],
+        "bullets": [
+          "AI Q&A APIs (OpenAI, DeepSeek, etc.)",
+          "AI images (Midjourney, Flux)",
+          "AI music (Suno)",
+          "AI videos (Luma, Pika)",
+          "HTTP proxies (mobile cellular, residential, global)",
+          "Datasets and data pipelines"
+        ],
+        "links": [
+          { "label": "All Services", "href": "https://platform.acedata.cloud/services", "new_tab": true },
+          { "label": "Integration Docs", "href": "https://platform.acedata.cloud/documents", "new_tab": true }
+        ]
+      },
+      {
+        "title": "For individuals",
+        "paragraphs": [
+          "A one-stop, user-friendly interface for AI Q&A, images, music, videos, proxies, datasets and more — compatible with desktop and mobile.",
+          "Includes out-of-the-box login authorization (WeChat, Google, GitHub) and payments."
+        ],
+        "links": [{ "label": "Open Hub", "href": "https://hub.acedata.cloud", "new_tab": true }]
+      },
+      {
+        "title": "Open-source distribution (Nexior)",
+        "paragraphs": [
+          "We have open-sourced the UI and distribution layer — Nexior. Build your own one-stop AI platform in minutes and sell it for profit."
+        ],
+        "links": [{ "label": "GitHub: Nexior", "href": "https://github.com/AceDataCloud/Nexior", "new_tab": true }]
+      }
+    ]
+  },
+  "guiding_principles": {
+    "title": "Guiding Principles",
+    "items": [
+      {
+        "title": "Product and usage come first",
+        "description": "Token mechanisms follow real adoption, not the other way around."
+      },
+      {
+        "title": "Capital decisions reduce risk",
+        "description": "Liquidity, runway, and operational stability matter more than short-term signals."
+      },
+      {
+        "title": "Clarity over activity",
+        "description": "Shipping clearly is better than doing more."
+      },
+      {
+        "title": "Long-term credibility beats short-term attention",
+        "description": "We optimize for trust with builders, partners, and serious stakeholders."
+      }
+    ]
+  },
+  "what_building": {
+    "title": "What Ace Is Building",
+    "intro_paragraphs": [
+      "Ace Data Cloud is the infrastructure layer that powers multiple products through shared accounts, APIs, and billing."
+    ],
+    "sections": [
+      {
+        "title": "Core Products (Separate, API-Bound)",
+        "paragraphs": [
+          "Nexior is a core application and distribution product of Ace Data Cloud. It is a UI-driven product that directly consumes Ace APIs to deploy, distribute, and monetize AI applications, templates, and assets.",
+          "Dify is a standalone workflow product that runs independently as a separate website. It is an open-source, well-known project focused on advanced workflow orchestration and logic."
+        ],
+        "bullets": [
+          "Both are auto-bound to Ace Data Cloud accounts",
+          "Both automatically bind Ace API keys",
+          "Both consume the same underlying Ace infrastructure",
+          "Both are available to all Ace Data Cloud customers"
+        ]
+      },
+      {
+        "title": "Infrastructure Layers",
+        "paragraphs": [],
+        "bullets": [
+          "Unified AI Gateway provides execution reliability and multi-model access",
+          "Workflows (via Dify) provide powerful composition, orchestration, and reuse",
+          "x402 provides settlement and monetization",
+          "Apps and templates provide distribution and discovery"
+        ]
+      },
+      {
+        "title": "Ace focuses on four core layers",
+        "paragraphs": [],
+        "bullets": [
+          "Unified AI Gateway for multi-model access",
+          "Workflow orchestration via Dify",
+          "Distribution through Nexior templates, skills, and apps",
+          "Settlement via native payment and billing infrastructure"
+        ]
+      }
+    ]
+  },
+  "phases": [
+    {
+      "id": "2026-q1",
+      "label": "Q1 2026",
+      "title": "Foundation and Clarity",
+      "focus": "Reliable delivery, workflow backbone, and disciplined structure",
+      "date_range": "Jan – Mar 2026",
+      "accent": "emerald",
+      "icon": "bolt",
+      "groups": [
+        {
+          "title": "Product and Platform",
+          "items": [
+            {
+              "title": "Continue strengthening the unified AI gateway with improved reliability, routing control, and cost visibility",
+              "status": "planned",
+              "target_at": "2026-02-18"
+            },
+            {
+              "title": "Finalize and ship Dify as a standalone workflow product with tighter Ace account and API binding",
+              "status": "planned",
+              "target_at": "2026-03-22"
+            },
+            {
+              "title": "Strengthen core platform flows including onboarding, usage tracking, billing, and value delivery",
+              "status": "planned",
+              "target_at": "2026-03-10"
+            },
+            {
+              "title": "Improve visibility across the platform so users can clearly see what is live, in progress, or planned",
+              "status": "planned",
+              "target_at": "2026-01-31"
+            }
+          ]
+        },
+        {
+          "title": "Mobile App",
+          "items": [
+            { "title": "Launch the Ace mobile app on Android and iOS", "status": "planned", "target_at": "2026-03-25" },
+            {
+              "title": "Focus the app on high-frequency, template-first use cases rather than experimentation",
+              "status": "planned",
+              "target_at": "2026-02-20"
+            },
+            {
+              "title": "Route app usage directly into workflows and Nexior distribution",
+              "status": "planned",
+              "target_at": "2026-03-30"
+            }
+          ]
+        },
+        {
+          "title": "Workflows",
+          "items": [
+            {
+              "title": "Establish workflows as a core orchestration layer through Dify",
+              "status": "planned",
+              "target_at": "2026-01-24"
+            },
+            {
+              "title": "Enable composable pipelines across model calls, data handling, distribution actions, and billing",
+              "status": "planned",
+              "target_at": "2026-03-08"
+            },
+            {
+              "title": "Prepare workflow structures for broader standards alignment later in the year",
+              "status": "planned",
+              "target_at": "2026-03-28"
+            }
+          ]
+        },
+        {
+          "title": "Payments and Settlement",
+          "items": [
+            { "title": "Base x402 payment integration is live", "status": "done", "completed_at": "2025-12-12" },
+            {
+              "title": "Finalize Solana x402 payment integration within Q1, enabling call-to-pay settlement for additional live use cases",
+              "status": "planned",
+              "target_at": "2026-03-15"
+            }
+          ]
+        },
+        {
+          "title": "Ecosystem Foundations",
+          "items": [
+            {
+              "title": "Continue expanding Nexior templates and publishing flows",
+              "status": "planned",
+              "target_at": "2026-03-18"
+            },
+            { "title": "Prioritize reproducibility and quality over volume", "status": "planned", "target_at": "2026-01-15" },
+            {
+              "title": "Begin early contributor feedback loops without aggressive incentives",
+              "status": "planned",
+              "target_at": "2026-02-26"
+            }
+          ]
+        },
+        {
+          "title": "Token and Market Structure",
+          "items": [
+            { "title": "Deprioritize discretionary buybacks at this stage", "status": "planned", "target_at": "2026-01-10" },
+            {
+              "title": "Focus on liquidity depth, stability, and conservative capital use",
+              "status": "planned",
+              "target_at": "2026-02-12"
+            },
+            {
+              "title": "Maintain clear separation between platform operations and market-facing mechanisms",
+              "status": "planned",
+              "target_at": "2026-02-28"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2026-q2",
+      "label": "Q2 2026",
+      "title": "Adoption and Usage Signals",
+      "focus": "Lower friction, broader entry points, and visible real usage",
+      "date_range": "Apr – Jun 2026",
+      "accent": "cyan",
+      "icon": "spark",
+      "groups": [
+        {
+          "title": "Product and Distribution",
+          "items": [
+            {
+              "title": "Expand adoption of the mobile app through improved UX, stability, and workflow depth",
+              "status": "planned",
+              "target_at": "2026-05-12"
+            },
+            { "title": "Increase template-driven usage and real production activity", "status": "planned", "target_at": "2026-06-20" },
+            {
+              "title": "Strengthen the feedback loop between app usage, workflows, and Nexior distribution",
+              "status": "planned",
+              "target_at": "2026-06-28"
+            }
+          ]
+        },
+        {
+          "title": "Payments and Monetization",
+          "items": [
+            { "title": "Expand x402-based settlement into more production workflows", "status": "planned", "target_at": "2026-05-25" },
+            {
+              "title": "Improve receipts, billing transparency, and automated settlement for developers and agents",
+              "status": "planned",
+              "target_at": "2026-06-12"
+            }
+          ]
+        },
+        {
+          "title": "Data Services",
+          "items": [
+            { "title": "Roll out structured data services as a real product line", "status": "planned", "target_at": "2026-05-30" },
+            {
+              "title": "Establish clear standards for ingestion, processing, and delivery",
+              "status": "planned",
+              "target_at": "2026-04-22"
+            },
+            {
+              "title": "Bind data more tightly into workflows so it becomes part of production pipelines",
+              "status": "planned",
+              "target_at": "2026-06-25"
+            }
+          ]
+        },
+        {
+          "title": "Ecosystem and Partnerships",
+          "items": [
+            { "title": "Land the first wave of practical partnerships", "status": "planned", "target_at": "2026-06-15" },
+            {
+              "title": "Focus on co-built templates, integrations, and real delivery rather than announcements",
+              "status": "planned",
+              "target_at": "2026-05-28"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2026-q3",
+      "label": "Q3 2026",
+      "title": "Scale What Works",
+      "focus": "Compounding proven systems, not experimentation",
+      "date_range": "Jul – Sep 2026",
+      "accent": "violet",
+      "icon": "globe",
+      "groups": [
+        {
+          "title": "Platform and APIs",
+          "items": [
+            { "title": "Scale routing, fallback strategies, and concurrency support", "status": "planned", "target_at": "2026-08-18" },
+            { "title": "Improve stability under higher and more complex workloads", "status": "planned", "target_at": "2026-09-20" }
+          ]
+        },
+        {
+          "title": "Workflows and Distribution",
+          "items": [
+            {
+              "title": "Expand workflow modules into more standardized, reusable components",
+              "status": "planned",
+              "target_at": "2026-08-28"
+            },
+            {
+              "title": "Strengthen Nexior discovery and recommendation so high-quality contributions are easier to find and adopt",
+              "status": "planned",
+              "target_at": "2026-09-25"
+            },
+            { "title": "Improve contributor earning clarity tied to real usage", "status": "planned", "target_at": "2026-07-30" }
+          ]
+        },
+        {
+          "title": "Token Mechanics (Research Phase)",
+          "items": [
+            {
+              "title": "Continue careful research into staking and long-term participation models",
+              "status": "planned",
+              "target_at": "2026-09-30"
+            },
+            { "title": "No rushed deployments", "status": "planned", "target_at": "2026-07-12" },
+            {
+              "title": "Any pilot remains limited in scope and focused on contribution, not yield",
+              "status": "planned",
+              "target_at": "2026-09-10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2026-q4",
+      "label": "Q4 2026",
+      "title": "Consolidation and Reliability",
+      "focus": "Infrastructure-grade stability and long-term trust",
+      "date_range": "Oct – Dec 2026",
+      "accent": "blue",
+      "icon": "shield",
+      "groups": [
+        {
+          "title": "Platform Maturity",
+          "items": [
+            { "title": "Deliver predictable release cadence", "status": "planned", "target_at": "2026-11-12" },
+            { "title": "Reduce operational surprises", "status": "planned", "target_at": "2026-12-10" },
+            { "title": "Position Ace as a dependable platform rather than a toolbox", "status": "planned", "target_at": "2026-12-22" }
+          ]
+        },
+        {
+          "title": "Ecosystem Sustainability",
+          "items": [
+            {
+              "title": "Push toward a more self-sustaining loop of contributors, distribution, and usage",
+              "status": "planned",
+              "target_at": "2026-11-28"
+            },
+            { "title": "Reduce reliance on manual curation or intervention", "status": "planned", "target_at": "2026-12-15" }
+          ]
+        },
+        {
+          "title": "Token and Market Discipline",
+          "items": [
+            {
+              "title": "Re-evaluate buybacks only if: platform revenue is meaningfully larger, liquidity depth is already strong, and any buyback activity remains small, non-disruptive, and transparently disclosed",
+              "status": "planned",
+              "target_at": "2026-12-05"
+            },
+            {
+              "title": "Staking, if expanded, follows data from pilots and prioritizes stability",
+              "status": "planned",
+              "target_at": "2026-12-20"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "daily_updates": {
+    "source": "./config/daily-updates.json"
+  },
+  "token_fit": {
+    "title": "How $ACE Fits Into the System",
+    "paragraphs": ["$ACE is designed to strengthen alongside real usage."],
+    "bullets": [
+      "Holding $ACE provides usage-based benefits such as platform fee discounts",
+      "Platform usage generates revenue, reinvested into product, hiring, and growth",
+      "Trading activity generates creator fees that support liquidity, ecosystem incentives, and reserves",
+      "Token mechanisms follow adoption rather than attempting to lead it",
+      "The token is not a substitute for product execution"
+    ]
+  },
+  "closing": {
+    "title": "Closing",
+    "paragraphs": [
+      "Ace Data Cloud is not optimizing for short-term attention.",
+      "We are optimizing for:"
+    ],
+    "bullets": ["Clear delivery", "Real usage", "Disciplined capital management", "Long-term credibility with builders, partners, and serious stakeholders"],
+    "final_line": "Roadmaps do not create trust. Execution does."
+  },
+  "footer": {
+    "brand": {
+      "title": "About",
+      "lines": [
+        { "icon": "building", "text": "Germey Technology, LLC" },
+        { "icon": "location", "text": "United States / Global Remote" },
+        { "icon": "x", "text": "@acedatacloud", "href": "https://x.com/acedatacloud" },
+        { "icon": "github", "text": "AceDataCloud", "href": "https://github.com/AceDataCloud" },
+        { "icon": "contract", "text": "GnHpRsrcyfHSMZNzmpjAzTFQA26vnbRMzbKQ11ZKpump" },
+        { "icon": "mail", "text": "office@acedata.cloud", "href": "mailto:office@acedata.cloud" }
+      ]
+    },
+    "columns": [
+      {
+        "title": "Product",
+        "links": [
+          { "label": "All Services", "href": "https://platform.acedata.cloud/services", "new_tab": true },
+          { "label": "Developer Documentation", "href": "https://platform.acedata.cloud/documents", "new_tab": true },
+          { "label": "Profile", "href": "https://platform.acedata.cloud/profile", "new_tab": true },
+          { "label": "Try Now", "href": "https://hub.acedata.cloud", "new_tab": true }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          { "label": "Distributions", "href": "https://platform.acedata.cloud/console/distributions", "new_tab": true },
+          { "label": "Support", "href": "https://platform.acedata.cloud/support", "new_tab": true },
+          { "label": "Terms", "href": "https://platform.acedata.cloud/terms", "new_tab": true },
+          { "label": "Privacy", "href": "https://platform.acedata.cloud/privacy", "new_tab": true }
+        ]
+      }
+    ],
+    "bottom": {
+      "copyright_text": "platform.acedata.cloud © {year} Copyright",
+      "secondary_text": "鲁ICP备2024132123号-1",
+      "secondary_href": "https://beian.miit.gov.cn/"
+    }
+  }
+}

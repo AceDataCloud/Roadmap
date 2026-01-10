@@ -1,0 +1,56 @@
+{
+  "$schema": "./daily-updates.schema.json",
+  "title": "Daily Updates",
+  "subtitle": "Short, dated shipping notes — linked to docs, demos, or code.",
+  "initial_visible": 6,
+  "items": [
+    {
+      "date": "2026-01-10",
+      "title": "Roadmap site published (static + JSON-configured)",
+      "url": "https://github.com/AceDataCloud"
+    },
+    {
+      "date": "2026-01-09",
+      "title": "Docs: unified accounts and API key binding overview",
+      "url": "https://platform.acedata.cloud/documents",
+      "tags": ["docs"]
+    },
+    {
+      "date": "2026-01-08",
+      "title": "Gateway: reliability dashboard draft (routing + cost visibility)",
+      "url": "https://platform.acedata.cloud/services",
+      "tags": ["gateway"]
+    },
+    {
+      "date": "2026-01-07",
+      "title": "Dify integration notes: workflow backbone and account binding",
+      "url": "https://platform.acedata.cloud/documents",
+      "tags": ["workflows"]
+    },
+    {
+      "date": "2026-01-06",
+      "title": "Nexior: open-source distribution layer highlight",
+      "url": "https://github.com/AceDataCloud/Nexior",
+      "tags": ["open-source"]
+    },
+    {
+      "date": "2026-01-05",
+      "title": "Hub UX iteration plan for template-first use cases",
+      "url": "https://hub.acedata.cloud",
+      "tags": ["hub"]
+    },
+    {
+      "date": "2026-01-04",
+      "title": "x402 settlement checklist for production workflows",
+      "url": "https://platform.acedata.cloud/documents",
+      "tags": ["payments"]
+    },
+    {
+      "date": "2026-01-03",
+      "title": "Data services outline: ingestion → processing → delivery standards",
+      "url": "https://platform.acedata.cloud/documents",
+      "tags": ["data"]
+    }
+  ]
+}
+
