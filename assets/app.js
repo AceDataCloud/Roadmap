@@ -419,7 +419,7 @@
     wrap.appendChild(
       el('div', { class: 'mb-10' }, [
         el('h2', { class: 'font-display text-2xl font-semibold text-slate-900 dark:text-white sm:text-3xl' }, title),
-        subtitle ? el('p', { class: 'mt-2 max-w-2xl text-sm text-slate-600 dark:text-white/75 sm:text-base' }, subtitle) : null
+        subtitle ? el('p', { class: 'mt-2 max-w-2xl text-sm text-slate-600 dark:text-white/80 sm:text-base' }, subtitle) : null
       ])
     );
     return wrap;
@@ -432,18 +432,18 @@
 
     const left = el('div', { class: 'glass rounded-3xl p-6 sm:p-7' });
     for (const p of data.overview.paragraphs || []) {
-      left.appendChild(el('p', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/80 sm:text-base' }, p));
+      left.appendChild(el('p', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/90 sm:text-base' }, p));
     }
     left.appendChild(
       el('div', { class: 'mt-6 flex flex-wrap items-center gap-2' }, [
         el(
           'span',
-          { class: 'rounded-full bg-slate-900/5 px-3 py-1 text-xs font-semibold text-slate-700 shadow-ring dark:bg-white/10 dark:text-white/85' },
+          { class: 'rounded-full bg-slate-900/5 px-3 py-1 text-xs font-semibold text-slate-700 shadow-ring dark:bg-white/10 dark:text-white/90' },
           '2026'
         ),
         el(
           'span',
-          { class: 'rounded-full bg-slate-900/5 px-3 py-1 text-xs font-semibold text-slate-700 shadow-ring dark:bg-white/10 dark:text-white/85' },
+          { class: 'rounded-full bg-slate-900/5 px-3 py-1 text-xs font-semibold text-slate-700 shadow-ring dark:bg-white/10 dark:text-white/90' },
           safeText(data.overview.sequence)
         )
       ])
@@ -459,7 +459,7 @@
       ul.appendChild(
         el('li', { class: 'flex gap-3' }, [
           el('span', { class: 'mt-2 h-2 w-2 flex-none rounded-full bg-ace-emerald' }),
-          el('span', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/80 sm:text-base' }, item)
+          el('span', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/90 sm:text-base' }, item)
         ])
       );
     }
@@ -490,7 +490,7 @@
       shell.appendChild(el('div', { class: 'mt-4 font-display text-lg font-semibold text-slate-900 dark:text-white/95' }, card.title));
 
       for (const p of card.paragraphs || []) {
-        shell.appendChild(el('p', { class: 'mt-3 text-sm leading-relaxed text-slate-700 dark:text-white/80 sm:text-base' }, p));
+        shell.appendChild(el('p', { class: 'mt-3 text-sm leading-relaxed text-slate-700 dark:text-white/90 sm:text-base' }, p));
       }
 
       if (card.bullets?.length) {
@@ -499,7 +499,7 @@
           ul.appendChild(
             el('li', { class: 'flex gap-3' }, [
               el('span', { class: 'mt-2 h-1.5 w-1.5 flex-none rounded-full bg-slate-900/25 dark:bg-white/40' }),
-              el('span', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/80' }, b)
+              el('span', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/90' }, b)
             ])
           );
         }
@@ -542,7 +542,7 @@
       grid.appendChild(
         el('div', { class: 'glass rounded-3xl p-6' }, [
           el('div', { class: 'mb-3 text-sm font-semibold text-slate-900 dark:text-white' }, item.title),
-          el('p', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/75' }, item.description)
+          el('p', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/90' }, item.description)
         ])
       );
     }
@@ -555,7 +555,7 @@
     const shell = el('div', { class: 'glass rounded-3xl p-6 sm:p-8' });
 
     for (const p of data.what_building.intro_paragraphs || []) {
-      shell.appendChild(el('p', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/80 sm:text-base' }, p));
+      shell.appendChild(el('p', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/90 sm:text-base' }, p));
     }
 
     const sections = el('div', { class: 'mt-8 grid gap-6 lg:grid-cols-3' });
@@ -563,7 +563,7 @@
       const card = el('div', { class: 'rounded-3xl bg-slate-900/5 p-6 shadow-ring dark:bg-white/5' });
       card.appendChild(el('div', { class: 'text-sm font-semibold text-slate-900 dark:text-white/95' }, sec.title));
       for (const p of sec.paragraphs || []) {
-        card.appendChild(el('p', { class: 'mt-3 text-sm leading-relaxed text-slate-700 dark:text-white/75' }, p));
+        card.appendChild(el('p', { class: 'mt-3 text-sm leading-relaxed text-slate-700 dark:text-white/90' }, p));
       }
       if (sec.bullets?.length) {
         const ul = el('ul', { class: 'mt-4 space-y-2' });
@@ -571,7 +571,7 @@
           ul.appendChild(
             el('li', { class: 'flex gap-3' }, [
               el('span', { class: 'mt-2 h-1.5 w-1.5 flex-none rounded-full bg-slate-900/25 dark:bg-white/40' }),
-              el('span', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/80' }, b)
+              el('span', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/90' }, b)
             ])
           );
         }
@@ -651,9 +651,9 @@
       iconWrap.innerHTML = (ICONS[phase.icon] || ICONS.bolt)(`h-6 w-6 ${accent.fg}`);
 
       const titleWrap = el('div', { class: 'min-w-0' });
-      titleWrap.appendChild(el('div', { class: 'text-xs font-semibold tracking-[0.2em] text-slate-600 dark:text-white/75' }, phase.label));
+      titleWrap.appendChild(el('div', { class: 'text-xs font-semibold tracking-[0.2em] text-slate-600 dark:text-white/80' }, phase.label));
       titleWrap.appendChild(el('h3', { class: 'mt-1 truncate font-display text-lg font-semibold text-slate-900 dark:text-white sm:text-xl' }, `${phase.title}`));
-      titleWrap.appendChild(el('p', { class: 'mt-2 text-sm text-slate-600 dark:text-white/70' }, `Focus: ${phase.focus}`));
+      titleWrap.appendChild(el('p', { class: 'mt-2 text-sm text-slate-600 dark:text-white/80' }, `Focus: ${phase.focus}`));
 
       left.appendChild(iconWrap);
       left.appendChild(titleWrap);
@@ -661,7 +661,7 @@
       const right = el('div', { class: 'flex flex-none items-center gap-4' });
       const progress = el('div', { class: 'hidden text-right sm:block' }, [
         el('div', { class: 'text-sm font-semibold text-slate-800 dark:text-white/90' }, `${percent(pct)} Complete`),
-        el('div', { class: 'mt-0.5 text-xs text-slate-600 dark:text-white/75' }, `${stats.done} of ${stats.total} tasks`)
+        el('div', { class: 'mt-0.5 text-xs text-slate-600 dark:text-white/80' }, `${stats.done} of ${stats.total} tasks`)
       ]);
       right.appendChild(progress);
 
@@ -672,7 +672,7 @@
       );
       right.appendChild(ring);
 
-      const chev = el('div', { class: 'chev ml-1 hidden h-10 w-10 items-center justify-center text-slate-600 transition-transform dark:text-white/70 sm:flex' });
+      const chev = el('div', { class: 'chev ml-1 hidden h-10 w-10 items-center justify-center text-slate-600 transition-transform dark:text-white/80 sm:flex' });
       chev.innerHTML = ICONS.chevron('h-6 w-6');
       right.appendChild(chev);
 
@@ -681,7 +681,7 @@
 
       const body = el('div', { class: 'border-t border-slate-900/10 px-6 pb-6 pt-6 dark:border-white/10 sm:px-7 sm:pb-7' });
       if (phase.date_range) {
-        body.appendChild(el('div', { class: 'mb-5 text-xs font-semibold tracking-[0.18em] text-slate-600 dark:text-white/75' }, phase.date_range));
+        body.appendChild(el('div', { class: 'mb-5 text-xs font-semibold tracking-[0.18em] text-slate-600 dark:text-white/80' }, phase.date_range));
       }
 
       const groups = el('div', { class: 'grid gap-6 lg:grid-cols-2' });
@@ -699,7 +699,7 @@
             el('li', { class: 'flex gap-3' }, [
               el('span', { class: `mt-2 h-2 w-2 flex-none rounded-full ${meta.dot}` }),
               el('div', { class: 'min-w-0' }, [
-                el('div', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/85' }, task.title),
+                el('div', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/90' }, task.title),
                 el('div', { class: `mt-1 text-xs ${meta.text}` }, subline)
               ])
             ])
@@ -724,31 +724,69 @@
     const wrap = sectionShell(data.token_fit.title, 'Mechanisms follow adoption—never the other way around.');
     const card = el('div', { class: 'glass rounded-3xl p-6 sm:p-8' });
     for (const p of data.token_fit.paragraphs || []) {
-      card.appendChild(el('p', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/80 sm:text-base' }, p));
+      card.appendChild(el('p', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/90 sm:text-base' }, p));
     }
     const ul = el('ul', { class: 'mt-6 grid gap-3 sm:grid-cols-2' });
     for (const b of data.token_fit.bullets || []) {
-      ul.appendChild(el('li', { class: 'rounded-2xl bg-slate-900/5 px-4 py-3 text-sm text-slate-700 shadow-ring dark:bg-white/5 dark:text-white/80' }, b));
+      ul.appendChild(el('li', { class: 'rounded-2xl bg-slate-900/5 px-4 py-3 text-sm text-slate-700 shadow-ring dark:bg-white/5 dark:text-white/90' }, b));
     }
     card.appendChild(ul);
     wrap.appendChild(card);
     return wrap;
   }
 
-  function renderDailyUpdates(updates) {
-    const wrap = sectionShell(updates.title, updates.subtitle);
-
-    const items = (updates.items || [])
-      .slice()
-      .sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
-
-    const initialVisible = Math.max(1, Math.min(60, Number(updates.initial_visible) || 6));
-    const visible = items.slice(0, initialVisible);
-    const rest = items.slice(initialVisible);
+  function renderDailyUpdates(index, sourceUrl) {
+    const wrap = sectionShell(index.title, index.subtitle);
 
     const shell = el('div', { class: 'glass rounded-3xl p-6 sm:p-8' });
+    const list = el('div', { class: 'space-y-4' });
+    shell.appendChild(list);
 
-    const list = el('div', { class: 'space-y-3' });
+    const footer = el('div', { class: 'mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between' });
+    const status = el('div', { class: 'text-xs font-semibold text-slate-600 dark:text-white/80' }, '');
+    const btn = el(
+      'button',
+      {
+        type: 'button',
+        class:
+          'inline-flex items-center justify-center rounded-full border border-slate-900/15 bg-slate-900/5 px-5 py-2.5 text-sm font-semibold text-slate-800 shadow-ring hover:bg-slate-900/10 disabled:opacity-60 dark:border-white/20 dark:bg-white/10 dark:text-white/90 dark:hover:bg-white/15'
+      },
+      'Load older days'
+    );
+    footer.appendChild(status);
+    footer.appendChild(btn);
+    shell.appendChild(footer);
+
+    wrap.appendChild(shell);
+
+    const days = Array.isArray(index.days) ? index.days.filter((d) => typeof d === 'string' && d.trim()) : [];
+    const initialOpenDays = Math.max(0, Math.min(days.length, Number(index.initial_open_days) || 3));
+    const pageSizeDays = Math.max(1, Math.min(60, Number(index.page_size_days) || 20));
+
+    const source = (() => {
+      try {
+        return new URL(String(sourceUrl || ''), window.location.href);
+      } catch (_err) {
+        return null;
+      }
+    })();
+
+    const dayUrl = (day) => {
+      if (source) return new URL(`${day}.json`, source).toString();
+      return `./config/daily-updates/${day}.json`;
+    };
+
+    const state = { cursor: 0, paging: false };
+
+    const setUi = () => {
+      status.textContent = days.length ? `${Math.min(state.cursor, days.length)} / ${days.length} days listed` : 'No updates yet.';
+      const remaining = Math.max(0, days.length - state.cursor);
+      btn.disabled = state.paging || remaining <= 0;
+      if (remaining <= 0) btn.textContent = 'All days loaded';
+      else if (state.paging) btn.textContent = 'Loading…';
+      else btn.textContent = `Load ${Math.min(pageSizeDays, remaining)} older days`;
+    };
+
     const row = (item) =>
       el(
         'a',
@@ -760,41 +798,150 @@
           rel: 'noreferrer'
         },
         [
-          el('div', { class: 'flex flex-wrap items-center justify-between gap-3' }, [
-            el('div', { class: 'font-semibold text-slate-900 dark:text-white/95' }, item.title),
-            el('div', { class: 'text-xs font-semibold text-slate-600 dark:text-white/75' }, formatIsoDate(item.date))
-          ]),
-          item.summary ? el('div', { class: 'mt-2 text-sm text-slate-700 dark:text-white/75' }, item.summary) : null,
+          el('div', { class: 'font-semibold text-slate-900 dark:text-white/95' }, item.title),
+          item.summary ? el('div', { class: 'mt-2 text-sm text-slate-700 dark:text-white/90' }, item.summary) : null,
           item.tags?.length
             ? el(
                 'div',
                 { class: 'mt-3 flex flex-wrap gap-2' },
                 item.tags.map((t) =>
-                  el('span', { class: 'rounded-full border border-slate-900/10 bg-slate-900/5 px-2.5 py-1 text-xs font-semibold text-slate-600 dark:border-white/15 dark:bg-white/5 dark:text-white/70' }, t)
+                  el(
+                    'span',
+                    {
+                      class:
+                        'rounded-full border border-slate-900/10 bg-slate-900/5 px-2.5 py-1 text-xs font-semibold text-slate-600 dark:border-white/15 dark:bg-white/5 dark:text-white/80'
+                    },
+                    t
+                  )
                 )
               )
             : null
         ]
       );
 
-    visible.forEach((i) => list.appendChild(row(i)));
-    shell.appendChild(list);
+    const dayGroup = (day, { open }) => {
+      const attrs = { class: 'glass rounded-3xl' };
+      if (open) attrs.open = '';
+      const details = el('details', attrs);
 
-    if (rest.length) {
-      const more = el('details', { class: 'mt-5 rounded-2xl bg-slate-900/5 p-4 shadow-ring dark:bg-white/5' });
-      more.appendChild(
-        el('summary', { class: 'cursor-pointer select-none text-sm font-semibold text-slate-700 hover:text-slate-900 dark:text-white/85 dark:hover:text-white' }, [
-          `Show ${rest.length} more updates`,
-          el('span', { class: 'ml-2 text-xs text-slate-600 dark:text-white/75' }, '(expand)')
-        ])
-      );
-      const restWrap = el('div', { class: 'mt-4 space-y-3' });
-      rest.forEach((i) => restWrap.appendChild(row(i)));
-      more.appendChild(restWrap);
-      shell.appendChild(more);
-    }
+      const summary = el('summary', {
+        class:
+          'flex cursor-pointer items-center justify-between gap-4 p-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-ace-blue/60 sm:p-7'
+      });
+      summary.appendChild(el('div', { class: 'min-w-0 font-display text-lg font-semibold text-slate-900 dark:text-white' }, formatIsoDate(day)));
+      const countEl = el('div', { class: 'flex flex-none items-center gap-2 text-xs font-semibold text-slate-600 dark:text-white/80' }, 'Open to load');
+      summary.appendChild(countEl);
 
-    wrap.appendChild(shell);
+      const body = el('div', { class: 'border-t border-slate-900/10 px-6 pb-6 pt-6 dark:border-white/10 sm:px-7 sm:pb-7' });
+      const stack = el('div', { class: 'space-y-3' });
+      body.appendChild(stack);
+
+      details.appendChild(summary);
+      details.appendChild(body);
+
+      const renderLoading = () => {
+        stack.replaceChildren(
+          el(
+            'div',
+            { class: 'rounded-2xl bg-slate-900/5 px-4 py-4 text-sm text-slate-700 shadow-ring dark:bg-white/5 dark:text-white/80' },
+            'Loading updates…'
+          )
+        );
+      };
+
+      const renderError = () => {
+        const retry = el(
+          'button',
+          {
+            type: 'button',
+            class:
+              'mt-3 inline-flex items-center justify-center rounded-full border border-slate-900/15 bg-slate-900/5 px-4 py-2 text-sm font-semibold text-slate-800 shadow-ring hover:bg-slate-900/10 dark:border-white/20 dark:bg-white/10 dark:text-white/90 dark:hover:bg-white/15'
+          },
+          'Retry'
+        );
+        retry.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          void loadDay();
+        });
+
+        stack.replaceChildren(
+          el('div', { class: 'rounded-2xl bg-slate-900/5 px-4 py-4 text-sm text-slate-700 shadow-ring dark:bg-white/5 dark:text-white/90' }, [
+            `Failed to load ${day}.`,
+            retry
+          ])
+        );
+      };
+
+      const loadDay = async () => {
+        if (details.dataset.loaded === '1' || details.dataset.loading === '1') return;
+        details.dataset.loading = '1';
+        countEl.textContent = 'Loading…';
+        renderLoading();
+        try {
+          const items = await fetchDay(day);
+          stack.replaceChildren(...items.map((it) => row(it)));
+          details.dataset.loaded = '1';
+          countEl.textContent = `${items.length} updates`;
+        } catch (_err) {
+          countEl.textContent = 'Load failed';
+          renderError();
+        } finally {
+          details.dataset.loading = '0';
+        }
+      };
+
+      details.addEventListener('toggle', () => {
+        if (!details.open) return;
+        void loadDay();
+      });
+
+      if (open) queueMicrotask(() => void loadDay());
+      return details;
+    };
+
+    const fetchDay = async (day) => {
+      const res = await fetch(dayUrl(day), { cache: 'no-store' });
+      if (!res.ok) throw new Error(`Failed to load ${day} (${res.status})`);
+      const doc = await res.json();
+      const itemsRaw = doc?.items;
+      const items = Array.isArray(itemsRaw) ? itemsRaw : [];
+      return items
+        .filter((it) => it && typeof it === 'object')
+        .map((it) => ({
+          title: safeText(it.title),
+          url: safeText(it.url),
+          summary: it.summary ? safeText(it.summary) : '',
+          tags: Array.isArray(it.tags) ? it.tags.map((t) => safeText(t)).filter(Boolean).slice(0, 8) : []
+        }))
+        .filter((it) => it.title && it.url);
+    };
+
+    const loadMore = ({ count, open }) => {
+      if (state.paging) return;
+      state.paging = true;
+      setUi();
+
+      const slice = days.slice(state.cursor, state.cursor + count);
+      for (const day of slice) {
+        list.appendChild(dayGroup(day, { open }));
+      }
+
+      state.cursor += slice.length;
+      state.paging = false;
+      setUi();
+    };
+
+    btn.addEventListener('click', () => {
+      loadMore({ count: pageSizeDays, open: false });
+    });
+
+    setUi();
+    queueMicrotask(() => {
+      if (!days.length) return;
+      loadMore({ count: initialOpenDays, open: true });
+    });
+
     return wrap;
   }
 
@@ -802,18 +949,18 @@
     const wrap = sectionShell(data.closing.title, null);
     const card = el('div', { class: 'glass rounded-3xl p-6 sm:p-8' });
     for (const p of data.closing.paragraphs || []) {
-      card.appendChild(el('p', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/80 sm:text-base' }, p));
+      card.appendChild(el('p', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/90 sm:text-base' }, p));
     }
 
     const ul = el('ul', { class: 'mt-6 grid gap-3 sm:grid-cols-2' });
     for (const b of data.closing.bullets || []) {
-      ul.appendChild(el('li', { class: 'rounded-2xl bg-slate-900/5 px-4 py-3 text-sm text-slate-700 shadow-ring dark:bg-white/5 dark:text-white/80' }, b));
+      ul.appendChild(el('li', { class: 'rounded-2xl bg-slate-900/5 px-4 py-3 text-sm text-slate-700 shadow-ring dark:bg-white/5 dark:text-white/90' }, b));
     }
     card.appendChild(ul);
     card.appendChild(
       el('div', { class: 'mt-8 rounded-3xl bg-gradient-to-r from-ace-emerald/15 via-white/20 to-ace-blue/15 p-6 text-center shadow-ring dark:via-white/5' }, [
         el('div', { class: 'font-display text-lg font-semibold text-slate-900 dark:text-white sm:text-xl' }, data.closing.final_line),
-        el('div', { class: 'mt-2 text-sm text-slate-600 dark:text-white/75' }, 'Every milestone is dated. Every claim is backed by something you can verify — docs, code, or production usage.')
+        el('div', { class: 'mt-2 text-sm text-slate-600 dark:text-white/80' }, 'Every milestone is dated. Every claim is backed by something you can verify — docs, code, or production usage.')
       ])
     );
     wrap.appendChild(card);
@@ -834,7 +981,7 @@
       el('div', { class: 'mt-6 text-sm font-semibold text-slate-800 dark:text-white/90' }, data.footer.brand.title)
     ]);
 
-    const lines = el('div', { class: 'mt-4 space-y-3 text-sm text-slate-600 dark:text-white/75' });
+    const lines = el('div', { class: 'mt-4 space-y-3 text-sm text-slate-600 dark:text-white/80' });
     for (const line of data.footer.brand.lines || []) {
       const content = line.href
         ? el('a', { class: 'hover:text-slate-900 dark:hover:text-white', href: line.href, ...(line.href.startsWith('http') ? { target: '_blank', rel: 'noreferrer' } : {}) }, line.text)
@@ -856,7 +1003,7 @@
         list.appendChild(
           el(
             'a',
-            { class: 'block text-slate-600 hover:text-slate-900 dark:text-white/75 dark:hover:text-white', href: link.href, ...(link.new_tab ? { target: '_blank', rel: 'noreferrer' } : {}) },
+            { class: 'block text-slate-600 hover:text-slate-900 dark:text-white/80 dark:hover:text-white', href: link.href, ...(link.new_tab ? { target: '_blank', rel: 'noreferrer' } : {}) },
             link.label
           )
         );
@@ -868,7 +1015,7 @@
     top.appendChild(cols);
 
     const year = new Date().getFullYear();
-    const bottom = el('div', { class: 'mt-12 border-t border-slate-900/10 pt-8 text-center text-sm text-slate-600 dark:border-white/10 dark:text-white/75' }, [
+    const bottom = el('div', { class: 'mt-12 border-t border-slate-900/10 pt-8 text-center text-sm text-slate-600 dark:border-white/10 dark:text-white/80' }, [
       el('div', {}, data.footer.bottom.copyright_text.replace('{year}', String(year))),
       el('a', { class: 'mt-2 inline-block hover:text-slate-900 dark:hover:text-white', href: data.footer.bottom.secondary_href, target: '_blank', rel: 'noreferrer' }, data.footer.bottom.secondary_text)
     ]);
@@ -892,7 +1039,8 @@
     if (!app) return;
 
     let data;
-    let dailyUpdates;
+    let dailyUpdatesIndex;
+    let dailyUpdatesSourceUrl;
     try {
       const res = await fetch('./config/roadmap.json', { cache: 'no-store' });
       if (!res.ok) throw new Error(`Failed to load config/roadmap.json (${res.status})`);
@@ -902,7 +1050,7 @@
         el('div', { class: 'mx-auto max-w-3xl px-4 py-16 text-center sm:px-6' }, [
           el('div', { class: 'glass rounded-3xl p-8' }, [
             el('h1', { class: 'font-display text-xl font-semibold text-slate-900 dark:text-white' }, 'Could not load config/roadmap.json'),
-            el('p', { class: 'mt-3 text-sm leading-relaxed text-slate-600 dark:text-white/75' }, 'If you opened this page via file://, browsers block JSON fetch. Serve the folder with a local web server, e.g. `python3 -m http.server` from the Roadmap directory.')
+            el('p', { class: 'mt-3 text-sm leading-relaxed text-slate-600 dark:text-white/80' }, 'If you opened this page via file://, browsers block JSON fetch. Serve the folder with a local web server, e.g. `python3 -m http.server` from the Roadmap directory.')
           ])
         ])
       );
@@ -911,11 +1059,16 @@
 
     try {
       if (data?.daily_updates?.source) {
-        const dr = await fetch(String(data.daily_updates.source), { cache: 'no-store' });
-        if (dr.ok) dailyUpdates = await dr.json();
+        const src = String(data.daily_updates.source);
+        const dr = await fetch(src, { cache: 'no-store' });
+        if (dr.ok) {
+          dailyUpdatesIndex = await dr.json();
+          dailyUpdatesSourceUrl = dr.url || src;
+        }
       }
     } catch (_err) {
-      dailyUpdates = undefined;
+      dailyUpdatesIndex = undefined;
+      dailyUpdatesSourceUrl = undefined;
     }
 
     document.title = safeText(data.site.page_title || document.title);
@@ -932,7 +1085,7 @@
     app.appendChild(renderWhatBuilding(data));
     app.appendChild(renderPhases(data));
     app.appendChild(renderTokenFit(data));
-    if (dailyUpdates) app.appendChild(renderDailyUpdates(dailyUpdates));
+    if (dailyUpdatesIndex?.days?.length) app.appendChild(renderDailyUpdates(dailyUpdatesIndex, dailyUpdatesSourceUrl));
     app.appendChild(renderClosing(data));
     app.appendChild(renderFooter(data));
 

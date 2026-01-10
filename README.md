@@ -81,8 +81,12 @@ Germey Technology, LLC
 
 ## Maintainers (Automation)
 
-This repo auto-syncs merged PRs in the `AceDataCloud` GitHub org into `config/daily-updates.json`, and the workflow auto-commits and pushes changes so the website stays up to date.
+This repo auto-syncs merged PRs in the `AceDataCloud` GitHub org into `config/daily-updates/` (one JSON file per day), and the workflow auto-commits and pushes changes so the website stays up to date.
 
 - Script: `scripts/sync_merged_prs_to_daily_updates.py`
 - Workflow: `.github/workflows/sync_merged_prs_daily_updates.yml`
+- Output:
+  - Index manifest: `config/daily-updates/index.json`
+  - Per-day files: `config/daily-updates/YYYY-MM-DD.json`
+  - Cursor/state: `config/pr-sync-state.json`
 - Secrets (optional): `REPO_PAT`, `ACEDATACLOUD_OPENAI_KEY`, `OPENAI_MODEL`, `OPENAI_BASE_URL`

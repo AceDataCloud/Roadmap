@@ -6,11 +6,17 @@ import datetime as dt
 import json
 import os
 import re
+import ssl
 import sys
 from pathlib import Path
 from typing import Any
 import urllib.parse
 import urllib.request
+
+try:
+    import certifi  # type: ignore
+except Exception:  # pragma: no cover
+    certifi = None
 
 
 GITHUB_API = "https://api.github.com"
@@ -63,6 +69,17 @@ def _write_json(path: str, data: dict) -> None:
         json.dump(data, f, ensure_ascii=False, indent=2)
         f.write("\n")
 
+def _ssl_context() -> ssl.SSLContext:
+    try:
+        if certifi is not None:
+            return ssl.create_default_context(cafile=certifi.where())
+    except Exception:
+        pass
+    return ssl.create_default_context()
+
+
+_URL_CONTEXT = _ssl_context()
+
 
 def _github_get(
     url: str,
@@ -79,7 +96,7 @@ def _github_get(
 
     req = urllib.request.Request(url, headers=headers, method="GET")
     try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
+        with urllib.request.urlopen(req, timeout=30, context=_URL_CONTEXT) as resp:
             body = resp.read().decode("utf-8")
             return json.loads(body), dict(resp.headers.items())
     except urllib.error.HTTPError as e:
@@ -97,7 +114,7 @@ def _github_get_text(url: str, token: str | None, *, accept: str) -> tuple[str, 
 
     req = urllib.request.Request(url, headers=headers, method="GET")
     try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
+        with urllib.request.urlopen(req, timeout=30, context=_URL_CONTEXT) as resp:
             body = resp.read().decode("utf-8", errors="replace")
             return body, dict(resp.headers.items())
     except urllib.error.HTTPError as e:
@@ -300,13 +317,64 @@ def _is_merge_commit(commit_item: dict) -> bool:
             return True
     return False
 
-def _coerce_daily_updates(doc: dict) -> list[dict]:
+_DAY_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
+
+def _is_day(value: str) -> bool:
+    return bool(_DAY_RE.match(value.strip()))
+
+
+def _coerce_daily_updates_index(doc: dict) -> dict:
     if not isinstance(doc, dict):
-        raise ValueError("daily-updates.json must be a JSON object")
+        raise ValueError("daily-updates index must be a JSON object")
+
+    title = doc.get("title")
+    subtitle = doc.get("subtitle")
+    days = doc.get("days")
+
+    if not isinstance(title, str) or not title.strip():
+        raise ValueError('daily-updates index must include a non-empty string field "title"')
+    if not isinstance(subtitle, str):
+        raise ValueError('daily-updates index must include a string field "subtitle"')
+    if not isinstance(days, list):
+        raise ValueError('daily-updates index must include an array field "days"')
+
+    norm_days: list[str] = []
+    seen: set[str] = set()
+    for d in days:
+        if not isinstance(d, str):
+            continue
+        d = d.strip()
+        if not d or not _is_day(d):
+            continue
+        if d in seen:
+            continue
+        seen.add(d)
+        norm_days.append(d)
+
+    doc["days"] = sorted(norm_days, reverse=True)
+    doc.setdefault("initial_open_days", 3)
+    doc.setdefault("page_size_days", 20)
+    doc.setdefault("$schema", "./index.schema.json")
+    return doc
+
+
+def _coerce_daily_day(doc: dict, *, day: str) -> list[dict]:
+    if not isinstance(doc, dict):
+        raise ValueError(f"{day}.json must be a JSON object")
     items = doc.get("items")
     if not isinstance(items, list):
-        raise ValueError('daily-updates.json must include an array field "items"')
-    return items
+        raise ValueError(f'{day}.json must include an array field "items"')
+    out: list[dict] = []
+    for it in items:
+        if not isinstance(it, dict):
+            continue
+        url = str(it.get("url") or "").strip()
+        title = str(it.get("title") or "").strip()
+        if not url or not title:
+            continue
+        out.append(it)
+    return out
 
 
 def _github_get_pr(
@@ -411,7 +479,7 @@ def _openai_chat_completions(
     }
     req = urllib.request.Request(url, data=data, headers=headers, method="POST")
     try:
-        with urllib.request.urlopen(req, timeout=60) as resp:
+        with urllib.request.urlopen(req, timeout=60, context=_URL_CONTEXT) as resp:
             body = resp.read().decode("utf-8")
             parsed = json.loads(body)
             if not isinstance(parsed, dict):
@@ -521,10 +589,10 @@ def _summarize_pr_with_openai(
 def main(argv: list[str]) -> int:
     repo_root = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(
-        description="Sync merged PRs + recent commits in an org into Roadmap/config/daily-updates.json",
+        description="Sync merged PRs + recent commits in an org into config/daily-updates/<YYYY-MM-DD>.json files",
     )
     parser.add_argument("--org", default="AceDataCloud")
-    parser.add_argument("--daily-updates", default=str(repo_root / "config" / "daily-updates.json"))
+    parser.add_argument("--daily-updates", default=str(repo_root / "config" / "daily-updates" / "index.json"))
     parser.add_argument("--state", default=str(repo_root / "config" / "pr-sync-state.json"))
     parser.add_argument("--token-env", default="REPO_PAT")
     parser.add_argument("--bootstrap-days", type=int, default=14)
@@ -578,10 +646,100 @@ def main(argv: list[str]) -> int:
         allowed_logins = _github_get_allowed_logins(org=args.org, token=token, verbose=verbose)
         _log(verbose, f"authors: allowed_total={len(allowed_logins)}")
 
-    daily = _read_json(args.daily_updates)
-    daily_items = _coerce_daily_updates(daily)
+    daily_index_path = Path(args.daily_updates)
+    daily_dir = daily_index_path.parent
+    daily_dir.mkdir(parents=True, exist_ok=True)
 
-    existing_urls = {str(it.get("url")).strip() for it in daily_items if isinstance(it, dict) and it.get("url")}
+    daily_index: dict[str, Any]
+    if daily_index_path.exists():
+        daily_index = _read_json(str(daily_index_path))
+    else:
+        legacy = daily_dir.parent / "daily-updates.json"
+        if legacy.exists():
+            legacy_doc = _read_json(str(legacy))
+            legacy_items = legacy_doc.get("items") if isinstance(legacy_doc, dict) else None
+            if isinstance(legacy_items, list):
+                by_day: dict[str, list[dict]] = {}
+                for it in legacy_items:
+                    if not isinstance(it, dict):
+                        continue
+                    day = str(it.get("date") or "").strip()
+                    if not day or not _is_day(day):
+                        continue
+                    item = dict(it)
+                    item.pop("date", None)
+                    by_day.setdefault(day, []).append(item)
+
+                for day, items in by_day.items():
+                    if not args.dry_run:
+                        _write_json(
+                            str(daily_dir / f"{day}.json"),
+                            {"$schema": "./day.schema.json", "date": day, "items": items},
+                        )
+
+                daily_index = {
+                    "$schema": "./index.schema.json",
+                    "title": str(legacy_doc.get("title") or "Daily Updates"),
+                    "subtitle": str(legacy_doc.get("subtitle") or ""),
+                    "initial_open_days": 3,
+                    "page_size_days": 20,
+                    "days": sorted(by_day.keys(), reverse=True),
+                }
+                if not args.dry_run:
+                    try:
+                        legacy.unlink()
+                    except Exception as e:
+                        _log(verbose, f"warn: failed to delete legacy {legacy}: {e}")
+            else:
+                daily_index = {
+                    "$schema": "./index.schema.json",
+                    "title": "Daily Updates",
+                    "subtitle": "",
+                    "initial_open_days": 3,
+                    "page_size_days": 20,
+                    "days": [],
+                }
+        else:
+            daily_index = {
+                "$schema": "./index.schema.json",
+                "title": "Daily Updates",
+                "subtitle": "",
+                "initial_open_days": 3,
+                "page_size_days": 20,
+                "days": [],
+            }
+
+    daily_index = _coerce_daily_updates_index(daily_index)
+
+    days: list[str] = list(daily_index.get("days") or [])
+    daily_by_day: dict[str, list[dict]] = {}
+    existing_urls: set[str] = set()
+
+    # Discover day files even if index is missing entries.
+    for p in daily_dir.glob("*.json"):
+        day = p.stem
+        if _is_day(day) and day not in days:
+            days.append(day)
+
+    days = sorted(set(days), reverse=True)
+    daily_index["days"] = days
+
+    for day in days:
+        day_path = daily_dir / f"{day}.json"
+        if not day_path.exists():
+            daily_by_day[day] = []
+            continue
+        try:
+            doc = _read_json(str(day_path))
+            items = _coerce_daily_day(doc, day=day)
+        except Exception as e:
+            _log(verbose, f"warn: failed to load {day_path}: {e}")
+            items = []
+        daily_by_day[day] = items
+        for it in items:
+            url = str(it.get("url") or "").strip()
+            if url:
+                existing_urls.add(url)
     last_pr_sync, last_commit_sync = _load_state(args.state, args.bootstrap_days)
 
     # Search query only supports date granularity; subtract 1 day for safety.
@@ -604,7 +762,7 @@ def main(argv: list[str]) -> int:
         raw_commits = _search_commits(org=args.org, since_date=commit_since_date, token=token, max_items=args.max_items)
         _log(verbose, f"sync: github_commit_search_results={len(raw_commits)}")
 
-    new_items: list[tuple[dt.datetime, dict]] = []
+    new_items: list[tuple[dt.datetime, str, dict]] = []
     max_seen_pr_sync = last_pr_sync
     max_seen_commit_sync = last_commit_sync
     new_prs_added = 0
@@ -684,8 +842,8 @@ def main(argv: list[str]) -> int:
             except Exception as e:
                 print(f"OpenAI summarization failed for {repo}#{number}: {e}", file=sys.stderr)
 
+        day = merged_at.date().isoformat()
         item: dict[str, Any] = {
-            "date": merged_at.date().isoformat(),
             "title": pretty_title or f"{repo}#{number}: {title}",
             "url": html_url,
             "tags": ["github", "pr", repo],
@@ -695,7 +853,7 @@ def main(argv: list[str]) -> int:
         if extra_tags:
             item["tags"] = list(dict.fromkeys([*item["tags"], *extra_tags]))
 
-        new_items.append((merged_at, item))
+        new_items.append((merged_at, day, item))
         new_prs_added += 1
         if merged_at > max_seen_pr_sync:
             max_seen_pr_sync = merged_at
@@ -772,13 +930,13 @@ def main(argv: list[str]) -> int:
         if not subject:
             continue
 
+        day = committed_at.date().isoformat()
         item: dict[str, Any] = {
-            "date": committed_at.date().isoformat(),
             "title": f"{repo}@{sha[:7]}: {subject}",
             "url": html_url,
             "tags": ["github", "commit", repo],
         }
-        new_items.append((committed_at, item))
+        new_items.append((committed_at, day, item))
         new_commits_added += 1
         if committed_at > max_seen_commit_sync:
             max_seen_commit_sync = committed_at
@@ -790,51 +948,106 @@ def main(argv: list[str]) -> int:
             ),
         )
 
-    if not new_items:
-        print("No new items found (PRs/commits).")
-        if not args.dry_run:
-            _save_state(
-                args.state,
-                last_pr_sync=last_pr_sync,
-                last_commit_sync=last_commit_sync,
-                last_run_at=run_at,
-                added_urls=[],
-                openai_enabled=bool(openai_api_key),
-                openai_model=openai_model if openai_api_key else None,
-                openai_base_url=openai_base_url if openai_api_key else None,
-            )
-        return 0
+    def _index_doc(index: dict[str, Any], *, days: list[str]) -> dict[str, Any]:
+        return {
+            "$schema": str(index.get("$schema") or "./index.schema.json"),
+            "title": str(index.get("title") or "Daily Updates"),
+            "subtitle": str(index.get("subtitle") or ""),
+            "initial_open_days": int(index.get("initial_open_days") or 3),
+            "page_size_days": int(index.get("page_size_days") or 20),
+            "days": days,
+        }
 
-    new_items.sort(key=lambda x: x[0], reverse=True)
-    for _merged_at, item in new_items:
-        daily_items.insert(0, item)
-        existing_urls.add(item["url"])
+    def _day_doc(day: str, items: list[dict[str, Any]]) -> dict[str, Any]:
+        return {
+            "$schema": "./day.schema.json",
+            "date": day,
+            "items": items,
+        }
 
-    # Normalize ordering by date desc (stable inside same date).
-    daily_items.sort(key=lambda it: (str(it.get("date") or ""), str(it.get("url") or "")), reverse=True)
+    touched_days: set[str] = set()
+    added_urls: list[str] = []
+
+    if new_items:
+        new_items.sort(key=lambda x: x[0], reverse=True)
+
+        new_by_day: dict[str, list[tuple[dt.datetime, dict[str, Any]]]] = {}
+        for timestamp, day, item in new_items:
+            new_by_day.setdefault(day, []).append((timestamp, item))
+
+        for day, items_with_ts in new_by_day.items():
+            items_with_ts.sort(key=lambda x: x[0], reverse=True)
+            inserts: list[dict[str, Any]] = []
+            for _ts, item in items_with_ts:
+                url = str(item.get("url") or "").strip()
+                if not url or url in existing_urls:
+                    continue
+                inserts.append(item)
+                existing_urls.add(url)
+                added_urls.append(url)
+
+            if not inserts:
+                continue
+
+            existing = daily_by_day.get(day, [])
+            inserted_urls = {str(it.get("url") or "").strip() for it in inserts}
+            existing_filtered = [it for it in existing if str(it.get("url") or "").strip() not in inserted_urls]
+            daily_by_day[day] = inserts + existing_filtered
+            touched_days.add(day)
+
+    # Ensure the index lists only day files that exist (plus any newly touched days).
+    existing_day_files = {p.stem for p in daily_dir.glob("*.json") if _is_day(p.stem)}
+    index_days = sorted(existing_day_files | touched_days, reverse=True)
+    daily_index_out = _index_doc(daily_index, days=index_days)
 
     if args.dry_run:
-        print(
-            "Would add"
-            f" {len(new_items)} items (prs={new_prs_added}, commits={new_commits_added})."
-            f" last_pr_sync stays {last_pr_sync.isoformat()} last_commit_sync stays {last_commit_sync.isoformat()}"
-        )
+        if new_items:
+            print(
+                "Would add"
+                f" {len(added_urls)} items (prs={new_prs_added}, commits={new_commits_added})."
+                f" last_pr_sync stays {last_pr_sync.isoformat()} last_commit_sync stays {last_commit_sync.isoformat()}"
+            )
+        else:
+            print("No new items found (PRs/commits).")
         return 0
 
-    _write_json(args.daily_updates, daily)
+    # Persist day files first (so index always references existing files).
+    for day in sorted(touched_days, reverse=True):
+        items = daily_by_day.get(day, [])
+        _write_json(str(daily_dir / f"{day}.json"), _day_doc(day, items))
+
+    # Refresh day files after writes and persist the index.
+    day_files_after = {p.stem for p in daily_dir.glob("*.json") if _is_day(p.stem)}
+    _write_json(str(daily_index_path), _index_doc(daily_index, days=sorted(day_files_after, reverse=True)))
+
+    # Persist sync state.
+    if not new_items:
+        _save_state(
+            args.state,
+            last_pr_sync=last_pr_sync,
+            last_commit_sync=last_commit_sync,
+            last_run_at=run_at,
+            added_urls=[],
+            openai_enabled=bool(openai_api_key),
+            openai_model=openai_model if openai_api_key else None,
+            openai_base_url=openai_base_url if openai_api_key else None,
+        )
+        print("No new items found (PRs/commits).")
+        return 0
+
     _save_state(
         args.state,
         last_pr_sync=max_seen_pr_sync,
         last_commit_sync=max_seen_commit_sync,
         last_run_at=run_at,
-        added_urls=[str(it[1].get("url") or "") for it in new_items if isinstance(it[1], dict)],
+        added_urls=added_urls,
         openai_enabled=bool(openai_api_key),
         openai_model=openai_model if openai_api_key else None,
         openai_base_url=openai_base_url if openai_api_key else None,
     )
     print(
         "Added"
-        f" {len(new_items)} items (prs={new_prs_added}, commits={new_commits_added})."
+        f" {len(added_urls)} items (prs={new_prs_added}, commits={new_commits_added})."
         f" Updated last_pr_sync={max_seen_pr_sync.isoformat()} last_commit_sync={max_seen_commit_sync.isoformat()}"
     )
     return 0
