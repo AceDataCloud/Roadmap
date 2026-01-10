@@ -13,10 +13,12 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["title", "url"],
+        "required": ["id", "title"],
         "properties": {
+          "id": { "type": "string", "minLength": 1 },
           "title": { "type": "string", "minLength": 1 },
           "url": { "type": "string", "format": "uri" },
+          "public": { "type": "boolean", "default": true },
           "summary": { "type": "string" },
           "tags": {
             "type": "array",
@@ -28,4 +30,3 @@
     }
   }
 }
-

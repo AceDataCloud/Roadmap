@@ -787,24 +787,25 @@
       else btn.textContent = `Load ${Math.min(pageSizeDays, remaining)} older days`;
     };
 
-    const row = (item) =>
-      el(
-        'a',
-        {
-          class:
-            'block rounded-2xl bg-slate-900/5 px-4 py-4 shadow-ring hover:bg-slate-900/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-ace-blue/60 dark:bg-white/5 dark:hover:bg-white/10',
-          href: item.url,
-          target: '_blank',
-          rel: 'noreferrer'
-        },
-        [
-          el('div', { class: 'font-semibold text-slate-900 dark:text-white/95' }, item.title),
-          item.summary ? el('div', { class: 'mt-2 text-sm text-slate-700 dark:text-white/90' }, item.summary) : null,
-          item.tags?.length
-            ? el(
-                'div',
-                { class: 'mt-3 flex flex-wrap gap-2' },
-                item.tags.map((t) =>
+    const row = (item) => {
+      const canLink = !!item.public && !!item.url;
+      const tagWrap =
+        item.tags?.length || !canLink
+          ? el(
+              'div',
+              { class: 'mt-3 flex flex-wrap gap-2' },
+              [
+                !canLink
+                  ? el(
+                      'span',
+                      {
+                        class:
+                          'rounded-full border border-slate-900/10 bg-slate-900/5 px-2.5 py-1 text-xs font-semibold text-slate-600 dark:border-white/15 dark:bg-white/5 dark:text-white/80'
+                      },
+                      'private'
+                    )
+                  : null,
+                ...(item.tags || []).map((t) =>
                   el(
                     'span',
                     {
@@ -814,10 +815,38 @@
                     t
                   )
                 )
-              )
-            : null
-        ]
+              ].filter(Boolean)
+            )
+          : null;
+
+      const inner = [
+        el('div', { class: 'font-semibold text-slate-900 dark:text-white/95' }, item.title),
+        item.summary ? el('div', { class: 'mt-2 text-sm text-slate-700 dark:text-white/90' }, item.summary) : null,
+        tagWrap
+      ];
+
+      if (canLink) {
+        return el(
+          'a',
+          {
+            class:
+              'block rounded-2xl bg-slate-900/5 px-4 py-4 shadow-ring hover:bg-slate-900/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-ace-blue/60 dark:bg-white/5 dark:hover:bg-white/10',
+            href: item.url,
+            target: '_blank',
+            rel: 'noreferrer'
+          },
+          inner
+        );
+      }
+
+      return el(
+        'div',
+        {
+          class: 'block rounded-2xl bg-slate-900/5 px-4 py-4 shadow-ring dark:bg-white/5'
+        },
+        inner
       );
+    };
 
     const dayGroup = (day, { open }) => {
       const attrs = { class: 'glass rounded-3xl' };
@@ -909,12 +938,14 @@
       return items
         .filter((it) => it && typeof it === 'object')
         .map((it) => ({
+          id: safeText(it.id),
           title: safeText(it.title),
-          url: safeText(it.url),
+          url: it.url ? safeText(it.url) : '',
+          public: it.public !== false,
           summary: it.summary ? safeText(it.summary) : '',
           tags: Array.isArray(it.tags) ? it.tags.map((t) => safeText(t)).filter(Boolean).slice(0, 8) : []
         }))
-        .filter((it) => it.title && it.url);
+        .filter((it) => it.id && it.title);
     };
 
     const loadMore = ({ count, open }) => {
