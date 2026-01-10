@@ -248,17 +248,18 @@
 
     const container = el('div', { class: 'mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6' });
 
-    const left = el(
-      'a',
-      { class: 'flex items-center', href: '#top', 'aria-label': 'Ace Data Cloud' },
-      [
-        el('img', {
-          src: './assets/logo.png',
-          alt: 'Ace Data Cloud',
-          class: 'h-8 w-auto select-none'
-        })
-      ]
-    );
+    const left = el('a', { class: 'flex items-center', href: '#top', 'aria-label': 'Ace Data Cloud' }, [
+      el('img', {
+        src: './assets/logo.png',
+        alt: 'Ace Data Cloud',
+        class: 'h-8 w-auto select-none dark:hidden'
+      }),
+      el('img', {
+        src: './assets/logo2.png',
+        alt: 'Ace Data Cloud',
+        class: 'hidden h-8 w-auto select-none dark:block'
+      })
+    ]);
 
     const nav = el('nav', { class: 'hidden items-center gap-2 md:flex' });
     for (const item of data.nav || []) {
@@ -280,7 +281,7 @@
 
     const themeBtn = el('button', {
       class:
-        'inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-900/15 bg-slate-900/5 text-slate-700 shadow-ring hover:bg-slate-900/10 dark:border-white/20 dark:bg-white/8 dark:text-white/95 dark:hover:bg-white/12',
+        'inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-900/15 bg-slate-900/5 text-slate-700 shadow-ring hover:bg-slate-900/10 dark:border-white/20 dark:bg-white/10 dark:text-white/95 dark:hover:bg-white/15',
       type: 'button',
       'data-theme-toggle': '',
       onclick: () => window.AceRoadmapTheme?.toggle?.()
@@ -292,7 +293,7 @@
         'button',
         {
           class:
-            'inline-flex items-center justify-center rounded-full border border-slate-900/15 bg-slate-900/5 px-3 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-900/10 dark:border-white/20 dark:bg-white/8 dark:text-white/95 dark:hover:bg-white/12 md:hidden',
+            'inline-flex items-center justify-center rounded-full border border-slate-900/15 bg-slate-900/5 px-3 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-900/10 dark:border-white/20 dark:bg-white/10 dark:text-white/95 dark:hover:bg-white/15 md:hidden',
           type: 'button',
           'aria-label': 'Open menu',
           onclick: () => {
@@ -322,7 +323,7 @@
           {
             class: item.primary
               ? 'rounded-xl bg-gradient-to-r from-ace-emerald to-ace-blue px-4 py-3 text-sm font-semibold text-slate-950'
-              : 'rounded-xl bg-slate-900/5 px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-900/10 dark:bg-white/8 dark:text-white/90 dark:hover:bg-white/12',
+              : 'rounded-xl bg-slate-900/5 px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-900/10 dark:bg-white/10 dark:text-white/90 dark:hover:bg-white/15',
             href: item.href,
             ...(item.new_tab ? { target: '_blank', rel: 'noreferrer' } : {})
           },
@@ -341,7 +342,7 @@
     if (data?.hero?.background_image) {
       bg.style.backgroundImage = `url("${String(data.hero.background_image)}")`;
     }
-    bg.appendChild(el('div', { class: 'absolute inset-0 bg-gradient-to-b from-slate-950/55 via-slate-950/60 to-slate-950' }));
+    bg.appendChild(el('div', { class: 'absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-950/70 to-slate-950' }));
     bg.appendChild(
       el('div', {
         class: 'absolute inset-0 bg-[radial-gradient(circle_at_25%_30%,rgba(6,236,163,0.22),transparent_55%)] mix-blend-screen'
@@ -498,7 +499,7 @@
           ul.appendChild(
             el('li', { class: 'flex gap-3' }, [
               el('span', { class: 'mt-2 h-1.5 w-1.5 flex-none rounded-full bg-slate-900/25 dark:bg-white/40' }),
-              el('span', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/78' }, b)
+              el('span', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/80' }, b)
             ])
           );
         }
@@ -570,7 +571,7 @@
           ul.appendChild(
             el('li', { class: 'flex gap-3' }, [
               el('span', { class: 'mt-2 h-1.5 w-1.5 flex-none rounded-full bg-slate-900/25 dark:bg-white/40' }),
-              el('span', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/78' }, b)
+              el('span', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/80' }, b)
             ])
           );
         }
