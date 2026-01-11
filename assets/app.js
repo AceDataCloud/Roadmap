@@ -424,12 +424,11 @@
   }
 
   function renderQuickNav(data) {
-    const wrap = el('section', { class: 'sticky top-[57px] z-40 border-b border-slate-900/10 bg-white/90 backdrop-blur dark:border-white/10 dark:bg-slate-950/80' });
-    const container = el('div', { class: 'mx-auto max-w-6xl px-4 py-3 sm:px-6' });
-    
-    const nav = el('nav', { class: 'flex items-center gap-2 overflow-x-auto scrollbar-hide' }, [
-      el('span', { class: 'mr-2 hidden text-xs font-semibold text-slate-600 dark:text-white/80 md:inline' }, 'Quick nav:')
-    ]);
+    const wrap = el('div', { 
+      id: 'quick-nav',
+      class: 'fixed bottom-6 right-6 z-50 hidden flex-col gap-2 transition-opacity duration-300',
+      style: 'opacity: 0;'
+    });
 
     const sections = [
       { label: 'Overview', href: '#overview' },
@@ -449,12 +448,12 @@
 
     for (const section of sections) {
       if (!section.label) continue;
-      nav.appendChild(
+      wrap.appendChild(
         el(
           'a',
           {
             class:
-              'flex-none rounded-full border border-slate-900/15 bg-slate-900/5 px-3 py-1.5 text-xs font-semibold text-slate-800 hover:bg-slate-900/10 dark:border-white/20 dark:bg-white/10 dark:text-white/90 dark:hover:bg-white/15',
+              'block rounded-lg border border-slate-900/15 bg-white/95 px-3 py-2 text-xs font-semibold text-slate-800 shadow-lg backdrop-blur hover:bg-slate-50 dark:border-white/20 dark:bg-slate-900/95 dark:text-white/90 dark:hover:bg-slate-800',
             href: section.href
           },
           section.label
@@ -462,8 +461,6 @@
       );
     }
 
-    container.appendChild(nav);
-    wrap.appendChild(container);
     return wrap;
   }
 
@@ -1376,8 +1373,6 @@
     app.appendChild(hero);
     startHeroCanvas(hero.querySelector('#hero-canvas'));
 
-    app.appendChild(renderQuickNav(data));
-
     app.appendChild(renderOverview(data));
     app.appendChild(renderIntro(data));
     const founder = renderFounder(data);
@@ -1391,6 +1386,36 @@
     if (dailyUpdatesIndex) app.appendChild(renderDailyUpdates(dailyUpdatesIndex, dailyUpdatesSourceUrl, { load_failed: dailyUpdatesLoadFailed }));
     app.appendChild(renderClosing(data));
     app.appendChild(renderFooter(data));
+
+    // Add quick nav as a floating element
+    const quickNav = renderQuickNav(data);
+    app.appendChild(quickNav);
+
+    // Show/hide quick nav based on scroll position
+    function updateQuickNavVisibility() {
+      const roadmapSection = document.getElementById('roadmap');
+      if (!roadmapSection) return;
+
+      const rect = roadmapSection.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      // Show when roadmap section is in view
+      if (rect.top < windowHeight && rect.bottom > 0) {
+        quickNav.classList.remove('hidden');
+        quickNav.style.opacity = '1';
+      } else {
+        quickNav.style.opacity = '0';
+        setTimeout(() => {
+          if (quickNav.style.opacity === '0') {
+            quickNav.classList.add('hidden');
+          }
+        }, 300);
+      }
+    }
+
+    window.addEventListener('scroll', updateQuickNavVisibility);
+    window.addEventListener('resize', updateQuickNavVisibility);
+    updateQuickNavVisibility();
 
     updateThemeToggleButtons();
     requestAnimationFrame(openFromHash);
