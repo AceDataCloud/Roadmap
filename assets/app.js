@@ -423,8 +423,51 @@
     return wrap;
   }
 
-  function sectionShell(title, subtitle) {
-    const wrap = el('section', { class: 'mx-auto max-w-6xl px-4 pt-24 pb-20 sm:px-6 sm:pt-32 sm:pb-24' });
+  function renderQuickNav(data) {
+    const wrap = el('div', { 
+      id: 'quick-nav',
+      class: 'fixed bottom-6 right-6 z-50 hidden flex-col gap-2 transition-opacity duration-300',
+      style: 'opacity: 0;'
+    });
+
+    const sections = [
+      { label: 'Overview', href: '#overview' },
+      { label: 'Platform', href: '#platform-overview' },
+      { label: data?.founder ? 'Founding Team' : null, href: '#founding-team' },
+      { label: 'Principles', href: '#guiding-principles' },
+      { label: 'What We Build', href: '#what-building' },
+      { label: 'Roadmap', href: '#roadmap' },
+      { label: 'Q1', href: '#2026-q1' },
+      { label: 'Q2', href: '#2026-q2' },
+      { label: 'Q3', href: '#2026-q3' },
+      { label: 'Q4', href: '#2026-q4' },
+      { label: 'Token Fit', href: '#token-fit' },
+      { label: data?.revenue ? 'Revenue' : null, href: '#revenue' },
+      { label: data?.daily_updates ? 'Daily Updates' : null, href: '#daily-updates' }
+    ];
+
+    for (const section of sections) {
+      if (!section.label) continue;
+      wrap.appendChild(
+        el(
+          'a',
+          {
+            class:
+              'block rounded-lg border border-slate-900/15 bg-white/95 px-3 py-2 text-xs font-semibold text-slate-800 shadow-lg backdrop-blur hover:bg-slate-50 dark:border-white/20 dark:bg-slate-900/95 dark:text-white/90 dark:hover:bg-slate-800',
+            href: section.href
+          },
+          section.label
+        )
+      );
+    }
+
+    return wrap;
+  }
+
+  function sectionShell(title, subtitle, id) {
+    const attrs = { class: 'mx-auto max-w-6xl px-4 pt-24 pb-20 sm:px-6 sm:pt-32 sm:pb-24' };
+    if (id) attrs.id = id;
+    const wrap = el('section', attrs);
     wrap.appendChild(
       el('div', { class: 'mb-10' }, [
         el('h2', { class: 'font-display text-2xl font-semibold text-slate-900 dark:text-white sm:text-3xl' }, title),
@@ -435,7 +478,7 @@
   }
 
   function renderOverview(data) {
-    const wrap = sectionShell(data.overview.title, data.site.description);
+    const wrap = sectionShell(data.overview.title, data.site.description, 'overview');
 
     const grid = el('div', { class: 'grid gap-6 md:grid-cols-2' });
 
@@ -480,7 +523,7 @@
   }
 
   function renderIntro(data) {
-    const wrap = sectionShell(data.intro.title, data.intro.subtitle);
+    const wrap = sectionShell(data.intro.title, data.intro.subtitle, 'platform-overview');
     const grid = el('div', { class: 'grid gap-6 lg:grid-cols-3' });
 
     const accent = (idx) => {
@@ -547,7 +590,7 @@
   function renderFounder(data) {
     if (!data?.founder) return null;
 
-    const wrap = sectionShell(data.founder.title, data.founder.subtitle);
+    const wrap = sectionShell(data.founder.title, data.founder.subtitle, 'founding-team');
     const grid = el('div', { class: 'grid gap-6 lg:grid-cols-3' });
 
     const info = el('div', { class: 'glass rounded-3xl p-6 sm:p-7' });
@@ -631,7 +674,7 @@
       }
     };
 
-    const wrap = sectionShell(data.revenue.title, data.revenue.subtitle);
+    const wrap = sectionShell(data.revenue.title, data.revenue.subtitle, 'revenue');
 
     if (loadFailed || !snapshot) {
       wrap.appendChild(
@@ -678,7 +721,7 @@
   }
 
   function renderPrinciples(data) {
-    const wrap = sectionShell(data.guiding_principles.title, 'Principles that shape sequencing and execution.');
+    const wrap = sectionShell(data.guiding_principles.title, 'Principles that shape sequencing and execution.', 'guiding-principles');
     const grid = el('div', { class: 'grid gap-5 sm:grid-cols-2 lg:grid-cols-4' });
     for (const item of data.guiding_principles.items || []) {
       grid.appendChild(
@@ -693,7 +736,7 @@
   }
 
   function renderWhatBuilding(data) {
-    const wrap = sectionShell(data.what_building.title, 'Products, layers, and how they connect.');
+    const wrap = sectionShell(data.what_building.title, 'Products, layers, and how they connect.', 'what-building');
     const shell = el('div', { class: CARD_CLASS });
 
     for (const p of data.what_building.intro_paragraphs || []) {
@@ -738,7 +781,7 @@
   }
 
   function renderPhases(data) {
-    const wrap = sectionShell('2026 Roadmap', 'Quarter-by-quarter delivery with transparent task status.');
+    const wrap = sectionShell('2026 Roadmap', 'Quarter-by-quarter delivery with transparent task status.', 'roadmap');
 
     const phases = data.phases || [];
 
@@ -890,7 +933,7 @@
   }
 
   function renderTokenFit(data) {
-    const wrap = sectionShell(data.token_fit.title, 'Mechanisms follow adoption—never the other way around.');
+    const wrap = sectionShell(data.token_fit.title, 'Mechanisms follow adoption—never the other way around.', 'token-fit');
     const card = el('div', { class: CARD_CLASS });
     for (const p of data.token_fit.paragraphs || []) {
       card.appendChild(el('p', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/90 sm:text-base' }, p));
@@ -905,7 +948,7 @@
   }
 
   function renderDailyUpdates(index, sourceUrl, { load_failed } = {}) {
-    const wrap = sectionShell(index?.title || 'Daily Updates', index?.subtitle || 'Short, dated shipping notes — linked to docs, demos, or code.');
+    const wrap = sectionShell(index?.title || 'Daily Updates', index?.subtitle || 'Short, dated shipping notes — linked to docs, demos, or code.', 'daily-updates');
 
     const shell = el('div', { class: CARD_CLASS });
     const list = el('div', { class: 'space-y-4' });
@@ -1173,7 +1216,7 @@
   }
 
   function renderClosing(data) {
-    const wrap = sectionShell(data.closing.title, null);
+    const wrap = sectionShell(data.closing.title, null, 'closing');
     const card = el('div', { class: CARD_CLASS });
     for (const p of data.closing.paragraphs || []) {
       card.appendChild(el('p', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/90 sm:text-base' }, p));
@@ -1349,6 +1392,36 @@
     if (dailyUpdatesIndex) app.appendChild(renderDailyUpdates(dailyUpdatesIndex, dailyUpdatesSourceUrl, { load_failed: dailyUpdatesLoadFailed }));
     app.appendChild(renderClosing(data));
     app.appendChild(renderFooter(data));
+
+    // Add quick nav as a floating element
+    const quickNav = renderQuickNav(data);
+    app.appendChild(quickNav);
+
+    // Show/hide quick nav based on scroll position
+    function updateQuickNavVisibility() {
+      const roadmapSection = document.getElementById('roadmap');
+      if (!roadmapSection) return;
+
+      const rect = roadmapSection.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      // Show when roadmap section is in view
+      if (rect.top < windowHeight && rect.bottom > 0) {
+        quickNav.classList.remove('hidden');
+        quickNav.style.opacity = '1';
+      } else {
+        quickNav.style.opacity = '0';
+        setTimeout(() => {
+          if (quickNav.style.opacity === '0') {
+            quickNav.classList.add('hidden');
+          }
+        }, 300);
+      }
+    }
+
+    window.addEventListener('scroll', updateQuickNavVisibility);
+    window.addEventListener('resize', updateQuickNavVisibility);
+    updateQuickNavVisibility();
 
     updateThemeToggleButtons();
     requestAnimationFrame(openFromHash);

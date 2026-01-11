@@ -3,3 +3,13 @@ body {
   background: linear-gradient(180deg, var(--bg0), var(--bg1));
 }
 
+/* Hide scrollbar for quick nav */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
