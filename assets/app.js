@@ -423,8 +423,54 @@
     return wrap;
   }
 
-  function sectionShell(title, subtitle) {
-    const wrap = el('section', { class: 'mx-auto max-w-6xl px-4 pt-24 pb-20 sm:px-6 sm:pt-32 sm:pb-24' });
+  function renderQuickNav(data) {
+    const wrap = el('section', { class: 'sticky top-[57px] z-40 border-b border-slate-900/10 bg-white/90 backdrop-blur dark:border-white/10 dark:bg-slate-950/80' });
+    const container = el('div', { class: 'mx-auto max-w-6xl px-4 py-3 sm:px-6' });
+    
+    const nav = el('nav', { class: 'flex items-center gap-2 overflow-x-auto scrollbar-hide' }, [
+      el('span', { class: 'mr-2 hidden text-xs font-semibold text-slate-600 dark:text-white/80 md:inline' }, 'Quick nav:')
+    ]);
+
+    const sections = [
+      { label: 'Overview', href: '#overview' },
+      { label: 'Platform', href: '#platform-overview' },
+      { label: data?.founder ? 'Founding Team' : null, href: '#founding-team' },
+      { label: 'Principles', href: '#guiding-principles' },
+      { label: 'What We Build', href: '#what-building' },
+      { label: 'Roadmap', href: '#roadmap' },
+      { label: 'Q1', href: '#2026-q1' },
+      { label: 'Q2', href: '#2026-q2' },
+      { label: 'Q3', href: '#2026-q3' },
+      { label: 'Q4', href: '#2026-q4' },
+      { label: 'Token Fit', href: '#token-fit' },
+      { label: data?.revenue ? 'Revenue' : null, href: '#revenue' },
+      { label: data?.daily_updates ? 'Daily Updates' : null, href: '#daily-updates' }
+    ];
+
+    for (const section of sections) {
+      if (!section.label) continue;
+      nav.appendChild(
+        el(
+          'a',
+          {
+            class:
+              'flex-none rounded-full border border-slate-900/15 bg-slate-900/5 px-3 py-1.5 text-xs font-semibold text-slate-800 hover:bg-slate-900/10 dark:border-white/20 dark:bg-white/10 dark:text-white/90 dark:hover:bg-white/15',
+            href: section.href
+          },
+          section.label
+        )
+      );
+    }
+
+    container.appendChild(nav);
+    wrap.appendChild(container);
+    return wrap;
+  }
+
+  function sectionShell(title, subtitle, id) {
+    const attrs = { class: 'mx-auto max-w-6xl px-4 pt-24 pb-20 sm:px-6 sm:pt-32 sm:pb-24' };
+    if (id) attrs.id = id;
+    const wrap = el('section', attrs);
     wrap.appendChild(
       el('div', { class: 'mb-10' }, [
         el('h2', { class: 'font-display text-2xl font-semibold text-slate-900 dark:text-white sm:text-3xl' }, title),
@@ -435,7 +481,7 @@
   }
 
   function renderOverview(data) {
-    const wrap = sectionShell(data.overview.title, data.site.description);
+    const wrap = sectionShell(data.overview.title, data.site.description, 'overview');
 
     const grid = el('div', { class: 'grid gap-6 md:grid-cols-2' });
 
@@ -480,7 +526,7 @@
   }
 
   function renderIntro(data) {
-    const wrap = sectionShell(data.intro.title, data.intro.subtitle);
+    const wrap = sectionShell(data.intro.title, data.intro.subtitle, 'platform-overview');
     const grid = el('div', { class: 'grid gap-6 lg:grid-cols-3' });
 
     const accent = (idx) => {
@@ -547,7 +593,7 @@
   function renderFounder(data) {
     if (!data?.founder) return null;
 
-    const wrap = sectionShell(data.founder.title, data.founder.subtitle);
+    const wrap = sectionShell(data.founder.title, data.founder.subtitle, 'founding-team');
     const grid = el('div', { class: 'grid gap-6 lg:grid-cols-3' });
 
     const info = el('div', { class: 'glass rounded-3xl p-6 sm:p-7' });
@@ -631,7 +677,7 @@
       }
     };
 
-    const wrap = sectionShell(data.revenue.title, data.revenue.subtitle);
+    const wrap = sectionShell(data.revenue.title, data.revenue.subtitle, 'revenue');
 
     if (loadFailed || !snapshot) {
       wrap.appendChild(
@@ -678,7 +724,7 @@
   }
 
   function renderPrinciples(data) {
-    const wrap = sectionShell(data.guiding_principles.title, 'Principles that shape sequencing and execution.');
+    const wrap = sectionShell(data.guiding_principles.title, 'Principles that shape sequencing and execution.', 'guiding-principles');
     const grid = el('div', { class: 'grid gap-5 sm:grid-cols-2 lg:grid-cols-4' });
     for (const item of data.guiding_principles.items || []) {
       grid.appendChild(
@@ -693,7 +739,7 @@
   }
 
   function renderWhatBuilding(data) {
-    const wrap = sectionShell(data.what_building.title, 'Products, layers, and how they connect.');
+    const wrap = sectionShell(data.what_building.title, 'Products, layers, and how they connect.', 'what-building');
     const shell = el('div', { class: CARD_CLASS });
 
     for (const p of data.what_building.intro_paragraphs || []) {
@@ -738,7 +784,7 @@
   }
 
   function renderPhases(data) {
-    const wrap = sectionShell('2026 Roadmap', 'Quarter-by-quarter delivery with transparent task status.');
+    const wrap = sectionShell('2026 Roadmap', 'Quarter-by-quarter delivery with transparent task status.', 'roadmap');
 
     const phases = data.phases || [];
 
@@ -884,7 +930,7 @@
   }
 
   function renderTokenFit(data) {
-    const wrap = sectionShell(data.token_fit.title, 'Mechanisms follow adoption—never the other way around.');
+    const wrap = sectionShell(data.token_fit.title, 'Mechanisms follow adoption—never the other way around.', 'token-fit');
     const card = el('div', { class: CARD_CLASS });
     for (const p of data.token_fit.paragraphs || []) {
       card.appendChild(el('p', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/90 sm:text-base' }, p));
@@ -899,7 +945,7 @@
   }
 
   function renderDailyUpdates(index, sourceUrl, { load_failed } = {}) {
-    const wrap = sectionShell(index?.title || 'Daily Updates', index?.subtitle || 'Short, dated shipping notes — linked to docs, demos, or code.');
+    const wrap = sectionShell(index?.title || 'Daily Updates', index?.subtitle || 'Short, dated shipping notes — linked to docs, demos, or code.', 'daily-updates');
 
     const shell = el('div', { class: CARD_CLASS });
     const list = el('div', { class: 'space-y-4' });
@@ -1167,7 +1213,7 @@
   }
 
   function renderClosing(data) {
-    const wrap = sectionShell(data.closing.title, null);
+    const wrap = sectionShell(data.closing.title, null, 'closing');
     const card = el('div', { class: CARD_CLASS });
     for (const p of data.closing.paragraphs || []) {
       card.appendChild(el('p', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/90 sm:text-base' }, p));
@@ -1329,6 +1375,8 @@
     const hero = renderHero(data);
     app.appendChild(hero);
     startHeroCanvas(hero.querySelector('#hero-canvas'));
+
+    app.appendChild(renderQuickNav(data));
 
     app.appendChild(renderOverview(data));
     app.appendChild(renderIntro(data));
