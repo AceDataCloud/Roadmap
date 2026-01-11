@@ -856,9 +856,7 @@ def main(argv: list[str]) -> int:
         owner, repo, number = parsed
         if owner.lower() != args.org.lower():
             continue
-        if repo.lower() in excluded_repos:
-            _log(verbose, f"skip: pr {repo}#{number} reason=repo_excluded url={html_url}")
-            continue
+        
         item_key = f"gh:pr:{owner}/{repo}#{number}"
         if item_key in existing_keys:
             continue
@@ -882,6 +880,12 @@ def main(argv: list[str]) -> int:
         user = pr.get("user")
         if isinstance(user, dict):
             author_login = str(user.get("login") or "").strip()
+        
+        # Check repo exclusion, but allow Copilot PRs even from excluded repos
+        is_copilot = author_login and author_login.lower() == "copilot"
+        if repo.lower() in excluded_repos and not is_copilot:
+            _log(verbose, f"skip: pr {repo}#{number} reason=repo_excluded url={html_url}")
+            continue
         if args.author_filter == "org":
             if not author_login:
                 _log(verbose, f"skip: pr {repo}#{number} reason=no_author_login url={html_url}")
