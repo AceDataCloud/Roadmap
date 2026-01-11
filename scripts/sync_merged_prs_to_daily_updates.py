@@ -22,7 +22,7 @@ except Exception:  # pragma: no cover
 
 GITHUB_API = "https://api.github.com"
 OPENAI_DEFAULT_BASE_URL = "https://api.acedata.cloud"
-COPILOT_BOT_LOGIN = "copilot"  # GitHub Copilot bot username
+COPILOT_BOT_LOGIN = "copilot"  # GitHub Copilot bot username for exclusion bypass logic
 
 
 def _normalize_base_url(value: str) -> str:
@@ -857,7 +857,7 @@ def main(argv: list[str]) -> int:
         owner, repo, number = parsed
         if owner.lower() != args.org.lower():
             continue
-        
+
         item_key = f"gh:pr:{owner}/{repo}#{number}"
         if item_key in existing_keys:
             continue
@@ -881,7 +881,7 @@ def main(argv: list[str]) -> int:
         user = pr.get("user")
         if isinstance(user, dict):
             author_login = str(user.get("login") or "").strip()
-        
+
         # Check repo exclusion, but allow Copilot PRs even from excluded repos
         is_copilot = author_login and author_login.lower() == COPILOT_BOT_LOGIN
         if repo.lower() in excluded_repos and not is_copilot:
