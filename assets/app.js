@@ -769,10 +769,16 @@
         id: phase.id,
         open: ''
       });
+      let isInitialRender = true;
       details.addEventListener('toggle', () => {
         if (!details.open) return;
-        history.replaceState(null, '', `#${phase.id}`);
+        // Only update hash if this is not the initial render
+        if (!isInitialRender) {
+          history.replaceState(null, '', `#${phase.id}`);
+        }
       });
+      // After the first event loop, mark as no longer initial render
+      setTimeout(() => { isInitialRender = false; }, 0);
 
       const summary = el('summary', {
         class:
