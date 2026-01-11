@@ -1038,17 +1038,8 @@ def main(argv: list[str]) -> int:
     day_files_after = {p.stem for p in daily_dir.glob("*.json") if _is_day(p.stem)}
     _write_json(str(daily_index_path), _index_doc(daily_index, days=sorted(day_files_after, reverse=True)))
 
-    # Persist sync state.
+    # Persist sync state only when there are new items to avoid unnecessary commits.
     if not new_items:
-        _save_state(
-            args.state,
-            last_pr_sync=last_pr_sync,
-            last_run_at=run_at,
-            added_urls=[],
-            openai_enabled=bool(openai_api_key),
-            openai_model=openai_model if openai_api_key else None,
-            openai_base_url=openai_base_url if openai_api_key else None,
-        )
         print("No new items found (PRs).")
         return 0
 
