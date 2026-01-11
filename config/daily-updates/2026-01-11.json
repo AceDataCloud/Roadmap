@@ -1,0 +1,22 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-01-11",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#432",
+      "title": "Enhance Image Upload Functionality in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "image-upload",
+        "enhancement",
+        "utility",
+        "core",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces a new smart upload feature that automatically determines whether to handle images as Base64 or URLs, streamlining the upload process. Key modifications include enhancements to the core and utility files, improving the handling of image URLs and ensuring they are processed correctly before being sent to the CDN. These changes aim to enhance the overall efficiency and reliability of image uploads."
+    }
+  ]
+}
