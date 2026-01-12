@@ -674,8 +674,8 @@ def main(argv: list[str]) -> int:
     parser.add_argument(
         "--exclude-repo",
         action="append",
-        default=["Roadmap"],
-        help="Exclude a repo (repeatable). Defaults to Roadmap to avoid self-referential updates. Note: Copilot-authored PRs are always included, even from excluded repos.",
+        default=[],
+        help="Exclude a repo (repeatable). Copilot-authored PRs are always included, even from excluded repos.",
     )
     parser.add_argument("--bootstrap-days", type=int, default=14)
     parser.add_argument("--max-items", type=int, default=200)
@@ -830,13 +830,12 @@ def main(argv: list[str]) -> int:
         ),
     )
 
-    # Don't exclude repos at search level; filtering happens post-search to allow Copilot PRs
     raw_prs = _search_merged_prs(
         org=args.org,
         since_date=pr_since_date,
         token=token,
         max_items=args.max_items,
-        exclude_repos=None,
+        exclude_repos=list(args.exclude_repo or []),
     )
     _log(verbose, f"sync: github_pr_search_results={len(raw_prs)}")
 
