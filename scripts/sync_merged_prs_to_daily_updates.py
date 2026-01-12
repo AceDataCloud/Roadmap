@@ -830,12 +830,13 @@ def main(argv: list[str]) -> int:
         ),
     )
 
+    # Don't exclude repos at search level; filtering happens post-search to allow Copilot PRs
     raw_prs = _search_merged_prs(
         org=args.org,
         since_date=pr_since_date,
         token=token,
         max_items=args.max_items,
-        exclude_repos=list(args.exclude_repo or []),
+        exclude_repos=None,
     )
     _log(verbose, f"sync: github_pr_search_results={len(raw_prs)}")
 
