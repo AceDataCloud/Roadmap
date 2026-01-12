@@ -3,6 +3,72 @@
   "date": "2026-01-11",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Roadmap#4",
+      "title": "Optimize PR Sync State Updates in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "optimization",
+        "sync",
+        "script",
+        "efficiency"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/4",
+      "summary": "This update improves the sync script by preventing unnecessary updates to the `pr-sync-state.json` file when no new PRs are found. The `_save_state()` function call has been removed when `new_items` is empty, reducing commit churn caused by timestamp-only updates. This change enhances the efficiency of the sync process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#2",
+      "title": "Introducing a Quick Navigation Widget for the Roadmap in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "navigation",
+        "ui",
+        "user-experience",
+        "roadmap",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/2",
+      "summary": "We've added a floating quick navigation widget to enhance user experience on the roadmap page. This widget allows users to easily jump to major sections like Overview, Platform, and Q1-Q4 without scrolling. It appears only when users scroll to the 2026 Roadmap section, ensuring a clean interface with smooth transitions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#3",
+      "title": "Enable Copilot PRs in daily updates sync in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "copilot",
+        "updates",
+        "sync",
+        "exclusions",
+        "improvements"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/3",
+      "summary": "This update allows Copilot-authored pull requests to bypass repository exclusion rules, ensuring they are recorded in daily updates. Key changes include the addition of a Copilot bypass detection mechanism and reordering of checks to access author information earlier. Regular user PRs will still be excluded from the Roadmap repository, maintaining clarity in updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#1",
+      "title": "Prevent Automatic Hash Navigation on Page Load in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "bugfix",
+        "navigation",
+        "user-experience",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/1",
+      "summary": "This update resolves the issue of automatic navigation to `#2026-q4` upon page load. By implementing an `isInitialRender` flag, the hash is only updated when users manually interact with the details elements, ensuring a smoother user experience. The changes have been thoroughly tested and verified for functionality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformPublisher#40",
       "title": "Resolved Juejin and X Publishing Issues in Publisher 🚀",
       "tags": [

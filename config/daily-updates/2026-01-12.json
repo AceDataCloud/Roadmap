@@ -1,0 +1,22 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-01-12",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#5",
+      "title": "Fix PR Sync to Include All Roadmap Updates in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "sync",
+        "updates",
+        "bugfix",
+        "roadmap"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/5",
+      "summary": "The default exclusion of the Roadmap repository in the sync script has been removed, allowing all PRs to be included in daily updates. This change ensures that previously missed PRs will now be synced, enhancing visibility and tracking for future contributions. Users can still manually exclude specific repositories if desired."
+    }
+  ]
+}
