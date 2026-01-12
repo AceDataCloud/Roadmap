@@ -835,7 +835,7 @@ def main(argv: list[str]) -> int:
         since_date=pr_since_date,
         token=token,
         max_items=args.max_items,
-        exclude_repos=list(args.exclude_repo or []),
+        exclude_repos=args.exclude_repo or [],
     )
     _log(verbose, f"sync: github_pr_search_results={len(raw_prs)}")
 
