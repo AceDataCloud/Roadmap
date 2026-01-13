@@ -3,6 +3,21 @@
   "date": "2026-01-13",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#434",
+      "title": "Enhance error handling for image processing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "image-processing",
+        "updates",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update improves error handling in the image processing workflow by adding a try-catch block in the core functionality. It ensures that any errors during the image URL processing are logged and a clear error message is thrown. Additionally, a minor adjustment in the utility function now directly returns the original URL when certain conditions are met."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#433",
       "title": "Enhance flux size handling in Platform Service 🚀",
       "tags": [
