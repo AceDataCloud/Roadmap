@@ -3,6 +3,21 @@
   "date": "2026-01-14",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#437",
+      "title": "Enhance flux size validation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "validation",
+        "flux",
+        "images",
+        "error-handling"
+      ],
+      "public": false,
+      "summary": "This update improves the validation logic for flux size inputs in the FluxImagesHandler. It now supports both 'width:height' and 'widthxheight' formats, ensuring better error handling for invalid inputs. The changes enhance the robustness of the image handling process."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#42",
       "title": "Enhance Kling Documentation in Backend 🚀",
       "tags": [
