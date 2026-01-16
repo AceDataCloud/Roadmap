@@ -436,13 +436,13 @@
       { label: data?.founder ? 'Founding Team' : null, href: '#founding-team' },
       { label: 'Principles', href: '#guiding-principles' },
       { label: 'What We Build', href: '#what-building' },
+      { label: data?.revenue ? 'Revenue' : null, href: '#revenue' },
       { label: 'Roadmap', href: '#roadmap' },
       { label: 'Q1', href: '#2026-q1' },
       { label: 'Q2', href: '#2026-q2' },
       { label: 'Q3', href: '#2026-q3' },
       { label: 'Q4', href: '#2026-q4' },
       { label: 'Token Fit', href: '#token-fit' },
-      { label: data?.revenue ? 'Revenue' : null, href: '#revenue' },
       { label: data?.daily_updates ? 'Daily Updates' : null, href: '#daily-updates' }
     ];
 
@@ -1385,10 +1385,10 @@
     if (founder) app.appendChild(founder);
     app.appendChild(renderPrinciples(data));
     app.appendChild(renderWhatBuilding(data));
-    app.appendChild(renderPhases(data));
-    app.appendChild(renderTokenFit(data));
     const revenue = renderRevenue(data);
     if (revenue) app.appendChild(revenue);
+    app.appendChild(renderPhases(data));
+    app.appendChild(renderTokenFit(data));
     if (dailyUpdatesIndex) app.appendChild(renderDailyUpdates(dailyUpdatesIndex, dailyUpdatesSourceUrl, { load_failed: dailyUpdatesLoadFailed }));
     app.appendChild(renderClosing(data));
     app.appendChild(renderFooter(data));
