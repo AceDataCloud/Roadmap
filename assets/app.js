@@ -1285,10 +1285,11 @@
     top.appendChild(cols);
 
     const year = new Date().getFullYear();
-    const bottom = el('div', { class: 'mt-12 text-center text-sm text-slate-600 dark:text-white/80' }, [
-      el('div', {}, data.footer.bottom.copyright_text.replace('{year}', String(year))),
-      el('a', { class: 'mt-2 inline-block hover:text-slate-900 dark:hover:text-white', href: data.footer.bottom.secondary_href, target: '_blank', rel: 'noreferrer' }, data.footer.bottom.secondary_text)
-    ]);
+    const bottomElements = [el('div', {}, data.footer.bottom.copyright_text.replace('{year}', String(year)))];
+    if (data.footer.bottom.secondary_text && data.footer.bottom.secondary_href) {
+      bottomElements.push(el('a', { class: 'mt-2 inline-block hover:text-slate-900 dark:hover:text-white', href: data.footer.bottom.secondary_href, target: '_blank', rel: 'noreferrer' }, data.footer.bottom.secondary_text));
+    }
+    const bottom = el('div', { class: 'mt-12 text-center text-sm text-slate-600 dark:text-white/80' }, bottomElements);
 
     inner.appendChild(top);
     inner.appendChild(bottom);
