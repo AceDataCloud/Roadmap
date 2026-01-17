@@ -3,6 +3,20 @@
   "date": "2026-01-17",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#439",
+      "title": "Enhance Error Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "improvement",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update improves error handling in the Platform Service by modifying the response for unsupported image formats. Specifically, it changes the status code from 500 to 403 when the error message indicates that the input should be 'image/jpeg'. This enhancement will provide clearer feedback to users regarding image format requirements."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#43",
       "title": "Enhance Claude Model Documentation in Backend 🚀",
       "tags": [
