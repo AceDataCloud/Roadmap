@@ -1,0 +1,38 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-01-17",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#9",
+      "title": "Clean Up Footer by Removing ICP Number in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "footer",
+        "cleanup",
+        "ui",
+        "config"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/9",
+      "summary": "This update removes the Chinese ICP registration number from the website footer as requested. Key changes include making secondary footer elements optional and adding conditional rendering logic to ensure only valid links are displayed. The footer now solely showcases the copyright text, streamlining the user interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#58",
+      "title": "Enhanced version limits for deployments in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "deployment",
+        "update",
+        "stability",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/58",
+      "summary": "This update modifies the revision history limit across multiple deployment configurations for Dify, increasing it from 1 to 10. This change enhances the ability to manage deployment history and rollbacks, improving overall stability and performance. All relevant documentation has been updated accordingly."
+    }
+  ]
+}
