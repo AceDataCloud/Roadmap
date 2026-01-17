@@ -3,6 +3,22 @@
   "date": "2026-01-17",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Dify#59",
+      "title": "Fix VDB Replica Configuration in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "bugfix",
+        "deployment",
+        "configuration",
+        "vdb"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/59",
+      "summary": "This update addresses the VDB replica configuration issue by setting the replica count to zero for Tencent VectorDB serverless instances. Key files modified include the environment configuration and deployment YAMLs for both the API and worker components. This change ensures proper functionality and stability in the deployment environment."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Roadmap#9",
       "title": "Clean Up Footer by Removing ICP Number in Roadmap 🚀",
       "tags": [
