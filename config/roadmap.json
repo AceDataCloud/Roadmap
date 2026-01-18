@@ -87,13 +87,13 @@
   },
   "revenue": {
     "title": "Revenue Snapshot",
-    "subtitle": "Rolling totals from completed (FINISHED) orders. Updated periodically via an offline job.",
+    "subtitle": "Rolling totals from completed orders. Updated periodically by a scheduled job.",
     "source": "./config/revenue.json",
     "currency": "USD"
   },
   "creator_fees": {
     "title": "Creator Fees Snapshot",
-    "subtitle": "Creator fees earned from pump.fun ecosystem. Updated periodically via an offline job.",
+    "subtitle": "Creator Fees earned on pump.fun. Updated periodically by a scheduled job.",
     "source": "./config/creator_fees.json"
   },
   "capital_governance": {
@@ -226,7 +226,7 @@
           "principle": "Distribution is treated as a product capability, not a marketing expense.",
           "constraints": [
             "Headcount growth is controlled",
-            "Execution-focused, not scale-for-scale's-sake"
+            "Execution-focused, not scale for scale's sake"
           ]
         },
         {
@@ -342,7 +342,7 @@
       {
         "title": "Core Products",
         "paragraphs": [
-          "Two core products auto-bound to Ace accounts, consuming the same underlying infrastructure."
+          "Two core products are tied to Ace accounts and share the same underlying infrastructure."
         ],
         "bullets": [
           "Nexior: UI-driven distribution for AI apps, templates, and assets",
@@ -364,14 +364,14 @@
       {
         "title": "Infrastructure Layers",
         "paragraphs": ["Four core layers that power everything we build."],
-        "bullets": [
-          "Unified AI Gateway for multi-model access",
-          "Workflow orchestration via Dify",
-          "Distribution through Nexior templates and apps",
-          "Settlement via native payment and billing (including x402)"
-        ]
-      }
-    ]
+          "bullets": [
+            "Unified AI Gateway for multi-model access",
+            "Workflow orchestration via Dify",
+            "Distribution through Nexior templates and apps",
+            "Settlement via native payments and billing (including X402)"
+          ]
+        }
+      ]
   },
   "phases": [
     {
@@ -463,13 +463,13 @@
           "title": "Payments and Settlement",
           "items": [
             {
-              "title": "Base x402 payment integration is live",
+              "title": "Base X402 payment integration is live",
               "status": "done",
               "target_at": null,
               "completed_at": "2026-01-10"
             },
             {
-              "title": "Finalize Solana x402 payment integration within Q1, enabling call-to-pay settlement for additional live use cases",
+              "title": "Finalize Solana X402 payment integration within Q1, enabling call-to-pay settlement for additional live use cases",
               "status": "in_progress",
               "target_at": null,
               "completed_at": null
@@ -561,7 +561,7 @@
           "title": "Payments and Monetization",
           "items": [
             {
-              "title": "Expand x402-based settlement into more production workflows",
+              "title": "Expand X402-based settlement into more production workflows",
               "status": "planned",
               "target_at": null,
               "completed_at": null
@@ -761,6 +761,9 @@
       ]
     }
   ],
+  "buyback_history": {
+    "source": "./config/buyback-history.json"
+  },
   "daily_updates": {
     "source": "./config/daily-updates/index.json"
   },

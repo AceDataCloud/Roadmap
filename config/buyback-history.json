@@ -1,0 +1,22 @@
+{
+  "$schema": "./buyback-history.schema.json",
+  "title": "Buyback History",
+  "subtitle": "On-chain buyback transactions — transparent, verifiable, and linked to Solscan.",
+  "transactions": [
+    {
+      "tx_hash": "2FsQrTVDuR2ENCtviNCr35SfMZxL2Xypo7qcBgDsn6sWKqyAQBd9sVdwMY7BvMff7JYDhynB8oS3AUNgwnYYo3zN",
+      "occurred_at": "2026-01-18T16:38:53Z",
+      "amount_usd": 339.12,
+      "amount_sol": 2.386343914,
+      "ace_bought": 613929.642719,
+      "pair": "WSOL → ACE",
+      "venue": "DFlow Aggregator v4",
+      "source": "Creator Fees",
+      "source_percentage": 100,
+      "from_label": "Buyback Wallet",
+      "from_address": "6hVavSsYRaNk86UbNZa6V4JfSwqkRGk9HgYZqKNsdU1w",
+      "note": "First buyback recorded in the Roadmap feed."
+    }
+  ]
+}
+
