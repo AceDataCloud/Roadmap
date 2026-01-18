@@ -8,19 +8,53 @@
     "url": "https://platform.acedata.cloud"
   },
   "nav": [
-    { "label": "All Services", "href": "https://platform.acedata.cloud/services", "new_tab": true },
-    { "label": "Developer Documentation", "href": "https://platform.acedata.cloud/documents", "new_tab": true },
-    { "label": "Referral Program", "href": "https://platform.acedata.cloud/earning", "new_tab": true },
-    { "label": "Customer Support", "href": "https://platform.acedata.cloud/support", "new_tab": true },
-    { "label": "Try Now", "href": "https://hub.acedata.cloud", "new_tab": true, "primary": true }
+    {
+      "label": "Services",
+      "href": "https://platform.acedata.cloud/services",
+      "new_tab": true
+    },
+    {
+      "label": "Documents",
+      "href": "https://platform.acedata.cloud/documents",
+      "new_tab": true
+    },
+    {
+      "label": "Referral",
+      "href": "https://platform.acedata.cloud/earning",
+      "new_tab": true
+    },
+    {
+      "label": "Try Now",
+      "href": "https://hub.acedata.cloud",
+      "new_tab": true
+    },
+    {
+      "label": "Support",
+      "href": "https://platform.acedata.cloud/support",
+      "new_tab": true
+    },
+    {
+      "label": "ACE Token",
+      "href": "https://jup.ag/tokens/GnHpRsrcyfHSMZNzmpjAzTFQA26vnbRMzbKQ11ZKpump",
+      "new_tab": true,
+      "primary": true
+    }
   ],
   "hero": {
     "eyebrow": "ACE DATA CLOUD",
     "title": "2026 Roadmap",
     "subtitle": "Foundation → Adoption → Scale → Consolidation",
     "background_image": "./assets/hero.png",
-    "primary_cta": { "label": "Try Now", "href": "https://hub.acedata.cloud", "new_tab": true },
-    "secondary_cta": { "label": "Developer Docs", "href": "https://platform.acedata.cloud/documents", "new_tab": true }
+    "primary_cta": {
+      "label": "Try Now",
+      "href": "https://hub.acedata.cloud",
+      "new_tab": true
+    },
+    "secondary_cta": {
+      "label": "Developer Docs",
+      "href": "https://platform.acedata.cloud/documents",
+      "new_tab": true
+    }
   },
   "overview": {
     "title": "Ace Data Cloud 2026 Roadmap",
@@ -34,45 +68,6 @@
       "Usage before token mechanics",
       "Stability before experimentation",
       "Transparency over speculation"
-    ]
-  },
-  "intro": {
-    "title": "Platform Overview",
-    "subtitle": "The Ace Data Cloud platform is a global SaaS service provider that offers stable and comprehensive digital services for both enterprises and individuals.",
-    "cards": [
-      {
-        "title": "For enterprises and developers",
-        "paragraphs": [
-          "Ace Data Cloud provides a range of production-grade API services and infrastructure capabilities for modern AI systems."
-        ],
-        "bullets": [
-          "AI Q&A APIs (OpenAI, DeepSeek, etc.)",
-          "AI images (Midjourney, Flux)",
-          "AI music (Suno)",
-          "AI videos (Luma, Pika)",
-          "HTTP proxies (mobile cellular, residential, global)",
-          "Datasets and data pipelines"
-        ],
-        "links": [
-          { "label": "All Services", "href": "https://platform.acedata.cloud/services", "new_tab": true },
-          { "label": "Integration Docs", "href": "https://platform.acedata.cloud/documents", "new_tab": true }
-        ]
-      },
-      {
-        "title": "For individuals",
-        "paragraphs": [
-          "A one-stop, user-friendly interface for AI Q&A, images, music, videos, proxies, datasets and more — compatible with desktop and mobile.",
-          "Includes out-of-the-box login authorization (WeChat, Google, GitHub) and payments."
-        ],
-        "links": [{ "label": "Open Hub", "href": "https://hub.acedata.cloud", "new_tab": true }]
-      },
-      {
-        "title": "Open-source distribution (Nexior)",
-        "paragraphs": [
-          "We have open-sourced the UI and distribution layer — Nexior. Build your own one-stop AI platform in minutes and sell it for profit."
-        ],
-        "links": [{ "label": "GitHub: Nexior", "href": "https://github.com/AceDataCloud/Nexior", "new_tab": true }]
-      }
     ]
   },
   "founder": {
@@ -95,6 +90,186 @@
     "subtitle": "Rolling totals from completed (FINISHED) orders. Updated periodically via an offline job.",
     "source": "./config/revenue.json",
     "currency": "USD"
+  },
+  "creator_fees": {
+    "title": "Creator Fees Snapshot",
+    "subtitle": "Creator fees earned from pump.fun ecosystem. Updated periodically via an offline job.",
+    "source": "./config/creator_fees.json"
+  },
+  "capital_governance": {
+    "title": "ACE Revenue Allocation & Capital Governance",
+    "subtitle": "Ace Data Cloud operates under a dual-track revenue governance model, with a strict and intentional separation between Creator Fees and Platform Revenue.",
+    "creator_fees": {
+      "title": "Creator Fees",
+      "description": "Creator Fees are collected as part of ecosystem activity and are exclusively reserved for token- and ecosystem-related purposes.",
+      "allocations": [
+        {
+          "category": "Liquidity Pool Injection",
+          "subtitle": "25% of Creator Fees → ACE/SOL Liquidity Pool",
+          "percentage": 25,
+          "icon": "chart",
+          "purpose": [
+            "25% of Creator Fees directly injected into ACE/SOL liquidity pool",
+            "Adds real liquidity depth for smoother trading",
+            "LP tokens locked to prevent rug pulls",
+            "Monthly execution at end of each month"
+          ],
+          "principle": "Real liquidity, not price pumping. We add depth, not buy pressure.",
+          "constraints": [
+            "No market buying to pump price",
+            "No short-term price manipulation",
+            "Transparent on-chain LP transactions"
+          ]
+        },
+        {
+          "category": "Ecosystem Incentives",
+          "subtitle": "Including Ecosystem Hiring & Marketing",
+          "percentage": 25,
+          "icon": "spark",
+          "purpose": [
+            "Revenue sharing for Nexior ecosystem contributors",
+            "Usage-based rebates for templates, workflows, and plugins",
+            "Integration incentives strictly tied to shipped and verifiable functionality",
+            "Limited-scope grants for real production use cases",
+            "Ecosystem-scoped hiring (developers, technical operators, ecosystem support)",
+            "Ecosystem-focused marketing (integration announcements, developer outreach, co-marketing with partners)"
+          ],
+          "principle": "Incentives follow measurable usage and contribution, not speculation.",
+          "constraints": [
+            "No generalized brand marketing",
+            "No influencer or hype-driven campaigns",
+            "All incentives must map to verifiable contribution or adoption metrics"
+          ]
+        },
+        {
+          "category": "Treasury and Reserve Buffer",
+          "percentage": 25,
+          "icon": "shield",
+          "purpose": [
+            "Capital flexibility",
+            "Downside protection",
+            "Optionality during adverse or stressed market conditions"
+          ],
+          "principle": "Reserves exist to prevent forced decisions.",
+          "constraints": [
+            "Not earmarked for speculative deployment",
+            "Not used to compensate for poor execution elsewhere"
+          ]
+        },
+        {
+          "category": "Listings and External Token Costs",
+          "percentage": 15,
+          "icon": "globe",
+          "purpose": [
+            "Strategically justified paid token listings",
+            "Required technical, legal, compliance, or operational listing costs",
+            "One-time external costs that improve token accessibility"
+          ],
+          "principle": "Listings are access infrastructure, not marketing.",
+          "constraints": [
+            "No vanity listings",
+            "No pay-for-hype arrangements",
+            "No recurring promotional spend disguised as listings"
+          ]
+        },
+        {
+          "category": "Buybacks",
+          "percentage": 10,
+          "icon": "cash",
+          "is_buyback": true,
+          "positioning": "Buybacks are a tool, not a commitment. Deprioritized, but not abandoned.",
+          "execution_conditions": [
+            "Platform revenue must be stable and durable",
+            "Liquidity depth must already be healthy",
+            "Execution may be delayed, paused, or accumulated"
+          ],
+          "constraints": [
+            "No symbolic or sentiment-driven buybacks",
+            "No use as short-term price signaling"
+          ]
+        }
+      ]
+    },
+    "platform_revenue": {
+      "title": "Platform Revenue",
+      "description": "Platform Revenue reflects real business income generated by Ace Data Cloud and Nexior. It is governed separately from Creator Fees and is used to fund the actual cost structure and execution capacity of the platform.",
+      "allocations": [
+        {
+          "category": "Account Services and Infrastructure Costs",
+          "percentage": "≥50",
+          "icon": "bolt",
+          "note": "This is the largest and non-negotiable expense category.",
+          "purpose": [
+            "Procurement of upstream AI, data, and model services",
+            "Third-party account, quota, and API costs",
+            "Cloud compute, storage, networking, security, and monitoring",
+            "Core infrastructure required to operate Nexior reliably"
+          ],
+          "principle": "Platform revenue is cost-first by design.",
+          "constraints": [
+            "These costs are prioritized before any growth or financial actions",
+            "No diversion of funds for narrative-driven expansion"
+          ]
+        },
+        {
+          "category": "Engineering, Product, Hiring, Operations & Distribution Systems",
+          "percentage": 25,
+          "icon": "users",
+          "purpose": [
+            "Nexior core product development and UX",
+            "Workflow systems, Dify, and unified gateway reliability",
+            "Engineering, product, and platform operations staff",
+            "Day-to-day execution and maintenance",
+            "Distribution, referral, reseller, and revenue-splitting system development and settlement",
+            "Technical, operational, and compliance costs tied to distribution systems"
+          ],
+          "principle": "Distribution is treated as a product capability, not a marketing expense.",
+          "constraints": [
+            "Headcount growth is controlled",
+            "Execution-focused, not scale-for-scale's-sake"
+          ]
+        },
+        {
+          "category": "Growth, Partnerships, and Business Development",
+          "percentage": 10,
+          "icon": "handshake",
+          "purpose": [
+            "Strategic integrations",
+            "Enterprise and team onboarding",
+            "Nexior-focused distribution partnerships"
+          ],
+          "principle": "Growth follows shipped product, not narrative.",
+          "constraints": [
+            "No speculative expansion",
+            "No incentive structures detached from product delivery"
+          ]
+        },
+        {
+          "category": "Buybacks",
+          "percentage": 5,
+          "icon": "cash",
+          "is_buyback": true,
+          "positioning": "Optional and low-priority. Executed only when operational stability is assured.",
+          "constraints": [
+            "Not used as a signaling mechanism",
+            "May be paused, deferred, or accumulated"
+          ]
+        },
+        {
+          "category": "Profit, Reserves, and Runway Extension",
+          "percentage": 10,
+          "icon": "shield",
+          "purpose": [
+            "Retained earnings",
+            "Risk management",
+            "Runway protection",
+            "Long-term strategic optionality"
+          ],
+          "principle": "Financial discipline enables long-term survival.",
+          "constraints": []
+        }
+      ]
+    }
   },
   "guiding_principles": {
     "title": "Guiding Principles",
@@ -119,41 +294,81 @@
   },
   "what_building": {
     "title": "What Ace Is Building",
-    "intro_paragraphs": [
-      "Ace Data Cloud is the infrastructure layer that powers multiple products through shared accounts, APIs, and billing."
-    ],
-    "sections": [
+    "subtitle": "Ace Data Cloud is an AI infrastructure platform powering products through shared accounts, APIs, and billing — serving both enterprises and individuals globally.",
+    "cards": [
       {
-        "title": "Core Products (Separate, API-Bound)",
+        "title": "For Enterprises & Developers",
         "paragraphs": [
-          "Nexior is a core application and distribution product of Ace Data Cloud. It is a UI-driven product that directly consumes Ace APIs to deploy, distribute, and monetize AI applications, templates, and assets.",
-          "Dify is a standalone workflow product that runs independently as a separate website. It is an open-source, well-known project focused on advanced workflow orchestration and logic."
+          "Production-grade API services and infrastructure capabilities for modern AI systems."
         ],
         "bullets": [
-          "Both are auto-bound to Ace Data Cloud accounts",
-          "Both automatically bind Ace API keys",
-          "Both consume the same underlying Ace infrastructure",
-          "Both are available to all Ace Data Cloud customers"
+          "AI Q&A APIs (OpenAI, DeepSeek, Claude, etc.)",
+          "AI images (Midjourney, Flux)",
+          "AI music (Suno) & videos (Luma, Pika)",
+          "HTTP proxies (mobile cellular, residential, global)",
+          "Unified AI Gateway with multi-model access and routing"
+        ],
+        "links": [
+          {
+            "label": "All Services",
+            "href": "https://platform.acedata.cloud/services",
+            "new_tab": true
+          },
+          {
+            "label": "Integration Docs",
+            "href": "https://platform.acedata.cloud/documents",
+            "new_tab": true
+          }
+        ]
+      },
+      {
+        "title": "For Individuals",
+        "paragraphs": [
+          "A one-stop, user-friendly interface for AI Q&A, images, music, videos, and more — compatible with desktop and mobile."
+        ],
+        "bullets": [
+          "Out-of-the-box login (WeChat, Google, GitHub)",
+          "Integrated payment and billing",
+          "Template-first workflows for high-frequency use cases"
+        ],
+        "links": [
+          {
+            "label": "Open Hub",
+            "href": "https://hub.acedata.cloud",
+            "new_tab": true
+          }
+        ]
+      },
+      {
+        "title": "Core Products",
+        "paragraphs": [
+          "Two core products auto-bound to Ace accounts, consuming the same underlying infrastructure."
+        ],
+        "bullets": [
+          "Nexior: UI-driven distribution for AI apps, templates, and assets",
+          "Dify: Standalone workflow orchestration and logic engine"
+        ],
+        "links": [
+          {
+            "label": "GitHub: Nexior",
+            "href": "https://github.com/AceDataCloud/Nexior",
+            "new_tab": true
+          },
+          {
+            "label": "Try Dify",
+            "href": "https://dify.acedata.cloud",
+            "new_tab": true
+          }
         ]
       },
       {
         "title": "Infrastructure Layers",
-        "paragraphs": [],
-        "bullets": [
-          "Unified AI Gateway provides execution reliability and multi-model access",
-          "Workflows (via Dify) provide powerful composition, orchestration, and reuse",
-          "x402 provides settlement and monetization",
-          "Apps and templates provide distribution and discovery"
-        ]
-      },
-      {
-        "title": "Ace focuses on four core layers",
-        "paragraphs": [],
+        "paragraphs": ["Four core layers that power everything we build."],
         "bullets": [
           "Unified AI Gateway for multi-model access",
           "Workflow orchestration via Dify",
-          "Distribution through Nexior templates, skills, and apps",
-          "Settlement via native payment and billing infrastructure"
+          "Distribution through Nexior templates and apps",
+          "Settlement via native payment and billing (including x402)"
         ]
       }
     ]
@@ -201,7 +416,12 @@
         {
           "title": "Mobile App",
           "items": [
-            { "title": "Launch the Ace mobile app on Android and iOS", "status": "in_progress", "target_at": null, "completed_at": null },
+            {
+              "title": "Launch the Ace mobile app on Android and iOS",
+              "status": "in_progress",
+              "target_at": null,
+              "completed_at": null
+            },
             {
               "title": "Focus the app on high-frequency, template-first use cases rather than experimentation",
               "status": "planned",
@@ -242,7 +462,12 @@
         {
           "title": "Payments and Settlement",
           "items": [
-            { "title": "Base x402 payment integration is live", "status": "done", "target_at": null, "completed_at": "2026-01-10" },
+            {
+              "title": "Base x402 payment integration is live",
+              "status": "done",
+              "target_at": null,
+              "completed_at": "2026-01-10"
+            },
             {
               "title": "Finalize Solana x402 payment integration within Q1, enabling call-to-pay settlement for additional live use cases",
               "status": "in_progress",
@@ -260,7 +485,12 @@
               "target_at": null,
               "completed_at": null
             },
-            { "title": "Prioritize reproducibility and quality over volume", "status": "planned", "target_at": null, "completed_at": null },
+            {
+              "title": "Prioritize reproducibility and quality over volume",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
             {
               "title": "Begin early contributor feedback loops without aggressive incentives",
               "status": "planned",
@@ -272,7 +502,12 @@
         {
           "title": "Token and Market Structure",
           "items": [
-            { "title": "Deprioritize discretionary buybacks at this stage", "status": "planned", "target_at": null, "completed_at": null },
+            {
+              "title": "Deprioritize discretionary buybacks at this stage",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
             {
               "title": "Focus on liquidity depth, stability, and conservative capital use",
               "status": "planned",
@@ -308,7 +543,12 @@
               "target_at": null,
               "completed_at": null
             },
-            { "title": "Increase template-driven usage and real production activity", "status": "planned", "target_at": null, "completed_at": null },
+            {
+              "title": "Increase template-driven usage and real production activity",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
             {
               "title": "Strengthen the feedback loop between app usage, workflows, and Nexior distribution",
               "status": "planned",
@@ -320,7 +560,12 @@
         {
           "title": "Payments and Monetization",
           "items": [
-            { "title": "Expand x402-based settlement into more production workflows", "status": "planned", "target_at": null, "completed_at": null },
+            {
+              "title": "Expand x402-based settlement into more production workflows",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
             {
               "title": "Improve receipts, billing transparency, and automated settlement for developers and agents",
               "status": "planned",
@@ -332,7 +577,12 @@
         {
           "title": "Data Services",
           "items": [
-            { "title": "Roll out structured data services as a real product line", "status": "planned", "target_at": null, "completed_at": null },
+            {
+              "title": "Roll out structured data services as a real product line",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
             {
               "title": "Establish clear standards for ingestion, processing, and delivery",
               "status": "planned",
@@ -350,7 +600,12 @@
         {
           "title": "Ecosystem and Partnerships",
           "items": [
-            { "title": "Land the first wave of practical partnerships", "status": "planned", "target_at": null, "completed_at": null },
+            {
+              "title": "Land the first wave of practical partnerships",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
             {
               "title": "Focus on co-built templates, integrations, and real delivery rather than announcements",
               "status": "planned",
@@ -374,8 +629,18 @@
         {
           "title": "Platform and APIs",
           "items": [
-            { "title": "Scale routing, fallback strategies, and concurrency support", "status": "planned", "target_at": null, "completed_at": null },
-            { "title": "Improve stability under higher and more complex workloads", "status": "planned", "target_at": null, "completed_at": null }
+            {
+              "title": "Scale routing, fallback strategies, and concurrency support",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Improve stability under higher and more complex workloads",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            }
           ]
         },
         {
@@ -393,7 +658,12 @@
               "target_at": null,
               "completed_at": null
             },
-            { "title": "Improve contributor earning clarity tied to real usage", "status": "planned", "target_at": null, "completed_at": null }
+            {
+              "title": "Improve contributor earning clarity tied to real usage",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            }
           ]
         },
         {
@@ -405,7 +675,12 @@
               "target_at": null,
               "completed_at": null
             },
-            { "title": "No rushed deployments", "status": "planned", "target_at": null, "completed_at": null },
+            {
+              "title": "No rushed deployments",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
             {
               "title": "Any pilot remains limited in scope and focused on contribution, not yield",
               "status": "planned",
@@ -429,9 +704,24 @@
         {
           "title": "Platform Maturity",
           "items": [
-            { "title": "Deliver predictable release cadence", "status": "planned", "target_at": null, "completed_at": null },
-            { "title": "Reduce operational surprises", "status": "planned", "target_at": null, "completed_at": null },
-            { "title": "Position Ace as a dependable platform rather than a toolbox", "status": "planned", "target_at": null, "completed_at": null }
+            {
+              "title": "Deliver predictable release cadence",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Reduce operational surprises",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Position Ace as a dependable platform rather than a toolbox",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            }
           ]
         },
         {
@@ -443,7 +733,12 @@
               "target_at": null,
               "completed_at": null
             },
-            { "title": "Reduce reliance on manual curation or intervention", "status": "planned", "target_at": null, "completed_at": null }
+            {
+              "title": "Reduce reliance on manual curation or intervention",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            }
           ]
         },
         {
@@ -486,7 +781,12 @@
       "Ace Data Cloud is not optimizing for short-term attention.",
       "We are optimizing for:"
     ],
-    "bullets": ["Clear delivery", "Real usage", "Disciplined capital management", "Long-term credibility with builders, partners, and serious stakeholders"],
+    "bullets": [
+      "Clear delivery",
+      "Real usage",
+      "Disciplined capital management",
+      "Long-term credibility with builders, partners, and serious stakeholders"
+    ],
     "final_line": "Roadmaps do not create trust. Execution does."
   },
   "footer": {
@@ -495,29 +795,76 @@
       "lines": [
         { "icon": "building", "text": "Germey Technology, LLC" },
         { "icon": "location", "text": "United States / Global Remote" },
-        { "icon": "x", "text": "@acedatacloud", "href": "https://x.com/acedatacloud" },
-        { "icon": "github", "text": "AceDataCloud", "href": "https://github.com/AceDataCloud" },
-        { "icon": "contract", "text": "GnHpRsrcyfHSMZNzmpjAzTFQA26vnbRMzbKQ11ZKpump" },
-        { "icon": "mail", "text": "office@acedata.cloud", "href": "mailto:office@acedata.cloud" }
+        {
+          "icon": "x",
+          "text": "@acedatacloud",
+          "href": "https://x.com/acedatacloud"
+        },
+        {
+          "icon": "github",
+          "text": "AceDataCloud",
+          "href": "https://github.com/AceDataCloud"
+        },
+        {
+          "icon": "contract",
+          "text": "GnHpRsrcyfHSMZNzmpjAzTFQA26vnbRMzbKQ11ZKpump"
+        },
+        {
+          "icon": "mail",
+          "text": "office@acedata.cloud",
+          "href": "mailto:office@acedata.cloud"
+        }
       ]
     },
     "columns": [
       {
         "title": "Product",
         "links": [
-          { "label": "All Services", "href": "https://platform.acedata.cloud/services", "new_tab": true },
-          { "label": "Developer Documentation", "href": "https://platform.acedata.cloud/documents", "new_tab": true },
-          { "label": "Profile", "href": "https://platform.acedata.cloud/profile", "new_tab": true },
-          { "label": "Try Now", "href": "https://hub.acedata.cloud", "new_tab": true }
+          {
+            "label": "All Services",
+            "href": "https://platform.acedata.cloud/services",
+            "new_tab": true
+          },
+          {
+            "label": "Developer Documentation",
+            "href": "https://platform.acedata.cloud/documents",
+            "new_tab": true
+          },
+          {
+            "label": "Profile",
+            "href": "https://platform.acedata.cloud/profile",
+            "new_tab": true
+          },
+          {
+            "label": "Try Now",
+            "href": "https://hub.acedata.cloud",
+            "new_tab": true
+          }
         ]
       },
       {
         "title": "Company",
         "links": [
-          { "label": "Distributions", "href": "https://platform.acedata.cloud/console/distributions", "new_tab": true },
-          { "label": "Support", "href": "https://platform.acedata.cloud/support", "new_tab": true },
-          { "label": "Terms", "href": "https://platform.acedata.cloud/terms", "new_tab": true },
-          { "label": "Privacy", "href": "https://platform.acedata.cloud/privacy", "new_tab": true }
+          {
+            "label": "Distributions",
+            "href": "https://platform.acedata.cloud/console/distributions",
+            "new_tab": true
+          },
+          {
+            "label": "Support",
+            "href": "https://platform.acedata.cloud/support",
+            "new_tab": true
+          },
+          {
+            "label": "Terms",
+            "href": "https://platform.acedata.cloud/terms",
+            "new_tab": true
+          },
+          {
+            "label": "Privacy",
+            "href": "https://platform.acedata.cloud/privacy",
+            "new_tab": true
+          }
         ]
       }
     ],

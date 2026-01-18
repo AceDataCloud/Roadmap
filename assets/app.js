@@ -32,6 +32,32 @@
         <path d="M9.2 12.3l1.9 1.9 3.8-4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
       </svg>
     `,
+    chart: (className) => `
+      <svg viewBox="0 0 24 24" fill="none" class="${className}" aria-hidden="true">
+        <path d="M3 3v18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7 14l4-4 4 4 5-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+        <circle cx="7" cy="14" r="1.5" fill="currentColor" opacity=".7"/>
+        <circle cx="11" cy="10" r="1.5" fill="currentColor" opacity=".7"/>
+        <circle cx="15" cy="14" r="1.5" fill="currentColor" opacity=".7"/>
+        <circle cx="20" cy="8" r="1.5" fill="currentColor" opacity=".7"/>
+      </svg>
+    `,
+    users: (className) => `
+      <svg viewBox="0 0 24 24" fill="none" class="${className}" aria-hidden="true">
+        <circle cx="9" cy="7" r="3.5" stroke="currentColor" stroke-width="1.8"/>
+        <path d="M2.5 21v-2c0-2.2 2.7-4 6.5-4s6.5 1.8 6.5 4v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="17" cy="8" r="2.5" stroke="currentColor" stroke-width="1.6" opacity=".7"/>
+        <path d="M17 13c2.5 0 4.5 1.3 4.5 3v1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".7"/>
+      </svg>
+    `,
+    handshake: (className) => `
+      <svg viewBox="0 0 24 24" fill="none" class="${className}" aria-hidden="true">
+        <path d="M12 8l4-4 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 8l-4-4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4 8v4c0 2.2 1.8 4 4 4h1l3 4 3-4h1c2.2 0 4-1.8 4-4V8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9 12h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity=".7"/>
+      </svg>
+    `,
     chevron: (className) => `
       <svg viewBox="0 0 24 24" fill="none" class="${className}" aria-hidden="true">
         <path d="M6.5 9.5L12 15l5.5-5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -68,9 +94,37 @@
     }
   };
 
+  // Donut chart color palette (matches the image style)
+  const DONUT_COLORS = [
+    '#3b82f6', // blue
+    '#22c55e', // green
+    '#f59e0b', // amber/yellow
+    '#ef4444', // red
+    '#10b981', // emerald/teal
+    '#a855f7', // purple
+    '#ec4899', // pink
+    '#6366f1', // indigo
+    '#14b8a6', // teal
+    '#f97316'  // orange
+  ];
+
   const isDark = () => document.documentElement.classList.contains('dark');
   const currentTheme = () => (isDark() ? 'dark' : 'light');
   const CARD_CLASS = 'glass rounded-3xl p-6 sm:p-7';
+
+  function parsePercentValue(value) {
+    const raw = String(value ?? '').trim();
+    const match = raw.match(/(\d+(?:\.\d+)?)/);
+    if (!match) return 0;
+    const num = Number(match[1]);
+    return Number.isFinite(num) ? num : 0;
+  }
+
+  function formatPercentDisplay(value) {
+    const num = parsePercentValue(value);
+    if (!Number.isFinite(num)) return '0';
+    return num % 1 === 0 ? String(Math.trunc(num)) : String(num);
+  }
 
   function el(tag, attrs = {}, children = []) {
     const node = document.createElement(tag);
@@ -140,6 +194,92 @@
       </svg>
     `;
     return wrap;
+  }
+
+  // Render a donut chart with legend
+  function renderDonutChart(allocations, title) {
+    const container = el('div', { class: 'allocation-chartInner' });
+    
+    // SVG donut chart
+    const size = 200;
+    const strokeWidth = 40;
+    const radius = (size - strokeWidth) / 2;
+    const circumference = 2 * Math.PI * radius;
+    const centerX = size / 2;
+    const centerY = size / 2;
+    
+    let svgPaths = '';
+    let currentOffset = 0;
+    
+    // Parse percentages and create segments
+    const segments = allocations.map((alloc, index) => {
+      const pct = typeof alloc.percentage === 'number' ? alloc.percentage : parsePercentValue(alloc.percentage);
+      return {
+        category: alloc.category,
+        percentage: pct,
+        color: DONUT_COLORS[index % DONUT_COLORS.length]
+      };
+    });
+    
+    // Calculate total for normalization (in case percentages don't add to 100)
+    const total = segments.reduce((sum, s) => sum + s.percentage, 0) || 100;
+    
+    for (const seg of segments) {
+      const segmentPct = (seg.percentage / total) * 100;
+      const dashLength = (segmentPct / 100) * circumference;
+      const dashGap = circumference - dashLength;
+      const rotation = (currentOffset / 100) * 360 - 90; // Start from top
+      
+      svgPaths += `
+        <circle
+          cx="${centerX}"
+          cy="${centerY}"
+          r="${radius}"
+          fill="none"
+          stroke="${seg.color}"
+          stroke-width="${strokeWidth}"
+          stroke-dasharray="${dashLength} ${dashGap}"
+          transform="rotate(${rotation} ${centerX} ${centerY})"
+          style="transition: stroke-dasharray 0.5s ease"
+        />
+      `;
+      currentOffset += segmentPct;
+    }
+    
+    const chartWrapper = el('div', { class: 'allocation-chartSvgWrap' });
+    chartWrapper.innerHTML = `
+      <svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" class="drop-shadow-lg">
+        <circle cx="${centerX}" cy="${centerY}" r="${radius}" fill="none" stroke="rgba(0,0,0,0.1)" stroke-width="${strokeWidth}" class="dark:stroke-white/10" />
+        ${svgPaths}
+      </svg>
+    `;
+    container.appendChild(chartWrapper);
+    
+    // Legend
+    const legend = el('div', { class: 'allocation-chartLegend' });
+    
+    for (let i = 0; i < segments.length; i++) {
+      const seg = segments[i];
+      const pctDisplay = `${formatPercentDisplay(allocations[i].percentage)}%`;
+      
+      const item = el('div', { class: 'allocation-chartLegendItem' });
+      
+      // Color dot
+      const dot = el('span', { 
+        class: 'allocation-chartLegendDot',
+        style: `background-color: ${seg.color}`
+      });
+      
+      // Text content
+      const textWrap = el('div', { class: 'allocation-chartLegendText' }, `${seg.category} — ${pctDisplay}`);
+      
+      item.appendChild(dot);
+      item.appendChild(textWrap);
+      legend.appendChild(item);
+    }
+    
+    container.appendChild(legend);
+    return container;
   }
 
   function updateThemeToggleButtons() {
@@ -432,11 +572,12 @@
 
     const sections = [
       { label: 'Overview', href: '#overview' },
-      { label: 'Platform', href: '#platform-overview' },
+      { label: data?.what_building ? 'What We Build' : null, href: '#what-building' },
       { label: data?.founder ? 'Founding Team' : null, href: '#founding-team' },
       { label: 'Principles', href: '#guiding-principles' },
-      { label: 'What We Build', href: '#what-building' },
       { label: data?.revenue ? 'Revenue' : null, href: '#revenue' },
+      { label: data?.creator_fees ? 'Creator Fees' : null, href: '#creator-fees' },
+      { label: data?.capital_governance ? 'Capital Governance' : null, href: '#capital-governance' },
       { label: 'Roadmap', href: '#roadmap' },
       { label: 'Q1', href: '#2026-q1' },
       { label: 'Q2', href: '#2026-q2' },
@@ -465,7 +606,7 @@
   }
 
   function sectionShell(title, subtitle, id) {
-    const attrs = { class: 'mx-auto max-w-6xl px-4 pt-24 pb-20 sm:px-6 sm:pt-32 sm:pb-24' };
+    const attrs = { class: 'mx-auto max-w-6xl px-4 pt-24 pb-8 sm:px-6 sm:pt-16 sm:pb-10' };
     if (id) attrs.id = id;
     const wrap = el('section', attrs);
     wrap.appendChild(
@@ -518,71 +659,6 @@
 
     grid.appendChild(left);
     grid.appendChild(right);
-    wrap.appendChild(grid);
-    return wrap;
-  }
-
-  function renderIntro(data) {
-    const wrap = sectionShell(data.intro.title, data.intro.subtitle, 'platform-overview');
-    const grid = el('div', { class: 'grid gap-6 lg:grid-cols-3' });
-
-    const accent = (idx) => {
-      const accents = [
-        { bar: 'from-ace-emerald/40 to-ace-blue/30', chip: 'bg-ace-emerald/15 text-emerald-950 dark:bg-ace-emerald/20 dark:text-emerald-100' },
-        { bar: 'from-ace-blue/35 to-violet-500/25', chip: 'bg-ace-blue/15 text-sky-950 dark:bg-ace-blue/20 dark:text-sky-100' },
-        { bar: 'from-violet-500/30 to-ace-emerald/20', chip: 'bg-violet-500/15 text-violet-950 dark:bg-violet-500/20 dark:text-violet-100' }
-      ];
-      return accents[idx % accents.length];
-    };
-
-    (data.intro.cards || []).forEach((card, idx) => {
-      const a = accent(idx);
-      const shell = el('div', { class: 'glass rounded-3xl p-6 sm:p-7' });
-      shell.appendChild(el('div', { class: `h-1.5 w-16 rounded-full bg-gradient-to-r ${a.bar}` }));
-      shell.appendChild(el('div', { class: 'mt-4 font-display text-lg font-semibold text-slate-900 dark:text-white/95' }, card.title));
-
-      for (const p of card.paragraphs || []) {
-        shell.appendChild(el('p', { class: 'mt-3 text-sm leading-relaxed text-slate-700 dark:text-white/90 sm:text-base' }, p));
-      }
-
-      if (card.bullets?.length) {
-        const ul = el('ul', { class: 'mt-5 space-y-2' });
-        for (const b of card.bullets) {
-          ul.appendChild(
-            el('li', { class: 'flex gap-3' }, [
-              el('span', { class: 'mt-2 h-1.5 w-1.5 flex-none rounded-full bg-slate-900/25 dark:bg-white/40' }),
-              el('span', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/90' }, b)
-            ])
-          );
-        }
-        shell.appendChild(ul);
-      }
-
-      if (card.links?.length) {
-        const links = el('div', { class: 'mt-6 flex flex-wrap gap-2' });
-        for (const link of card.links) {
-          links.appendChild(
-            el(
-              'a',
-              {
-                class:
-                  'inline-flex items-center justify-center rounded-full border border-slate-900/15 bg-slate-900/5 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-900/10 dark:border-white/20 dark:bg-white/10 dark:text-white/90 dark:hover:bg-white/15',
-                href: link.href,
-                ...(link.new_tab ? { target: '_blank', rel: 'noreferrer' } : {})
-              },
-              link.label
-            )
-          );
-        }
-        shell.appendChild(links);
-      }
-
-      shell.appendChild(
-        el('div', { class: `mt-6 inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold shadow-ring ${a.chip}` }, 'Ace Data Cloud')
-      );
-      grid.appendChild(shell);
-    });
-
     wrap.appendChild(grid);
     return wrap;
   }
@@ -720,6 +796,441 @@
     return wrap;
   }
 
+  function renderCreatorFees(data) {
+    if (!data?.creator_fees) return null;
+
+    const snapshot = data.creator_fees.snapshot;
+    const loadFailed = !!data.creator_fees.load_failed;
+    const asOf = snapshot?.as_of ? safeText(snapshot.as_of) : null;
+    const solPrice = snapshot?.sol_price_usd || 0;
+
+    const formatSol = (value) => {
+      const num = Number(value);
+      if (!Number.isFinite(num)) return '—';
+      return `${num.toFixed(4)} SOL`;
+    };
+
+    const formatUsd = (value) => {
+      const num = Number(value);
+      if (!Number.isFinite(num)) return '';
+      try {
+        return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(num);
+      } catch (_err) {
+        return `$${num.toFixed(2)}`;
+      }
+    };
+
+    const wrap = sectionShell(data.creator_fees.title, data.creator_fees.subtitle, 'creator-fees');
+
+    if (loadFailed || !snapshot) {
+      wrap.appendChild(
+        el('div', { class: CARD_CLASS }, [
+          el(
+            'div',
+            { class: 'rounded-2xl bg-slate-900/5 px-4 py-4 text-sm text-slate-700 shadow-ring dark:bg-white/5 dark:text-white/90' },
+            'Creator fees snapshot unavailable right now.'
+          )
+        ])
+      );
+      return wrap;
+    }
+
+    const items = [
+      { key: 'last_1d', label: 'Last 24 hours', tradesKey: 'trades_1d' },
+      { key: 'last_7d', label: 'Last 7 days', tradesKey: 'trades_7d' },
+      { key: 'last_30d', label: 'Last 30 days', tradesKey: 'trades_30d' },
+      { key: 'total', label: 'All Time', tradesKey: null }
+    ];
+
+    const grid = el('div', { class: 'grid gap-6 sm:grid-cols-2 lg:grid-cols-4' });
+    for (const item of items) {
+      const solValue = snapshot[`${item.key}_sol`];
+      const usdValue = snapshot[`${item.key}_usd`];
+      const trades = item.tradesKey ? snapshot[item.tradesKey] : null;
+
+      const iconWrap = el('div', { class: 'flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 text-purple-600 shadow-ring dark:from-purple-400/20 dark:to-pink-400/20 dark:text-purple-300' });
+      iconWrap.innerHTML = ICONS.spark('h-5 w-5');
+
+      const card = el('div', { class: CARD_CLASS }, [
+        el('div', { class: 'flex items-start gap-3' }, [
+          iconWrap,
+          el('div', { class: 'min-w-0 flex-1' }, [
+            el('div', { class: 'text-xs font-semibold text-slate-600 dark:text-white/80' }, item.label),
+            el('div', { class: 'mt-1 font-display text-xl font-semibold text-slate-900 dark:text-white/95' }, formatSol(solValue)),
+            el('div', { class: 'mt-0.5 text-sm text-slate-500 dark:text-white/60' }, formatUsd(usdValue)),
+            trades !== null ? el('div', { class: 'mt-1 text-xs text-slate-400 dark:text-white/50' }, `${trades.toLocaleString()} trades`) : null
+          ].filter(Boolean))
+        ])
+      ]);
+      grid.appendChild(card);
+    }
+
+    wrap.appendChild(grid);
+
+    // SOL price info and timestamp
+    const footer = el('div', { class: 'mt-6 flex flex-wrap items-center gap-4 text-xs text-slate-600 dark:text-white/80' });
+    if (solPrice) {
+      footer.appendChild(el('span', {}, `SOL Price: $${solPrice.toFixed(2)}`));
+    }
+    if (asOf) {
+      footer.appendChild(el('span', {}, `As of: ${asOf}`));
+    }
+    if (snapshot.creator_address) {
+      const link = el('a', {
+        href: `https://solscan.io/account/${snapshot.creator_address}`,
+        target: '_blank',
+        rel: 'noopener noreferrer',
+        class: 'text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300'
+      }, 'View on Solscan ↗');
+      footer.appendChild(link);
+    }
+    wrap.appendChild(footer);
+
+    return wrap;
+  }
+
+  function getEndOfMonthDate() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = now.getMonth();
+    const lastDay = new Date(year, month + 1, 0);
+    const y = lastDay.getFullYear();
+    const m = String(lastDay.getMonth() + 1).padStart(2, '0');
+    const d = String(lastDay.getDate()).padStart(2, '0');
+    return `${y}-${m}-${d}`;
+  }
+
+  function getNextSundayDate() {
+    const now = new Date();
+    const d = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const weekday = d.getDay(); // 0 = Sunday
+    let delta = (7 - weekday) % 7;
+    if (delta === 0) delta = 7;
+    d.setDate(d.getDate() + delta);
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    return `${y}-${m}-${day}`;
+  }
+
+  function renderAllocationCard(alloc, allocationInfo) {
+    const card = el('div', { class: 'allocation-card p-6 flex flex-col h-full' });
+
+    // Header row with icon and percentage
+    const header = el('div', { class: 'allocation-header' });
+
+    const iconWrap = el('div', { class: 'allocation-icon shrink-0' });
+    if (ICONS[alloc.icon]) {
+      iconWrap.innerHTML = ICONS[alloc.icon]('allocation-iconSvg');
+    }
+    header.appendChild(iconWrap);
+
+    const pctBadge = el('div', { class: 'allocation-pct' }, [
+      el('span', { class: 'allocation-pctValue font-display' }, formatPercentDisplay(alloc.percentage)),
+      el('span', { class: 'allocation-pctUnit' }, '%')
+    ]);
+    header.appendChild(pctBadge);
+    card.appendChild(header);
+
+    // Category title
+    card.appendChild(el('h4', { class: 'allocation-title' }, alloc.category));
+
+    // Subtitle if any
+    if (alloc.subtitle) {
+      card.appendChild(el('div', { class: 'allocation-subtitle' }, alloc.subtitle));
+    }
+
+    // Note badge if any
+    if (alloc.note) {
+      card.appendChild(el('div', { class: 'allocation-note' }, alloc.note));
+    }
+
+    const shouldShowAllocationBlock =
+      allocationInfo && (alloc.is_buyback || alloc.category === 'Liquidity Pool Injection');
+
+    if (shouldShowAllocationBlock) {
+      const pct = parsePercentValue(alloc.percentage);
+      const sourceName = allocationInfo.sourceName || 'Revenue';
+      const currency = allocationInfo.currency || 'USD';
+      const windowLabel = allocationInfo.windowLabel || 'Last 30d';
+      const cadenceLabel = allocationInfo.cadenceLabel || (alloc.is_buyback ? 'Monthly' : 'Monthly');
+      const nextDate = allocationInfo.nextDate || (alloc.is_buyback ? getEndOfMonthDate() : getEndOfMonthDate());
+      const hasData = !!allocationInfo.hasData && Number.isFinite(Number(allocationInfo.baseAmount));
+      const baseAmount = hasData ? Number(allocationInfo.baseAmount) : 0;
+      const allocAmount = baseAmount * (pct / 100);
+
+      const formatMoney = (value) => {
+        const num = Number(value);
+        if (!Number.isFinite(num)) return '—';
+        try {
+          return new Intl.NumberFormat('en-US', { style: 'currency', currency, maximumFractionDigits: 0 }).format(num);
+        } catch (_err) {
+          return `$${num.toFixed(0)}`;
+        }
+      };
+
+      // Determine colors based on type
+      const isBuyback = alloc.is_buyback;
+      const calcClass = isBuyback ? 'allocation-calc--buyback' : 'allocation-calc--liquidity';
+
+      // Calculation display
+      const calcWrap = el('div', { class: `allocation-calc ${calcClass}` });
+      
+      // Formula line
+      calcWrap.appendChild(el('div', { class: 'allocation-calcFormula' }, `${sourceName} (${windowLabel}) × ${pct}%`));
+      
+      // Calculation
+      if (hasData) {
+        calcWrap.appendChild(
+          el('div', { class: 'allocation-calcMath' }, [
+            el('span', {}, `${formatMoney(baseAmount)} × ${pct}% = `),
+            el(
+              'span',
+              { class: `allocation-calcValue ${isBuyback ? 'allocation-calcValue--buyback' : 'allocation-calcValue--liquidity'}` },
+              formatMoney(allocAmount)
+            )
+          ])
+        );
+      } else {
+        calcWrap.appendChild(el('div', { class: 'allocation-calcEmpty' }, 'Snapshot unavailable — showing schedule only.'));
+      }
+
+      if (allocationInfo.metaLines?.length) {
+        const meta = el('div', { class: 'allocation-calcMeta' });
+        for (const line of allocationInfo.metaLines) {
+          meta.appendChild(el('div', { class: 'allocation-calcMetaLine' }, String(line)));
+        }
+        calcWrap.appendChild(meta);
+      }
+
+      // Target date for buybacks
+      if (isBuyback) {
+        calcWrap.appendChild(
+          el('div', { class: 'allocation-calcFooter' }, [
+            el('div', { class: 'allocation-buyback allocation-buyback--compact' }, [
+              el('span', { class: 'allocation-buybackEmoji', 'aria-hidden': 'true' }, '🎯'),
+              el('span', { class: 'allocation-buybackText' }, 'Next:'),
+              el('span', { class: 'allocation-buybackDate font-display' }, nextDate)
+            ])
+          ])
+        );
+      } else {
+        // For liquidity, show cadence + next time
+        calcWrap.appendChild(
+          el('div', { class: 'allocation-calcFooter' }, [
+            el('div', { class: 'allocation-schedule allocation-schedule--liquidity' }, [
+              el('span', { class: 'allocation-scheduleIcon', 'aria-hidden': 'true' }, '📅'),
+              el('span', { class: 'allocation-scheduleText' }, cadenceLabel),
+              el('span', { class: 'allocation-scheduleSep', 'aria-hidden': 'true' }, '·'),
+              el('span', { class: 'allocation-scheduleNext' }, 'Next:'),
+              el('span', { class: 'allocation-scheduleDate font-display' }, nextDate)
+            ])
+          ])
+        );
+      }
+
+      card.appendChild(calcWrap);
+    } else if (alloc.is_buyback) {
+      // Fallback if no allocation info available
+      const targetDate = getEndOfMonthDate();
+      card.appendChild(
+        el('div', { class: 'allocation-buyback' }, [
+          el('span', { class: 'allocation-buybackEmoji', 'aria-hidden': 'true' }, '🎯'),
+          el('span', { class: 'allocation-buybackText' }, 'Next:'),
+          el('span', { class: 'allocation-buybackDate font-display' }, targetDate)
+        ])
+      );
+    }
+
+    // Positioning text for buybacks
+    if (alloc.positioning) {
+      card.appendChild(el('p', { class: 'allocation-positioning' }, alloc.positioning));
+    }
+
+    // Purpose list
+    if (alloc.purpose?.length) {
+      const purposeList = el('ul', { class: 'allocation-list flex-1' });
+      for (const p of alloc.purpose) {
+        purposeList.appendChild(
+          el('li', { class: 'allocation-listItem' }, [
+            el('span', { class: 'allocation-bullet' }),
+            el('span', {}, p)
+          ])
+        );
+      }
+      card.appendChild(purposeList);
+    }
+
+    // Execution conditions (for buybacks)
+    if (alloc.execution_conditions?.length) {
+      const condWrap = el('div', { class: 'allocation-meta' });
+      condWrap.appendChild(el('div', { class: 'allocation-metaTitle' }, 'Execution Conditions'));
+      const condList = el('ul', { class: 'allocation-metaList' });
+      for (const c of alloc.execution_conditions) {
+        condList.appendChild(
+          el('li', { class: 'allocation-metaItem' }, [
+            el('span', { class: 'allocation-bullet allocation-bullet--amber' }),
+            el('span', {}, c)
+          ])
+        );
+      }
+      condWrap.appendChild(condList);
+      card.appendChild(condWrap);
+    }
+
+    // Principle quote
+    if (alloc.principle) {
+      card.appendChild(
+        el('div', { class: 'allocation-principle' }, alloc.principle)
+      );
+    }
+
+    // Constraints
+    if (alloc.constraints?.length) {
+      const constraintsWrap = el('div', { class: 'allocation-constraints' });
+      constraintsWrap.appendChild(el('div', { class: 'allocation-metaTitle' }, 'Constraints'));
+      const cList = el('ul', { class: 'allocation-metaList' });
+      for (const c of alloc.constraints) {
+        cList.appendChild(
+          el('li', { class: 'allocation-metaItem' }, [
+            el('span', { class: 'allocation-bullet allocation-bullet--neutral' }),
+            el('span', {}, c)
+          ])
+        );
+      }
+      constraintsWrap.appendChild(cList);
+      card.appendChild(constraintsWrap);
+    }
+
+    return card;
+  }
+
+  function renderCapitalGovernance(data) {
+    if (!data?.capital_governance) return null;
+
+    const cfg = data.capital_governance;
+    const wrap = sectionShell(cfg.title, cfg.subtitle, 'capital-governance');
+
+    // Prepare buyback info from snapshots
+    const creatorFeesLiquidityInfo = data?.creator_fees ? {
+      hasData: !!data.creator_fees.snapshot && Number.isFinite(Number(data.creator_fees.snapshot.last_30d_usd)),
+      baseAmount: data.creator_fees.snapshot?.last_30d_usd,
+      windowLabel: 'Last 30d',
+      sourceName: 'Creator Fees',
+      currency: 'USD',
+      cadenceLabel: 'Monthly allocation',
+      nextDate: getEndOfMonthDate(),
+      metaLines: [
+        'Happens once per month (end of month).',
+        'Calculated from rolling Creator Fees (last 30 days).'
+      ]
+    } : null;
+
+    const creatorFeesBuybackInfo = data?.creator_fees ? {
+      hasData: !!data.creator_fees.snapshot && Number.isFinite(Number(data.creator_fees.snapshot.last_7d_usd)),
+      baseAmount: data.creator_fees.snapshot?.last_7d_usd,
+      windowLabel: 'Last 7d',
+      sourceName: 'Creator Fees',
+      currency: 'USD',
+      cadenceLabel: 'Weekly buyback (Sun)',
+      nextDate: getNextSundayDate(),
+      metaLines: [
+        'Happens once per week (every Sunday).',
+        'Calculated from Creator Fees (last 7 days).'
+      ]
+    } : null;
+
+    const revenueBuybackInfo = data?.revenue ? {
+      hasData: !!data.revenue.snapshot && Number.isFinite(Number(data.revenue.snapshot.last_30d)),
+      baseAmount: data.revenue.snapshot?.last_30d,
+      windowLabel: 'Last 30d',
+      sourceName: 'Platform Revenue',
+      currency: data.revenue.snapshot?.currency || 'USD',
+      cadenceLabel: 'Monthly buyback',
+      nextDate: getEndOfMonthDate(),
+      metaLines: [
+        'Happens once per month (end of month).',
+        'Calculated from rolling Platform Revenue (last 30 days).'
+      ]
+    } : null;
+
+    // Creator Fees Section
+    if (cfg.creator_fees) {
+      const cf = cfg.creator_fees;
+      const cfSection = el('div', { class: 'glass rounded-3xl p-6 sm:p-8' });
+
+      // Section Header
+      const cfHeader = el('div', { class: 'mb-6' });
+      cfHeader.appendChild(
+        el('h3', { class: 'font-display text-xl font-semibold text-slate-900 dark:text-white' }, 'I. ' + cf.title)
+      );
+      cfHeader.appendChild(
+        el('p', { class: 'mt-2 text-sm leading-relaxed text-slate-700 dark:text-white/80' }, cf.description)
+      );
+      cfSection.appendChild(cfHeader);
+
+      // Donut Chart for Creator Fees
+      if (cf.allocations?.length) {
+        const chartContainer = el('div', { class: 'allocation-chart mb-6' });
+        chartContainer.appendChild(renderDonutChart(cf.allocations, cf.title));
+        cfSection.appendChild(chartContainer);
+      }
+
+      // Allocation label
+      cfSection.appendChild(
+        el('div', { class: 'mt-4 mb-5 text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-white/70' }, 'Allocation Breakdown (100%)')
+      );
+
+      // Allocation cards grid
+      const allocGrid = el('div', { class: 'grid gap-6 sm:grid-cols-2 lg:grid-cols-3' });
+      for (const alloc of cf.allocations || []) {
+        const isLiquidity = alloc.category === 'Liquidity Pool Injection';
+        const info = alloc.is_buyback ? creatorFeesBuybackInfo : isLiquidity ? creatorFeesLiquidityInfo : null;
+        allocGrid.appendChild(renderAllocationCard(alloc, info));
+      }
+      cfSection.appendChild(allocGrid);
+      wrap.appendChild(cfSection);
+    }
+
+    // Platform Revenue Section
+    if (cfg.platform_revenue) {
+      const pr = cfg.platform_revenue;
+      const prSection = el('div', { class: 'glass rounded-3xl p-6 sm:p-8 mt-6' });
+
+      // Section Header
+      const prHeader = el('div', { class: 'mb-6' });
+      prHeader.appendChild(
+        el('h3', { class: 'font-display text-xl font-semibold text-slate-900 dark:text-white' }, 'II. ' + pr.title)
+      );
+      prHeader.appendChild(
+        el('p', { class: 'mt-2 text-sm leading-relaxed text-slate-700 dark:text-white/80' }, pr.description)
+      );
+      prSection.appendChild(prHeader);
+
+      // Donut Chart for Platform Revenue
+      if (pr.allocations?.length) {
+        const chartContainer = el('div', { class: 'allocation-chart mb-6' });
+        chartContainer.appendChild(renderDonutChart(pr.allocations, pr.title));
+        prSection.appendChild(chartContainer);
+      }
+
+      // Allocation label
+      prSection.appendChild(
+        el('div', { class: 'mt-4 mb-5 text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-white/70' }, 'Allocation Breakdown (100%)')
+      );
+
+      // Allocation cards grid
+      const prGrid = el('div', { class: 'grid gap-6 sm:grid-cols-2 lg:grid-cols-3' });
+      for (const alloc of pr.allocations || []) {
+        prGrid.appendChild(renderAllocationCard(alloc, alloc.is_buyback ? revenueBuybackInfo : null));
+      }
+      prSection.appendChild(prGrid);
+      wrap.appendChild(prSection);
+    }
+
+    return wrap;
+  }
+
   function renderPrinciples(data) {
     const wrap = sectionShell(data.guiding_principles.title, 'Principles that shape sequencing and execution.', 'guiding-principles');
     const grid = el('div', { class: 'grid gap-5 sm:grid-cols-2 lg:grid-cols-4' });
@@ -736,23 +1247,34 @@
   }
 
   function renderWhatBuilding(data) {
-    const wrap = sectionShell(data.what_building.title, 'Products, layers, and how they connect.', 'what-building');
-    const shell = el('div', { class: CARD_CLASS });
+    if (!data?.what_building) return null;
 
-    for (const p of data.what_building.intro_paragraphs || []) {
-      shell.appendChild(el('p', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/90 sm:text-base' }, p));
-    }
+    const wrap = sectionShell(data.what_building.title, data.what_building.subtitle, 'what-building');
+    const grid = el('div', { class: 'grid gap-6 md:grid-cols-2 lg:grid-cols-4' });
 
-    const sections = el('div', { class: 'mt-8 grid gap-6 lg:grid-cols-3' });
-    for (const sec of data.what_building.sections || []) {
-      const card = el('div', { class: 'rounded-3xl bg-slate-900/5 p-6 shadow-ring dark:bg-white/5' });
-      card.appendChild(el('div', { class: 'text-sm font-semibold text-slate-900 dark:text-white/95' }, sec.title));
-      for (const p of sec.paragraphs || []) {
-        card.appendChild(el('p', { class: 'mt-3 text-sm leading-relaxed text-slate-700 dark:text-white/90' }, p));
+    const accent = (idx) => {
+      const accents = [
+        { bar: 'from-ace-emerald/40 to-ace-blue/30', chip: 'bg-ace-emerald/15 text-emerald-950 dark:bg-ace-emerald/20 dark:text-emerald-100' },
+        { bar: 'from-ace-blue/35 to-violet-500/25', chip: 'bg-ace-blue/15 text-sky-950 dark:bg-ace-blue/20 dark:text-sky-100' },
+        { bar: 'from-violet-500/30 to-ace-emerald/20', chip: 'bg-violet-500/15 text-violet-950 dark:bg-violet-500/20 dark:text-violet-100' },
+        { bar: 'from-amber-500/30 to-rose-500/20', chip: 'bg-amber-500/15 text-amber-950 dark:bg-amber-500/20 dark:text-amber-100' }
+      ];
+      return accents[idx % accents.length];
+    };
+
+    (data.what_building.cards || []).forEach((card, idx) => {
+      const a = accent(idx);
+      const shell = el('div', { class: 'glass rounded-3xl p-6 sm:p-7' });
+      shell.appendChild(el('div', { class: `h-1.5 w-16 rounded-full bg-gradient-to-r ${a.bar}` }));
+      shell.appendChild(el('div', { class: 'mt-4 font-display text-lg font-semibold text-slate-900 dark:text-white/95' }, card.title));
+
+      for (const p of card.paragraphs || []) {
+        shell.appendChild(el('p', { class: 'mt-3 text-sm leading-relaxed text-slate-700 dark:text-white/90' }, p));
       }
-      if (sec.bullets?.length) {
+
+      if (card.bullets?.length) {
         const ul = el('ul', { class: 'mt-4 space-y-2' });
-        for (const b of sec.bullets) {
+        for (const b of card.bullets) {
           ul.appendChild(
             el('li', { class: 'flex gap-3' }, [
               el('span', { class: 'mt-2 h-1.5 w-1.5 flex-none rounded-full bg-slate-900/25 dark:bg-white/40' }),
@@ -760,13 +1282,32 @@
             ])
           );
         }
-        card.appendChild(ul);
+        shell.appendChild(ul);
       }
-      sections.appendChild(card);
-    }
 
-    shell.appendChild(sections);
-    wrap.appendChild(shell);
+      if (card.links?.length) {
+        const links = el('div', { class: 'mt-5 flex flex-wrap gap-2' });
+        for (const link of card.links) {
+          links.appendChild(
+            el(
+              'a',
+              {
+                class:
+                  'inline-flex items-center justify-center rounded-full border border-slate-900/15 bg-slate-900/5 px-3 py-1.5 text-xs font-semibold text-slate-800 hover:bg-slate-900/10 dark:border-white/20 dark:bg-white/10 dark:text-white/90 dark:hover:bg-white/15',
+                href: link.href,
+                ...(link.new_tab ? { target: '_blank', rel: 'noreferrer' } : {})
+              },
+              link.label
+            )
+          );
+        }
+        shell.appendChild(links);
+      }
+
+      grid.appendChild(shell);
+    });
+
+    wrap.appendChild(grid);
     return wrap;
   }
 
@@ -944,6 +1485,122 @@
     }
     card.appendChild(ul);
     wrap.appendChild(card);
+    return wrap;
+  }
+
+  function renderBuybackHistory(data, { load_failed } = {}) {
+    if (!data) return null;
+
+    const wrap = sectionShell(
+      data.title || 'Buyback History',
+      data.subtitle || 'On-chain buyback transactions — transparent and verifiable.',
+      'buyback-history'
+    );
+
+    const shell = el('div', { class: CARD_CLASS });
+
+    if (load_failed) {
+      shell.appendChild(
+        el('div', { class: 'text-sm text-slate-600 dark:text-white/70' }, 'Failed to load buyback history.')
+      );
+      wrap.appendChild(shell);
+      return wrap;
+    }
+
+    const transactions = data.transactions || [];
+    if (transactions.length === 0) {
+      shell.appendChild(
+        el('div', { class: 'text-sm text-slate-600 dark:text-white/70' }, 'No buyback transactions yet.')
+      );
+      wrap.appendChild(shell);
+      return wrap;
+    }
+
+    // Stats summary
+    const totalUsd = transactions.reduce((sum, tx) => sum + (tx.amount_usd || 0), 0);
+    const totalAce = transactions.reduce((sum, tx) => sum + (tx.ace_bought || 0), 0);
+    
+    const statsGrid = el('div', { class: 'mb-6 grid gap-4 sm:grid-cols-3' });
+    
+    const statCard = (label, value, subtext) => {
+      const card = el('div', { class: 'rounded-2xl bg-slate-900/5 p-4 dark:bg-white/5' });
+      card.appendChild(el('div', { class: 'text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-white/60' }, label));
+      card.appendChild(el('div', { class: 'mt-1 font-display text-xl font-bold text-slate-900 dark:text-white' }, value));
+      if (subtext) card.appendChild(el('div', { class: 'mt-0.5 text-xs text-slate-600 dark:text-white/70' }, subtext));
+      return card;
+    };
+    
+    statsGrid.appendChild(statCard('Total Spent', `$${totalUsd.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, 'across all buybacks'));
+    statsGrid.appendChild(statCard('ACE Bought', totalAce.toLocaleString('en-US'), 'tokens acquired'));
+    statsGrid.appendChild(statCard('Transactions', transactions.length.toString(), 'on-chain records'));
+    shell.appendChild(statsGrid);
+
+    // Transaction list
+    const list = el('div', { class: 'space-y-4' });
+    
+    for (const tx of transactions) {
+      const txCard = el('a', {
+        class: 'block rounded-2xl bg-slate-900/5 p-4 shadow-ring hover:bg-slate-900/10 dark:bg-white/5 dark:hover:bg-white/10',
+        href: `https://solscan.io/tx/${tx.tx_hash}`,
+        target: '_blank',
+        rel: 'noreferrer'
+      });
+
+      // Header row: date + amount
+      const header = el('div', { class: 'flex items-start justify-between gap-4' });
+      
+      const left = el('div', {});
+      left.appendChild(el('div', { class: 'font-semibold text-slate-900 dark:text-white/95' }, tx.date));
+      if (tx.period) {
+        left.appendChild(el('div', { class: 'mt-0.5 text-sm text-slate-600 dark:text-white/70' }, `Period: ${tx.period}`));
+      }
+      header.appendChild(left);
+
+      const right = el('div', { class: 'text-right' });
+      right.appendChild(el('div', { class: 'font-display text-lg font-bold text-emerald-600 dark:text-emerald-400' }, 
+        `$${(tx.amount_usd || 0).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
+      ));
+      if (tx.amount_sol) {
+        right.appendChild(el('div', { class: 'text-xs text-slate-600 dark:text-white/70' }, `${tx.amount_sol} SOL`));
+      }
+      header.appendChild(right);
+      txCard.appendChild(header);
+
+      // Details row
+      const details = el('div', { class: 'mt-3 flex flex-wrap gap-2' });
+      
+      if (tx.source) {
+        details.appendChild(el('span', { 
+          class: 'rounded-full border border-blue-500/20 bg-blue-500/10 px-2.5 py-1 text-xs font-semibold text-blue-700 dark:text-blue-300' 
+        }, `${tx.source} (${tx.source_percentage}%)`));
+      }
+      
+      if (tx.ace_bought) {
+        details.appendChild(el('span', { 
+          class: 'rounded-full border border-purple-500/20 bg-purple-500/10 px-2.5 py-1 text-xs font-semibold text-purple-700 dark:text-purple-300' 
+        }, `${tx.ace_bought.toLocaleString('en-US')} ACE`));
+      }
+      
+      // Shortened tx hash
+      const shortHash = tx.tx_hash ? `${tx.tx_hash.slice(0, 8)}...${tx.tx_hash.slice(-8)}` : '';
+      if (shortHash) {
+        details.appendChild(el('span', { 
+          class: 'rounded-full border border-slate-900/10 bg-slate-900/5 px-2.5 py-1 text-xs font-mono text-slate-600 dark:border-white/15 dark:bg-white/5 dark:text-white/70' 
+        }, shortHash));
+      }
+      
+      txCard.appendChild(details);
+
+      // Note
+      if (tx.note) {
+        txCard.appendChild(el('div', { class: 'mt-3 text-sm text-slate-600 dark:text-white/70' }, tx.note));
+      }
+
+      list.appendChild(txCard);
+    }
+
+    shell.appendChild(list);
+    wrap.appendChild(shell);
     return wrap;
   }
 
@@ -1346,6 +2003,24 @@
       data.revenue.load_failed = revenueLoadFailed;
     }
 
+    // Load creator fees snapshot
+    let creatorFeesSnapshot;
+    let creatorFeesLoadFailed = false;
+    try {
+      if (data?.creator_fees?.source) {
+        const cfr = await fetch(String(data.creator_fees.source), { cache: 'no-store' });
+        if (cfr.ok) creatorFeesSnapshot = await cfr.json();
+        else creatorFeesLoadFailed = true;
+      }
+    } catch (_err) {
+      creatorFeesLoadFailed = true;
+      creatorFeesSnapshot = undefined;
+    }
+    if (data?.creator_fees) {
+      data.creator_fees.snapshot = creatorFeesSnapshot;
+      data.creator_fees.load_failed = creatorFeesLoadFailed;
+    }
+
     if (data?.daily_updates) {
       dailyUpdatesIndex = {
         title: 'Daily Updates',
@@ -1381,13 +2056,17 @@
     startHeroCanvas(hero.querySelector('#hero-canvas'));
 
     app.appendChild(renderOverview(data));
-    app.appendChild(renderIntro(data));
+    const whatBuilding = renderWhatBuilding(data);
+    if (whatBuilding) app.appendChild(whatBuilding);
     const founder = renderFounder(data);
     if (founder) app.appendChild(founder);
     app.appendChild(renderPrinciples(data));
-    app.appendChild(renderWhatBuilding(data));
     const revenue = renderRevenue(data);
     if (revenue) app.appendChild(revenue);
+    const creatorFees = renderCreatorFees(data);
+    if (creatorFees) app.appendChild(creatorFees);
+    const capitalGovernance = renderCapitalGovernance(data);
+    if (capitalGovernance) app.appendChild(capitalGovernance);
     app.appendChild(renderPhases(data));
     app.appendChild(renderTokenFit(data));
     if (dailyUpdatesIndex) app.appendChild(renderDailyUpdates(dailyUpdatesIndex, dailyUpdatesSourceUrl, { load_failed: dailyUpdatesLoadFailed }));
