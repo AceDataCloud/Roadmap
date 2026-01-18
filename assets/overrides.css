@@ -3,6 +3,572 @@ body {
   background: linear-gradient(180deg, var(--bg0), var(--bg1));
 }
 
+/* Snapshot sections: keep them closer (avoid double-padding between sections) */
+section#revenue {
+  padding-bottom: 2rem;
+}
+
+section#creator-fees {
+  padding-top: 2rem;
+}
+
+/* Allocation cards (Creator Fees / Capital Governance) */
+.allocation-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  background: radial-gradient(120% 120% at 10% 0%, rgba(42, 169, 255, 0.12), transparent 60%),
+    linear-gradient(180deg, var(--cardA), var(--cardB));
+  border: 1px solid var(--stroke);
+  box-shadow: 0 0 0 1px var(--strokeInset) inset, 0 18px 80px rgba(2, 6, 23, 0.14);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+html.dark .allocation-card {
+  box-shadow: 0 0 0 1px var(--strokeInset) inset, 0 22px 80px rgba(2, 6, 23, 0.55);
+}
+
+.allocation-card:hover {
+  transform: translateY(-1px);
+  border-color: rgba(42, 169, 255, 0.35);
+  box-shadow: 0 0 0 1px rgba(42, 169, 255, 0.18) inset, 0 28px 120px rgba(2, 6, 23, 0.12);
+}
+
+html.dark .allocation-card:hover {
+  border-color: rgba(42, 169, 255, 0.35);
+  box-shadow: 0 0 0 1px rgba(42, 169, 255, 0.22) inset, 0 30px 120px rgba(2, 6, 23, 0.6);
+}
+
+.allocation-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(90% 80% at 0% 0%, rgba(255, 255, 255, 0.08), transparent 55%),
+    radial-gradient(70% 60% at 100% 0%, rgba(6, 236, 163, 0.08), transparent 60%);
+  opacity: 0.6;
+}
+
+.allocation-card > * {
+  position: relative;
+}
+
+.allocation-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.allocation-icon {
+  height: 44px;
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    radial-gradient(130% 130% at 30% 20%, rgba(42, 169, 255, 0.2), rgba(255, 255, 255, 0.06)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0));
+  box-shadow: 0 0 0 1px rgba(2, 6, 23, 0.18) inset, 0 14px 40px rgba(2, 6, 23, 0.25);
+  color: rgba(226, 232, 240, 0.78);
+}
+
+html:not(.dark) .allocation-icon {
+  border-color: rgba(15, 23, 42, 0.12);
+  background:
+    radial-gradient(120% 120% at 30% 20%, rgba(42, 169, 255, 0.16), rgba(255, 255, 255, 0.9)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(241, 245, 249, 0.8));
+  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.08) inset, 0 10px 26px rgba(2, 6, 23, 0.08);
+  color: rgba(15, 23, 42, 0.65);
+}
+
+.allocation-iconSvg {
+  height: 18px;
+  width: 18px;
+}
+
+.allocation-iconSvg path,
+.allocation-iconSvg circle {
+  vector-effect: non-scaling-stroke;
+}
+
+.allocation-pct {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0;
+  letter-spacing: -0.01em;
+}
+
+.allocation-pctValue {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+html:not(.dark) .allocation-pctValue {
+  color: rgba(15, 23, 42, 0.9);
+}
+
+.allocation-pctUnit {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.55);
+  margin-left: 1px;
+}
+
+html:not(.dark) .allocation-pctUnit {
+  color: rgba(15, 23, 42, 0.45);
+}
+
+.allocation-title {
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0 0 0.25rem;
+}
+
+html:not(.dark) .allocation-title {
+  color: rgba(15, 23, 42, 0.92);
+}
+
+.allocation-subtitle {
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0 0 0.65rem;
+}
+
+html:not(.dark) .allocation-subtitle {
+  color: rgba(15, 23, 42, 0.6);
+}
+
+.allocation-note {
+  font-size: 13px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 0.75rem;
+}
+
+html:not(.dark) .allocation-note {
+  color: rgba(15, 23, 42, 0.7);
+}
+
+.allocation-buyback {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(6, 236, 163, 0.22);
+  background: rgba(6, 236, 163, 0.12);
+  color: rgba(209, 250, 229, 0.92);
+  box-shadow: 0 0 0 1px rgba(6, 236, 163, 0.08) inset, 0 16px 60px rgba(2, 6, 23, 0.35);
+  margin: 0 0 0.85rem;
+}
+
+html:not(.dark) .allocation-buyback {
+  color: rgba(6, 95, 70, 0.95);
+  background: rgba(6, 236, 163, 0.14);
+  border-color: rgba(16, 185, 129, 0.25);
+  box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.08) inset, 0 10px 30px rgba(2, 6, 23, 0.08);
+}
+
+.allocation-buybackEmoji {
+  font-size: 13px;
+  line-height: 1;
+}
+
+.allocation-buybackText {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0.95;
+}
+
+.allocation-buybackDate {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.allocation-buyback--compact {
+  margin: 0.75rem 0 0;
+}
+
+.allocation-calc {
+  margin-top: 0.9rem;
+  margin-bottom: 0.9rem;
+  padding: 0.9rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+html:not(.dark) .allocation-calc {
+  border-color: rgba(15, 23, 42, 0.1);
+  background: rgba(15, 23, 42, 0.03);
+}
+
+.allocation-calc--buyback {
+  border-color: rgba(6, 236, 163, 0.2);
+  background: radial-gradient(120% 140% at 20% 0%, rgba(6, 236, 163, 0.12), transparent 55%),
+    rgba(6, 236, 163, 0.05);
+}
+
+.allocation-calc--liquidity {
+  border-color: rgba(42, 169, 255, 0.2);
+  background: radial-gradient(120% 140% at 20% 0%, rgba(42, 169, 255, 0.12), transparent 55%),
+    rgba(42, 169, 255, 0.05);
+}
+
+.allocation-calcFormula {
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 0.35rem;
+}
+
+html:not(.dark) .allocation-calcFormula {
+  color: rgba(15, 23, 42, 0.65);
+}
+
+.allocation-calcMath {
+  font-size: 13px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+html:not(.dark) .allocation-calcMath {
+  color: rgba(15, 23, 42, 0.8);
+}
+
+.allocation-calcValue {
+  font-weight: 750;
+}
+
+.allocation-calcValue--buyback {
+  color: rgba(6, 236, 163, 0.95);
+}
+
+.allocation-calcValue--liquidity {
+  color: rgba(42, 169, 255, 0.95);
+}
+
+.allocation-calcFooter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.allocation-calcMeta {
+  margin-top: 0.55rem;
+  padding: 0.65rem 0.8rem;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.025);
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+html:not(.dark) .allocation-calcMeta {
+  border-color: rgba(15, 23, 42, 0.1);
+  background: rgba(15, 23, 42, 0.02);
+  color: rgba(15, 23, 42, 0.62);
+}
+
+.allocation-calcMetaLine {
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+
+.allocation-calcEmpty {
+  margin-top: 0.25rem;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+html:not(.dark) .allocation-calcEmpty {
+  color: rgba(15, 23, 42, 0.55);
+}
+
+.allocation-schedule {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(42, 169, 255, 0.22);
+  background: rgba(42, 169, 255, 0.12);
+  color: rgba(186, 230, 253, 0.95);
+  box-shadow: 0 0 0 1px rgba(42, 169, 255, 0.08) inset, 0 16px 60px rgba(2, 6, 23, 0.35);
+  margin: 0.75rem 0 0;
+}
+
+html:not(.dark) .allocation-schedule {
+  color: rgba(3, 105, 161, 0.95);
+  background: rgba(42, 169, 255, 0.14);
+  border-color: rgba(2, 132, 199, 0.25);
+  box-shadow: 0 0 0 1px rgba(2, 132, 199, 0.08) inset, 0 10px 30px rgba(2, 6, 23, 0.08);
+}
+
+.allocation-scheduleIcon {
+  opacity: 0.95;
+}
+
+.allocation-scheduleText,
+.allocation-scheduleNext {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.allocation-scheduleSep {
+  opacity: 0.7;
+}
+
+.allocation-scheduleDate {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Allocation donut chart */
+.allocation-chart {
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: radial-gradient(120% 120% at 0% 0%, rgba(42, 169, 255, 0.12), transparent 55%),
+    rgba(255, 255, 255, 0.03);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+}
+
+html:not(.dark) .allocation-chart {
+  border-color: rgba(15, 23, 42, 0.1);
+  background: radial-gradient(120% 120% at 0% 0%, rgba(42, 169, 255, 0.1), transparent 55%),
+    rgba(15, 23, 42, 0.02);
+  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.04) inset;
+}
+
+.allocation-chartInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .allocation-chartInner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.75rem;
+    padding: 1.5rem;
+  }
+}
+
+.allocation-chartSvgWrap {
+  flex: none;
+}
+
+.allocation-chartLegend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.allocation-chartLegendItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.allocation-chartLegendDot {
+  margin-top: 0.35rem;
+  height: 10px;
+  width: 10px;
+  flex: none;
+  border-radius: 999px;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.06);
+}
+
+html:not(.dark) .allocation-chartLegendDot {
+  box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.06);
+}
+
+.allocation-chartLegendText {
+  font-size: 13.5px;
+  line-height: 1.45;
+  font-weight: 650;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+html:not(.dark) .allocation-chartLegendText {
+  color: rgba(15, 23, 42, 0.86);
+}
+
+.allocation-calcHint {
+  margin-top: 0.65rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+html:not(.dark) .allocation-calcHint {
+  color: rgba(15, 23, 42, 0.6);
+}
+
+.allocation-calcHintIcon {
+  opacity: 0.9;
+}
+
+.allocation-positioning {
+  font-size: 13px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.78);
+  margin: 0 0 0.8rem;
+}
+
+html:not(.dark) .allocation-positioning {
+  color: rgba(15, 23, 42, 0.7);
+}
+
+.allocation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.allocation-calc + .allocation-list {
+  margin-top: 0.2rem;
+}
+
+.allocation-listItem {
+  display: flex;
+  gap: 10px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+html:not(.dark) .allocation-listItem {
+  color: rgba(15, 23, 42, 0.74);
+}
+
+.allocation-bullet {
+  width: 6px;
+  height: 6px;
+  margin-top: 0.55rem;
+  flex: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+html:not(.dark) .allocation-bullet {
+  background: rgba(15, 23, 42, 0.25);
+}
+
+.allocation-bullet--amber {
+  background: rgba(251, 191, 36, 0.85);
+}
+
+.allocation-bullet--neutral {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+html:not(.dark) .allocation-bullet--neutral {
+  background: rgba(15, 23, 42, 0.22);
+}
+
+.allocation-meta {
+  margin: 0 0 0.9rem;
+}
+
+.allocation-metaTitle {
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 0.55rem;
+}
+
+html:not(.dark) .allocation-metaTitle {
+  color: rgba(15, 23, 42, 0.85);
+}
+
+.allocation-metaList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.allocation-metaItem {
+  display: flex;
+  gap: 10px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+html:not(.dark) .allocation-metaItem {
+  color: rgba(15, 23, 42, 0.7);
+}
+
+.allocation-principle {
+  margin: auto 0 0.9rem;
+  padding: 0.75rem 0.85rem;
+  border-radius: 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+html:not(.dark) .allocation-principle {
+  border-color: rgba(15, 23, 42, 0.1);
+  background: rgba(15, 23, 42, 0.03);
+  color: rgba(15, 23, 42, 0.66);
+}
+
+.allocation-constraints {
+  margin-top: 0.4rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+html.dark .allocation-constraints {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
 /* Hide scrollbar for quick nav */
 .scrollbar-hide {
   -ms-overflow-style: none;
@@ -12,4 +578,3 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
-
