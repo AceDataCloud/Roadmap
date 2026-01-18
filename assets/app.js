@@ -573,6 +573,7 @@
     const sections = [
       { label: 'Overview', href: '#overview' },
       { label: data?.what_building ? 'What We Build' : null, href: '#what-building' },
+      { label: data?.ace_token ? 'ACE Token' : null, href: '#ace-token' },
       { label: data?.founder ? 'Founding Team' : null, href: '#founding-team' },
       { label: 'Principles', href: '#guiding-principles' },
       { label: data?.revenue ? 'Revenue' : null, href: '#revenue' },
@@ -661,6 +662,99 @@
     grid.appendChild(left);
     grid.appendChild(right);
     wrap.appendChild(grid);
+    return wrap;
+  }
+
+  function renderAceToken(data) {
+    const cfg = data?.ace_token;
+    if (!cfg) return null;
+
+    const wrap = sectionShell(cfg.title || '$ACE Token', cfg.subtitle || 'Token overview and links.', 'ace-token');
+
+    const card = el('div', { class: `${CARD_CLASS} ace-tokenCard` });
+
+    const body = el('div', { class: 'ace-tokenBody' });
+    for (const p of cfg.paragraphs || []) {
+      body.appendChild(el('p', { class: 'text-sm leading-relaxed text-slate-700 dark:text-white/90 sm:text-base' }, p));
+    }
+    if (body.childNodes.length) card.appendChild(body);
+
+    const howUsed = Array.isArray(cfg.how_used) ? cfg.how_used.map((x) => safeText(x)).filter(Boolean).slice(0, 12) : [];
+    if (howUsed.length) {
+      const title = safeText(cfg.how_used_title) || 'How ACE is used';
+      const subtitle = safeText(cfg.how_used_subtitle);
+      const header = el('div', { class: 'ace-tokenUseHeader' }, [
+        el('div', { class: 'ace-tokenUseTitle' }, title),
+        subtitle ? el('div', { class: 'ace-tokenUseSubtitle' }, subtitle) : null
+      ].filter(Boolean));
+
+      const grid = el('div', { class: 'ace-tokenUseGrid' });
+      for (const item of howUsed) {
+        grid.appendChild(
+          el('div', { class: 'ace-tokenUseItem' }, [
+            el('span', { class: 'ace-tokenUseDot', 'aria-hidden': 'true' }),
+            el('div', { class: 'ace-tokenUseText' }, item)
+          ])
+        );
+      }
+
+      card.appendChild(header);
+      card.appendChild(grid);
+    }
+
+    if (cfg.contract_address) {
+      const copyBtn = el(
+        'button',
+        {
+          type: 'button',
+          class: 'ace-tokenCopyBtn',
+          onclick: async () => {
+            const value = safeText(cfg.contract_address);
+            if (!value) return;
+            try {
+              await navigator.clipboard.writeText(value);
+              copyBtn.textContent = 'Copied';
+              setTimeout(() => (copyBtn.textContent = 'Copy'), 1100);
+            } catch (_err) {
+              copyBtn.textContent = 'Copy failed';
+              setTimeout(() => (copyBtn.textContent = 'Copy'), 1100);
+            }
+          }
+        },
+        'Copy'
+      );
+
+      const ca = el('div', { class: 'ace-tokenCA' }, [
+        el('div', { class: 'ace-tokenCALabel' }, 'Contract address'),
+        el('div', { class: 'ace-tokenCARow' }, [
+          el('div', { class: 'ace-tokenCAValue' }, safeText(cfg.contract_address)),
+          copyBtn
+        ])
+      ]);
+      card.appendChild(ca);
+    }
+
+    const links = Array.isArray(cfg.links) ? cfg.links : [];
+    if (links.length) {
+      const linkGrid = el('div', { class: 'ace-tokenLinks' });
+      links.slice(0, 8).forEach((link, idx) => {
+        const isPrimary = idx === 0;
+        linkGrid.appendChild(
+          el(
+            'a',
+            {
+              class: `ace-tokenLink ${isPrimary ? 'ace-tokenLink--primary' : ''}`.trim(),
+              href: link.href,
+              ...(link.new_tab ? { target: '_blank', rel: 'noreferrer' } : {})
+            },
+            link.label
+          )
+        );
+      });
+      card.appendChild(linkGrid);
+    }
+
+    wrap.appendChild(card);
     return wrap;
   }
 
@@ -2159,6 +2253,8 @@
     app.appendChild(renderOverview(data));
     const whatBuilding = renderWhatBuilding(data);
     if (whatBuilding) app.appendChild(whatBuilding);
+    const aceToken = renderAceToken(data);
+    if (aceToken) app.appendChild(aceToken);
     const founder = renderFounder(data);
     if (founder) app.appendChild(founder);
     app.appendChild(renderPrinciples(data));

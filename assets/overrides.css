@@ -936,6 +936,274 @@ html:not(.dark) .buyback-txNote {
   color: rgba(15, 23, 42, 0.62);
 }
 
+/* ACE token section */
+.ace-tokenCard {
+  position: relative;
+  overflow: hidden;
+}
+
+.ace-tokenCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(90% 120% at 0% 0%, rgba(42, 169, 255, 0.14), transparent 55%),
+    radial-gradient(90% 120% at 100% 0%, rgba(6, 236, 163, 0.12), transparent 55%);
+  opacity: 0.9;
+}
+
+.ace-tokenCard > * {
+  position: relative;
+}
+
+.ace-tokenCA {
+  margin-top: 14px;
+  border-radius: 1.25rem;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    radial-gradient(110% 120% at 20% 0%, rgba(6, 236, 163, 0.2), transparent 60%),
+    radial-gradient(110% 120% at 80% 0%, rgba(42, 169, 255, 0.18), transparent 60%),
+    rgba(255, 255, 255, 0.035);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05) inset, 0 22px 90px rgba(2, 6, 23, 0.45);
+}
+
+html:not(.dark) .ace-tokenCA {
+  border-color: rgba(15, 23, 42, 0.1);
+  background:
+    radial-gradient(110% 120% at 20% 0%, rgba(6, 236, 163, 0.16), transparent 60%),
+    radial-gradient(110% 120% at 80% 0%, rgba(42, 169, 255, 0.14), transparent 60%),
+    rgba(15, 23, 42, 0.02);
+  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.05) inset, 0 18px 70px rgba(2, 6, 23, 0.08);
+}
+
+.ace-tokenCALabel {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(226, 232, 240, 0.72);
+}
+
+html:not(.dark) .ace-tokenCALabel {
+  color: rgba(15, 23, 42, 0.55);
+}
+
+.ace-tokenCARow {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ace-tokenCAValue {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  font-size: 13px;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.95);
+  word-break: break-all;
+}
+
+html:not(.dark) .ace-tokenCAValue {
+  color: rgba(15, 23, 42, 0.92);
+}
+
+.ace-tokenCopyBtn {
+  flex: none;
+  display: inline-flex;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05) inset, 0 16px 60px rgba(2, 6, 23, 0.35);
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+html:not(.dark) .ace-tokenCopyBtn {
+  border-color: rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.85);
+  color: rgba(15, 23, 42, 0.8);
+  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.05) inset, 0 12px 30px rgba(2, 6, 23, 0.08);
+}
+
+.ace-tokenCopyBtn:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(42, 169, 255, 0.28);
+}
+
+.ace-tokenLinks {
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+@media (min-width: 640px) {
+  .ace-tokenLinks {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .ace-tokenLinks {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.ace-tokenLink {
+  display: inline-flex;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04) inset, 0 18px 70px rgba(2, 6, 23, 0.35);
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+html:not(.dark) .ace-tokenLink {
+  border-color: rgba(15, 23, 42, 0.12);
+  background: rgba(15, 23, 42, 0.03);
+  color: rgba(15, 23, 42, 0.85);
+  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.05) inset, 0 16px 60px rgba(2, 6, 23, 0.07);
+}
+
+.ace-tokenLink--primary {
+  border-color: rgba(6, 236, 163, 0.24);
+  background: linear-gradient(90deg, rgba(6, 236, 163, 0.95), rgba(42, 169, 255, 0.95));
+  color: rgba(2, 6, 23, 0.92);
+  box-shadow: 0 0 0 1px rgba(6, 236, 163, 0.12) inset, 0 24px 90px rgba(2, 6, 23, 0.45);
+}
+
+html:not(.dark) .ace-tokenLink--primary {
+  color: rgba(2, 6, 23, 0.92);
+}
+
+.ace-tokenLink:hover {
+  transform: translateY(-1px);
+  border-color: rgba(42, 169, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+html:not(.dark) .ace-tokenLink:hover {
+  background: rgba(15, 23, 42, 0.05);
+}
+
+.ace-tokenLink--primary:hover {
+  background: linear-gradient(90deg, rgba(6, 236, 163, 0.9), rgba(42, 169, 255, 0.9));
+  border-color: rgba(6, 236, 163, 0.3);
+}
+
+.ace-tokenBody {
+  display: grid;
+  gap: 10px;
+}
+
+.ace-tokenUseHeader {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ace-tokenUseTitle {
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(226, 232, 240, 0.78);
+}
+
+html:not(.dark) .ace-tokenUseTitle {
+  color: rgba(15, 23, 42, 0.62);
+}
+
+.ace-tokenUseSubtitle {
+  font-size: 13px;
+  line-height: 1.45;
+  color: rgba(226, 232, 240, 0.7);
+}
+
+html:not(.dark) .ace-tokenUseSubtitle {
+  color: rgba(15, 23, 42, 0.6);
+}
+
+.ace-tokenUseGrid {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+@media (min-width: 640px) {
+  .ace-tokenUseGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .ace-tokenUseGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.ace-tokenUseItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 1.05rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px 14px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+}
+
+html:not(.dark) .ace-tokenUseItem {
+  border-color: rgba(15, 23, 42, 0.1);
+  background: rgba(15, 23, 42, 0.02);
+  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.05) inset;
+}
+
+.ace-tokenUseDot {
+  margin-top: 4px;
+  height: 10px;
+  width: 10px;
+  flex: none;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(6, 236, 163, 0.95), rgba(42, 169, 255, 0.95));
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.06);
+}
+
+html:not(.dark) .ace-tokenUseDot {
+  box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.06);
+}
+
+.ace-tokenUseText {
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 650;
+  color: rgba(226, 232, 240, 0.86);
+}
+
+html:not(.dark) .ace-tokenUseText {
+  color: rgba(15, 23, 42, 0.75);
+}
+
 /* Hide scrollbar for quick nav */
 .scrollbar-hide {
   -ms-overflow-style: none;
