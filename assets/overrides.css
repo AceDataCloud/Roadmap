@@ -569,6 +569,45 @@ html.dark .allocation-constraints {
   border-color: rgba(255, 255, 255, 0.08);
 }
 
+/* Buyback History cards */
+.buyback-txCard {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--stroke);
+  background:
+    radial-gradient(120% 120% at 0% 0%, rgba(6, 236, 163, 0.14), transparent 60%),
+    radial-gradient(90% 120% at 100% 0%, rgba(42, 169, 255, 0.14), transparent 55%),
+    linear-gradient(180deg, var(--cardA), var(--cardB));
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    background 160ms ease;
+}
+
+.buyback-txCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(70% 60% at 50% 0%, rgba(255, 255, 255, 0.18), transparent 55%);
+  opacity: 0.35;
+}
+
+.buyback-txCard > * {
+  position: relative;
+}
+
+.buyback-txCard:hover {
+  transform: translateY(-1px);
+  border-color: rgba(42, 169, 255, 0.35);
+  box-shadow: 0 0 0 1px rgba(42, 169, 255, 0.16) inset, 0 26px 90px rgba(2, 6, 23, 0.12);
+}
+
+html.dark .buyback-txCard:hover {
+  box-shadow: 0 0 0 1px rgba(42, 169, 255, 0.2) inset, 0 30px 110px rgba(2, 6, 23, 0.55);
+}
+
 /* Hide scrollbar for quick nav */
 .scrollbar-hide {
   -ms-overflow-style: none;

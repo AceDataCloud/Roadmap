@@ -2053,6 +2053,8 @@
     let data;
     let revenueSnapshot;
     let revenueLoadFailed = false;
+    let buybackHistoryDoc;
+    let buybackHistoryLoadFailed = false;
     let dailyUpdatesIndex;
     let dailyUpdatesSourceUrl;
     let dailyUpdatesLoadFailed = false;
@@ -2105,6 +2107,20 @@
       data.creator_fees.load_failed = creatorFeesLoadFailed;
     }
 
+    // Load buyback history (transaction feed)
+    try {
+      if (data?.buyback_history?.source) {
+        const bhr = await fetch(String(data.buyback_history.source), { cache: 'no-store' });
+        if (bhr.ok) buybackHistoryDoc = await bhr.json();
+        else buybackHistoryLoadFailed = true;
+      } else if (data?.buyback_history?.transactions) {
+        buybackHistoryDoc = data.buyback_history;
+      }
+    } catch (_err) {
+      buybackHistoryLoadFailed = true;
+      buybackHistoryDoc = undefined;
+    }
+
     if (data?.daily_updates) {
       dailyUpdatesIndex = {
         title: 'Daily Updates',
@@ -2153,6 +2169,10 @@
     if (capitalGovernance) app.appendChild(capitalGovernance);
     app.appendChild(renderPhases(data));
     app.appendChild(renderTokenFit(data));
+    if (data?.buyback_history) {
+      const merged = { ...(data.buyback_history || {}), ...(buybackHistoryDoc || {}) };
+      app.appendChild(renderBuybackHistory(merged, { load_failed: buybackHistoryLoadFailed }));
+    }
     if (dailyUpdatesIndex) app.appendChild(renderDailyUpdates(dailyUpdatesIndex, dailyUpdatesSourceUrl, { load_failed: dailyUpdatesLoadFailed }));
     app.appendChild(renderClosing(data));
     app.appendChild(renderFooter(data));
