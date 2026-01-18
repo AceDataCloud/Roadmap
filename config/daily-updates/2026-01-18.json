@@ -3,6 +3,21 @@
   "date": "2026-01-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#45",
+      "title": "Fix ephone API balance calculation for currency conversion in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "api",
+        "currency",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue with the ephone API where the balance was incorrectly displayed due to a change in the returned currency from RMB to USD. The calculation was updated to multiply the USD balance by 7 to convert it to RMB, ensuring accurate balance representation. Key changes were made in the balance.py file with minimal modifications, and thorough testing confirmed the fix."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#44",
       "title": "Streamline Balance Check by Removing ephone.chat in Backend 🚀",
       "tags": [
