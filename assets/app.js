@@ -1551,24 +1551,57 @@
     // Stats summary
     const totalUsd = transactions.reduce((sum, tx) => sum + (Number(tx.amount_usd) || 0), 0);
     const totalAce = transactions.reduce((sum, tx) => sum + (Number(tx.ace_bought) || 0), 0);
+    const avgUsd = transactions.length ? totalUsd / transactions.length : 0;
     
-    const statsGrid = el('div', { class: 'mb-6 grid gap-4 sm:grid-cols-3' });
-    
-    const statCard = (label, value, subtext) => {
-      const card = el('div', { class: 'rounded-2xl bg-slate-900/5 p-4 dark:bg-white/5' });
-      card.appendChild(el('div', { class: 'text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-white/60' }, label));
-      card.appendChild(el('div', { class: 'mt-1 font-display text-xl font-bold text-slate-900 dark:text-white' }, value));
-      if (subtext) card.appendChild(el('div', { class: 'mt-0.5 text-xs text-slate-600 dark:text-white/70' }, subtext));
-      return card;
+    const statsGrid = el('div', { class: 'buyback-stats' });
+
+    const statCard = ({ tone, icon, label, value, subtext }) => {
+      const iconWrap = el('div', { class: `buyback-statIcon buyback-statIcon--${tone}` });
+      if (ICONS[icon]) iconWrap.innerHTML = ICONS[icon]('buyback-statIconSvg');
+
+      return el('div', { class: `buyback-stat buyback-stat--${tone}` }, [
+        el('div', { class: 'buyback-statRow' }, [
+          iconWrap,
+          el('div', { class: 'buyback-statBody' }, [
+            el('div', { class: 'buyback-statLabel' }, label),
+            el('div', { class: 'buyback-statValue font-display' }, value),
+            subtext ? el('div', { class: 'buyback-statSub' }, subtext) : null
+          ].filter(Boolean))
+        ])
+      ]);
     };
-    
-    statsGrid.appendChild(statCard('Total Spent', `$${totalUsd.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, 'across all buybacks'));
-    statsGrid.appendChild(statCard('ACE Bought', totalAce.toLocaleString('en-US'), 'tokens acquired'));
-    statsGrid.appendChild(statCard('Transactions', transactions.length.toString(), 'on-chain records'));
+
+    statsGrid.appendChild(
+      statCard({
+        tone: 'emerald',
+        icon: 'cash',
+        label: 'Total spent',
+        value: `$${totalUsd.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
+        subtext: 'USD across all buybacks'
+      })
+    );
+    statsGrid.appendChild(
+      statCard({
+        tone: 'violet',
+        icon: 'spark',
+        label: 'ACE bought',
+        value: totalAce.toLocaleString('en-US', { maximumFractionDigits: 6 }),
+        subtext: 'tokens acquired'
+      })
+    );
+    statsGrid.appendChild(
+      statCard({
+        tone: 'blue',
+        icon: 'chart',
+        label: 'Avg / tx',
+        value: `$${avgUsd.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
+        subtext: `${transactions.length.toLocaleString('en-US')} transactions`
+      })
+    );
     shell.appendChild(statsGrid);
 
     // Transaction list
-    const list = el('div', { class: 'space-y-4' });
+    const list = el('div', { class: 'buyback-list' });
     
     for (const tx of transactions) {
       const txHash = safeText(tx.tx_hash);
@@ -1582,103 +1615,71 @@
       const sourcePct = tx.source_percentage != null ? Number(tx.source_percentage) : null;
       const fromLabel = safeText(tx.from_label);
       const fromAddress = safeText(tx.from_address);
-      const venue = safeText(tx.venue);
       const pair = safeText(tx.pair);
+      const note = safeText(tx.note);
 
       const txCard = el('a', {
         class:
-          'buyback-txCard block rounded-2xl bg-slate-900/5 p-4 shadow-ring hover:bg-slate-900/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-ace-blue/60 dark:bg-white/5 dark:hover:bg-white/10',
+          'buyback-txCard block focus:outline-none focus-visible:ring-2 focus-visible:ring-ace-blue/60',
         href: `https://solscan.io/tx/${txHash}`,
         target: '_blank',
         rel: 'noreferrer'
       });
 
-      // Header row: date + amount
-      const header = el('div', { class: 'flex items-start justify-between gap-4' });
-      
-      const left = el('div', {});
-      left.appendChild(el('div', { class: 'font-semibold text-slate-900 dark:text-white/95' }, occurredAt));
-      if (fromLabel || fromAddress) {
-        const fromText = fromLabel ? fromLabel : shortenAddress(fromAddress, { head: 6, tail: 6 });
-        left.appendChild(el('div', { class: 'mt-0.5 text-sm text-slate-600 dark:text-white/70' }, `From: ${fromText}`));
-      } else if (tx.period) {
-        left.appendChild(el('div', { class: 'mt-0.5 text-sm text-slate-600 dark:text-white/70' }, `Period: ${safeText(tx.period)}`));
-      }
-      header.appendChild(left);
+      const top = el('div', { class: 'buyback-txTop' });
 
-      const right = el('div', { class: 'text-right' });
-      right.appendChild(el('div', { class: 'font-display text-lg font-bold text-emerald-600 dark:text-emerald-400' }, 
-        `$${amountUsd.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
-      ));
+      const titleLeft = el('div', { class: 'buyback-txTitle' });
+      const txIcon = el('div', { class: 'buyback-txIcon' });
+      txIcon.innerHTML = ICONS.spark('buyback-txIconSvg');
+      titleLeft.appendChild(txIcon);
+
+      const titleText = el('div', { class: 'buyback-txTitleText' });
+      titleText.appendChild(el('div', { class: 'buyback-txWhen' }, occurredAt));
+      const fromText = fromLabel ? fromLabel : shortenAddress(fromAddress, { head: 6, tail: 6 });
+      if (fromText) titleText.appendChild(el('div', { class: 'buyback-txFrom' }, `From: ${fromText}`));
+      titleLeft.appendChild(titleText);
+      top.appendChild(titleLeft);
+
+      const amounts = el('div', { class: 'buyback-txAmounts' });
+      amounts.appendChild(
+        el(
+          'div',
+          { class: 'buyback-txUsd font-display' },
+          `$${amountUsd.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
+        )
+      );
       if (amountSol != null && Number.isFinite(amountSol) && amountSol > 0) {
-        right.appendChild(el('div', { class: 'text-xs text-slate-600 dark:text-white/70' }, `${amountSol} SOL`));
+        amounts.appendChild(el('div', { class: 'buyback-txSol' }, `${amountSol} SOL`));
       }
-      header.appendChild(right);
-      txCard.appendChild(header);
+      top.appendChild(amounts);
+
+      txCard.appendChild(top);
 
       // Details row
-      const details = el('div', { class: 'mt-3 flex flex-wrap gap-2' });
+      const details = el('div', { class: 'buyback-txMeta' });
       
       if (sourceLabel) {
         const label = sourcePct != null && Number.isFinite(sourcePct) ? `${sourceLabel} (${sourcePct}%)` : sourceLabel;
         details.appendChild(el('span', { 
-          class: 'rounded-full border border-blue-500/20 bg-blue-500/10 px-2.5 py-1 text-xs font-semibold text-blue-700 dark:text-blue-300' 
+          class: 'buyback-pill buyback-pill--blue' 
         }, label));
       }
 
-      if (venue) {
-        details.appendChild(
-          el(
-            'span',
-            { class: 'rounded-full border border-amber-500/20 bg-amber-500/10 px-2.5 py-1 text-xs font-semibold text-amber-700 dark:text-amber-300' },
-            venue
-          )
-        );
-      }
-
       if (pair) {
-        details.appendChild(
-          el(
-            'span',
-            { class: 'rounded-full border border-slate-900/10 bg-slate-900/5 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:border-white/15 dark:bg-white/5 dark:text-white/80' },
-            pair
-          )
-        );
+        details.appendChild(el('span', { class: 'buyback-pill buyback-pill--neutral' }, pair));
       }
 
       if (aceBought != null && Number.isFinite(aceBought) && aceBought > 0) {
         details.appendChild(el('span', { 
-          class: 'rounded-full border border-purple-500/20 bg-purple-500/10 px-2.5 py-1 text-xs font-semibold text-purple-700 dark:text-purple-300' 
+          class: 'buyback-pill buyback-pill--violet' 
         }, `${aceBought.toLocaleString('en-US')} ACE`));
       }
 
-      if (fromAddress) {
-        details.appendChild(
-          el(
-            'span',
-            {
-              class:
-                'rounded-full border border-slate-900/10 bg-slate-900/5 px-2.5 py-1 text-xs font-mono text-slate-600 dark:border-white/15 dark:bg-white/5 dark:text-white/70'
-            },
-            shortenAddress(fromAddress, { head: 8, tail: 8 })
-          )
-        );
-      }
-      
-      // Shortened tx hash
-      const shortHash = txHash ? `${txHash.slice(0, 8)}...${txHash.slice(-8)}` : '';
-      if (shortHash) {
-        details.appendChild(el('span', { 
-          class: 'rounded-full border border-slate-900/10 bg-slate-900/5 px-2.5 py-1 text-xs font-mono text-slate-600 dark:border-white/15 dark:bg-white/5 dark:text-white/70' 
-        }, shortHash));
-      }
-      
-      txCard.appendChild(details);
+      // Card already links to Solscan; avoid redundant address/hash pills.
 
-      // Note
-      if (tx.note) {
-        txCard.appendChild(el('div', { class: 'mt-3 text-sm text-slate-600 dark:text-white/70' }, tx.note));
-      }
+      if (details.childNodes.length) txCard.appendChild(details);
+
+      if (note) txCard.appendChild(el('div', { class: 'buyback-txNote' }, note));
 
       list.appendChild(txCard);
     }
@@ -2053,6 +2054,8 @@
     let data;
     let revenueSnapshot;
     let revenueLoadFailed = false;
+    let buybackHistoryDoc;
+    let buybackHistoryLoadFailed = false;
     let dailyUpdatesIndex;
     let dailyUpdatesSourceUrl;
     let dailyUpdatesLoadFailed = false;
@@ -2105,6 +2108,20 @@
       data.creator_fees.load_failed = creatorFeesLoadFailed;
     }
 
+    // Load buyback history (transaction feed)
+    try {
+      if (data?.buyback_history?.source) {
+        const bhr = await fetch(String(data.buyback_history.source), { cache: 'no-store' });
+        if (bhr.ok) buybackHistoryDoc = await bhr.json();
+        else buybackHistoryLoadFailed = true;
+      } else if (data?.buyback_history?.transactions) {
+        buybackHistoryDoc = data.buyback_history;
+      }
+    } catch (_err) {
+      buybackHistoryLoadFailed = true;
+      buybackHistoryDoc = undefined;
+    }
+
     if (data?.daily_updates) {
       dailyUpdatesIndex = {
         title: 'Daily Updates',
@@ -2153,6 +2170,10 @@
     if (capitalGovernance) app.appendChild(capitalGovernance);
     app.appendChild(renderPhases(data));
     app.appendChild(renderTokenFit(data));
+    if (data?.buyback_history) {
+      const merged = { ...(data.buyback_history || {}), ...(buybackHistoryDoc || {}) };
+      app.appendChild(renderBuybackHistory(merged, { load_failed: buybackHistoryLoadFailed }));
+    }
     if (dailyUpdatesIndex) app.appendChild(renderDailyUpdates(dailyUpdatesIndex, dailyUpdatesSourceUrl, { load_failed: dailyUpdatesLoadFailed }));
     app.appendChild(renderClosing(data));
     app.appendChild(renderFooter(data));
