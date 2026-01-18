@@ -569,15 +569,166 @@ html.dark .allocation-constraints {
   border-color: rgba(255, 255, 255, 0.08);
 }
 
-/* Buyback History cards */
+/* Buyback History */
+.buyback-stats {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+@media (min-width: 640px) {
+  .buyback-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .buyback-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.buyback-stat {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04) inset, 0 18px 70px rgba(2, 6, 23, 0.35);
+}
+
+html:not(.dark) .buyback-stat {
+  border-color: rgba(15, 23, 42, 0.1);
+  background: rgba(15, 23, 42, 0.03);
+  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.05) inset, 0 18px 70px rgba(2, 6, 23, 0.07);
+}
+
+.buyback-stat::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  pointer-events: none;
+  opacity: 0.5;
+  background: radial-gradient(120% 120% at 0% 0%, rgba(255, 255, 255, 0.06), transparent 55%);
+}
+
+.buyback-stat--emerald::before {
+  background: radial-gradient(120% 120% at 0% 0%, rgba(6, 236, 163, 0.18), transparent 55%);
+}
+
+.buyback-stat--violet::before {
+  background: radial-gradient(120% 120% at 0% 0%, rgba(139, 92, 246, 0.22), transparent 55%);
+}
+
+.buyback-stat--blue::before {
+  background: radial-gradient(120% 120% at 0% 0%, rgba(42, 169, 255, 0.2), transparent 55%);
+}
+
+.buyback-statRow {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.buyback-statIcon {
+  flex: none;
+  height: 44px;
+  width: 44px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 0 1px rgba(2, 6, 23, 0.25) inset, 0 14px 45px rgba(2, 6, 23, 0.35);
+  color: rgba(226, 232, 240, 0.85);
+}
+
+html:not(.dark) .buyback-statIcon {
+  border-color: rgba(15, 23, 42, 0.1);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.06) inset, 0 12px 30px rgba(2, 6, 23, 0.08);
+  color: rgba(15, 23, 42, 0.65);
+}
+
+.buyback-statIcon--emerald {
+  background:
+    radial-gradient(120% 120% at 30% 20%, rgba(6, 236, 163, 0.25), rgba(255, 255, 255, 0.06)),
+    rgba(255, 255, 255, 0.04);
+}
+
+.buyback-statIcon--violet {
+  background:
+    radial-gradient(120% 120% at 30% 20%, rgba(139, 92, 246, 0.28), rgba(255, 255, 255, 0.06)),
+    rgba(255, 255, 255, 0.04);
+}
+
+.buyback-statIcon--blue {
+  background:
+    radial-gradient(120% 120% at 30% 20%, rgba(42, 169, 255, 0.26), rgba(255, 255, 255, 0.06)),
+    rgba(255, 255, 255, 0.04);
+}
+
+.buyback-statIconSvg {
+  height: 18px;
+  width: 18px;
+}
+
+.buyback-statLabel {
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(226, 232, 240, 0.7);
+}
+
+html:not(.dark) .buyback-statLabel {
+  color: rgba(15, 23, 42, 0.55);
+}
+
+.buyback-statValue {
+  margin-top: 2px;
+  font-size: 22px;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+html:not(.dark) .buyback-statValue {
+  color: rgba(15, 23, 42, 0.9);
+}
+
+.buyback-statSub {
+  margin-top: 4px;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: rgba(226, 232, 240, 0.7);
+}
+
+html:not(.dark) .buyback-statSub {
+  color: rgba(15, 23, 42, 0.6);
+}
+
+.buyback-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .buyback-txCard {
   position: relative;
   overflow: hidden;
-  border: 1px solid var(--stroke);
+  border-radius: 1.25rem;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
   background:
-    radial-gradient(120% 120% at 0% 0%, rgba(6, 236, 163, 0.14), transparent 60%),
-    radial-gradient(90% 120% at 100% 0%, rgba(42, 169, 255, 0.14), transparent 55%),
-    linear-gradient(180deg, var(--cardA), var(--cardB));
+    radial-gradient(90% 110% at 0% 0%, rgba(42, 169, 255, 0.09), transparent 55%),
+    radial-gradient(90% 110% at 100% 0%, rgba(6, 236, 163, 0.08), transparent 55%),
+    rgba(255, 255, 255, 0.03);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04) inset, 0 18px 80px rgba(2, 6, 23, 0.35);
   transition:
     transform 160ms ease,
     border-color 160ms ease,
@@ -585,27 +736,204 @@ html.dark .allocation-constraints {
     background 160ms ease;
 }
 
-.buyback-txCard::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(70% 60% at 50% 0%, rgba(255, 255, 255, 0.18), transparent 55%);
-  opacity: 0.35;
-}
-
-.buyback-txCard > * {
-  position: relative;
+html:not(.dark) .buyback-txCard {
+  border-color: rgba(15, 23, 42, 0.1);
+  background:
+    radial-gradient(90% 120% at 0% 0%, rgba(42, 169, 255, 0.08), transparent 55%),
+    radial-gradient(90% 120% at 100% 0%, rgba(6, 236, 163, 0.06), transparent 55%),
+    rgba(15, 23, 42, 0.02);
+  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.05) inset, 0 16px 70px rgba(2, 6, 23, 0.07);
 }
 
 .buyback-txCard:hover {
   transform: translateY(-1px);
-  border-color: rgba(42, 169, 255, 0.35);
-  box-shadow: 0 0 0 1px rgba(42, 169, 255, 0.16) inset, 0 26px 90px rgba(2, 6, 23, 0.12);
+  border-color: rgba(42, 169, 255, 0.28);
+  box-shadow: 0 0 0 1px rgba(42, 169, 255, 0.12) inset, 0 26px 110px rgba(2, 6, 23, 0.45);
 }
 
-html.dark .buyback-txCard:hover {
-  box-shadow: 0 0 0 1px rgba(42, 169, 255, 0.2) inset, 0 30px 110px rgba(2, 6, 23, 0.55);
+html:not(.dark) .buyback-txCard:hover {
+  box-shadow: 0 0 0 1px rgba(42, 169, 255, 0.12) inset, 0 22px 90px rgba(2, 6, 23, 0.12);
+}
+
+.buyback-txTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.buyback-txTitle {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+}
+
+.buyback-txIcon {
+  height: 38px;
+  width: 38px;
+  flex: none;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    radial-gradient(120% 120% at 30% 20%, rgba(6, 236, 163, 0.2), rgba(255, 255, 255, 0.05)),
+    rgba(255, 255, 255, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(226, 232, 240, 0.85);
+}
+
+html:not(.dark) .buyback-txIcon {
+  border-color: rgba(15, 23, 42, 0.1);
+  background:
+    radial-gradient(120% 120% at 30% 20%, rgba(6, 236, 163, 0.16), rgba(255, 255, 255, 0.85)),
+    rgba(255, 255, 255, 0.8);
+  color: rgba(15, 23, 42, 0.6);
+}
+
+.buyback-txIconSvg {
+  height: 16px;
+  width: 16px;
+}
+
+.buyback-txWhen {
+  font-size: 14px;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+html:not(.dark) .buyback-txWhen {
+  color: rgba(15, 23, 42, 0.92);
+}
+
+.buyback-txFrom {
+  margin-top: 2px;
+  font-size: 12.5px;
+  line-height: 1.35;
+  color: rgba(226, 232, 240, 0.7);
+}
+
+html:not(.dark) .buyback-txFrom {
+  color: rgba(15, 23, 42, 0.6);
+}
+
+.buyback-txAmounts {
+  text-align: right;
+  flex: none;
+}
+
+.buyback-txUsd {
+  font-size: 18px;
+  font-weight: 850;
+  letter-spacing: -0.02em;
+  color: rgba(6, 236, 163, 0.95);
+}
+
+html:not(.dark) .buyback-txUsd {
+  color: rgba(6, 95, 70, 0.95);
+}
+
+.buyback-txSol {
+  margin-top: 2px;
+  font-size: 12px;
+  color: rgba(226, 232, 240, 0.65);
+}
+
+html:not(.dark) .buyback-txSol {
+  color: rgba(15, 23, 42, 0.55);
+}
+
+.buyback-txMeta {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.buyback-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(226, 232, 240, 0.82);
+}
+
+html:not(.dark) .buyback-pill {
+  border-color: rgba(15, 23, 42, 0.1);
+  background: rgba(15, 23, 42, 0.03);
+  color: rgba(15, 23, 42, 0.7);
+}
+
+.buyback-pill--blue {
+  border-color: rgba(42, 169, 255, 0.22);
+  background: rgba(42, 169, 255, 0.12);
+  color: rgba(186, 230, 253, 0.95);
+}
+
+html:not(.dark) .buyback-pill--blue {
+  border-color: rgba(2, 132, 199, 0.22);
+  background: rgba(42, 169, 255, 0.12);
+  color: rgba(3, 105, 161, 0.95);
+}
+
+.buyback-pill--amber {
+  border-color: rgba(245, 158, 11, 0.22);
+  background: rgba(245, 158, 11, 0.12);
+  color: rgba(253, 230, 138, 0.92);
+}
+
+html:not(.dark) .buyback-pill--amber {
+  border-color: rgba(217, 119, 6, 0.25);
+  background: rgba(245, 158, 11, 0.12);
+  color: rgba(146, 64, 14, 0.95);
+}
+
+.buyback-pill--violet {
+  border-color: rgba(139, 92, 246, 0.22);
+  background: rgba(139, 92, 246, 0.12);
+  color: rgba(221, 214, 254, 0.92);
+}
+
+html:not(.dark) .buyback-pill--violet {
+  border-color: rgba(124, 58, 237, 0.22);
+  background: rgba(139, 92, 246, 0.12);
+  color: rgba(91, 33, 182, 0.95);
+}
+
+.buyback-pill--neutral {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+html:not(.dark) .buyback-pill--neutral {
+  border-color: rgba(15, 23, 42, 0.12);
+  background: rgba(15, 23, 42, 0.03);
+}
+
+.buyback-pill--mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  font-weight: 650;
+  letter-spacing: 0;
+  opacity: 0.9;
+}
+
+.buyback-txNote {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: rgba(226, 232, 240, 0.72);
+}
+
+html:not(.dark) .buyback-txNote {
+  color: rgba(15, 23, 42, 0.62);
 }
 
 /* Hide scrollbar for quick nav */
