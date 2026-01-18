@@ -584,6 +584,7 @@
       { label: 'Q3', href: '#2026-q3' },
       { label: 'Q4', href: '#2026-q4' },
       { label: 'Token Fit', href: '#token-fit' },
+      { label: data?.buyback_history ? 'Buyback History' : null, href: '#buyback-history' },
       { label: data?.daily_updates ? 'Daily Updates' : null, href: '#daily-updates' }
     ];
 
@@ -952,7 +953,7 @@
       const pct = parsePercentValue(alloc.percentage);
       const sourceName = allocationInfo.sourceName || 'Revenue';
       const currency = allocationInfo.currency || 'USD';
-      const windowLabel = allocationInfo.windowLabel || 'Last 30d';
+      const windowLabel = allocationInfo.windowLabel || 'Last 30 days';
       const cadenceLabel = allocationInfo.cadenceLabel || (alloc.is_buyback ? 'Monthly' : 'Monthly');
       const nextDate = allocationInfo.nextDate || (alloc.is_buyback ? getEndOfMonthDate() : getEndOfMonthDate());
       const hasData = !!allocationInfo.hasData && Number.isFinite(Number(allocationInfo.baseAmount));
@@ -1115,42 +1116,42 @@
     const creatorFeesLiquidityInfo = data?.creator_fees ? {
       hasData: !!data.creator_fees.snapshot && Number.isFinite(Number(data.creator_fees.snapshot.last_30d_usd)),
       baseAmount: data.creator_fees.snapshot?.last_30d_usd,
-      windowLabel: 'Last 30d',
+      windowLabel: 'Last 30 days',
       sourceName: 'Creator Fees',
       currency: 'USD',
       cadenceLabel: 'Monthly allocation',
       nextDate: getEndOfMonthDate(),
       metaLines: [
-        'Happens once per month (end of month).',
-        'Calculated from rolling Creator Fees (last 30 days).'
+        'Occurs once per month (end of month).',
+        'Computed from the rolling 30-day Creator Fees total.'
       ]
     } : null;
 
     const creatorFeesBuybackInfo = data?.creator_fees ? {
       hasData: !!data.creator_fees.snapshot && Number.isFinite(Number(data.creator_fees.snapshot.last_7d_usd)),
       baseAmount: data.creator_fees.snapshot?.last_7d_usd,
-      windowLabel: 'Last 7d',
+      windowLabel: 'Last 7 days',
       sourceName: 'Creator Fees',
       currency: 'USD',
       cadenceLabel: 'Weekly buyback (Sun)',
       nextDate: getNextSundayDate(),
       metaLines: [
-        'Happens once per week (every Sunday).',
-        'Calculated from Creator Fees (last 7 days).'
+        'Occurs once per week (every Sunday).',
+        'Computed from the Creator Fees total over the last 7 days.'
       ]
     } : null;
 
     const revenueBuybackInfo = data?.revenue ? {
       hasData: !!data.revenue.snapshot && Number.isFinite(Number(data.revenue.snapshot.last_30d)),
       baseAmount: data.revenue.snapshot?.last_30d,
-      windowLabel: 'Last 30d',
+      windowLabel: 'Last 30 days',
       sourceName: 'Platform Revenue',
       currency: data.revenue.snapshot?.currency || 'USD',
       cadenceLabel: 'Monthly buyback',
       nextDate: getEndOfMonthDate(),
       metaLines: [
-        'Happens once per month (end of month).',
-        'Calculated from rolling Platform Revenue (last 30 days).'
+        'Occurs once per month (end of month).',
+        'Computed from the rolling 30-day Platform Revenue total.'
       ]
     } : null;
 
@@ -1319,6 +1320,26 @@
     const m = String(d.getUTCMonth() + 1).padStart(2, '0');
     const day = String(d.getUTCDate()).padStart(2, '0');
     return `${y}-${m}-${day}`;
+  }
+
+  function formatIsoDateTime(value) {
+    if (!value) return '';
+    const d = new Date(String(value));
+    if (Number.isNaN(d.getTime())) return String(value);
+    const y = d.getUTCFullYear();
+    const m = String(d.getUTCMonth() + 1).padStart(2, '0');
+    const day = String(d.getUTCDate()).padStart(2, '0');
+    const hh = String(d.getUTCHours()).padStart(2, '0');
+    const mm = String(d.getUTCMinutes()).padStart(2, '0');
+    const ss = String(d.getUTCSeconds()).padStart(2, '0');
+    return `${y}-${m}-${day} ${hh}:${mm}:${ss} UTC`;
+  }
+
+  function shortenAddress(address, { head = 4, tail = 4 } = {}) {
+    const raw = safeText(address).trim();
+    if (!raw) return '';
+    if (raw.length <= head + tail + 3) return raw;
+    return `${raw.slice(0, head)}…${raw.slice(-tail)}`;
   }
 
   function renderPhases(data) {
@@ -1507,7 +1528,18 @@
       return wrap;
     }
 
-    const transactions = data.transactions || [];
+    const transactionsRaw = Array.isArray(data.transactions) ? data.transactions : [];
+    const transactions = transactionsRaw
+      .filter((tx) => tx && typeof tx === 'object')
+      .slice()
+      .sort((a, b) => {
+        const aTime = new Date(String(a.occurred_at || a.date || '')).getTime();
+        const bTime = new Date(String(b.occurred_at || b.date || '')).getTime();
+        if (Number.isNaN(aTime) && Number.isNaN(bTime)) return 0;
+        if (Number.isNaN(aTime)) return 1;
+        if (Number.isNaN(bTime)) return -1;
+        return bTime - aTime;
+      });
     if (transactions.length === 0) {
       shell.appendChild(
         el('div', { class: 'text-sm text-slate-600 dark:text-white/70' }, 'No buyback transactions yet.')
@@ -1517,8 +1549,8 @@
     }
 
     // Stats summary
-    const totalUsd = transactions.reduce((sum, tx) => sum + (tx.amount_usd || 0), 0);
-    const totalAce = transactions.reduce((sum, tx) => sum + (tx.ace_bought || 0), 0);
+    const totalUsd = transactions.reduce((sum, tx) => sum + (Number(tx.amount_usd) || 0), 0);
+    const totalAce = transactions.reduce((sum, tx) => sum + (Number(tx.ace_bought) || 0), 0);
     
     const statsGrid = el('div', { class: 'mb-6 grid gap-4 sm:grid-cols-3' });
     
@@ -1539,9 +1571,24 @@
     const list = el('div', { class: 'space-y-4' });
     
     for (const tx of transactions) {
+      const txHash = safeText(tx.tx_hash);
+      if (!txHash) continue;
+
+      const occurredAt = tx.occurred_at ? formatIsoDateTime(tx.occurred_at) : safeText(tx.date);
+      const amountUsd = Number(tx.amount_usd) || 0;
+      const amountSol = tx.amount_sol != null ? Number(tx.amount_sol) : null;
+      const aceBought = tx.ace_bought != null ? Number(tx.ace_bought) : null;
+      const sourceLabel = safeText(tx.source);
+      const sourcePct = tx.source_percentage != null ? Number(tx.source_percentage) : null;
+      const fromLabel = safeText(tx.from_label);
+      const fromAddress = safeText(tx.from_address);
+      const venue = safeText(tx.venue);
+      const pair = safeText(tx.pair);
+
       const txCard = el('a', {
-        class: 'block rounded-2xl bg-slate-900/5 p-4 shadow-ring hover:bg-slate-900/10 dark:bg-white/5 dark:hover:bg-white/10',
-        href: `https://solscan.io/tx/${tx.tx_hash}`,
+        class:
+          'buyback-txCard block rounded-2xl bg-slate-900/5 p-4 shadow-ring hover:bg-slate-900/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-ace-blue/60 dark:bg-white/5 dark:hover:bg-white/10',
+        href: `https://solscan.io/tx/${txHash}`,
         target: '_blank',
         rel: 'noreferrer'
       });
@@ -1550,18 +1597,21 @@
       const header = el('div', { class: 'flex items-start justify-between gap-4' });
       
       const left = el('div', {});
-      left.appendChild(el('div', { class: 'font-semibold text-slate-900 dark:text-white/95' }, tx.date));
-      if (tx.period) {
-        left.appendChild(el('div', { class: 'mt-0.5 text-sm text-slate-600 dark:text-white/70' }, `Period: ${tx.period}`));
+      left.appendChild(el('div', { class: 'font-semibold text-slate-900 dark:text-white/95' }, occurredAt));
+      if (fromLabel || fromAddress) {
+        const fromText = fromLabel ? fromLabel : shortenAddress(fromAddress, { head: 6, tail: 6 });
+        left.appendChild(el('div', { class: 'mt-0.5 text-sm text-slate-600 dark:text-white/70' }, `From: ${fromText}`));
+      } else if (tx.period) {
+        left.appendChild(el('div', { class: 'mt-0.5 text-sm text-slate-600 dark:text-white/70' }, `Period: ${safeText(tx.period)}`));
       }
       header.appendChild(left);
 
       const right = el('div', { class: 'text-right' });
       right.appendChild(el('div', { class: 'font-display text-lg font-bold text-emerald-600 dark:text-emerald-400' }, 
-        `$${(tx.amount_usd || 0).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
+        `$${amountUsd.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
       ));
-      if (tx.amount_sol) {
-        right.appendChild(el('div', { class: 'text-xs text-slate-600 dark:text-white/70' }, `${tx.amount_sol} SOL`));
+      if (amountSol != null && Number.isFinite(amountSol) && amountSol > 0) {
+        right.appendChild(el('div', { class: 'text-xs text-slate-600 dark:text-white/70' }, `${amountSol} SOL`));
       }
       header.appendChild(right);
       txCard.appendChild(header);
@@ -1569,20 +1619,54 @@
       // Details row
       const details = el('div', { class: 'mt-3 flex flex-wrap gap-2' });
       
-      if (tx.source) {
+      if (sourceLabel) {
+        const label = sourcePct != null && Number.isFinite(sourcePct) ? `${sourceLabel} (${sourcePct}%)` : sourceLabel;
         details.appendChild(el('span', { 
           class: 'rounded-full border border-blue-500/20 bg-blue-500/10 px-2.5 py-1 text-xs font-semibold text-blue-700 dark:text-blue-300' 
-        }, `${tx.source} (${tx.source_percentage}%)`));
+        }, label));
       }
-      
-      if (tx.ace_bought) {
+
+      if (venue) {
+        details.appendChild(
+          el(
+            'span',
+            { class: 'rounded-full border border-amber-500/20 bg-amber-500/10 px-2.5 py-1 text-xs font-semibold text-amber-700 dark:text-amber-300' },
+            venue
+          )
+        );
+      }
+
+      if (pair) {
+        details.appendChild(
+          el(
+            'span',
+            { class: 'rounded-full border border-slate-900/10 bg-slate-900/5 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:border-white/15 dark:bg-white/5 dark:text-white/80' },
+            pair
+          )
+        );
+      }
+
+      if (aceBought != null && Number.isFinite(aceBought) && aceBought > 0) {
         details.appendChild(el('span', { 
           class: 'rounded-full border border-purple-500/20 bg-purple-500/10 px-2.5 py-1 text-xs font-semibold text-purple-700 dark:text-purple-300' 
-        }, `${tx.ace_bought.toLocaleString('en-US')} ACE`));
+        }, `${aceBought.toLocaleString('en-US')} ACE`));
+      }
+
+      if (fromAddress) {
+        details.appendChild(
+          el(
+            'span',
+            {
+              class:
+                'rounded-full border border-slate-900/10 bg-slate-900/5 px-2.5 py-1 text-xs font-mono text-slate-600 dark:border-white/15 dark:bg-white/5 dark:text-white/70'
+            },
+            shortenAddress(fromAddress, { head: 8, tail: 8 })
+          )
+        );
       }
       
       // Shortened tx hash
-      const shortHash = tx.tx_hash ? `${tx.tx_hash.slice(0, 8)}...${tx.tx_hash.slice(-8)}` : '';
+      const shortHash = txHash ? `${txHash.slice(0, 8)}...${txHash.slice(-8)}` : '';
       if (shortHash) {
         details.appendChild(el('span', { 
           class: 'rounded-full border border-slate-900/10 bg-slate-900/5 px-2.5 py-1 text-xs font-mono text-slate-600 dark:border-white/15 dark:bg-white/5 dark:text-white/70' 

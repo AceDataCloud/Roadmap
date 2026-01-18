@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://acedata.cloud/schemas/roadmap/buyback-history.schema.json",
+  "title": "Ace Data Cloud Roadmap Buyback History",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["title", "subtitle", "transactions"],
+  "properties": {
+    "title": { "type": "string", "minLength": 1 },
+    "subtitle": { "type": "string", "minLength": 1 },
+    "transactions": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/transaction" }
+    }
+  },
+  "$defs": {
+    "transaction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tx_hash", "occurred_at", "amount_usd", "ace_bought"],
+      "properties": {
+        "tx_hash": { "type": "string", "minLength": 32 },
+        "occurred_at": { "type": "string", "minLength": 10 },
+        "amount_usd": { "type": "number", "minimum": 0 },
+        "amount_sol": { "type": "number", "minimum": 0 },
+        "ace_bought": { "type": "number", "minimum": 0 },
+        "pair": { "type": "string" },
+        "venue": { "type": "string" },
+        "source": { "type": "string" },
+        "source_percentage": { "type": "number", "minimum": 0, "maximum": 100 },
+        "from_label": { "type": "string" },
+        "from_address": { "type": "string" },
+        "period": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    }
+  }
+}
+
