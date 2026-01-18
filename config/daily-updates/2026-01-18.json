@@ -1,0 +1,21 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-01-18",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#44",
+      "title": "Streamline Balance Check by Removing ephone.chat in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "refactor",
+        "performance",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "The balance check function has been simplified by removing the fallback to the `ephone.chat` domain, ensuring that only `ephone.ai` is used for balance retrieval. This change reduces the function's complexity, cutting down the code from 26 lines to 18 while maintaining functionality. The update enhances performance and clarity in the balance fetching process."
+    }
+  ]
+}
