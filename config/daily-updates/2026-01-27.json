@@ -1,0 +1,36 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-01-27",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#51",
+      "title": "Enhance veo resolution support in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "video",
+        "api",
+        "backend",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces enhanced support for video resolutions in the veo models, allowing for 1080p and gif outputs. Key modifications include updates to the API and documentation to reflect these changes. The adjustments improve the flexibility of video generation options for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#445",
+      "title": "Enhance veo video resolution support in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "video",
+        "enhancement",
+        "resolution",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces enhanced support for video resolution in the veo handler, allowing for 4K resolution options. Key modifications include updates to the core and veo video handler files, improving error handling for unsupported resolutions. These changes aim to provide a more robust video processing experience."
+    }
+  ]
+}
