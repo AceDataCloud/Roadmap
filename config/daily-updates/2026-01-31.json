@@ -3,6 +3,37 @@
   "date": "2026-01-31",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#53",
+      "title": "Enhance audio generation with new samples feature in Backend 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "audio",
+        "features",
+        "backend",
+        "documentation",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces a new 'samples' feature for audio generation, allowing users to create songs based on two reference tracks. Key modifications include updates to the API and documentation, enhancing the user experience with detailed instructions and example code. The OpenAPI specifications have also been updated to include new parameters for sample generation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#447",
+      "title": "Enhance Suno Functionality with Sample Additions in Platform Service 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "suno",
+        "audio",
+        "enhancement",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces new sample actions to the Suno audio processing functionality. Key modifications include the addition of 'ACTION_SAMPLES' in both the core and handler files, enabling enhanced audio manipulation capabilities. These changes aim to improve user experience by providing more options for audio generation."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#446",
       "title": "Exciting suno mashup feature added in Platform Service 🎉",
       "tags": [
