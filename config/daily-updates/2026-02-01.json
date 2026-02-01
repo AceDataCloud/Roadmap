@@ -1,0 +1,21 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-02-01",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#54",
+      "title": "Update Claude API Path for Consistency in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "backend",
+        "documentation",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update modifies the Claude API path from '/claude/chat/completions' to '/v1/chat/completions' across multiple files, including service mappings and documentation. The changes enhance clarity and ensure consistency in API usage. Additionally, the documentation has been updated to reflect these changes, providing developers with accurate examples."
+    }
+  ]
+}
