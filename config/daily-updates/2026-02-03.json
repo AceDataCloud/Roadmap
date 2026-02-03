@@ -1,0 +1,36 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-02-03",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#449",
+      "title": "Enhance audio upload error handling in Platform Service 🎧",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "audio",
+        "error-handling",
+        "logging",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update improves error handling for audio uploads in the Platform Service. Key changes include additional checks for audio processing status and enhanced logging for better debugging. The modifications aim to provide clearer feedback to users when uploads fail due to specific issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#448",
+      "title": "Enhance error handling for veo suno in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "improvement",
+        "logging",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update improves the error handling for the veo suno functionality by refining the response processing in the core.ts file. Key changes include extracting status and message from the upload response, allowing for more informative logging and specific error handling based on the response. This enhancement aims to provide clearer feedback in case of failures, improving overall user experience."
+    }
+  ]
+}
