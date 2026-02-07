@@ -1,0 +1,21 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-02-07",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#453",
+      "title": "Enhance Suno Callback Functionality in Platform Service 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "callback",
+        "suno",
+        "platform",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update modifies the Suno callback functionality by changing the parameter type from ISunoVideo to ISunoAudio. Additionally, it standardizes the timeout handling by replacing hardcoded values with a default timeout constant. These changes aim to improve the robustness and clarity of the code."
+    }
+  ]
+}
