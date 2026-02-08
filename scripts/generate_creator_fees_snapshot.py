@@ -6,11 +6,15 @@ The API returns time-bucketed data with cumulative and per-bucket creator fees.
 We calculate fees for last 1 day, 7 days, and 30 days by summing the creatorFeeSOL
 values within those time ranges, then convert to USD using CoinGecko SOL price.
 
+Supports multiple creator addresses (e.g. after wallet migration) and merges
+their fee data together.
+
 Usage:
     python scripts/generate_creator_fees_snapshot.py
 
 Environment variables (optional):
-    CREATOR_ADDRESS   - Solana wallet address (default: 6hVavSsYRaNk86UbNZa6V4JfSwqkRGk9HgYZqKNsdU1w)
+    CREATOR_ADDRESSES - Comma-separated Solana wallet addresses
+    CREATOR_ADDRESS   - Single address (legacy, used if CREATOR_ADDRESSES not set)
     OUTPUT_PATH       - Output JSON file path (default: config/creator_fees.json)
 """
 
@@ -24,6 +28,7 @@ from pathlib import Path
 from typing import Optional, Dict, List, Any, Union
 from urllib.request import urlopen, Request
 from urllib.error import URLError, HTTPError
+from loguru import logger
 
 
 def _default_output_path() -> Path:
@@ -51,7 +56,9 @@ def fetch_json(url: str, timeout: int = 30) -> Union[Dict[str, Any], List[Any]]:
     """Fetch JSON from a URL."""
     req = Request(url, headers={"User-Agent": "Mozilla/5.0 Roadmap/1.0"})
     with urlopen(req, timeout=timeout) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+        response_text = resp.read().decode("utf-8")
+        logger.debug(f"Fetched data from {url}: {response_text}...")
+        return json.loads(response_text)
 
 
 def fetch_sol_price_usd() -> float:
@@ -61,7 +68,7 @@ def fetch_sol_price_usd() -> float:
         data = fetch_json(url)
         return float(data["solana"]["usd"])
     except Exception as e:
-        print(
+        logger.warning(
             f"Warning: Failed to fetch SOL price from CoinGecko: {e}", file=sys.stderr
         )
         # Fallback price if API fails
@@ -81,7 +88,7 @@ def fetch_creator_fees(creator_address: str) -> List[Dict[str, Any]]:
     - cumulativeCreatorFeeSOL: total SOL to date
     """
     # Use 2h interval with 84 buckets = 7 days of data for accurate 24h and 7d calculation
-    url = f"https://swap-api.pump.fun/v1/creators/{creator_address}/fees?interval=2h&limit=84"
+    url = f"https://swap-api.pump.fun/v1/creators/{creator_address}/fees?interval=6h"
     return fetch_json(url)
 
 
@@ -181,31 +188,75 @@ def calculate_fees_for_periods(
     }
 
 
+def _get_creator_addresses() -> List[str]:
+    """Get list of creator addresses from env or defaults."""
+    multi = _env_str("CREATOR_ADDRESSES")
+    if multi:
+        return [a.strip() for a in multi.split(",") if a.strip()]
+    single = _env_str("CREATOR_ADDRESS")
+    if single:
+        return [single]
+    return [
+        "6hVavSsYRaNk86UbNZa6V4JfSwqkRGk9HgYZqKNsdU1w",
+        "CfP4JnzXicK9b8wcXHZyYKdgUpxRWRMc5bb93eh3PktG",
+    ]
+
+
+def _merge_fees(all_fees: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """Merge fee results from multiple addresses by summing all fields."""
+    merged = {
+        "last_1d_sol": 0.0,
+        "last_7d_sol": 0.0,
+        "last_30d_sol": 0.0,
+        "total_sol": 0.0,
+        "trades_1d": 0,
+        "trades_7d": 0,
+        "trades_30d": 0,
+    }
+    for fees in all_fees:
+        for key in merged:
+            merged[key] += fees[key]
+    # Round SOL values
+    for key in ("last_1d_sol", "last_7d_sol", "last_30d_sol", "total_sol"):
+        merged[key] = round(merged[key], 4)
+    return merged
+
+
 def main() -> int:
-    creator_address = _env_str(
-        "CREATOR_ADDRESS", "6hVavSsYRaNk86UbNZa6V4JfSwqkRGk9HgYZqKNsdU1w"
-    )
+    addresses = _get_creator_addresses()
     output_path = Path(_env_str("OUTPUT_PATH") or _default_output_path())
 
-    print(f"Fetching creator fees for {creator_address}...")
+    print(f"Fetching creator fees for {len(addresses)} address(es)...")
 
     try:
-        # Fetch hourly data for precise 24h and 7d
-        hourly_buckets = fetch_creator_fees(creator_address)
-        print(f"  Retrieved {len(hourly_buckets)} hourly buckets (2h interval)")
+        all_fees = []
+        for addr in addresses:
+            print(f"\n  [{addr[:8]}...{addr[-4:]}]")
 
-        # Fetch daily data for accurate 30d
-        daily_buckets = fetch_creator_fees_daily(creator_address)
-        print(f"  Retrieved {len(daily_buckets)} daily buckets (24h interval)")
+            hourly_buckets = fetch_creator_fees(addr)
+            print(f"    Retrieved {len(hourly_buckets)} hourly buckets")
 
-        # Calculate fees for each period
-        fees = calculate_fees_for_periods(hourly_buckets, daily_buckets)
-        print(f"  Last 24h: {fees['last_1d_sol']:.4f} SOL ({fees['trades_1d']} trades)")
-        print(f"  Last 7d: {fees['last_7d_sol']:.4f} SOL ({fees['trades_7d']} trades)")
+            daily_buckets = fetch_creator_fees_daily(addr)
+            print(f"    Retrieved {len(daily_buckets)} daily buckets")
+
+            fees = calculate_fees_for_periods(hourly_buckets, daily_buckets)
+            print(
+                f"    1d: {fees['last_1d_sol']:.4f} SOL  7d: {fees['last_7d_sol']:.4f} SOL  30d: {fees['last_30d_sol']:.4f} SOL  total: {fees['total_sol']:.4f} SOL"
+            )
+            all_fees.append(fees)
+
+        merged = _merge_fees(all_fees)
+        print("\n  Merged totals:")
         print(
-            f"  Last 30d: {fees['last_30d_sol']:.4f} SOL ({fees['trades_30d']} trades)"
+            f"    Last 24h: {merged['last_1d_sol']:.4f} SOL ({merged['trades_1d']} trades)"
         )
-        print(f"  Total: {fees['total_sol']:.4f} SOL")
+        print(
+            f"    Last 7d: {merged['last_7d_sol']:.4f} SOL ({merged['trades_7d']} trades)"
+        )
+        print(
+            f"    Last 30d: {merged['last_30d_sol']:.4f} SOL ({merged['trades_30d']} trades)"
+        )
+        print(f"    Total: {merged['total_sol']:.4f} SOL")
 
         # Fetch SOL price
         sol_price = fetch_sol_price_usd()
@@ -214,19 +265,19 @@ def main() -> int:
         # Build snapshot
         snapshot = {
             "as_of": datetime.now(timezone.utc).isoformat(),
-            "creator_address": creator_address,
+            "creator_addresses": addresses,
             "sol_price_usd": round(sol_price, 2),
-            "last_1d_sol": fees["last_1d_sol"],
-            "last_7d_sol": fees["last_7d_sol"],
-            "last_30d_sol": fees["last_30d_sol"],
-            "total_sol": fees["total_sol"],
-            "last_1d_usd": round(fees["last_1d_sol"] * sol_price, 2),
-            "last_7d_usd": round(fees["last_7d_sol"] * sol_price, 2),
-            "last_30d_usd": round(fees["last_30d_sol"] * sol_price, 2),
-            "total_usd": round(fees["total_sol"] * sol_price, 2),
-            "trades_1d": fees["trades_1d"],
-            "trades_7d": fees["trades_7d"],
-            "trades_30d": fees["trades_30d"],
+            "last_1d_sol": merged["last_1d_sol"],
+            "last_7d_sol": merged["last_7d_sol"],
+            "last_30d_sol": merged["last_30d_sol"],
+            "total_sol": merged["total_sol"],
+            "last_1d_usd": round(merged["last_1d_sol"] * sol_price, 2),
+            "last_7d_usd": round(merged["last_7d_sol"] * sol_price, 2),
+            "last_30d_usd": round(merged["last_30d_sol"] * sol_price, 2),
+            "total_usd": round(merged["total_sol"] * sol_price, 2),
+            "trades_1d": merged["trades_1d"],
+            "trades_7d": merged["trades_7d"],
+            "trades_30d": merged["trades_30d"],
         }
 
         # Write output
