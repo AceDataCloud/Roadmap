@@ -1,0 +1,22 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-02-06",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#452",
+      "title": "Enhance lyric prompt handling in Platform Service 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "lyrics",
+        "platform-service",
+        "client",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update improves the lyric prompt functionality by ensuring that when no prompt is provided, the system will automatically use the lyric prompt if available. Key changes include modifications to the core logic in the Client class, enhancing the user experience by streamlining how lyrics are processed. Overall, this leads to a more intuitive interaction with the platform's features."
+    }
+  ]
+}

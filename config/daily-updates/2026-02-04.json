@@ -1,0 +1,21 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-02-04",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#450",
+      "title": "Enhance error handling for Suno actions in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "suno",
+        "audio",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update improves the error handling in the Suno audio handler by adding a check for invalid actions. If an invalid action is detected, a BadRequestError is thrown, ensuring better feedback for users. The changes were made in both the OpenAIHK and TTAPI handlers."
+    }
+  ]
+}
