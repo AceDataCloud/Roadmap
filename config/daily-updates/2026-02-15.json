@@ -3,6 +3,68 @@
   "date": "2026-02-15",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Index#2",
+      "title": "Update API and Pricing Links in Index 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "update",
+        "api",
+        "pricing",
+        "instructions"
+      ],
+      "public": false,
+      "summary": "This update corrects the hash anchor links for API documentation and pricing in the generate-intro-page command. Additionally, it enhances the copilot instructions with new skills and quick commands for debugging API issues. These changes improve the clarity and usability of the documentation for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#14",
+      "title": "Enhance Pricing Tab Documentation in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "documentation",
+        "frontend",
+        "updates",
+        "design"
+      ],
+      "public": false,
+      "summary": "Updated the introduction design specification to include new pricing tab URL rules. Key changes include the addition of a '查看定价详情' row for the pricing tab and documentation for the tab switching mechanism using query parameters. A warning against using hash anchors was also included, ensuring clarity on navigation methods."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#60",
+      "title": "Enhance Service Pages with Pricing Links in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "update",
+        "pricing",
+        "navigation",
+        "backend",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update adds `?tab=pricing` links to all service introduction pages, improving user navigation to pricing details. Key changes include updated links for Claude, Midjourney, Nano Banana, Sora, Suno, and Veo, ensuring users can easily access pricing information directly from the service pages. Additionally, primary buttons for pricing details have been introduced alongside existing documentation links."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#59",
+      "title": "Updated Claude Code Pricing and Links in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "update",
+        "documentation",
+        "pricing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update modifies the pricing and URLs in the Claude Code introduction documentation. Key changes include an updated link for configuration tutorials and an increase in the number of Claude models mentioned. These adjustments aim to provide clearer information and better value for users."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#13",
       "title": "Enhance sticky tab menu and set default tab in Frontend Web 🎉",
       "tags": [
