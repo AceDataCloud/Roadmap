@@ -1,0 +1,307 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-02-15",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#18",
+      "title": "Add loguru dependency for creator fees snapshot in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "workflow",
+        "dependency",
+        "update",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/18",
+      "summary": "This update resolves a workflow failure caused by a missing loguru module during the creator fees snapshot generation. The installation of loguru version 0.7.3 has been added to the workflow, ensuring that the necessary dependency is available before executing the script. This change aligns with the versioning pattern used for other dependencies in the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#58",
+      "title": "Exciting New Nano Banana Service Introduction Page in Backend 🍌",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "feature",
+        "nano-banana",
+        "backend",
+        "ui"
+      ],
+      "public": false,
+      "summary": "We've added a comprehensive introduction page for the Nano Banana Service, which focuses on AI image generation. This new documentation includes sections on product features, usage scenarios, and a complete guide to getting started. The page is fully styled for dark mode and follows our standard design template."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#11",
+      "title": "Enhance Service Detail Page with Sticky Tabs and i18n Support in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "i18n",
+        "ui",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a sticky tab navigation feature for the service detail page, improving user experience during scrolling. Additionally, the tabs have been separated from the content card, and the outer padding of the intro pane has been removed. Importantly, a missing i18n introduction key has been added across all 18 locales, ensuring better localization support."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#10",
+      "title": "Unified Border-Radius and Spacing Adjustments in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "design",
+        "frontend",
+        "css",
+        "refactor"
+      ],
+      "public": false,
+      "summary": "This update standardizes the border-radius and spacing across the platform to align with the 4px grid system. Key changes include increasing the base border-radius values and adjusting various component margins and paddings to ensure consistency. These modifications enhance the overall visual coherence of the user interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#465",
+      "title": "Enhance error handling for Suno moderation issues in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "api",
+        "suno",
+        "moderation",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update improves error handling by returning a 403 ForbiddenError for specific Suno content moderation errors instead of 5xx server errors. Key methods like getSunoSongJob, uploadSunoAudio, generateSunoLyric, and getProducerJob have been updated to include these checks, ensuring a more accurate response for user input errors. This change enhances the reliability of the API and improves user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#9",
+      "title": "Enhance CI with Linting and Docker Builds in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ci",
+        "lint",
+        "docker",
+        "frontend",
+        "documentation",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces a new CI workflow for pull requests that includes ESLint, Prettier checks, and Docker builds. Additionally, significant documentation has been added to the introduction design page, enhancing clarity on design principles and templates. Various components have also been updated for improved styling and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#61",
+      "title": "Enhance CI with Linting and Docker Build in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "ci",
+        "lint",
+        "docker",
+        "tests",
+        "workflow"
+      ],
+      "public": false,
+      "summary": "This update introduces a new CI workflow for pull requests, incorporating lint checks using ruff, running tests with pytest, and building Docker images. Additionally, it addresses existing lint errors in the codebase, improving overall code quality and maintainability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#1",
+      "title": "Enhance CI with Linting and Docker Build in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "ci",
+        "lint",
+        "docker",
+        "workflow",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update introduces a new CI workflow for pull request checks, incorporating linting with Ruff and Docker image builds. Key additions include steps for checking code quality and ensuring proper formatting, which will help maintain code standards and streamline the development process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#1",
+      "title": "Enhance CI with Lint, Typecheck, Build, and Docker in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "ci",
+        "lint",
+        "docker",
+        "typecheck",
+        "build",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive CI workflow for pull requests targeting the main branch. Key features include linting with ESLint and Prettier, type checking with vue-tsc, and a full Docker image build, all designed to ensure code quality and streamline the development process. Additionally, concurrency control has been implemented to cancel outdated runs, enhancing efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#1",
+      "title": "Enhance CI with Linting and Docker Build in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "ci",
+        "docker",
+        "linting",
+        "workflow",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new CI workflow for pull requests to the main branch, featuring a lint job that utilizes ruff for code checks and formatting. Additionally, a Docker build job is included to streamline the image building process with caching. Concurrency control is implemented to ensure outdated runs are canceled, enhancing efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#463",
+      "title": "Streamlined Worker Dependencies in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cleanup",
+        "dependencies",
+        "security",
+        "npm",
+        "maintenance"
+      ],
+      "public": false,
+      "summary": "This update significantly cleans up the worker dependencies by removing over 130 unused packages across all 14 worker sub-projects. Additionally, package-lock.json files have been added to ensure consistent installations, and npm audit fixes have been applied to enhance security. The changes will improve performance and maintainability of the codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#56",
+      "title": "Resolve circular import issue in Backend 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "backend",
+        "import",
+        "stability"
+      ],
+      "public": false,
+      "summary": "This update fixes a build failure caused by a circular import in the distribution_history model. The import statement in `app/models/distribution_history.py` has been modified to directly import `Order` from its module, eliminating the circular dependency. This change enhances the stability of the application during static file collection."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#8",
+      "title": "Enhance Dark Mode with CSS Variables in Frontend Web 🌙",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dark-mode",
+        "css",
+        "frontend",
+        "vue",
+        "element-plus"
+      ],
+      "public": false,
+      "summary": "This update replaces hardcoded colors with Element Plus CSS variables to improve dark mode support across the application. Key files modified include the MarkdownRenderer and various Vue components, ensuring consistent styling based on the user's theme preference. The switch to 'github-markdown.css' enhances compatibility with CSS variables, leading to a more dynamic and responsive design."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#462",
+      "title": "Refactor error handling for Suno 429 in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "refactor",
+        "api",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update modifies the error handling for 429 responses from Suno upstream, reverting to return an ApiError (500) instead of a TooManyRequestsError (429). This change keeps the rate limiting details internal, enhancing user experience by avoiding exposure to rate limits. The code adjustments streamline error management within the Platform Service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#7",
+      "title": "Enhance Dark Mode Readability in Frontend Web 🌙",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dark-mode",
+        "ui",
+        "accessibility",
+        "frontend",
+        "improvements"
+      ],
+      "public": false,
+      "summary": "This update improves the readability of the dark mode on the document detail page by adjusting various UI elements. Key changes include replacing hardcoded colors with CSS variables for better consistency and accessibility, and implementing dark-mode-aware colors for charts and markdown rendering. These enhancements ensure a smoother user experience for those using dark mode."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#319",
+      "title": "Enhance Claude Action with Custom API Proxy in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "update",
+        "workflow",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/319",
+      "summary": "This update modifies the Claude action workflow to utilize a custom Anthropic base URL, specifically api.acedata.cloud, as a proxy. This change enhances the integration by ensuring more reliable API calls for the Claude Code Action. The workflow file has been updated accordingly to reflect this new environment variable."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#317",
+      "title": "Enhance PR Interactions with Claude Code in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "automation",
+        "github-actions",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/317",
+      "summary": "This update introduces the Claude Code GitHub Action, designed to respond to `@claude` mentions in PR comments and issues. The bot can understand the codebase, make necessary code changes, and push fixes, streamlining collaboration and enhancing responsiveness in the Nexior project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#6",
+      "title": "Enhanced Service List Page Size for Better Visibility in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "ui",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update increases the service list page size from 12 to 16, allowing users to view more services at once. Key modifications were made across several components, including adjustments to the layout and data handling in the service list. This change aims to improve user experience by providing quicker access to available services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#461",
+      "title": "Revert rate limiting error handling for better tracking in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "observability",
+        "tracking",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update reverts the handling of HTTP 429 status codes to maintain exposure of rate limiting errors as 5xx errors. The `TooManyRequestsError` has been removed, allowing these errors to fall through to the generic error handler. This change aligns with the team's goal of improving observability and tracking of upstream service errors."
+    }
+  ]
+}

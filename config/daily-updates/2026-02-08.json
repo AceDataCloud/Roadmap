@@ -1,0 +1,88 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-02-08",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#3",
+      "title": "Sync localStorage with THEME cookie to enhance dark mode experience in Frontend Web 🌟",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "darkmode",
+        "localstorage",
+        "cookies",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update synchronizes localStorage with the THEME cookie to prevent conflicts between user preferences and the browser's dark mode setting. Key changes were made in index.html, DarkSelector.vue, and initializer.ts to ensure that the vue-dark-switch respects the user's explicit choice. This enhancement improves the overall user experience by maintaining consistency in theme selection."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#316",
+      "title": "Enhance Dark Mode Experience in Nexior 🌙",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dark-mode",
+        "ui",
+        "enhancement",
+        "scss",
+        "vue"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/316",
+      "summary": "This update improves dark mode adaptation across various components in the Nexior application. Key changes include adjustments to styles in SCSS files and modifications to Vue components to ensure better visibility and aesthetics in dark mode. The overall user experience is enhanced, making it more visually appealing for users who prefer dark themes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#2",
+      "title": "Enhance Auth Redirect to Preserve Original URL in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "auth",
+        "redirect",
+        "frontend",
+        "fix",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update fixes the issue where users are redirected to the homepage after logging in instead of their intended page. Key changes include modifying the router guard to pass the target path as a redirect query parameter and ensuring proper encoding of URLs in the Login and Callback components. This ensures a smoother user experience by returning users to their original destination post-authentication."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#60",
+      "title": "Boosting Gateway Performance in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "performance",
+        "optimization",
+        "async",
+        "gateway",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update enhances the performance of the Gateway by optimizing various asynchronous functions and improving database connection settings. Key changes include the introduction of thread-sensitive async calls and adjustments to connection parameters, which are expected to improve response times and resource management. Overall, these modifications aim to provide a smoother user experience and better resource utilization."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#17",
+      "title": "Enhance Creator Fee Management in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "creator-fees",
+        "update",
+        "enhancement",
+        "script",
+        "config"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/17",
+      "summary": "This update addresses issues related to creator fees by modifying the configuration and the snapshot generation script. Key changes include support for multiple creator addresses and updated fee calculations, improving accuracy and usability. The enhancements will streamline fee management for creators on the platform."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-02-14",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#5",
+      "title": "Enhance Dark Mode and Navbar Colors in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dark-mode",
+        "navbar",
+        "frontend",
+        "css",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update simplifies the dark mode toggle by reducing the number of flags from four to two, improving runtime performance and persistence across subdomains. Additionally, it fixes the TopHeader navbar colors to ensure text visibility and replaces hardcoded colors with CSS variables for better consistency. These changes enhance the overall user experience in dark mode."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#458",
+      "title": "Enhance cqtai Handlers with getRecordMetadata in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "cqtai",
+        "handlers",
+        "metadata",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces the getRecordMetadata method across various cqtai handlers, including base, nano_banana, sora, and veo. This addition allows for the recording of key information such as model and action during usage tracking, aligning with the openaihk model. The changes enhance the functionality and consistency of the handlers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#4",
+      "title": "Streamline Buy Page by Removing Cost Estimation Section in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "enhancement",
+        "simplification"
+      ],
+      "public": false,
+      "summary": "The cost estimation section has been removed from the buy page, simplifying the user interface. This change enhances the overall purchasing experience by reducing clutter and focusing on essential information. The modification involved deleting 8 lines of code in the Buy.vue file."
+    }
+  ]
+}
