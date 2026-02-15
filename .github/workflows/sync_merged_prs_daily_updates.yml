@@ -55,6 +55,7 @@ jobs:
 
       - name: Generate creator fees snapshot
         run: |
+          pip install loguru
           python3 scripts/generate_creator_fees_snapshot.py
 
       - name: Commit and push
