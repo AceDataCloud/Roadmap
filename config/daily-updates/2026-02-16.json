@@ -3,6 +3,21 @@
   "date": "2026-02-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#467",
+      "title": "Fix missing artist_clip_id in Platform Service 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "ttapi",
+        "artist_consistency",
+        "payload"
+      ],
+      "public": false,
+      "summary": "This update adds the missing artist_clip_id field to the ttapi worker's artist_consistency request, which was causing upstream 400 errors. Other providers were correctly sending this field, and now ttapi aligns with them to ensure proper functionality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#61",
       "title": "Fix Veo API Cost Conditions in Backend 🚀",
       "tags": [
