@@ -3,6 +3,22 @@
   "date": "2026-02-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformDeployment#1",
+      "title": "Fix OpenClaw Helm Chart Issues in Platform Deployment 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformDeployment",
+        "helm",
+        "bugfix",
+        "deployment",
+        "openclaw",
+        "kubernetes"
+      ],
+      "public": false,
+      "summary": "This update addresses three key issues in the OpenClaw Helm chart: the command entry point has been corrected, the bind mode has been updated to 'lan', and the service template syntax has been fixed. The chart version has been incremented from 0.1.5 to 0.1.12, enhancing deployment reliability and functionality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#15",
       "title": "Hide Balance Columns for Deployment Apps in Frontend Web 🚀",
       "tags": [
