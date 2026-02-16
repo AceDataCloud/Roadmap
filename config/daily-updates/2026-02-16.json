@@ -3,6 +3,37 @@
   "date": "2026-02-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#16",
+      "title": "Enhance Deployment UI and Checkbox Alignment in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "frontend",
+        "fix",
+        "deployment",
+        "alignment"
+      ],
+      "public": false,
+      "summary": "This update hides the free amount display for Deployment-type services in the confirm dialog, improving clarity for users. Additionally, checkbox alignment has been refined by adjusting the flex settings, ensuring a more polished appearance in the UI."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformDeployment#2",
+      "title": "Fix broken template syntax in Platform Deployment 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformDeployment",
+        "bugfix",
+        "helm",
+        "yaml",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "The service.yaml template had incorrect Helm template delimiters, causing YAML parse errors and blocking deployment. This update corrects the delimiters and bumps the chart version to 0.1.1, ensuring successful deployments moving forward."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformDeployment#1",
       "title": "Fix OpenClaw Helm Chart Issues in Platform Deployment 🚀",
       "tags": [
