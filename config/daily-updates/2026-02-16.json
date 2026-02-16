@@ -1,0 +1,21 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-02-16",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#61",
+      "title": "Fix Veo API Cost Conditions in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "api",
+        "testing",
+        "cost"
+      ],
+      "public": false,
+      "summary": "This update corrects the action condition for the Veo API cost rules, changing it from 'generate' to include 'text2video' and 'image2video'. The cost file has been modified accordingly, and tests have been updated to reflect these changes, ensuring accurate credit deductions for video generation requests. Overall, this enhances the functionality and reliability of the API."
+    }
+  ]
+}
