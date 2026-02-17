@@ -3,6 +3,22 @@
   "date": "2026-02-17",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#68",
+      "title": "Fix deployment status metadata issues in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "backend",
+        "rbac",
+        "deployment",
+        "metadata"
+      ],
+      "public": false,
+      "summary": "This update addresses the corruption of deployment status metadata by implementing RBAC and ensuring that valid metadata is not overwritten by unreliable K8s responses. Key changes include modifications to the application view and the addition of a new RBAC deployment configuration. These improvements enhance the stability and reliability of deployment status management."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#12",
       "title": "Enhance API Call Methodology for Code Demos in Frontend Web 🚀",
       "tags": [
