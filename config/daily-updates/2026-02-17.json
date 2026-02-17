@@ -3,6 +3,38 @@
   "date": "2026-02-17",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#17",
+      "title": "Enhance Deployment UI with Auth URLs in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "deployment",
+        "update",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update modifies the IAccessUrl model and the Manage.vue component to utilize the new url_with_auth from the backend instead of the previous access_url+path. The changes improve the deployment UI by providing a more secure and streamlined way to access URLs. Overall, this enhances user experience and aligns the frontend with backend updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#66",
+      "title": "Enhance URL Preservation During Polling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "backend",
+        "polling",
+        "urls",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update fixes the polling loop and the deployment status endpoint to ensure that the `url_with_auth` from `access_urls` is preserved. Key modifications were made in the application view to maintain the integrity of the URLs during the deployment process, enhancing the reliability of the backend operations."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#65",
       "title": "Enhance Ingress Config with Auth Support in Backend 🚀",
       "tags": [
