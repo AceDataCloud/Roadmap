@@ -3,6 +3,21 @@
   "date": "2026-02-17",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#65",
+      "title": "Enhance Ingress Config with Auth Support in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "deployment",
+        "ingress",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces support for token-based authentication in ingress configurations by adding `auth_param` and `auth_env` fields. These changes allow for more flexible URL generation, enabling the inclusion of authentication tokens directly in the URL. The modifications enhance security and usability for deployments."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#64",
       "title": "Enhance Deployment with Auto Environment Support in Backend 🚀",
       "tags": [
