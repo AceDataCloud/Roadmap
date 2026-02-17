@@ -3,6 +3,22 @@
   "date": "2026-02-17",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#67",
+      "title": "Enhance Docker Image with Helm CLI for Deployment in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docker",
+        "helm",
+        "deployment",
+        "backend",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update adds the Helm CLI to the Docker image, resolving the 500 error encountered at the deployment-status endpoint due to a missing helm installation. Additionally, defensive checks have been implemented in the deployment.py file to warn if Helm is not available, ensuring smoother deployment operations."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#19",
       "title": "Streamline Deployment Manage Page in Frontend Web 🚀",
       "tags": [
