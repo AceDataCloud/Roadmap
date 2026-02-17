@@ -3,6 +3,22 @@
   "date": "2026-02-17",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#1",
+      "title": "Enhance CJK Font Support for WeChat in Wisdom 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "font",
+        "wine",
+        "wechat",
+        "docker",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update resolves the issue of blank text rendering in WeChat when running under Wine by adding CJK font aliases. The Dockerfile now includes a command to run `winetricks fakechinese`, ensuring that Windows Chinese font names are properly mapped to the installed Linux fonts. Additionally, a migration script in the entrypoint.sh file ensures existing pods are updated with the new font configuration."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#62",
       "title": "Launch OpenClaw Service Introduction Page in Backend 🚀",
       "tags": [
