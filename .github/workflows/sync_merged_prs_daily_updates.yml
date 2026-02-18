@@ -2,7 +2,7 @@ name: Sync merged PRs into daily updates
 
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "0 */2 * * *"
   workflow_dispatch: {}
 
 concurrency:
