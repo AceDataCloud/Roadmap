@@ -3,6 +3,40 @@
   "date": "2026-02-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/StatusPage#3",
+      "title": "Boosting Status Data Refresh Rate in Status Page 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "StatusPage",
+        "status",
+        "update",
+        "monitoring",
+        "workflow",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/StatusPage/pull/3",
+      "summary": "The status data update frequency has been increased from every 5 minutes to every 2 minutes, enhancing real-time service monitoring. This change tightens the cron schedule in the workflow configuration, significantly reducing data staleness from approximately 5 minutes to 3 minutes at worst. The frontend continues to poll every 60 seconds, ensuring timely updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/StatusPage#2",
+      "title": "Streamline Database Queries for Status Page in Status Page 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "StatusPage",
+        "feature",
+        "database",
+        "python",
+        "statuspage",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/StatusPage/pull/2",
+      "summary": "This update replaces API calls with a direct PostgreSQL query using a new Python script, significantly improving data retrieval efficiency. The change eliminates timeout issues that previously affected the PlatformBackend, ensuring more reliable status updates. Additionally, the workflow has been adjusted to run every five minutes instead of every minute."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Roadmap#20",
       "title": "Enhance Pages Deployment Trigger in Roadmap 🚀",
       "tags": [
