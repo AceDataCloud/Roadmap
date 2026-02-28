@@ -3,6 +3,22 @@
   "date": "2026-02-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Roadmap#20",
+      "title": "Enhance Pages Deployment Trigger in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "fix",
+        "workflow",
+        "deployment",
+        "github-actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/20",
+      "summary": "This update fixes the issue where the Revenue Snapshot and Creator Fees on the Roadmap website stopped updating due to a failure in triggering the Pages deployment workflow. By adding a workflow_run trigger to deploy_pages.yml, the deployment will now occur whenever the sync workflow completes successfully, ensuring timely updates. Additionally, a condition has been implemented to skip deployment if the sync workflow fails."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#321",
       "title": "Standardize CI Workflow File Naming in Nexior 🚀",
       "tags": [
