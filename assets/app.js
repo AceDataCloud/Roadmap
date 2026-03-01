@@ -650,6 +650,7 @@
       { label: data?.founder ? "Founding Team" : null, id: "founding-team" },
       { label: "Principles", id: "guiding-principles" },
       { label: data?.revenue ? "Revenue" : null, id: "revenue" },
+      { label: data?.recent_orders ? "Recent Orders" : null, id: "recent-orders" },
       { label: data?.creator_fees ? "Creator Fees" : null, id: "creator-fees" },
       {
         label: data?.capital_governance ? "Capital Governance" : null,
@@ -1247,6 +1248,152 @@
     }
 
     wrap.appendChild(grid);
+    if (asOf) {
+      wrap.appendChild(
+        el(
+          "div",
+          { class: "mt-6 text-xs text-slate-600 dark:text-white/80" },
+          `As of: ${asOf}`,
+        ),
+      );
+    }
+    return wrap;
+  }
+
+  function renderRecentOrders(data) {
+    if (!data?.recent_orders) return null;
+
+    const snapshot = data.recent_orders.snapshot;
+    const loadFailed = !!data.recent_orders.load_failed;
+    const currency = safeText(
+      snapshot?.currency || data.recent_orders.currency || "USD",
+    );
+    const asOf = snapshot?.as_of ? safeText(snapshot.as_of) : null;
+
+    const formatMoney = (value) => {
+      const num = Number(value);
+      if (!Number.isFinite(num)) return "—";
+      try {
+        return new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency,
+        }).format(num);
+      } catch (_err) {
+        return `${num.toFixed(2)} ${currency}`;
+      }
+    };
+
+    const formatDate = (iso) => {
+      if (!iso) return "—";
+      try {
+        const d = new Date(iso);
+        const mon = d.toLocaleString("en-US", { month: "short" });
+        const day = d.getDate();
+        const hh = String(d.getHours()).padStart(2, "0");
+        const mm = String(d.getMinutes()).padStart(2, "0");
+        return `${mon} ${day}, ${hh}:${mm}`;
+      } catch (_err) {
+        return String(iso).slice(0, 16);
+      }
+    };
+
+    const payIconClass = (way) => {
+      const map = {
+        Stripe: "orders-payIcon--stripe",
+        WechatPay: "orders-payIcon--wechat",
+        AliPay: "orders-payIcon--alipay",
+        X402: "orders-payIcon--x402",
+      };
+      return map[way] || "orders-payIcon--unknown";
+    };
+
+    const payLabel = (way) => {
+      const map = {
+        Stripe: "S",
+        WechatPay: "W",
+        AliPay: "A",
+        X402: "X",
+      };
+      return map[way] || "?";
+    };
+
+    const shortenId = (id) => {
+      if (!id || id.length <= 14) return id || "—";
+      return id.slice(0, 8) + "···" + id.slice(-4);
+    };
+
+    const wrap = sectionShell(
+      data.recent_orders.title,
+      data.recent_orders.subtitle,
+      "recent-orders",
+    );
+
+    if (loadFailed || !snapshot || !snapshot.orders?.length) {
+      wrap.appendChild(
+        el("div", { class: CARD_CLASS }, [
+          el(
+            "div",
+            {
+              class:
+                "rounded-2xl bg-slate-900/5 px-4 py-4 text-sm text-slate-700 shadow-ring dark:bg-white/5 dark:text-white/90",
+            },
+            "Recent orders unavailable right now.",
+          ),
+        ]),
+      );
+      return wrap;
+    }
+
+    const card = el("div", { class: CARD_CLASS.replace(/p-6 sm:p-7/g, "p-0") });
+    const list = el("div", { class: "orders-list" });
+
+    for (const order of snapshot.orders) {
+      const row = el("div", { class: "orders-row" });
+
+      // Payment icon
+      row.appendChild(
+        el(
+          "div",
+          { class: `orders-payIcon ${payIconClass(order.pay_way)}` },
+          payLabel(order.pay_way),
+        ),
+      );
+
+      // Body: description + meta
+      const body = el("div", { class: "orders-body" });
+      body.appendChild(
+        el(
+          "div",
+          { class: "orders-desc", title: order.description },
+          order.description || "—",
+        ),
+      );
+      const meta = el("div", { class: "orders-meta" });
+      meta.appendChild(el("span", {}, formatDate(order.created_at)));
+      meta.appendChild(el("span", { class: "orders-metaDot" }));
+      meta.appendChild(el("span", {}, order.pay_way || "Unknown"));
+      meta.appendChild(el("span", { class: "orders-metaDot" }));
+      meta.appendChild(
+        el(
+          "span",
+          { class: "orders-metaId", title: order.id },
+          shortenId(order.id),
+        ),
+      );
+      body.appendChild(meta);
+      row.appendChild(body);
+
+      // Amount
+      row.appendChild(
+        el("div", { class: "orders-amount" }, formatMoney(order.price)),
+      );
+
+      list.appendChild(row);
+    }
+
+    card.appendChild(list);
+    wrap.appendChild(card);
+
     if (asOf) {
       wrap.appendChild(
         el(
@@ -3190,6 +3337,26 @@
       data.revenue.load_failed = revenueLoadFailed;
     }
 
+    // Load recent orders snapshot
+    let recentOrdersSnapshot;
+    let recentOrdersLoadFailed = false;
+    try {
+      if (data?.recent_orders?.source) {
+        const ror = await fetch(String(data.recent_orders.source), {
+          cache: "no-store",
+        });
+        if (ror.ok) recentOrdersSnapshot = await ror.json();
+        else recentOrdersLoadFailed = true;
+      }
+    } catch (_err) {
+      recentOrdersLoadFailed = true;
+      recentOrdersSnapshot = undefined;
+    }
+    if (data?.recent_orders) {
+      data.recent_orders.snapshot = recentOrdersSnapshot;
+      data.recent_orders.load_failed = recentOrdersLoadFailed;
+    }
+
     // Load creator fees snapshot
     let creatorFeesSnapshot;
     let creatorFeesLoadFailed = false;
@@ -3271,6 +3438,8 @@
     app.appendChild(renderPrinciples(data));
     const revenue = renderRevenue(data);
     if (revenue) app.appendChild(revenue);
+    const recentOrders = renderRecentOrders(data);
+    if (recentOrders) app.appendChild(recentOrders);
     const creatorFees = renderCreatorFees(data);
     if (creatorFees) app.appendChild(creatorFees);
     const capitalGovernance = renderCapitalGovernance(data);
