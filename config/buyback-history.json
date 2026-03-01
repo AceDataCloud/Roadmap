@@ -4,6 +4,34 @@
   "subtitle": "On-chain buyback transactions — transparent, verifiable, and linked to Solscan.",
   "transactions": [
     {
+      "tx_hash": "3a4G7UQSfKhj8LxzM7LnCXxYJSkwhE4mL67KNU3izzkoyt7bGwZ9Qadf8qhmAx8uzYGyoARAVYePYPf7scCy7KLe",
+      "occurred_at": "2026-02-29T00:00:00Z",
+      "amount_usd": 5047,
+      "ace_bought": 0,
+      "pair": "WSOL → ACE",
+      "venue": "DFlow Aggregator v4",
+      "source": "Revenue",
+      "source_percentage": 100,
+      "period": "2026-02-29",
+      "from_label": "Buyback Wallet",
+      "from_address": "6hVavSsYRaNk86UbNZa6V4JfSwqkRGk9HgYZqKNsdU1w",
+      "note": "February revenue buyback (business date: 2/29). Amount of ACE purchased to be updated from on-chain data."
+    },
+    {
+      "tx_hash": "5nT1BAUFvTKXM1J9EcKirnY1p9sBetEPk1SsbQEihLeh5nqXcDoN5cAdx8PvksCt63MMSwmHhuRCtrjxy6mRAja6",
+      "occurred_at": "2026-02-29T00:00:00Z",
+      "amount_usd": 46,
+      "ace_bought": 0,
+      "pair": "WSOL → ACE",
+      "venue": "DFlow Aggregator v4",
+      "source": "Creator Fees",
+      "source_percentage": 5,
+      "period": "2026-02-29",
+      "from_label": "Buyback Wallet",
+      "from_address": "6hVavSsYRaNk86UbNZa6V4JfSwqkRGk9HgYZqKNsdU1w",
+      "note": "Weekly creator fee buyback (business date: 2/29). Amount of ACE purchased to be updated from on-chain data."
+    },
+    {
       "tx_hash": "X6aYcbLhwCVgV2g9QbX7JS8fEkinuAKiqeVRhD135UycEG3oiRQERvXLjMQmwKfcU5arA4imP1D1XaqNAmyBFtk",
       "occurred_at": "2026-02-23T18:47:42Z",
       "amount_usd": 92,
