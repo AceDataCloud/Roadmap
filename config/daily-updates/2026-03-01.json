@@ -3,6 +3,45 @@
   "date": "2026-03-01",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Roadmap#25",
+      "title": "Feat: add Recent Orders section to roadmap dashboard in Roadmap ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/25"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#26",
+      "title": "Update: mark Q1 2026 roadmap items completed/in-progress in Roadmap 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/26"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#24",
+      "title": "Enhance Theme Persistence with Local Storage in Roadmap 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "theme",
+        "localstorage",
+        "sessionstorage",
+        "update",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/24",
+      "summary": "This update replaces the unreliable cookie-based theme persistence with a more robust solution using localStorage and sessionStorage. The theme will now persist across page refreshes and sync across tabs, ensuring a seamless user experience. Key changes include the removal of cookie logic and the introduction of a more reliable storage mechanism."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#323",
       "title": "Fix nano error in Nexior 🚀",
       "tags": [
