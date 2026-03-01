@@ -1514,6 +1514,198 @@ html:not(.dark) .mobile-section-nav-dotInner {
   }
 }
 
+/* ── Recent Orders ── */
+.orders-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.orders-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background 140ms ease;
+}
+
+.orders-row:last-child {
+  border-bottom: none;
+}
+
+.orders-row:hover {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+html:not(.dark) .orders-row {
+  border-bottom-color: rgba(15, 23, 42, 0.07);
+}
+
+html:not(.dark) .orders-row:hover {
+  background: rgba(15, 23, 42, 0.025);
+}
+
+.orders-payIcon {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+}
+
+.orders-payIcon--stripe {
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(99, 102, 241, 0.08));
+  color: rgba(165, 180, 252, 0.95);
+}
+
+.orders-payIcon--wechat {
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.08));
+  color: rgba(110, 231, 183, 0.95);
+}
+
+.orders-payIcon--alipay {
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(14, 165, 233, 0.08));
+  color: rgba(125, 211, 252, 0.95);
+}
+
+.orders-payIcon--x402 {
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(245, 158, 11, 0.08));
+  color: rgba(253, 224, 71, 0.95);
+}
+
+.orders-payIcon--unknown {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(226, 232, 240, 0.7);
+}
+
+html:not(.dark) .orders-payIcon--stripe {
+  border-color: rgba(99, 102, 241, 0.25);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(99, 102, 241, 0.05));
+  color: rgba(67, 56, 202, 0.9);
+}
+
+html:not(.dark) .orders-payIcon--wechat {
+  border-color: rgba(16, 185, 129, 0.25);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(16, 185, 129, 0.05));
+  color: rgba(4, 120, 87, 0.9);
+}
+
+html:not(.dark) .orders-payIcon--alipay {
+  border-color: rgba(14, 165, 233, 0.25);
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.12), rgba(14, 165, 233, 0.05));
+  color: rgba(2, 132, 199, 0.9);
+}
+
+html:not(.dark) .orders-payIcon--x402 {
+  border-color: rgba(245, 158, 11, 0.25);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(245, 158, 11, 0.05));
+  color: rgba(180, 83, 9, 0.9);
+}
+
+html:not(.dark) .orders-payIcon--unknown {
+  border-color: rgba(15, 23, 42, 0.1);
+  background: rgba(15, 23, 42, 0.04);
+  color: rgba(15, 23, 42, 0.5);
+}
+
+.orders-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.orders-desc {
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: rgba(255, 255, 255, 0.88);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+html:not(.dark) .orders-desc {
+  color: rgba(15, 23, 42, 0.88);
+}
+
+.orders-meta {
+  margin-top: 3px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  color: rgba(226, 232, 240, 0.45);
+}
+
+html:not(.dark) .orders-meta {
+  color: rgba(15, 23, 42, 0.45);
+}
+
+.orders-metaDot {
+  width: 2.5px;
+  height: 2.5px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.6;
+  flex: none;
+}
+
+.orders-metaId {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0;
+  opacity: 0.75;
+}
+
+.orders-amount {
+  flex: none;
+  font-family: var(--font-display, 'Inter', sans-serif);
+  font-size: 15px;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  color: rgba(6, 236, 163, 0.92);
+  text-align: right;
+}
+
+html:not(.dark) .orders-amount {
+  color: rgba(6, 95, 70, 0.92);
+}
+
+@media (max-width: 639px) {
+  .orders-row {
+    padding: 12px 16px;
+    gap: 12px;
+  }
+
+  .orders-payIcon {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    font-size: 10px;
+  }
+
+  .orders-desc {
+    font-size: 13px;
+  }
+
+  .orders-amount {
+    font-size: 14px;
+  }
+
+  .orders-meta {
+    font-size: 10.5px;
+  }
+}
+
 /* Safe area for notch devices */
 @supports (padding-bottom: env(safe-area-inset-bottom)) {
   .mobile-section-nav {

@@ -1297,27 +1297,29 @@
       }
     };
 
-    const payWayBadge = (way) => {
-      const colors = {
-        Stripe:
-          "bg-indigo-500/15 text-indigo-400",
-        WechatPay:
-          "bg-emerald-500/15 text-emerald-400",
-        AliPay:
-          "bg-sky-500/15 text-sky-400",
-        X402:
-          "bg-amber-500/15 text-amber-400",
+    const payIconClass = (way) => {
+      const map = {
+        Stripe: "orders-payIcon--stripe",
+        WechatPay: "orders-payIcon--wechat",
+        AliPay: "orders-payIcon--alipay",
+        X402: "orders-payIcon--x402",
       };
-      const cls =
-        colors[way] ||
-        "bg-white/10 text-white/70";
-      return el(
-        "span",
-        {
-          class: `inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium whitespace-nowrap ${cls}`,
-        },
-        way || "Unknown",
-      );
+      return map[way] || "orders-payIcon--unknown";
+    };
+
+    const payLabel = (way) => {
+      const map = {
+        Stripe: "S",
+        WechatPay: "W",
+        AliPay: "A",
+        X402: "X",
+      };
+      return map[way] || "?";
+    };
+
+    const shortenId = (id) => {
+      if (!id || id.length <= 14) return id || "—";
+      return id.slice(0, 8) + "···" + id.slice(-4);
     };
 
     const wrap = sectionShell(
@@ -1342,165 +1344,61 @@
       return wrap;
     }
 
-    const card = el("div", {
-      class: "glass rounded-3xl p-0 sm:p-0 overflow-hidden",
-    });
+    const card = el("div", { class: CARD_CLASS.replace(/p-6 sm:p-7/g, "p-0") });
+    const list = el("div", { class: "orders-list" });
 
-    // Desktop table
-    const tableWrap = el("div", {
-      class: "hidden md:block overflow-x-auto",
-    });
-    const table = el("table", {
-      class: "w-full text-left text-sm table-fixed",
-    });
-
-    // Column widths via <colgroup>
-    const colgroup = el("colgroup");
-    const widths = ["18%", "14%", "12%", "12%", "44%"];
-    for (const w of widths) {
-      colgroup.appendChild(el("col", { style: `width:${w}` }));
-    }
-    table.appendChild(colgroup);
-
-    const thead = el("thead");
-    const headerRow = el("tr", {
-      class:
-        "border-b border-white/10 text-[11px] font-semibold text-slate-400 dark:text-white/40 uppercase tracking-wider",
-    });
-    const headers = ["Order ID", "Date", "Payment", "Amount", "Description"];
-    for (const h of headers) {
-      headerRow.appendChild(
-        el(
-          "th",
-          {
-            class: "px-5 py-3.5",
-          },
-          h,
-        ),
-      );
-    }
-    thead.appendChild(headerRow);
-    table.appendChild(thead);
-
-    const tbody = el("tbody");
     for (const order of snapshot.orders) {
-      const row = el("tr", {
-        class:
-          "border-b border-slate-200/5 dark:border-white/[0.04] last:border-0 hover:bg-white/[0.02] transition-colors",
-      });
-      // Order ID
-      row.appendChild(
-        el(
-          "td",
-          {
-            class:
-              "px-5 py-3 font-mono text-[11px] text-slate-400 dark:text-white/35 truncate",
-            title: order.id,
-          },
-          order.id,
-        ),
-      );
-      // Date
-      row.appendChild(
-        el(
-          "td",
-          {
-            class:
-              "px-5 py-3 whitespace-nowrap text-xs text-slate-500 dark:text-white/60",
-          },
-          formatDate(order.created_at),
-        ),
-      );
-      // Payment
-      const payTd = el("td", { class: "px-5 py-3" });
-      payTd.appendChild(payWayBadge(order.pay_way));
-      row.appendChild(payTd);
-      // Amount
-      row.appendChild(
-        el(
-          "td",
-          {
-            class:
-              "px-5 py-3 whitespace-nowrap font-semibold text-white/90",
-          },
-          formatMoney(order.price),
-        ),
-      );
-      // Description
-      row.appendChild(
-        el(
-          "td",
-          {
-            class:
-              "px-5 py-3 truncate text-slate-500 dark:text-white/50",
-            title: order.description,
-          },
-          order.description || "—",
-        ),
-      );
-      tbody.appendChild(row);
-    }
-    table.appendChild(tbody);
-    tableWrap.appendChild(table);
-    card.appendChild(tableWrap);
+      const row = el("div", { class: "orders-row" });
 
-    // Mobile card list
-    const mobileWrap = el("div", {
-      class: "md:hidden divide-y divide-white/[0.06]",
-    });
-    for (const order of snapshot.orders) {
-      const mCard = el("div", {
-        class: "px-5 py-4",
-      });
-      // Top row: amount + payment badge
-      const topRow = el("div", {
-        class: "flex items-center justify-between gap-3 mb-1.5",
-      });
-      topRow.appendChild(
-        el(
-          "span",
-          {
-            class:
-              "font-display text-base font-semibold text-white/90",
-          },
-          formatMoney(order.price),
-        ),
-      );
-      topRow.appendChild(payWayBadge(order.pay_way));
-      mCard.appendChild(topRow);
-      // Description
-      mCard.appendChild(
+      // Payment icon
+      row.appendChild(
         el(
           "div",
-          {
-            class:
-              "text-sm text-white/60 truncate mb-2",
-            title: order.description,
-          },
+          { class: `orders-payIcon ${payIconClass(order.pay_way)}` },
+          payLabel(order.pay_way),
+        ),
+      );
+
+      // Body: description + meta
+      const body = el("div", { class: "orders-body" });
+      body.appendChild(
+        el(
+          "div",
+          { class: "orders-desc", title: order.description },
           order.description || "—",
         ),
       );
-      // Bottom: date + order ID
-      const bottomRow = el("div", {
-        class:
-          "flex items-center justify-between text-[11px] text-white/30",
-      });
-      bottomRow.appendChild(el("span", {}, formatDate(order.created_at)));
-      bottomRow.appendChild(
-        el("span", { class: "font-mono truncate ml-2 max-w-[140px]" }, order.id),
+      const meta = el("div", { class: "orders-meta" });
+      meta.appendChild(el("span", {}, formatDate(order.created_at)));
+      meta.appendChild(el("span", { class: "orders-metaDot" }));
+      meta.appendChild(el("span", {}, order.pay_way || "Unknown"));
+      meta.appendChild(el("span", { class: "orders-metaDot" }));
+      meta.appendChild(
+        el(
+          "span",
+          { class: "orders-metaId", title: order.id },
+          shortenId(order.id),
+        ),
       );
-      mCard.appendChild(bottomRow);
-      mobileWrap.appendChild(mCard);
-    }
-    card.appendChild(mobileWrap);
+      body.appendChild(meta);
+      row.appendChild(body);
 
+      // Amount
+      row.appendChild(
+        el("div", { class: "orders-amount" }, formatMoney(order.price)),
+      );
+
+      list.appendChild(row);
+    }
+
+    card.appendChild(list);
     wrap.appendChild(card);
 
     if (asOf) {
       wrap.appendChild(
         el(
           "div",
-          { class: "mt-4 text-[11px] text-white/30" },
+          { class: "mt-6 text-xs text-slate-600 dark:text-white/80" },
           `As of: ${asOf}`,
         ),
       );
