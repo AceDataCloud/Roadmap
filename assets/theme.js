@@ -50,6 +50,19 @@
     toggle: toggleTheme
   };
 
-  applyTheme(getPreferredTheme(), { persist: false });
+  // Apply saved theme (or system preference) and persist immediately
+  applyTheme(getPreferredTheme(), { persist: true });
+
+  // Sync across tabs: when another tab changes the theme in localStorage, apply here too
+  try {
+    window.addEventListener('storage', (e) => {
+      if (e.key === THEME_KEY && e.newValue) {
+        const synced = normalizeTheme(e.newValue);
+        if (synced && synced !== getTheme()) {
+          applyTheme(synced, { persist: false });
+        }
+      }
+    });
+  } catch (_err) {}
 })();
 
