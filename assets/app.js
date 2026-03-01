@@ -1287,36 +1287,34 @@
       if (!iso) return "—";
       try {
         const d = new Date(iso);
-        return d.toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "short",
-          day: "numeric",
-          hour: "2-digit",
-          minute: "2-digit",
-          hour12: false,
-        });
+        const mon = d.toLocaleString("en-US", { month: "short" });
+        const day = d.getDate();
+        const hh = String(d.getHours()).padStart(2, "0");
+        const mm = String(d.getMinutes()).padStart(2, "0");
+        return `${mon} ${day}, ${hh}:${mm}`;
       } catch (_err) {
-        return String(iso).slice(0, 19);
+        return String(iso).slice(0, 16);
       }
     };
 
     const payWayBadge = (way) => {
       const colors = {
         Stripe:
-          "bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300",
+          "bg-indigo-500/15 text-indigo-400",
         WechatPay:
-          "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300",
+          "bg-emerald-500/15 text-emerald-400",
         AliPay:
-          "bg-sky-100 text-sky-700 dark:bg-sky-900/40 dark:text-sky-300",
-        X402: "bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300",
+          "bg-sky-500/15 text-sky-400",
+        X402:
+          "bg-amber-500/15 text-amber-400",
       };
       const cls =
         colors[way] ||
-        "bg-slate-100 text-slate-700 dark:bg-slate-700 dark:text-slate-300";
+        "bg-white/10 text-white/70";
       return el(
         "span",
         {
-          class: `inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ${cls}`,
+          class: `inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium whitespace-nowrap ${cls}`,
         },
         way || "Unknown",
       );
@@ -1344,23 +1342,41 @@
       return wrap;
     }
 
-    const card = el("div", { class: CARD_CLASS });
+    const card = el("div", {
+      class: "glass rounded-3xl p-0 sm:p-0 overflow-hidden",
+    });
 
     // Desktop table
     const tableWrap = el("div", {
-      class: "hidden sm:block overflow-x-auto",
+      class: "hidden md:block overflow-x-auto",
     });
     const table = el("table", {
-      class: "w-full text-left text-sm",
+      class: "w-full text-left text-sm table-fixed",
     });
+
+    // Column widths via <colgroup>
+    const colgroup = el("colgroup");
+    const widths = ["18%", "14%", "12%", "12%", "44%"];
+    for (const w of widths) {
+      colgroup.appendChild(el("col", { style: `width:${w}` }));
+    }
+    table.appendChild(colgroup);
+
     const thead = el("thead");
     const headerRow = el("tr", {
       class:
-        "border-b border-slate-200 dark:border-white/10 text-xs font-semibold text-slate-500 dark:text-white/60 uppercase tracking-wider",
+        "border-b border-white/10 text-[11px] font-semibold text-slate-400 dark:text-white/40 uppercase tracking-wider",
     });
-    for (const h of ["Order ID", "Date", "Payment", "Amount", "Description"]) {
+    const headers = ["Order ID", "Date", "Payment", "Amount", "Description"];
+    for (const h of headers) {
       headerRow.appendChild(
-        el("th", { class: "px-3 py-3 first:pl-0 last:pr-0" }, h),
+        el(
+          "th",
+          {
+            class: "px-5 py-3.5",
+          },
+          h,
+        ),
       );
     }
     thead.appendChild(headerRow);
@@ -1370,15 +1386,16 @@
     for (const order of snapshot.orders) {
       const row = el("tr", {
         class:
-          "border-b border-slate-100 dark:border-white/5 last:border-0 hover:bg-slate-50/50 dark:hover:bg-white/[0.02] transition-colors",
+          "border-b border-slate-200/5 dark:border-white/[0.04] last:border-0 hover:bg-white/[0.02] transition-colors",
       });
-      // Order ID (monospace)
+      // Order ID
       row.appendChild(
         el(
           "td",
           {
             class:
-              "px-3 py-3.5 first:pl-0 font-mono text-xs text-slate-500 dark:text-white/50",
+              "px-5 py-3 font-mono text-[11px] text-slate-400 dark:text-white/35 truncate",
+            title: order.id,
           },
           order.id,
         ),
@@ -1389,13 +1406,13 @@
           "td",
           {
             class:
-              "px-3 py-3.5 whitespace-nowrap text-slate-700 dark:text-white/80",
+              "px-5 py-3 whitespace-nowrap text-xs text-slate-500 dark:text-white/60",
           },
           formatDate(order.created_at),
         ),
       );
       // Payment
-      const payTd = el("td", { class: "px-3 py-3.5" });
+      const payTd = el("td", { class: "px-5 py-3" });
       payTd.appendChild(payWayBadge(order.pay_way));
       row.appendChild(payTd);
       // Amount
@@ -1404,7 +1421,7 @@
           "td",
           {
             class:
-              "px-3 py-3.5 whitespace-nowrap font-semibold text-slate-900 dark:text-white/95",
+              "px-5 py-3 whitespace-nowrap font-semibold text-white/90",
           },
           formatMoney(order.price),
         ),
@@ -1415,7 +1432,7 @@
           "td",
           {
             class:
-              "px-3 py-3.5 last:pr-0 max-w-xs truncate text-slate-600 dark:text-white/70",
+              "px-5 py-3 truncate text-slate-500 dark:text-white/50",
             title: order.description,
           },
           order.description || "—",
@@ -1429,23 +1446,22 @@
 
     // Mobile card list
     const mobileWrap = el("div", {
-      class: "sm:hidden space-y-3",
+      class: "md:hidden divide-y divide-white/[0.06]",
     });
     for (const order of snapshot.orders) {
       const mCard = el("div", {
-        class:
-          "rounded-2xl bg-slate-900/5 p-4 dark:bg-white/5",
+        class: "px-5 py-4",
       });
       // Top row: amount + payment badge
       const topRow = el("div", {
-        class: "flex items-center justify-between mb-2",
+        class: "flex items-center justify-between gap-3 mb-1.5",
       });
       topRow.appendChild(
         el(
           "span",
           {
             class:
-              "font-display text-lg font-semibold text-slate-900 dark:text-white/95",
+              "font-display text-base font-semibold text-white/90",
           },
           formatMoney(order.price),
         ),
@@ -1458,7 +1474,7 @@
           "div",
           {
             class:
-              "text-sm text-slate-700 dark:text-white/80 truncate mb-1.5",
+              "text-sm text-white/60 truncate mb-2",
             title: order.description,
           },
           order.description || "—",
@@ -1467,11 +1483,11 @@
       // Bottom: date + order ID
       const bottomRow = el("div", {
         class:
-          "flex items-center justify-between text-xs text-slate-500 dark:text-white/50",
+          "flex items-center justify-between text-[11px] text-white/30",
       });
       bottomRow.appendChild(el("span", {}, formatDate(order.created_at)));
       bottomRow.appendChild(
-        el("span", { class: "font-mono" }, order.id),
+        el("span", { class: "font-mono truncate ml-2 max-w-[140px]" }, order.id),
       );
       mCard.appendChild(bottomRow);
       mobileWrap.appendChild(mCard);
@@ -1484,7 +1500,7 @@
       wrap.appendChild(
         el(
           "div",
-          { class: "mt-6 text-xs text-slate-600 dark:text-white/80" },
+          { class: "mt-4 text-[11px] text-white/30" },
           `As of: ${asOf}`,
         ),
       );
