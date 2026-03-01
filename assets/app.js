@@ -702,16 +702,64 @@
       items.push({ el: item, id: section.id });
     }
 
+    // ── Mobile Bottom Nav ──
+    const mobileNav = el("nav", {
+      id: "mobile-section-nav",
+      class: "mobile-section-nav",
+      "aria-label": "Page sections",
+    });
+
+    const mobileInner = el("div", { class: "mobile-section-nav-inner" });
+
+    // Active label display
+    const mobileLabel = el(
+      "span",
+      { class: "mobile-section-nav-label" },
+      sections[0].label,
+    );
+    mobileInner.appendChild(mobileLabel);
+
+    // Dots container
+    const mobileDotsWrap = el("div", { class: "mobile-section-nav-dots" });
+    // Progress bar
+    const mobileProgress = el("div", {
+      class: "mobile-section-nav-progress",
+    });
+    mobileDotsWrap.appendChild(mobileProgress);
+
+    const mobileDots = [];
+    for (let i = 0; i < sections.length; i++) {
+      const dot = el("a", {
+        class: "mobile-section-nav-dot",
+        href: `#${sections[i].id}`,
+        "aria-label": sections[i].label,
+      });
+      const inner = el("span", { class: "mobile-section-nav-dotInner" });
+      dot.appendChild(inner);
+      mobileDotsWrap.appendChild(dot);
+      mobileDots.push(dot);
+    }
+
+    mobileInner.appendChild(mobileDotsWrap);
+    mobileNav.appendChild(mobileInner);
+
+    // Wrap both navs in a fragment-like container
+    const navWrapper = el("div", { id: "section-nav-wrapper" });
+    navWrapper.appendChild(nav);
+    navWrapper.appendChild(mobileNav);
+
     // Scroll-based active tracking
     let ticking = false;
     function updateActiveSection() {
       const scrollY = window.scrollY;
 
-      // Show/hide based on scroll position
+      // Show/hide desktop nav based on scroll position
       if (scrollY < 200) {
         nav.classList.add("side-nav--hidden");
+        mobileNav.classList.add("mobile-section-nav--hidden");
       } else {
         nav.classList.remove("side-nav--hidden");
+        mobileNav.classList.remove("mobile-section-nav--hidden");
       }
 
       // Find active section
@@ -728,15 +776,29 @@
         }
       }
 
-      // Update active states
+      // Update desktop active states
       items.forEach((item, idx) => {
         item.el.classList.toggle("side-nav-item--active", idx === activeIdx);
       });
 
-      // Update track progress
+      // Update desktop track progress
       const progressPct =
         sections.length > 1 ? (activeIdx / (sections.length - 1)) * 100 : 0;
       trackProgress.style.height = `${progressPct}%`;
+
+      // Update mobile active states
+      mobileDots.forEach((dot, idx) => {
+        dot.classList.toggle(
+          "mobile-section-nav-dot--active",
+          idx === activeIdx,
+        );
+      });
+      mobileLabel.textContent = sections[activeIdx].label;
+
+      // Update mobile progress bar
+      const mobilePct =
+        sections.length > 1 ? (activeIdx / (sections.length - 1)) * 100 : 0;
+      mobileProgress.style.width = `${mobilePct}%`;
 
       ticking = false;
     }
@@ -752,7 +814,7 @@
     window.addEventListener("resize", onScroll, { passive: true });
     requestAnimationFrame(updateActiveSection);
 
-    return nav;
+    return navWrapper;
   }
 
   function sectionShell(title, subtitle, id) {
