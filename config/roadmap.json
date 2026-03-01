@@ -130,6 +130,12 @@
       "With hundreds of open-source projects, <a href='https://github.com/Germey' target='_blank' rel='noreferrer'>participated in open-source projects</a> with over 40,000 Stars, <a href='https://hub.docker.com/r/germey/proxypool' target='_blank' rel='noreferrer'>open-source image</a> downloaded over 1,000,000 times."
     ]
   },
+  "recent_orders": {
+    "title": "Recent Orders",
+    "subtitle": "The latest 20 completed orders (IDs masked). Updated periodically by a scheduled job.",
+    "source": "./config/recent_orders.json",
+    "currency": "USD"
+  },
   "revenue": {
     "title": "Revenue Snapshot",
     "subtitle": "Rolling totals from completed orders. Updated periodically by a scheduled job.",

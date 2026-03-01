@@ -650,6 +650,7 @@
       { label: data?.founder ? "Founding Team" : null, id: "founding-team" },
       { label: "Principles", id: "guiding-principles" },
       { label: data?.revenue ? "Revenue" : null, id: "revenue" },
+      { label: data?.recent_orders ? "Recent Orders" : null, id: "recent-orders" },
       { label: data?.creator_fees ? "Creator Fees" : null, id: "creator-fees" },
       {
         label: data?.capital_governance ? "Capital Governance" : null,
@@ -1247,6 +1248,238 @@
     }
 
     wrap.appendChild(grid);
+    if (asOf) {
+      wrap.appendChild(
+        el(
+          "div",
+          { class: "mt-6 text-xs text-slate-600 dark:text-white/80" },
+          `As of: ${asOf}`,
+        ),
+      );
+    }
+    return wrap;
+  }
+
+  function renderRecentOrders(data) {
+    if (!data?.recent_orders) return null;
+
+    const snapshot = data.recent_orders.snapshot;
+    const loadFailed = !!data.recent_orders.load_failed;
+    const currency = safeText(
+      snapshot?.currency || data.recent_orders.currency || "USD",
+    );
+    const asOf = snapshot?.as_of ? safeText(snapshot.as_of) : null;
+
+    const formatMoney = (value) => {
+      const num = Number(value);
+      if (!Number.isFinite(num)) return "—";
+      try {
+        return new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency,
+        }).format(num);
+      } catch (_err) {
+        return `${num.toFixed(2)} ${currency}`;
+      }
+    };
+
+    const formatDate = (iso) => {
+      if (!iso) return "—";
+      try {
+        const d = new Date(iso);
+        return d.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+        });
+      } catch (_err) {
+        return String(iso).slice(0, 19);
+      }
+    };
+
+    const payWayBadge = (way) => {
+      const colors = {
+        Stripe:
+          "bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300",
+        WechatPay:
+          "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300",
+        AliPay:
+          "bg-sky-100 text-sky-700 dark:bg-sky-900/40 dark:text-sky-300",
+        X402: "bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300",
+      };
+      const cls =
+        colors[way] ||
+        "bg-slate-100 text-slate-700 dark:bg-slate-700 dark:text-slate-300";
+      return el(
+        "span",
+        {
+          class: `inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ${cls}`,
+        },
+        way || "Unknown",
+      );
+    };
+
+    const wrap = sectionShell(
+      data.recent_orders.title,
+      data.recent_orders.subtitle,
+      "recent-orders",
+    );
+
+    if (loadFailed || !snapshot || !snapshot.orders?.length) {
+      wrap.appendChild(
+        el("div", { class: CARD_CLASS }, [
+          el(
+            "div",
+            {
+              class:
+                "rounded-2xl bg-slate-900/5 px-4 py-4 text-sm text-slate-700 shadow-ring dark:bg-white/5 dark:text-white/90",
+            },
+            "Recent orders unavailable right now.",
+          ),
+        ]),
+      );
+      return wrap;
+    }
+
+    const card = el("div", { class: CARD_CLASS });
+
+    // Desktop table
+    const tableWrap = el("div", {
+      class: "hidden sm:block overflow-x-auto",
+    });
+    const table = el("table", {
+      class: "w-full text-left text-sm",
+    });
+    const thead = el("thead");
+    const headerRow = el("tr", {
+      class:
+        "border-b border-slate-200 dark:border-white/10 text-xs font-semibold text-slate-500 dark:text-white/60 uppercase tracking-wider",
+    });
+    for (const h of ["Order ID", "Date", "Payment", "Amount", "Description"]) {
+      headerRow.appendChild(
+        el("th", { class: "px-3 py-3 first:pl-0 last:pr-0" }, h),
+      );
+    }
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+
+    const tbody = el("tbody");
+    for (const order of snapshot.orders) {
+      const row = el("tr", {
+        class:
+          "border-b border-slate-100 dark:border-white/5 last:border-0 hover:bg-slate-50/50 dark:hover:bg-white/[0.02] transition-colors",
+      });
+      // Order ID (monospace)
+      row.appendChild(
+        el(
+          "td",
+          {
+            class:
+              "px-3 py-3.5 first:pl-0 font-mono text-xs text-slate-500 dark:text-white/50",
+          },
+          order.id,
+        ),
+      );
+      // Date
+      row.appendChild(
+        el(
+          "td",
+          {
+            class:
+              "px-3 py-3.5 whitespace-nowrap text-slate-700 dark:text-white/80",
+          },
+          formatDate(order.created_at),
+        ),
+      );
+      // Payment
+      const payTd = el("td", { class: "px-3 py-3.5" });
+      payTd.appendChild(payWayBadge(order.pay_way));
+      row.appendChild(payTd);
+      // Amount
+      row.appendChild(
+        el(
+          "td",
+          {
+            class:
+              "px-3 py-3.5 whitespace-nowrap font-semibold text-slate-900 dark:text-white/95",
+          },
+          formatMoney(order.price),
+        ),
+      );
+      // Description
+      row.appendChild(
+        el(
+          "td",
+          {
+            class:
+              "px-3 py-3.5 last:pr-0 max-w-xs truncate text-slate-600 dark:text-white/70",
+            title: order.description,
+          },
+          order.description || "—",
+        ),
+      );
+      tbody.appendChild(row);
+    }
+    table.appendChild(tbody);
+    tableWrap.appendChild(table);
+    card.appendChild(tableWrap);
+
+    // Mobile card list
+    const mobileWrap = el("div", {
+      class: "sm:hidden space-y-3",
+    });
+    for (const order of snapshot.orders) {
+      const mCard = el("div", {
+        class:
+          "rounded-2xl bg-slate-900/5 p-4 dark:bg-white/5",
+      });
+      // Top row: amount + payment badge
+      const topRow = el("div", {
+        class: "flex items-center justify-between mb-2",
+      });
+      topRow.appendChild(
+        el(
+          "span",
+          {
+            class:
+              "font-display text-lg font-semibold text-slate-900 dark:text-white/95",
+          },
+          formatMoney(order.price),
+        ),
+      );
+      topRow.appendChild(payWayBadge(order.pay_way));
+      mCard.appendChild(topRow);
+      // Description
+      mCard.appendChild(
+        el(
+          "div",
+          {
+            class:
+              "text-sm text-slate-700 dark:text-white/80 truncate mb-1.5",
+            title: order.description,
+          },
+          order.description || "—",
+        ),
+      );
+      // Bottom: date + order ID
+      const bottomRow = el("div", {
+        class:
+          "flex items-center justify-between text-xs text-slate-500 dark:text-white/50",
+      });
+      bottomRow.appendChild(el("span", {}, formatDate(order.created_at)));
+      bottomRow.appendChild(
+        el("span", { class: "font-mono" }, order.id),
+      );
+      mCard.appendChild(bottomRow);
+      mobileWrap.appendChild(mCard);
+    }
+    card.appendChild(mobileWrap);
+
+    wrap.appendChild(card);
+
     if (asOf) {
       wrap.appendChild(
         el(
@@ -3190,6 +3423,26 @@
       data.revenue.load_failed = revenueLoadFailed;
     }
 
+    // Load recent orders snapshot
+    let recentOrdersSnapshot;
+    let recentOrdersLoadFailed = false;
+    try {
+      if (data?.recent_orders?.source) {
+        const ror = await fetch(String(data.recent_orders.source), {
+          cache: "no-store",
+        });
+        if (ror.ok) recentOrdersSnapshot = await ror.json();
+        else recentOrdersLoadFailed = true;
+      }
+    } catch (_err) {
+      recentOrdersLoadFailed = true;
+      recentOrdersSnapshot = undefined;
+    }
+    if (data?.recent_orders) {
+      data.recent_orders.snapshot = recentOrdersSnapshot;
+      data.recent_orders.load_failed = recentOrdersLoadFailed;
+    }
+
     // Load creator fees snapshot
     let creatorFeesSnapshot;
     let creatorFeesLoadFailed = false;
@@ -3271,6 +3524,8 @@
     app.appendChild(renderPrinciples(data));
     const revenue = renderRevenue(data);
     if (revenue) app.appendChild(revenue);
+    const recentOrders = renderRecentOrders(data);
+    if (recentOrders) app.appendChild(recentOrders);
     const creatorFees = renderCreatorFees(data);
     if (creatorFees) app.appendChild(creatorFees);
     const capitalGovernance = renderCapitalGovernance(data);
