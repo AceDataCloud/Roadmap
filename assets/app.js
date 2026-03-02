@@ -1996,7 +1996,9 @@
       }
 
       const apis = windowData.apis;
-      const maxCount = apis[0]?.count || 1;
+      const maxLog = Math.log10(Math.max(apis[0]?.count || 1, 1));
+      const minLog = Math.log10(Math.max(apis[apis.length - 1]?.count || 1, 1));
+      const logRange = maxLog - minLog || 1;
 
       // Header row
       const header = el("div", { class: "api-usage-row api-usage-header" });
@@ -2006,7 +2008,7 @@
       header.appendChild(el("div", { class: "api-usage-count" }, "Calls"));
       tableInner.appendChild(header);
 
-      // Data rows
+      // Data rows — log scale for bars so smaller APIs are still visible
       for (let i = 0; i < apis.length; i++) {
         const api = apis[i];
         const row = el("div", { class: "api-usage-row" });
@@ -2016,7 +2018,8 @@
         row.appendChild(el("div", { class: "api-usage-name", title: api.api_name }, api.api_name));
 
         const barWrap = el("div", { class: "api-usage-bar-wrap" });
-        const barPct = Math.max(0.5, (api.count / maxCount) * 100);
+        const logVal = Math.log10(Math.max(api.count, 1));
+        const barPct = Math.max(2, ((logVal - minLog) / logRange) * 100);
         const bar = el("div", { class: "api-usage-bar", style: `width: ${barPct}%` });
         barWrap.appendChild(bar);
         row.appendChild(barWrap);
