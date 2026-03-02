@@ -652,6 +652,7 @@
       { label: data?.revenue ? "Revenue" : null, id: "revenue" },
       { label: data?.recent_orders ? "Recent Orders" : null, id: "recent-orders" },
       { label: data?.creator_fees ? "Creator Fees" : null, id: "creator-fees" },
+      { label: data?.api_usage ? "API Usage" : null, id: "api-usage" },
       {
         label: data?.capital_governance ? "Capital Governance" : null,
         id: "capital-governance",
@@ -1845,6 +1846,210 @@
     }
 
     return card;
+  }
+
+  function renderApiUsage(data) {
+    if (!data?.api_usage) return null;
+
+    const snapshot = data.api_usage.snapshot;
+    const loadFailed = !!data.api_usage.load_failed;
+    const asOf = snapshot?.as_of ? safeText(snapshot.as_of) : null;
+
+    const formatNum = (value) => {
+      const num = Number(value);
+      if (!Number.isFinite(num)) return "—";
+      return num.toLocaleString("en-US");
+    };
+
+    const formatCompact = (value) => {
+      const num = Number(value);
+      if (!Number.isFinite(num)) return "—";
+      if (num >= 1_000_000_000) return `${(num / 1_000_000_000).toFixed(1)}B`;
+      if (num >= 1_000_000) return `${(num / 1_000_000).toFixed(1)}M`;
+      if (num >= 1_000) return `${(num / 1_000).toFixed(1)}K`;
+      return String(num);
+    };
+
+    const wrap = sectionShell(
+      data.api_usage.title,
+      data.api_usage.subtitle,
+      "api-usage",
+    );
+
+    if (loadFailed || !snapshot) {
+      wrap.appendChild(
+        el("div", { class: CARD_CLASS }, [
+          el(
+            "div",
+            {
+              class:
+                "rounded-2xl bg-slate-900/5 px-4 py-4 text-sm text-slate-700 shadow-ring dark:bg-white/5 dark:text-white/90",
+            },
+            "API usage data unavailable right now.",
+          ),
+        ]),
+      );
+      return wrap;
+    }
+
+    const windows = [
+      { key: "last_7d", label: "Last 7 days" },
+      { key: "last_30d", label: "Last 30 days" },
+    ];
+
+    // Find first available window
+    const availableWindows = windows.filter((w) => snapshot[w.key]);
+    if (!availableWindows.length) return null;
+
+    let activeKey = availableWindows.length > 1 ? availableWindows[1].key : availableWindows[0].key;
+
+    // Summary stats
+    const statsGrid = el("div", { class: "api-usage-stats mb-6" });
+
+    function renderStats() {
+      statsGrid.innerHTML = "";
+      const windowData = snapshot[activeKey];
+      if (!windowData) return;
+
+      const statItems = [
+        { label: "Total API Calls", value: formatCompact(windowData.total_calls), raw: formatNum(windowData.total_calls) },
+        { label: "Unique Users", value: formatCompact(windowData.unique_users), raw: formatNum(windowData.unique_users) },
+        { label: "Active APIs", value: String(windowData.apis?.length || 0), raw: null },
+      ];
+
+      for (const stat of statItems) {
+        const iconWrap = el("div", {
+          class:
+            "flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-900/5 text-slate-800 shadow-ring dark:bg-white/10 dark:text-white/90",
+        });
+        iconWrap.innerHTML = ICONS.chart("h-5 w-5");
+        statsGrid.appendChild(
+          el("div", { class: CARD_CLASS }, [
+            el("div", { class: "flex items-center gap-3" }, [
+              iconWrap,
+              el("div", { class: "min-w-0" }, [
+                el(
+                  "div",
+                  {
+                    class:
+                      "text-xs font-semibold text-slate-600 dark:text-white/80",
+                  },
+                  stat.label,
+                ),
+                el(
+                  "div",
+                  {
+                    class:
+                      "mt-1 font-display text-2xl font-semibold text-slate-900 dark:text-white/95",
+                    ...(stat.raw ? { title: stat.raw } : {}),
+                  },
+                  stat.value,
+                ),
+              ]),
+            ]),
+          ]),
+        );
+      }
+    }
+
+    // Tabs
+    const tabs = el("div", { class: "api-usage-tabs" });
+    const tabButtons = [];
+
+    for (const w of availableWindows) {
+      const btn = el(
+        "button",
+        {
+          type: "button",
+          class: `api-usage-tab${w.key === activeKey ? " api-usage-tab--active" : ""}`,
+          onclick: () => {
+            activeKey = w.key;
+            tabButtons.forEach((b, i) => {
+              b.classList.toggle("api-usage-tab--active", availableWindows[i].key === activeKey);
+            });
+            renderStats();
+            renderTable();
+          },
+        },
+        w.label,
+      );
+      tabButtons.push(btn);
+      tabs.appendChild(btn);
+    }
+
+    // Table card
+    const tableCard = el("div", { class: CARD_CLASS.replace(/p-6 sm:p-7/g, "p-0") });
+    const tableInner = el("div", { class: "api-usage-table" });
+
+    function renderTable() {
+      tableInner.innerHTML = "";
+      const windowData = snapshot[activeKey];
+      if (!windowData?.apis?.length) {
+        tableInner.appendChild(
+          el(
+            "div",
+            { class: "p-6 text-sm text-slate-600 dark:text-white/80" },
+            "No API data available.",
+          ),
+        );
+        return;
+      }
+
+      const apis = windowData.apis;
+      const maxCount = apis[0]?.count || 1;
+
+      // Header row
+      const header = el("div", { class: "api-usage-row api-usage-header" });
+      header.appendChild(el("div", { class: "api-usage-rank" }, "#"));
+      header.appendChild(el("div", { class: "api-usage-name" }, "API"));
+      header.appendChild(el("div", { class: "api-usage-bar-wrap" }));
+      header.appendChild(el("div", { class: "api-usage-count" }, "Calls"));
+      tableInner.appendChild(header);
+
+      // Data rows
+      for (let i = 0; i < apis.length; i++) {
+        const api = apis[i];
+        const row = el("div", { class: "api-usage-row" });
+
+        const rankClass = i < 3 ? "api-usage-rank api-usage-rank--top" : "api-usage-rank";
+        row.appendChild(el("div", { class: rankClass }, String(i + 1)));
+        row.appendChild(el("div", { class: "api-usage-name", title: api.api_name }, api.api_name));
+
+        const barWrap = el("div", { class: "api-usage-bar-wrap" });
+        const barPct = Math.max(0.5, (api.count / maxCount) * 100);
+        const bar = el("div", { class: "api-usage-bar", style: `width: ${barPct}%` });
+        barWrap.appendChild(bar);
+        row.appendChild(barWrap);
+
+        row.appendChild(
+          el("div", { class: "api-usage-count", title: formatNum(api.count) }, formatCompact(api.count)),
+        );
+
+        tableInner.appendChild(row);
+      }
+    }
+
+    renderStats();
+    renderTable();
+
+    tableCard.appendChild(tableInner);
+
+    if (availableWindows.length > 1) {
+      wrap.appendChild(tabs);
+    }
+    wrap.appendChild(statsGrid);
+    wrap.appendChild(tableCard);
+
+    if (asOf) {
+      wrap.appendChild(
+        el(
+          "div",
+          { class: "mt-6 text-xs text-slate-600 dark:text-white/80" },
+          `As of: ${asOf}`,
+        ),
+      );
+    }
+    return wrap;
   }
 
   function renderCapitalGovernance(data) {
@@ -3377,6 +3582,26 @@
       data.creator_fees.load_failed = creatorFeesLoadFailed;
     }
 
+    // Load API usage snapshot
+    let apiUsageSnapshot;
+    let apiUsageLoadFailed = false;
+    try {
+      if (data?.api_usage?.source) {
+        const aur = await fetch(String(data.api_usage.source), {
+          cache: "no-store",
+        });
+        if (aur.ok) apiUsageSnapshot = await aur.json();
+        else apiUsageLoadFailed = true;
+      }
+    } catch (_err) {
+      apiUsageLoadFailed = true;
+      apiUsageSnapshot = undefined;
+    }
+    if (data?.api_usage) {
+      data.api_usage.snapshot = apiUsageSnapshot;
+      data.api_usage.load_failed = apiUsageLoadFailed;
+    }
+
     // Load buyback history (transaction feed)
     try {
       if (data?.buyback_history?.source) {
@@ -3442,6 +3667,8 @@
     if (recentOrders) app.appendChild(recentOrders);
     const creatorFees = renderCreatorFees(data);
     if (creatorFees) app.appendChild(creatorFees);
+    const apiUsage = renderApiUsage(data);
+    if (apiUsage) app.appendChild(apiUsage);
     const capitalGovernance = renderCapitalGovernance(data);
     if (capitalGovernance) app.appendChild(capitalGovernance);
     app.appendChild(renderPhases(data));

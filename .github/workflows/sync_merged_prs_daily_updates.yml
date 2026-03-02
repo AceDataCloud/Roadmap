@@ -58,6 +58,15 @@ jobs:
           pip install loguru==0.7.3
           python3 scripts/generate_creator_fees_snapshot.py
 
+      - name: Generate API usage snapshot
+        if: ${{ env.TENCENT_CLOUD_SECRET_ID != '' && env.TENCENT_CLOUD_SECRET_KEY != '' }}
+        env:
+          TENCENT_CLOUD_SECRET_ID: ${{ secrets.TENCENT_CLOUD_SECRET_ID }}
+          TENCENT_CLOUD_SECRET_KEY: ${{ secrets.TENCENT_CLOUD_SECRET_KEY }}
+        run: |
+          pip install tencentcloud-sdk-python
+          python3 scripts/generate_api_usage_snapshot.py
+
       - name: Commit and push
         run: |
           branch="${GITHUB_REF_NAME:-main}"
@@ -71,6 +80,7 @@ jobs:
           git add config/daily-updates config/pr-sync-state.json
           git add config/revenue.json || true
           git add config/creator_fees.json || true
+          git add config/api_usage.json || true
           git commit -m "chore: sync merged PRs to daily updates"
           for i in 1 2 3; do
             if git push origin "HEAD:$branch"; then
