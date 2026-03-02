@@ -53,6 +53,19 @@ jobs:
           fi
           python3 scripts/generate_revenue_snapshot.py "${args[@]}"
 
+      - name: Generate recent orders snapshot
+        if: ${{ env.PGSQL_HOST != '' && env.PGSQL_USER != '' && env.PGSQL_PASSWORD != '' }}
+        env:
+          PGSQL_PORT: ${{ secrets.PGSQL_PORT != '' && secrets.PGSQL_PORT || '5432' }}
+          PGSQL_DATABASE: ${{ secrets.PGSQL_DATABASE != '' && secrets.PGSQL_DATABASE || 'acedatacloud_platform' }}
+          ORDERS_TABLE: ${{ secrets.ORDERS_TABLE }}
+        run: |
+          args=()
+          if [[ -n "${ORDERS_TABLE:-}" ]]; then
+            args+=(--orders-table "$ORDERS_TABLE")
+          fi
+          python3 scripts/generate_recent_orders.py "${args[@]}"
+
       - name: Generate creator fees snapshot
         run: |
           pip install loguru==0.7.3
@@ -79,6 +92,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add config/daily-updates config/pr-sync-state.json
           git add config/revenue.json || true
+          git add config/recent_orders.json || true
           git add config/creator_fees.json || true
           git add config/api_usage.json || true
           git commit -m "chore: sync merged PRs to daily updates"
