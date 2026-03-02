@@ -3,6 +3,56 @@
   "date": "2026-03-02",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Roadmap#29",
+      "title": "Enhance Timestamp Display in Roadmap 🌍",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "timestamp",
+        "localization",
+        "user-experience",
+        "frontend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/29",
+      "summary": "All 'As of' timestamps, including Revenue and Recent Orders, now display in the browser's local timezone instead of raw ISO 8601 UTC strings. This change improves user experience by providing a more readable format, such as 'Mar 3, 2026, 02:13 AM' instead of the previous ISO format. The update involved modifications to the app.js file to implement the local time formatting."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#28",
+      "title": "Enhance CI with Recent Orders Auto-Update in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "ci",
+        "automation",
+        "updates",
+        "pgsql",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/28",
+      "summary": "This update integrates the `generate_recent_orders.py` script into the GitHub Actions workflow, ensuring that `recent_orders.json` is automatically updated every two hours. The implementation utilizes existing PGSQL secrets for seamless operation. Additionally, code formatting has been applied to `app.js` and the snapshot script for improved readability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#27",
+      "title": "New API Usage Stats Section Added in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "api",
+        "roadmap",
+        "feature",
+        "statistics",
+        "tencent"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/27",
+      "summary": "We've introduced a new **API Usage** section to the Roadmap page, showcasing per-API call volume statistics sourced from Tencent Cloud CLS logs. Key updates include a new script for querying API usage data, enhanced rendering in the app, and a stylish new table for displaying the statistics. This addition will provide valuable insights into API performance and usage trends."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#324",
       "title": "Upgrade to Capacitor 7.5.0 and Android SDK 35 in Nexior 🚀",
       "tags": [
