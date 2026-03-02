@@ -146,6 +146,23 @@
 
   const safeText = (text) => String(text ?? "");
 
+  const formatLocalTime = (iso) => {
+    if (!iso) return null;
+    try {
+      const d = new Date(String(iso));
+      if (isNaN(d.getTime())) return String(iso);
+      return d.toLocaleString(undefined, {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+    } catch (_e) {
+      return String(iso);
+    }
+  };
+
   function percent(num) {
     return `${Math.max(0, Math.min(100, Math.round(num)))}%`;
   }
@@ -1166,7 +1183,7 @@
     const currency = safeText(
       snapshot?.currency || data.revenue.currency || "USD",
     );
-    const asOf = snapshot?.as_of ? safeText(snapshot.as_of) : null;
+    const asOf = formatLocalTime(snapshot?.as_of);
 
     const formatMoney = (value) => {
       const num = Number(value);
@@ -1272,7 +1289,7 @@
     const currency = safeText(
       snapshot?.currency || data.recent_orders.currency || "USD",
     );
-    const asOf = snapshot?.as_of ? safeText(snapshot.as_of) : null;
+    const asOf = formatLocalTime(snapshot?.as_of);
 
     const formatMoney = (value) => {
       const num = Number(value);
@@ -1415,7 +1432,7 @@
 
     const snapshot = data.creator_fees.snapshot;
     const loadFailed = !!data.creator_fees.load_failed;
-    const asOf = snapshot?.as_of ? safeText(snapshot.as_of) : null;
+    const asOf = formatLocalTime(snapshot?.as_of);
     const solPrice = snapshot?.sol_price_usd || 0;
 
     const formatSol = (value) => {
@@ -1856,7 +1873,7 @@
 
     const snapshot = data.api_usage.snapshot;
     const loadFailed = !!data.api_usage.load_failed;
-    const asOf = snapshot?.as_of ? safeText(snapshot.as_of) : null;
+    const asOf = formatLocalTime(snapshot?.as_of);
 
     const formatNum = (value) => {
       const num = Number(value);
