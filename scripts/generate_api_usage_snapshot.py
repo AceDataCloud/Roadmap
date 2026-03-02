@@ -21,8 +21,8 @@ import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-
 # ── helpers ──────────────────────────────────────────────────────────────────
+
 
 def _default_output_path() -> Path:
     root = Path(__file__).resolve().parent.parent
@@ -124,6 +124,7 @@ def _query_active_apis(client, from_ms: int, to_ms: int) -> int:
 
 # ── main ─────────────────────────────────────────────────────────────────────
 
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Generate Roadmap API usage snapshot JSON from CLS logs."
@@ -151,8 +152,8 @@ def main() -> int:
         return 2
 
     try:
-        from tencentcloud.common import credential
         from tencentcloud.cls.v20201016 import cls_client
+        from tencentcloud.common import credential
     except ImportError:
         print(
             "[api_usage_snapshot] ERROR: tencentcloud-sdk-python not installed.\n"

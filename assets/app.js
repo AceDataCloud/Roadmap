@@ -650,7 +650,10 @@
       { label: data?.founder ? "Founding Team" : null, id: "founding-team" },
       { label: "Principles", id: "guiding-principles" },
       { label: data?.revenue ? "Revenue" : null, id: "revenue" },
-      { label: data?.recent_orders ? "Recent Orders" : null, id: "recent-orders" },
+      {
+        label: data?.recent_orders ? "Recent Orders" : null,
+        id: "recent-orders",
+      },
       { label: data?.creator_fees ? "Creator Fees" : null, id: "creator-fees" },
       { label: data?.api_usage ? "API Usage" : null, id: "api-usage" },
       {
@@ -1901,7 +1904,10 @@
     const availableWindows = windows.filter((w) => snapshot[w.key]);
     if (!availableWindows.length) return null;
 
-    let activeKey = availableWindows.length > 1 ? availableWindows[1].key : availableWindows[0].key;
+    let activeKey =
+      availableWindows.length > 1
+        ? availableWindows[1].key
+        : availableWindows[0].key;
 
     // Summary stats
     const statsGrid = el("div", { class: "api-usage-stats mb-6" });
@@ -1912,9 +1918,21 @@
       if (!windowData) return;
 
       const statItems = [
-        { label: "Total API Calls", value: formatCompact(windowData.total_calls), raw: formatNum(windowData.total_calls) },
-        { label: "Unique Users", value: formatCompact(windowData.unique_users), raw: formatNum(windowData.unique_users) },
-        { label: "Active APIs", value: String(windowData.active_apis || 0), raw: null },
+        {
+          label: "Total API Calls",
+          value: formatCompact(windowData.total_calls),
+          raw: formatNum(windowData.total_calls),
+        },
+        {
+          label: "Unique Users",
+          value: formatCompact(windowData.unique_users),
+          raw: formatNum(windowData.unique_users),
+        },
+        {
+          label: "Active APIs",
+          value: String(windowData.active_apis || 0),
+          raw: null,
+        },
       ];
 
       for (const stat of statItems) {
@@ -1965,7 +1983,10 @@
           onclick: () => {
             activeKey = w.key;
             tabButtons.forEach((b, i) => {
-              b.classList.toggle("api-usage-tab--active", availableWindows[i].key === activeKey);
+              b.classList.toggle(
+                "api-usage-tab--active",
+                availableWindows[i].key === activeKey,
+              );
             });
             renderStats();
           },
