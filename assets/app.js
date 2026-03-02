@@ -1914,7 +1914,7 @@
       const statItems = [
         { label: "Total API Calls", value: formatCompact(windowData.total_calls), raw: formatNum(windowData.total_calls) },
         { label: "Unique Users", value: formatCompact(windowData.unique_users), raw: formatNum(windowData.unique_users) },
-        { label: "Active APIs", value: String(windowData.apis?.length || 0), raw: null },
+        { label: "Active APIs", value: String(windowData.active_apis || 0), raw: null },
       ];
 
       for (const stat of statItems) {
@@ -1968,7 +1968,6 @@
               b.classList.toggle("api-usage-tab--active", availableWindows[i].key === activeKey);
             });
             renderStats();
-            renderTable();
           },
         },
         w.label,
@@ -1977,71 +1976,12 @@
       tabs.appendChild(btn);
     }
 
-    // Table card
-    const tableCard = el("div", { class: CARD_CLASS.replace(/p-6 sm:p-7/g, "p-0") });
-    const tableInner = el("div", { class: "api-usage-table" });
-
-    function renderTable() {
-      tableInner.innerHTML = "";
-      const windowData = snapshot[activeKey];
-      if (!windowData?.apis?.length) {
-        tableInner.appendChild(
-          el(
-            "div",
-            { class: "p-6 text-sm text-slate-600 dark:text-white/80" },
-            "No API data available.",
-          ),
-        );
-        return;
-      }
-
-      const apis = windowData.apis;
-      const maxLog = Math.log10(Math.max(apis[0]?.count || 1, 1));
-      const minLog = Math.log10(Math.max(apis[apis.length - 1]?.count || 1, 1));
-      const logRange = maxLog - minLog || 1;
-
-      // Header row
-      const header = el("div", { class: "api-usage-row api-usage-header" });
-      header.appendChild(el("div", { class: "api-usage-rank" }, "#"));
-      header.appendChild(el("div", { class: "api-usage-name" }, "API"));
-      header.appendChild(el("div", { class: "api-usage-bar-wrap" }));
-      header.appendChild(el("div", { class: "api-usage-count" }, "Calls"));
-      tableInner.appendChild(header);
-
-      // Data rows — log scale for bars so smaller APIs are still visible
-      for (let i = 0; i < apis.length; i++) {
-        const api = apis[i];
-        const row = el("div", { class: "api-usage-row" });
-
-        const rankClass = i < 3 ? "api-usage-rank api-usage-rank--top" : "api-usage-rank";
-        row.appendChild(el("div", { class: rankClass }, String(i + 1)));
-        row.appendChild(el("div", { class: "api-usage-name", title: api.api_name }, api.api_name));
-
-        const barWrap = el("div", { class: "api-usage-bar-wrap" });
-        const logVal = Math.log10(Math.max(api.count, 1));
-        const barPct = Math.max(2, ((logVal - minLog) / logRange) * 100);
-        const bar = el("div", { class: "api-usage-bar", style: `width: ${barPct}%` });
-        barWrap.appendChild(bar);
-        row.appendChild(barWrap);
-
-        row.appendChild(
-          el("div", { class: "api-usage-count", title: formatNum(api.count) }, formatCompact(api.count)),
-        );
-
-        tableInner.appendChild(row);
-      }
-    }
-
     renderStats();
-    renderTable();
-
-    tableCard.appendChild(tableInner);
 
     if (availableWindows.length > 1) {
       wrap.appendChild(tabs);
     }
     wrap.appendChild(statsGrid);
-    wrap.appendChild(tableCard);
 
     if (asOf) {
       wrap.appendChild(

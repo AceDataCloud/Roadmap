@@ -59,17 +59,14 @@ def _load_env(path: str) -> None:
 TOPIC_ID = "fbb6d4ce-4c55-418a-87e0-f6e15815b3a9"  # api-usages
 CLS_REGION = "ap-hongkong"
 
-# SQL that returns api_name + call count, excluding null names, top N
-_SQL_TEMPLATE = (
-    "* | SELECT api_name, count(*) as cnt "
-    "GROUP BY api_name ORDER BY cnt DESC LIMIT {limit}"
-)
-
 # SQL for total call count
 _SQL_TOTAL = "* | SELECT count(*) as total"
 
 # SQL for unique user count
 _SQL_USERS = "* | SELECT count(DISTINCT user_id) as users"
+
+# SQL for distinct API count
+_SQL_ACTIVE_APIS = "* | SELECT count(DISTINCT api_name) as active_apis"
 
 
 def _cls_query(client, query: str, from_ms: int, to_ms: int) -> dict:
@@ -98,17 +95,6 @@ def _parse_analysis_records(result: dict) -> list[dict]:
     return records
 
 
-def _query_api_counts(client, from_ms: int, to_ms: int, limit: int = 100) -> list[dict]:
-    """Get per-API call counts for a time window."""
-    sql = _SQL_TEMPLATE.format(limit=limit)
-    result = _cls_query(client, sql, from_ms, to_ms)
-    rows = _parse_analysis_records(result)
-    # Filter out null api_name and sort
-    rows = [r for r in rows if r.get("api_name")]
-    rows.sort(key=lambda x: x.get("cnt", 0), reverse=True)
-    return [{"api_name": r["api_name"], "count": r["cnt"]} for r in rows]
-
-
 def _query_total(client, from_ms: int, to_ms: int) -> int:
     """Get total API call count for a time window."""
     result = _cls_query(client, _SQL_TOTAL, from_ms, to_ms)
@@ -127,6 +113,15 @@ def _query_unique_users(client, from_ms: int, to_ms: int) -> int:
     return 0
 
 
+def _query_active_apis(client, from_ms: int, to_ms: int) -> int:
+    """Get distinct API count for a time window."""
+    result = _cls_query(client, _SQL_ACTIVE_APIS, from_ms, to_ms)
+    rows = _parse_analysis_records(result)
+    if rows:
+        return rows[0].get("active_apis", 0)
+    return 0
+
+
 # ── main ─────────────────────────────────────────────────────────────────────
 
 def main() -> int:
@@ -138,12 +133,6 @@ def main() -> int:
         type=Path,
         default=_default_output_path(),
         help="Output JSON path (default: Roadmap/config/api_usage.json)",
-    )
-    parser.add_argument(
-        "--limit",
-        type=int,
-        default=100,
-        help="Max number of APIs to include (default: 100)",
     )
     args = parser.parse_args()
 
@@ -192,9 +181,9 @@ def main() -> int:
         print(f"[api_usage_snapshot] Querying {window_name} ...", file=sys.stderr)
 
         try:
-            apis = _query_api_counts(client, start_ms, now_ms, args.limit)
             total = _query_total(client, start_ms, now_ms)
             users = _query_unique_users(client, start_ms, now_ms)
+            active_apis = _query_active_apis(client, start_ms, now_ms)
         except Exception as exc:
             print(
                 f"[api_usage_snapshot] ERROR querying CLS for {window_name}: {exc}",
@@ -205,7 +194,7 @@ def main() -> int:
         payload[window_name] = {
             "total_calls": total,
             "unique_users": users,
-            "apis": apis,
+            "active_apis": active_apis,
         }
 
     _atomic_write_json(Path(args.output), payload)
@@ -217,7 +206,7 @@ def main() -> int:
         print(
             f"  {wn}: {data['total_calls']:,} calls, "
             f"{data['unique_users']:,} users, "
-            f"{len(data['apis'])} APIs",
+            f"{data['active_apis']} APIs",
             file=sys.stderr,
         )
 
