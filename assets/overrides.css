@@ -1706,6 +1706,107 @@ html:not(.dark) .orders-amount {
   }
 }
 
+/* ── API Usage ──────────────────────────────────────────────────── */
+
+.api-usage-stats {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 640px) {
+  .api-usage-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.api-usage-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 1.25rem;
+  padding: 3px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  width: fit-content;
+}
+
+html:not(.dark) .api-usage-tabs {
+  background: rgba(15, 23, 42, 0.04);
+  border-color: rgba(15, 23, 42, 0.08);
+}
+
+.api-usage-tab {
+  padding: 6px 18px;
+  border-radius: 11px;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(226, 232, 240, 0.55);
+  cursor: pointer;
+  transition: all 140ms ease;
+  border: none;
+  background: transparent;
+  letter-spacing: -0.01em;
+}
+
+html:not(.dark) .api-usage-tab {
+  color: rgba(15, 23, 42, 0.5);
+}
+
+.api-usage-tab:hover {
+  color: rgba(226, 232, 240, 0.85);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+html:not(.dark) .api-usage-tab:hover {
+  color: rgba(15, 23, 42, 0.8);
+  background: rgba(15, 23, 42, 0.04);
+}
+
+.api-usage-tab--active {
+  color: rgba(255, 255, 255, 0.95) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+html:not(.dark) .api-usage-tab--active {
+  color: rgba(15, 23, 42, 0.92) !important;
+  background: white !important;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.1);
+}
+
+
+}
+
+.api-usage-header .api-usage-bar-wrap {
+  visibility: hidden;
+}
+
+@media (max-width: 639px) {
+  .api-usage-row,
+  .api-usage-header {
+    padding: 10px 16px;
+  }
+
+  .api-usage-bar-wrap {
+    display: none;
+  }
+
+  .api-usage-name {
+    font-size: 12.5px;
+  }
+
+  .api-usage-count {
+    font-size: 13px;
+    min-width: 70px;
+  }
+
+  .api-usage-rank {
+    width: 26px;
+    font-size: 11px;
+  }
+}
+
 /* Safe area for notch devices */
 @supports (padding-bottom: env(safe-area-inset-bottom)) {
   .mobile-section-nav {
