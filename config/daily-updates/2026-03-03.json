@@ -1,0 +1,143 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-03",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#325",
+      "title": "Major Toolchain and iOS Upgrade in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ios",
+        "upgrade",
+        "eslint",
+        "prettier",
+        "husky",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/325",
+      "summary": "This update includes a significant upgrade to the iOS deployment target from 13.0 to 16.0, ensuring compatibility with the latest App Store requirements. Additionally, the development toolchain has been modernized with updates to ESLint, Prettier, and Husky, enhancing code quality and maintainability. Various outdated dependencies have also been upgraded or removed, streamlining the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#126",
+      "title": "Fix CRLF Issues in Blog Publish Workflow in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "workflow",
+        "blog",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update addresses the handling of CRLF characters in the blog publish workflow. It modifies the title extraction and content processing to strip trailing carriage returns, ensuring filenames are correctly formatted. These changes enhance the reliability of the blog publishing process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#125",
+      "title": "Enhance daily blog publishing workflow in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "blog",
+        "automation",
+        "github-actions",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new GitHub Action that automates the daily publishing of a random article from the docs directory to Germey/BlogSource as a Hexo blog post. The workflow is scheduled to run every day at 10:00 AM UTC, ensuring fresh content is consistently available. This enhancement streamlines the blogging process and increases engagement with updated material."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#502",
+      "title": "Enhance Error Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "network",
+        "localization",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves error handling in the nano-banana service by implementing 429 status code management and detecting Chinese rate-limit messages. Users will now receive a sanitized English error message instead of raw upstream text. Additionally, network error handling has been added to enhance user experience during connectivity issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#501",
+      "title": "Enhanced Suno Upload Timeout and Error Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "timeout",
+        "errorhandling",
+        "upload",
+        "platformservice"
+      ],
+      "public": false,
+      "summary": "This update increases the Suno upload timeout from 60 seconds to 150 seconds, ensuring smoother uploads. Additionally, it improves error handling for network issues, preventing undefined error messages when client-side timeouts occur. These changes enhance the reliability of both ttapi and openaihk workers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#500",
+      "title": "Enhance image upload handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "image-upload",
+        "error-handling",
+        "code-refactor"
+      ],
+      "public": false,
+      "summary": "This update modifies the image upload process by adding checks for specific finish reasons, improving error handling for blocked images. Additionally, it refines the code structure for better readability and maintainability. These changes aim to enhance the overall robustness of the image processing functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#124",
+      "title": "Enhance suno documentation for clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "The suno upload documentation has been updated with new examples and improved clarity. Key changes include updated success responses and additional audio ID details. These enhancements aim to streamline the development process for users integrating with the API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#499",
+      "title": "Enhance Suno Upload Functionality in Platform Service 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "audio",
+        "upload",
+        "enhancement",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update improves the Suno audio upload feature by adding new fields such as image URLs, audio URL, title, and duration to the response. Modifications were made in both the OpenAIHK and TTAPI worker files to ensure these enhancements are integrated smoothly. This will provide users with more comprehensive audio upload data."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#498",
+      "title": "Enhance error handling for 429 responses in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "api",
+        "ttapi",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update improves the error handling for 429 responses in the TTApi worker. Three error handlers now explicitly manage 429 errors, returning a more descriptive message instead of an undefined error. Additionally, the catch-all handler has been updated for better compatibility with different error response formats."
+    }
+  ]
+}
