@@ -3,6 +3,121 @@
   "date": "2026-03-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#331",
+      "title": "Streamline Native Login Flow in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "login",
+        "ios",
+        "native",
+        "vue"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/331",
+      "summary": "This update addresses an issue on iOS Capacitor where `window.location.reload()` could leave users on a blank screen after login. Instead, the auth panel is now hidden and users are navigated to the home page using the Vue router, enhancing the login experience on native platforms. This change works in conjunction with a companion PR to fully resolve the iOS login flow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#3",
+      "title": "Fix silent login failure on iOS Capacitor in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "bugfix",
+        "ios",
+        "capacitor",
+        "frontend",
+        "auth"
+      ],
+      "public": false,
+      "summary": "This update addresses a silent login failure in the Nexior app on iOS Capacitor due to a `postMessage` targetOrigin mismatch. The fix modifies the `crossWindow.ts` file to default the targetOrigin to `'*'` when no usable HTTP referrer is available, ensuring that the message is correctly sent to the parent window. Security is maintained as the receiver validates the event origin before processing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#47",
+      "title": "Enhance Nginx Caching for SPA Shells in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "nginx",
+        "cache",
+        "frontend",
+        "update",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "This update modifies the Nginx configuration to add a specific location block for `/index.html`, ensuring that responses include `Cache-Control: private`. This change prevents the Edge Optimizer from caching the SPA shell for the root path, allowing Googlebot to receive the prerendered page instead. Additionally, a note is included to clear the EO cache for affected paths after deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#330",
+      "title": "Mobile App Name Change to AceData in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "branding",
+        "mobile",
+        "update",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/330",
+      "summary": "The mobile app display name has been successfully changed from 'Nexior' to 'AceData' across all platforms. Key files modified include the app configuration, HTML title, and iOS/Android resource files to reflect this new branding. This update enhances brand consistency and user recognition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#329",
+      "title": "Update Podfile.lock for Capacitor 7.5.0 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ios",
+        "capacitor",
+        "update",
+        "build",
+        "fix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/329",
+      "summary": "This update aligns the `Podfile.lock` with the current version of Capacitor 7.5.0, replacing the previous version 6.1.1. This change resolves the Xcode sandbox sync error encountered during builds, enhancing the development experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#46",
+      "title": "Enhance Cache-Control for SPA Shell in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "nginx",
+        "cache",
+        "seo",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update modifies the Nginx configuration to include 'private' in the Cache-Control header for the SPA shell. This change prevents shared caches from storing the shell, ensuring that Googlebot receives the prerendered page instead of the cached shell. The new header configuration will enhance SEO by delivering the correct content to search engine crawlers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#328",
+      "title": "Upgrade Gradle, CocoaPods, and Capacitor in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "upgrade",
+        "dependencies",
+        "android",
+        "ios",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/328",
+      "summary": "This update enhances the Nexior project by upgrading key dependencies. The Android Gradle Plugin has been updated to version 8.13.2, and the Gradle wrapper is now at 8.13. Additionally, Capacitor has been upgraded to 7.5.0 along with CocoaPods to version 1.16.2. A Javadoc comment has also been added to the MainActivity for better documentation."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#327",
       "title": "Fix Android Login Flow and Site Configuration in Nexior 🚀",
       "tags": [
