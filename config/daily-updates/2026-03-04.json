@@ -1,0 +1,69 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-04",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#128",
+      "title": "Boost SEO with Enhanced Sitemap and Robots.txt in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "seo",
+        "sitemap",
+        "robots",
+        "backend",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update enhances the sitemap.xml and robots.txt files to improve SEO crawling. Key changes include the addition of a homepage entry with a priority of 1.0 and weekly change frequency for all entries in the sitemap. The robots.txt file now disallows certain paths while allowing access to documents, services, and earnings, optimizing crawler efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#504",
+      "title": "Translate Chinese Error Messages to English in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "localization",
+        "api",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update enhances error handling by translating Chinese error messages to English before they are thrown. Key changes were made in multiple handler files to ensure that API responses consistently return English error messages, improving clarity for users. This will streamline error classification and enhance the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#503",
+      "title": "Enhance Midjourney Error Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "midjourney",
+        "api",
+        "platform-service",
+        "bug-fix"
+      ],
+      "public": false,
+      "summary": "This update improves error classification for the Midjourney API by accurately categorizing specific Chinese error messages. The changes ensure that 'Prompt参数错误' is treated as a BadRequestError (400) and '图片未通过审核' as a ForbiddenError (403) across all four Midjourney handlers. This adjustment aims to reduce the occurrence of misleading 500 errors, enhancing user experience and system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#63",
+      "title": "Boost aiohttp client size to 10MB for smoother uploads in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "aiohttp",
+        "gateway",
+        "fix",
+        "upload",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update increases the aiohttp client_max_size from 1MB to 10MB for the /record endpoint. This change addresses 413 errors encountered when posting large payloads, such as Claude Code requests with approximately 580KB system prompts. The adjustment enhances the platform's ability to handle larger data submissions effectively."
+    }
+  ]
+}
