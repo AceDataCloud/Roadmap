@@ -3,6 +3,121 @@
   "date": "2026-03-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#327",
+      "title": "Fix Android Login Flow and Site Configuration in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "android",
+        "login",
+        "fix",
+        "nexior",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/327",
+      "summary": "This update resolves issues with the Android login flow by ensuring users are directed to the official site instead of a site configuration page. Key changes include modifying the site origin retrieval to use the official hub URL for native platforms and skipping the site config page redirect after login. These improvements enhance the user experience for Android and iOS users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#45",
+      "title": "Enhance CDN Handling for Prerendered Pages in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "nginx",
+        "cdn",
+        "prerender",
+        "frontend",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where the EdgeOne CDN was caching prerendered HTML for regular browser requests, leading to incorrect content delivery. By adding a `Cache-Control: private, no-store` header to the nginx configuration, we ensure that only Googlebot receives the prerendered content while regular browsers get the lightweight SPA shell. This change improves the user experience and maintains the integrity of the content served."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#505",
+      "title": "Fix stream consumption issue in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "streaming",
+        "httpx",
+        "tests",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue in the `write_response_status()` function that caused streaming requests to fail with 500 errors due to premature stream consumption. The fix ensures that `aread()` is only called for non-200 error responses, allowing successful streaming responses to be processed correctly. Unit tests have been added to cover various scenarios, ensuring robust functionality moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#326",
+      "title": "Fix login flow on Android to prevent Chrome redirection in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "android",
+        "login",
+        "fix",
+        "user-experience",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/326",
+      "summary": "This update resolves a critical issue where the login process on Android opened Chrome instead of handling it within the app, leading to a dead localhost page. Key changes include modifying the logout action to show an in-app login popup and adjusting the base URL to prevent broken redirects. These fixes enhance the user experience by ensuring a seamless authentication flow on native platforms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#44",
+      "title": "Fix SPA 404 on Refresh in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "nginx",
+        "frontend",
+        "hotfix",
+        "spa"
+      ],
+      "public": false,
+      "summary": "This hotfix resolves hard 404 errors on all SPA routes when users refresh the page. The issue stemmed from a bug in nginx 1.28.2 related to multiple 'if' blocks, which prevented the proper handling of requests. The solution involved replacing conditional logic with map directives and ensuring that the SPA fallback is always served correctly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#43",
+      "title": "Fix CI Docker Build by Handling Unset PRERENDER_TOKEN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ci",
+        "docker",
+        "frontend",
+        "build",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update resolves a CI Docker build issue caused by the docker-compose configuration requiring the PRERENDER_TOKEN to be set. The change modifies the environment variable handling, allowing the build to proceed even when the token is unset. This enhancement improves the CI process and ensures smoother deployments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#42",
+      "title": "Boosting SEO with Enhanced Metadata in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "seo",
+        "frontend",
+        "metadata",
+        "nginx",
+        "prerender",
+        "docker"
+      ],
+      "public": false,
+      "summary": "This update introduces significant SEO enhancements for the PlatformFrontend, including the addition of Open Graph tags, JSON-LD structured data, and canonical URLs. A unified Nginx configuration and a switch to hosted Prerender.io improve rendering efficiency and fallback behavior. The changes ensure better visibility and performance for search engines, enhancing user experience across the platform."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#128",
       "title": "Boost SEO with Enhanced Sitemap and Robots.txt in Backend 🚀",
       "tags": [
