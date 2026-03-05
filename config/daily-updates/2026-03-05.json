@@ -3,6 +3,38 @@
   "date": "2026-03-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#5",
+      "title": "Enhance OAuth Flow with postMessage in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "oauth",
+        "frontend",
+        "nexior",
+        "iframe",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update modifies the OAuth flow for GitHub and Google login components to utilize postMessage when in a Nexior iframe, instead of traditional redirects. This change ensures a smoother user experience by allowing the parent app to handle the OAuth process without breaking iframe restrictions. Key files updated include Github.vue and Google.vue."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#4",
+      "title": "Enhance Mobile OAuth Support in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "oauth",
+        "mobile",
+        "frontend",
+        "auth",
+        "capacitor"
+      ],
+      "public": false,
+      "summary": "This update introduces a new native redirect flow for Google and GitHub OAuth in Capacitor mobile apps, addressing issues with the previous popup method. Key changes include modifications to the login and callback components to handle deep links effectively, ensuring a seamless return to the app post-authentication. This enhancement improves user experience for mobile users significantly."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#509",
       "title": "Enhance OpenAI Backup Provider Configuration in Platform Service 🚀",
       "tags": [
