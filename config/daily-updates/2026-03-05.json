@@ -3,6 +3,21 @@
   "date": "2026-03-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#509",
+      "title": "Enhance OpenAI Backup Provider Configuration in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "openai",
+        "backup",
+        "configuration",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces wcnb as a backup OpenAI-compatible provider in the checker configuration. The base URL is set to https://wcnb.ai/v1/ with full model capability coverage, and its rank is configured slightly below ephone to ensure it serves as a fallback option. Key fields such as base_url, enabled, and api_key have been validated and populated."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#507",
       "title": "Enhance Checker to Validate Messages API in Platform Service 🚀",
       "tags": [
