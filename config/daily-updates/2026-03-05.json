@@ -1,0 +1,37 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-05",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#507",
+      "title": "Enhance Checker to Validate Messages API in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "validation",
+        "checker",
+        "claude",
+        "api"
+      ],
+      "public": false,
+      "summary": "The checker now validates both the `chat/completions` and `/messages` endpoints for Claude models. A new helper function, `_check_messages_api()`, ensures that both endpoints must return valid responses for a provider to be marked as valid. This update prevents false positives where a provider might pass the checker while having issues with the Messages API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#506",
+      "title": "Enhance failover handling for upstream errors in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "retry",
+        "error-handling",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a mechanism to trigger failover retries when upstream services return HTTP 502, 503, or 504 errors. A new exception, UpstreamRetryableError, is raised before writing response headers, allowing the retry loop to attempt connections to alternative providers. The changes are supported by 16 passing tests, ensuring robust error handling."
+    }
+  ]
+}
