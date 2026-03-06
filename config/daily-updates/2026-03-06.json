@@ -3,6 +3,53 @@
   "date": "2026-03-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#512",
+      "title": "Improve error handling for user input in Platform Service 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "api",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update classifies upstream 'Please try rephrasing' failures as `BadRequestError` instead of `ApiError`. The change is applied in both Suno upload polling and lyric generation polling flows, ensuring more accurate error reporting. This adjustment helps avoid misleading server error messages when user input needs modification."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#332",
+      "title": "Enhance Mobile OAuth with In-App Browser in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "oauth",
+        "mobile",
+        "capacitor",
+        "authentication",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/332",
+      "summary": "This update improves the mobile OAuth login process by implementing an in-app browser and deep link callbacks for Google and GitHub authentication. Key changes include modifications to Android and iOS configurations, ensuring a smoother user experience without the need for iframe popups. The integration of @capacitor/browser enhances security and usability for mobile users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#511",
+      "title": "Enhance nano-banana error handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "content-moderation",
+        "improvement",
+        "bugfix",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update improves the classification of nano-banana image generation errors across all providers, ensuring that content moderation errors return the correct HTTP 403 status instead of a generic 500. Key changes include adding a handler for ForbiddenError, enhancing keyword detection in error messages, and preserving original error messages for better user feedback. These adjustments will lead to more meaningful error responses without impacting billing."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#48",
       "title": "Enhance API Try-It Form with oneOf Support in Frontend Web 🚀",
       "tags": [
