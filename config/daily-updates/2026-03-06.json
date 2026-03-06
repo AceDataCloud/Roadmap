@@ -3,6 +3,22 @@
   "date": "2026-03-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#517",
+      "title": "Enhance Midjourney API Usage Metadata in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "midjourney",
+        "api",
+        "metadata",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces the `getRecordMetadata()` function to Midjourney handlers, enriching API usage logs with essential fields such as mode, action, prompt, and resolution. Key changes include modifications to ephone and ttapi handlers to override metadata retrieval, ensuring that business-relevant information is captured effectively. This enhancement improves data tracking and analytics for API usage."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#514",
       "title": "Enhance wcnb Metadata for Better Billing Clarity in Platform Service 🚀",
       "tags": [
