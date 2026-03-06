@@ -3,6 +3,86 @@
   "date": "2026-03-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#514",
+      "title": "Enhance wcnb Metadata for Better Billing Clarity in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "metadata",
+        "wcnb",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces essential metadata fields, `model` and `action`, to the wcnb worker's nano-banana billing logs. By implementing `getRecordMetadata()` and `getRecordRequestBody()` methods, the logs will now provide clearer insights into pricing tiers. This change improves the overall accuracy of billing records for wcnb requests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#515",
+      "title": "Enhance Metadata Recording for Ankit Channel in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "metadata",
+        "ttapi",
+        "fix",
+        "platform-service",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a new method, `getRecordMetadata()`, to the `BaseHandler` class, ensuring that metadata such as `model` and `action` is recorded for the ankit channel. Previously, this information was missing due to the method not being called in `recordUsage()`. Now, all ttapi handlers that override this method will correctly log relevant metadata, improving the accuracy of API usage records."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#335",
+      "title": "Enhance OAuth Recovery Process in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "auth",
+        "oauth",
+        "bugfix",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/335",
+      "summary": "This update fixes the native loading text key and improves the OAuth flow by closing the auth panel and re-triggering the login process when deep-link token exchange fails. Additionally, if the user manually closes the in-app browser, the app will now fall back to the iframe login UI. These changes enhance user experience by preventing users from getting stuck on a loading screen."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#334",
+      "title": "Enhance Chat UI for Better Readability in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "design",
+        "chat",
+        "mobile",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/334",
+      "summary": "This update introduces a redesigned chat interface with softer message bubbles and improved spacing for enhanced readability. A new inline error card replaces the previous alert, integrating a Top Up action for user convenience. Additionally, the chat layout has been refined for clearer sidebar separation and improved mobile usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#513",
+      "title": "Enhance Seedance Billing Accuracy in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "seedance",
+        "api",
+        "metadata",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces a new method to extract command-line parameters from prompts, ensuring accurate billing for Seedance. Key changes include the prioritization of request body parameters over prompt parameters and the adoption of a new API format for sending metadata. The billing payload is now guaranteed to include essential fields like resolution and model, improving overall billing accuracy."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#512",
       "title": "Improve error handling for user input in Platform Service 🎉",
       "tags": [
