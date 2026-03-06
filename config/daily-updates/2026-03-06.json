@@ -1,0 +1,37 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-06",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#48",
+      "title": "Enhance API Try-It Form with oneOf Support in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "api",
+        "frontend",
+        "enhancement",
+        "openapi",
+        "forms"
+      ],
+      "public": false,
+      "summary": "This update introduces support for OpenAPI's oneOf with discriminator in the API Try-It form, addressing issues where properties were rendered flat, leading to invalid payloads. Key changes include extending the ISchema interface and updating Form.vue to render a variant selector and handle branch-specific properties effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#510",
+      "title": "Enhance error handling for Suno rephrasing requests in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "bad-request",
+        "suno",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces a new classification for errors returned by Suno when prompts are rejected due to vague requests. Specifically, it adds a BadRequestError (400) for messages indicating the need for more specific details. This change improves the clarity of error handling in both lyrics and audio generation paths."
+    }
+  ]
+}
