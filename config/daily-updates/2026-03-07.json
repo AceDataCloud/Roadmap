@@ -1,0 +1,22 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-07",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#30",
+      "title": "Fix Tencent Cloud Secrets for API Usage Snapshot in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "fix",
+        "workflow",
+        "github-actions",
+        "secrets"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/30",
+      "summary": "This update resolves an issue where the 'Generate API usage snapshot' step was skipped due to environment variable scope. The Tencent Cloud secrets have been moved from a step-level to a job-level environment block, ensuring the workflow can access them correctly. This change will allow the API usage data to be generated as intended."
+    }
+  ]
+}
