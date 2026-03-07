@@ -19,6 +19,8 @@ jobs:
       PGSQL_HOST: ${{ secrets.PGSQL_HOST }}
       PGSQL_USER: ${{ secrets.PGSQL_USER }}
       PGSQL_PASSWORD: ${{ secrets.PGSQL_PASSWORD }}
+      TENCENT_CLOUD_SECRET_ID: ${{ secrets.TENCENT_CLOUD_SECRET_ID }}
+      TENCENT_CLOUD_SECRET_KEY: ${{ secrets.TENCENT_CLOUD_SECRET_KEY }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -73,9 +75,6 @@ jobs:
 
       - name: Generate API usage snapshot
         if: ${{ env.TENCENT_CLOUD_SECRET_ID != '' && env.TENCENT_CLOUD_SECRET_KEY != '' }}
-        env:
-          TENCENT_CLOUD_SECRET_ID: ${{ secrets.TENCENT_CLOUD_SECRET_ID }}
-          TENCENT_CLOUD_SECRET_KEY: ${{ secrets.TENCENT_CLOUD_SECRET_KEY }}
         run: |
           pip install tencentcloud-sdk-python
           python3 scripts/generate_api_usage_snapshot.py
