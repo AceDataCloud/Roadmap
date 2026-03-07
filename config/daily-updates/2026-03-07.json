@@ -3,6 +3,22 @@
   "date": "2026-03-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AutoCert#3",
+      "title": "Enhanced DNS Sleep for Let's Encrypt Verification in Auto Cert 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AutoCert",
+        "dns",
+        "letsencrypt",
+        "acme",
+        "fix",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update increases the DNS sleep duration for the acme.sh command from 20 seconds to 120 seconds. This change addresses issues with Let's Encrypt failing to verify the `*.cdn.acedata.cloud` domain due to insufficient propagation time. The adjustment ensures that the TXT record is fully propagated before verification attempts, improving reliability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AutoCert#2",
       "title": "Remove OCSP Must-Staple Flag for Certs in Auto Cert 🚫",
       "tags": [
