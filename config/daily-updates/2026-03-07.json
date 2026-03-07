@@ -3,6 +3,82 @@
   "date": "2026-03-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AutoCert#2",
+      "title": "Remove OCSP Must-Staple Flag for Certs in Auto Cert 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "AutoCert",
+        "certificates",
+        "letsencrypt",
+        "bugfix",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update removes the `--ocsp-must-staple` flag from the acme.sh command in `renew.py` due to Let's Encrypt ending support for this feature. This change resolves the HTTP 403 error encountered during certificate finalization. The modification ensures smoother certificate issuance moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#146",
+      "title": "Strengthened Platform Publishers Against Failures in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "bugfix",
+        "improvement",
+        "reliability",
+        "automation",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses 100 open issues related to transient failures across 10 platform publishers. Key improvements include enhanced URL checks, added retry mechanisms, and better handling of login states and content length validations. These changes significantly increase the robustness and reliability of the publishing process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#5",
+      "title": "Updated README with All 23 Submodules in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "update",
+        "readme",
+        "submodules"
+      ],
+      "public": false,
+      "summary": "The README has been enhanced to include all 23 submodules, correcting the previous count of 19. Four new entries have been added, including `Wisdom` for WeChat automation and Helm charts for various projects. The table is now alphabetically sorted for better clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AutoCert#1",
+      "title": "Fix secrets handling in Auto Cert 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "AutoCert",
+        "fix",
+        "workflow",
+        "security",
+        "github-actions"
+      ],
+      "public": false,
+      "summary": "This update resolves workflow failures caused by the unavailability of the `secrets` context in step-level conditions. The solution involves moving the secrets to environment variables and using shell conditionals within the `run:` command. This change enhances security by preventing raw secret content from being injected into the shell command line."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#130",
+      "title": "Updated Default for Global Consumption in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "migration",
+        "models"
+      ],
+      "public": false,
+      "summary": "The default value for the `allow_consume_global` field in the Application model has been changed from `False` to `True`. This update allows newly created applications to use global points by default. A corresponding migration has also been generated to reflect this change."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Roadmap#30",
       "title": "Fix Tencent Cloud Secrets for API Usage Snapshot in Roadmap 🚀",
       "tags": [
