@@ -1,0 +1,133 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-08",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#51",
+      "title": "Enhance API Dropdown with Smooth Skeleton Loading in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "loading",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update replaces the previous v-loading spinner with an el-skeleton animated placeholder for the API dropdown. The new skeleton matches the select height and provides a smoother user experience while APIs are loading. This change improves the visual appeal and usability of the API selection process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AutoCert#7",
+      "title": "Enhance Multi-Domain Profile Support in Auto Cert 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AutoCert",
+        "feature",
+        "refactor",
+        "cli",
+        "profiles",
+        "certificates"
+      ],
+      "public": false,
+      "summary": "This update refactors `renew.py` to support multiple domain profiles, allowing for streamlined certificate management across different domain groups. Key changes include the introduction of a new `--profile` CLI flag, which enables users to specify profiles for certificate renewal, and the restructuring of certificate storage into per-profile subdirectories. The workflow remains unchanged, ensuring a smooth transition for existing users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AutoCert#6",
+      "title": "Fix TSE region and add CertSource for gateway cert update in Auto Cert 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AutoCert",
+        "bugfix",
+        "certificates",
+        "api",
+        "security",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update resolves issues with the TSE gateway certificate update process. The default region has been corrected to 'ap-hongkong', and 'CertSource: \"ssl\"' has been added to ensure proper API behavior. Additionally, the domain filter has been refined to only include valid 'acedata.cloud' domains, enhancing security and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AutoCert#5",
+      "title": "Fix EdgeOne Cert Update Logic in Auto Cert 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AutoCert",
+        "bugfix",
+        "certificates",
+        "api",
+        "edgeone",
+        "update"
+      ],
+      "public": false,
+      "summary": "The EdgeOne certificate update process was malfunctioning due to the use of a non-existent field in the API response. This update replaces `DescribeHostsSetting` with `DescribeAccelerationDomains`, ensuring that all online acceleration domains are correctly identified and certificates are updated. Testing confirmed successful updates across multiple zones."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AutoCert#4",
+      "title": "Fix K8S Secret Names and TSE Error Handling in Auto Cert 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AutoCert",
+        "k8s",
+        "error-handling",
+        "workflow",
+        "secrets",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update corrects the K8S secret names from `KUBECONFIG_HK` and `KUBECONFIG_US` to `KUBE_CONFIG_HK` and `KUBE_CONFIG_SV`, aligning with the new cluster naming convention. Additionally, it enhances the error handling for TSE operations to prevent process failures when encountering resource not found errors. These changes improve the reliability and clarity of the deployment workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#50",
+      "title": "Enhance API Dropdown Loading in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "api",
+        "loading",
+        "user-experience",
+        "performance"
+      ],
+      "public": false,
+      "summary": "The API dropdown in the Usage History page now fetches its options independently, improving user experience by displaying a loading indicator while data is being retrieved. This change allows the API list to load in parallel with applications, reducing wait times and enhancing overall performance. Key modifications were made in the List.vue file to implement these updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#49",
+      "title": "Enhance Footer with Service Status Link in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "i18n",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update adds a 'Service Status' link to the platform footer, directing users to https://status.acedata.cloud. The link has been integrated into the 'Links' column of BottomFooter.vue, following the Privacy Policy. Additionally, an i18n key for the new link has been created, ensuring support for all 11 target languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/StatusPage#5",
+      "title": "Fix no-data bars to show gray instead of green in Status Page 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "StatusPage",
+        "bugfix",
+        "frontend",
+        "backend",
+        "statuspage",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/StatusPage/pull/5",
+      "summary": "This update addresses the issue where services with major outages displayed all-green bar charts, misleading users about their operational status. The backend now assigns `uptime: null` for empty buckets, while the frontend renders these no-data slots in gray, enhancing clarity. Additionally, the date handling in the `getLastNDays()` function has been improved to prevent timezone mismatches."
+    }
+  ]
+}
