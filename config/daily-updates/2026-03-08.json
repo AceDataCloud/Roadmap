@@ -3,6 +3,162 @@
   "date": "2026-03-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Docs#4",
+      "title": "Updated favicon for a polished look in Docs 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "favicon",
+        "update",
+        "docs",
+        "visual",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/4",
+      "summary": "The favicon for the documentation site has been updated to match the platform's favicon.ico, resolving previous logo display issues. This change enhances the visual consistency across the platform and improves user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#153",
+      "title": "New MCP Guides for Flux, Seedance, Seedream, and ShortURL in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "mcp",
+        "backend",
+        "zh-CN",
+        "guides"
+      ],
+      "public": false,
+      "summary": "We've added comprehensive zh-CN MCP documentation for four new servers: Flux, Seedance, Seedream, and ShortURL. Each guide follows the established format and includes essential setup instructions and features. Additionally, Document objects and Translation entries have been created in the database to support these updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#152",
+      "title": "Update CI to Trigger Builds for Translations in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "ci",
+        "deploy",
+        "translations",
+        "backend"
+      ],
+      "public": false,
+      "summary": "Modified the CI configuration to only ignore the Chinese documentation directory during deployment. This change ensures that translated documents will now trigger Docker builds, deployments, and database synchronization, improving the workflow for maintaining multilingual support."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#151",
+      "title": "Update environment variable for translation workflow in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "update",
+        "backend",
+        "workflow",
+        "script"
+      ],
+      "public": false,
+      "summary": "This update renames the environment variable from ACEDATACLOUD_API_TOKEN to ACEDATACLOUD_OPENAI_KEY in both the translate workflow and the associated script. The change ensures that the correct key is used for translation tasks, enhancing the functionality of the translation process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#150",
+      "title": "Optimize CI by Excluding Docs from Deploy Triggers in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "ci",
+        "deploy",
+        "backend",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "This update modifies the CI configuration to exclude changes in the 'docs/' directory from triggering Docker builds and Kubernetes deployments. This adjustment ensures that documentation updates, such as translations and SEO content, do not unnecessarily initiate deployment processes, streamlining the workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#149",
+      "title": "Streamline translation process by removing CronJob in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "chore",
+        "cleanup",
+        "backend",
+        "automation"
+      ],
+      "public": false,
+      "summary": "The translation CronJob YAML has been removed as translation is now managed through GitHub Actions. This change eliminates 65 lines of configuration, simplifying the deployment process and enhancing maintainability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#148",
+      "title": "Revamp Translation Process with GitHub Actions in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "translation",
+        "automation",
+        "github-actions",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new GitHub Actions workflow that triggers on changes to the Chinese documentation, translating only the modified files. The old translation CronJob has been removed, and a new script for translating documents has been added. This change streamlines the translation process and enhances efficiency in managing documentation updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#147",
+      "title": "Revamped Documentation Structure for Multilingual Support in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "i18n",
+        "backend",
+        "translations",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update reorganizes the documentation into an internationalization (i18n) structure, moving files to language-specific directories. A total of 17 language translations have been exported from the database, and the sync script has been updated to ensure all languages are synchronized. This enhances accessibility and usability for a global audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#3",
+      "title": "Streamline SEO Content Sync in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "seo",
+        "docs",
+        "sync",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/3",
+      "summary": "This update replaces the LLM-based SEO generation with a direct file copy from PlatformBackend, enhancing the efficiency of content management. The sync script has been modified to facilitate the transfer of pre-generated SEO content, ensuring that the latest materials are readily available. This change is expected to improve the accuracy and relevance of SEO resources in the documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#146",
+      "title": "Boost SEO with Pre-Generated Content in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "seo",
+        "content",
+        "backend",
+        "ai",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces 118 pre-generated Chinese SEO content files along with a deterministic template generator. These additions enhance the platform's capabilities for SEO optimization, providing developers with ready-to-use resources for better visibility and engagement. The structured content covers various AI topics, making it a valuable asset for users."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPMidjourney#11",
       "title": "Enhance README with Badges and Formatting in M C P Midjourney 🚀",
       "tags": [
