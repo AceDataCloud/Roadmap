@@ -3,6 +3,406 @@
   "date": "2026-03-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#11",
+      "title": "Enhance README with Badges and Formatting in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "docs",
+        "readme",
+        "badges",
+        "formatting"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/11",
+      "summary": "This update adds PyPI version and download badges to the README, improving visibility for users. Additionally, markdown table columns have been aligned for consistent formatting, enhancing readability and presentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#11",
+      "title": "Enhance README with PyPI Badges and Table Formatting in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "docs",
+        "readme",
+        "badges",
+        "formatting"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/11",
+      "summary": "This update adds PyPI version and download badges to the README for better visibility of package status. Additionally, the markdown table columns have been aligned for consistent formatting, improving readability and presentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#11",
+      "title": "Enhanced README Table Formatting in M C P Veo ✨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "docs",
+        "readability",
+        "markdown",
+        "formatting"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/11",
+      "summary": "This update improves the readability of the README by aligning markdown table columns. A total of 55 changes were made, including 28 additions and 27 deletions, ensuring a more consistent format throughout the document. These enhancements will help users better understand the tools and their descriptions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#12",
+      "title": "Enhanced README Formatting for Clarity in M C P Suno ✨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "docs",
+        "formatting",
+        "readability",
+        "markdown"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/12",
+      "summary": "This update improves the formatting of the README markdown tables, aligning columns for better readability. A total of 105 changes were made, enhancing the overall presentation of the documentation. These adjustments will help users navigate the information more easily."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#11",
+      "title": "Enhanced README Table Formatting in M C P Sora ✨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "docs",
+        "formatting",
+        "readability",
+        "markdown"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/11",
+      "summary": "This update improves the readability of the README by aligning markdown table columns. A total of 28 lines were added and 25 lines removed to achieve a cleaner and more consistent format. These changes enhance the overall presentation of the documentation, making it easier for users to navigate."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#11",
+      "title": "Enhanced README Table Formatting in M C P Serp ✨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "docs",
+        "readability",
+        "markdown",
+        "formatting"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/11",
+      "summary": "This update improves the readability of the README by aligning markdown table columns. A total of 92 changes were made, ensuring consistent formatting throughout the document. These enhancements will make it easier for users to navigate and understand the available search tools."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#11",
+      "title": "Enhanced README Formatting in M C P Nano Banana ✨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "docs",
+        "formatting",
+        "readability",
+        "markdown"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/11",
+      "summary": "This update improves the formatting of markdown tables in the README file, aligning columns for better readability. Key changes include adjustments to the layout of command arguments and descriptions, enhancing the overall presentation of the documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#13",
+      "title": "Upgrade Django to 3.2.25 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "django",
+        "security",
+        "upgrade",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update bumps Django from version 3.2.16 to 3.2.25, enhancing security and performance. Key fixes include addressing potential ReDoS vulnerabilities and improving the intcomma functionality for string floats. The changes will ensure a more robust backend experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#144",
+      "title": "Enhance Docs Sync Trigger for Cost Files in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "ci",
+        "docs",
+        "backend",
+        "sync"
+      ],
+      "public": false,
+      "summary": "This update expands the sync-docs trigger to include additional cost file paths. Specifically, it now monitors changes in 'cost/service/**' and 'cost/api/**', ensuring that documentation stays up-to-date with cost-related modifications. This enhancement improves the accuracy and relevance of the documentation process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#145",
+      "title": "Enhance Service API Mapping with Rich Data in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "enhancement",
+        "backend",
+        "api",
+        "docs",
+        "data-driven"
+      ],
+      "public": false,
+      "summary": "This update enriches the service API mapping by adding display names, categories, and resolved aliases for each service. The changes allow the Docs sync to operate without hardcoded mappings, resulting in a more flexible and data-driven approach. All tests have passed successfully, ensuring stability and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#522",
+      "title": "Cleanup EPHONE_APP_KEY Fallback in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cleanup",
+        "k8s",
+        "deployment",
+        "api",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update removes the fallback for the EPHONE_APP_KEY as the migration to the new API_KEY is complete. Key changes include modifications to settings.ts and five K8s deployment files, eliminating the old environment variable and ensuring the API_KEY is now mandatory. This streamlines the configuration and enhances security by removing transitional elements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#521",
+      "title": "Standardize API Key Naming in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "deployment",
+        "consistency",
+        "settings",
+        "handlers"
+      ],
+      "public": false,
+      "summary": "This update renames `EPHONE_APP_KEY` to `API_KEY` across various components, including settings, handlers, and deployment configurations, aligning with the wcnb/cqtai convention. A fallback mechanism is implemented for a smooth transition, ensuring that both keys can coexist temporarily. This change enhances consistency and clarity in the codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/.github#1",
+      "title": "Automate Profile README Updates in .github 🚀",
+      "tags": [
+        "github",
+        "pr",
+        ".github",
+        "automation",
+        "workflow",
+        "python",
+        "github-actions",
+        "readme"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/.github/pull/1",
+      "summary": "This update introduces an automated workflow for generating the profile README using live data from MCP servers. A new Python script and GitHub Actions workflow have been added, allowing the README to regenerate daily or on manual trigger. Simply update the MCP_SERVERS list to include new servers, and the README will be updated automatically."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#1",
+      "title": "Boosting Google Traffic with 83 New SEO Pages in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "seo",
+        "documentation",
+        "updates",
+        "content",
+        "tutorials"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/1",
+      "summary": "This update introduces 83 new English pages, including tutorials, comparisons, use cases, and blog articles, aimed at enhancing Google SEO traffic. A generator script was added, along with updates to the navigation in docs.json, significantly improving content accessibility and organization."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#143",
+      "title": "Automate Documentation Sync with GitHub Actions in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "ci",
+        "docs",
+        "automation",
+        "workflow",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a GitHub Actions workflow that automatically triggers when specific files are modified in the main branch. It sends a sync-docs event to the AceDataCloud/Docs repository, ensuring that the Mintlify documentation site is always up to date. This enhancement streamlines the documentation process and improves efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#10",
+      "title": "Enhance README with PyPI Badges in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "docs",
+        "badges",
+        "readme",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/10",
+      "summary": "This update adds PyPI version and monthly download count badges to the README file. These badges provide users with quick access to versioning and download statistics, enhancing the project's visibility and usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#10",
+      "title": "Enhance README with PyPI Badges in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "docs",
+        "badges",
+        "readme",
+        "pypi"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/10",
+      "summary": "This update adds PyPI version and monthly download count badges to the README file. These badges will provide users with quick access to important package metrics, enhancing the visibility and credibility of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#10",
+      "title": "Enhance README with PyPI Badges in M C P Veo 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "docs",
+        "badges",
+        "readme",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/10",
+      "summary": "This update adds PyPI version and monthly download count badges to the README file. These badges provide users with quick access to version information and download statistics, enhancing the project's visibility and usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#10",
+      "title": "Enhance README with PyPI Badges in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "docs",
+        "badges",
+        "readme",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/10",
+      "summary": "This update adds PyPI version and monthly download count badges to the README file. These enhancements provide users with quick access to versioning and download statistics, improving the overall visibility of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#10",
+      "title": "Enhance README with PyPI Badges in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "docs",
+        "badges",
+        "readme",
+        "visibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/10",
+      "summary": "This update adds PyPI version and monthly download count badges to the README file, improving the project's visibility and discoverability. These badges provide users with quick access to versioning and download statistics, enhancing the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#10",
+      "title": "Enhance README with PyPI Badges in M C P Serp 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "docs",
+        "badges",
+        "readme",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/10",
+      "summary": "This update adds PyPI version and monthly download count badges to the README file. These enhancements aim to improve the project's visibility and discoverability for users. The changes include two new badges that link directly to the PyPI project page."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#11",
+      "title": "Enhance README with PyPI Badges in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "docs",
+        "badges",
+        "readme",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/11",
+      "summary": "This update adds PyPI version and monthly download count badges to the README file. These enhancements improve the project's visibility and make it easier for users to find relevant information about the package. Overall, this change aims to boost discoverability and user engagement."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#5",
+      "title": "Upgrade download-artifact to v8 in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "dependencies",
+        "update",
+        "security",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/5",
+      "summary": "This update bumps the actions/download-artifact dependency from version 4 to 8. Key changes include improved handling of non-zipped downloads and stricter checks for hash mismatches, enhancing security and performance in artifact management workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#4",
+      "title": "Upgrade Docker Login Action to Version 4 in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "docker",
+        "upgrade",
+        "dependencies",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/4",
+      "summary": "This update bumps the Docker Login Action from version 2 to version 4, enhancing the workflow with new features and improvements. Key changes include switching to Node 24 as the default runtime and updating several dependencies, which will improve performance and security. The deployment workflow has been modified to reflect this upgrade."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#520",
+      "title": "Enhanced Security by Removing Hardcoded API Keys in Platform Service 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "security",
+        "kubernetes",
+        "api",
+        "deployment",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update removes hardcoded API keys from checker configuration files and replaces them with Kubernetes secret-backed environment variables. Key changes include the addition of environment variable injection in the check.py file and the creation of a new K8s secret for xiaojingai. The deployment ensures no downtime as existing keys remain functional until the first sync occurs."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#337",
       "title": "Automate i18n Translation on zh-CN Changes in Nexior 🚀",
       "tags": [
