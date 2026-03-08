@@ -3,6 +3,286 @@
   "date": "2026-03-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#337",
+      "title": "Automate i18n Translation on zh-CN Changes in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "i18n",
+        "automation",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/337",
+      "summary": "This update introduces an automated workflow that triggers translation for the zh-CN i18n files whenever changes are pushed to the main branch. It requires the VITE_OPENAI_API_KEY and BOT_TOKEN secrets for operation. The new workflow enhances efficiency by ensuring translations are always up-to-date without manual intervention."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#2",
+      "title": "Enhance CI with Dependabot for Pip and Actions in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "ci",
+        "dependabot",
+        "pip",
+        "github-actions",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/2",
+      "summary": "This update introduces Dependabot for managing dependencies in both pip and GitHub Actions, scheduled to run weekly. It allows for grouped updates, ensuring that minor and patch updates are handled efficiently. This enhancement will help maintain the project's dependencies up-to-date with minimal manual intervention."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#2",
+      "title": "Boosting Dependency Management in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "dependabot",
+        "ci",
+        "pip",
+        "github-actions",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/2",
+      "summary": "This update introduces Dependabot for pip and GitHub Actions, scheduled to run weekly. It will help manage dependencies more efficiently by grouping updates and limiting open pull requests. This enhancement aims to keep the project up-to-date with minimal manual intervention."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#2",
+      "title": "Automate Dependency Updates in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "dependabot",
+        "automation",
+        "python",
+        "github-actions",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/2",
+      "summary": "This update introduces Dependabot configuration for automated dependency management. It enables weekly checks for Python package updates and GitHub Actions version updates, ensuring that both ecosystems remain current with minimal manual intervention."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#2",
+      "title": "Automate Dependency Updates with Dependabot in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "dependabot",
+        "ci",
+        "python",
+        "github-actions",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/2",
+      "summary": "This update introduces Dependabot configuration for the pip and GitHub Actions ecosystems. It enables weekly checks for Python dependency updates and GitHub Actions version updates, ensuring that minor and patch updates are automatically handled. This will help maintain the project's dependencies more efficiently and keep it up to date."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#65",
+      "title": "Automate Dependency Updates in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "dependabot",
+        "automation",
+        "security",
+        "python",
+        "github-actions"
+      ],
+      "public": false,
+      "summary": "This update introduces Dependabot configuration for automated dependency management in the PlatformGateway. It includes weekly checks for Python dependencies and GitHub Actions, ensuring that minor and patch updates are grouped into single pull requests. This enhancement will help maintain security and keep dependencies current without manual intervention."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#2",
+      "title": "Automate Dependency Updates in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "dependabot",
+        "automation",
+        "python",
+        "github-actions",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/2",
+      "summary": "This update introduces Dependabot configuration for automated dependency management. It enables weekly checks for Python package updates and GitHub Actions version updates, ensuring that both ecosystems stay current with minimal manual intervention."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#3",
+      "title": "Automate Dependency Updates in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "dependabot",
+        "automation",
+        "python",
+        "github-actions",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces Dependabot configuration for the Pay Backend, enabling automated checks for Python dependencies and GitHub Actions. The pip ecosystem will receive weekly checks for minor and patch updates, while GitHub Actions will also be monitored for the same types of updates, ensuring the project stays up-to-date with minimal manual effort."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#2",
+      "title": "Automate Dependency Updates in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "dependabot",
+        "automation",
+        "security",
+        "python",
+        "github-actions"
+      ],
+      "public": false,
+      "summary": "This update introduces Dependabot configuration for the pip and GitHub Actions ecosystems. It enables weekly checks for Python dependency updates and GitHub Actions version updates, ensuring that security patches are applied promptly and dependencies remain current without manual tracking."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#2",
+      "title": "Enhance CI with Dependabot for Python and Actions in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "ci",
+        "dependabot",
+        "python",
+        "github-actions",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/2",
+      "summary": "This update introduces Dependabot for managing dependencies in pip and GitHub Actions, scheduled to run weekly. It allows for grouped updates, ensuring that minor and patch updates are handled efficiently. This enhancement will help maintain the project's dependencies more effectively and keep the CI pipeline up to date."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#2",
+      "title": "Boost CI with Dependabot for Pip and Actions in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "ci",
+        "dependabot",
+        "pip",
+        "github-actions",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/2",
+      "summary": "This update introduces Dependabot for managing dependencies in both pip and GitHub Actions, scheduled to run weekly. It allows for automatic updates of minor and patch versions, enhancing the project's maintenance and security. The configuration supports up to five open pull requests at a time, streamlining dependency management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#53",
+      "title": "Automate i18n Translations in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ci",
+        "i18n",
+        "automation",
+        "frontend",
+        "translations"
+      ],
+      "public": false,
+      "summary": "This update introduces a new workflow that automatically translates i18n files whenever changes are made to the Chinese source files. It utilizes GPT-4o-mini to sync translations across all target languages, streamlining the localization process. Required secrets for the translation service and GitHub token have been specified for proper functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#7",
+      "title": "Automate i18n Translation on zh-CN Changes in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "ci",
+        "i18n",
+        "automation",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces an automated workflow that triggers translation updates whenever changes are made to the zh-CN files in the i18n directory. It utilizes GitHub Actions to run the translation process, requiring specific API keys for operation. This enhancement streamlines the localization process, ensuring timely updates to translations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#2",
+      "title": "Enhance CI with Dependabot for Pip and Actions in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "ci",
+        "dependabot",
+        "pip",
+        "github-actions",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/2",
+      "summary": "This update introduces Dependabot for managing dependencies in both pip and GitHub Actions. It is configured to check for updates weekly, ensuring that minor and patch updates are automatically handled, which will help maintain the project's health and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#129",
+      "title": "Refactor Seedance Content Schema for Better Validation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "refactor",
+        "schema",
+        "validation",
+        "backend",
+        "json"
+      ],
+      "public": false,
+      "summary": "This update refactors the Seedance content items schema to utilize explicit oneOf branches with a discriminator for text and image_url types. This change enhances validation by preventing customers from submitting invalid payloads, ensuring each variant is clearly defined and adheres to the schema requirements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#131",
+      "title": "Automate Dependency Updates in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "dependabot",
+        "automation",
+        "dependencies",
+        "python",
+        "github-actions"
+      ],
+      "public": false,
+      "summary": "This update introduces Dependabot configuration for automated dependency management. It includes weekly checks for Python dependencies and GitHub Actions version updates, ensuring that minor and patch updates are grouped into a single pull request. This enhancement will help maintain security and keep dependencies up to date without manual intervention."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/StatusPage#6",
+      "title": "Fix rendering issues and enhance visibility in Status Page 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "StatusPage",
+        "bugfix",
+        "frontend",
+        "statuspage",
+        "ui",
+        "visibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/StatusPage/pull/6",
+      "summary": "This update addresses two critical bugs in the status page frontend. It ensures that bars render correctly across different timezones by directly iterating over API data, eliminating key mismatches. Additionally, the no-data bars have been updated to a vibrant green color for better visibility on dark themes."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#51",
       "title": "Enhance API Dropdown with Smooth Skeleton Loading in Frontend Web 🎨",
       "tags": [
