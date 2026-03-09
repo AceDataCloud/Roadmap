@@ -1,0 +1,85 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-09",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#12",
+      "title": "Upgrade django-cors-headers to 4.1.0 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "upgrade",
+        "backend",
+        "django",
+        "cors",
+        "dependencies"
+      ],
+      "public": false,
+      "summary": "This update bumps the django-cors-headers library from version 3.14.0 to 4.1.0, introducing support for Python 3.12 and async middleware. Additionally, it adds the CORS_ALLOW_PRIVATE_NETWORK setting and removes deprecated headers from the default accept list. These changes enhance CORS handling and improve performance for async views."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#6",
+      "title": "Update hatchling requirement to allow latest version in M C P Short U R L 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "update",
+        "dependencies",
+        "hatchling",
+        "compatibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/6",
+      "summary": "This update modifies the `pyproject.toml` file to change the hatchling requirement from `<1.26.0` to `<1.30.0`, enabling compatibility with the latest version. The change ensures that users can benefit from the latest features and fixes provided by hatchling v1.29.0, which includes important bug fixes and improvements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#6",
+      "title": "Upgrade artifact upload action for better performance in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "dependencies",
+        "update",
+        "actions",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/6",
+      "summary": "This update bumps the actions/upload-artifact dependency from version 4 to 7, introducing support for direct file uploads and upgrading the module to ESM. The change enhances the workflow by allowing single file uploads without zipping, improving efficiency in artifact management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#8",
+      "title": "Update build-number dependency in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "dependencies",
+        "update",
+        "github-actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/8",
+      "summary": "This update bumps the einaregilsson/build-number dependency from version 2 to 3. The change involves using a new method for setting environment variables, ensuring compatibility with the latest GitHub features. No functional differences are expected, but this keeps our workflows up to date."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#8",
+      "title": "Upgrade Azure/k8s-set-context to v4 in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "dependencies",
+        "upgrade",
+        "kubernetes",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/8",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 1 to 4, ensuring compatibility with Node 20 as Node 16 is deprecated. The change is reflected in the deployment workflow, enhancing the project's infrastructure management capabilities. This upgrade is crucial for maintaining up-to-date practices and improving overall performance."
+    }
+  ]
+}
