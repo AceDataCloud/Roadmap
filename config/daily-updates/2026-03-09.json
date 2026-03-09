@@ -3,6 +3,54 @@
   "date": "2026-03-09",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Docs#7",
+      "title": "Updated Logos to Brand PNG Assets in Docs 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "logo",
+        "update",
+        "docs",
+        "png",
+        "assets"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/7",
+      "summary": "This update replaces the existing SVG logos with new PNG logos for both light and dark themes, sourced from the CDN. The changes also include updates to the sync.py and docs.json files to reference the new PNG assets instead of SVGs, ensuring consistency across the documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#338",
+      "title": "Remove gradient background from chat layout in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "darkmode"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/338",
+      "summary": "This update removes the gradient background from the chat layout in dark mode, addressing a visual issue caused by the previous implementation. The change restores a plain background for a cleaner appearance. The modification was made in the Chat.vue file and includes a new patch file for tracking."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#6",
+      "title": "Revamp Language Selector for Mintlify in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "docs",
+        "mintlify",
+        "languages",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/6",
+      "summary": "This update restructures the language configuration in the documentation to align with Mintlify's schema. The default language now has a complete navigation setup, while 14 additional languages link directly to their content directories. Unused languages have been removed to streamline the experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthBackend#12",
       "title": "Upgrade django-cors-headers to 4.1.0 in Backend 🚀",
       "tags": [
