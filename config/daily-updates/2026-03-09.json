@@ -3,6 +3,170 @@
   "date": "2026-03-09",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#160",
+      "title": "Boosting Multilingual Support with SEO Translations in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "translations",
+        "documentation",
+        "seo",
+        "backend",
+        "localization",
+        "ai"
+      ],
+      "public": false,
+      "summary": "This update introduces translated documentation for 17 languages, enhancing accessibility for global users. Key additions include comprehensive tutorials for various AI services like Luma, Midjourney, and OpenAI, ensuring developers can easily integrate these tools. The expanded documentation will significantly improve user experience and support for diverse audiences."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#14",
+      "title": "Enhance Documentation with Validation and Testing in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "docs",
+        "testing",
+        "validation",
+        "playwright",
+        "gitignore"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/14",
+      "summary": "This update introduces several key improvements to the documentation repository. The .gitignore file has been updated to exclude unnecessary files, and a new validation script has been added to ensure the integrity of the navigation structure. Additionally, Playwright tests have been implemented to enhance the testing framework for language switching functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#159",
+      "title": "Complete SEO Translations for 17 Languages in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "translations",
+        "seo",
+        "localization",
+        "backend",
+        "content"
+      ],
+      "public": false,
+      "summary": "This update finalizes the SEO content translation set, adding approximately 417 files translated from Chinese to 17 languages. With this merge, all 118 source files in Chinese are now fully translated, enhancing accessibility and reach for diverse audiences."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#158",
+      "title": "Boosting Global Reach with SEO Content Translations in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "translations",
+        "seo",
+        "documentation",
+        "globalization",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces translated tutorials, comparisons, use-cases, and blog posts for 17 languages, significantly enhancing our documentation. A total of approximately 1085 files have been translated from Chinese (zh-CN), with remaining translations to be managed by a CronJob. This expansion aims to improve accessibility and user engagement across diverse linguistic audiences."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#157",
+      "title": "Update default free credits for new users in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "update",
+        "backend",
+        "user-experience",
+        "credits"
+      ],
+      "public": false,
+      "summary": "The default global free amount has been updated from 0 to 2 credits. This change ensures that new users creating a Global application will receive 2 free credits by default, enhancing user experience and onboarding."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#350",
+      "title": "Exciting New Automation Features in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "automation",
+        "features",
+        "llm",
+        "translation",
+        "workflow",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/350",
+      "summary": "This update introduces a comprehensive automation pipeline for the Docs, enhancing content generation, translation, and publication processes triggered by changes in PlatformBackend. Key additions include LLM-powered content enhancement and translation to ten languages, along with new scripts for SEO page generation and improved workflows. These enhancements aim to streamline documentation and improve accessibility for a global audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#349",
+      "title": "Sleek UI Revamp: Borders Gone, Shadows In for 20 Components in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "refactor",
+        "design",
+        "components",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/349",
+      "summary": "This update removes hard 1px borders from 20 components, replacing them with subtle shadows and background fills. Key changes include enhanced input fields and chat components, resulting in a cleaner and more premium user interface. The design shift aims to improve visual depth and overall aesthetics across the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#11",
+      "title": "Upgrade environs to 10.1.0 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "upgrade",
+        "backend",
+        "dependencies",
+        "python"
+      ],
+      "public": false,
+      "summary": "This update bumps the environs library from version 9.5.0 to 10.1.0, introducing new features such as allowing the default for env.json to be a dict or list. Additionally, it drops support for Python 3.6 and 3.7, ensuring compatibility with newer Python versions. The changes enhance environment variable parsing capabilities and improve overall library performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#13",
+      "title": "Clean Up MCP Navigation by Removing Duplicates in Docs 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "navigation",
+        "cleanup",
+        "docs",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/13",
+      "summary": "This update eliminates duplicate `mcp/overview` entries from the MCP navigation sidebar across all 15 language sections. Each section previously listed `mcp/overview` twice, which caused confusion and clutter in the sidebar. The changes enhance the user experience by streamlining navigation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#12",
+      "title": "Enhance Language Support and Clean Up Navigation in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "docs",
+        "improvement",
+        "cleanup",
+        "navigation",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/12",
+      "summary": "This update improves language switching functionality, correcting language codes for Japanese, Ukrainian, and Brazilian Portuguese. Additionally, the logo link now directs users to the documentation site, and 94 duplicate guide pages have been removed from the API Reference tab, streamlining navigation for users."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#525",
       "title": "Enhance persona_id Handling in Platform Service 🎉",
       "tags": [
