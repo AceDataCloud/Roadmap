@@ -3,6 +3,536 @@
   "date": "2026-03-09",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#525",
+      "title": "Enhance persona_id Handling in Platform Service 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "api",
+        "payload",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update fixes the issue of persona_id being dropped in the ACTION_GENERATE branch. Now, both the openaihk and nebula workers correctly include persona_id in the generate payload, ensuring consistency across actions. This change enhances the functionality and reliability of the API interactions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#343",
+      "title": "Enhance Navigator and Task Previews in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "ui",
+        "navigator",
+        "task-preview",
+        "css"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/343",
+      "summary": "This update fixes the More button popover in the navigator by replacing the tooltip with a native title attribute, ensuring it opens correctly. Additionally, it addresses text overflow issues in task preview components by implementing word-break and overflow-wrap styles, preventing long messages from disrupting the layout."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#348",
+      "title": "Elevate UI with Shadow System for Premium Feel in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "design",
+        "refactor",
+        "enhancement",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/348",
+      "summary": "This update replaces thin borders with a comprehensive shadow elevation system across the Nexior interface, enhancing depth and polish. Key changes include the introduction of four shadow levels in the global design system, improved contrast for backgrounds, and adjustments to padding and hover effects in various components. These enhancements aim to create a more visually appealing and user-friendly experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#347",
+      "title": "Revamp Model Selector and Enhance i18n Support in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "i18n",
+        "enhancement",
+        "design",
+        "translations"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/347",
+      "summary": "This update features a complete redesign of the model selector UI, introducing new icons, hover states, and removing outdated borders. Additionally, 20 missing i18n keys for various models have been added, ensuring comprehensive translations across 17 languages, including zh-CN. These enhancements improve user experience and accessibility for a global audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#346",
+      "title": "Enhance Dark Mode Card Visibility in Nexior 🌙",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dark-mode",
+        "ui",
+        "accessibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/346",
+      "summary": "This update adjusts the background colors for dark mode by overriding the page and card background colors. These changes improve the visual hierarchy, ensuring better visibility and user experience when using dark mode."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#345",
+      "title": "Introducing the About Tab in Nexior Settings 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "settings",
+        "i18n",
+        "ui",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/345",
+      "summary": "We've added a new About tab to the settings dialog, enhancing user accessibility to important project information. This update includes links to the open-source GitHub repository and API service, along with a contact support button. Additionally, we've introduced 9 new internationalization keys, ensuring the feature is available in 17 languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#61",
+      "title": "Enhance 2-Part Plugin ID Handling in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "bugfix",
+        "plugin",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/61",
+      "summary": "This update addresses a ValueError that occurred with 2-part plugin IDs, such as acedatacloud/nano-banana. The code now correctly processes these IDs by extracting the plugin name and formatting it appropriately. This improvement enhances the robustness of the plugin ID handling in the Dify application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#11",
+      "title": "Enhance Navigation for All Languages in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "navigation",
+        "localization",
+        "docs",
+        "fix",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/11",
+      "summary": "This update resolves the non-functional language switcher on docs.acedata.cloud by adding full navigation tabs for 14 secondary languages. Key changes include the addition of translated navigation labels and the implementation of functions to generate and assemble the navigation structure. All language pages now provide a seamless user experience with proper HTTP responses."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#10",
+      "title": "Exciting Update: New GPT-5.4 Models Added in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "update",
+        "gpt-5",
+        "openapi",
+        "documentation",
+        "models"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/10",
+      "summary": "We've added the new GPT-5.4 and GPT-5.4-pro models to our OpenAPI specifications. Additionally, all 18 language guide files have been updated to reflect this change, replacing the previous GPT-5.2 model. This enhancement ensures that our documentation stays current and provides users with the latest capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#524",
+      "title": "Enhance checker configs with gpt-5.4 and gpt-5.4-pro in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "gpt",
+        "config",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update adds entries for the gpt-5.4 and gpt-5.4-pro models to the checker configurations for ephone, wcnb, and xiaojingai. These changes will enable improved routing for upstream providers, enhancing the overall functionality of the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#155",
+      "title": "Exciting New GPT-5.4 and GPT-5.4 Pro Models Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "gpt-5",
+        "backend",
+        "features",
+        "api",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update introduces the GPT-5.4 and GPT-5.4 Pro models, complete with pricing details, OpenAPI specifications, and comprehensive documentation. Key files have been modified to support these new models, ensuring they are integrated into our cost evaluation and service offerings. The addition of tests further enhances reliability and performance assessment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#156",
+      "title": "Sync chat service cost files for accuracy in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "backend",
+        "pricing",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update regenerates all six chat service cost files based on the latest _chat_models.json to address pricing discrepancies. The modifications enhance the accuracy of pricing calculations, ensuring users receive consistent and reliable cost information."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#523",
+      "title": "Automate Profile Updates on Main Push in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "ci",
+        "automation",
+        "workflow",
+        "github-actions"
+      ],
+      "public": false,
+      "summary": "This update introduces a new GitHub Actions workflow that triggers an update-profile event to the Index repository whenever changes are pushed to the main branch. This automation ensures that the organization profile README is consistently updated without manual intervention, enhancing the overall efficiency of profile management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#12",
+      "title": "Automate Profile Updates on Main Push in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "ci",
+        "automation",
+        "workflow",
+        "github-actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/12",
+      "summary": "This update introduces a new workflow that triggers an update-profile event to the Index repository whenever changes are pushed to the main branch. This automation ensures that the organization profile README is kept up-to-date without manual intervention, enhancing efficiency and accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#13",
+      "title": "Automate Profile Updates on Main Push in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "ci",
+        "automation",
+        "workflow",
+        "github-actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/13",
+      "summary": "This update introduces a new workflow that triggers an update-profile event to the Index repository whenever there is a push to the main branch. It ensures that the organization profile README is automatically updated, streamlining the maintenance process. Key files modified include the addition of a new GitHub Actions workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#12",
+      "title": "Automate Profile Updates on Main Push in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "ci",
+        "automation",
+        "workflow",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/12",
+      "summary": "This update introduces a new workflow that triggers an update-profile event to the Index repository whenever changes are pushed to the main branch. It ensures that the organization profile README is automatically updated, streamlining the maintenance process. Key files added include the workflow configuration for this automation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#12",
+      "title": "Automate Profile Updates on Main Push in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "ci",
+        "automation",
+        "workflow",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/12",
+      "summary": "This update introduces a new workflow that triggers an update-profile event to the Index repository whenever there is a push to the main branch. This automation ensures that the organization's profile README is kept up-to-date without manual intervention, enhancing efficiency and consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#12",
+      "title": "Automate Profile Updates on Main Push in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "ci",
+        "automation",
+        "workflow",
+        "github-actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/12",
+      "summary": "This update introduces a new GitHub Actions workflow that triggers an update-profile event to the Index repository whenever changes are pushed to the main branch. This automation ensures that the organization profile README is kept up-to-date without manual intervention, streamlining the process for contributors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#12",
+      "title": "Automate Profile Updates on Main Push in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "ci",
+        "automation",
+        "workflow",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/12",
+      "summary": "This update introduces a new workflow that triggers an update-profile event to the Index repository whenever there is a push to the main branch. It ensures that the organization profile README is automatically updated, streamlining the maintenance process. The workflow file has been added to facilitate this automation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#12",
+      "title": "Automate Profile Updates on Main Push in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "ci",
+        "automation",
+        "workflow",
+        "github-actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/12",
+      "summary": "This update introduces a new GitHub Actions workflow that triggers an update-profile event to the Index repository whenever there is a push to the main branch. This automation will ensure that the organization profile README is kept up-to-date without manual intervention, enhancing efficiency and accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#7",
+      "title": "Polished README table formatting in M C P Short U R L ✨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "documentation",
+        "readme",
+        "style",
+        "markdown"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/7",
+      "summary": "This update enhances the README file by aligning the markdown table columns for better readability. The changes include adjustments to both the URL Shortening Tools and Information Tools sections. This improvement will help users navigate the documentation more effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#7",
+      "title": "Polished README table formatting in M C P Seedance ✨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "readme",
+        "formatting",
+        "markdown",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/7",
+      "summary": "This update enhances the alignment of the markdown table columns in the README file. A total of 52 changes were made, ensuring a cleaner and more readable presentation of the tools and their descriptions. This improvement will help users better understand the functionalities provided."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#7",
+      "title": "Polished README Table Formatting in M C P Flux ✨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "documentation",
+        "readme",
+        "style",
+        "markdown"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/7",
+      "summary": "This update enhances the readability of the README by aligning the markdown table columns in the Available Tools, Prompts, and Models sections. The changes improve the overall presentation and make it easier for users to navigate the documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#8",
+      "title": "Exciting New MCP Pages and Tool Updates in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "mcp",
+        "documentation",
+        "updates",
+        "tools",
+        "flux",
+        "seedance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/8",
+      "summary": "We've added new MCP documentation pages for Flux, Seedance, Seedream, and ShortURL, enhancing our resources for users. Additionally, new tools like suno_upload_extend, suno_upload_cover, and suno_mashup_music have been integrated into all suno MCP pages. The MCP overview has also been updated with links to these new servers, ensuring easy navigation and access."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#342",
+      "title": "Eliminate Radial Gradient in Dark Mode Chat Page in Nexior 🌙",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "ui",
+        "dark-mode",
+        "css"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/342",
+      "summary": "This update removes the radial gradient background from the chat dialogue in dark mode by adding a specific CSS rule in `Conversation.vue`. The previous fix only addressed the linear gradient, leaving the radial gradient intact. Now, users will experience a cleaner chat interface in dark mode."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#9",
+      "title": "Updated Favicon to ICO Format in Docs 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "favicon",
+        "update",
+        "docs",
+        "sync"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/9",
+      "summary": "The favicon reference in both docs.json and sync.py has been updated from /favicon.svg to /favicon.ico to align with platform.acedata.cloud. This change enhances consistency across the platform and removes the outdated SVG file."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#154",
+      "title": "Documentation whitespace cleanup for Kling Tasks in Backend ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "cleanup",
+        "backend",
+        "kling-tasks"
+      ],
+      "public": false,
+      "summary": "This update addresses minor whitespace issues in the Kling Tasks documentation across multiple languages. Key files modified include documentation in Arabic, German, English, Spanish, Finnish, French, Italian, Japanese, Korean, Polish, Portuguese, Russian, Serbian, Swedish, Ukrainian, and Chinese. These changes enhance the readability and consistency of the documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#58",
+      "title": "Enhance Tab Navigation with URL Sync in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "navigation",
+        "url",
+        "tabs",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the service detail page by synchronizing tab selections with the URL query parameters. Users can now click on tabs to update the URL with `?tab=` values, ensuring direct navigation and browser history correctly reflect the active tab. The existing logic for initial tab loading remains intact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#340",
+      "title": "Enhance Seedance with Duration Selector and Audio Switch in Nexior 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "seedance",
+        "audio",
+        "i18n",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/340",
+      "summary": "This update introduces a duration selector allowing users to choose between 2 to 12 seconds and a generate audio switch for the pro version of Seedance. The task preview now displays duration, resolution, ratio, FPS, and audio status, enhancing user experience. Additionally, all models and types have been updated along with internationalization support for 17 languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#57",
+      "title": "Enhance OpenAPI Form Schema Support in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "api",
+        "schema",
+        "bugfix",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update improves the API form component's support for OpenAPI schemas. Key changes include fixing the required markers for nested objects, adding support for the 'integer' type, and removing unnecessary debug logs. These enhancements ensure better validation and user experience when working with API forms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#56",
+      "title": "Enhanced Mobile Experience for Landing Page in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "mobile",
+        "responsive",
+        "frontend",
+        "ui",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update improves the mobile responsiveness of the landing page by addressing layout issues. Key changes include added padding for better content spacing, reduced font sizes for section headings, and uniform handling of container padding. These adjustments enhance the overall user experience on mobile devices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#339",
+      "title": "Enhance Sidebar with Discord-Style Overflow in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "navigation",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/339",
+      "summary": "This update introduces a new Discord-style sidebar overflow feature, allowing excess service icons to be collapsed into a folder button with a mini-grid preview. Key changes include a ResizeObserver for overflow calculation, a new popover menu for navigation, and updates to the internationalization file for better user experience. The folder button highlights active overflow items and auto-closes upon navigation, improving overall usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#55",
+      "title": "Revamp Share Button to Earning Entry in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "ui",
+        "i18n",
+        "referrals"
+      ],
+      "public": false,
+      "summary": "The floating share button has been replaced with a distribution earning entry, featuring a new coins icon and a tooltip that encourages users to earn from referrals. Additionally, the referral earnings option has been removed from the help menu, streamlining support options. Internationalization updates have been made, adding a new key for the earning button and translating it into 11 languages."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Docs#7",
       "title": "Updated Logos to Brand PNG Assets in Docs 🎨",
       "tags": [
