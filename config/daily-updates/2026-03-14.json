@@ -3,6 +3,86 @@
   "date": "2026-03-14",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#148",
+      "title": "Updated dependencies for FastAPI in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "dependencies",
+        "fastapi",
+        "pydantic",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update modifies the poetry.lock file to include new dependencies for FastAPI and Pydantic. The changes enhance the project's capability to handle web applications more effectively. Overall, this ensures that the project is up-to-date with the latest library versions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#179",
+      "title": "Introducing Publisher as a New Platform Service in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "api",
+        "documentation",
+        "backend",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update adds Publisher as a first-class platform service on AceDataCloud, featuring new APIs for publishing, tasks, channels, configurations, and content generation. Key files include five OpenAPI specifications, six cost rules, and five integration guide documents, enhancing the platform's capabilities for automated content management and distribution."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#31",
+      "title": "Updated OpenAPI Schemas for Chat Completions in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "openapi",
+        "schemas",
+        "chat",
+        "updates",
+        "docs"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/31",
+      "summary": "This update corrects the OpenAPI schemas for all six chat completion endpoints, enhancing support for multimodal inputs and adding new roles. Key changes include adjustments to the messages content type, the addition of a usage object in responses, and making logprobs optional. All tests have passed, ensuring stability across affected APIs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#178",
+      "title": "Enhance Chat Completion APIs with Updated OpenAPI Schemas in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "openapi",
+        "chat",
+        "backend",
+        "api",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update fixes the OpenAPI schemas for all six chat completion endpoints, enhancing support for multimodal inputs and adding new roles. Key changes include the addition of a developer role, an optional logprobs field, and a new usage object in responses. All cost tests have passed successfully, ensuring stability across affected APIs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#177",
+      "title": "SEO Content Migration to PlatformBackend in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "seo",
+        "migration",
+        "localization",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update successfully migrates 25 Docs-native SEO content files to the PlatformBackend, ensuring all SEO content is centralized. Additionally, 7 files with incorrect language settings have been fixed, enhancing the overall quality and accessibility of the documentation. The architecture for content flow has been clarified, streamlining future translations and updates."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformPublisher#147",
       "title": "Exciting New FastAPI Integration for Publisher Service in Publisher 🚀",
       "tags": [
