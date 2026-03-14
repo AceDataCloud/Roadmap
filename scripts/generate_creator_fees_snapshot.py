@@ -75,33 +75,36 @@ def fetch_sol_price_usd() -> float:
         return 200.0
 
 
-def fetch_creator_fees(creator_address: str) -> List[Dict[str, Any]]:
-    """
-    Fetch creator fees from pump.fun API using 1d interval.
+def fetch_creator_fees_5m(creator_address: str) -> List[Dict[str, Any]]:
+    """Fetch 5m-interval buckets (~25h) for precise 24h calculation."""
+    url = f"https://swap-api.pump.fun/v1/creators/{creator_address}/fees?interval=5m&limit=300"
+    return fetch_json(url)
 
-    Returns list of buckets with:
-    - bucket: ISO timestamp
-    - creatorFee: lamports for this bucket
-    - creatorFeeSOL: SOL for this bucket
-    - numTrades: number of trades
-    - cumulativeCreatorFee: total lamports to date
-    - cumulativeCreatorFeeSOL: total SOL to date
 
-    Note: pump.fun API only supports intervals: 5m, 30m, 1d
-    """
+def fetch_creator_fees_30m(creator_address: str) -> List[Dict[str, Any]]:
+    """Fetch 30m-interval buckets (~8 days) for precise 7d calculation."""
+    url = f"https://swap-api.pump.fun/v1/creators/{creator_address}/fees?interval=30m&limit=400"
+    return fetch_json(url)
+
+
+def fetch_creator_fees_1d(creator_address: str) -> List[Dict[str, Any]]:
+    """Fetch 1d-interval buckets (~1 year) for 30d and all-time totals."""
     url = f"https://swap-api.pump.fun/v1/creators/{creator_address}/fees?interval=1d&limit=365"
     return fetch_json(url)
 
 
 def calculate_fees_for_periods(
+    buckets_5m: List[Dict[str, Any]],
+    buckets_30m: List[Dict[str, Any]],
     daily_buckets: List[Dict[str, Any]],
 ) -> Dict[str, Any]:
     """
     Calculate total creator fees for last 24h, 7d, 30d periods.
 
-    Uses daily buckets (1d interval) for all period calculations.
-
-    Returns dict with SOL amounts for each period.
+    Uses three data sources for accuracy at each time range:
+    - buckets_5m (5m interval): precise 24h calculation
+    - buckets_30m (30m interval): precise 7d calculation
+    - daily_buckets (1d interval): 30d and all-time totals
     """
     now = datetime.now(timezone.utc)
 
@@ -143,7 +146,9 @@ def calculate_fees_for_periods(
                 total_trades += b["num_trades"]
         return total_fee, total_trades
 
-    # Parse daily data
+    # Parse all data sources
+    parsed_5m = parse_buckets(buckets_5m)
+    parsed_30m = parse_buckets(buckets_30m)
     daily_parsed = parse_buckets(daily_buckets)
 
     # Get total from the most recent cumulative value
@@ -151,12 +156,16 @@ def calculate_fees_for_periods(
     if daily_parsed:
         total_sol = daily_parsed[-1]["cumulative_sol"]
 
-    # Calculate all periods from daily data
+    # 24h from 5m data (precise)
     hours_24_ago = now - timedelta(hours=24)
+    fees_24h, trades_24h = sum_fees_since(parsed_5m, hours_24_ago)
+
+    # 7d from 30m data (precise)
     days_7_ago = now - timedelta(days=7)
-    days_30_ago = now - timedelta(days=30)
-    fees_24h, trades_24h = sum_fees_since(daily_parsed, hours_24_ago)
-    fees_7d, trades_7d = sum_fees_since(daily_parsed, days_7_ago)
+    fees_7d, trades_7d = sum_fees_since(parsed_30m, days_7_ago)
+
+    # 30d from daily data (truncate to start of day for correct inclusion)
+    days_30_ago = (now - timedelta(days=30)).replace(hour=0, minute=0, second=0, microsecond=0)
     fees_30d, trades_30d = sum_fees_since(daily_parsed, days_30_ago)
 
     return {
@@ -215,10 +224,16 @@ def main() -> int:
         for addr in addresses:
             print(f"\n  [{addr[:8]}...{addr[-4:]}]")
 
-            daily_buckets = fetch_creator_fees(addr)
+            buckets_5m = fetch_creator_fees_5m(addr)
+            print(f"    Retrieved {len(buckets_5m)} 5m buckets")
+
+            buckets_30m = fetch_creator_fees_30m(addr)
+            print(f"    Retrieved {len(buckets_30m)} 30m buckets")
+
+            daily_buckets = fetch_creator_fees_1d(addr)
             print(f"    Retrieved {len(daily_buckets)} daily buckets")
 
-            fees = calculate_fees_for_periods(daily_buckets)
+            fees = calculate_fees_for_periods(buckets_5m, buckets_30m, daily_buckets)
             print(
                 f"    1d: {fees['last_1d_sol']:.4f} SOL  7d: {fees['last_7d_sol']:.4f} SOL  30d: {fees['last_30d_sol']:.4f} SOL  total: {fees['total_sol']:.4f} SOL"
             )
