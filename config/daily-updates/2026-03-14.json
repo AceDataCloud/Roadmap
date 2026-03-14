@@ -3,6 +3,23 @@
   "date": "2026-03-14",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Roadmap#32",
+      "title": "Enhance Creator Fees Accuracy in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "bugfix",
+        "api",
+        "fees",
+        "accuracy",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/32",
+      "summary": "This update resolves a timestamp alignment bug that caused the 'Last 24 hours' creator fees to display as 0.0000 SOL. By implementing new API intervals for 24h and 7d calculations, the accuracy of the fees has significantly improved, resulting in a more reliable representation of creator earnings. The changes also ensure that the 30d cutoff starts at the beginning of the day to prevent similar issues."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Roadmap#31",
       "title": "Enhance API Resilience and Update Intervals in Roadmap 🚀",
       "tags": [
