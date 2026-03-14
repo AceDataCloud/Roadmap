@@ -77,7 +77,7 @@ def fetch_sol_price_usd() -> float:
 
 def fetch_creator_fees(creator_address: str) -> List[Dict[str, Any]]:
     """
-    Fetch creator fees from pump.fun API using 2h interval for precise 24h/7d data.
+    Fetch creator fees from pump.fun API using 1d interval.
 
     Returns list of buckets with:
     - bucket: ISO timestamp
@@ -86,33 +86,20 @@ def fetch_creator_fees(creator_address: str) -> List[Dict[str, Any]]:
     - numTrades: number of trades
     - cumulativeCreatorFee: total lamports to date
     - cumulativeCreatorFeeSOL: total SOL to date
-    """
-    # Use 2h interval with 84 buckets = 7 days of data for accurate 24h and 7d calculation
-    url = f"https://swap-api.pump.fun/v1/creators/{creator_address}/fees?interval=6h"
-    return fetch_json(url)
 
-
-def fetch_creator_fees_daily(creator_address: str) -> List[Dict[str, Any]]:
+    Note: pump.fun API only supports intervals: 5m, 30m, 1d
     """
-    Fetch creator fees from pump.fun API using 24h interval for accurate 30d data.
-
-    Returns list of buckets with daily granularity.
-    """
-    # Use 24h interval with 365 buckets = 1 year of data for accurate 30d calculation
-    url = f"https://swap-api.pump.fun/v1/creators/{creator_address}/fees?interval=24h&limit=365"
+    url = f"https://swap-api.pump.fun/v1/creators/{creator_address}/fees?interval=1d&limit=365"
     return fetch_json(url)
 
 
 def calculate_fees_for_periods(
-    hourly_buckets: List[Dict[str, Any]],
     daily_buckets: List[Dict[str, Any]],
 ) -> Dict[str, Any]:
     """
     Calculate total creator fees for last 24h, 7d, 30d periods.
 
-    Uses two data sources for accuracy:
-    - hourly_buckets (2h interval): for precise 24h and 7d calculations
-    - daily_buckets (24h interval): for accurate 30d calculation
+    Uses daily buckets (1d interval) for all period calculations.
 
     Returns dict with SOL amounts for each period.
     """
@@ -156,25 +143,20 @@ def calculate_fees_for_periods(
                 total_trades += b["num_trades"]
         return total_fee, total_trades
 
-    # Parse both data sources
-    hourly_parsed = parse_buckets(hourly_buckets)
+    # Parse daily data
     daily_parsed = parse_buckets(daily_buckets)
 
     # Get total from the most recent cumulative value
     total_sol = 0.0
-    if hourly_parsed:
-        total_sol = hourly_parsed[-1]["cumulative_sol"]
-    elif daily_parsed:
+    if daily_parsed:
         total_sol = daily_parsed[-1]["cumulative_sol"]
 
-    # Calculate 24h and 7d from hourly data (more precise)
+    # Calculate all periods from daily data
     hours_24_ago = now - timedelta(hours=24)
-    hours_168_ago = now - timedelta(hours=24 * 7)
-    fees_24h, trades_24h = sum_fees_since(hourly_parsed, hours_24_ago)
-    fees_7d, trades_7d = sum_fees_since(hourly_parsed, hours_168_ago)
-
-    # Calculate 30d from daily data (covers full 30 days)
+    days_7_ago = now - timedelta(days=7)
     days_30_ago = now - timedelta(days=30)
+    fees_24h, trades_24h = sum_fees_since(daily_parsed, hours_24_ago)
+    fees_7d, trades_7d = sum_fees_since(daily_parsed, days_7_ago)
     fees_30d, trades_30d = sum_fees_since(daily_parsed, days_30_ago)
 
     return {
@@ -233,13 +215,10 @@ def main() -> int:
         for addr in addresses:
             print(f"\n  [{addr[:8]}...{addr[-4:]}]")
 
-            hourly_buckets = fetch_creator_fees(addr)
-            print(f"    Retrieved {len(hourly_buckets)} hourly buckets")
-
-            daily_buckets = fetch_creator_fees_daily(addr)
+            daily_buckets = fetch_creator_fees(addr)
             print(f"    Retrieved {len(daily_buckets)} daily buckets")
 
-            fees = calculate_fees_for_periods(hourly_buckets, daily_buckets)
+            fees = calculate_fees_for_periods(daily_buckets)
             print(
                 f"    1d: {fees['last_1d_sol']:.4f} SOL  7d: {fees['last_7d_sol']:.4f} SOL  30d: {fees['last_30d_sol']:.4f} SOL  total: {fees['total_sol']:.4f} SOL"
             )
