@@ -3,6 +3,313 @@
   "date": "2026-03-14",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Docs#24",
+      "title": "Fix infinite loop in api-key-bridge MutationObserver in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "bugfix",
+        "performance",
+        "docs",
+        "mutationobserver"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/24",
+      "summary": "This update resolves a critical issue causing `docs.acedata.cloud` to freeze on load due to an infinite loop triggered by the `MutationObserver` in `api-key-bridge.js`. Key changes include the introduction of a guard to prevent re-processing of patched elements and a debounce mechanism to handle rapid DOM mutations efficiently. These improvements enhance the stability and performance of the documentation site."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#7",
+      "title": "Empower Your DNS Management Skills in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "dns",
+        "management",
+        "api",
+        "skills",
+        "aceDataCloud"
+      ],
+      "public": false,
+      "summary": "This update introduces a powerful DNS management skill for handling DNSPod records through Copilot. Key features include a comprehensive API wrapper for CRUD operations, domain listing, and record searching, along with detailed documentation for users. The skill supports multiple domains, enhancing the management capabilities for AceDataCloud users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#23",
+      "title": "Boosting SEO for Better Visibility in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "seo",
+        "docs",
+        "analytics",
+        "improvement",
+        "redirects"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/23",
+      "summary": "This update enhances the SEO of the documentation site by changing the global description to English, ensuring proper meta descriptions for non-CN pages. It also adds Open Graph descriptions for social sharing, implements GA4 analytics configuration, and deduplicates old CN use-case pages with new equivalents. Additionally, six redirect rules have been established for old URLs to improve user navigation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#175",
+      "title": "Enhanced Document Processing Limit and Selection in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "enhancement",
+        "backend",
+        "performance",
+        "logging"
+      ],
+      "public": false,
+      "summary": "This update increases the default document processing limit from 10 to 15 per run, enhancing throughput. Additionally, it introduces a recency-weighted selection mechanism that prioritizes newer documents, improving the relevance of processed materials. The changes also include logging for weight distribution and file age, providing better insights into the selection process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#174",
+      "title": "Enhance local documentation sourcing and logging in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "enhancement",
+        "logging",
+        "documentation",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update replaces the cloning of the Docs repository with direct usage of local documentation files from PlatformBackend/docs/en/. Additionally, verbose timestamped logging has been implemented to improve tracking and debugging. These changes streamline the documentation sync process and enhance operational transparency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#22",
+      "title": "Enhance SEO Metadata and Verification in Docs 📄",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "seo",
+        "metadata",
+        "sync",
+        "docs",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/22",
+      "summary": "This update improves the SEO capabilities by updating the Google Search Console verification code in the docs.json file. Additionally, the sync.py script has been modified to include a metadata block that preserves important SEO elements like og:image and twitter:card during daily syncs. These changes aim to enhance visibility and maintain consistency in metadata across updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#69",
+      "title": "New Auth Bridge for API Key Sync in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "security",
+        "frontend",
+        "api",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `/auth/bridge` page that allows the documentation site to securely obtain users' API keys through `postMessage`. Key enhancements include OAuth login redirection, strict origin validation, and automatic popup closure after syncing. Security measures ensure no tokens are exposed in URL parameters."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#19",
+      "title": "Enhance API Key Injection with Custom JS in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "api",
+        "javascript",
+        "docs",
+        "enhancement",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/19",
+      "summary": "This update introduces a custom JavaScript file that automates API key injection from platform.acedata.cloud into Mintlify's interactive playground. Users can now authenticate and retrieve their API credentials without leaving the documentation page, enhancing the overall user experience with features like localStorage persistence and toast notifications for sync status."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#6",
+      "title": "Enhance Canary Rule Updates in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "bugfix",
+        "enhancement",
+        "documentation",
+        "canary",
+        "index"
+      ],
+      "public": false,
+      "summary": "This update fixes several critical bugs in the `update-canary-rule` command, ensuring that existing fields are merged instead of clobbered during updates. Key changes include the introduction of helper functions for better code organization, adjustments to default operators, and improved documentation with examples for body condition types. These enhancements lead to more reliable canary rule management and prevent crashes during updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#21",
+      "title": "Boost SEO with GSC Verification and Auto-Generated Descriptions in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "seo",
+        "docs",
+        "update",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/21",
+      "summary": "This update enhances SEO capabilities by adding Google Search Console verification through a new meta tag in `docs.json`. Additionally, the `og:image` has been updated with a new brand card image, and the auto-generation of descriptions in `sync.py` has been fixed to ensure they persist through daily syncs. These changes aim to improve visibility and user engagement."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#173",
+      "title": "Enhance Title Handling for LLM Outputs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "llm",
+        "improvement",
+        "title",
+        "placeholder"
+      ],
+      "public": false,
+      "summary": "This update improves the title handling in the backend by implementing a fallback mechanism for generic placeholder titles returned by LLMs. When a placeholder title is detected, the system now defaults to the source document's title, ensuring better content accuracy and relevance. This change enhances the overall user experience by providing more meaningful titles."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#70",
+      "title": "Streamlined Pricing Table and Enhanced Translations in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "pricing",
+        "i18n",
+        "frontend",
+        "ui",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update merges the dynamic and fixed pricing tables into a single unified table in Price.vue, simplifying the user interface. Additionally, the `seconds` key has been added to the i18n files across all 12 locales, ensuring accurate display of per-second pricing in the UI. These changes enhance clarity and usability for users navigating the pricing page."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#20",
+      "title": "Enhanced Sidebar Navigation Translations in Docs 🌍",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "translations",
+        "localization",
+        "docs",
+        "gpt",
+        "sidebar"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/20",
+      "summary": "This update introduces translations for sidebar navigation labels into 18 languages using GPT-4.1-mini, ensuring a more localized experience for users. The Chinese sidebar now displays fully localized names, and translations are cached in .cache/nav_translations.json. Additionally, modifications were made to the sync script to support these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#172",
+      "title": "Fix default model value to prevent overcharging in Backend ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "billing",
+        "cost-rules",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where users calling `/flux/images` without a specified `model` field were incorrectly charged 1.0 credits instead of the intended 0.1 credits. By adding `flux-dev` as a default value in the model cost rules, all relevant rules can now match correctly, ensuring accurate billing. All cost tests have been successfully passed after this modification."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#171",
+      "title": "Enhance Sora Cost Rules for Unified Pricing Display in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "sora",
+        "backend",
+        "cost-rules",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update introduces explicit version conditions to the Sora cost rules, ensuring that both v1 and v2 rules are properly defined. The changes allow the frontend to render a unified pricing table, enhancing user experience on the pricing page. All relevant tests have been updated and successfully passed, ensuring stability and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#170",
+      "title": "Streamline sync_publish_materials by Removing Django Dependency in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "django",
+        "psycopg2",
+        "ci",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update replaces the Django ORM with raw psycopg2 for database access in the sync_publish_materials script. As a result, the only dependencies required are psycopg2-binary and requests, simplifying the CI process. The changes enhance performance and reduce complexity in the backend workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#18",
+      "title": "Boosting SEO with New Metadata and Files in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "seo",
+        "metadata",
+        "docs",
+        "enhancement",
+        "ai"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/18",
+      "summary": "This update enhances SEO by adding llms.txt and llms-full.txt files, improving AI search engine discoverability. Meta descriptions have been completed for 25 pages, including blogs and comparisons, which is expected to increase click-through rates. Additionally, social media metadata has been integrated to enhance sharing visuals. A merge conflict in the SEO generation script has also been resolved."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#16",
+      "title": "Enhance API Playground with Interactive Features in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "api",
+        "docs",
+        "interactive",
+        "features",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/16",
+      "summary": "This update transforms the API playground from a simple display to an interactive experience, allowing users to utilize a Try It / Send button on all API reference pages. Key enhancements include the addition of auto-generated code snippets in multiple languages and the ability to prefill request body fields with OpenAPI example values. Users can now easily input their Bearer token and execute API calls directly from the documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#169",
+      "title": "Enhance Docs Sync to PublishMaterial with LLM in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "llm",
+        "sync",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update introduces a new script and a cron workflow to sync content from the Docs repository to the PublishMaterial table using LLM rewriting. It supports 11 different channel styles and includes multi-language capabilities. The process is designed to be idempotent, ensuring no duplicates are created during execution."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Roadmap#32",
       "title": "Enhance Creator Fees Accuracy in Roadmap 🚀",
       "tags": [
