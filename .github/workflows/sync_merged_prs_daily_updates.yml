@@ -42,6 +42,7 @@ jobs:
 
       - name: Generate revenue snapshot
         if: ${{ env.PGSQL_HOST != '' && env.PGSQL_USER != '' && env.PGSQL_PASSWORD != '' }}
+        continue-on-error: true
         env:
           PGSQL_PORT: ${{ secrets.PGSQL_PORT != '' && secrets.PGSQL_PORT || '5432' }}
           PGSQL_DATABASE: ${{ secrets.PGSQL_DATABASE != '' && secrets.PGSQL_DATABASE || 'acedatacloud_platform' }}
@@ -57,6 +58,7 @@ jobs:
 
       - name: Generate recent orders snapshot
         if: ${{ env.PGSQL_HOST != '' && env.PGSQL_USER != '' && env.PGSQL_PASSWORD != '' }}
+        continue-on-error: true
         env:
           PGSQL_PORT: ${{ secrets.PGSQL_PORT != '' && secrets.PGSQL_PORT || '5432' }}
           PGSQL_DATABASE: ${{ secrets.PGSQL_DATABASE != '' && secrets.PGSQL_DATABASE || 'acedatacloud_platform' }}
@@ -69,12 +71,14 @@ jobs:
           python3 scripts/generate_recent_orders.py "${args[@]}"
 
       - name: Generate creator fees snapshot
+        continue-on-error: true
         run: |
           pip install loguru==0.7.3
           python3 scripts/generate_creator_fees_snapshot.py
 
       - name: Generate API usage snapshot
         if: ${{ env.TENCENT_CLOUD_SECRET_ID != '' && env.TENCENT_CLOUD_SECRET_KEY != '' }}
+        continue-on-error: true
         run: |
           pip install tencentcloud-sdk-python
           python3 scripts/generate_api_usage_snapshot.py
