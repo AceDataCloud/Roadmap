@@ -3,6 +3,250 @@
   "date": "2026-03-14",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#147",
+      "title": "Exciting New FastAPI Integration for Publisher Service in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "api",
+        "fastapi",
+        "publisher",
+        "rest",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a FastAPI HTTP API layer to the PlatformPublisher, allowing seamless access to publisher functionalities via REST endpoints. Key features include endpoints for publishing tasks, managing credentials, and retrieving task information, all aligned with established response schemas. This enhancement significantly improves the flexibility and usability of the publisher service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#29",
+      "title": "Enhance Chinese Translations and Navigation in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "translation",
+        "docs",
+        "localization",
+        "improvement",
+        "navigation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/29",
+      "summary": "This update improves the Docs translation pipeline by ensuring zh-CN outputs are generated alongside other languages. It also optimizes the translation process by skipping redundant calls for already-translated files and dynamically increasing the token budget to prevent truncation. Additionally, nine comparison pages have been added to the navigation for non-Chinese languages, enhancing accessibility and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#64",
+      "title": "Streamline User Workflow Imports in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "workflow",
+        "import",
+        "bugfix",
+        "optimization",
+        "dify"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/64",
+      "summary": "This update simplifies the workflow import process by triggering it only for new users, reducing unnecessary Celery tasks on every login. Key changes include the removal of the is_new_user parameter and a fix for the retry bug that now ensures retries work correctly. Additionally, the Explore setup has been improved to prevent unwanted imports into user workspaces."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#63",
+      "title": "Streamlined Workflow Imports for New Users in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "workflow",
+        "import",
+        "oauth",
+        "explore",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/63",
+      "summary": "This update introduces automatic import of 13 workflow templates for new users upon their first login, while existing users will not have their workspaces altered. Additionally, the Explore section now features these workflows as RecommendedApps, enhancing visibility for all users. Key modifications were made to the import tasks and OAuth handling to support these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#28",
+      "title": "Enhance sync.py for Playground Config and OpenAPI Tags in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "update",
+        "sync",
+        "docs",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/28",
+      "summary": "This update modifies sync.py to ensure that future regenerations maintain the configuration for the interactive playground and OpenAPI tags. Key changes include adjustments to how API keys are handled and improvements in the tutorial navigation structure. These enhancements will streamline the documentation process and improve user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#27",
+      "title": "Enhance OpenAPI Specs with Chinese Tags and Cleanup in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "openapi",
+        "documentation",
+        "localization",
+        "cleanup",
+        "chinese"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/27",
+      "summary": "This update adds Chinese tags to all 34 OpenAPI specifications, ensuring that the sidebar displays appropriate group labels instead of the default 'API Reference'. Additionally, redundant configurations have been removed, including the api.openapi array and conflicting api.mdx.auth settings, streamlining the API documentation structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#356",
+      "title": "Enhanced Vue Component Formatting in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "style",
+        "vue",
+        "prettier",
+        "formatting"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/356",
+      "summary": "This update applies Prettier formatting to seven Vue components, improving code readability and consistency. Key changes include multi-line formatting for CSS transition properties and collapsing template attributes in AdvancedParams.vue. No functional changes were made, ensuring existing features remain intact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#62",
+      "title": "Exciting New Workflow Templates Added in Dify 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "features",
+        "workflows",
+        "templates",
+        "acedatacloud",
+        "dify"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/62",
+      "summary": "We've introduced 13 pre-built workflow templates that auto-import upon AceDataCloud OAuth login. These templates cover a variety of functionalities, including AI image generation, music creation, and video production, all utilizing AceDataCloud plugins. This enhancement streamlines user experience and boosts productivity for our users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#26",
+      "title": "Revamp API Playground and Optimize JS Bridge in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "api",
+        "docs",
+        "enhancement",
+        "bugfix",
+        "javascript"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/26",
+      "summary": "This update introduces an interactive API playground, allowing users to test APIs directly within the documentation. The api-key-bridge.js has been completely rewritten to enhance performance by removing the MutationObserver and implementing a clipboard fallback for token copying. These changes aim to improve user experience and reduce page freezes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#71",
+      "title": "Enhance Request Tracing with X-Request-Id Header in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "logging",
+        "debugging"
+      ],
+      "public": false,
+      "summary": "This update introduces the X-Request-Id header to all outgoing requests, enabling better trace correlation for backend interactions. Additionally, it logs the trace_id from error responses, improving debugging capabilities and overall error tracking."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#25",
+      "title": "Eliminate Page Freeze with History API in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "performance",
+        "bugfix",
+        "navigation",
+        "docs"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/25",
+      "summary": "This update replaces the problematic MutationObserver with the History API to prevent page freezes during navigation. By intercepting `pushState` and `replaceState`, the code now only triggers updates when the URL changes, eliminating unnecessary DOM interactions. This change enhances performance and user experience significantly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#8",
+      "title": "Enhance traceability with X-Request-Id header in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "frontend",
+        "security",
+        "logging"
+      ],
+      "public": false,
+      "summary": "This update introduces the X-Request-Id header to improve trace correlation across requests. Additionally, it removes verbose logging of access tokens to enhance security and reduce console clutter. These changes aim to streamline debugging and enhance the overall performance of the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#355",
+      "title": "Enhance traceability with X-Request-Id header in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "traceability",
+        "logging",
+        "http"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/355",
+      "summary": "This update introduces the X-Request-Id header to improve trace correlation across requests. The header is generated using a UUID, allowing for better tracking of requests and responses. Additionally, error handling has been enhanced to log trace IDs for failed requests, aiding in debugging."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#14",
+      "title": "Enhanced Logging and Traceability Features in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "logging",
+        "middleware",
+        "enhancement",
+        "backend",
+        "observability"
+      ],
+      "public": false,
+      "summary": "This update introduces structured logging, trace ID correlation, and enhanced CLS logging to improve observability in the application. Key changes include the addition of new middleware for trace ID generation and client info logging, as well as updates to existing logging configurations. These enhancements will facilitate better tracking of requests and errors, ultimately leading to improved debugging and monitoring capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#176",
+      "title": "Enhanced Logging and Traceability Features in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "logging",
+        "middleware",
+        "trace",
+        "enhancement",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces structured logging, trace ID correlation, and enhanced CLS logging capabilities. Key changes include the addition of a TraceMiddleware for unique trace ID generation and modifications to existing middleware for improved logging. These enhancements will facilitate better tracking and debugging of requests within the application."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Docs#24",
       "title": "Fix infinite loop in api-key-bridge MutationObserver in Docs 🚀",
       "tags": [
