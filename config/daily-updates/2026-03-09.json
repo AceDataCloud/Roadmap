@@ -3,6 +3,408 @@
   "date": "2026-03-09",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPVeo#8",
+      "title": "Upgrade checkout action to v6 in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "dependencies",
+        "upgrade",
+        "actions",
+        "checkout",
+        "ci"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/8",
+      "summary": "This update bumps the actions/checkout from version 4 to 6 across multiple workflow files. Key changes include improved credential handling and support for Node.js 24. This upgrade enhances the overall functionality and security of the CI/CD processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#9",
+      "title": "Upgrade download-artifact action for better performance in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "dependencies",
+        "update",
+        "actions",
+        "security",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/9",
+      "summary": "This update bumps the actions/download-artifact from version 4 to 8, introducing significant improvements. Key changes include the ability to skip unzipping non-zipped files and enhanced security checks for download hashes. These updates aim to streamline artifact handling and improve workflow reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#8",
+      "title": "Upgrade Python Setup Action to v6 in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "dependencies",
+        "upgrade",
+        "actions",
+        "python",
+        "ci"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/8",
+      "summary": "This update bumps the actions/setup-python from version 5 to 6, ensuring compatibility with Node 24. Key enhancements include support for pip-version and improved reading from .python-version files. Additionally, various bug fixes and dependency updates have been implemented to enhance the overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#8",
+      "title": "Upgrade checkout action to version 6 in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "dependencies",
+        "update",
+        "ci",
+        "github-actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/8",
+      "summary": "This update bumps the actions/checkout from version 4 to 6 across multiple workflow files. Key changes include improved credential handling and support for Node.js 24. This upgrade enhances the overall functionality and security of the CI/CD processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#7",
+      "title": "Upgrade Python Setup Action to v6 in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "dependencies",
+        "upgrade",
+        "actions",
+        "python",
+        "ci"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/7",
+      "summary": "This update bumps the actions/setup-python from version 5 to 6, ensuring compatibility with Node 24. Key enhancements include support for pip-version and improved reading from .python-version files. Additionally, several bug fixes and dependency updates have been implemented to enhance overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#7",
+      "title": "Upgrade download-artifact to v8 in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "dependencies",
+        "upgrade",
+        "actions",
+        "security",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/7",
+      "summary": "This update bumps the actions/download-artifact dependency from version 4 to 8, introducing significant changes such as direct downloads without unzipping non-zipped files and enhanced security checks for hash mismatches. The new version also supports ESM, ensuring compatibility with the latest @actions/* packages. These improvements will streamline artifact handling and enhance workflow reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#8",
+      "title": "Update Azure/k8s-set-context to v4 for enhanced compatibility in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "dependencies",
+        "update",
+        "github-actions",
+        "node"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/8",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 1 to 4, ensuring compatibility with Node 20 as Node 16 is deprecated. The change impacts the deployment workflow by modifying the version used in the GitHub Actions configuration, enhancing the overall stability and performance of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#4",
+      "title": "Upgrade actions/checkout to version 6 in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "upgrade",
+        "actions",
+        "checkout",
+        "dependencies",
+        "ci"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/4",
+      "summary": "This update bumps the actions/checkout dependency from version 4 to 6 across multiple workflow files. Key improvements include support for Node.js 24 and enhanced credential management. This change ensures better compatibility and performance for CI/CD processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#4",
+      "title": "Upgrade k8s-set-context to Version 4 in M C P Short U R L 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "upgrade",
+        "kubernetes",
+        "dependency",
+        "workflow",
+        "azure"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/4",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 1 to 4, ensuring compatibility with Node 20 as Node 16 is deprecated. The change is reflected in the deployment workflow, enhancing the overall stability and performance of the application. This upgrade is crucial for maintaining up-to-date practices in Kubernetes context management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#5",
+      "title": "Upgrade build-number to version 3 in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "dependency",
+        "update",
+        "build"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/5",
+      "summary": "This update bumps the einaregilsson/build-number dependency from version 2 to 3. The change involves adopting a new method for setting environment variables, eliminating the use of deprecated practices. This ensures better compatibility and maintains the functionality of the build process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#5",
+      "title": "Upgrade Docker Login Action to Version 4 in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "docker",
+        "actions",
+        "upgrade",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/5",
+      "summary": "This update bumps the Docker Login Action from version 2 to version 4, enhancing the workflow's performance and security. Key changes include switching to Node 24 as the default runtime and updating several dependencies, which improves compatibility and functionality. The deployment workflow has been updated accordingly to reflect this change."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#9",
+      "title": "Update Python Dependencies for Enhanced Performance in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "dependencies",
+        "updates",
+        "backend",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This PR updates the Python dependencies in the project, including `tencentcloud-sdk-python` to version 3.1.50, `loguru` to 0.7.3, and `uvicorn` to 0.22.0. These updates bring important bug fixes and performance improvements, ensuring a more stable and efficient backend environment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#60",
+      "title": "Enhance UnifiedHub Layout with Consistent Spacing in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "layout",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update recalibrates all node positions within the UnifiedHub component to ensure uniform spacing across the radial layout. The changes enhance the visual consistency and overall user experience. A total of 154 lines were modified, including significant adjustments in the UnifiedHub.vue file."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#6",
+      "title": "Update hatchling version requirement in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "hatchling",
+        "update",
+        "dependencies",
+        "python"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/6",
+      "summary": "This update modifies the version requirement for the hatchling package from less than 1.26.0 to less than 1.30.0. This change allows the use of the latest features and fixes from hatchling, enhancing the overall functionality of the project. The adjustment is reflected in the pyproject.toml file."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#6",
+      "title": "Update hatchling version requirement in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "hatchling",
+        "update",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/6",
+      "summary": "This update modifies the hatchling version requirement from less than 1.26.0 to less than 1.30.0 in the pyproject.toml file. This change allows the use of the latest features and fixes from hatchling v1.29.0, enhancing the overall functionality of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#5",
+      "title": "Update build-number to version 3 in M C P Short U R L 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "dependency",
+        "update",
+        "build",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/5",
+      "summary": "This update bumps the einaregilsson/build-number dependency from version 2 to 3. The change addresses the use of deprecated methods for setting environment variables, ensuring smoother functionality without any functional differences. The workflow file has been modified accordingly to reflect this update."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#5",
+      "title": "Update hatchling dependency for better compatibility in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "dependency",
+        "update",
+        "hatchling",
+        "compatibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/5",
+      "summary": "This update modifies the hatchling requirement in the project's configuration to allow versions up to 1.30.0. The change aims to enhance compatibility with the latest features and fixes from hatchling, including improvements in handling source date epochs. This ensures that the project can leverage the latest enhancements and bug fixes provided by the hatchling library."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#9",
+      "title": "Update hatchling dependency for better compatibility in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "dependencies",
+        "update",
+        "hatchling",
+        "chore"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/9",
+      "summary": "This update modifies the hatchling requirement in the project's configuration to allow versions up to 1.30.0. The change ensures compatibility with the latest features and fixes provided by hatchling, enhancing the overall development experience. Notably, it addresses issues related to the Source Date Epoch and improves test reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#9",
+      "title": "Update hatchling dependency for better compatibility in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "dependencies",
+        "update",
+        "hatchling",
+        "build"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/9",
+      "summary": "This update modifies the hatchling requirement in the project to allow for versions up to 1.30.0. The change enhances compatibility with the latest features and fixes from hatchling, including a resolution for the Source Date Epoch issue. This ensures smoother builds and improved functionality moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#9",
+      "title": "Update hatchling dependency for better compatibility in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "dependencies",
+        "update",
+        "hatchling",
+        "maintenance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/9",
+      "summary": "This update modifies the hatchling requirement in the project configuration to allow versions up to 1.30.0. The change ensures compatibility with the latest features and fixes introduced in hatchling, enhancing the overall development experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#9",
+      "title": "Update hatchling dependency for better compatibility in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "dependencies",
+        "update",
+        "hatchling",
+        "build"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/9",
+      "summary": "This update modifies the hatchling requirement in the project to allow versions up to 1.30.0. The change ensures compatibility with the latest features and fixes, enhancing the overall stability of the build process. Notably, it addresses a fix for the Source Date Epoch issue and improves test reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#9",
+      "title": "Update hatchling dependency for better compatibility in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "dependencies",
+        "update",
+        "hatchling",
+        "build"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/9",
+      "summary": "This update modifies the hatchling requirement in the project's configuration to allow versions up to 1.30.0. The change ensures compatibility with the latest features and fixes from hatchling, including improvements in handling source date epochs. This will enhance the overall build process and maintain up-to-date dependencies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#10",
+      "title": "Update hatchling dependency to support latest version in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "dependencies",
+        "update",
+        "hatchling",
+        "maintenance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/10",
+      "summary": "This update modifies the `pyproject.toml` file to change the hatchling requirement from `<1.26.0` to `<1.30.0`, allowing the use of newer features and fixes. The latest version includes important bug fixes, enhancing the overall stability and performance of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#9",
+      "title": "Update hatchling dependency for better compatibility in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "dependencies",
+        "update",
+        "hatchling",
+        "maintenance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/9",
+      "summary": "This update modifies the hatchling requirement in the project to allow versions up to 1.30.0. The change ensures compatibility with the latest features and fixes from hatchling, including improvements to the source date handling. This will enhance the overall stability and performance of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#10",
+      "title": "Upgrade urllib3 to 2.0.7 for Enhanced Performance in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "upgrade",
+        "backend",
+        "dependencies",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update upgrades urllib3 from version 1.26.8 to 2.0.7, bringing several improvements and fixes. Key changes include enhanced handling of HTTP redirects and support for newer Python versions, which will improve the stability and performance of HTTP requests in the application."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#59",
       "title": "Exciting New API Playground and Simplified Applications Page in Frontend Web 🚀",
       "tags": [

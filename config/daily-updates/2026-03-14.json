@@ -1,0 +1,293 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-14",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#31",
+      "title": "Enhance API Resilience and Update Intervals in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "api",
+        "workflow",
+        "bugfix",
+        "resilience",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/31",
+      "summary": "This update addresses the failure of the daily updates workflow caused by changes in the pump.fun API. The script now uses a valid `1d` interval for fetching creator fees, ensuring accurate data retrieval. Additionally, the workflow has been improved to allow other data generation steps to continue even if one fails, enhancing overall resilience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#353",
+      "title": "Introducing the Promotion Page for Nexior in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "docs",
+        "promotion",
+        "update",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/353",
+      "summary": "We've added a comprehensive promotion page for Nexior, detailing its product positioning, core features, technical architecture, business model, and deployment guide. This new documentation aims to enhance user understanding and facilitate quick deployment of AI applications without any development experience. Check it out to explore how Nexior can empower users to monetize AI capabilities effortlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#15",
+      "title": "Enhance Sidebar Translations in Docs 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "translations",
+        "localization",
+        "docs",
+        "ui",
+        "accessibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/15",
+      "summary": "This update introduces Chinese translations for category names in the sidebar navigation, ensuring a more localized experience for users. Key changes include the addition of a `CATEGORY_NAMES_ZH` dictionary and the application of translations across 12 languages. The documentation has been re-generated to reflect these updates, improving accessibility for non-English speakers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#67",
+      "title": "Enhance PWA Support with Manifest and SEO Boost in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "pwa",
+        "seo",
+        "frontend",
+        "manifest",
+        "lighthouse"
+      ],
+      "public": false,
+      "summary": "This update introduces a web app manifest and theme color meta tag to improve our PWA capabilities and Lighthouse SEO scores. Key changes include the addition of a `manifest.json` file and updates to `index.html`, enabling the 'Install app' prompt in Chrome and Edge. These enhancements will provide a better user experience and improve our app's visibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#167",
+      "title": "Launch Nexior Introduction Page in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "nexior",
+        "documentation",
+        "html",
+        "css",
+        "introduction"
+      ],
+      "public": false,
+      "summary": "We've added a comprehensive introduction page for Nexior, showcasing its capabilities as an all-in-one AI consumer platform. This new page includes a responsive HTML/CSS layout, detailed service overviews, user testimonials, and a deployment guide, enhancing user engagement and understanding of Nexior's features. Additionally, the content will be auto-translated into 17 languages to reach a broader audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#66",
+      "title": "Enhance SEO with hreflang Tags for 12 Languages in Frontend Web 🌍",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "seo",
+        "localization",
+        "frontend",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces hreflang alternate link tags for all 12 supported locales on SEO-enabled pages. Key changes include the addition of functions to manage these tags, ensuring search engines serve the correct language version to users and preventing duplicate content penalties. The implementation follows BCP 47 standards for locale mapping."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#352",
+      "title": "Enhance SEO with Meta Tags in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "seo",
+        "meta-tags",
+        "nexior",
+        "enhancement",
+        "web"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/352",
+      "summary": "This update introduces essential SEO meta tags to Nexior, including a new title, meta description, keywords, and Open Graph tags. These changes will improve how hub.acedata.cloud is indexed by search engines and enhance social media sharing previews. The addition of a canonical URL also helps in maintaining content integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#65",
+      "title": "Enhance API Docs with FAQ Schema in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "seo",
+        "frontend",
+        "documentation",
+        "json-ld",
+        "faq"
+      ],
+      "public": false,
+      "summary": "This update introduces FAQPage JSON-LD structured data to API document pages, enabling Google to display rich snippets in search results. Key changes include new functions for setting and removing FAQ schemas, as well as auto-generated FAQs based on API and service data. This enhancement improves the visibility and usability of API documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#64",
+      "title": "Enhance Homepage with Organization JSON-LD in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "seo",
+        "json-ld",
+        "homepage",
+        "frontend",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces Organization JSON-LD structured data to the homepage, enhancing SEO for Google Knowledge Panel visibility. Key changes include new functions for setting and removing organization data in the SEO utility and injecting this data on the homepage. This improvement aims to display the brand's logo, description, and social links when users search for 'Ace Data Cloud'."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#63",
+      "title": "Enhance SEO with BreadcrumbList JSON-LD in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "seo",
+        "frontend",
+        "json-ld",
+        "breadcrumbs",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces BreadcrumbList JSON-LD structured data to improve search result visibility. Key changes include new functions for managing breadcrumbs in the SEO utility and updated breadcrumb trails in service and document detail pages. This enhancement is expected to boost click-through rates by 20-30% in Google search results."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#531",
+      "title": "Refine log messages for clarity in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "logging",
+        "refactor",
+        "clarity"
+      ],
+      "public": false,
+      "summary": "This update removes references to 'partner channel' from the Sora v2 log messages, enhancing the clarity of the logs by avoiding exposure of internal implementation details. The changes ensure that the logs remain focused on relevant information without disclosing sensitive terms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#166",
+      "title": "Exciting Sora v2 Support Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "sora",
+        "backend",
+        "openapi",
+        "documentation",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces Sora v2 support, featuring a new version parameter for enhanced functionality. Key changes include time-based billing adjustments, an updated OpenAPI specification, and comprehensive documentation with code examples. Additionally, 8 new cost tests have been added, bringing the total to 584 passing tests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#165",
+      "title": "Enhance sitemap with alias URLs and static pages in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "seo",
+        "sitemap",
+        "backend",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update improves the sitemap.xml for better SEO by implementing alias-based URLs instead of UUIDs for documents. It also introduces static pages for /earning, /terms, and /privacy, enhancing the overall user experience and site navigation. A fallback to UUIDs is maintained for items without aliases."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#62",
+      "title": "Enhance AI Discoverability with Nginx Proxy in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "nginx",
+        "proxy",
+        "frontend",
+        "ai",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a new Nginx location block to proxy the /llms.txt endpoint to the backend. This change enhances the discoverability of the AI search engine through GEO, improving overall functionality. The modification includes 4 new lines in the nginx.conf.template file."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#164",
+      "title": "Add dynamic llms.txt endpoint for GEO in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "api",
+        "llms",
+        "geo"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `/llms.txt` endpoint that adheres to the llmstxt.org specification, enhancing Generative Engine Optimization (GEO). Key changes include the addition of a view to generate the llms.txt file from the database, updates to the robots.txt file to advertise the new endpoint, and the registration of the URL route in the core application. This will improve accessibility for AI search engines and streamline service discovery."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#162",
+      "title": "Enhanced API Docs with Platform Token Links in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "api",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "All 17 platform API documentation pages that require authentication have been updated to include links to the Platform Token documentation. This ensures consistency across the documentation, enhancing user experience and clarity for developers. Key areas updated include Credential, Application, Order, and Usage APIs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#530",
+      "title": "Enhance Sora v2 Partner Channel Support in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "api",
+        "sora",
+        "partner",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces support for the Sora v2 partner channel through a new version=2 request parameter. Key changes include the addition of methods for generating partner videos and improved metadata handling for time-based billing. The API now supports POST requests to /sora/videos with enhanced parameters for better flexibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#529",
+      "title": "Normalize Suno Timing API Response in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "api",
+        "normalization",
+        "suno",
+        "timing",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update addresses inconsistencies in the Suno Timing API response formats by normalizing the output to match the documented structure. Key changes include mapping the `alignment` field to `aligned_words`, and ensuring default values for missing fields like `waveform_data`, `hoot_cer`, and `is_streamed`. The modifications enhance the reliability of the API and improve integration with upstream providers."
+    }
+  ]
+}

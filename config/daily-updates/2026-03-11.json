@@ -1,0 +1,52 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-11",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#161",
+      "title": "Enhance OpenAPI Spec with Missing Request Body Params in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "openapi",
+        "backend",
+        "documentation",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update adds crucial top-level request body parameters to the Seedance videos OpenAPI specification, including duration, frames, resolution, ratio, seed, camerafixed, and watermark. These parameters are now properly typed and validated, improving documentation and user experience. This change ensures users can easily configure their requests without relying solely on inline syntax."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#526",
+      "title": "Enhance billing accuracy with actual video duration in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "video",
+        "fix",
+        "update",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where users specifying `--frames` were incorrectly billed a default of 5 seconds due to missing duration data. Key changes include updating the ISeedanceVideo interface to include duration and other relevant fields, and ensuring that the billing payload reflects the actual video length. Users will now be billed accurately based on the actual duration of their videos."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#5",
+      "title": "Upgrade Docker Login Action to Version 4 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "docker",
+        "actions",
+        "upgrade",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update bumps the Docker Login Action from version 2 to version 4 in the deployment workflow. Key improvements include support for Node 24 as the default runtime and various dependency updates that enhance performance and security. This change ensures compatibility with the latest features and optimizations in the Docker ecosystem."
+    }
+  ]
+}

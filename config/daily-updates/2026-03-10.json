@@ -1,0 +1,709 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-10",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#4",
+      "title": "Upgrade Docker Buildx Action to Latest Version in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "docker",
+        "buildx",
+        "upgrade",
+        "workflow",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/4",
+      "summary": "This update bumps the Docker Buildx Action from version 1 to version 4, enhancing the workflow with the latest features and improvements. Key changes include setting Node 24 as the default runtime and removing deprecated inputs/outputs. This upgrade aims to streamline the build process and improve compatibility with newer dependencies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#4",
+      "title": "Update Docker Buildx Action to Latest Version in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "docker",
+        "buildx",
+        "update",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/4",
+      "summary": "This update bumps the Docker Buildx Action from version 1 to 4, introducing several enhancements including Node 24 as the default runtime and the removal of deprecated inputs and outputs. The workflow file has been modified accordingly to reflect this change, ensuring improved performance and compatibility with the latest features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#4",
+      "title": "Upgrade Python Setup Action to Version 6 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "upgrade",
+        "python",
+        "actions",
+        "backend",
+        "dependencies"
+      ],
+      "public": false,
+      "summary": "This update bumps the actions/setup-python from version 5 to 6, introducing compatibility with Node 24 and enhancing support for pip-version and Pipfile parsing. Key bug fixes and dependency updates are also included, ensuring a smoother development experience. Make sure to update your runner to version v2.327.1 or later for optimal performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#4",
+      "title": "Upgrade Codecov Action to v5 in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "codecov",
+        "dependencies",
+        "update",
+        "action"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/4",
+      "summary": "This update bumps the Codecov GitHub Action from version 4 to version 5, enhancing the action's performance and update speed. Key changes include the introduction of the Codecov Wrapper and the ability for public repositories to upload coverage reports without a token. Additionally, several dependencies have been updated to their latest versions for improved functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#1",
+      "title": "Upgrade download-artifact to v8 for better performance in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "upgrade",
+        "actions",
+        "security",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/1",
+      "summary": "This update bumps the actions/download-artifact from version 4 to 8, enhancing the workflow's efficiency. Key changes include improved handling of non-zipped downloads and stricter hash mismatch checks for better security. The action now defaults to error on hash mismatches, ensuring a more reliable build process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#2",
+      "title": "Upgrade Checkout Action to Version 6 in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "upgrade",
+        "actions",
+        "checkout",
+        "workflow",
+        "security"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/2",
+      "summary": "This update bumps the actions/checkout from version 4 to 6 across multiple workflow files. Key enhancements include improved credential handling and support for Node.js 24, ensuring better performance and compatibility. The changes will streamline CI processes and enhance security for future builds."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#1",
+      "title": "Upgrade download-artifact to v8 for better performance in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "upgrade",
+        "actions",
+        "security",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/1",
+      "summary": "This update bumps the actions/download-artifact from version 4 to 8, enhancing the artifact downloading process. Key improvements include direct downloads without unzipping non-zipped files and stricter hash mismatch checks to ensure security. The action now defaults to error on hash mismatches, improving workflow reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#2",
+      "title": "Upgrade Docker Login Action to Version 4 in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "docker",
+        "actions",
+        "upgrade",
+        "dependencies",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/2",
+      "summary": "This update bumps the Docker Login Action from version 2 to version 4, enhancing the workflow with new features and improvements. Key changes include the switch to Node 24 as the default runtime and updates to various dependencies like @actions/core and @aws-sdk/client-ecr. This upgrade ensures better performance and compatibility with the latest standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#6",
+      "title": "Upgrade actions/checkout to v6 for improved functionality in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "dependencies",
+        "update",
+        "ci",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/6",
+      "summary": "This update bumps the actions/checkout dependency from version 4 to 6 across multiple workflow files. Key improvements include enhanced credential handling and support for Node.js 24, ensuring better compatibility and performance in CI/CD processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#5",
+      "title": "Upgrade Docker Buildx Action to v4 in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "docker",
+        "buildx",
+        "dependencies",
+        "upgrade"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/5",
+      "summary": "This update bumps the Docker Buildx Action from version 1 to 4, enhancing the workflow with improved Node runtime support and removing deprecated inputs. Key changes include switching to ESM and updating dependencies, which will streamline the build process and improve performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#4",
+      "title": "Update Docker Login Action to v4 in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "docker",
+        "actions",
+        "dependencies",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/4",
+      "summary": "This update bumps the Docker Login Action from version 2 to version 4, introducing Node 24 as the default runtime and switching to ESM. Key dependencies have also been updated, including @actions/core and AWS SDK clients, enhancing compatibility and performance. This change ensures that the workflow remains up-to-date with the latest features and security improvements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#4",
+      "title": "Update build-number dependency in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "dependencies",
+        "update",
+        "build",
+        "github-actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/4",
+      "summary": "This update bumps the einaregilsson/build-number dependency from version 2 to 3. The change involves using a new method for setting environment variables, ensuring compatibility with current standards while maintaining functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#5",
+      "title": "Upgrade download-artifact to v8 in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "dependencies",
+        "update",
+        "security",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/5",
+      "summary": "This update bumps the actions/download-artifact from version 4 to 8, introducing significant changes such as direct downloads without unzipping non-zipped files and enhanced security checks for hash mismatches. The new version defaults to error on hash mismatches, ensuring a more secure workflow. Additionally, it supports the latest ESM package format for better compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#1",
+      "title": "Upgrade build-number dependency for better environment handling in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "dependency",
+        "update",
+        "build",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/1",
+      "summary": "This update bumps the einaregilsson/build-number dependency from version 2 to 3, implementing a new method for setting environment variables. While there are no functional changes, this ensures compatibility with the latest practices. The deployment workflow has been updated accordingly to reflect this change."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#7",
+      "title": "Upgrade Docker Buildx Action to Version 4 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "docker",
+        "buildx",
+        "upgrade",
+        "ci",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update upgrades the Docker Buildx Action from version 1 to version 4, enhancing our CI/CD workflows. Key changes include setting Node 24 as the default runtime and removing deprecated inputs/outputs. These improvements will streamline our build processes and ensure compatibility with the latest features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#4",
+      "title": "Upgrade Azure/k8s-set-context to v4 in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "dependencies",
+        "update",
+        "azure",
+        "k8s",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/4",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 1 to version 4. Key changes include the upgrade to Node 20, as Node 16 is deprecated, ensuring better compatibility and performance. The deployment workflow has been modified to reflect this new version."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#5",
+      "title": "Upgrade Codecov Action to v5 for Enhanced Performance in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "dependencies",
+        "codecov",
+        "ci",
+        "upgrade"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/5",
+      "summary": "This update bumps the Codecov GitHub Action from version 4 to 5, introducing the Codecov Wrapper for faster updates and improved functionality. Key changes include the deprecation of certain arguments and the addition of new ones, enhancing the overall coverage reporting process. This upgrade will streamline contributions and improve CI performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#6",
+      "title": "Upgrade Azure/k8s-set-context to v4 in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "dependencies",
+        "upgrade",
+        "github-actions",
+        "node"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/6",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 1 to 4, ensuring compatibility with Node 20 as Node 16 is deprecated. The change impacts the deployment workflow by updating the action used in the GitHub Actions configuration. This upgrade enhances the project's stability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#5",
+      "title": "Upgrade Docker Buildx Action to Version 4 in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "docker",
+        "buildx",
+        "upgrade",
+        "workflow",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/5",
+      "summary": "This update bumps the Docker Buildx Action from version 1 to version 4, enhancing the workflow with the latest features and improvements. Key changes include setting Node 24 as the default runtime and removing deprecated inputs and outputs. This upgrade ensures better performance and compatibility with newer dependencies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#6",
+      "title": "Upgrade Codecov Action to v5 in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "upgrade",
+        "codecov",
+        "ci",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/6",
+      "summary": "This update bumps the Codecov GitHub Action from version 4 to 5, enhancing the action's performance and update speed through the new Codecov Wrapper. Key changes include the deprecation of certain arguments and the introduction of new ones, allowing for more flexible coverage reporting. This upgrade is expected to streamline the CI process and improve coverage reporting capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#2",
+      "title": "Upgrade Docker Buildx Action to Latest Version in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "docker",
+        "buildx",
+        "upgrade",
+        "workflow",
+        "actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/2",
+      "summary": "This update bumps the Docker Buildx Action from version 1 to version 4, enhancing the workflow with new features and improvements. Key changes include setting Node 24 as the default runtime and removing deprecated inputs/outputs, which streamlines the build process. These updates aim to improve performance and maintain compatibility with the latest tools."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#6",
+      "title": "Upgrade Codecov Action to v5 in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "dependencies",
+        "codecov",
+        "update",
+        "action"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/6",
+      "summary": "This update bumps the Codecov GitHub Action from version 4 to version 5, enhancing the action's performance and update speed through the use of the Codecov Wrapper. Key changes include the introduction of new arguments and the deprecation of some existing ones, improving the overall functionality for coverage reporting. Additionally, various dependencies have been updated to their latest versions, ensuring better compatibility and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#5",
+      "title": "Upgrade artifact upload action in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "dependencies",
+        "upgrade",
+        "actions",
+        "nodejs"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/5",
+      "summary": "This update bumps the actions/upload-artifact from version 4 to 7, introducing support for direct file uploads and upgrading the module to ESM. The changes enhance the artifact upload process, allowing for more flexibility in handling single file uploads without zipping. Additionally, the update ensures compatibility with Node.js 24, improving overall performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#5",
+      "title": "Upgrade Docker Buildx Action to Version 4 in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "docker",
+        "buildx",
+        "update",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/5",
+      "summary": "This update bumps the Docker Buildx Action from version 1 to version 4, introducing several enhancements including Node 24 as the default runtime and the removal of deprecated inputs and outputs. The changes improve compatibility and streamline the configuration process for builds, ensuring a more efficient workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#7",
+      "title": "Update build-number dependency in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "dependencies",
+        "update",
+        "build",
+        "github-actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/7",
+      "summary": "This update bumps the einaregilsson/build-number dependency from version 2 to 3. The change involves using a new method for setting environment variables, ensuring compatibility with the latest standards without altering functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#1",
+      "title": "Upgrade Docker Login Action to Version 4 in M C P Short U R L 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "docker",
+        "upgrade",
+        "workflow",
+        "security",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/1",
+      "summary": "This update bumps the Docker Login Action from version 2 to version 4, enhancing the workflow with new features and improvements. Key changes include the switch to Node 24 as the default runtime and updates to various dependencies, which will improve performance and security. The deployment workflow has been modified accordingly to reflect this upgrade."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#2",
+      "title": "Upgrade Buildx Action to Version 4 in M C P Short U R L 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "docker",
+        "buildx",
+        "upgrade",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/2",
+      "summary": "This update bumps the docker/setup-buildx-action from version 1 to 4, introducing several enhancements including Node 24 as the default runtime and the removal of deprecated inputs and outputs. The changes improve compatibility and performance, ensuring a smoother build process for our workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#3",
+      "title": "Upgrade Python Setup Action to Version 6 in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "upgrade",
+        "python",
+        "actions",
+        "dependencies",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/3",
+      "summary": "This update bumps the actions/setup-python from version 5 to 6, ensuring compatibility with Node 24. Key enhancements include support for pip-version and improved reading from .python-version files. Additionally, several bug fixes and dependency updates have been implemented to enhance overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#6",
+      "title": "Upgrade Build-Push Action to Version 7 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "docker",
+        "ci",
+        "upgrade",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update bumps the docker/build-push-action from version 6 to 7, enhancing our CI workflow. Key changes include the switch to Node 24 as the default runtime and the removal of deprecated environment variables. These updates will improve performance and maintainability of our Docker builds."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#6",
+      "title": "Upgrade actions/checkout to v6 in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "dependencies",
+        "update",
+        "actions",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/6",
+      "summary": "This update bumps the actions/checkout dependency from version 4 to version 6 across multiple workflow files. Key improvements include enhanced support for Node.js 24 and better credential management. This change ensures compatibility with the latest features and optimizations in the actions/checkout library."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#3",
+      "title": "Upgrade Codecov Action to Version 5 in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "codecov",
+        "update",
+        "dependencies",
+        "action"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/3",
+      "summary": "This update bumps the Codecov GitHub Action from version 4 to 5, enhancing the action's performance and update speed by utilizing the Codecov Wrapper. Key changes include the introduction of new arguments and the deprecation of some existing ones, which will streamline the coverage reporting process. Additionally, several dependencies have been updated to their latest versions, ensuring improved compatibility and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#4",
+      "title": "Upgrade Python Setup Action to Version 6 in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "upgrade",
+        "python",
+        "actions",
+        "dependencies",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/4",
+      "summary": "This update bumps the actions/setup-python from version 5 to 6, ensuring compatibility with Node 24 and enhancing functionality. Key improvements include support for pip-version and better handling of .python-version files. Additionally, several bug fixes and dependency upgrades have been implemented to enhance overall performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#4",
+      "title": "Upgrade Docker Buildx Action to Latest Version in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "docker",
+        "buildx",
+        "upgrade",
+        "actions",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/4",
+      "summary": "This update bumps the Docker Buildx Action from version 1 to 4, introducing Node 24 as the default runtime and removing deprecated inputs and outputs. The changes enhance compatibility and performance, ensuring a smoother build process for the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#3",
+      "title": "Upgrade Codecov Action to v5 for Enhanced Performance in M C P Short U R L 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "codecov",
+        "upgrade",
+        "action",
+        "ci",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/3",
+      "summary": "This update bumps the Codecov GitHub Action from version 4 to version 5, introducing the Codecov Wrapper for faster updates. Key changes include the deprecation of certain arguments and the addition of new ones, enhancing the action's functionality. This upgrade aims to streamline coverage report uploads and improve overall performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#8",
+      "title": "Upgrade Azure/k8s-set-context to Version 4 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "upgrade",
+        "dependency",
+        "backend",
+        "kubernetes"
+      ],
+      "public": false,
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 1 to 4, aligning with the latest Node.js standards by updating to Node 20. Key changes include improved support for Kubernetes context management and enhanced compatibility with modern TypeScript conventions. This upgrade is expected to enhance the overall functionality and maintainability of the AuthBackend."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#7",
+      "title": "Upgrade Python Setup Action to v6 in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "dependencies",
+        "upgrade",
+        "actions",
+        "python",
+        "ci"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/7",
+      "summary": "This update bumps the actions/setup-python from version 5 to 6, ensuring compatibility with Node 24. Key enhancements include support for pip-version and improved reading from .python-version files. Additionally, several bug fixes and dependency upgrades are included to enhance overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#6",
+      "title": "Upgrade Python Setup Action to v6 in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "dependencies",
+        "update",
+        "python",
+        "actions",
+        "ci"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/6",
+      "summary": "This update bumps the actions/setup-python from version 5 to 6, ensuring compatibility with Node 24 and introducing several enhancements. Key improvements include support for pip-version, better reading from .python-version, and architecture-specific PATH management for Windows. Additionally, various bug fixes and dependency updates have been implemented to enhance overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#6",
+      "title": "Upgrade Docker Buildx Action to Latest Version in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "docker",
+        "buildx",
+        "upgrade",
+        "ci-cd",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/6",
+      "summary": "This update bumps the Docker Buildx Action from version 1 to version 4, enhancing the workflow with improved features and performance. Key changes include setting Node 24 as the default runtime and removing deprecated inputs and outputs. This upgrade ensures better compatibility and functionality in our CI/CD processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#7",
+      "title": "Upgrade Azure/k8s-set-context to v4 in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "dependencies",
+        "update",
+        "azure",
+        "k8s"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/7",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 1 to 4, ensuring compatibility with Node 20 and enhancing functionality. The change is reflected in the deployment workflow, improving the overall performance and security of the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#3",
+      "title": "Upgrade Python Setup Action to Version 6 in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "upgrade",
+        "python",
+        "actions",
+        "dependencies",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/3",
+      "summary": "This update bumps the actions/setup-python from version 5 to 6, ensuring compatibility with Node 24. Key enhancements include support for pip-version and improved reading from .python-version files. Additionally, several bug fixes and dependency upgrades have been implemented to enhance functionality and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#7",
+      "title": "Upgrade Docker Login Action to Version 4 in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "docker",
+        "upgrade",
+        "dependencies",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/7",
+      "summary": "This update bumps the Docker Login Action from version 2 to version 4, enhancing the workflow with new features and improvements. Key changes include the switch to Node 24 as the default runtime and updates to various dependencies, ensuring better performance and security. The deployment workflow has been modified accordingly to reflect this upgrade."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#7",
+      "title": "Upgrade Python Setup Action to v6 in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "dependencies",
+        "upgrade",
+        "actions",
+        "python",
+        "ci"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/7",
+      "summary": "This update bumps the actions/setup-python from version 5 to 6, ensuring compatibility with Node 24. Key enhancements include support for pip-version and improved handling of .python-version files. Additionally, several bug fixes and dependency updates have been implemented to enhance overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#8",
+      "title": "Upgrade Python Setup Action to v6 in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "dependencies",
+        "upgrade",
+        "python",
+        "actions",
+        "ci"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/8",
+      "summary": "This update bumps the actions/setup-python from version 5 to 6, ensuring compatibility with Node 24 and enhancing functionality. Key improvements include support for pip-version and better handling of .python-version files. Additionally, various bug fixes and dependency upgrades have been implemented to enhance performance and security."
+    }
+  ]
+}
