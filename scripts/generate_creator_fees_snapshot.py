@@ -25,9 +25,10 @@ import os
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from typing import Optional, Dict, List, Any, Union
-from urllib.request import urlopen, Request
-from urllib.error import URLError, HTTPError
+from typing import Any, Dict, List, Optional, Union
+from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
+
 from loguru import logger
 
 
@@ -165,7 +166,9 @@ def calculate_fees_for_periods(
     fees_7d, trades_7d = sum_fees_since(parsed_30m, days_7_ago)
 
     # 30d from daily data (truncate to start of day for correct inclusion)
-    days_30_ago = (now - timedelta(days=30)).replace(hour=0, minute=0, second=0, microsecond=0)
+    days_30_ago = (now - timedelta(days=30)).replace(
+        hour=0, minute=0, second=0, microsecond=0
+    )
     fees_30d, trades_30d = sum_fees_since(daily_parsed, days_30_ago)
 
     return {
