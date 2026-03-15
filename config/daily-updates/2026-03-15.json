@@ -1,0 +1,40 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-15",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#17",
+      "title": "Upgrade Docker Login Action to Version 4 in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "docker",
+        "actions",
+        "upgrade",
+        "workflow",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/17",
+      "summary": "This update bumps the Docker Login Action from version 2 to version 4, enhancing the workflow's capabilities. Key changes include switching to Node 24 as the default runtime and several dependency updates, which improve performance and security. The deployment workflow has been updated accordingly to reflect this change."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#11",
+      "title": "Upgrade k8s-set-context to Version 4 in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "upgrade",
+        "dependency",
+        "k8s",
+        "azure",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/11",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 1 to 4, ensuring compatibility with Node 20 as Node 16 is deprecated. The change is reflected in the deployment workflow, enhancing the overall stability and performance of the application. This upgrade also includes various improvements and updates from the k8s-set-context repository."
+    }
+  ]
+}
