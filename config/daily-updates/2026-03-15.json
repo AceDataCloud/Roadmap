@@ -3,6 +3,282 @@
   "date": "2026-03-15",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPFlux#11",
+      "title": "Upgrade artifact upload action for better performance in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "dependencies",
+        "update",
+        "actions",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/11",
+      "summary": "This update bumps the actions/upload-artifact from version 4 to 7, introducing support for direct file uploads and upgrading the module to ESM. The changes enhance the efficiency of artifact management in workflows, allowing for more streamlined operations. Additionally, the update ensures compatibility with the latest Node.js versions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#12",
+      "title": "Upgrade Codecov Action to v5 in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "codecov",
+        "upgrade",
+        "ci",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/12",
+      "summary": "This update bumps the Codecov GitHub Action from version 4 to 5, enhancing the action's performance and update speed through the use of the Codecov Wrapper. Key changes include the deprecation of certain arguments and the introduction of new ones, allowing for more flexible configurations. This upgrade aims to streamline coverage report uploads and improve overall CI efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#15",
+      "title": "Upgrade artifact upload action in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "dependencies",
+        "update",
+        "actions",
+        "nodejs"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/15",
+      "summary": "This update bumps the actions/upload-artifact from version 4 to 7, introducing support for direct file uploads and upgrading the module to ESM. The changes enhance the artifact upload process by allowing single files to be uploaded without zipping, improving efficiency in workflows. Additionally, the update ensures compatibility with Node.js 24, aligning with the latest standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#16",
+      "title": "Upgrade Codecov Action to v5 in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "dependencies",
+        "codecov",
+        "update",
+        "action"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/16",
+      "summary": "This update bumps the Codecov GitHub Action from version 4 to 5, enhancing the action's performance and update speed through the use of the Codecov Wrapper. Key changes include the introduction of new arguments and the deprecation of some existing ones, improving usability for contributors. Additionally, various dependencies have been updated to their latest versions, ensuring better compatibility and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#13",
+      "title": "Upgrade artifact upload action in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "dependencies",
+        "update",
+        "actions",
+        "nodejs"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/13",
+      "summary": "This update bumps the actions/upload-artifact from version 4 to 7, introducing support for direct file uploads and upgrading the module to ESM. The changes enhance the artifact upload process, allowing for more efficient handling of single files without zipping. Additionally, the update ensures compatibility with Node.js 24, improving overall performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#15",
+      "title": "Upgrade repository-dispatch to version 4 in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "dependencies",
+        "update",
+        "maintenance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/15",
+      "summary": "This update bumps the peter-evans/repository-dispatch dependency from version 3 to 4, enhancing compatibility with Node 24 and requiring Actions Runner v2.327.1 or later for self-hosted runners. Additionally, various other dependencies have been updated to their latest versions, ensuring improved performance and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#16",
+      "title": "Update build-number dependency in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "dependencies",
+        "update",
+        "build",
+        "github-actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/16",
+      "summary": "This update bumps the einaregilsson/build-number dependency from version 2 to 3. The change involves using a new method for setting environment variables, ensuring compatibility with the latest standards without altering functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#14",
+      "title": "Upgrade repository-dispatch to v4 in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "dependencies",
+        "update",
+        "workflow",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/14",
+      "summary": "This update bumps the peter-evans/repository-dispatch dependency from version 3 to 4. Key changes include support for Node 24 and various dependency updates that enhance performance and compatibility. This upgrade ensures that the workflow remains up-to-date with the latest features and improvements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#15",
+      "title": "Update Azure/k8s-set-context to v4 for enhanced compatibility in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "dependencies",
+        "update",
+        "azure",
+        "k8s",
+        "github-actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/15",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 1 to version 4, ensuring compatibility with Node 20 and deprecating Node 16. The change also includes updates to the GitHub Actions workflows, enhancing the overall deployment process. This upgrade is crucial for maintaining modern practices and improving the project's stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#7",
+      "title": "Upgrade artifact upload action to version 7 in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "upgrade",
+        "actions",
+        "artifact",
+        "esm",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/7",
+      "summary": "This update bumps the actions/upload-artifact from version 4 to 7, introducing support for direct file uploads and upgrading the module to ESM. Key changes include the ability to upload single files without zipping and enhancements to proxy integration tests. This upgrade will improve artifact handling and streamline workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#8",
+      "title": "Upgrade Docker Buildx Action to Version 4 in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "docker",
+        "buildx",
+        "upgrade",
+        "actions",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/8",
+      "summary": "This update bumps the Docker Buildx Action from version 1 to version 4, introducing several enhancements including Node 24 as the default runtime and the removal of deprecated inputs and outputs. The changes also include updates to various dependencies, ensuring improved performance and security. This upgrade is expected to streamline the build process and enhance compatibility with newer features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#19",
+      "title": "Upgrade djangorestframework-simplejwt to 5.3.0 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "upgrade",
+        "backend",
+        "djangorestframework",
+        "authentication",
+        "translations"
+      ],
+      "public": false,
+      "summary": "This update upgrades the djangorestframework-simplejwt package from version 4.8.0 to 5.3.0. Key improvements include support for Python 3.11 and Django 4.2, along with enhanced documentation and various translation updates. The changes aim to improve compatibility and functionality for developers using this authentication plugin."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#17",
+      "title": "Upgrade download-artifact to v8 for improved performance in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "dependencies",
+        "update",
+        "actions",
+        "security",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/17",
+      "summary": "This update bumps the actions/download-artifact dependency from version 4 to 8, introducing significant changes including migration to ESM modules and stricter hash mismatch handling. The action now skips unzipping non-zipped downloads, enhancing efficiency and security by defaulting to error on hash mismatches. These improvements will streamline artifact management in workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#16",
+      "title": "Upgrade repository-dispatch to v4 in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "dependencies",
+        "update",
+        "build",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/16",
+      "summary": "This update bumps the peter-evans/repository-dispatch from version 3 to 4, enhancing compatibility and performance. Key changes include updates to dependencies and improvements in the build process, ensuring better support for Node 24. The workflow file has been modified to reflect the new version, streamlining operations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#17",
+      "title": "Upgrade Checkout Action to Version 6 in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "dependencies",
+        "update",
+        "actions",
+        "ci"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/17",
+      "summary": "This update bumps the actions/checkout dependency from version 4 to 6 across multiple workflow files. Key improvements include support for Node.js 24 and enhanced credential management. These changes will ensure better compatibility and performance in CI/CD processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#11",
+      "title": "Upgrade checkout action to v6 for better performance in M C P Short U R L 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "upgrade",
+        "actions",
+        "checkout",
+        "workflow",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/11",
+      "summary": "This update bumps the actions/checkout from version 4 to 6 across multiple workflow files. Key improvements include enhanced credential management and support for Node.js 24, ensuring smoother operations and better compatibility with recent features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#12",
+      "title": "Upgrade upload-artifact action for better performance in M C P Short U R L 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "upgrade",
+        "actions",
+        "dependencies",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/12",
+      "summary": "This update bumps the actions/upload-artifact from version 4 to 7, introducing support for direct file uploads and upgrading to ESM. The change enhances the artifact upload process by allowing single files to be uploaded without zipping, improving efficiency. Additionally, it ensures compatibility with the latest Node.js versions."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPSeedream#9",
       "title": "Upgrade repository-dispatch to v4 for enhanced features in M C P Seedream 🚀",
       "tags": [
