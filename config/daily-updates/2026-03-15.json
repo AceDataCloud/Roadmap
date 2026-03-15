@@ -3,6 +3,103 @@
   "date": "2026-03-15",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#9",
+      "title": "Upgrade repository-dispatch to v4 for enhanced features in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "update",
+        "dependencies",
+        "github-actions",
+        "repository-dispatch"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/9",
+      "summary": "This update bumps the repository-dispatch action from version 3 to 4, incorporating various improvements and bug fixes. Key changes include updates to dependencies and enhancements that ensure better compatibility with Node.js versions. This upgrade is essential for maintaining the functionality and performance of workflows that rely on this action."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#10",
+      "title": "Upgrade build-number to version 3 in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "dependency",
+        "update",
+        "build",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/10",
+      "summary": "This update bumps the einaregilsson/build-number dependency from version 2 to 3. The change eliminates the use of a deprecated method for setting environment variables, ensuring smoother operations without functional differences. The workflow file has been modified accordingly to reflect this upgrade."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#16",
+      "title": "Update upload-artifact to v7 for enhanced features in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "dependencies",
+        "update",
+        "actions",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/16",
+      "summary": "This update bumps the actions/upload-artifact dependency from version 4 to 7, introducing support for direct file uploads and upgrading the module to ESM. The changes enhance the artifact upload process by allowing single files to be uploaded without zipping, improving efficiency in workflows. Additionally, the update ensures compatibility with the latest Node.js versions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#17",
+      "title": "Upgrade Python Setup Action to v6 in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "dependencies",
+        "upgrade",
+        "python",
+        "actions",
+        "ci"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/17",
+      "summary": "This update bumps the actions/setup-python from version 5 to 6, ensuring compatibility with Node 24. Key enhancements include support for pip-version and improved reading from .python-version files. Additionally, several bug fixes and dependency updates have been implemented to enhance overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#17",
+      "title": "Update repository-dispatch to v4 for enhanced features in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "dependencies",
+        "update",
+        "actions",
+        "repository-dispatch"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/17",
+      "summary": "This update bumps the peter-evans/repository-dispatch from version 3 to 4, introducing several improvements and requiring Actions Runner v2.327.1 or later for Node 24 support. Key modifications include updates to various dependencies, ensuring compatibility and performance enhancements across the board."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#13",
+      "title": "Upgrade actions/checkout to version 6 in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "dependencies",
+        "upgrade",
+        "ci",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/13",
+      "summary": "This update bumps the actions/checkout dependency from version 4 to 6 across multiple workflow files. Key changes include improved credential handling and support for Node.js 24, enhancing the overall functionality and security of the CI/CD processes."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPSuno#17",
       "title": "Upgrade Docker Login Action to Version 4 in M C P Suno 🚀",
       "tags": [
