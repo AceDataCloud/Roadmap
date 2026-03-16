@@ -3,6 +3,22 @@
   "date": "2026-03-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#187",
+      "title": "Streamline Secrets Management with Tencent Cloud SSM in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "secrets",
+        "tencent",
+        "kubernetes",
+        "backend",
+        "django"
+      ],
+      "public": false,
+      "summary": "This update introduces a new method for loading secrets from Tencent Cloud Secrets Manager, reducing the need for multiple Kubernetes secrets. The new implementation allows for a single JSON secret to be injected into the environment, simplifying configuration and enhancing security. Local development remains unaffected, while production environments will now fetch secrets at startup, ensuring proper configuration."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPMidjourney#15",
       "title": "Upgrade Checkout Action to v6 in M C P Midjourney 🚀",
       "tags": [
