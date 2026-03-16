@@ -3,6 +3,118 @@
   "date": "2026-03-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Index#9",
+      "title": "Enhance Documentation with Key Sections in Index 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "updates",
+        "dns",
+        "error-handling",
+        "bot"
+      ],
+      "public": false,
+      "summary": "This update enriches the CLAUDE.md documentation by adding crucial sections on PR Bot Identity, DNS Management, and PlatformService Worker Error Handling. These sections were previously found in copilot-instructions but were missing from CLAUDE.md, ensuring that users have comprehensive guidance on these topics. The changes are purely documentation-focused, with no functional code alterations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#33",
+      "title": "New Buyback Entry Added in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "buyback",
+        "jupiter",
+        "ace",
+        "roadmap",
+        "sol"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/33",
+      "summary": "We've successfully added a new buyback record for 84,346 ACE, sourced from a creator fee of 0.559 SOL ($52.54) via the Jupiter Aggregator on March 16, 2026. This entry enhances our buyback history, ensuring transparency and verifiability linked to Solscan. Check out the updated buyback history on the roadmap page!"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#8",
+      "title": "Enhance CLAUDE.md with Auto-PR Workflow in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "workflow",
+        "update"
+      ],
+      "public": false,
+      "summary": "A new rule has been added to the 'Important Reminders' section of CLAUDE.md, emphasizing the need to automatically commit and create a PR after any code change. This update aims to streamline the workflow by ensuring that developers do not wait for prompts to initiate PRs. No functional code changes were made, as this is purely a documentation enhancement."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#18",
+      "title": "Exciting New Sora v2 Tools Added in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "feature",
+        "tools",
+        "video",
+        "update",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/18",
+      "summary": "This update introduces new Sora v2 tools, including `sora_generate_video_v2()` and `sora_generate_video_v2_async()`, which utilize unified parameters for video generation. Key enhancements include new video duration options and resolutions, along with updated model and action listings. The changes align with the recent API redesign, improving usability and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#189",
+      "title": "Streamline API Parameters and OpenAPI Fixes in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "refactor",
+        "documentation",
+        "openapi",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update unifies the `duration` parameter for video lengths across both API versions, simplifying the interface by removing the `seconds` parameter. Additionally, the `image_urls` parameter has been standardized, and several OpenAPI specification corrections have been made to ensure accurate response examples. Documentation has also been enhanced with a clear comparison table for v1 and v2, improving developer experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#532",
+      "title": "Refactor Sora to Partner API Format in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "api",
+        "sora",
+        "validation",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update modifies the Sora v2 handler to accept `duration` and `image_urls` from the request body, aligning with the parameter unification in AceDataCloud's PlatformBackend. Internally, it converts `duration` to `seconds` and `image_urls[0]` to `input_reference` for the ttapi partner channel. Validation checks have been updated accordingly to ensure compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#188",
+      "title": "Streamlined Documentation by Removing Redundant Files in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "cleanup",
+        "optimization",
+        "api",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update removes approximately 2,127 redundant SEO content files, including blogs, comparisons, tutorials, and use-case documents, which were duplicative of existing API documentation. The deletion also includes the `generate_seo_content.py` script, leading to a significant reduction in the number of files, particularly in the zh-CN documentation. Post-merge, a database cleanup is required to remove orphaned translation records."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#357",
       "title": "Enhance SEO with Sitemap and Robots.txt in Nexior 🚀",
       "tags": [
