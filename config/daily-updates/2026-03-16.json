@@ -3,6 +3,136 @@
   "date": "2026-03-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#357",
+      "title": "Enhance SEO with Sitemap and Robots.txt in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "seo",
+        "sitemap",
+        "robots",
+        "update",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/357",
+      "summary": "This update introduces a new robots.txt file and a comprehensive sitemap.xml for improved SEO. The robots.txt file specifies which pages are accessible to search engines, while the sitemap.xml outlines the structure of the site for better indexing. These changes aim to enhance visibility and search engine performance for Nexior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#149",
+      "title": "Enhance Secrets Management with Tencent Cloud SSM in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "feature",
+        "secrets",
+        "tencent",
+        "kubernetes",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces a new secrets loader for Tencent Cloud SSM, allowing the application to fetch secrets directly from Tencent's Secrets Manager. The existing Kubernetes secrets remain as a fallback, ensuring no disruption in functionality. By default, the SSM feature is disabled, maintaining current behavior unless explicitly enabled."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#15",
+      "title": "Enhance Secrets Management with Tencent Cloud SSM in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "feature",
+        "secrets",
+        "tencentcloud",
+        "kubernetes",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/15",
+      "summary": "This update introduces a new secrets loader for Tencent Cloud SSM, allowing for optional fetching of secrets while preserving existing Kubernetes secrets as a fallback. The loader is disabled by default, ensuring no disruption to current functionality. Additionally, the `tencentcloud-sdk-python` dependency has been added to support this feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#10",
+      "title": "Enhance Secrets Management with Tencent Cloud SSM in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "feature",
+        "secrets",
+        "kubernetes",
+        "tencent",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new secrets loader for Tencent Cloud SSM, allowing the application to fetch secrets while preserving existing Kubernetes secrets as a fallback. The SSM feature is disabled by default, ensuring no disruption to current functionality. Key dependencies have been added, and the deployment configuration has been updated to support this new functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#77",
+      "title": "Enhance Secrets Management with Tencent Cloud SSM in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "secrets",
+        "tencent",
+        "kubernetes",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update introduces a new secrets loader for Tencent Cloud SSM, allowing the application to fetch secrets while maintaining existing Kubernetes secrets as a fallback. The SSM feature is disabled by default, ensuring no disruption to current functionality. If SSM fails, the application will revert to using Kubernetes secrets or environment variables seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#20",
+      "title": "Enhance Secrets Management with Tencent Cloud SSM in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "secrets",
+        "tencent",
+        "k8s",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new secrets loader for Tencent Cloud SSM, allowing for optional fetching of secrets while preserving existing Kubernetes secrets as a fallback. By default, the SSM feature is disabled, ensuring no disruption to current functionality. When enabled, it enhances the security and management of sensitive information in the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#13",
+      "title": "Upgrade Codecov Action to v5 for Enhanced CI Performance in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "ci",
+        "codecov",
+        "dependencies",
+        "upgrade"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/13",
+      "summary": "This update bumps the Codecov GitHub Action from version 4 to 5, introducing the Codecov Wrapper for faster updates and improved functionality. Key changes include the deprecation of certain arguments and the addition of new ones, enhancing the overall coverage reporting process. This upgrade is expected to streamline CI workflows and improve coverage reporting capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#14",
+      "title": "Upgrade upload-artifact action for better performance in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "dependencies",
+        "update",
+        "actions",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/14",
+      "summary": "This update bumps the actions/upload-artifact from version 4 to 7, introducing support for direct file uploads and upgrading the module to ESM. These enhancements improve the efficiency of artifact uploads and ensure compatibility with newer @actions packages. The workflow file has been updated accordingly to reflect this change."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#187",
       "title": "Streamline Secrets Management with Tencent Cloud SSM in Backend 🚀",
       "tags": [
