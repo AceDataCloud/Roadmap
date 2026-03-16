@@ -3,6 +3,183 @@
   "date": "2026-03-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#15",
+      "title": "Upgrade Checkout Action to v6 in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "dependencies",
+        "upgrade",
+        "actions",
+        "ci",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/15",
+      "summary": "This update bumps the actions/checkout dependency from version 4 to 6, enhancing compatibility with Node.js 24 and improving credential management. Key changes include persisting credentials to a separate file and updates to the README for better clarity on requirements. This upgrade ensures smoother workflows and better performance in CI/CD processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#14",
+      "title": "Update repository-dispatch to v4 for better performance in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "dependencies",
+        "update",
+        "performance",
+        "actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/14",
+      "summary": "This update bumps the peter-evans/repository-dispatch dependency from version 3 to 4, enhancing functionality and performance. Key changes include updates to various dependencies and improvements in the actions runner compatibility. This upgrade ensures smoother operations and better support for Node 24."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#15",
+      "title": "Upgrade Docker Login Action to Version 4 in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "docker",
+        "dependencies",
+        "update",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/15",
+      "summary": "This update bumps the Docker Login Action from version 2 to version 4, enhancing the workflow's capabilities. Key improvements include support for Node 24 as the default runtime and various dependency updates that improve performance and security. The changes ensure a smoother integration with the latest features and fixes from the Docker ecosystem."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#8",
+      "title": "Upgrade repository-dispatch to v4 for enhanced functionality in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "dependencies",
+        "update",
+        "enhancement",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/8",
+      "summary": "This update bumps the peter-evans/repository-dispatch dependency from version 3 to 4, ensuring compatibility with the latest features and improvements. Key modifications include updates to various dependencies, enhancing overall performance and stability. The change is expected to improve the workflow efficiency in the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#9",
+      "title": "Upgrade Codecov Action to v5 in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "codecov",
+        "update",
+        "dependencies",
+        "action"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/9",
+      "summary": "This update bumps the Codecov GitHub Action from version 4 to 5, enhancing the action's performance and update speed. Key changes include the introduction of the Codecov Wrapper and new arguments for better configuration. Additionally, several dependencies have been updated to their latest versions, ensuring improved functionality and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#9",
+      "title": "Upgrade Azure/k8s-set-context to v4 in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "upgrade",
+        "dependencies",
+        "k8s",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/9",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 1 to version 4, ensuring compatibility with Node 20 as Node 16 is deprecated. The change is reflected in the deployment workflow, enhancing the overall stability and performance of the application. This upgrade also includes various improvements and updates from the dependency's changelog."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#8",
+      "title": "Upgrade download-artifact to v8 for better performance in M C P Short U R L 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "dependencies",
+        "upgrade",
+        "actions",
+        "security",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/8",
+      "summary": "This update bumps the actions/download-artifact dependency from version 4 to 8, introducing significant changes including migration to ESM modules and stricter hash mismatch handling. The action will now skip unzipping non-zipped files, enhancing efficiency in artifact downloads. These improvements aim to streamline workflows and enhance security by default."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#13",
+      "title": "Upgrade repository-dispatch to v4 for better performance in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "dependencies",
+        "update",
+        "workflow",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/13",
+      "summary": "This update bumps the peter-evans/repository-dispatch dependency from version 3 to 4, enhancing the functionality and performance of the workflow. Key changes include support for Node 24 and various dependency updates that improve stability and compatibility. The modifications ensure that the workflow remains up-to-date with the latest features and fixes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#14",
+      "title": "Upgrade Docker Login Action to Version 4 in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "docker",
+        "dependencies",
+        "update",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/14",
+      "summary": "This update bumps the Docker Login Action from version 2 to version 4, enhancing the workflow's capabilities. Key improvements include support for Node 24 as the default runtime and updates to various dependencies, ensuring better performance and security. The deployment workflow has been modified accordingly to utilize the latest version."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#16",
+      "title": "Upgrade build-number action to version 3 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "upgrade",
+        "backend",
+        "github-actions",
+        "build"
+      ],
+      "public": false,
+      "summary": "This update bumps the einaregilsson/build-number action from version 2 to 3, replacing deprecated methods for setting environment variables. The change ensures compatibility with the latest GitHub features while maintaining existing functionality. A minor modification was made to the deploy workflow to reflect this update."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#13",
+      "title": "Update upload-artifact to v7 for better performance in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "dependencies",
+        "update",
+        "actions",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/13",
+      "summary": "This update bumps the actions/upload-artifact dependency from version 4 to 7, introducing support for direct file uploads and upgrading to ESM. The changes enhance the artifact upload process and ensure compatibility with the latest Node.js versions, improving overall workflow efficiency."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPSora#14",
       "title": "Upgrade Docker Login Action to Version 4 in M C P Sora 🚀",
       "tags": [
