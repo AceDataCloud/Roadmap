@@ -3,6 +3,84 @@
   "date": "2026-03-17",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/SunoCli#1",
+      "title": "Update Hatchling Dependency for Enhanced Compatibility in Suno Cli 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SunoCli",
+        "dependency",
+        "update",
+        "hatchling",
+        "suno-cli"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SunoCli/pull/1",
+      "summary": "This update modifies the hatchling requirement in the pyproject.toml file to allow for versions between 1.21.0 and 1.30.0. This change ensures compatibility with the latest features and fixes introduced in hatchling v1.29.0, enhancing the overall functionality of the Suno Cli project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#9",
+      "title": "Upgrade k8s-set-context to v4 for enhanced compatibility in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "upgrade",
+        "kubernetes",
+        "actions",
+        "dependency"
+      ],
+      "public": false,
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 1 to version 4, ensuring compatibility with Node 20 as Node 16 is deprecated. The change impacts the deployment workflow by updating the action used to set the Kubernetes context, enhancing overall stability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#8",
+      "title": "Upgrade Checkout Action to Version 6 in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "upgrade",
+        "actions",
+        "checkout",
+        "ci",
+        "workflow"
+      ],
+      "public": false,
+      "summary": "This update bumps the actions/checkout from version 4 to version 6, enhancing compatibility with Node.js 24 and improving credential management by persisting them to a separate file. The changes also include updates to the CI workflows to reflect the new version, ensuring smoother operations and better performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#7",
+      "title": "Upgrade Docker Login Action to Version 4 in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "docker",
+        "upgrade",
+        "action",
+        "security",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update bumps the Docker Login Action from version 2 to version 4, enhancing the authentication process for Docker registries. Key changes include switching to Node 24 as the default runtime and updating various dependencies to improve performance and security. This upgrade ensures compatibility with the latest features and optimizations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#74",
+      "title": "Upgrade Django to 4.2.29 in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "django",
+        "upgrade",
+        "security",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update bumps Django from version 4.2.2 to 4.2.29, incorporating several important security fixes and improvements. Key changes include resolutions for multiple CVEs, enhancing the framework's security and stability. The modifications are reflected in both the poetry.lock and pyproject.toml files, ensuring compatibility with the latest features."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Docs#39",
       "title": "Streamline API Navigation by Removing Extra Dropdowns in Docs 🚀",
       "tags": [
