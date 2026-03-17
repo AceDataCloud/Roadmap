@@ -3,6 +3,104 @@
   "date": "2026-03-17",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Docs#39",
+      "title": "Streamline API Navigation by Removing Extra Dropdowns in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "api",
+        "navigation",
+        "docs",
+        "update",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/39",
+      "summary": "This update simplifies the API Reference section by eliminating the unnecessary 'API Reference' dropdown layer across all service groups. By removing the top-level 'tags' array from 34 OpenAPI spec files, endpoints are now directly accessible under their respective service groups, enhancing user navigation and experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#72",
+      "title": "Add SKALE Base payment option in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "payment",
+        "skale",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces SKALE Base as a new payment network option in the X402Pay component, allowing users to transact with zero gas fees. Key changes include the addition of SKALE chain ID mapping, updated network labels, and necessary parameters for wallet integration. Users selecting SKALE will have their wallets automatically switched to the SKALE Base network for seamless transactions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#17",
+      "title": "Exciting SKALE Base Chain Support Added in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "feature",
+        "skale",
+        "blockchain",
+        "zero-gas",
+        "integration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/17",
+      "summary": "This update introduces the SkaleChainHandler for the SKALE Base mainnet, enabling zero gas fees for transactions on this EVM-compatible chain. Key changes include new environment configurations, integration of SKALE-specific settlement handling, and the addition of the SKALE asset for bridging. The implementation enhances asset transfer capabilities while maintaining EIP-712 verification logic."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#158",
+      "title": "Publishers Now Live! 🚀 in Publisher",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "bugfix",
+        "publishing",
+        "api",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update fixes the publishing functionality for several API publishers, including Zhihu, CSDN, JueJin, CNBlogs, Dev.to, and Medium. Previously, these platforms only created drafts, but now they successfully publish articles live. Key changes include updates to the publishing logic and status settings across multiple files, ensuring a seamless publishing experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#358",
+      "title": "Exciting New SKALE Payment Option Added in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "payment",
+        "skale",
+        "x402pay",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/358",
+      "summary": "We've introduced SKALE Base as a new payment network option in the X402Pay component, allowing for zero gas fees. Key updates include the addition of SKALE chain ID mapping, a new label for SKALE in the network formatting, and updated chain parameters for wallet integration. This enhancement aims to streamline payment processes for users on the SKALE network."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#196",
+      "title": "Add SKALE Base as a new X402 payment option in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "payment",
+        "backend",
+        "skale",
+        "x402"
+      ],
+      "public": false,
+      "summary": "This update introduces SKALE Base as a third payment option for X402, alongside Base and Solana, allowing for zero gas fees. Key changes include the addition of new environment variables in `core/settings.py` and modifications to `app/utils/x402_payment.py` to handle SKALE network transactions. This enhancement aims to improve payment flexibility and reduce costs for users."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#539",
       "title": "Enhance Sora Workers with String Version Checks in Platform Service 🚀",
       "tags": [
