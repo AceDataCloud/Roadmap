@@ -3,6 +3,102 @@
   "date": "2026-03-17",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#539",
+      "title": "Enhance Sora Workers with String Version Checks in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "sora",
+        "versioning",
+        "update",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update modifies all four Sora workers (ttapi, openaihk, mountsea, cqtai) to use string coercion for version checks, ensuring compatibility with version '2.0'. The changes enhance error handling by throwing a BadRequestError for unsupported versions. This update is a companion to the recent changes in the PlatformBackend."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#195",
+      "title": "Updated Version Parameter to String Format in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "api",
+        "documentation",
+        "tests",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update changes the version parameter from an integer to a string format, specifically '1.0' and '2.0'. Key files modified include API definitions, documentation, and test cases to reflect this change. This adjustment enhances consistency and clarity across the platform's backend services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#69",
+      "title": "Enhance Explore Page Descriptions in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "fix",
+        "explore",
+        "description",
+        "workflow",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/69",
+      "summary": "This update fixes the missing workflow descriptions on the Explore page by ensuring that the App's description is synced with the Site record. The changes include modifications to the import logic, allowing for the update of Site descriptions when they are absent. This improvement enhances the user experience by providing clearer information on the Explore page."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#156",
+      "title": "Revamp API Publishing for 25 Platforms in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "refactor",
+        "api",
+        "automation",
+        "testing",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update replaces Playwright browser automation with pure HTTP API calls for 25 out of 27 publishing platforms, significantly improving publish times from ~30-60 seconds to just 1-3 seconds. It also ports 18 platform adapters from TypeScript to Python and implements 5 new publishers using official APIs. A comprehensive test suite with 141 tests has been added to ensure reliability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#537",
+      "title": "Normalize Version and Duration in Sora Handlers in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "validation",
+        "sora",
+        "video",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update normalizes the version and duration fields to numbers across all Sora video handlers. It also implements a rejection for version 2 in non-ttapi workers and adds a Kong canary rule for string version matching. These changes enhance validation and error handling for video requests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#38",
+      "title": "Streamline API Reference Navigation in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "docs",
+        "api",
+        "navigation",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/38",
+      "summary": "This update simplifies the API reference sidebar by removing the intermediate 'API Reference' section, allowing users to access endpoints directly under each service group. The configuration has been updated from an auto-generated format to an explicit pages format, enhancing clarity and usability across all 15 language configurations."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPSuno#18",
       "title": "Fix prompt and lyric limits in M C P Suno 🎶",
       "tags": [
