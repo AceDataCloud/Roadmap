@@ -1,0 +1,23 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-17",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Dify#66",
+      "title": "Enhance OAuth Security with HMAC in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "oauth",
+        "security",
+        "bugfix",
+        "mobile",
+        "dify"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/66",
+      "summary": "This update replaces the session-based OAuth state verification with HMAC-signed state tokens for the AceDataCloud provider. This change resolves issues with 'Invalid or expired OAuth state' errors on mobile browsers by embedding the nonce and timestamp directly in the state URL parameter. The GitHub and Google OAuth flows remain unchanged, ensuring continued functionality across those providers."
+    }
+  ]
+}
