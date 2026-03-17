@@ -3,6 +3,71 @@
   "date": "2026-03-17",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Docs#33",
+      "title": "Streamlined SEO Content by Removing Duplicates in Docs 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "docs",
+        "cleanup",
+        "seo",
+        "translations",
+        "navigation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/33",
+      "summary": "This update removes 26 outdated SEO pages from the comparisons, blog, and use-cases sections, which were superseded by newer canonical versions. Additionally, translations of these deleted pages across 17 languages have been removed, resulting in a total of 42 files deleted and 7,469 lines removed. The navigation in docs.json has been updated for consistency across all languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#192",
+      "title": "New Nexior Deployment Tutorials Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "nexior",
+        "deployment",
+        "tutorials",
+        "backend"
+      ],
+      "public": false,
+      "summary": "We've introduced four new deployment tutorials for Nexior, enhancing our documentation for Docker, Netlify, Zeabur, and Tencent Cloud. These guides provide step-by-step instructions tailored for Chinese users, ensuring easy deployment across various platforms. This update complements the existing Vercel tutorial and aims to streamline the deployment process for users in the Asia-Pacific region."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#191",
+      "title": "Enhanced Chat Completions API Schemas in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "backend",
+        "openapi",
+        "enhancement",
+        "sync"
+      ],
+      "public": false,
+      "summary": "This update aligns all six chat completion API specifications with the official OpenAI API, adding crucial content part types and new request and response fields. Key enhancements include the addition of `input_audio`, `file`, and `tool_calls`, improving functionality and compliance across APIs. The changes have been validated and synced to the production database."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#32",
+      "title": "Streamline API Reference Navigation in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "api",
+        "navigation",
+        "docs",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/32",
+      "summary": "This update removes the intermediate 'Overview' layer from the API Reference tab, allowing direct access to API groups like Gemini AI and Claude AI. Additionally, the introduction pages across 18 languages have been deleted, and relevant scripts have been updated to reflect these changes. Card links on introduction and quickstart pages now correctly point to the authentication section."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#190",
       "title": "Revamped Sora V2 Pricing and Size-Based Billing in Backend 🚀",
       "tags": [
