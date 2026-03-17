@@ -3,6 +3,55 @@
   "date": "2026-03-17",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPSuno#18",
+      "title": "Fix prompt and lyric limits in M C P Suno 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "bugfix",
+        "update",
+        "tools",
+        "suno"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/18",
+      "summary": "The suno_list_models tool has been updated to accurately reflect the prompt and lyric limits. A new Lyric Limit column has been added, while the Prompt Limit has been corrected to 200 characters. This change enhances clarity for users regarding model capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SunoAPI#1",
+      "title": "Update prompt and lyric limits for clarity in Suno API 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "SunoAPI",
+        "documentation",
+        "update",
+        "sunoapi",
+        "clarification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SunoAPI/pull/1",
+      "summary": "This update clarifies the distinction between the 'prompt' field and the actual lyrics in the model version table. A new 'lyric Limit' column has been added, accurately reflecting the character limits of 3000-5000 for lyrics. These changes enhance the documentation and improve user understanding of the model capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#37",
+      "title": "Update Suno Prompt and Lyric Limits in Docs 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "suno",
+        "docs",
+        "update",
+        "localization",
+        "correction"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/37",
+      "summary": "This update corrects the Suno prompt and lyric limit table across all languages. A new 'lyric Limit' column has been added with accurate values of 3000-5000 characters, while the 'prompt Limit' column now correctly reflects a limit of 200 characters. All 18 language variants have been updated to ensure consistency and clarity."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Dify#68",
       "title": "Reorganize Workflows for Docker Visibility in Dify 🚀",
       "tags": [
