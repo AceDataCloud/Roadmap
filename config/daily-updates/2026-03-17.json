@@ -3,6 +3,134 @@
   "date": "2026-03-17",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Dify#68",
+      "title": "Reorganize Workflows for Docker Visibility in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "docker",
+        "workflows",
+        "fix",
+        "api",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/68",
+      "summary": "This update moves the `workflows/` directory into `api/` to ensure that the Docker image includes all necessary workflow files. The `WORKFLOWS_DIR` path has been updated accordingly to reflect this change. This fix addresses the issue where no AceDataCloud workflows were found on the Explore page, enhancing the functionality of the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#535",
+      "title": "Enhance error handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "security",
+        "user-experience",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the error handling for upstream 500, 502, and 504 errors by preventing the exposure of raw error messages to customers. Instead, users will receive a more user-friendly message indicating that the service is temporarily unavailable. This change enhances the overall user experience and maintains security by not leaking sensitive information."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#36",
+      "title": "Expanded Language Support with Greek, Finnish, and Serbian in Docs 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "language",
+        "docs",
+        "translation",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/36",
+      "summary": "This update adds Greek, Finnish, and Serbian language navigation to the documentation by modifying the `docs.json` file. Each language now has complete translated content and is fully integrated, bringing the total to 18 supported languages. All paths and translations have been verified for accuracy and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#534",
+      "title": "Optimize memory usage in Platform Service 🧠",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "memory",
+        "optimization",
+        "bugfix",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update addresses a significant memory leak in the nanobanana image processing functionality. Key changes include optimizing logging to prevent large base64 data from being held in memory, and implementing a sequential processing loop to manage candidate uploads more efficiently. As a result, peak memory usage per request has been reduced from approximately 80-120MB to around 15-25MB."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#533",
+      "title": "Boost Node.js Memory for Nanobanana Stability in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "memory",
+        "nodejs",
+        "deployment",
+        "stability"
+      ],
+      "public": false,
+      "summary": "This update addresses frequent restarts of Nanobanana pods caused by JavaScript heap exhaustion. Key changes include increasing the Node.js heap size to 800MB and raising the memory limits for the deployment from 600Mi to 1024Mi. These adjustments aim to enhance stability and reduce 502 Bad Gateway errors due to pod failures."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#35",
+      "title": "Clean Up Navigation Tabs for a Smoother Experience in Docs ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "docs",
+        "cleanup",
+        "navigation",
+        "fix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/35",
+      "summary": "This update removes 60 dead navigation tab entries from `docs.json`, addressing 404 errors across all 15 languages. The changes ensure that the navigation now accurately reflects the available content, enhancing user experience and consistency. The tabs for tutorials, comparisons, use cases, and blogs have been eliminated, streamlining the navigation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#34",
+      "title": "Clean Up Orphaned Content in Docs 🗑️",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "cleanup",
+        "documentation",
+        "maintenance",
+        "content"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/34",
+      "summary": "This update removes all orphan content files related to tutorials, comparisons, use cases, and blog posts that were previously removed from the navigation. A total of 2084 files across multiple languages have been deleted, including the associated scripts for generating SEO pages. This cleanup enhances the documentation's clarity and relevance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#65",
+      "title": "Enhance AceDataCloud Workflow Visibility in Dify 🌟",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "enhancement",
+        "explore",
+        "workflow",
+        "sync",
+        "aceDataCloud"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/65",
+      "summary": "This update improves the visibility of AceDataCloud workflows on the Explore page by implementing a new periodic sync task that runs every 30 minutes, ensuring workflows are registered regardless of user login. Additionally, a hybrid retrieval mode has been introduced, merging local AceDataCloud templates with Dify's official templates while maintaining clear source identification. Users will now see AceDataCloud apps prominently displayed with a distinct badge, enhancing the overall user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Docs#33",
       "title": "Streamlined SEO Content by Removing Duplicates in Docs 📚",
       "tags": [
