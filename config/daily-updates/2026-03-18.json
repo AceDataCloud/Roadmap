@@ -3,6 +3,265 @@
   "date": "2026-03-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Dify#72",
+      "title": "Enhance Midjourney Imagine Plugin with V8 Parameters in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "enhancement",
+        "midjourney",
+        "plugin",
+        "v8",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/72",
+      "summary": "This update introduces new V8-specific parameters to the Midjourney Imagine plugin, including model version selection, HD resolution mode, and quality settings. The YAML manifest and Python payload builder have been updated accordingly, allowing users to leverage advanced features like multi-reference blending and premium style flags. These enhancements aim to improve user experience and output quality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#14",
+      "title": "Update VS Code Dispatch Target for ShortURL in M C P Short U R L 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "ci",
+        "vscode",
+        "update",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/14",
+      "summary": "This update modifies the cross-repo dispatch target in the CI workflow from the combined VSCodeMCP repository to the dedicated VSCodeMCPShortURL extension repository. The change ensures that the correct extension rebuild is triggered, enhancing the deployment process for the ShortURL extension."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#19",
+      "title": "Update dispatch target for VSCode extension in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "ci",
+        "update",
+        "workflow",
+        "vscode"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/19",
+      "summary": "This update modifies the cross-repo dispatch target in the CI workflow from the combined `VSCodeMCP` repository to the dedicated `VSCodeMCPNanoBanana` extension repository. The change ensures that the correct extension rebuild is triggered, enhancing the deployment process for the extension."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#12",
+      "title": "Update dispatch target for VSCode extension in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "ci",
+        "update",
+        "workflow",
+        "vscode"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/12",
+      "summary": "This update modifies the cross-repo dispatch target in the CI workflow from the combined `VSCodeMCP` repository to the dedicated `VSCodeMCPSeedance` extension repository. This change ensures that the correct extension rebuild is triggered, enhancing the deployment process for the specific extension."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#13",
+      "title": "Update VS Code Dispatch Target for Seedream in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "ci",
+        "vscode",
+        "update",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/13",
+      "summary": "This update modifies the cross-repo dispatch target in the CI workflow, shifting from the combined `VSCodeMCP` repository to the dedicated `VSCodeMCPSeedream` extension repository. This change ensures that updates are correctly routed to the appropriate extension, enhancing the deployment process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#15",
+      "title": "Update VS Code Extension Dispatch Target in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "ci",
+        "update",
+        "vscode",
+        "dispatch"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/15",
+      "summary": "This update modifies the cross-repo dispatch target, shifting from the combined `VSCodeMCP` repository to the dedicated `VSCodeMCPFlux` extension repository. This change enhances the deployment process for the VSCode extension, ensuring more streamlined updates and better management of the extension's lifecycle."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#19",
+      "title": "Update CI Dispatch Target for VSCodeMCPVeo in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "ci",
+        "update",
+        "workflow",
+        "vscode"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/19",
+      "summary": "This update modifies the CI workflow to change the dispatch target from the combined `VSCodeMCP` repository to the dedicated `VSCodeMCPVeo` extension repository. This change ensures that builds and updates are correctly directed to the appropriate extension, enhancing the deployment process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#20",
+      "title": "Update dispatch target for VSCode extension in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "ci",
+        "update",
+        "vscode",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/20",
+      "summary": "This update modifies the cross-repo dispatch target in the CI workflow from the combined `VSCodeMCP` repository to the dedicated `VSCodeMCPSora` extension repository. This change ensures that builds and updates are correctly triggered for the specific extension, improving deployment accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#19",
+      "title": "Update dispatch target for VSCode extension in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "ci",
+        "vscode",
+        "update",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/19",
+      "summary": "This update modifies the cross-repo dispatch target in the CI workflow from the combined `VSCodeMCP` repository to the dedicated `VSCodeMCPLuma` extension repository. The change ensures that the correct extension rebuild is triggered, enhancing the deployment process for the Luma extension."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#21",
+      "title": "Update dispatch target for VSCode extension in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "ci",
+        "update",
+        "workflow",
+        "vscode"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/21",
+      "summary": "This update modifies the cross-repo dispatch target in the CI workflow, changing it from the combined `VSCodeMCP` repo to the dedicated `VSCodeMCPMidjourney` extension repo. This change ensures that the correct extension is triggered for rebuilds, enhancing the deployment process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#19",
+      "title": "Update VS Code Dispatch Target in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "ci",
+        "vscode",
+        "update",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/19",
+      "summary": "This update modifies the cross-repo dispatch target in the CI workflow from the combined VSCodeMCP repo to the dedicated VSCodeMCPSerp extension repo. The change ensures that the correct extension rebuild is triggered, enhancing the deployment process for the M C P Serp project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#20",
+      "title": "Update dispatch target for VSCode extension in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "ci",
+        "update",
+        "workflow",
+        "vscode",
+        "dispatch"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/20",
+      "summary": "This update modifies the cross-repo dispatch target in the CI workflow, changing it from the combined VSCodeMCP repo to the dedicated VSCodeMCPSuno extension repo. This change ensures that updates are correctly routed to the appropriate extension, enhancing the deployment process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#379",
+      "title": "Enhance V8 i18n Support for HD/Quality in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "translations",
+        "v8",
+        "localization",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/379",
+      "summary": "This update adds essential V8-related translation keys for HD/quality features across all 17 locales in the Nexior project. Key additions include labels and tooltips for HD mode, standard, and ultra quality options, ensuring a consistent user experience for non-English speakers. This enhancement significantly improves accessibility and usability for a broader audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#20",
+      "title": "Enhance MCP prompts with V8 guidance in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "features",
+        "midjourney",
+        "documentation",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/20",
+      "summary": "This update introduces Midjourney V8 feature documentation to the prompt templates, enabling LLMs to utilize the latest capabilities. Key features include HD mode, quality 4, style reference, moodboard, and associated cost multipliers. These enhancements aim to improve image generation quality and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#572",
+      "title": "Fix Gemini handler to prevent NoneType error in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "api",
+        "gemini",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update modifies the Gemini API handler to ensure the model is correctly retrieved from the URL path, preventing NoneType errors. The changes in the `get_forward_request_url` and `calculate_prompt_tokens` methods enhance the robustness of API requests by using the model from `path_kwargs` when available. This improvement will lead to more reliable interactions with the Gemini API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#41",
+      "title": "New Claude Code Integration Guide for Cursor in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "documentation",
+        "integration",
+        "claude-code",
+        "cursor",
+        "guide"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/41",
+      "summary": "We've added a comprehensive guide for integrating Claude Code with Cursor, available in both English and Chinese. This new resource includes installation instructions, configuration details, and a comparison of Cursor's built-in AI features with the Claude Code extension. Additionally, the overview pages have been updated to reflect this new guide, enhancing user accessibility."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#206",
       "title": "Enhance Cursor Documentation in Backend 🚀",
       "tags": [
