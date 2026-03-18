@@ -1,0 +1,53 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-18",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#159",
+      "title": "Exciting New International Publishers Added in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "feature",
+        "publishers",
+        "testing",
+        "updates",
+        "international"
+      ],
+      "public": false,
+      "summary": "This update introduces five new international platform publishers: Hashnode, Telegraph, LinkedIn, Blogger, and WordPress. Alongside these additions, 19 existing test failures have been resolved, and 61 new tests have been implemented to ensure robust functionality across all platforms. The total number of passing tests now stands at 578, enhancing the overall reliability of the publishing system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#193",
+      "title": "Enhanced Nexior Deployment Tutorials with Screenshots in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "tutorials",
+        "nexior",
+        "enhancement",
+        "backend"
+      ],
+      "public": false,
+      "summary": "All four Nexior deployment tutorials have been enriched with CDN-hosted screenshots, enhancing the user experience. Each tutorial now features 8-10 images that cover essential steps such as GitHub Fork flow, platform login pages, and site configuration. New platform-specific screenshots have also been added for Netlify, Zeabur, Docker, and Tencent Cloud, ensuring comprehensive visual guidance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#540",
+      "title": "Enhance error logging for partner video status in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "logging",
+        "api",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves error handling in the getSoraPartnerVideoJob function by explicitly logging the HTTP error response status and data. Previously, only the raw error object was logged, which could obscure important debugging information. This change enhances visibility into API errors and aids in troubleshooting."
+    }
+  ]
+}
