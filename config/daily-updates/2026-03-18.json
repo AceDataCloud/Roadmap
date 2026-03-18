@@ -3,6 +3,39 @@
   "date": "2026-03-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Roadmap#34",
+      "title": "Enhanced buyback data accuracy in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "data",
+        "update",
+        "buyback",
+        "solana",
+        "accuracy"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/34",
+      "summary": "This update backfills the ace_bought amounts and timestamps using on-chain data from Solana RPC for all 12 buyback transactions. Key entries have been added, including a new buyback on March 9, totaling 123,582.95 ACE. Additionally, placeholder timestamps have been replaced with accurate on-chain block times, improving data reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#566",
+      "title": "Fix jobId usage for partner fetch endpoint in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "api",
+        "fix",
+        "publishing",
+        "updates",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update corrects the API call for fetching partner video jobs by using 'jobId' instead of 'job_id'. Additionally, it enhances the publishing process for various platforms, ensuring that drafts are now published live. Key changes include updates to the publishing steps for Zhihu, CSDN, JueJin, CNBlogs, Dev.to, and Medium."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#559",
       "title": "Enhance Gemini API Streaming and Model Transform in Platform Service 🚀",
       "tags": [
