@@ -3,6 +3,396 @@
   "date": "2026-03-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#206",
+      "title": "Enhance Cursor Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "cursor",
+        "claude-code",
+        "updates",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new Cursor-specific guide and enhances existing documentation for Claude Code. Key changes include the addition of a dedicated guide in both English and Chinese, as well as updates to the overview and service introduction pages to incorporate Cursor details. These improvements aim to provide clearer instructions for users integrating Claude Code with the Cursor editor."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#13",
+      "title": "Automate VSCode Extension Updates in M C P Short U R L 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "ci",
+        "vscode",
+        "automation",
+        "publish",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/13",
+      "summary": "This update introduces a new job in the publish workflow that notifies the VS Code extension whenever a new version is published to PyPI. By triggering an automatic rebuild of the VSCodeMCP extension, it ensures that users always have access to the latest MCP server versions. This enhancement streamlines the update process and keeps the extension in sync with server changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#18",
+      "title": "Automate VSCode Extension Updates in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "ci",
+        "vscode",
+        "automation",
+        "publish"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/18",
+      "summary": "This update introduces a new job in the publish workflow that notifies the VSCodeMCP extension after a successful PyPI publish. It ensures that the extension is automatically republished with the latest MCP server versions, keeping the VS Code Marketplace in sync with updates. This enhancement streamlines the deployment process and improves user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#11",
+      "title": "Automate VSCodeMCP Extension Updates in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "ci",
+        "automation",
+        "vscode",
+        "mcp",
+        "publish"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/11",
+      "summary": "This update introduces a new job in the publish workflow that notifies the VSCodeMCP extension after a successful PyPI publish. By dispatching an event, it triggers an automatic rebuild of the VS Code extension with the latest MCP server versions, ensuring synchronization between the extension and server updates. This enhancement streamlines the deployment process and improves user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#12",
+      "title": "Automate VSCodeMCP Extension Updates in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "ci",
+        "automation",
+        "vscode",
+        "publish",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/12",
+      "summary": "This update introduces a new job in the publish workflow that notifies the VSCodeMCP extension after a successful PyPI publish. By dispatching an event, it triggers an automatic rebuild of the extension, ensuring it remains in sync with the latest MCP server versions. This enhancement improves the user experience by keeping the extension up-to-date seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#14",
+      "title": "Automate VSCodeMCP Extension Updates in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "ci",
+        "automation",
+        "vscode",
+        "publish",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/14",
+      "summary": "This update introduces a new job in the publish workflow that notifies the VSCodeMCP extension after a successful PyPI publish. By dispatching an event, it triggers an automatic republish of the extension with the latest MCP server versions, ensuring synchronization with updates. This enhancement improves the user experience by keeping the extension up-to-date seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#18",
+      "title": "Automate VSCodeMCP Extension Updates in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "ci",
+        "automation",
+        "vscode",
+        "publish",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/18",
+      "summary": "This update introduces a new job in the publish workflow that notifies the VSCodeMCP extension after a successful PyPI publish. By dispatching an event, it triggers an automatic republish of the extension with the latest MCP server versions, ensuring synchronization with updates. This enhancement improves the user experience by keeping the extension up-to-date seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#19",
+      "title": "Automate VSCodeMCP Extension Updates in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "ci",
+        "vscode",
+        "automation",
+        "publish",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/19",
+      "summary": "This update introduces a new job in the publish workflow that notifies the VSCodeMCP extension after a successful PyPI publish. By dispatching an event, it triggers an automatic rebuild of the extension, ensuring it remains in sync with the latest MCP server versions. This enhancement improves the user experience by keeping the extension up-to-date seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#18",
+      "title": "Automate VSCodeMCP Extension Updates in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "ci",
+        "vscode",
+        "automation",
+        "publish",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/18",
+      "summary": "This update introduces a new job in the publish workflow that notifies the VSCodeMCP extension after a successful PyPI publish. It triggers an automatic rebuild of the extension with the latest MCP server versions, ensuring that the VS Code Marketplace remains synchronized with any updates to the MCP server."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#19",
+      "title": "Automate VSCodeMCP Extension Updates in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "ci",
+        "automation",
+        "vscode",
+        "mcp",
+        "publish"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/19",
+      "summary": "This update introduces a new job in the publish workflow that notifies the VSCodeMCP extension after a successful PyPI publish. It triggers an automatic rebuild of the extension to ensure it remains in sync with the latest MCP server versions. This enhancement improves the user experience by keeping the extension up-to-date seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#18",
+      "title": "Automate VSCodeMCP Extension Updates in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "ci",
+        "automation",
+        "vscode",
+        "mcp",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/18",
+      "summary": "This update introduces a new job in the publish workflow that notifies the VSCodeMCP extension after a successful PyPI publish. By dispatching an event, it triggers an automatic republish of the extension with the latest MCP server versions, ensuring synchronization with updates. This enhancement improves the user experience by keeping the extension up-to-date seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#19",
+      "title": "Automate VSCode Extension Updates in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "ci",
+        "vscode",
+        "automation",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/19",
+      "summary": "This update introduces a new job in the publish workflow that notifies the VSCodeMCP extension after a successful PyPI publish. By dispatching an event, it triggers an automatic rebuild of the VS Code extension, ensuring it remains in sync with the latest MCP server versions. This enhancement improves the user experience by keeping the extension up-to-date seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#204",
+      "title": "Introducing Gemini Generate Content API in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "api",
+        "openapi",
+        "testing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update adds the Gemini Generate Content API with a native format, including a new API record, cost rules, and an OpenAPI specification. Additionally, comprehensive tests have been implemented to ensure functionality and reliability. These enhancements will streamline content generation processes and improve integration capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#18",
+      "title": "Enhance Midjourney Imagine Tool with V8 Parameters in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "enhancement",
+        "midjourney",
+        "imagine",
+        "v8",
+        "parameters"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/18",
+      "summary": "This update introduces support for Midjourney V8 parameters in the imagine tool, including options for version, HD, quality, style reference, and moodboard. A new MidjourneyVersion type has also been added to streamline version management. These enhancements will improve user experience by providing more customization options for image generation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#378",
+      "title": "Exciting Midjourney V8 Alpha Features Added in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "midjourney",
+        "features",
+        "update",
+        "frontend",
+        "billing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/378",
+      "summary": "This update introduces support for Midjourney V8 Alpha in the Nexior frontend, featuring a new HD toggle and an Ultra quality option. Key changes include the addition of billing metadata fields in API requests and enhancements to the version selector. Users can now enjoy improved image generation capabilities with auto-detection of style references and moodboards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#203",
+      "title": "Enhance Midjourney V8 Alpha Billing Support in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "billing",
+        "midjourney",
+        "backend",
+        "features",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update introduces billing support for Midjourney V8 Alpha premium features, implementing cost rules for various combinations of features. The new rules specify that using HD or quality 4 incurs a 4x cost, while using both together results in a 16x cost. Additionally, 9 new tests have been added to ensure all functionalities are working correctly, with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#570",
+      "title": "Enhance Gemini Handler for Billing Data in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "gemini",
+        "enhancement",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update includes the model from the URL path in the record response and metadata for gateway billing. This enhancement allows the /record phase to evaluate model-specific cost rules for Gemini generateContent requests, improving billing accuracy and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#79",
+      "title": "Enhance Gemini API Support in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "enhancement",
+        "gemini",
+        "api",
+        "gateway",
+        "authentication"
+      ],
+      "public": false,
+      "summary": "This update introduces support for the Gemini native API format during the gateway authentication phase. Key changes include path normalization for the Gemini generateContent endpoint and the extraction of the model from the request path into the payload for cost calculations. These enhancements improve the gateway's ability to handle dynamic path matching effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#40",
+      "title": "Revamp Claude Code Integration Guides in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "documentation",
+        "updates",
+        "guides",
+        "integration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/40",
+      "summary": "This update corrects inaccuracies in the Claude Code integration guides for JetBrains and Desktop App. Key changes include removing misleading configuration steps and clarifying that third-party API proxies are not supported in the Desktop App. Additionally, the FAQ has been updated to reflect these changes, ensuring users have accurate and helpful information."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#571",
+      "title": "Enhance Midjourney V8 Billing Parameters in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "midjourney",
+        "billing",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces new billing parameters for Midjourney V8, including version, hd, quality, style_reference, and moodboard to the getRecordMetadata() function. Additionally, it fixes the auto-append behavior for --sref/--cref to ensure compatibility with V8. These enhancements will improve user experience and streamline billing processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#11",
+      "title": "Streamline AI Agent Instructions in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "refactor",
+        "documentation",
+        "ai",
+        "efficiency"
+      ],
+      "public": false,
+      "summary": "This update consolidates AI agent instructions by making CLAUDE.MD the sole reference, removing approximately 270 lines of duplicated content. The copilot-instructions.md file has been significantly reduced from 428 lines to just 17, now serving only as a redirect to CLAUDE.MD. This change enhances efficiency by ensuring that all future edits will only need to be made in one location."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#569",
+      "title": "Enhance polling efficiency by aborting after 30 empty responses in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "polling",
+        "performance",
+        "sora",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the polling mechanism by terminating the loop after 30 consecutive empty fetch responses, which typically occurs due to errors. This change reduces unnecessary waiting time from up to 61 minutes to approximately 2-3 minutes, enhancing overall system responsiveness. The fix is applicable to both version 1.0 and 2.0 of the polling loop."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#10",
+      "title": "Enhance API Testing Instructions in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "api",
+        "security",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update adds important reminders in both `.github/copilot-instructions.md` and `CLAUDE.MD` regarding the use of `ACEDATACLOUD_API_TOKEN` for testing live APIs. Users are now instructed to load the token from `.claude/.env` to ensure secure and proper API testing on `api.acedata.cloud`. These changes aim to improve the testing process and prevent hardcoding sensitive information."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#568",
+      "title": "Enhanced Retryable Status Codes in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "error-handling",
+        "retry",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update expands the `RETRYABLE_STATUS_CODES` to include 401, 404, 429, and 500, alongside the existing 502, 503, and 504. This change improves error handling by allowing retries for additional error scenarios, ensuring better resilience in the service. It addresses specific 500 errors encountered with Claude's /v1/messages endpoint, enhancing overall reliability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Roadmap#34",
       "title": "Enhanced buyback data accuracy in Roadmap 🚀",
       "tags": [
