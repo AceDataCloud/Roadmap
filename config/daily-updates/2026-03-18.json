@@ -3,6 +3,151 @@
   "date": "2026-03-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#559",
+      "title": "Enhance Gemini API Streaming and Model Transform in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "api",
+        "streaming",
+        "model",
+        "gemini"
+      ],
+      "public": false,
+      "summary": "This update addresses two critical issues in the Gemini native API handler for the OpenAI worker. It improves streaming detection by checking both query parameters and request paths, ensuring proper handling of `generateContent` and `streamGenerateContent` endpoints. Additionally, it adds model name normalization for `gemini-3.0-flash` and `gemini-3-flash`, aligning with existing configurations to prevent potential failures."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#71",
+      "title": "Unleashing 6 Advanced Multimodal Workflows in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "workflows",
+        "automation",
+        "AI",
+        "templates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/71",
+      "summary": "This update introduces six new advanced multimodal workflow templates in the Dify platform, enhancing automation capabilities across various scenarios. Key workflows include AI-driven video production, e-commerce marketing suites, and intelligent proposal generation, all leveraging multiple AI services for streamlined processes. These templates can be easily imported and utilized, significantly improving user experience and efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#70",
+      "title": "Updated AceDataCloud Plugins to Align with OpenAPI Specs in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "update",
+        "plugins",
+        "openapi",
+        "enhancement",
+        "dify"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/70",
+      "summary": "This update enhances eight AceDataCloud Dify plugins by aligning them with the latest OpenAPI specifications. Key improvements include the addition of missing parameters and models for plugins such as Suno, Seedance, Veo, and others, ensuring better functionality and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#542",
+      "title": "Automate Dependency Updates in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "dependabot",
+        "automation",
+        "dependencies",
+        "maintenance"
+      ],
+      "public": false,
+      "summary": "This update introduces Dependabot to automate dependency management for npm, pip, Docker, and GitHub Actions. With weekly updates for npm and pip, and monthly updates for Docker and GitHub Actions, this change enhances the project's maintenance and security posture."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#359",
+      "title": "Automate Dependency Updates in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependabot",
+        "automation",
+        "dependencies",
+        "npm",
+        "docker",
+        "github-actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/359",
+      "summary": "This update introduces Dependabot to automate dependency management for npm packages, Docker images, and GitHub Actions. npm packages will be updated weekly, while Docker images and GitHub Actions will receive monthly updates. This enhancement aims to keep the project dependencies up-to-date and secure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#199",
+      "title": "Enhance CI with OpenAPI and Cost File Validation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "ci",
+        "validation",
+        "openapi",
+        "backend",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces a new validation script for OpenAPI specifications and cost files into the CI pipeline. The script checks for JSON syntax, OpenAPI structure, and ensures that cost files are correctly formatted and cross-referenced. This enhancement aims to catch errors before they reach the database, improving overall data integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformDeployment#3",
+      "title": "Enhance Kong Gateway Config Management in Platform Deployment 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformDeployment",
+        "kong",
+        "gitops",
+        "configuration",
+        "deployment",
+        "tool"
+      ],
+      "public": false,
+      "summary": "This update introduces a new tool for managing Kong gateway configurations, including export, diff, and validate commands. The addition of `kong_config.py` and updates to the README facilitate tracking configurations in Git, marking a significant step towards a GitOps workflow for Kong. This tool will streamline configuration management and improve deployment processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#541",
+      "title": "Enhance CI with ESLint and Prettier Checks in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "ci",
+        "eslint",
+        "prettier",
+        "typescript",
+        "linting"
+      ],
+      "public": false,
+      "summary": "This update introduces a new lint job in the CI pipeline that runs ESLint and Prettier on modified TypeScript service workers. The linting process runs in parallel with the existing Docker build and is initially set to be non-blocking, allowing for gradual codebase improvements. This enhancement aims to maintain code quality and consistency across the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#198",
+      "title": "Enhance CI with Migration Check in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "ci",
+        "migrations",
+        "backend",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces a new step in the CI pipeline to check for uncommitted database migrations using the `makemigrations --check --dry-run` command. By implementing this check, we can prevent potential deployment failures caused by schema mismatches, ensuring a smoother development process."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformPublisher#159",
       "title": "Exciting New International Publishers Added in Publisher 🚀",
       "tags": [
