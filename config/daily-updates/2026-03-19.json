@@ -3,6 +3,356 @@
   "date": "2026-03-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#18",
+      "title": "Enhance JetBrains Publish Logic in M C P Short U R L 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "jetbrains",
+        "workflow",
+        "gitignore",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/18",
+      "summary": "This update modifies the publishing workflow to skip the JetBrains plugin publishing when the token is not set, improving error handling. Additionally, it adds the .kotlin/ directory to the .gitignore file to prevent unnecessary tracking. These changes streamline the development process and enhance the project's maintainability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#23",
+      "title": "Enhance JetBrains Publish Logic in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "jetbrains",
+        "workflow",
+        "gitignore",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/23",
+      "summary": "This update modifies the publish workflow to skip the JetBrains plugin publishing if the publish token is not set, preventing unnecessary errors. Additionally, it adds the `.kotlin/` directory to the `.gitignore` file to keep the repository clean. These changes improve the overall reliability of the publishing process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#16",
+      "title": "Enhance JetBrains Publish Logic in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "jetbrains",
+        "workflow",
+        "gitignore",
+        "fix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/16",
+      "summary": "This update modifies the publish workflow to skip the JetBrains plugin publishing when the token is not set, preventing unnecessary errors. Additionally, it adds the .kotlin/ directory to the .gitignore file to keep the repository clean. These changes improve the overall reliability of the publishing process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#17",
+      "title": "Enhance JetBrains Publish Workflow in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "jetbrains",
+        "workflow",
+        "gitignore",
+        "build"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/17",
+      "summary": "This update modifies the JetBrains publish workflow to skip the publishing process when the required token is not set. Additionally, it adds the .kotlin/ directory to the .gitignore file to prevent unnecessary files from being tracked. These changes improve the build process and streamline development."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#19",
+      "title": "Enhance JetBrains Publish Logic in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "jetbrains",
+        "workflow",
+        "gitignore",
+        "build"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/19",
+      "summary": "This update modifies the publish workflow to skip the JetBrains plugin publishing step if the JETBRAINS_MARKETPLACE_TOKEN is not set. Additionally, it adds the .kotlin/ directory to the .gitignore file to prevent unnecessary files from being tracked. These changes improve the build process and streamline development."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#23",
+      "title": "Skip JetBrains Publish When No Token in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "jetbrains",
+        "workflow",
+        "gitignore",
+        "build"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/23",
+      "summary": "This update modifies the publish workflow to skip the JetBrains plugin publishing if the JETBRAINS_MARKETPLACE_TOKEN is not set. Additionally, it adds the .kotlin/ directory to the .gitignore file to prevent unnecessary tracking. These changes enhance the build process and streamline development."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#24",
+      "title": "Enhance JetBrains Plugin Publish Logic in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "jetbrains",
+        "workflow",
+        "gitignore",
+        "publish",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/24",
+      "summary": "This update modifies the publish workflow to skip the JetBrains plugin publishing step if the JETBRAINS_MARKETPLACE_TOKEN is not set, ensuring smoother operations. Additionally, the .kotlin/ directory has been added to the .gitignore file to prevent unnecessary files from being tracked. These changes enhance the overall efficiency of the publishing process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#23",
+      "title": "Skip JetBrains plugin publish when token is missing and update gitignore in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "ci",
+        "jetbrains",
+        "publish",
+        "gitignore",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/23",
+      "summary": "This update modifies the GitHub workflow to skip the JetBrains plugin publishing step if the JETBRAINS_MARKETPLACE_TOKEN is not set, preventing unnecessary failures. Additionally, the .gitignore file in the JetBrains directory was updated to include the .kotlin/ folder, improving repository cleanliness."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#25",
+      "title": "Enhance JetBrains Publish Process in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "jetbrains",
+        "publish",
+        "workflow",
+        "gitignore",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/25",
+      "summary": "This update improves the JetBrains publishing workflow by gracefully skipping the publish step when the JETBRAINS_MARKETPLACE_TOKEN is not set. Additionally, the .kotlin/ directory has been added to the .gitignore file to prevent unnecessary files from being tracked. These changes enhance the overall robustness of the publishing process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#23",
+      "title": "Enhance JetBrains Publish Process in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "jetbrains",
+        "workflow",
+        "gitignore",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/23",
+      "summary": "This update improves the JetBrains publishing workflow by skipping the publish step if the JETBRAINS_MARKETPLACE_TOKEN is not set, ensuring a smoother process. Additionally, the .kotlin/ directory has been added to the .gitignore file to prevent unnecessary files from being tracked. These changes enhance the overall efficiency and cleanliness of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#25",
+      "title": "Gracefully skip JetBrains publish when no token in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "jetbrains",
+        "workflow",
+        "gitignore",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/25",
+      "summary": "This update introduces a check to skip the JetBrains publish process if the JETBRAINS_MARKETPLACE_TOKEN is not set, enhancing the workflow's robustness. Additionally, the .kotlin/ directory has been added to the .gitignore file to prevent unnecessary files from being tracked. These changes improve the overall development experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#17",
+      "title": "Introducing JetBrains IDE Plugin for ShortURL MCP in M C P Short U R L 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "jetbrains",
+        "plugin",
+        "mcp",
+        "shorturl",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/17",
+      "summary": "This update adds a JetBrains IDE plugin for the ShortURL MCP server, enhancing the integration with JetBrains tools. Key features include easy setup for API token management and configuration copying for AI Assistant. The README and changelog have been updated to reflect these new capabilities, ensuring users have the necessary information to get started quickly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#22",
+      "title": "Introducing JetBrains IDE Plugin for NanoBanana in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "jetbrains",
+        "plugin",
+        "mcp",
+        "ai",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/22",
+      "summary": "This update adds a JetBrains IDE plugin for the NanoBanana MCP server, enhancing integration with AI tools. Key features include easy setup for API token management and configuration copying for AI Assistant. The README and changelog have been updated to reflect these changes, ensuring users have the latest information."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#15",
+      "title": "Introducing JetBrains Plugin for Seedance MCP in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "jetbrains",
+        "plugin",
+        "mcp",
+        "ai",
+        "video"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/15",
+      "summary": "This update adds a JetBrains IDE plugin for the Seedance MCP server, enhancing integration with AI video generation tools. Key features include an easy setup process, API token management, and configuration options for both STDIO and HTTP. The README and changelog have been updated to reflect these changes, ensuring users have the latest information."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#16",
+      "title": "Introducing JetBrains IDE Plugin for Seedream MCP in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "jetbrains",
+        "plugin",
+        "mcp",
+        "ai",
+        "seedream"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/16",
+      "summary": "This update adds a JetBrains IDE plugin for the Seedream MCP server, enhancing integration with AI image generation tools. Key features include an easy setup process, API token management, and a user-friendly settings interface. The plugin is now available for installation from the JetBrains Marketplace."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#18",
+      "title": "Exciting New JetBrains Plugin for Flux MCP in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "jetbrains",
+        "plugin",
+        "mcp",
+        "flux",
+        "ai"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/18",
+      "summary": "This update introduces a JetBrains IDE plugin for the Flux MCP server, enhancing integration with AI tools. Key additions include a comprehensive README, configuration settings for API tokens, and a user-friendly interface for managing settings. The plugin supports both STDIO and HTTP modes, streamlining the setup process for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#22",
+      "title": "Exciting New JetBrains Plugin for Veo MCP in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "jetbrains",
+        "plugin",
+        "mcp",
+        "veo",
+        "ai",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/22",
+      "summary": "We've added a JetBrains IDE plugin for the Veo MCP server, enhancing integration with AI tools for video generation. Key features include a settings page for API token management, easy configuration copying, and startup notifications for first-time users. This update aims to streamline the user experience and improve accessibility for developers using JetBrains IDEs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#23",
+      "title": "Exciting New JetBrains Plugin for Sora MCP in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "jetbrains",
+        "plugin",
+        "mcp",
+        "sora",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/23",
+      "summary": "We've introduced a JetBrains IDE plugin for the Sora MCP server, enhancing the development experience. Key features include a settings UI, configuration copy actions, and a startup notification. Additionally, the README has been updated with setup instructions, and a CI job for publishing the plugin has been added."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#22",
+      "title": "Introducing JetBrains IDE Plugin for Luma MCP in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "jetbrains",
+        "plugin",
+        "mcp",
+        "ai",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/22",
+      "summary": "This update adds a comprehensive JetBrains IDE plugin for the Luma MCP server, featuring a settings UI, configuration copy actions, and startup notifications. Key files include the new plugin structure, CI job for publishing, and an updated README with setup instructions. This enhancement streamlines the integration of Luma's AI capabilities into JetBrains IDEs, improving user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#24",
+      "title": "Exciting New JetBrains Plugin for Midjourney MCP in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "plugin",
+        "jetbrains",
+        "mcp",
+        "midjourney",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/24",
+      "summary": "This update introduces a complete JetBrains IDE plugin for the Midjourney MCP server, featuring a settings UI, configuration copy actions, and startup notifications. Additionally, a new CI job for publishing the plugin has been added, along with a dedicated setup section in the README. This enhancement streamlines the integration of Midjourney's AI capabilities within JetBrains IDEs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#22",
+      "title": "Introducing JetBrains IDE Plugin for Serp MCP in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "plugin",
+        "jetbrains",
+        "mcp",
+        "integration",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/22",
+      "summary": "We've added a new JetBrains IDE plugin for the Serp MCP server, enhancing integration with popular JetBrains IDEs like IntelliJ IDEA and PyCharm. Key features include a settings page for API token configuration, copy configuration actions for AI Assistant setup, and a startup notification for new users. This update also includes automated publishing to the JetBrains Marketplace and an updated README with setup instructions."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPSuno#24",
       "title": "Exciting JetBrains Plugin Launch for MCP Suno in M C P Suno 🚀",
       "tags": [
