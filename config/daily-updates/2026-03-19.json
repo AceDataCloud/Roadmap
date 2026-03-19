@@ -3,6 +3,268 @@
   "date": "2026-03-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#160",
+      "title": "Revamped README with Stunning Cover Image in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "documentation",
+        "readme",
+        "update",
+        "metadata",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update enhances the README with a professional cover image and a complete rewrite that includes an overview, features, and a table of supported platforms. Additionally, it introduces an architecture diagram, tech stack summary, and a quick start guide. The project metadata has also been updated to reflect the new description and relevant topics."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#212",
+      "title": "Update Suno Documentation for Lyric Limits in Backend 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "update",
+        "suno",
+        "backend"
+      ],
+      "public": false,
+      "summary": "The documentation for the Suno model has been updated to correct the label from 'prompt 限制' to 'lyric 限制' in the model comparison table. This change clarifies that the 5000/3000 values refer to lyric limits, aligning with the OpenAPI specifications. The translation CronJob will ensure this update is reflected across all 17 supported languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#211",
+      "title": "Updated Credit Multipliers for Optimal Breakeven in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "updates",
+        "pricing",
+        "models",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update recalibrates credit multipliers for various chat models to ensure breakeven at the best package tier. A total of 59 rules were modified, impacting over 230 test assertions across 9 files, with all tests passing successfully. Key adjustments include significant increases for most models and a reduction for DeepSeek, enhancing pricing accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#210",
+      "title": "Restored Hidden Flags for Pricing Models in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "pricing",
+        "backend",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update fixes an issue where hidden flags were dropped from service cost files, causing all chat models to be visible on pricing pages. The correct hidden flags have been restored based on model-to-service ownership, ensuring that only appropriate models are displayed. All tests have passed, confirming that the pricing display is now accurate."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#75",
+      "title": "Enhance API Playground with Path Parameter Support in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "api",
+        "frontend",
+        "enhancement",
+        "ui",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update introduces support for path parameters in the API playground, allowing users to input values for parameters like `{model}` directly in the UI. Key changes include the addition of a new `paths` field in the `IForm` model, updates to the `Usage.vue`, `Try.vue`, and `Preview.vue` components for rendering and substituting path parameters, and new translation keys for internationalization. This enhancement improves user experience and reduces errors when interacting with APIs that utilize path parameters."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#19",
+      "title": "Revamp Icons with Branded Designs in M C P Short U R L 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "icons",
+        "branding",
+        "ui",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/19",
+      "summary": "This update replaces placeholder SVG icons with authentic branded icons, enhancing the visual identity of the plugin. Additionally, a new dark theme icon has been introduced, along with detailed change notes for version 0.1.0. These changes improve user experience and provide a more polished look."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#24",
+      "title": "Branded Icons Update in M C P Nano Banana 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "icons",
+        "branding",
+        "update",
+        "dark-theme",
+        "plugin"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/24",
+      "summary": "This update replaces placeholder SVG icons with proper branded icons, enhancing the visual identity of the plugin. A new dark theme icon has also been added, along with detailed change notes for version 0.1.0. These improvements aim to provide a more cohesive user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#17",
+      "title": "Branded Icons Update in M C P Seedance 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "icons",
+        "branding",
+        "update",
+        "dark-theme",
+        "visuals"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/17",
+      "summary": "This update replaces placeholder SVG icons with proper branded icons, enhancing the visual identity of the project. Additionally, a dark theme icon has been added, along with detailed change notes for version 0.1.0. These improvements aim to provide a more polished user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#18",
+      "title": "Branded Icons and Dark Theme Added in M C P Seedream 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "icons",
+        "branding",
+        "dark-theme",
+        "update",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/18",
+      "summary": "This update replaces placeholder SVG icons with proper branded icons, enhancing the visual identity of the project. Additionally, a dark theme icon has been introduced, along with detailed change notes for version 0.1.0, highlighting key features and improvements. These changes aim to improve user experience and accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#20",
+      "title": "Revamp SVG Icons with Branded Designs in M C P Flux 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "icons",
+        "branding",
+        "ui",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/20",
+      "summary": "This update replaces placeholder SVG icons with authentic branded icons, enhancing the visual identity of the plugin. A new dark theme icon has been added, along with detailed change notes for version 0.1.0. These changes improve user experience and align the plugin with branding standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#24",
+      "title": "Branded Icons Update in M C P Veo 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "icons",
+        "branding",
+        "update",
+        "dark-theme",
+        "visuals"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/24",
+      "summary": "This update replaces placeholder SVG icons with proper branded icons, enhancing the visual identity of the project. A new dark theme icon has also been added, along with detailed change notes for version 0.1.0. These changes improve user experience and branding consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#25",
+      "title": "Revamp SVG Icons with Branded Designs in M C P Sora 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "icons",
+        "branding",
+        "ui",
+        "dark-theme",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/25",
+      "summary": "This update replaces placeholder SVG icons with authentic branded icons, enhancing the visual identity of the project. A new dark theme icon has been added, along with detailed change notes for version 0.1.0, outlining key features and improvements. These changes aim to provide a more polished user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#24",
+      "title": "Branded Icons Replaced and Dark Theme Added in M C P Luma 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "icons",
+        "branding",
+        "dark-theme",
+        "update",
+        "visuals"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/24",
+      "summary": "This update replaces placeholder SVG icons with proper branded icons, enhancing the visual identity of the plugin. Additionally, a dark theme icon has been introduced, along with detailed change notes for version 0.1.0, which highlight key features and improvements. These changes aim to improve user experience and brand recognition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#26",
+      "title": "Branded Icons Update in M C P Midjourney 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "icons",
+        "update",
+        "branding",
+        "dark-theme",
+        "plugin"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/26",
+      "summary": "This update replaces placeholder SVG icons with proper branded icons, enhancing the visual identity of the plugin. A new dark theme icon has also been added, along with detailed change notes for version 0.1.0. These improvements aim to provide a more cohesive user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#24",
+      "title": "Switched to Real Branded Icons in M C P Serp 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "icons",
+        "branding",
+        "update",
+        "dark-theme"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/24",
+      "summary": "This update replaces placeholder SVG icons with actual branded icons, enhancing the visual identity of the plugin. A new dark theme icon has been added, and change notes have been included in the plugin.xml file to inform users of the updates. Overall, these changes improve the user experience and branding consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#26",
+      "title": "Revamp Plugin Icons and Add Change Notes in M C P Suno 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "icons",
+        "update",
+        "plugin",
+        "branding",
+        "dark-theme"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/26",
+      "summary": "This update replaces placeholder SVG icons with real branded icons, enhancing the visual appeal of the plugin. A new dark theme icon has been added for better compatibility with dark IDE themes. Additionally, change notes have been documented in the plugin.xml to outline the initial release features."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#74",
       "title": "Enhance Pricing Translations in Frontend Web 🚀",
       "tags": [
