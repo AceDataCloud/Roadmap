@@ -3,6 +3,85 @@
   "date": "2026-03-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#579",
+      "title": "Enhance Token Billing with Prompt Details in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "tokens",
+        "update",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update improves the billing process by including `prompt_tokens_details` in the usage data sent to the Gateway. Previously, this information was omitted, making cache tokens invisible for billing purposes. Key changes were made to `chat_base.py` to extract and include these details, ensuring accurate billing for cached tokens."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#578",
+      "title": "Enhance provider fallback with 403 status in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "retry",
+        "service",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update adds the 403 status code to the RETRYABLE_STATUS_CODES, allowing the worker to retry with fallback providers when an upstream service returns a 403 error. This change addresses issues where clients could not access services due to provider authentication or quota problems, ensuring better reliability in service delivery."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#18",
+      "title": "Update USDC References to Bridged USDC in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "update",
+        "documentation",
+        "skale",
+        "usdc",
+        "refactor"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/18",
+      "summary": "This update aligns the USDC token naming with Circle's standard by changing references to 'Bridged USDC (SKALE Bridge)' in the settings and chain handler files. Key modifications include updated comments and docstrings to enhance clarity and maintain consistency across the codebase. These changes ensure that the documentation accurately reflects the current implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#208",
+      "title": "Update USDC Token Name for SKALE Chain in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "backend",
+        "usdc",
+        "skale",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update corrects the USDC token name on the SKALE chain to 'Bridged USDC (SKALE Bridge)' as per Circle's standard. The EIP-712 domain name in the X402 payment configuration has been modified accordingly. This change ensures compliance with the naming conventions and improves clarity for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#209",
+      "title": "Enhance Claude Cache Token Billing in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "billing",
+        "claude",
+        "backend",
+        "updates",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update introduces cache token billing for Claude models, addressing a significant revenue loss by incorporating cached_tokens and cached_creation_tokens into the billing system. The changes affect 14 Claude model rules, ensuring accurate pricing based on Anthropic's official ratios. Additionally, 21 new tests have been added to validate the implementation, bringing the total test count to 628."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPShortURL#18",
       "title": "Enhance JetBrains Publish Logic in M C P Short U R L 🚀",
       "tags": [
