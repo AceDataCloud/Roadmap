@@ -3,6 +3,242 @@
   "date": "2026-03-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPSuno#24",
+      "title": "Exciting JetBrains Plugin Launch for MCP Suno in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "jetbrains",
+        "plugin",
+        "mcp",
+        "suno",
+        "release"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/24",
+      "summary": "We've introduced a new JetBrains IntelliJ Platform plugin for MCP Suno, featuring a settings page for API token management, configuration copying for STDIO/HTTP, and startup notifications. The CI/CD pipeline is now set up for publishing on the JetBrains Marketplace, and the README has been updated with setup instructions. This plugin is compatible with all JetBrains IDEs version 2025.2 and above."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#577",
+      "title": "Enhance GeminiHandler with Fallback for Native Accounts in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "gemini",
+        "api",
+        "fallback",
+        "enhancement",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "The GeminiHandler has been updated to include a fallback mechanism that allows it to return all accounts when no native accounts are found. This change ensures that the Gemini native API endpoint remains functional even if the checker has not yet synced the native flag to MongoDB. Additionally, the retry mechanism now gracefully handles non-native providers, improving overall reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#14",
+      "title": "Exciting Smithery.ai Integration for Enhanced Publishing in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "feature",
+        "integration",
+        "ci",
+        "publishing",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/14",
+      "summary": "This update introduces Smithery.ai integration for the MCP server, enabling seamless server discovery and distribution. Key changes include the addition of a `smithery.yaml` configuration file, a new `server.json` for metadata compliance, and a CI job in the GitHub workflow to automate publishing to Smithery after PyPI releases. This enhancement streamlines the deployment process and improves accessibility for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#15",
+      "title": "Integrate Smithery.ai Publishing Support in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "feature",
+        "integration",
+        "ci",
+        "automation",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/15",
+      "summary": "This update introduces integration with Smithery.ai for MCP server discovery and distribution. Key changes include the addition of a `smithery.yaml` configuration file, a new `server.json` for MCP server metadata, and a CI job in the GitHub Actions workflow to automate publishing to Smithery after PyPI releases. This enhancement streamlines the deployment process and improves accessibility for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#17",
+      "title": "Enhance MCPFlux with Smithery.ai Publishing Support in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "enhancement",
+        "integration",
+        "ci",
+        "automation",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/17",
+      "summary": "This update introduces integration with Smithery.ai for MCP server discovery and distribution. Key changes include the addition of a `smithery.yaml` configuration file, a new `server.json` for MCP server metadata, and a CI job in the GitHub Actions workflow to automate publishing to Smithery after PyPI releases. These enhancements streamline the deployment process and improve accessibility for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#21",
+      "title": "Integrate Smithery.ai Publishing Support in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "integration",
+        "automation",
+        "ci",
+        "publishing",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/21",
+      "summary": "This update introduces integration with Smithery.ai for MCP server discovery and distribution. Key changes include the addition of a `smithery.yaml` configuration file, a new `server.json` for MCP server metadata, and a CI job in the GitHub Actions workflow to automate publishing to Smithery after a PyPI release. These enhancements streamline the deployment process and improve accessibility for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#22",
+      "title": "Exciting Smithery.ai Integration for MCP Sora in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "feature",
+        "integration",
+        "ci",
+        "automation",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/22",
+      "summary": "This update introduces Smithery.ai integration for MCP server discovery and distribution. Key changes include the addition of a `smithery.yaml` configuration file, a new `server.json` for registry metadata, and a CI job in `.github/workflows/publish.yml` that automates publishing to Smithery after a PyPI release. Setup requires creating a namespace on Smithery and adding an API key to GitHub Actions secrets."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#21",
+      "title": "Exciting Smithery.ai Integration for MCP Luma in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "feature",
+        "integration",
+        "ci",
+        "automation",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/21",
+      "summary": "This update introduces Smithery.ai publishing support for the MCP server, enhancing server discovery and distribution capabilities. Key changes include the addition of a `smithery.yaml` configuration file, a new `server.json` for metadata compliance, and a CI job in `.github/workflows/publish.yml` that automates publishing to Smithery after PyPI releases. Setup requires creating a namespace on Smithery.ai and adding an API key to GitHub secrets."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#23",
+      "title": "Exciting Smithery.ai Integration Added in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "feature",
+        "integration",
+        "automation",
+        "ci",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/23",
+      "summary": "This update introduces Smithery.ai publishing support for the MCP server, enhancing server discovery and distribution capabilities. Key changes include the addition of a new `smithery.yaml` configuration file, a `server.json` for registry metadata, and a CI job in the GitHub Actions workflow to automate publishing to Smithery after PyPI releases. These enhancements streamline the deployment process and improve integration with the Smithery platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#21",
+      "title": "Exciting Smithery.ai Integration for MCP Server in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "feature",
+        "integration",
+        "ci",
+        "smithery",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/21",
+      "summary": "This update introduces support for Smithery.ai, enhancing the MCP server's discovery and distribution capabilities. Key changes include the addition of a `smithery.yaml` configuration file, a new `server.json` for metadata compliance, and a CI job in the GitHub workflow to automate publishing to Smithery after PyPI releases. This integration streamlines the deployment process and improves accessibility for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#23",
+      "title": "Exciting Smithery.ai Integration for MCP Suno in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "feature",
+        "integration",
+        "automation",
+        "ci",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/23",
+      "summary": "This update introduces Smithery.ai publishing support for the MCP Suno project. Key changes include the addition of a new configuration file for Smithery, an updated server registry metadata file, and a CI job that automates publishing to Smithery after a PyPI release. These enhancements streamline the deployment process and improve server discovery and distribution."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#21",
+      "title": "Exciting Smithery.ai Integration for MCP Nano Banana in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "feature",
+        "integration",
+        "ci",
+        "automation",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/21",
+      "summary": "This update introduces Smithery.ai integration for the MCP server, enhancing server discovery and distribution capabilities. Key changes include the addition of a `smithery.yaml` configuration file, a new `server.json` for registry metadata, and a CI job in the GitHub workflow to automate publishing to Smithery after PyPI releases. These enhancements streamline the deployment process and improve accessibility for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#16",
+      "title": "Exciting Smithery.ai Integration for MCP ShortURL in M C P Short U R L 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "feature",
+        "integration",
+        "ci",
+        "automation",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/16",
+      "summary": "This update introduces Smithery.ai publishing support for the MCP ShortURL project. Key changes include the addition of a `smithery.yaml` configuration file, a new `server.json` for MCP server metadata, and a CI job in the GitHub workflow to automate publishing to Smithery after PyPI releases. These enhancements streamline server discovery and distribution, improving the overall deployment process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#207",
+      "title": "New Nexior Deployment Guide for GitCode in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "deployment",
+        "nexior",
+        "gitcode",
+        "backend"
+      ],
+      "public": false,
+      "summary": "We've added comprehensive deployment documentation for the Nexior AI platform using GitCode, a popular Chinese code hosting service. This guide includes step-by-step instructions for importing projects, configuring CI/CD pipelines, and exploring various deployment options like Tencent Cloud and Docker. Both English and Chinese versions are now available to cater to a wider audience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#205",
       "title": "Revamped Tencent Cloud and Sealos Guides in Backend 🚀",
       "tags": [
