@@ -1,0 +1,228 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-19",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#205",
+      "title": "Revamped Tencent Cloud and Sealos Guides in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "deployment",
+        "tencent",
+        "sealos",
+        "nexior"
+      ],
+      "public": false,
+      "summary": "This update features a complete rewrite of the Tencent Cloud deployment documentation, now utilizing COS static website hosting and CDN for a serverless experience. Additionally, a new guide for deploying Nexior on Sealos has been introduced, providing a streamlined process for users in China. These enhancements aim to simplify deployment and improve accessibility for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#15",
+      "title": "Exciting New VS Code Extension for ShortURL MCP in M C P Short U R L 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "vscode",
+        "extension",
+        "mcp",
+        "ai",
+        "shorturl"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/15",
+      "summary": "This update introduces a new VS Code extension for the ShortURL MCP, enabling users to create and manage short URLs directly from the editor. Key changes include the addition of necessary files for publishing to the VS Code Marketplace and updates to the workflow for automated publishing. The extension supports AI assistants, enhancing productivity for developers using URL shortening features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#20",
+      "title": "Launch VS Code Extension for NanoBanana MCP in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "vscode",
+        "extension",
+        "ai",
+        "mcp",
+        "nanobanana"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/20",
+      "summary": "This update introduces the VS Code extension for the NanoBanana MCP, allowing users to generate and edit images using the Ace Data Cloud API. Key files have been added, including the extension's README, LICENSE, and configuration files, along with a new workflow for publishing to the VS Code Marketplace. The extension supports AI assistants like GitHub Copilot and is designed for seamless integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#13",
+      "title": "Exciting New VS Code Extension for Seedance MCP in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "vscode",
+        "extension",
+        "ai",
+        "seedance",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/13",
+      "summary": "We've added a new VS Code extension for Seedance MCP, enabling seamless AI video generation using the Ace Data Cloud API. The update includes a complete directory for the extension, along with a new publish workflow for automatic deployment to the VS Code Marketplace. This enhancement allows users to leverage AI tools directly within their development environment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#14",
+      "title": "Exciting New VS Code Extension for Seedream MCP in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "vscode",
+        "extension",
+        "ai",
+        "seedream",
+        "mcp",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/14",
+      "summary": "We've added a new VS Code extension for the Seedream MCP, enabling seamless AI image generation and editing through the Ace Data Cloud API. This update includes the necessary files for publishing to the VS Code Marketplace and enhances the CI/CD pipeline with a new publishing job. Users can now easily integrate AI assistants like GitHub Copilot with the Seedream model context protocol."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#576",
+      "title": "Enhance Gemini Handler for Native Accounts in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "gemini",
+        "native",
+        "handler",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces a filter in the GeminiHandler to exclusively handle `native: true` accounts, ensuring that the Gemini format is forwarded without translation. Key changes include modifications to `gemini.py`, `base.py`, and `wcnb.json`, which enhance account retrieval and capability definitions. These improvements streamline the integration with upstream services and optimize performance for native account handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#16",
+      "title": "Exciting New VS Code Extension for Flux MCP in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "vscode",
+        "extension",
+        "ai",
+        "flux",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/16",
+      "summary": "We've added a new VS Code extension for Flux MCP, enabling seamless AI image generation and editing via the Ace Data Cloud API. The extension includes a comprehensive setup guide and integrates with popular AI assistants like GitHub Copilot. Additionally, the publishing workflow has been updated to automate deployment to the VS Code Marketplace with each push."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#20",
+      "title": "Exciting New VS Code Extension for Veo MCP in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "vscode",
+        "extension",
+        "ai",
+        "video",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/20",
+      "summary": "We've added a new VS Code extension for the Veo MCP, enabling seamless AI video generation from text and images. This update includes the necessary files for publishing to the VS Code Marketplace, along with an updated workflow for automatic publishing on each push. The extension supports various AI assistants and simplifies setup with zero-install functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#21",
+      "title": "Exciting New VS Code Extension for Sora MCP in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "vscode",
+        "extension",
+        "ai",
+        "mcp",
+        "sora",
+        "release"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/21",
+      "summary": "We've added a new VS Code extension for the Sora MCP, enabling seamless AI video generation using OpenAI Sora. This update includes the necessary files for publishing to the VS Code Marketplace and enhances the CI/CD pipeline with a new publish job. Users can now easily integrate AI assistants like GitHub Copilot with the Sora MCP for enhanced functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#20",
+      "title": "Exciting New VS Code Extension for Luma MCP in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "vscode",
+        "extension",
+        "ai",
+        "mcp",
+        "luma",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/20",
+      "summary": "We've added a new VS Code extension for Luma MCP, enabling seamless integration with the Ace Data Cloud API for AI video generation. The extension includes a comprehensive setup guide, features for AI assistants, and a streamlined publishing process to the VS Code Marketplace. Key updates to the workflow ensure that the extension is published automatically with each push."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#22",
+      "title": "Launch of VS Code Extension for Midjourney MCP in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "vscode",
+        "extension",
+        "ai",
+        "midjourney",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/22",
+      "summary": "We've added a new VS Code extension for the Midjourney MCP, enabling seamless AI image generation directly within the editor. Key updates include a new `publish-vscode` job in the workflow for automatic publishing to the VS Code Marketplace, along with essential files like README, LICENSE, and CHANGELOG for user guidance. This extension enhances integration with AI assistants, providing 15 tools for creative tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#20",
+      "title": "Exciting New VS Code Extension for Serp MCP in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "vscode",
+        "extension",
+        "mcp",
+        "ai",
+        "serp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/20",
+      "summary": "We've added a new VS Code extension for the Serp MCP, enabling seamless integration with Google Search via the SERP API. This update includes a complete directory for the extension, along with a new publish workflow to the VS Code Marketplace. Key features include support for AI assistants and automatic package management, enhancing user experience and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#21",
+      "title": "Launch of VS Code Extension for Suno MCP in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "vscode",
+        "extension",
+        "ai",
+        "music",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/21",
+      "summary": "We've added a new VS Code extension for the Suno MCP, enabling seamless AI music generation directly within the editor. This update includes the necessary files for publishing to the VS Code Marketplace, along with a new workflow for automated publishing on each push. Key features include integration with AI assistants and a user-friendly setup process."
+    }
+  ]
+}

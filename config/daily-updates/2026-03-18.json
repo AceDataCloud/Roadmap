@@ -3,6 +3,38 @@
   "date": "2026-03-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#574",
+      "title": "Reverting Gemini Format Translation Changes in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "revert",
+        "gemini",
+        "openai",
+        "platform-service",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update reverts the previous changes made to translate the Gemini format to OpenAI for upstream providers. Key modifications include adjustments to the configuration files and handler scripts, resulting in a reduction of code complexity. The rollback aims to restore the previous functionality while maintaining system stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#573",
+      "title": "Enhance Gemini to OpenAI Translation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "gemini",
+        "openai",
+        "api",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update fixes the Gemini handler to properly translate Gemini format to OpenAI messages, addressing issues that caused 429 and 502 errors with upstream providers. Key changes include modifications to the Gemini API handler and configuration files, enabling seamless communication with OpenAI-compatible services. The new dual-mode forwarding supports both native Gemini and OpenAI formats, improving overall functionality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Dify#72",
       "title": "Enhance Midjourney Imagine Plugin with V8 Parameters in Dify 🚀",
       "tags": [
