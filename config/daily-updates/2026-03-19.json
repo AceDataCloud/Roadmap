@@ -3,6 +3,37 @@
   "date": "2026-03-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#74",
+      "title": "Enhance Pricing Translations in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "translations",
+        "frontend",
+        "i18n",
+        "localization",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update adds missing translations for pricing unit names across multiple languages in the pricing pages for Claude and Sora services. The keys for duration and cached tokens have been added to all 12 locale files, ensuring users see human-readable labels instead of raw i18n key paths. This improvement enhances the user experience by providing clear and understandable information."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#580",
+      "title": "Enhance Claude Cache Token Extraction in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "api",
+        "billing",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a new method in the Messages API handler to extract cache tokens from Claude's response format. The `_extract_claude_cache_tokens` method maps `cache_read_input_tokens` and `cache_creation_input_tokens` into the expected `prompt_tokens_details` structure. This change ensures accurate billing for cache tokens in the Gateway, improving compliance with billing rules."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#579",
       "title": "Enhance Token Billing with Prompt Details in Platform Service 🚀",
       "tags": [
