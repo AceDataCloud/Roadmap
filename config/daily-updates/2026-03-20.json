@@ -3,6 +3,22 @@
   "date": "2026-03-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#581",
+      "title": "Fix overcharging by adjusting cached tokens in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "billing",
+        "tests",
+        "openai",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses overcharging issues caused by the inclusion of cached tokens in OpenAI's prompt tokens. The consumption formulas for 19 models have been modified to apply discounts correctly, ensuring accurate billing. Additionally, new tests have been added to verify the correct application of these discounts, with all existing tests passing successfully."
+    },
+    {
       "id": "gh:pr:AceDataCloud/.github#2",
       "title": "Revamp GitHub SEO for AceDataCloud Profile in .github 🚀",
       "tags": [
