@@ -3,6 +3,21 @@
   "date": "2026-03-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#582",
+      "title": "Fix signature issues in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "api",
+        "platform",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update addresses a 400 error caused by invalid signatures in thinking blocks when using the Claude Messages API. By stripping thinking blocks from assistant messages in the conversation history, we ensure that requests can be routed to different upstream accounts without signature validation failures. Non-thinking content remains intact, preserving the integrity of the messages."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#581",
       "title": "Fix overcharging by adjusting cached tokens in Platform Service 🚀",
       "tags": [
