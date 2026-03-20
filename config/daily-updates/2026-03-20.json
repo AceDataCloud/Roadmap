@@ -3,6 +3,85 @@
   "date": "2026-03-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#216",
+      "title": "Refactor USDC Naming for Clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "refactor",
+        "backend",
+        "usdc",
+        "clarity"
+      ],
+      "public": false,
+      "summary": "This update refines the naming conventions for the USDC asset in the backend settings. The change enhances clarity by specifying that the USDC is bridged from Base to the SKALE Base mainnet. This improvement aims to reduce confusion and improve code maintainability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#200",
+      "title": "Automate Cost Change Reporting in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "automation",
+        "cost",
+        "backend",
+        "github-actions",
+        "reporting"
+      ],
+      "public": false,
+      "summary": "This update introduces an automated system that generates and posts a human-readable pricing diff as a comment on PRs that modify cost files. Key additions include a new GitHub Action workflow and a Python script that compares cost files against the main branch, highlighting added, removed, or changed models and consumption values. This enhancement aims to streamline the review process for cost-related changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#202",
+      "title": "Exciting New Gemini API Integration in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "gemini",
+        "api",
+        "backend",
+        "documentation",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update introduces native support for the Gemini API, specifically the `generateContent` and `streamGenerateContent` endpoints, enhancing our platform's capabilities. Key additions include comprehensive OpenAPI specifications, cost rules, and detailed documentation in Chinese, ensuring developers have the resources they need. Additionally, new database objects and Kong routes have been created to facilitate seamless integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#9",
+      "title": "Enhance OAuth2 Flow with Consent Page in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "oauth2",
+        "frontend",
+        "authorization",
+        "i18n",
+        "nginx"
+      ],
+      "public": false,
+      "summary": "This update introduces an OAuth2 consent page and authorization flow to facilitate external app connections to AceDataCloud. Key changes include the addition of a new route for the consent page, an API client for OAuth2 endpoints, and support for multiple languages. The implementation enhances user experience by clearly displaying app permissions and providing a streamlined authorization process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#21",
+      "title": "Introducing OAuth 2.0 Authorization Server in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth2",
+        "backend",
+        "security",
+        "features",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update implements a robust OAuth 2.0 Authorization Server, enabling external applications to connect securely to AceDataCloud. Key features include support for PKCE, new models for OAuth applications and grants, and several new endpoints for authorization, token management, and app information. The changes enhance security and provide a seamless integration experience for client applications."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#584",
       "title": "Fix Bedrock request handling to avoid 400 errors in Platform Service 🚀",
       "tags": [
