@@ -3,6 +3,193 @@
   "date": "2026-03-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPVeo#26",
+      "title": "Enhance OAuth 2.1 Support for Claude.ai Connectors in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "oauth",
+        "claude",
+        "authentication",
+        "billing",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/26",
+      "summary": "This update introduces OAuth 2.1 support for Claude.ai connectors, enhancing user authentication through AceDataCloud's AuthBackend. Key modifications include the addition of a new OAuth provider and updates to the API cost model to accurately account for cached tokens, preventing overcharging. All existing tests have been updated and successfully pass, ensuring stability and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#28",
+      "title": "Enhance OAuth 2.1 Support for Claude.ai Connectors in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "oauth",
+        "authentication",
+        "billing",
+        "testing",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/28",
+      "summary": "This update introduces OAuth 2.1 support for Claude.ai connectors, enhancing user authentication through AceDataCloud's AuthBackend. Key changes include modifications to the chat models' cost calculations to account for cached tokens, ensuring accurate billing. Additionally, new tests have been implemented to verify the correct application of discounts for cached tokens, with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#27",
+      "title": "Enhance OAuth 2.1 Support for Claude.ai Connectors in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "oauth",
+        "claude",
+        "authentication",
+        "billing",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/27",
+      "summary": "This update introduces OAuth 2.1 support for Claude.ai connectors, enhancing user authentication through AceDataCloud's AuthBackend. Key modifications include updates to the API cost model to accurately account for cached tokens, ensuring fair billing practices. Additionally, new tests have been implemented to verify the correct application of cached token discounts, with all existing tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#26",
+      "title": "Enhance OAuth 2.1 Support for Claude.ai Connectors in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "oauth",
+        "claude",
+        "billing",
+        "authentication",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/26",
+      "summary": "This update introduces OAuth 2.1 support for Claude.ai connectors, enhancing user authentication through AceDataCloud's AuthBackend. Key changes include modifications to the `_chat_models.json` for accurate billing by applying discounts for cached tokens, alongside the addition of a new OAuth provider implementation. All existing tests have been updated and successfully pass, ensuring backward compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#28",
+      "title": "Enhance OAuth 2.1 Support for Claude.ai Connectors in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "oauth",
+        "claude",
+        "billing",
+        "testing",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/28",
+      "summary": "This update introduces OAuth 2.1 support for Claude.ai connectors, enhancing user authentication through AceDataCloud's AuthBackend. Key changes include modifications to the API cost model to account for cached tokens, ensuring accurate billing and transparency. Additionally, new tests have been implemented to verify the correct application of discounts for cached tokens, with all existing tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#26",
+      "title": "Enhance OAuth 2.1 Support for Claude.ai Connectors in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "oauth",
+        "authentication",
+        "billing",
+        "testing",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/26",
+      "summary": "This update introduces OAuth 2.1 support for Claude.ai connectors, enhancing user authentication via AceDataCloud's AuthBackend. Key changes include modifications to the API cost model to account for cached tokens, ensuring accurate billing and transparency. Additionally, new tests have been implemented to verify the correct application of discounts for cached tokens, with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#26",
+      "title": "Enhance OAuth 2.1 Support for Claude.ai Connectors in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "oauth",
+        "authentication",
+        "billing",
+        "testing",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/26",
+      "summary": "This update introduces OAuth 2.1 support for Claude.ai connectors, enhancing user authentication through AceDataCloud's AuthBackend. Key changes include modifications to the cost calculation for OpenAI models to prevent overcharging due to cached tokens, along with the addition of comprehensive tests to ensure functionality. The implementation aims to streamline the authentication process and improve billing accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#21",
+      "title": "Enhance OAuth 2.1 Support for Claude.ai Connectors in M C P Short U R L 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "oauth",
+        "authentication",
+        "billing",
+        "testing",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/21",
+      "summary": "This update introduces OAuth 2.1 support for Claude.ai connectors, enhancing user authentication through AceDataCloud's AuthBackend. Key modifications include the addition of a new OAuth provider and updates to the cost calculation for cached tokens, ensuring accurate billing. All existing tests have been updated and successfully pass, maintaining backward compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#20",
+      "title": "Enhance OAuth 2.1 Support for Claude.ai Connectors in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "oauth",
+        "authentication",
+        "billing",
+        "updates",
+        "enhancements"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/20",
+      "summary": "This update introduces OAuth 2.1 support for Claude.ai connectors, enhancing user authentication via AceDataCloud's AuthBackend. Key modifications include the addition of an OAuth provider and updates to the server configuration to enable OAuth functionality. The changes ensure that cached tokens are correctly accounted for in billing, improving cost accuracy for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#19",
+      "title": "Enhance OAuth 2.1 Support for Claude.ai Connectors in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "oauth",
+        "claude",
+        "billing",
+        "tests",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/19",
+      "summary": "This update introduces OAuth 2.1 support for Claude.ai connectors, enhancing user authentication through AceDataCloud's AuthBackend. Key changes include modifications to the model rules for billing adjustments related to cached tokens, ensuring accurate cost calculations. Additionally, new tests have been implemented to verify the correct application of discounts, with all existing tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#22",
+      "title": "Enhance OAuth 2.1 Support for Claude.ai Connectors in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "oauth",
+        "claude",
+        "billing",
+        "testing",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/22",
+      "summary": "This update introduces OAuth 2.1 support for Claude.ai connectors, enhancing user authentication through AceDataCloud's AuthBackend. Key changes include modifications to the consumption formulas in the chat models, ensuring accurate billing by applying discounts for cached tokens. Additionally, new tests have been added to verify the correct implementation of these changes, with all tests passing successfully."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#582",
       "title": "Fix signature issues in Platform Service 🚀",
       "tags": [
