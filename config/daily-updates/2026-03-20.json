@@ -1,0 +1,39 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-20",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/.github#2",
+      "title": "Revamp GitHub SEO for AceDataCloud Profile in .github 🚀",
+      "tags": [
+        "github",
+        "pr",
+        ".github",
+        "seo",
+        "readme",
+        "markdown",
+        "profile",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/.github/pull/2",
+      "summary": "This update enhances the organization profile README to improve GitHub discovery. Key changes include highlighting flagship products, restructuring content for better readability, and strengthening messaging around global developer positioning. The modifications aim to create a more engaging and informative profile for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#215",
+      "title": "Fix billing overcharges for cached tokens in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "billing",
+        "openai",
+        "backend",
+        "tests",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update addresses billing discrepancies for OpenAI models by incorporating discounts for cached tokens in the consumption formulas. Key changes include modifications to the `_chat_models.json` file to apply negative offsets for cached tokens, ensuring accurate billing. Additionally, new tests have been added to verify the correct application of these discounts, with all tests passing successfully."
+    }
+  ]
+}
