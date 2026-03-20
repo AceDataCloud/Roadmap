@@ -3,6 +3,580 @@
   "date": "2026-03-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#584",
+      "title": "Fix Bedrock request handling to avoid 400 errors in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "aws",
+        "bedrock",
+        "http",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where AWS Bedrock was rejecting requests containing a top-level thinking field, causing 400 errors for approximately 5% of /v1/messages requests. The solution involves modifying the MessagesBaseHandler to detect Bedrock and strip the problematic thinking field from the request body, ensuring smooth operation for non-Bedrock upstreams. Key files modified include base.py, messages.py, and google.py."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#162",
+      "title": "Streamline Publisher with Playwright Alternatives in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "refactor",
+        "playwright",
+        "publishers",
+        "tests",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update removes outdated and broken publishers, specifically `juejin.py` and `medium.py`, which have been replaced by more reliable Playwright-based versions. The new publishers, `juejin_browser.py` and `medium_playwright.py`, have been thoroughly tested and verified to ensure seamless publishing. Additionally, related tests have been updated or removed to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#583",
+      "title": "Enhance vocal gender accuracy in Platform Service 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "suno",
+        "audio",
+        "gender",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where the Suno API generated style tags with gender-inconsistent vocal references. A new function, fixVocalGenderInStyle, has been implemented to ensure that the style strings reflect the requested vocal gender. This change improves the accuracy of audio generation outputs, enhancing user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#161",
+      "title": "Exciting New Browser Publishers for Medium and Juejin in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "feature",
+        "playwright",
+        "medium",
+        "juejin",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update introduces Playwright-based browser publishers for Medium and Juejin, replacing the previous API-based methods. The new implementations allow for direct interaction with the platforms' editors, enhancing reliability and bypassing anti-spam measures. Key files modified include the addition of browser automation scripts for both platforms, ensuring a smoother publishing experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#73",
+      "title": "Refactor SSO Token Endpoint for Clarity in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "refactor",
+        "sso",
+        "oauth",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/73",
+      "summary": "This update modifies the internal SSO token URL from oauth2/v1/token to sso/v1/token, clarifying its purpose as an internal SSO code exchange rather than OAuth 2.0. The changes enhance the accuracy of the AceDataCloudOAuth helper, ensuring better alignment with its functionality. Overall, this refactor improves code readability and maintainability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#380",
+      "title": "Refactor OAuth to SSO Operator and Update Endpoint in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "auth",
+        "endpoint",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/380",
+      "summary": "This update renames the OAuthOperator to SSOOperator and modifies the related endpoint from /oauth2/v1 to /sso/v1. Key files affected include App.vue, auth.ts, and actions.ts, ensuring a consistent naming convention across the application. These changes enhance clarity and maintainability of the authentication process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#76",
+      "title": "Refactor OAuth to SSO Operator and Update Endpoint in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "sso",
+        "frontend",
+        "update",
+        "nginx",
+        "typescript"
+      ],
+      "public": false,
+      "summary": "This update renames the OAuthOperator to SSOOperator and modifies the related endpoint from /oauth2/v1 to /sso/v1. Changes were made across multiple files including nginx configuration, TypeScript operators, and the store index. These adjustments enhance clarity and align the codebase with the new SSO implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#10",
+      "title": "Add /sso/ nginx proxy for updated SSO endpoint in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "nginx",
+        "proxy",
+        "sso",
+        "authentication",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new nginx proxy configuration for the /sso/ path, aligning with the backend renaming of the OAuth2 token endpoint to /sso/v1/token. The change ensures seamless routing of SSO requests through the frontend, improving integration with the updated authentication backend."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/VSCodeMCP#2",
+      "title": "Streamline CI to Prevent Version Collisions in V S Code M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "VSCodeMCP",
+        "ci",
+        "vscode",
+        "workflow",
+        "versioning"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/VSCodeMCP/pull/2",
+      "summary": "This update removes the marketplace-based daily build lookup from the publish workflow, generating extension versions using GitHub run metadata instead. This change prevents failures due to concurrent publish jobs attempting to use the same version number, ensuring smoother deployments. The new versioning formula has been validated to produce valid formats without conflicts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#29",
+      "title": "Clean up README badges in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "docs",
+        "cleanup",
+        "readme"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/29",
+      "summary": "This update removes the duplicated PyPI badge block from the README file, streamlining the badge section. The remaining badges have been kept unchanged to maintain clarity and functionality. This change enhances the overall presentation of the documentation without affecting any code."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#30",
+      "title": "Streamline README Badges in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "docs",
+        "cleanup",
+        "readme"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/30",
+      "summary": "This update removes the duplicated PyPI badge block from the README file, ensuring a cleaner presentation. The remaining badges have been kept unchanged, maintaining the necessary information for users. This change enhances the readability of the documentation without affecting functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#29",
+      "title": "Clean up README badges in M C P Nano Banana 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "docs",
+        "cleanup",
+        "readme"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/29",
+      "summary": "This update removes the duplicated PyPI badge block from the README file, streamlining the badge section. The remaining badges are unchanged, ensuring that important package information remains accessible. This change enhances the clarity of the documentation without affecting functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#23",
+      "title": "Refactor SSO Token Endpoint for Improved Authentication in M C P Short U R L 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "refactor",
+        "authentication",
+        "sso",
+        "oauth",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/23",
+      "summary": "This update modifies the internal SSO token URL in the oauth.py file, changing it from oauth2/v1/token to sso/v1/token. This change enhances the authentication process by aligning with the new SSO token endpoint. The update includes minor adjustments in the code to reflect this new endpoint."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#21",
+      "title": "Refactor SSO Token Endpoint for Improved Authentication in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "refactor",
+        "authentication",
+        "sso",
+        "oauth"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/21",
+      "summary": "This update modifies the internal SSO token URL from oauth2/v1/token to sso/v1/token in the oauth.py file. The change enhances the authentication process by aligning it with the latest endpoint standards. Overall, this refactor aims to streamline token exchange operations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#22",
+      "title": "Refactor SSO Token Endpoint for Improved Authentication in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "refactor",
+        "authentication",
+        "sso",
+        "oauth",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/22",
+      "summary": "This update modifies the internal SSO token URL in oauth.py, changing it from oauth2/v1/token to sso/v1/token. The change enhances the authentication process by aligning with the latest SSO standards. Overall, this refactor aims to streamline token exchanges and improve system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#24",
+      "title": "Refactor SSO Token Endpoint for Improved Authentication in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "refactor",
+        "authentication",
+        "sso",
+        "oauth",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/24",
+      "summary": "This update modifies the internal SSO token URL in the oauth.py file, changing it from oauth2/v1/token to sso/v1/token. This change enhances the authentication process by aligning it with the new SSO endpoint. The update includes minor adjustments in the code to ensure seamless integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#28",
+      "title": "Refactor SSO Token Endpoint in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "refactor",
+        "sso",
+        "oauth",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/28",
+      "summary": "This update modifies the internal SSO token URL in the oauth.py file, changing it from oauth2/v1/token to sso/v1/token. The change enhances the clarity of the code by aligning the endpoint with its intended purpose. This adjustment is crucial for maintaining the integrity of authentication processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#28",
+      "title": "Refactor SSO Token Endpoint for Improved Authentication in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "refactor",
+        "authentication",
+        "sso",
+        "oauth",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/28",
+      "summary": "This update modifies the internal SSO token URL in the oauth.py file, changing it from oauth2/v1/token to sso/v1/token. This change enhances the authentication process by aligning with the latest SSO standards. The refactor includes minor adjustments in the code to ensure seamless integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#29",
+      "title": "Refactor SSO Token Endpoint for Improved Authentication in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "refactor",
+        "authentication",
+        "sso",
+        "oauth"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/29",
+      "summary": "This update modifies the internal SSO token URL in the oauth.py file, changing it from oauth2/v1/token to sso/v1/token. This change enhances the authentication process by utilizing the new SSO endpoint. The update includes minor code adjustments to ensure compatibility with the new URL structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#28",
+      "title": "Refactor SSO Token Endpoint for Improved Authentication in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "refactor",
+        "authentication",
+        "sso",
+        "oauth"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/28",
+      "summary": "This update modifies the internal SSO token URL in the oauth.py file, changing it from oauth2/v1/token to sso/v1/token. This change enhances the authentication process by aligning it with the latest SSO standards. The refactor includes minor adjustments to the code structure, ensuring a smoother integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#30",
+      "title": "Refactor SSO Token Endpoint in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "refactor",
+        "sso",
+        "oauth",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/30",
+      "summary": "This update modifies the internal SSO token URL in the oauth.py file, changing it from oauth2/v1/token to sso/v1/token. The change enhances the clarity of the token exchange process by aligning it with the new SSO endpoint. This refactor is expected to improve the integration with the authentication system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#28",
+      "title": "Refactor SSO Token Endpoint for Improved Authentication in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "refactor",
+        "authentication",
+        "sso",
+        "oauth",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/28",
+      "summary": "This update modifies the internal SSO token URL from oauth2/v1/token to sso/v1/token in the oauth.py file. The change enhances the authentication process by aligning it with the new SSO endpoint. This refactor ensures better maintainability and consistency in the codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#30",
+      "title": "Refactor SSO Token Endpoint for Improved Authentication in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "refactor",
+        "authentication",
+        "sso",
+        "oauth",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/30",
+      "summary": "This update modifies the internal SSO token URL in the oauth.py file, changing it from the legacy oauth2/v1/token to the new sso/v1/token endpoint. This change enhances the authentication process by aligning with the latest standards for token exchange. The refactor includes minor adjustments in the code to ensure seamless integration with the new endpoint."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#22",
+      "title": "Refactor SSO Token Endpoint for Clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "refactor",
+        "sso",
+        "backend",
+        "api",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update renames the internal SSO code-to-token exchange endpoint from 'oauth2/v1/token' to 'sso/v1/token', enhancing clarity and organization. The old path remains available as a deprecated alias to ensure a smooth transition for existing integrations. Key changes include updates to the views and URL configurations, impacting related components across multiple platforms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#22",
+      "title": "Enhance JetBrains Versioning and Profile Token in M C P Short U R L 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "jetbrains",
+        "versioning",
+        "security",
+        "update",
+        "oauth"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/22",
+      "summary": "This update improves the JetBrains version format to align with PyPI standards by including the day in the versioning scheme. Additionally, the profile update token has been changed to enhance security and functionality. These changes aim to streamline the deployment process and ensure better integration with external services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#21",
+      "title": "Enhance JetBrains Versioning and Profile Token Update in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "update",
+        "workflow",
+        "oauth",
+        "versioning",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/21",
+      "summary": "This update improves the JetBrains version format to align with PyPI standards by including the day in the versioning scheme. Additionally, the profile update token has been changed for better integration with the Index repository. These changes enhance the overall functionality and reliability of the workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#20",
+      "title": "Enhance JetBrains Versioning and Profile Update in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "update",
+        "workflow",
+        "oauth",
+        "security",
+        "versioning"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/20",
+      "summary": "This update improves the JetBrains version format to align with the PyPI standard by including the day in the versioning scheme. Additionally, the profile update workflow now uses a new dispatch token for better security. Key changes were made in the workflow files and core OAuth logic to enhance functionality and maintainability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#23",
+      "title": "Enhance JetBrains Versioning and Profile Update in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "jetbrains",
+        "versioning",
+        "workflow",
+        "security",
+        "oauth"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/23",
+      "summary": "This update improves the JetBrains version format to align with the PyPI standard, incorporating a day component into the versioning scheme. Additionally, the profile update workflow now utilizes a new dispatch token for better security. These changes enhance the overall functionality and maintainability of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#27",
+      "title": "Refine JetBrains versioning and update token handling in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "ci",
+        "workflow",
+        "versioning",
+        "security",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/27",
+      "summary": "This update improves the JetBrains version format to use a calendar versioning scheme including year, month, and day, aligning with PyPI standards. Additionally, the profile update workflow token was corrected to use the appropriate secret, enhancing security and reliability of repository dispatch events."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#29",
+      "title": "Enhance JetBrains Versioning and Profile Update in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "jetbrains",
+        "workflow",
+        "update",
+        "security",
+        "versioning"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/29",
+      "summary": "This update improves the JetBrains versioning format to align with the PyPI standard by including the day in the version string. Additionally, the profile update workflow now uses a new token for better security. These changes enhance the overall functionality and reliability of the workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#28",
+      "title": "Update JetBrains Version Format and Profile Token in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "update",
+        "workflow",
+        "jetbrains",
+        "token",
+        "fix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/28",
+      "summary": "This update modifies the JetBrains version format to align with the PyPI standard (YYYY.M.D.BUILD) and updates the profile update token to use VSCODE_MCP_DISPATCH_TOKEN. These changes enhance version consistency and improve the workflow for profile updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#27",
+      "title": "Update JetBrains Version Format and Profile Token in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "update",
+        "workflow",
+        "jetbrains",
+        "token",
+        "versioning"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/27",
+      "summary": "This update modifies the JetBrains version format to align with the PyPI standard (YYYY.M.D.BUILD) and updates the profile update token to use VSCODE_MCP_DISPATCH_TOKEN. Changes were made in the workflow files to ensure proper version generation and token dispatching. These improvements enhance the consistency and functionality of the deployment process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#29",
+      "title": "Update JetBrains Version Format and Profile Token in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "fix",
+        "update",
+        "workflow",
+        "jetbrains"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/29",
+      "summary": "This update fixes the JetBrains version format to align with the PyPI standard (YYYY.M.D.BUILD) and updates the profile update token to use VSCODE_MCP_DISPATCH_TOKEN. Changes were made to the workflows for publishing and updating profiles, enhancing the overall functionality and reliability of the integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#27",
+      "title": "CI/CD Fixes for JetBrains and Profile Update in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "ci",
+        "cd",
+        "jetbrains",
+        "fix",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/27",
+      "summary": "This update includes two important CI/CD fixes. The JetBrains Plugin version format has been updated to align with PyPI's CalVer, preventing version conflicts when publishing. Additionally, the profile update token has been corrected to use the configured token, resolving the previous error related to missing authentication."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#27",
+      "title": "CI/CD Fixes for JetBrains and Profile Update in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "ci",
+        "cd",
+        "jetbrains",
+        "fix",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/27",
+      "summary": "This update introduces two key CI/CD fixes. The JetBrains Plugin version format has been updated to `YYYY.M.D.BUILD` to align with PyPI CalVer, resolving version conflicts. Additionally, the Profile Update token has been corrected to use the configured `secrets.VSCODE_MCP_DISPATCH_TOKEN`, eliminating the previous error related to missing parameters."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPVeo#26",
       "title": "Enhance OAuth 2.1 Support for Claude.ai Connectors in M C P Veo 🚀",
       "tags": [
