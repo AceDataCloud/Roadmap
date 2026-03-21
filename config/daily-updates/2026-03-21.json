@@ -3,6 +3,260 @@
   "date": "2026-03-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#37",
+      "title": "Revamp README with New Endpoint and OAuth Details in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "docs",
+        "update",
+        "oauth",
+        "endpoints",
+        "env-vars"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/37",
+      "summary": "The README has been updated to reflect recent changes, including the transition of all endpoint URLs from /mcp to /mc. Additionally, a new section for connecting to Claude.ai via OAuth has been added, eliminating the need for an API token. The environment variables table has also been updated to include ACEDATACLOUD_OAUTH_CLIENT_ID and ACEDATACLOUD_PLATFORM_BASE_URL."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#24",
+      "title": "Migrate to OAuth 2.0, add favicon, and update endpoint in M C P Short U R L 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "oauth",
+        "authentication",
+        "endpoint",
+        "favicon",
+        "configuration",
+        "security"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/24",
+      "summary": "This update replaces the previous SSO system with OAuth 2.0 PKCE for improved authentication flow. The API endpoint has been changed from /mcp to /mc, and a favicon redirect has been added for branding consistency. Additionally, a new oauth_client_id configuration option was introduced to support the OAuth integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#23",
+      "title": "Upgrade to OAuth 2.0 and Enhance Features in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "oauth",
+        "security",
+        "update",
+        "feature",
+        "branding"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/23",
+      "summary": "This update replaces the previous SSO implementation with OAuth 2.0 PKCE for improved security and user experience. The API endpoint has been changed from /mcp to /mc, and a favicon has been added for better branding. Additionally, the configuration now includes an oauth_client_id to streamline the authentication process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#22",
+      "title": "Upgrade to OAuth 2.0 and Enhance Features in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "oauth",
+        "security",
+        "features",
+        "branding",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/22",
+      "summary": "This update replaces the previous SSO with OAuth 2.0 PKCE for enhanced security and user experience. The endpoint has been changed from /mcp to /mc, and a favicon has been added for better branding. Additionally, the configuration now includes an oauth_client_id for smoother integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#25",
+      "title": "Migrate to OAuth 2.0 with new endpoint and favicon in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "oauth",
+        "authentication",
+        "endpoint",
+        "favicon",
+        "configuration",
+        "integration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/25",
+      "summary": "This update replaces the previous SSO system with OAuth 2.0 PKCE for improved authentication. The API endpoint has been changed from /mcp to /mc, and a favicon redirect has been added for better branding. Additionally, an oauth_client_id configuration option was introduced to support the new OAuth flow, enhancing integration with Claude.ai and other clients."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#30",
+      "title": "Enhanced OAuth 2.0 Integration and Endpoint Update in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "oauth",
+        "security",
+        "branding",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/30",
+      "summary": "This update replaces the previous SSO with OAuth 2.0 PKCE for enhanced security and user authentication. The main endpoint has been changed from '/mcp' to '/mc', and a favicon has been added for improved branding. Additionally, configuration for the OAuth client ID has been introduced, streamlining the integration process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#31",
+      "title": "Upgrade to OAuth 2.0 and Enhance Features in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "oauth",
+        "security",
+        "feature",
+        "update",
+        "branding"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/31",
+      "summary": "This update migrates the authentication method from SSO to OAuth 2.0 PKCE, improving security and user experience. The endpoint has been changed from `/mcp` to `/mc`, and a favicon has been added for better branding. Additionally, the configuration now includes an `oauth_client_id`, streamlining the OAuth integration process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#29",
+      "title": "Enhanced OAuth 2.0 Integration and Endpoint Update in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "oauth",
+        "security",
+        "branding",
+        "update",
+        "endpoint"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/29",
+      "summary": "This update replaces the existing SSO with OAuth 2.0 PKCE for improved security and user experience. The main endpoint has been changed from /mcp to /mc, and a favicon has been added for better branding. Additionally, the configuration now includes an oauth_client_id for seamless integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#31",
+      "title": "Upgrade to OAuth 2.0 and Enhance Features in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "oauth",
+        "security",
+        "feature",
+        "update",
+        "branding"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/31",
+      "summary": "This update migrates the authentication method from SSO to OAuth 2.0 PKCE, enhancing security and user experience. The API endpoint has been changed from /mcp to /mc, and a favicon has been added for better branding. Additionally, configuration for oauth_client_id has been introduced, streamlining the setup process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#29",
+      "title": "Migrate to OAuth 2.0, update endpoint, and add favicon in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "oauth",
+        "authentication",
+        "endpoint",
+        "favicon",
+        "configuration",
+        "security"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/29",
+      "summary": "This update replaces the previous SSO system with OAuth 2.0 PKCE for improved authentication flow. The API endpoint has been changed from /mcp to /mc, and a favicon redirect has been added for better branding. Configuration now supports an oauth_client_id, enhancing OAuth integration and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#31",
+      "title": "Enhanced OAuth 2.0 Integration and New Features in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "oauth",
+        "favicon",
+        "endpoint",
+        "security",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/31",
+      "summary": "This update introduces a migration to OAuth 2.0, replacing the previous SSO login method with a more secure Authorization Code flow. Additionally, a favicon has been added with a new endpoint for better branding, and the main HTTP path has been streamlined from /mcp to /mc. These changes enhance user experience and security across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#587",
+      "title": "Boost Tornado's Capacity for Claude Code Requests in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "tornado",
+        "performance",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update addresses persistent 502 errors experienced by users when utilizing Claude Code with the Claude Messages API. By increasing the Tornado server's max_body_size and max_buffer_size to 500 MB, we ensure that larger conversation contexts can be processed smoothly, enhancing overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#36",
+      "title": "Enhance MCP Tool with Async Polling for Image Generation in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "async",
+        "polling",
+        "image-generation",
+        "mcp",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/36",
+      "summary": "This update introduces an asynchronous polling mechanism for the MCP tool, preventing timeouts during image generation and editing. Key changes include the addition of async methods for generating and editing images, along with a polling strategy to check task completion. The tool interface remains simple while improving reliability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#35",
+      "title": "Add favicon for Nano Banana in M C P Nano Banana 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "favicon",
+        "feature",
+        "redirect",
+        "cdn",
+        "icon"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/35",
+      "summary": "This update introduces a new route for the favicon, which redirects to the Nano Banana logo hosted on a CDN. The change enhances the visual identity of the application by ensuring the correct icon is displayed. Additionally, it includes modifications to the main.py file to implement this feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#33",
+      "title": "Enhance error handling for JetBrains plugin publish in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "bugfix",
+        "jetbrains",
+        "workflow",
+        "gradle"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/33",
+      "summary": "This update addresses a critical issue where the `publish-jetbrains` job fails if a CalVer version has already been published on the same day. The fix captures the Gradle output and treats the 'already contains version' message as a non-fatal condition, allowing the workflow to continue smoothly. Other genuine errors will still trigger a failure, ensuring robust error handling."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthFrontend#12",
       "title": "Revamped OAuth consent page with full multilingual support in Frontend Web 🎨",
       "tags": [
