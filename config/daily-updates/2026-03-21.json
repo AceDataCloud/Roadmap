@@ -1,0 +1,68 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-21",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Index#12",
+      "title": "Streamline CLAUDE.MD for Clarity in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "refactor",
+        "documentation",
+        "update",
+        "clarity"
+      ],
+      "public": false,
+      "summary": "This update simplifies the CLAUDE.MD file by reducing its size by approximately 26%. Key changes include replacing the verbose Available Skills/Tools section with a more compact reference table, removing duplicate checklist items, and trimming down the Important Reminders section. Overall, the document is now more concise while retaining all essential information."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#585",
+      "title": "Enhance error handling for Suno moderation failures in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "suno",
+        "moderation",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update modifies the error handling in the Suno integration to classify moderation failures as a 403 Forbidden error instead of a 500 Internal Server Error. By adding a condition to check for the 'moderation_failure' error type, the system can now respond appropriately to specific moderation messages. This change improves the reliability of error reporting during audio generation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#77",
+      "title": "Automate i18n translations from Chinese source updates in Frontend Web 🌐",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "automation",
+        "translations",
+        "frontend",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update introduces an automated process for generating internationalization (i18n) translation updates based on changes in the Chinese (zh-CN) source files. Numerous cache files related to i18n have been renamed or added to support this automation. The change improves translation consistency and reduces manual effort in maintaining multilingual support."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#163",
+      "title": "Boosting Publisher Performance with Enhanced Token Handling in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "bugfix",
+        "performance",
+        "testing",
+        "openai",
+        "publisher"
+      ],
+      "public": false,
+      "summary": "This update improves the robustness of the publisher by addressing overcharging issues related to cached tokens in OpenAI models. Key changes include modifications to the consumption formulas in the model rules and the addition of new tests to ensure the correct application of discounts. All existing tests have passed successfully, ensuring backward compatibility."
+    }
+  ]
+}
