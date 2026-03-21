@@ -3,6 +3,56 @@
   "date": "2026-03-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#32",
+      "title": "Revamp OAuth Flow for Enhanced User Experience in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "oauth",
+        "security",
+        "user-experience",
+        "feature",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/32",
+      "summary": "This update replaces the internal SSO login flow with a standard OAuth 2.0 Authorization Code Grant + PKCE. Users will now encounter a consent page before granting access to MCP, improving security and user awareness. Key changes include new redirect paths and the introduction of an oauth_client_id configuration setting."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#31",
+      "title": "Enhance OAuth Flow with Auto-Provisioning in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "oauth",
+        "api",
+        "credentials",
+        "enhancement",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/31",
+      "summary": "This update introduces an auto-provisioning feature for API credentials during the OAuth login process. When users log in via Claude connectors without existing credentials, the MCP server now automatically creates a Global Usage Application and Credential, preventing 403 errors. This change aligns with the existing functionality in Dify, improving user experience and accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#586",
+      "title": "Enhance error handling for API key issues in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "security",
+        "api",
+        "wcnb",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update improves the classification of upstream API key errors in the wcnb worker. Instead of exposing sensitive details through a 400 Bad Request, these errors are now categorized as a 500 ApiError with a generic message, enhancing security. The changes apply to all three handlers: nano-banana, veo, and sora."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#12",
       "title": "Streamline CLAUDE.MD for Clarity in Index 🚀",
       "tags": [
