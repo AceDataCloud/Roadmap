@@ -3,6 +3,258 @@
   "date": "2026-03-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#594",
+      "title": "Fix action validation for request body in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "validation",
+        "request",
+        "platformservice"
+      ],
+      "public": false,
+      "summary": "This update corrects the action validation logic to utilize the request body directly, ensuring that requests without an explicit action are handled correctly. Previously, the local variable defaulted to 'text2video', which led to unnecessary rejections of valid requests. This change enhances the robustness of the action handling in the service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#593",
+      "title": "Improve retry logic by recreating FormData and handling 503 errors in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "retry",
+        "http",
+        "formdata",
+        "error-handling"
+      ],
+      "public": false,
+      "summary": "This update moves the creation of FormData inside the retry loop in createVeoVideo() to prevent empty request bodies on retries, fixing socket hang up errors. Additionally, it adds handling for HTTP 503 status codes in handleVeoRequestError, improving the robustness of the request process. These changes enhance reliability when making POST requests in the Platform Service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#70",
+      "title": "Upgrade Docker Buildx Action to v4 for Improved CI and Deployment in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "docker",
+        "ci",
+        "deployment",
+        "buildx",
+        "workflow",
+        "upgrade"
+      ],
+      "public": false,
+      "summary": "This update bumps the docker/setup-buildx-action from version 1 and 3 to version 4 in the CI and deployment workflows. The upgrade includes switching to Node 24 as the default runtime, removal of deprecated inputs/outputs, and various dependency updates. These changes enhance build performance and maintain compatibility with the latest GitHub Actions runner versions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#71",
+      "title": "Upgrade Python Setup Action to Version 6 in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "upgrade",
+        "python",
+        "actions",
+        "gateway",
+        "dependencies"
+      ],
+      "public": false,
+      "summary": "This update bumps the actions/setup-python from version 5 to 6, ensuring compatibility with Node 24. Key enhancements include support for pip-version and improved reading from .python-version files. Additionally, several bug fixes and dependency updates have been implemented to enhance overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#73",
+      "title": "Update Python Dependencies for Enhanced Performance in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "dependencies",
+        "updates",
+        "python",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This PR updates the Python dependencies in the project, including significant upgrades to djangorestframework, loguru, and requests. The changes enhance compatibility and performance, ensuring the application runs smoothly with the latest features and security patches. The poetry.lock and pyproject.toml files have been modified to reflect these updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#73",
+      "title": "Automate dependency updates and enhance CI workflow in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependabot",
+        "ci",
+        "docker",
+        "npm",
+        "github-actions",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update introduces Dependabot configuration to automate dependency updates for npm packages weekly, and Docker images and GitHub Actions monthly. Additionally, the CI deployment workflow has been upgraded with newer versions of key GitHub Actions, improving build and deployment reliability. These changes streamline maintenance and enhance the development pipeline."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#79",
+      "title": "Revamp Deploy Workflow and Dependabot Formatting in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "workflow",
+        "dependabot",
+        "frontend",
+        "update",
+        "actions"
+      ],
+      "public": false,
+      "summary": "This update enhances the deploy workflow by pinning key actions to their latest stable versions, ensuring better maintenance and tracking for Dependabot. Additionally, the Dependabot configuration has been reformatted to align with the project's Prettier style, promoting consistency across the repository."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#538",
+      "title": "Update Sora Version Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "sora",
+        "versioning",
+        "platformservice"
+      ],
+      "public": false,
+      "summary": "This update modifies the Sora worker version checks from an integer to a string format, specifically changing version 2 to '2.0'. This change is implemented across multiple handler files to ensure consistency and prevent errors related to version checks. It is a companion update to the PlatformBackend PR, enhancing the overall stability of the service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#82",
+      "title": "Automated i18n Updates from Chinese in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update introduces auto-generated internationalization (i18n) translation updates based on changes from the Chinese (zh-CN) source. Key modifications include updates to various language files, enhancing the application's multilingual support and ensuring consistency across different languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#592",
+      "title": "Enhanced Video Creation Timeout in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "timeout",
+        "api",
+        "wcnb",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "The timeout for the video creation process in the wcnb API has been increased from 30 seconds to 120 seconds. This change addresses issues where the initial POST request could exceed the previous limit, ensuring smoother video creation experiences."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#78",
+      "title": "Enhance Usage History with Request/Response Details in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "i18n",
+        "ui",
+        "json"
+      ],
+      "public": false,
+      "summary": "This update introduces a new Detail button in the API usage table, allowing users to view full request and response JSON data stored in metadata. The enhancement includes a modal dialog with tabs for Request and Response, displaying the data in a user-friendly format. Additionally, internationalization support has been added for both English and Chinese languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#81",
+      "title": "Enhance ApiUsage with Request/Response Metadata in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "api",
+        "metadata",
+        "gateway",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces the storage of sanitized request and response details in the ApiUsage metadata during the recording phase. Key changes include the extraction of relevant request data such as headers and JSON body, as well as response data like status and headers, while ensuring sensitive information is stripped. This enhancement allows the frontend to display detailed usage history per request, improving user visibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#591",
+      "title": "Enable VEO Deployment in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "ci/cd",
+        "deployment",
+        "update",
+        "platform"
+      ],
+      "public": false,
+      "summary": "The VEO deployment has been re-enabled in the CI/CD pipeline by updating the run.sh script. Previously commented-out lines have been restored, allowing for the deployment of VEO alongside the nanobanana service. This change enhances the deployment capabilities of the Platform Service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#590",
+      "title": "Enhance wcnb with Veo Video Generation Support in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "video",
+        "wcnb",
+        "api",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces Veo video generation capabilities to the wcnb worker, integrating with the wcnb.ai OpenAI-compatible video API. Key changes include the implementation of video generation and information retrieval methods, the addition of a new handler for video requests, and updates to deployment configurations. This enhancement streamlines video processing and expands the functionality of the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#31",
+      "title": "Updated Favicon to Google Icon in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "favicon",
+        "update",
+        "branding",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/31",
+      "summary": "This update replaces the generic AceData logo with the Google G icon for the favicon of the Serp MCP server. The change enhances brand recognition and aligns the server's visual identity with Google. The modification involved a simple redirect update in the main.py file."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#589",
+      "title": "Enhance Usage Metadata with Cached Tokens in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "metadata",
+        "usage",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update adds the fields 'cached_tokens' and 'cached_creation_tokens' to the usage record metadata, making them visible on the usage console page. Previously, these values were only utilized for Gateway billing and not stored in the metadata. This enhancement applies to both Claude Messages API and OpenAI Chat Completions API."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPNanoBanana#38",
       "title": "Revert HTTP endpoint path to /mcp and update documentation in M C P Nano Banana 🚀",
       "tags": [
