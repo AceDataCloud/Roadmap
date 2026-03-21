@@ -3,6 +3,87 @@
   "date": "2026-03-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#113",
+      "title": "Revamp Platform Rank Icon and ACE Coin Page in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "design",
+        "icons",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update restores the platform rank navigation and updates the page icon to a trophy. The ACE coin page layout has been refined to a row structure, enhancing user experience. Additionally, unstable icons have been replaced with registered Font Awesome icons for consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#112",
+      "title": "Automated i18n Updates from zh-CN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This PR introduces automatic translation updates for internationalization (i18n) based on changes from the zh-CN source. Key modifications include updates to multiple language files, enhancing the user experience for various locales. The changes ensure that users across different languages have access to the latest content and features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#111",
+      "title": "Revamped coin page with clean el-card layout and enhanced order list in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui-redesign",
+        "coin-page",
+        "order-list",
+        "el-card",
+        "vue",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "The coin page was redesigned using a standard el-row/el-col/el-card layout, removing custom colors in favor of theme CSS variables. Key features include proper stat cards, ACE balance as a separate card, tiers displayed as a table with progress bars, visible icons, and actions via el-button. Additionally, the order list page received layout improvements for better clarity and usability. These updates improve UI consistency and user experience across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#110",
+      "title": "Revamp Platform Rank Page Layout and Icons in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "design",
+        "icons",
+        "layout"
+      ],
+      "public": false,
+      "summary": "This update enhances the platform rank page by implementing a full-width layout and adding missing Font Awesome icons. Key changes include the introduction of avatars in the podium and table, a refined color scheme, and the removal of the bottom section for a cleaner look. Overall, these improvements aim to provide a more engaging user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#109",
+      "title": "Enhance order page with new FontAwesome icons in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "icons",
+        "fix",
+        "ui",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update registers several missing FontAwesome icons, including faReceipt, faDollarSign, faClock, and faFileExport, for use on the order page summary cards and export button. Previously, these icons were not registered, resulting in empty circle placeholders. With this fix, the order page will now display the correct icons, improving user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#220",
       "title": "Enhance Chinese Documentation with Nexior Links in Backend 🚀",
       "tags": [
