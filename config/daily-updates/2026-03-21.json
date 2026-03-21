@@ -3,6 +3,40 @@
   "date": "2026-03-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#12",
+      "title": "Revamped OAuth consent page with full multilingual support in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "oauth",
+        "ui",
+        "i18n",
+        "responsive",
+        "frontend",
+        "multilingual"
+      ],
+      "public": false,
+      "summary": "The OAuth consent page has been redesigned to include a logo bridge, user badge, styled permissions, and a responsive layout for improved user experience. Additionally, new internationalization keys were added and translated across all 17 supported languages, enhancing global accessibility and consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#34",
+      "title": "Update MCP Endpoint Path for Compatibility in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "fix",
+        "endpoint",
+        "mcp",
+        "oauth",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/34",
+      "summary": "This update modifies the MCP endpoint path from `/mcp` to `/mc` to align with the default requests sent by Claude's MCP client. The change resolves the 404 error encountered after successful OAuth authentication. This ensures smoother operation and better integration with the client."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPNanoBanana#32",
       "title": "Revamp OAuth Flow for Enhanced User Experience in M C P Nano Banana 🚀",
       "tags": [
