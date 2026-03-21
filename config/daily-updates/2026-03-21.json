@@ -3,6 +3,318 @@
   "date": "2026-03-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#220",
+      "title": "Enhance Chinese Documentation with Nexior Links in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "nexior",
+        "chinese",
+        "updates",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update adds quick-entry link blocks to the Chinese Nexior deployment guides and includes missing Hub and Nexior repository links in promotional and earning articles. Inline references to Nexior and Hub have also been improved in the main promotional documents, enhancing accessibility for Chinese users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#108",
+      "title": "Revamp Order Page Style and Filters in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "style",
+        "filters",
+        "update"
+      ],
+      "public": false,
+      "summary": "The order page has been updated to align with the distribution page style, enhancing visual consistency. Filters are now streamlined into a single row, accompanied by an export button for improved functionality. These changes aim to enhance user experience and accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#29",
+      "title": "Enhance Async Task Submission Flow in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "async",
+        "mcp",
+        "submission",
+        "testing",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/29",
+      "summary": "This update enforces asynchronous submission for long-running MCP media tools by default, ensuring quicker responses with task IDs. It also introduces explicit polling guidance in task-based MCP responses, improving user experience. Focused tests have been added and updated to validate the new submit-then-poll behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#26",
+      "title": "Improve async task polling flow with explicit guidance in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "async",
+        "polling",
+        "mcp",
+        "media-tools",
+        "testing",
+        "client"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/26",
+      "summary": "This update enforces asynchronous submission for long-running MCP media tools by default, ensuring quick returns with a task ID. It adds explicit polling instructions in task-based MCP responses to guide users on how to check task completion. The changes include new and updated tests to validate the submit-then-poll behavior, enhancing reliability and clarity in task handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#27",
+      "title": "Enhance MCP Async Task Submission Flow in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "async",
+        "polling",
+        "testing",
+        "MCP",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/27",
+      "summary": "This update improves the MCP media tools by enforcing asynchronous submission for long-running tasks. It includes explicit polling guidance in the responses, ensuring users know how to check task statuses effectively. Additionally, focused tests have been added to validate the new submit-then-poll behavior, enhancing overall reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#41",
+      "title": "Enhance MCP Async Task Flow in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "async",
+        "polling",
+        "tests",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/41",
+      "summary": "This update improves the MCP media tools by enforcing asynchronous submissions by default for long-running tasks. It introduces explicit polling guidance in task responses and includes focused tests for the new submit-then-poll behavior. These changes aim to streamline user interactions and enhance overall efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#34",
+      "title": "Improve async task polling and submission flow in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "async",
+        "polling",
+        "media-processing",
+        "testing",
+        "client",
+        "utils"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/34",
+      "summary": "This update enforces asynchronous submission for long-running MCP media tools, ensuring they return quickly with a task ID. It introduces explicit polling guidance in task-based MCP responses and enhances tests to cover the new submit-then-poll behavior. These changes improve clarity and reliability in handling asynchronous media processing tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#35",
+      "title": "Enhance MCP Async Task Submission in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "async",
+        "polling",
+        "testing",
+        "MCP",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/35",
+      "summary": "This update enforces asynchronous submission for long-running MCP media tools by default, ensuring quicker responses with task IDs. It also provides explicit polling guidance in task-based responses, enhancing user experience. Focused tests have been added to validate the new submit-then-poll behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#33",
+      "title": "Enhance MCP Async Task Submission in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "async",
+        "polling",
+        "tests",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/33",
+      "summary": "This update implements a default asynchronous submission mode for long-running MCP media tools, ensuring quicker responses with task IDs. It also provides explicit polling guidance in task responses and includes focused tests for the new behavior. These changes improve user experience by streamlining the submission and polling process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#35",
+      "title": "Enhance async task polling with explicit guidance in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "async",
+        "polling",
+        "media",
+        "testing",
+        "client",
+        "utils"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/35",
+      "summary": "This update enforces asynchronous submission for long-running MCP media tools, ensuring they return quickly with a task ID. It adds explicit polling instructions to task-based MCP responses and introduces new tests to validate the submit-then-poll workflow. These changes improve clarity and reliability when handling async media generation tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#35",
+      "title": "Enhance MCP Async Task Handling in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "async",
+        "polling",
+        "tests",
+        "MCP",
+        "media"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/35",
+      "summary": "This update forces long-running MCP media tools to submit tasks asynchronously by default, improving response times. It also provides explicit polling guidance with task-based responses, ensuring users know how to check task statuses. Focused tests have been added and updated to validate the new submit-then-poll behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#16",
+      "title": "Enhance OAuth Application Management UI in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "oauth",
+        "ui",
+        "frontend",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update introduces a new OAuth Application management interface within the AuthFrontend user console. Users can now access an OAuth App List and Detail pages, along with a Create/Edit dialog for managing application details such as name, description, and redirect URIs. The implementation also includes necessary routing and internationalization support."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#107",
+      "title": "Automated i18n Updates for Multiple Languages in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update introduces automated translation updates for internationalization (i18n) from the Chinese (zh-CN) source. Key modifications include enhancements across various language files, ensuring a more seamless user experience for Arabic, German, English, Spanish, French, Italian, and Japanese users. The changes improve the accuracy and relevance of translations throughout the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#106",
+      "title": "Revamped Platform Ranking Page with Modern UI in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "frontend",
+        "design",
+        "accessibility",
+        "features"
+      ],
+      "public": false,
+      "summary": "The Platform Ranking page has been redesigned to feature a modern user interface, including a Top 3 podium, summary cards, and enhanced search functionality. This update transitions the page from admin-only access to common navigation, improving accessibility for all users. Key backend changes support the new features and layout."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#219",
+      "title": "Enhance platform-rank API with new features in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "enhancement",
+        "backend",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update improves the platform-rank API by adding a summary field to the response, which includes total participants, total price, total reward, and total invitees. It also introduces a search parameter for filtering results by username or user ID and supports all-time queries without specifying start and end times. Additionally, a crash related to invitee count queries has been fixed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#15",
+      "title": "Clean up OAuth consent page by removing user badge in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "oauth",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "The user badge has been removed from the OAuth consent page to enhance the visual appeal. This change eliminates the placeholder that appeared when users did not have an avatar, resulting in a cleaner interface. Overall, this update improves user experience during the OAuth process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#105",
+      "title": "Automatic i18n Updates from zh-CN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update introduces automatic translation updates for the i18n files based on changes from the zh-CN source. Key modifications include enhancements to the order.json files across multiple languages, improving the user experience for Arabic, English, French, Korean, Portuguese, and Russian users. The changes ensure that the translations are up-to-date and consistent with the latest content."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#103",
+      "title": "Revamped Orders Console with Enhanced Features in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "features",
+        "export",
+        "design"
+      ],
+      "public": false,
+      "summary": "The Orders console page has been completely redesigned to include summary cards, advanced filters for state, payment method, and date range, as well as a CSV export feature. This update significantly improves the user experience and data accessibility, relying on backend support for summary and export functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#218",
+      "title": "Enhance order management with summary and CSV export endpoints in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "orders",
+        "api",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces new endpoints for order summaries and CSV exports, enhancing functionality for regular users. Users can now filter orders by state, payment method, and date range, which supports the redesigned Orders console page. These changes aim to improve user experience and streamline order management."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#102",
       "title": "Automatic i18n Translation Updates in Frontend Web 🎉",
       "tags": [
