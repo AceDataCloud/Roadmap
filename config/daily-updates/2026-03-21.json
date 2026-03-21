@@ -3,6 +3,187 @@
   "date": "2026-03-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#38",
+      "title": "Revert HTTP endpoint path to /mcp and update documentation in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "bugfix",
+        "documentation",
+        "api",
+        "endpoint",
+        "http"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/38",
+      "summary": "This update reverts the streamable HTTP endpoint path from /mc back to /mcp to maintain consistency. Corresponding changes were made in the README to reflect the correct endpoint URL. These adjustments ensure proper API connectivity and improve user guidance for integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#25",
+      "title": "Revert endpoint path to /mcp and update documentation in M C P Short U R L 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "endpoint",
+        "documentation",
+        "bugfix",
+        "http",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/25",
+      "summary": "This update reverts the streamable HTTP endpoint path from /mc back to /mcp to maintain consistency. The README has been updated accordingly to reflect this change, ensuring accurate setup instructions. These adjustments help prevent integration issues and improve user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#24",
+      "title": "Revert HTTP Endpoint Path for Clarity in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "fix",
+        "api",
+        "documentation",
+        "endpoint",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/24",
+      "summary": "This update reverts the streamable HTTP path from `/mc` back to `/mcp` to maintain consistency. The README has been updated accordingly to reflect this change, ensuring users have the correct endpoint information. These adjustments enhance clarity for developers integrating with the API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#23",
+      "title": "Revert HTTP Endpoint Path for Clarity in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "fix",
+        "endpoint",
+        "documentation",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/23",
+      "summary": "This update reverts the streamable HTTP path from `/mc` back to `/mcp`, ensuring consistency with the documentation. The README has been updated accordingly to reflect this change, enhancing clarity for users. Additionally, minor adjustments were made in the main.py file to align with the reverted endpoint."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#26",
+      "title": "Revert HTTP endpoint path to /mcp and update documentation in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "bugfix",
+        "documentation",
+        "endpoint",
+        "http",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/26",
+      "summary": "This update reverts the streamable HTTP endpoint path from /mc back to /mcp to ensure consistency. The README file has been updated accordingly to reflect this change, improving clarity for users integrating with the MCP server. The main application code was also adjusted to align with the restored endpoint path."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#31",
+      "title": "Revert HTTP Endpoint Path to /mcp in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "fix",
+        "endpoint",
+        "update",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/31",
+      "summary": "This update reverts the streamable HTTP endpoint path from /mc back to /mcp, ensuring compatibility with existing integrations. The README has been updated to reflect this change, providing clear instructions for users. Additionally, the main.py file has been modified to align with the new endpoint configuration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#32",
+      "title": "Revert HTTP endpoint path to /mcp and update documentation in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "bugfix",
+        "documentation",
+        "endpoint",
+        "http",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/32",
+      "summary": "This update reverts the streamable HTTP endpoint path from /mc back to /mcp to maintain consistency. Corresponding changes were made in the README to reflect the correct endpoint URL. These adjustments ensure proper client connectivity and accurate documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#30",
+      "title": "Revert HTTP Endpoint Path to /mcp in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "fix",
+        "api",
+        "documentation",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/30",
+      "summary": "This update reverts the streamable HTTP endpoint path from /mc back to /mcp, ensuring compatibility with existing integrations. The README has been updated accordingly to reflect this change. This fix enhances clarity for users accessing the API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#32",
+      "title": "Revert HTTP Endpoint Path for Clarity in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "fix",
+        "documentation",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/32",
+      "summary": "This update reverts the streamable HTTP path from `/mc` back to `/mcp`, ensuring consistency across the documentation and implementation. The README has been updated accordingly to reflect this change, enhancing clarity for users. Additionally, minor adjustments were made in the main.py file to align with the reverted path."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#30",
+      "title": "Revert endpoint path to /mcp and update documentation in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "bugfix",
+        "documentation",
+        "api",
+        "endpoint",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/30",
+      "summary": "This update reverts the streamable HTTP endpoint path from /mc back to /mcp to ensure consistency and correct routing. Corresponding changes were made to the README to reflect the accurate endpoint URL. These adjustments improve clarity and maintain proper API functionality for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#32",
+      "title": "Revert HTTP Endpoint Path to /mcp in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "fix",
+        "api",
+        "documentation",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/32",
+      "summary": "This update reverts the streamable HTTP endpoint path from /mc back to /mcp, ensuring consistency with the API documentation. The README has been updated accordingly to reflect this change. This adjustment enhances clarity for users interacting with the API."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPNanoBanana#37",
       "title": "Revamp README with New Endpoint and OAuth Details in M C P Nano Banana 🚀",
       "tags": [
