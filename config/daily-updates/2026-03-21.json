@@ -3,6 +3,602 @@
   "date": "2026-03-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#102",
+      "title": "Automatic i18n Translation Updates in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces auto-generated i18n translation updates from the zh-CN source, enhancing the multilingual support of the platform. Key modifications include updates to translation files for multiple languages, ensuring a more consistent user experience across different locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#101",
+      "title": "Revamp Coin Page with Modern UI in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "frontend",
+        "design",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "The coin page has undergone a significant redesign, featuring a modern user interface that enhances user experience. Key updates include new sections for current discounts and tiers, along with a visually appealing hero section. This update aims to improve engagement and provide clearer information to users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#217",
+      "title": "Enhance API Security with OAuth2 Scope Enforcement in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "oauth2",
+        "security",
+        "api",
+        "permissions",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces OAuth2 scope enforcement for various API endpoints in the PlatformBackend. Key changes include the addition of OAuthScopePermission to Application, Credential, Order, Balance, and Usage ViewSets, ensuring that only authorized users can access specific resources. Non-OAuth tokens will bypass these checks, maintaining backward compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#23",
+      "title": "Enhance OAuth2 Open Platform with Scopes and CRUD API in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth2",
+        "backend",
+        "api",
+        "jwt",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update significantly expands the OAuth2 Open Platform by increasing the number of available scopes from 2 to 17 and embedding these scopes within JWTs for enhanced access control. Additionally, a self-service OAuth Application CRUD API has been introduced, allowing users to manage their applications efficiently. The discovery endpoint has also been updated to reflect these changes, improving overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#14",
+      "title": "Dynamic OAuth App Icons Now Live in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "oauth",
+        "icons",
+        "database",
+        "ui"
+      ],
+      "public": false,
+      "summary": "The frontend now dynamically displays OAuth app icons sourced directly from the database, enhancing visual consistency and flexibility. Key changes include a new layout for the logo bridge and the removal of the static Logo component, replaced by the ACE icon. This update supports individual OAuth apps for each MCP server, improving user experience across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#27",
+      "title": "Enhance OAuth Authentication in M C P Short U R L 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "oauth",
+        "authentication",
+        "update",
+        "feature",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/27",
+      "summary": "This update introduces an individual OAuth client ID environment variable for each MCP server, enabling tailored OAuth authentication. Each server now has a dedicated OAuth application with its own name, icon, and redirect URI, enhancing the user experience by displaying the correct service icon on the consent page."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#40",
+      "title": "Enhance OAuth Authentication in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "oauth",
+        "authentication",
+        "feature",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/40",
+      "summary": "This update introduces an individual OAuth client ID environment variable for each MCP server, enabling tailored OAuth authentication. Each server now has a dedicated OAuth application in the database, complete with its own name, icon, and redirect URI, enhancing the user experience by displaying the correct service icon on the OAuth consent page."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#26",
+      "title": "Enhance OAuth Authentication in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "oauth",
+        "authentication",
+        "update",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/26",
+      "summary": "This update introduces an individual OAuth client ID environment variable for each MCP server, enabling tailored OAuth authentication. Each server now has a dedicated OAuth application in the database, complete with a unique name, icon, and redirect URI, enhancing the user experience by displaying the correct service icon on the consent page."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#25",
+      "title": "Enhance OAuth Authentication in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "oauth",
+        "authentication",
+        "update",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/25",
+      "summary": "This update introduces an individual OAuth client ID environment variable for each MCP server, enabling tailored OAuth authentication. Each server now has its own OAuth application with a unique name, icon, and redirect URI, enhancing the user experience by displaying the correct service icon on the OAuth consent page."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#28",
+      "title": "Enhance OAuth Authentication with Individual Client IDs in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "oauth",
+        "authentication",
+        "mcp",
+        "update",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/28",
+      "summary": "This update introduces a new environment variable, ACEDATACLOUD_OAUTH_CLIENT_ID, enabling individual OAuth authentication for each MCP server. Each server now has its own OAuth application in the database, complete with a unique name, icon, and redirect URI, enhancing the user experience by displaying the correct service icon on the OAuth consent page."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#33",
+      "title": "Enhance OAuth Authentication in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "oauth",
+        "authentication",
+        "feature",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/33",
+      "summary": "This update introduces an individual OAuth client ID environment variable for each MCP server, enabling tailored OAuth authentication. Each server now has its own OAuth application with a unique name, icon, and redirect URI, enhancing the user experience by displaying the correct service icon on the consent page."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#34",
+      "title": "Enhanced OAuth Support in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "oauth",
+        "authentication",
+        "feature",
+        "update",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/34",
+      "summary": "This update introduces an individual OAuth client ID environment variable for each MCP server, enhancing OAuth authentication. Each server now has a dedicated OAuth application in the database, complete with a unique name, icon, and redirect URI, allowing for a tailored OAuth consent experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#32",
+      "title": "Enhance OAuth Authentication in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "oauth",
+        "authentication",
+        "feature",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/32",
+      "summary": "This update introduces an individual OAuth client ID environment variable for each MCP server, enhancing per-server OAuth authentication. Each server now has a dedicated OAuth application in the database, complete with its own name, icon, and redirect URI, allowing for a more personalized OAuth consent experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#34",
+      "title": "Enhance OAuth Authentication in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "oauth",
+        "authentication",
+        "feature",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/34",
+      "summary": "This update introduces an individual OAuth client ID for each MCP server, enhancing per-server OAuth authentication. Each server now has a dedicated OAuth application with its own name, icon, and redirect URI, allowing for a more personalized OAuth consent experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#33",
+      "title": "Enhance OAuth Authentication in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "oauth",
+        "authentication",
+        "mcp",
+        "update",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/33",
+      "summary": "This update introduces an individual OAuth client ID environment variable for each MCP server, enabling tailored OAuth authentication. Each server now has a dedicated OAuth application in the database, complete with its own name, icon, and redirect URI, enhancing the user experience by displaying the correct service icon on the consent page."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#34",
+      "title": "Enhance OAuth Authentication in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "oauth",
+        "authentication",
+        "feature",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/34",
+      "summary": "This update introduces an individual OAuth client ID environment variable for each MCP server, enhancing OAuth authentication. Each server now has a dedicated OAuth application with its own name, icon, and redirect URI, allowing for a tailored OAuth consent experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#596",
+      "title": "Enhance chat completion records with full response body in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "update",
+        "chat",
+        "platform",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update allows non-streaming chat completion requests to include the full response body in the record payload sent to Gateway, enhancing visibility on the usage dashboard. For streaming responses, only usage data remains unchanged. Key modifications were made in chat_base.py to capture and include the response body effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#21",
+      "title": "Enhance Deployment Workflow for K8s in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "k8s",
+        "deployment",
+        "workflow",
+        "automation",
+        "devops"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/21",
+      "summary": "This update introduces a crucial K8s deployment step to the existing deploy workflow. It now includes setting the kubectl context and executing the deployment script, ensuring that Docker images are not only built and pushed but also deployed to the US Silicon Valley cluster. This enhancement improves the automation and reliability of our deployment process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#100",
+      "title": "Revamp View Details Button Style in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "button",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update transforms the 'View Details' link into a compact button for improved usability. The button now features a plain style and a smaller size, enhancing the overall interface design. These changes aim to streamline user interactions within the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#39",
+      "title": "Enhance FastMCP with Icon Support in M C P Nano Banana 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "feature",
+        "fastmcp",
+        "icon",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/39",
+      "summary": "This update introduces an icon feature to the FastMCP initialization, allowing Claude.ai to display the correct NanoBanana icon. The modification includes the addition of an Icon class from the mcp.types module, enhancing the visual representation of the server. Overall, this change improves user experience by ensuring accurate branding."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#26",
+      "title": "Enhance MCP with Server Icon in M C P Short U R L 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "feature",
+        "enhancement",
+        "mcp",
+        "icon",
+        "shorturl"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/26",
+      "summary": "This update introduces an icon to the FastMCP initialization process, ensuring that Claude.ai displays the correct ShortURL icon. The change enhances the visual representation of the MCP server, improving user experience and branding consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#25",
+      "title": "Enhance MCP with Server Icon in M C P Seedream 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "feature",
+        "icon",
+        "fastmcp",
+        "visuals"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/25",
+      "summary": "This update adds an icon to the FastMCP initialization, ensuring that Claude.ai displays the correct Seedream icon. The change involves modifying the server initialization code to include the new icon, enhancing the visual representation of the server. This improvement aims to provide a better user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#99",
+      "title": "Enhance API Dropdown with Filterable Search in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "feature",
+        "usability",
+        "api",
+        "search"
+      ],
+      "public": false,
+      "summary": "This update introduces a filterable property to the API dropdown on the Usage History page. Users can now easily type and search through the API list, improving navigation and usability. This change streamlines the user experience by reducing the need to scroll through long lists."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#24",
+      "title": "Enhance MCP with Server Icon in M C P Seedance 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "feature",
+        "metadata",
+        "visual",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/24",
+      "summary": "This update adds a server icon to the MCP metadata, ensuring that Claude.ai displays the correct Seedance icon. The modification in the FastMCP initialization allows for a more visually appealing representation of the server. This change enhances user experience and branding consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#27",
+      "title": "Enhance MCP with New Server Icon in M C P Flux 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "enhancement",
+        "icon",
+        "fastmcp",
+        "metadata"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/27",
+      "summary": "This update adds an icon to the FastMCP initialization, ensuring that Claude.ai displays the correct Flux icon. The change involves modifying the server initialization code to include the new icon source. This enhancement improves the visual representation of the MCP server."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#32",
+      "title": "Enhance FastMCP with New Server Icon in M C P Veo 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "enhancement",
+        "fastmcp",
+        "icon",
+        "metadata",
+        "server"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/32",
+      "summary": "This update adds a server icon to the FastMCP initialization, ensuring that Claude.ai displays the correct Veo icon. The modification in the core/server.py file includes the addition of an Icon class to manage the new icon. This change enhances the visual representation of the server in the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#33",
+      "title": "Enhance MCP with Icon Support in M C P Sora 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "feature",
+        "icon",
+        "fastmcp",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/33",
+      "summary": "This update adds an icon to the FastMCP initialization, ensuring that Claude.ai displays the correct Sora icon. The change involves modifying the server initialization code to include the new icon parameter. This enhancement improves the visual representation of the MCP server."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#31",
+      "title": "Add server icon to MCP metadata for better Claude.ai display in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "feature",
+        "mcp",
+        "metadata",
+        "icon",
+        "server"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/31",
+      "summary": "This update adds an icon to the FastMCP initialization, ensuring that Claude.ai correctly displays the Luma server icon. The change modifies the server setup by including an icon URL in the MCP metadata. This enhancement improves visual identification and branding within the MCP Luma environment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#33",
+      "title": "Add server icon to MCP metadata for accurate display in M C P Midjourney 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "feature",
+        "metadata",
+        "icon",
+        "server",
+        "visual"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/33",
+      "summary": "The FastMCP initialization now includes a server icon, ensuring Claude.ai shows the correct Midjourney icon. This update modifies the core server configuration to enhance visual identification and branding. The change involves adding an icon URL to the MCP metadata."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#33",
+      "title": "Enhance FastMCP with Server Icon in M C P Suno 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "feature",
+        "fastmcp",
+        "icon",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/33",
+      "summary": "This update adds a server icon to the FastMCP initialization, ensuring that Claude.ai displays the correct Suno icon. The modification includes importing the Icon class and updating the FastMCP instantiation to include the new icon. This change enhances the visual representation of the server in user interfaces."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#32",
+      "title": "Enhance MCP with Service Icons in M C P Serp 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "enhancement",
+        "fastmcp",
+        "icons",
+        "metadata"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/32",
+      "summary": "This update introduces an icons parameter to the FastMCP, allowing Claude.ai to display the appropriate service icon. The modification in core/server.py adds a new Icon import and updates the FastMCP initialization to include the icon URL. This enhancement improves the visual representation of services in the MCP."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#20",
+      "title": "Improve Solana RPC transaction fetch reliability with extended retries in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "solana",
+        "rpc",
+        "retry",
+        "payments",
+        "logging",
+        "x402"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/20",
+      "summary": "This update increases the Solana RPC retry attempts from 6 to 12 with a progressive backoff strategy, extending the total wait time from 3 seconds to approximately 15 seconds. The change addresses intermittent failures in fetching transaction payloads during bulk payments by allowing more time for RPC propagation delays. Additionally, failure logging has been enhanced to aid in troubleshooting."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#89",
+      "title": "Update FontAwesome Icons to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "update",
+        "icons"
+      ],
+      "public": false,
+      "summary": "This update bumps the @fortawesome/free-solid-svg-icons package from version 6.7.2 to 7.2.0. The change enhances the icon library available for use, ensuring access to the latest icons and improvements. Additionally, the package.json and yarn.lock files have been modified to reflect this update."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#90",
+      "title": "Update appkit-universal-connector to latest version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "frontend",
+        "appkit"
+      ],
+      "public": false,
+      "summary": "This update bumps the @reown/appkit-universal-connector from version 1.8.15 to 1.8.19. Key improvements include serialization of CAIP addresses and chain IDs into all accounts, along with various dependency updates that enhance overall functionality and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#97",
+      "title": "Update Autoprefixer to 10.4.27 with performance and fix improvements in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependency-update",
+        "autoprefixer",
+        "performance",
+        "css",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update bumps Autoprefixer from version 10.4.21 to 10.4.27. Key changes include reduced package size, faster processing, fixed broken gradients on CSS custom properties, and removal of the development key from package.json. These improvements enhance CSS compatibility and build efficiency in the frontend environment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#98",
+      "title": "Upgrade vite-bundle-visualizer to 1.2.1 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "upgrade",
+        "dependencies",
+        "frontend",
+        "vite"
+      ],
+      "public": false,
+      "summary": "This update bumps the vite-bundle-visualizer package from version 1.0.1 to 1.2.1, introducing several improvements. Key changes include a new command-line argument for build mode and various documentation fixes. This upgrade enhances the functionality and usability of the bundle visualizer tool."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#595",
+      "title": "Update API Key for Veo Deployment in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "api",
+        "deployment",
+        "veo",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update modifies the veo deployment configuration to use API_KEY_2, which is specifically provisioned for Veo model channels. The previous API_KEY was tied to the NanoBanana group, which lacked the necessary channels. This change ensures proper functionality for the veo service."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#594",
       "title": "Fix action validation for request body in Platform Service 🚀",
       "tags": [
