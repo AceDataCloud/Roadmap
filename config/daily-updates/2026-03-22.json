@@ -3,6 +3,466 @@
   "date": "2026-03-22",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Docs#42",
+      "title": "Enhance ACE Token Benefits Documentation in Docs 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "documentation",
+        "ace-token",
+        "guides",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/42",
+      "summary": "We've added a comprehensive guide on $ACE Token Benefits to our documentation site, available in both Chinese and English. This includes details on what $ACE is, discount tiers based on holdings, a step-by-step buying guide, and an FAQ section. The new pages are now part of the 'Getting Started' group for easy navigation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#211",
+      "title": "Enhance error handling by sharing skip patterns in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "bugfix",
+        "enhancement",
+        "scheduler",
+        "hybridpublisher",
+        "errorhandling"
+      ],
+      "public": false,
+      "summary": "This update consolidates skip patterns into a single source of truth in repair_record.py, improving error handling in both the scheduler and HybridPublisher. The HybridPublisher now checks these patterns against error messages and page URLs before triggering repair issues, effectively reducing false positives related to non-code-bug errors like cookie expiry and rate limits."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#127",
+      "title": "Automated i18n translations updated from Chinese source in Frontend Web 🌐",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "localization",
+        "frontend",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update includes auto-generated internationalization (i18n) translation changes derived from the Chinese (zh-CN) source files. Multiple language JSON files such as Arabic, German, English, Spanish, French, Italian, Japanese, Korean, Portuguese, Russian, and Traditional Chinese were modified to improve translation accuracy and consistency. These changes enhance multilingual support and user experience across the platform frontend."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#125",
+      "title": "Boost Your Savings with ACE Token Promotion in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "ui",
+        "promotion",
+        "i18n",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new carousel slide on the homepage promoting the benefits of the $ACE token, featuring calls to action for wallet binding and purchasing. Additionally, a dismissible banner on the console dashboard provides contextual messaging based on the user's wallet state, encouraging engagement with the ACE token. The changes also include internationalization updates for both English and Chinese languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#126",
+      "title": "Revamp Platform Rank Page UI with New Icons and Design in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "design",
+        "frontend",
+        "icons",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update enhances the Platform Rank page by improving the UI elements, including the stat card icons and podium designs. The top 3 podium cards now feature crown icons instead of medals, and the ranking numbers are more visible with a new method for displaying ranks. Additionally, the FontAwesome library has been updated to include the crown icon for better visual representation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#17",
+      "title": "Standardize SDK Design for AceDataCloud in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "sdk",
+        "documentation",
+        "design",
+        "conventions",
+        "phase1"
+      ],
+      "public": false,
+      "summary": "We've added the Phase 1 SDK design RFC to outline cross-language conventions for Python, TypeScript, and Go SDKs. This document establishes key structures, options, and error handling to ensure consistency across implementations. With this freeze, we are set to move forward into the next phase of development."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#42",
+      "title": "Enhance CI with Dify Plugin Sync on Publish in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "ci",
+        "dify",
+        "plugin",
+        "update",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/42",
+      "summary": "This update introduces a new CI job that triggers a Dify plugin sync whenever a publish event occurs on PyPI. The workflow modification ensures that the Dify plugin is notified of updates, enhancing integration and deployment processes. Key changes include the addition of a new step in the publish workflow to handle the dispatch."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#28",
+      "title": "Enhance CI with Dify Plugin Sync on Publish in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "ci",
+        "dify",
+        "plugin",
+        "update",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/28",
+      "summary": "This update introduces a new CI job that notifies the Dify plugin of updates upon publishing to PyPI. The workflow modification includes a POST request to trigger the Dify plugin sync, ensuring that the latest changes are reflected immediately. This enhancement streamlines the integration process and improves the overall deployment workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#27",
+      "title": "Enhance Dify Plugin Sync on Publish in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "ci",
+        "dify",
+        "plugin",
+        "update",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/27",
+      "summary": "This update introduces a new workflow step to notify the Dify plugin upon publishing to PyPI. The addition of the 'notify-dify-plugin' job ensures that the Dify plugin is synchronized with the latest updates, enhancing integration and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#30",
+      "title": "Enhance Dify Plugin Sync on Publish in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "ci",
+        "dify",
+        "plugin",
+        "update",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/30",
+      "summary": "This update introduces a new CI job that triggers a Dify plugin sync whenever a PyPI publish occurs. The workflow modification ensures that the Dify plugin is notified of updates, enhancing integration and responsiveness. Key changes include the addition of a notification step in the publish workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#35",
+      "title": "Enhance CI with Dify Plugin Sync on Publish in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "ci",
+        "dify",
+        "plugin",
+        "update",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/35",
+      "summary": "This update introduces a new CI job that triggers a Dify plugin sync whenever a publish event occurs on PyPI. The workflow modification includes a POST request to the Dify repository to notify about the plugin update, ensuring that the latest changes are reflected promptly. This enhancement improves the integration between the MCPVeo project and the Dify plugin ecosystem."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#36",
+      "title": "Enhance Dify Plugin Sync on Publish in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "ci",
+        "dify",
+        "plugin",
+        "update",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/36",
+      "summary": "This update introduces a new workflow step to notify the Dify plugin of updates upon publishing to PyPI. The addition of the 'notify-dify-plugin' job ensures that the Dify plugin syncs with the latest changes, enhancing integration and responsiveness. This change aims to streamline the update process for users relying on the Dify plugin."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#34",
+      "title": "Enhance CI with Dify Plugin Sync on Publish in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "ci",
+        "dify",
+        "plugin",
+        "update",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/34",
+      "summary": "This update introduces a new CI job that triggers a Dify plugin sync whenever a PyPI publish occurs. The workflow modification ensures that the Dify plugin receives the latest updates seamlessly, improving integration and deployment efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#37",
+      "title": "Automate Dify plugin sync on MCP publish in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "ci",
+        "automation",
+        "github-actions",
+        "plugin-sync",
+        "pypi"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/37",
+      "summary": "Added a new GitHub Actions job to automatically dispatch a 'mcp-plugin-update' event to the Dify repository whenever the MCP server is published to PyPI. This triggers the plugin version synchronization in the Dify repo, following the existing pattern used for notifying the VSCode extension rebuild. The change enhances automation and ensures plugin versions stay up to date without manual intervention."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#34",
+      "title": "Automate Dify Plugin Sync on Publish in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "ci",
+        "automation",
+        "plugin",
+        "update",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/34",
+      "summary": "This update introduces a new workflow that automatically triggers a `mcp-plugin-update` event to the Dify repository whenever the MCP server is published to PyPI. This enhancement ensures that the plugin versions remain in sync, improving the overall integration process. The changes were made in the GitHub Actions workflow file."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#39",
+      "title": "Automate Dify Plugin Sync on Publish in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "ci",
+        "automation",
+        "plugin",
+        "update",
+        "dify"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/39",
+      "summary": "This update introduces an automated dispatch of the `mcp-plugin-update` event to the Dify repository whenever the MCP server is published to PyPI. The new job, `notify-dify-plugin`, follows the existing pattern used for notifying the VSCode extension, ensuring seamless synchronization of plugin versions. This enhancement streamlines the update process and improves integration between the projects."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#84",
+      "title": "Enhance CI with Backend Model Sync Workflow in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "ci",
+        "workflow",
+        "backend",
+        "automation",
+        "sync"
+      ],
+      "public": false,
+      "summary": "This update introduces a new CI workflow that triggers on backend model changes, allowing for automatic issue creation for model synchronization. It facilitates the comparison and syncing of seven unmanaged mirror models, streamlining the development process. The workflow is designed to respond to specific dispatch events from the PlatformBackend."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#229",
+      "title": "Automate Model Change Notifications in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "ci",
+        "automation",
+        "backend",
+        "notifications"
+      ],
+      "public": false,
+      "summary": "This update introduces a new GitHub Action that triggers a backend-model-change event to PlatformGateway whenever model files or migrations are modified on the main branch. The addition of the notify-gateway workflow ensures that PlatformGateway can keep its unmanaged mirror models in sync with the latest changes, enhancing overall system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#597",
+      "title": "Enhance Error Detection with Automated Fixes in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "automation",
+        "error-detection",
+        "github-actions",
+        "tencent-cloud",
+        "scripting"
+      ],
+      "public": false,
+      "summary": "This update introduces a daily scheduled workflow that detects high-frequency 5xx errors from Tencent Cloud CLS logs. It aggregates errors by API path and status code, and automatically creates GitHub issues for investigation. Key files added include a Python script for error aggregation and a GitHub Actions workflow for automation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#74",
+      "title": "Enhance MCP Plugin Sync Workflow in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "ci",
+        "workflow",
+        "automation",
+        "mcp",
+        "plugins"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/74",
+      "summary": "This update introduces a new workflow, sync-mcp-plugins.yml, designed to handle repository_dispatch events triggered by MCP servers upon PyPI publish. It automates the creation of issues for Claude to update the relevant Dify plugins, streamlining the plugin management process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#208",
+      "title": "Enhance Repair Pipeline Functionality in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "repair",
+        "pipeline",
+        "k8s",
+        "deployment",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update improves the HybridPublisher by triggering the repair pipeline on failure and including screenshots from AI repair attempts in GitHub Issues. Additionally, it introduces skip patterns to prevent unnecessary repair triggers and adds essential environment variables for deployment in Kubernetes. These changes aim to streamline the publishing process and enhance error handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#16",
+      "title": "Enhance Profile Update Triggers in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "ci",
+        "workflow",
+        "updates",
+        "Nexior"
+      ],
+      "public": false,
+      "summary": "This update expands the organization profile update workflow to trigger immediately upon changes in Skills, Docs, Nexior, PlatformFrontend, and Dify surface repositories. Previously, these updates would wait for a scheduled fallback, improving responsiveness and ensuring timely profile generation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/.github#3",
+      "title": "Add Skills and agent entrypoints to organization profile in .github 🚀",
+      "tags": [
+        "github",
+        "pr",
+        ".github",
+        "organization-profile",
+        "skills",
+        "agent-entrypoints",
+        "automation",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/.github/pull/3",
+      "summary": "Updated the organization profile generator to include the new Skills repository and agent-facing entrypoints. The profile/README.md was regenerated from the script to ensure the org profile remains sourced from generate.py instead of manual edits. This enhances visibility of key repositories and streamlines profile maintenance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#15",
+      "title": "Kickstarting SDK Phase 0 Planning in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "sdk",
+        "planning",
+        "documentation",
+        "phase0",
+        "development"
+      ],
+      "public": false,
+      "summary": "This update introduces the main phased SDK rollout plan and a machine-readable Phase 0 scope file for SDK families and endpoints. It establishes a structured PR workflow for the SDK effort, focusing on contract preparation and scope freeze. The groundwork laid here will facilitate the next phases of SDK development across multiple programming languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#384",
+      "title": "Enhance SEO with GEO metadata and llms.txt support in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "seo",
+        "metadata",
+        "llms.txt",
+        "robots.txt",
+        "i18n",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/384",
+      "summary": "This update introduces comprehensive route-level SEO metadata utilities for Nexior, including dynamic titles, descriptions, keywords, canonical URLs, OG/Twitter tags, hreflang links, and JSON-LD schemas for WebApplication and Organization. Additionally, a new llms.txt file and references in robots.txt were added to improve GEO discovery by AI search engines. The previously used prerender integration has been removed in this release."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#383",
+      "title": "Enhance Nginx Performance and Security in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "nginx",
+        "performance",
+        "security",
+        "optimization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/383",
+      "summary": "This update introduces several key improvements to Nginx configuration, including enabling `gzip_static` for serving pre-compressed files and adding essential security headers. Additionally, the initialization process has been optimized by running user, site, and config initializations in parallel, reducing app boot time by approximately 150-300ms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#22",
+      "title": "Boosting Security and Performance in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "nginx",
+        "security",
+        "node",
+        "performance",
+        "docker"
+      ],
+      "public": false,
+      "summary": "This update enhances the Nginx configuration for auth.acedata.cloud by enabling gzip_static for serving pre-compressed files and implementing critical security headers. Additionally, the Dockerfile has been updated to upgrade Node from version 16 to 20, aligning with the latest standards and ensuring better performance. These changes collectively improve both security and efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#124",
+      "title": "Boosted nginx performance and security with gzip_static and headers in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "nginx",
+        "performance",
+        "security",
+        "headers",
+        "gzip"
+      ],
+      "public": false,
+      "summary": "This update enhances the nginx configuration for platform.acedata.cloud by enabling gzip_static to serve pre-compressed files, reducing CPU load. It also disables server tokens to hide nginx version information and adds key security headers to prevent MIME-type sniffing, clickjacking, and limit referrer leakage. These changes improve both performance and security of the frontend web server."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformPublisher#205",
       "title": "Streamline Repair Pipeline with Screenshot Capture in Publisher 🚀",
       "tags": [
