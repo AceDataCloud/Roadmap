@@ -3,6 +3,21 @@
   "date": "2026-03-22",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#215",
+      "title": "Enhance HTML Paste Fallback and Skip Patterns in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "html",
+        "bugfix",
+        "docker",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update introduces a direct HTML paste fallback in toutiao.py for cases where clipboard pasting fails, particularly in Docker/Linux environments. Additionally, github_issue.py now includes a SKIP_REPAIR_PATTERNS check to avoid generating AI-Fix issues for non-code-related errors like cookie expiry and rate limits, enhancing the issue management process."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Docs#42",
       "title": "Enhance ACE Token Benefits Documentation in Docs 📚",
       "tags": [
