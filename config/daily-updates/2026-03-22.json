@@ -3,6 +3,70 @@
   "date": "2026-03-22",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#136",
+      "title": "Automated i18n translations updated from Chinese source in Frontend Web 🌐",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "localization",
+        "frontend",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update includes auto-generated internationalization (i18n) translation changes based on modifications from the Chinese (zh-CN) source files. Multiple language service JSON files were modified, refining button texts and comments across Arabic, German, English, Spanish, French, Italian, Japanese, Korean, Portuguese, Russian, and Traditional Chinese. These updates improve translation consistency and clarity, enhancing the multilingual user experience on the frontend."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#135",
+      "title": "Show Remaining Credits on Homepage Playground in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "ui",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update replaces the existing call-to-action on the homepage playground with a new remaining credits card. Users can now see their available credits and have a direct option to top-up when applicable. Additionally, the text for this feature has been updated in both English and Chinese to reflect the new balance-focused messaging."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#2",
+      "title": "Revamp Async Submission with Callback URL in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "async",
+        "callback",
+        "skills",
+        "update",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/2",
+      "summary": "This update replaces the blocking `wait:true` pattern with a more efficient `callback_url` approach across eight SKILL.md files. Key skills affected include suno-music, midjourney-image, and luma-video, enhancing their asynchronous submission capabilities. Users can now receive a `task_id` immediately and poll for results, improving overall responsiveness."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#238",
+      "title": "Revamped 30 MCP Promotion Articles in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "updates",
+        "content",
+        "mcp",
+        "backend"
+      ],
+      "public": false,
+      "summary": "All 30 MCP promotion articles have been manually reviewed and rewritten to ensure unique and engaging content. This update enhances the clarity and effectiveness of the articles, making them more useful for users. Key improvements include updated examples and streamlined instructions across various topics."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#237",
       "title": "Boost Your MCP Articles with 30 New Additions in Backend 🚀",
       "tags": [
