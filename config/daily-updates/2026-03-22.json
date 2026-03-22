@@ -3,6 +3,22 @@
   "date": "2026-03-22",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#600",
+      "title": "Enhance error handling for blocked nano-banana image generation in Platform Service 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "content-safety",
+        "api",
+        "nano-banana",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update improves error classification when the nano-banana service encounters content blocked by Gemini API safety filters. Instead of returning a misleading 500 Internal Server Error, the system now correctly returns a 403 Forbidden error with clear messages indicating content policy violations. This change reduces false 5xx alerts and provides users with actionable feedback on why their requests were denied."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#240",
       "title": "Enhance MCP Articles with Token Info and Catchy Titles in Backend 🚀",
       "tags": [
