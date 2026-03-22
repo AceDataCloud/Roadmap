@@ -3,6 +3,118 @@
   "date": "2026-03-22",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/SDK#2",
+      "title": "Upgrade Twine for Enhanced Metadata Support in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "ci",
+        "upgrade",
+        "metadata",
+        "twine",
+        "sdk"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/2",
+      "summary": "This update upgrades Twine to version 6.0.0 to support Metadata-Version 2.4, resolving issues with missing required fields during package uploads. The change ensures compatibility with the latest metadata standards, enhancing the overall package management process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#599",
+      "title": "Fix parameter stripping to prevent 400 errors in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "api",
+        "anthropic",
+        "error-handling",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update implements a comprehensive fix to strip unsupported Anthropic parameters from Claude Messages API requests, preventing 400 errors caused by invalid inputs forwarded to upstream proxies. It removes specific body fields and content blocks that are not accepted by upstream services, ensuring smoother request handling and improved stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#1",
+      "title": "Streamlined CI/CD Workflows for Python & TypeScript in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "ci",
+        "github-actions",
+        "python",
+        "typescript",
+        "automation",
+        "linting"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/1",
+      "summary": "This update introduces comprehensive CI/CD workflows for automated testing and publishing of both Python and TypeScript SDKs. Key changes include the addition of GitHub Actions for linting, testing, and publishing to PyPI and npm, utilizing CalVer versioning for consistent release management. Additionally, ruff lint issues have been addressed to enhance code quality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#22",
+      "title": "Document Font Awesome usage conventions in Index 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "font-awesome",
+        "frontend",
+        "convention",
+        "icons"
+      ],
+      "public": false,
+      "summary": "Added a note to CLAUDE.md detailing the Font Awesome registration convention for PlatformFrontend. Clarified that string-based font-awesome-icon usage must be backed by centralized registration in src/plugins/font-awesome.ts. This update helps prevent incorrect fixes related to missing icons by enforcing a consistent icon registration pattern."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#598",
+      "title": "Fix unsupported fields in Claude Messages API in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "api",
+        "backend",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update removes the `output_config` field from Claude Messages API requests to prevent 400 errors from upstream proxies like ephone and wcnb. The change is integrated into the existing unsupported-field stripping loop, ensuring smoother request handling. Tests will verify that requests with `output_config` no longer return errors while those without remain unaffected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#218",
+      "title": "Enhance Issue Reporting with Traceback and Screenshots in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "enhancement",
+        "bugfix",
+        "logging",
+        "issues"
+      ],
+      "public": false,
+      "summary": "This update enriches auto-created issues by adding traceback information, screenshots, and HTML context. Key modifications include improved error handling in the repair pipeline and enhanced logging capabilities. These changes aim to provide better insights into issues, facilitating quicker resolutions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#20",
+      "title": "Enhance Documentation for URL Formatting in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "urls",
+        "claude",
+        "index"
+      ],
+      "public": false,
+      "summary": "This update adds a reminder in the CLAUDE documentation to always use full URLs for pull requests and issues. It prohibits shorthand references like #32 to ensure that links are clickable and easily accessible. This change aims to improve clarity and usability for users interacting with the documentation."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformPublisher#215",
       "title": "Enhance HTML Paste Fallback and Skip Patterns in Publisher 🚀",
       "tags": [
