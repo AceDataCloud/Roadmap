@@ -3,6 +3,54 @@
   "date": "2026-03-22",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#237",
+      "title": "Boost Your MCP Articles with 30 New Additions in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "mcp",
+        "articles",
+        "promotion",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces 30 new MCP promotional articles across various platforms including Cursor, Claude Desktop, Claude Code, and VS Code. The total number of articles has increased from 23 to 53, enhancing the coverage matrix significantly. These additions will provide users with more resources and examples to leverage the MCP capabilities effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#134",
+      "title": "Enhance Document Tree with Default Expansion in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "user-experience",
+        "navigation",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update enables the document tree on the /documents pages to be expanded by default, improving user navigation. Additionally, debug console outputs in the document tree loading logic have been removed for cleaner code. Users will now have a more intuitive experience when accessing document detail pages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#3",
+      "title": "Boost SDK Reliability with New Integration Tests in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "testing",
+        "integration",
+        "sdk",
+        "python",
+        "typescript"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/3",
+      "summary": "This update introduces comprehensive integration tests for both the Python and TypeScript SDKs, ensuring they run against the live API. The Python SDK now includes 29 tests (27 passing), while the TypeScript SDK boasts 27 passing tests. Additionally, a bug in transport.ts related to body reading has been fixed, enhancing overall stability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/FacilitatorX402#22",
       "title": "Upgrade k8s-set-context to Version 4 in x402 🚀",
       "tags": [
