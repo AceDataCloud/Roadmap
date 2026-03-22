@@ -1,0 +1,325 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-22",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#205",
+      "title": "Streamline Repair Pipeline with Screenshot Capture in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "repair",
+        "screenshot",
+        "pipeline",
+        "update",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update significantly simplifies the repair pipeline by removing the Claude Code CLI mode and focusing on GitHub Issue creation with full diagnostics. It introduces screenshot capture for browser publish failures, enhancing error reporting. Key changes include the integration of screenshot uploads via the Platform API and adjustments to the repair record handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#382",
+      "title": "Boosting Frontend Performance with Optimizations in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "performance",
+        "frontend",
+        "optimization",
+        "caching",
+        "solana",
+        "nginx"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/382",
+      "summary": "This update introduces significant frontend loading performance enhancements for Nexior. Key changes include enabling gzip compression, implementing caching strategies for static assets, and deferring the loading of Solana wallet adapters to improve initial load times. Additionally, bundle splitting has been optimized to enhance long-term cacheability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#21",
+      "title": "Boosting Frontend Performance with Optimizations in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "performance",
+        "frontend",
+        "optimization",
+        "caching",
+        "gzip",
+        "resource-hints"
+      ],
+      "public": false,
+      "summary": "This update introduces significant frontend loading performance enhancements for auth.acedata.cloud. Key changes include enabling gzip compression for various file types, implementing caching strategies for static assets, and optimizing resource hints for improved connectivity. Additionally, bundle splitting has been refined to enhance cacheability and reduce load times."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#122",
+      "title": "Boosting Frontend Performance with Optimizations in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "performance",
+        "frontend",
+        "optimization",
+        "web3",
+        "caching"
+      ],
+      "public": false,
+      "summary": "This update introduces significant performance enhancements to the frontend by implementing gzip compression, immutable caching, and lazy loading of Web3 dependencies. Key metrics show a reduction in initial JavaScript size by 79%, leading to faster load times and improved user experience. The changes also include preloading critical resources and optimizing the Nginx configuration for better asset delivery."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#226",
+      "title": "Enhance Coin Policy Automation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "automation",
+        "backend",
+        "cronjob",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update merges the functionality of the standalone `populate_coin_policies.py` into `coin.py`, enabling automatic population of coin policies during the existing CronJob that runs every 10 minutes. A new function, `ensure_coin_policies()`, has been added to create a standard 6-tier discount structure for any Api-type service lacking policies, while also ensuring idempotency by skipping services that already have them. The standalone script has been removed as it is no longer necessary."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#123",
+      "title": "Automated i18n Updates from zh-CN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "localization",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This PR introduces automated updates for internationalization (i18n) translations sourced from zh-CN. Key modifications include updates to multiple language files such as Arabic, German, English, Spanish, French, Italian, Japanese, Korean, Portuguese, Russian, and Traditional Chinese, enhancing the localization support across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#121",
+      "title": "Revamp Channel Configuration with Backend Schema in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "localization",
+        "ui",
+        "refactor"
+      ],
+      "public": false,
+      "summary": "This update introduces a new backend-driven channel configuration dialog, replacing the previous hardcoded system. The `ConfigureChannelDialog.vue` component now dynamically renders channel-specific text directly from the backend, enhancing localization and user experience. Additionally, the `Channels.vue` file has been streamlined for better usability and clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#224",
+      "title": "Enhanced Publish Channel Config Translations in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "i18n",
+        "translations",
+        "backend",
+        "features",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update introduces backend-driven publish channel configuration translations with internationalization (i18n) support. A new migration creates translation records for 20 channels in both Chinese and English, while the serializer now resolves translation keys based on the request's Accept-Language header. These changes improve user experience by providing localized content for different languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#225",
+      "title": "Enhance Coin Policies for All Services in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "script",
+        "coinpolicy",
+        "discounts"
+      ],
+      "public": false,
+      "summary": "This update introduces a new script, `populate_coin_policies.py`, designed to establish a standardized 6-tier discount structure for all API-type services. Previously, only ChatDoc and Claude AI had CoinPolicy records, but this script will now populate the same tier structure across all active services. The implementation will require running the script in production post-merge to activate the new policies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#120",
+      "title": "Automatic i18n Updates from zh-CN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update introduces automated translation updates for internationalization (i18n) based on changes from the zh-CN source. Key modifications include updates to multiple language files, enhancing the user experience for various locales. The changes ensure that users across different languages receive consistent and accurate translations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#119",
+      "title": "Streamline Coin Page Layout in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "i18n",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update enhances the coin page by removing duplicate introduction text and adjusting the wallet section title to 'My Wallet'. Additionally, the redundant Wallet Bound status badge has been eliminated for a cleaner look. New internationalization keys have also been added for both English and Chinese versions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#117",
+      "title": "Enhance Ranking Page with Colorful Avatars and Podium Effects in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "design",
+        "ui",
+        "avatars",
+        "animation"
+      ],
+      "public": false,
+      "summary": "This update revamps the ranking page by introducing Teams-inspired colorful avatars and distinct gold, silver, and bronze podium distinctions. Key changes include a new 14-color palette for avatar backgrounds, larger medal icons, and improved hover animations for podium cards. Additionally, the avatar display now features 2-character initials for non-photo users, enhancing visual clarity and engagement."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#118",
+      "title": "Automatic i18n Updates from zh-CN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update introduces auto-generated internationalization (i18n) translation updates based on changes from the zh-CN source. Key modifications include updates to various language files, enhancing the user experience for multiple languages. The changes ensure that the application remains accessible and user-friendly across different regions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#222",
+      "title": "Enhance API with CSV Export Feature in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "api",
+        "csv",
+        "backend",
+        "export"
+      ],
+      "public": false,
+      "summary": "This update introduces a new GET endpoint at /api/v1/usage/apis/export/ that allows users to export API usage records in CSV format. The implementation includes modifications to the URL routing and the addition of a dedicated view for handling the CSV export functionality. This enhancement will improve data accessibility for users analyzing API usage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#116",
+      "title": "Add CSV Export Button to Usage Page in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "csv",
+        "export",
+        "usage"
+      ],
+      "public": false,
+      "summary": "This update introduces an Export CSV button on the usage page, allowing users to download filtered usage records as a CSV file. The feature utilizes the new backend endpoint for exporting data, aligning with the existing order export functionality. Key modifications include updates to the UI and localization files for both English and Chinese."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#203",
+      "title": "Enhance Repair Pipeline Integration in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "enhancement",
+        "repair",
+        "scheduler",
+        "automation",
+        "AI"
+      ],
+      "public": false,
+      "summary": "This update integrates the AI auto-repair pipeline into the main publish scheduler, ensuring it triggers for all publisher types, including ApiPublisher and HybridPublisher. Key changes include the addition of a failure recording function and enhanced prompts with traceback support for better debugging. This improvement streamlines the error handling process, automatically creating GitHub issues and facilitating code fixes through Claude Code Action."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#19",
+      "title": "Enhance OAuth2 Experience with User Info and Dark Mode in Frontend Web 🌟",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "oauth2",
+        "frontend",
+        "user-experience",
+        "dark-mode",
+        "styling"
+      ],
+      "public": false,
+      "summary": "This update improves the OAuth2 authorization page by fixing the login redirect for expired tokens, ensuring users are redirected to login when necessary. It also displays current user information, including avatar and email, on the consent page, enhancing user awareness. Additionally, dark mode styling has been refined for better visual consistency across themes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#223",
+      "title": "Organize Publisher Docs for Better Access in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "backend",
+        "organization",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "The publisher documentation has been successfully relocated from the root directory to the new 'docs/zh-CN/' folder. This change includes five key files that enhance the organization and accessibility of the documentation for users. Overall, this update aims to streamline navigation and improve user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#91",
+      "title": "Upgrade slugify to v3 with Node.js 20 support in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependency-update",
+        "slugify",
+        "nodejs20",
+        "frontend",
+        "npm"
+      ],
+      "public": false,
+      "summary": "This update bumps @sindresorhus/slugify from version 2.2.1 to 3.0.0, introducing a requirement for Node.js 20. New options for transliteration and locale have been added, enhancing slug generation capabilities. The upgrade ensures compatibility with the latest Node.js environment and improves text processing features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#96",
+      "title": "Upgrade FingerprintJS to Version 5.1.0 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "upgrade",
+        "frontend",
+        "fingerprintjs"
+      ],
+      "public": false,
+      "summary": "This update bumps the FingerprintJS library from version 4.5.1 to 5.1.0, introducing several improvements including stable fingerprints in Firefox across normal and incognito modes. Additionally, the TypeScript compilation target has been updated to ES2018, which may affect compatibility with older environments. The project license has also changed to MIT, enhancing its permissiveness for community contributions."
+    }
+  ]
+}
