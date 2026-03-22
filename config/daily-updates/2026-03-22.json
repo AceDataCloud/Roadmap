@@ -3,6 +3,23 @@
   "date": "2026-03-22",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#22",
+      "title": "Upgrade k8s-set-context to Version 4 in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "upgrade",
+        "kubernetes",
+        "dependency",
+        "workflow",
+        "azure"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/22",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 1 to 4, ensuring compatibility with Node 20 as Node 16 is deprecated. The change enhances the deployment workflow by utilizing the latest features and improvements from the k8s-set-context library. This upgrade is crucial for maintaining up-to-date practices in Kubernetes context management."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#236",
       "title": "Add 23 MCP promotion articles for Claude and related platforms in Backend 🚀",
       "tags": [
