@@ -3,6 +3,38 @@
   "date": "2026-03-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Index#13",
+      "title": "Streamline i18n Instructions in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "i18n",
+        "localization",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update simplifies the i18n instructions by removing the `yarn translate` command from the skills table. Now, only the `zh-CN` and `en` locale files will be maintained manually, ensuring clarity in the localization process. The documentation has been updated accordingly to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#18",
+      "title": "Enhanced OAuth Apps Page UI with Dynamic Scopes and Improved UX in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "ui",
+        "oauth",
+        "frontend",
+        "i18n",
+        "accessibility",
+        "ux"
+      ],
+      "public": false,
+      "summary": "This update improves the OAuth apps page UI by registering missing FontAwesome icons and replacing the logo URL input with a clickable avatar upload featuring inline previews. The client type selection is removed, defaulting silently to confidential. Available scopes are now fetched dynamically from the OAuth authorization server discovery endpoint. Additionally, placeholders and helper texts are added to form fields, empty-state copy is improved, and all 17 i18n locale translations are synchronized."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#113",
       "title": "Revamp Platform Rank Icon and ACE Coin Page in Frontend Web 🚀",
       "tags": [
