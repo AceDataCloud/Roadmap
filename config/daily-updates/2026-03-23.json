@@ -1,0 +1,276 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-23",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/WeChatClaudeCode#3",
+      "title": "Standardize Engineering Toolchain in We Chat Claude Code 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WeChatClaudeCode",
+        "toolchain",
+        "eslint",
+        "prettier",
+        "vitest",
+        "ci",
+        "husky"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/WeChatClaudeCode/pull/3",
+      "summary": "This update introduces a standardized engineering toolchain for the project. Key changes include the addition of ESLint and Prettier configurations, a Vitest unit test setup, and Husky git hooks for pre-commit and pre-push actions. Additionally, a CI quality workflow has been implemented to ensure code quality through type checks, linting, and testing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WeChatClaudeCode#2",
+      "title": "Fix macOS and Windows app icons for proper display in We Chat Claude Code 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "WeChatClaudeCode",
+        "build",
+        "icons",
+        "macos",
+        "windows",
+        "electron"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/WeChatClaudeCode/pull/2",
+      "summary": "This update adds a proper macOS icon asset and regenerates the Windows icon with complete multi-size entries. The electron-builder configuration was updated to use the new .icns file on macOS and explicit icons for the NSIS installer on Windows. Local builds and packaging validations confirm the icons are correctly applied, improving app appearance on both platforms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#95",
+      "title": "Upgrade TypeScript to 5.9.3 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "typescript",
+        "upgrade",
+        "frontend",
+        "dependencies"
+      ],
+      "public": false,
+      "summary": "This update bumps TypeScript from version 5.8.3 to 5.9.3, incorporating the latest features and fixes. Key changes include improved type-checking and performance enhancements. This upgrade ensures better compatibility and stability for our frontend development."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#38",
+      "title": "Upgrade Node Setup Action to Latest Version in M C P Sora 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "dependencies",
+        "upgrade",
+        "workflow",
+        "node"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/38",
+      "summary": "This update bumps the actions/setup-node from version 4 to 6, enhancing caching capabilities and improving workflow performance. Key changes include automatic caching for npm and various dependency upgrades, ensuring better compatibility and security. The modifications in the publish workflow reflect these updates, making it more efficient."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPShortURL#29",
+      "title": "Upgrade Java Setup Action in M C P Short U R L 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPShortURL",
+        "dependencies",
+        "upgrade",
+        "actions",
+        "security",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPShortURL/pull/29",
+      "summary": "This update bumps the actions/setup-java dependency from version 4 to 5, ensuring compatibility with the latest features and improvements. Key changes include an upgrade to Node 24 and various dependency updates that enhance security and performance. The workflow file has been modified accordingly to reflect this change."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#36",
+      "title": "Upgrade Java Setup Action to Version 5 in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "dependencies",
+        "update",
+        "actions",
+        "java"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/36",
+      "summary": "This update bumps the actions/setup-java dependency from version 4 to 5, ensuring compatibility with Node 24 and enhancing overall functionality. Key improvements include better error handling and critical vulnerability fixes. The change is expected to streamline Java setup processes in workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#29",
+      "title": "Update hatchling dependency for better compatibility in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "dependencies",
+        "update",
+        "hatchling",
+        "maintenance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/29",
+      "summary": "This update modifies the hatchling requirement in the project to allow versions from 1.21.0 up to, but not including, 1.30.0. This change ensures compatibility with the latest features and fixes from hatchling, enhancing the overall stability and performance of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#35",
+      "title": "Upgrade Node.js setup action to v6 for improved caching and performance in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "ci",
+        "github-actions",
+        "nodejs",
+        "dependency-upgrade",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/35",
+      "summary": "This update bumps the GitHub Actions setup-node from version 4 to 6 in the CI workflows. The new version introduces automatic package manager caching, dependency upgrades, and enhanced performance. These changes improve build efficiency and maintain compatibility with the latest Node.js features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#31",
+      "title": "Upgrade Node Setup Action for Enhanced Performance in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "upgrade",
+        "actions",
+        "node",
+        "dependencies",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/31",
+      "summary": "This update upgrades the actions/setup-node from version 4 to 6, enhancing caching capabilities and improving workflow performance. Key changes include automatic package manager detection and updates to dependencies like ts-jest and prettier. These improvements aim to streamline dependency management and ensure compatibility with the latest Node.js features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#36",
+      "title": "Upgrade Java Setup Action to Version 5 in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "upgrade",
+        "dependencies",
+        "bugfix",
+        "java",
+        "actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/36",
+      "summary": "This update bumps the actions/setup-java from version 4 to 5, ensuring compatibility with Node 24 and enhancing error handling. Additionally, it includes various dependency upgrades and bug fixes that improve the overall functionality of the setup process. The changes will help streamline Java setup in workflows, making it more efficient and reliable."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#30",
+      "title": "Upgrade Java setup action to v5 for improved CI workflows in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "ci",
+        "github-actions",
+        "java",
+        "dependency-update",
+        "build",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/30",
+      "summary": "This update bumps the GitHub Action 'actions/setup-java' from version 4 to 5 in the CI workflow. The upgrade includes important dependency updates, enhanced error handling, and support for newer Java versions, which improves build reliability and security. Additionally, the workflow now uses updated actions/checkout and action/cache versions, aligning with the latest best practices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#31",
+      "title": "Update hatchling dependency for better compatibility in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "dependency",
+        "update",
+        "hatchling",
+        "build"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/31",
+      "summary": "This update modifies the hatchling requirement in the project to allow versions from 1.21.0 up to, but not including, 1.30.0. This change ensures compatibility with the latest features and fixes introduced in hatchling v1.29.0, including improved handling of the SOURCE_DATE_EPOCH. Overall, it enhances the build process and maintains project stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#47",
+      "title": "Upgrade Java setup action to v5 for improved CI in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "ci",
+        "github-actions",
+        "java",
+        "dependency-update",
+        "workflow",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/47",
+      "summary": "This update bumps the GitHub Action 'actions/setup-java' from version 4 to 5 in the CI workflow. The upgrade includes important dependency updates, enhanced error handling, and support for newer Java versions, which improves build stability and security. The change also updates related actions like 'actions/checkout' to newer versions, ensuring compatibility and better performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#40",
+      "title": "Update hatchling dependency for better compatibility in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "dependencies",
+        "update",
+        "hatchling",
+        "compatibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/40",
+      "summary": "This update modifies the hatchling requirement in the project to allow versions from 1.21.0 up to, but not including, 1.30.0. The change ensures compatibility with the latest features and fixes introduced in hatchling v1.29.0, including improved handling of the SOURCE_DATE_EPOCH. This will enhance the overall stability and functionality of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#41",
+      "title": "Upgrade setup-node action to v6 for improved caching and dependencies in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "github-actions",
+        "ci",
+        "nodejs",
+        "dependency-upgrade",
+        "workflow",
+        "caching"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/41",
+      "summary": "This update bumps the GitHub Actions setup-node from version 4 to 6 in the publish workflow. The new version introduces automatic package manager caching, dependency upgrades, and improved performance. Workflow steps now use actions/checkout@v6 and setup-node@v6 with Node.js 20, enhancing build efficiency and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WeChatClaudeCode#1",
+      "title": "Improve desktop release workflow reliability with universal macOS build in We Chat Claude Code 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WeChatClaudeCode",
+        "ci",
+        "release",
+        "macos",
+        "github-actions",
+        "build",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/WeChatClaudeCode/pull/1",
+      "summary": "This update replaces the unsupported macOS runner matrix with a universal macOS build on macos-latest, enhancing build consistency. Core GitHub actions were upgraded to v5 with Node 24 runtime enabled for JavaScript actions. The manual dispatch now always publishes a release by auto-generating tags if omitted. Documentation in the README was updated to reflect these workflow changes."
+    }
+  ]
+}
