@@ -3,6 +3,22 @@
   "date": "2026-03-23",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#9",
+      "title": "Enhance Frida v2 Integration in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "frida",
+        "wechat",
+        "backend",
+        "api",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update introduces the Frida backend service with startup and shutdown hooks, along with WeChat attachment logic. It includes the migration of WeChat 3.9.10.27 Frida scripts into the Wisdom package and adds internal V2 service methods for contacts and wait-message functionalities. Existing routes are maintained, allowing for version-specific queries without breaking API compatibility."
+    },
+    {
       "id": "gh:pr:AceDataCloud/WeChatClaudeCode#3",
       "title": "Standardize Engineering Toolchain in We Chat Claude Code 🚀",
       "tags": [
