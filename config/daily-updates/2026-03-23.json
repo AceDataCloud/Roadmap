@@ -3,6 +3,102 @@
   "date": "2026-03-23",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPSerp#36",
+      "title": "Update hatchling dependency for better compatibility in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "dependencies",
+        "update",
+        "hatchling",
+        "build-system"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/36",
+      "summary": "This update modifies the hatchling requirement in the project to allow versions from 1.21.0 up to, but not including, 1.30.0. This change enables the use of the latest features and fixes from hatchling v1.29.0, including improved handling of the SOURCE_DATE_EPOCH. Overall, it enhances the project's build system reliability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#29",
+      "title": "Upgrade Node Setup Action to Version 6 in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "upgrade",
+        "actions",
+        "node",
+        "dependencies",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/29",
+      "summary": "This update bumps the actions/setup-node from version 4 to 6, enhancing caching capabilities and improving workflow performance. Key changes include automatic package manager detection and various dependency upgrades, ensuring better compatibility and security. The modifications are reflected in the publish workflow file."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#39",
+      "title": "Upgrade Java Setup Action to v5 in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "dependencies",
+        "upgrade",
+        "java",
+        "actions",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/39",
+      "summary": "This update bumps the actions/setup-java from version 4 to 5, ensuring compatibility with Node 24 and enhancing error handling. Additionally, it includes several dependency upgrades and bug fixes that improve overall functionality and security. The changes will help maintain a robust and efficient workflow for Java projects."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#46",
+      "title": "Update hatchling dependency for better compatibility in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "dependencies",
+        "update",
+        "hatchling",
+        "build"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/46",
+      "summary": "This update modifies the hatchling requirement in the project to allow versions from 1.21.0 up to, but not including, 1.30.0. The change enhances compatibility with the latest features and fixes introduced in hatchling v1.29.0, including improved handling of the SOURCE_DATE_EPOCH. This ensures smoother builds and better functionality moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#93",
+      "title": "Update Solana Wallet Adapter to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "solana",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This PR updates the @solana/wallet-adapter-wallets package from version 0.19.36 to 0.19.37. Key changes include various dependency updates and enhancements to wallet functionality, which will improve overall performance and compatibility. The update also includes logo updates for several wallet adapters."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#94",
+      "title": "Update React to 19.2.4 for improved performance in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "react",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps React from version 19.2.3 to 19.2.4, enhancing the performance and security of our application. Key changes include additional DoS mitigations for Server Actions and improved hardening of Server Components. This ensures a more robust user experience and aligns with the latest best practices."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#9",
       "title": "Enhance Frida v2 Integration in Wisdom 🚀",
       "tags": [
