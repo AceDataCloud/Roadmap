@@ -3,6 +3,37 @@
   "date": "2026-03-23",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#45",
+      "title": "Upgrade Node Setup Action to v6 in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "dependencies",
+        "update",
+        "actions",
+        "node"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/45",
+      "summary": "This update bumps the actions/setup-node from version 4 to 6, enhancing caching capabilities and improving workflow performance. Key changes include automatic caching for npm and updates to dependencies like ts-jest and prettier. Ensure your runner is compatible with the latest version for optimal performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#92",
+      "title": "Update vue-chartjs to 5.3.3 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "vue",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps vue-chartjs from version 5.2.0 to 5.3.3, introducing important bug fixes including improvements to ARIA labels and CI for the website. The changes enhance accessibility and ensure smoother functionality within the platform. Additionally, the update aligns with the latest dependency requirements."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPSerp#36",
       "title": "Update hatchling dependency for better compatibility in M C P Serp 🚀",
       "tags": [
