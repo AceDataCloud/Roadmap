@@ -3,6 +3,72 @@
   "date": "2026-03-23",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#241",
+      "title": "Sanitize Xiaohongshu URLs before validation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "sanitization",
+        "validation",
+        "xiaohongshu",
+        "publishing",
+        "quality"
+      ],
+      "public": false,
+      "summary": "This update enhances the publishing process by sanitizing Xiaohongshu-generated titles and content to remove markdown links and bare URLs before validation, while preserving readable text context. The existing validation and quality-gate flow remain intact, ensuring content quality. Testing confirmed successful material creation with a high-quality score and no failures."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/GitHubCenter#1",
+      "title": "Enhance SSO Authentication for GitHubCenter in Git Hub Center 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "GitHubCenter",
+        "authentication",
+        "sso",
+        "jwt",
+        "frontend",
+        "backend",
+        "nginx"
+      ],
+      "public": false,
+      "summary": "This update replaces the existing Django session authentication with AceDataCloud's SSO JWT authentication for the API. Key changes include the addition of a frontend login callback flow, improved bearer token handling, and logout functionality. The SSO token exchange is now proxied through nginx, ensuring a seamless integration with JWT 401 response handling in tests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#85",
+      "title": "Upgrade Docker Build-Push Action to Version 7 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "docker",
+        "build",
+        "frontend",
+        "update",
+        "actions"
+      ],
+      "public": false,
+      "summary": "This update bumps the Docker Build-Push Action from version 6 to 7, introducing several enhancements including Node 24 as the default runtime and the removal of deprecated environment variables. The changes improve build performance and streamline the configuration process, ensuring better compatibility with the latest GitHub Actions features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#88",
+      "title": "Upgrade Node.js setup action to v6 for improved caching and performance in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ci",
+        "github-actions",
+        "nodejs",
+        "cache",
+        "workflow",
+        "dependencies"
+      ],
+      "public": false,
+      "summary": "This update bumps the GitHub Actions setup-node from version 4 to 6 in CI and translation workflows. The new version introduces enhanced automatic caching based on the package manager, dependency upgrades, and improved workflow efficiency. These changes help streamline dependency management and speed up build processes."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPNanoBanana#45",
       "title": "Upgrade Node Setup Action to v6 in M C P Nano Banana 🚀",
       "tags": [
