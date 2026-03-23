@@ -3,6 +3,54 @@
   "date": "2026-03-23",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#238",
+      "title": "Enhance XHS Editor Detection and Skip Patterns in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "xhs",
+        "publisher",
+        "improvement",
+        "reliability"
+      ],
+      "public": false,
+      "summary": "This update improves the reliability of the XHS publisher by enhancing the detection of the long article editor. Additionally, new skip patterns have been added to reduce noise from non-code failures, ensuring a smoother publishing experience. Key files modified include the XHS handling script and the repair record logic."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#235",
+      "title": "Enhance publisher stability with overflow fixes and error handling in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "bugfix",
+        "stability",
+        "error-handling",
+        "content-processing",
+        "database",
+        "publisher"
+      ],
+      "public": false,
+      "summary": "This update improves the robustness of the publishing system by addressing multiple failure modes including varchar overflow, content truncation, and error handling. Key changes include expanding text fields to TextField to prevent overflow, truncating content to meet platform limits, refining error detection for login and publishing limits, and clearing URLs on failure to avoid secondary errors. These enhancements reduce publishing failures and improve overall system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#242",
+      "title": "Expanded Field Sizes to Prevent Data Errors in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "migration",
+        "backend",
+        "data",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update addresses over 98 DataError failures by widening the fields for PublishTask.url and PublishDocument.title/thumbnail from varchar(255) to TextField. The migration ensures that long values can be stored without causing overflow issues, enhancing data integrity and application stability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#241",
       "title": "Sanitize Xiaohongshu URLs before validation in Backend 🚀",
       "tags": [
