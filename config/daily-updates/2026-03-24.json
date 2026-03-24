@@ -1,0 +1,36 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-24",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#86",
+      "title": "Upgrade actions/checkout to version 6 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "ci",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps the actions/checkout dependency from version 4 to 6 across multiple workflow files. Key changes include improved credential handling and support for Node.js 24. This upgrade enhances the CI/CD process and ensures compatibility with the latest features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#87",
+      "title": "Update create-pull-request to version 8 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "frontend",
+        "actions"
+      ],
+      "public": false,
+      "summary": "This update bumps the create-pull-request action from version 7 to 8, enhancing compatibility with Node 24 and requiring Actions Runner v2.327.1 or later for self-hosted runners. Key changes include updates to the checkout action and improvements in handling remote prune failures. Overall, this upgrade ensures better performance and reliability in our workflows."
+    }
+  ]
+}
