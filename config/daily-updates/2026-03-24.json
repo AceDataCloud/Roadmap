@@ -3,6 +3,52 @@
   "date": "2026-03-24",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#138",
+      "title": "Enhance View Detail Button Visibility in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "bugfix",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update modifies the condition for displaying the View Detail button in the usage rows. The button now appears for all rows by checking the row ID, ensuring users can access detail data seamlessly. This change improves user experience by allowing lazy-loading of detail data on demand."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#245",
+      "title": "Optimize metadata response in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "optimization",
+        "backend",
+        "metadata",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update enhances the usage list endpoint by stripping out heavy request and response payloads from the metadata. The ApiUsageIndexSerializer now returns only essential lightweight metadata, improving performance and reducing row size. Full metadata remains accessible through the detail endpoint."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#250",
+      "title": "Enhance Copilot Auto-Assignment for AI Fixes in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "github-actions",
+        "automation",
+        "ai-fix",
+        "copilot",
+        "workflow"
+      ],
+      "public": false,
+      "summary": "This update introduces a new GitHub Actions workflow that automatically assigns the Copilot coding agent to issues labeled 'ai-fix'. The workflow triggers on issue creation and labeling, ensuring that the Copilot can address these issues promptly. Additionally, it resolves a previous limitation where assignments could fail due to insufficient token permissions."
+    },
+    {
       "id": "gh:pr:AceDataCloud/GitHubCenter#2",
       "title": "Enhance GitHub Task Execution with Real Repo Support in Git Hub Center 🚀",
       "tags": [
