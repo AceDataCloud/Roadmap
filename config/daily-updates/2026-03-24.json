@@ -3,6 +3,54 @@
   "date": "2026-03-24",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#246",
+      "title": "Boost concurrency with gunicorn and uvicorn in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "performance",
+        "backend",
+        "docker",
+        "gunicorn",
+        "uvicorn"
+      ],
+      "public": false,
+      "summary": "This update transitions the PlatformBackend from a single-worker Daphne server to a more robust setup using gunicorn with 4 uvicorn workers. The change increases concurrency from 3 to 12 requests, significantly reducing the chances of request queuing and timeouts. Key modifications include updates to the Dockerfile, deployment configurations, and the addition of gunicorn as a dependency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#249",
+      "title": "Automate Copilot Assignments for AI-Fix Issues in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "automation",
+        "github-actions",
+        "ai-fix",
+        "workflow",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a new GitHub Actions workflow that automatically assigns the Copilot coding agent to issues labeled 'ai-fix'. The workflow triggers on issue creation and labeling, ensuring that the Copilot agent is reliably assigned using a secure token with the necessary permissions. This enhancement improves the handling of AI-related issues, making the process more efficient."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#248",
+      "title": "Enhance navigation stability for Xiaohongshu editor in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "xiaohongshu",
+        "navigation",
+        "stability",
+        "bugfix",
+        "publisher"
+      ],
+      "public": false,
+      "summary": "This update improves the stability of the Xiaohongshu editor by addressing a crash that occurred during navigation. Key changes include waiting for the network to be idle and adding extra time for page settling after button clicks. These adjustments ensure smoother transitions and reduce the likelihood of execution context errors."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#138",
       "title": "Enhance View Detail Button Visibility in Frontend Web 🚀",
       "tags": [
