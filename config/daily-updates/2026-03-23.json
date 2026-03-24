@@ -3,6 +3,23 @@
   "date": "2026-03-23",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#243",
+      "title": "Add skip patterns for Weibo draft limits and XHS UI updates in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "weibo",
+        "xhs",
+        "ui",
+        "bugfix",
+        "stability",
+        "publisher"
+      ],
+      "public": false,
+      "summary": "This update introduces new skip patterns to handle non-code failures related to Weibo draft limits and UI changes in XHS, including button and editor issues. Additionally, it addresses execution context destruction errors to improve stability. These changes enhance the repair process by avoiding unnecessary failures during publishing."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformPublisher#238",
       "title": "Enhance XHS Editor Detection and Skip Patterns in Publisher 🚀",
       "tags": [
