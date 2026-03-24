@@ -3,6 +3,87 @@
   "date": "2026-03-24",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/WebExtrator#1",
+      "title": "Enhanced API Testing and Robustness in Web Extrator 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WebExtrator",
+        "testing",
+        "api",
+        "improvements",
+        "error-handling",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update introduces the Vitest testing framework along with a suite of new tests for extraction and rendering APIs. Key improvements include enhanced API validation, health checks, and queue-depth protection for synchronous requests. Additionally, error handling has been fortified, ensuring better resilience against invalid inputs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WeChatClaudeCode#6",
+      "title": "Fix missing IPC methods for better UI loading in We Chat Claude Code 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WeChatClaudeCode",
+        "fix",
+        "ipc",
+        "ui",
+        "electron"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/WeChatClaudeCode/pull/6",
+      "summary": "This update adds the missing IPC methods getI18nData() and setLocale() to preload.cjs, which were previously only available in preload.ts. The absence of these methods was causing a critical error during bootstrap, preventing the QR code from rendering and the UI from loading properly. With these changes, the application should now function as intended."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#247",
+      "title": "Revamp Kimi Pricing Structure for Better Margins in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "backend",
+        "api",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces a new pricing structure for Kimi, dividing it into regular, turbo, and K2.5 tiers. The credit coefficients have been adjusted to achieve approximately a 10% margin at the largest package rate, and the API cost rules have been synchronized accordingly. These changes aim to enhance profitability while maintaining competitive pricing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WeChatClaudeCode#5",
+      "title": "Refactor CLI for Enhanced Daemon and i18n Support in We Chat Claude Code 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WeChatClaudeCode",
+        "refactor",
+        "i18n",
+        "cli",
+        "permissions",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/WeChatClaudeCode/pull/5",
+      "summary": "This update refactors the CLI to utilize a shared daemon, improving efficiency and maintainability. It also introduces internationalization (i18n) for permission messages, enhancing user experience across different languages. Additionally, the copyright year has been updated, and various files have been synchronized for consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#602",
+      "title": "Enhance Task Duration Tracking in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "task",
+        "duration",
+        "persistence",
+        "update",
+        "workers"
+      ],
+      "public": false,
+      "summary": "This update introduces task duration persistence across multiple worker base handlers, ensuring that the finished_at timestamp and computed duration are recorded upon task completion. The changes affect handlers for ai318, cqtai, drawai, mountsea, nebula, openaihk, piapi, qrart, suandao, volcengine, and wcnb, while maintaining existing media-duration fields. Validation checks confirm no type or lint errors in the modified files."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#246",
       "title": "Boost concurrency with gunicorn and uvicorn in Backend 🚀",
       "tags": [
