@@ -3,6 +3,40 @@
   "date": "2026-03-24",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/WebExtrator#2",
+      "title": "Streamline CI/CD with Deployment Pipeline in Web Extrator 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WebExtrator",
+        "ci",
+        "cd",
+        "deployment",
+        "kubernetes",
+        "docker"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive CI workflow for checking, testing, building, and Dockerizing the application. Additionally, a deployment workflow has been added to automate deployments on main branch pushes, utilizing build-numbered image tags for better version control. Kubernetes manifests and deployment scripts have also been updated to support rolling deployments, enhancing the overall deployment process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WeChatClaudeCode#7",
+      "title": "Fix shell PATH issue in We Chat Claude Code 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WeChatClaudeCode",
+        "fix",
+        "electron",
+        "path",
+        "sdk",
+        "macos",
+        "linux"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/WeChatClaudeCode/pull/7",
+      "summary": "This update introduces the `fixElectronPath()` function in `electron/main.ts`, which resolves the user's full shell PATH before the Electron app starts. This change addresses the 'spawn node ENOENT' error encountered by the Claude Agent SDK when attempting to spawn node, ensuring smoother operation on macOS and Linux."
+    },
+    {
       "id": "gh:pr:AceDataCloud/WebExtrator#1",
       "title": "Enhanced API Testing and Robustness in Web Extrator 🚀",
       "tags": [
