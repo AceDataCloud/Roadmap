@@ -3,6 +3,113 @@
   "date": "2026-03-24",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/GitHubCenter#2",
+      "title": "Enhance GitHub Task Execution with Real Repo Support in Git Hub Center 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "GitHubCenter",
+        "feature",
+        "tasks",
+        "backend",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces immediate execution capabilities for real GitHub tasks, specifically creating and forking repositories. It includes validation for required payload fields and enhances backend testing to ensure successful task execution paths. Key files modified include the executor, models, serializers, and views to support these new features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#243",
+      "title": "Fix 413 Response Description in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "openapi",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update corrects a copy-paste error in the OpenAPI specification for the /nano-banana/images endpoint. The 413 response description has been updated to accurately reflect that the request payload is too large, improving clarity for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#601",
+      "title": "Enhance error handling for oversized requests in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "http",
+        "nano-banana",
+        "platform-service",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `PayloadTooLargeError` class to handle HTTP 413 errors for the nano-banana workers, specifically `wcnb` and `cqtai`. It ensures that oversized requests are properly managed, preventing generic HTTP 500 errors and improving user experience. Additionally, middleware has been added to the `wcnb` server to handle incoming oversized requests effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#137",
+      "title": "Enhance Proxy Timeouts and Metadata Loading in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "nginx",
+        "performance",
+        "metadata",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces proxy timeouts in Nginx to mitigate 502/503 errors and improves the usage metadata loading process. Key changes include lazy-loading metadata on detail clicks and removing direct dependencies on metadata in the History component. Additionally, the deployment configuration has been optimized with increased replicas and resource allocations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#244",
+      "title": "Optimize Usage API for Better Performance in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "performance",
+        "backend",
+        "optimization",
+        "infrastructure"
+      ],
+      "public": false,
+      "summary": "This update significantly enhances the /api/v1/apis/{id}/usage/ endpoint by reducing response size from ~2.5MB to ~100KB and improving response time from 24-66 seconds to under 1 second. Key changes include removing unnecessary metadata from the serializer, optimizing database queries, and increasing infrastructure resources to handle higher traffic. These improvements aim to prevent 502/503 errors and ensure smoother API performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#83",
+      "title": "Upgrade Docker Login Action to Version 4 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "docker",
+        "frontend",
+        "dependencies",
+        "upgrade"
+      ],
+      "public": false,
+      "summary": "This update bumps the Docker Login Action from version 3 to 4, enhancing the workflow with improved features and performance. Key changes include switching to Node 24 as the default runtime and updating several dependencies, ensuring better compatibility and security. The deployment workflow has been modified accordingly to reflect this upgrade."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#84",
+      "title": "Upgrade Node to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "node",
+        "docker",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update bumps the Node.js version from 20 to 25 in the Dockerfile. This change ensures that the application benefits from the latest features and security improvements available in Node.js. The modification is straightforward, involving a single line change in the Dockerfile."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#86",
       "title": "Upgrade actions/checkout to version 6 in Frontend Web 🚀",
       "tags": [
