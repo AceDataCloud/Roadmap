@@ -1,0 +1,22 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-25",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#603",
+      "title": "Fix checker for Python 3.9 compatibility in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "python",
+        "compatibility",
+        "checker",
+        "gpt-5.4"
+      ],
+      "public": false,
+      "summary": "The checker CronJob was crashing due to incompatible type annotations in check.py, specifically using str | None instead of Optional[str]. This fix ensures compatibility with Python 3.9, allowing the checker to run and sync new models like gpt-5.4 to MongoDB. As a result, API requests for gpt-5.4 will no longer fail with a 500 error."
+    }
+  ]
+}
