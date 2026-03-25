@@ -3,6 +3,36 @@
   "date": "2026-03-25",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#143",
+      "title": "Update vue-qrcode to 2.2.2 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "frontend",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update bumps the vue-qrcode package from version 2.2.0 to 2.2.2, incorporating several patch changes. Key improvements include the export of QRCodeSegment as a type and enhancements for ESM entries, ensuring better compatibility and functionality. These updates will enhance the overall performance and usability of the QR code features in the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#148",
+      "title": "Update TypeScript ESLint Parser for Better Compatibility in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "typescript",
+        "eslint",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update bumps the @typescript-eslint/parser from version 8.42.0 to 8.57.2, aligning it with other projects. Key improvements include various bug fixes that enhance linting accuracy and performance. This change ensures a smoother development experience and better code quality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#603",
       "title": "Fix checker for Python 3.9 compatibility in Platform Service 🚀",
       "tags": [
