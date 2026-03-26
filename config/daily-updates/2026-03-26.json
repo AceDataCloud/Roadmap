@@ -1,0 +1,51 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-26",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#139",
+      "title": "Update Rollup Plugin to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "rollup",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps the @rollup/plugin-replace from version 3.0.1 to 6.0.3, enhancing the plugin's functionality and fixing several bugs. Key improvements include better handling of valid JavaScript identifier characters and additional type definitions. This change is expected to improve the overall stability and performance of the build process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#140",
+      "title": "Update Solana Web3.js to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "solana",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update bumps the @solana/web3.js library from version 1.98.2 to 1.98.4. Key changes include the addition of Cost Units for transaction costs and the reversion of a previous change regarding costUnits in transaction classes. This ensures improved functionality and stability in our application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#147",
+      "title": "Upgrade element-plus to latest version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "upgrade",
+        "frontend",
+        "element-plus"
+      ],
+      "public": false,
+      "summary": "This update bumps the element-plus library from version 2.11.2 to 2.13.6. Key enhancements include new features for components like slider and input, as well as various bug fixes that improve overall stability and performance."
+    }
+  ]
+}
