@@ -3,6 +3,21 @@
   "date": "2026-03-26",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#612",
+      "title": "Fix upstream billing error detection in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "error-handling",
+        "billing",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update addresses the misclassification of upstream billing errors as content moderation ForbiddenErrors. The system now correctly identifies billing-related issues and returns an ApiError (500) for specific billing keywords. This change enhances error handling across multiple services including wcnb, openaihk, mountsea, and cqtai."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#146",
       "title": "Update ESLint Plugin for Enhanced Compatibility in Frontend Web 🚀",
       "tags": [
