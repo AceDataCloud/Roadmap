@@ -3,6 +3,69 @@
   "date": "2026-03-26",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#382",
+      "title": "Enhance Bilibili Submission Handling in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "bilibili",
+        "api",
+        "error-handling",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of Bilibili's API responses, specifically addressing the HTTP 412 anti-bot response. When a 412 status is encountered, the system now gracefully returns the draft URL instead of failing, ensuring that users can still access their drafts. This change enhances user experience by allowing manual publishing even when automated submissions are blocked."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#377",
+      "title": "Enhance Auto-Repair Pipeline for Better Performance in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "bugfix",
+        "automation",
+        "enhancement",
+        "logging",
+        "unicode"
+      ],
+      "public": false,
+      "summary": "This update improves the auto-repair pipeline by fixing several key issues, including the addition of missing SKIP_REPAIR_PATTERNS to reduce spam and resolving a Unicode encoding bug in the Zhihu API. The assign-copilot workflow has been updated to use the correct token, enhancing automation. Additionally, Bilibili category coverage has been expanded with new IDs, improving error logging and overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#621",
+      "title": "Enhance success response handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "ttapi",
+        "handler",
+        "response",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update fixes the ttapi Suno responses by ensuring that the 'success' field is included in the final results. The change was made in the base handler's sendSuccessResult method, adding 'success: true' when it is not already present. This improvement enhances the reliability of success responses across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#619",
+      "title": "Enhance Midjourney Error Reporting in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "midjourney",
+        "platform-service",
+        "logging",
+        "improvements"
+      ],
+      "public": false,
+      "summary": "This update improves error handling for Midjourney submissions by preserving detailed failure messages instead of generic errors. Key changes include enhancements to the BaseError class and the addition of fallback mechanisms across various handlers, ensuring better logging and user feedback. These modifications will significantly improve the debugging process and user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#615",
       "title": "Enhance SERP Geo-Targeting with Location Parameter in Platform Service 🚀",
       "tags": [
