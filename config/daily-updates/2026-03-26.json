@@ -3,6 +3,130 @@
   "date": "2026-03-26",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#615",
+      "title": "Enhance SERP Geo-Targeting with Location Parameter in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "geo-targeting",
+        "serp",
+        "improvement",
+        "location",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update improves the geo-targeting accuracy for SERP results by adding support for a location parameter, which is automatically derived from the country code. Over 60 countries are now mapped to enhance the relevance of search results for users specifying their country and language. This change aims to reduce the occurrence of results from unintended regions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#25",
+      "title": "Streamline WebExtrator Tracking in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "submodule",
+        "vscode",
+        "cleanup",
+        "tracking"
+      ],
+      "public": false,
+      "summary": "This update introduces WebExtrator as a tracked submodule, enhancing the organization of the Index repository. Local .worktrees metadata is now ignored, reducing clutter and ensuring a cleaner workspace. Additionally, VS Code settings have been synchronized for improved development consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WeChatClaudeCode#9",
+      "title": "Fix Claude SDK Executable Issue in We Chat Claude Code 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WeChatClaudeCode",
+        "bugfix",
+        "electron",
+        "sdk",
+        "claude",
+        "development"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/WeChatClaudeCode/pull/9",
+      "summary": "This update resolves a critical issue where the Claude SDK's `cli.js` could not be executed from within a packaged Electron app due to its location inside the `app.asar` archive. A new function, `resolveClaudeCodePath()`, has been added to detect the environment and correctly resolve the executable path, ensuring seamless operation. All existing tests have passed, confirming the fix's effectiveness."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WebExtrator#3",
+      "title": "Enhance Production Queue and Add Smoke Tests in Web Extrator 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WebExtrator",
+        "production",
+        "redis",
+        "validation",
+        "smoke-tests",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces a dedicated Redis deployment for the WebExtrator, along with improved handling for 429/503 errors in the production queue. Additionally, in-repo smoke validation has been implemented, ensuring robust testing during production rollouts. Key files modified include deployment configurations and the addition of a new smoke testing script."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#385",
+      "title": "Sync Model Selectors with Official Docs in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "update",
+        "models",
+        "internationalization",
+        "frontend",
+        "backend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/385",
+      "summary": "This update synchronizes the Nexior model selectors with the latest backend OpenAPI specifications and official documentation. Key changes include updating the default model for Suno to 'chirp-v5', adding new model options for Kling, Veo, and Hailuo, and enhancing internationalization support for Hailuo's Director mode. These improvements ensure users have access to the most current model options available."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#617",
+      "title": "Exciting Update: Kimi Models Added with Priority Adjustments in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "models",
+        "priority",
+        "update"
+      ],
+      "public": false,
+      "summary": "We've successfully integrated Kimi models across all four providers, ensuring a proper priority ranking. The new models include 'kimi-k2-thinking-turbo' and 'kimi-k2.5' for xiaojingai and openaihk, while wcnb's model rank has been adjusted. This enhancement will improve the performance and capabilities of our service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#24",
+      "title": "Update API Token Instructions in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "api",
+        "documentation",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update corrects the API token variable name from `ACEDATACLOUD_API_TOKEN` to `ACEDATACLOUD_API_KEY` in the testing instructions. Additionally, a warning has been added to clarify that `ACEDATACLOUD_PLATFORM_TOKEN` should not be used for API calls. These changes enhance clarity and prevent potential misuse of tokens."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#248",
+      "title": "Streamline platform documentation by removing obsolete balance doc in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "cleanup",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update removes the outdated zh-CN platform balance document, streamlining our documentation. The application remaining amount will continue to be the supported query path. Corresponding translation records have also been deleted from the database, ensuring a cleaner codebase."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#141",
       "title": "Update markdown-it to 14.1.1 in Frontend Web 🚀",
       "tags": [
