@@ -1,0 +1,401 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-27",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#43",
+      "title": "Automate Docs Sync and Merging in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "automation",
+        "workflow",
+        "docs",
+        "synchronization",
+        "claude"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/43",
+      "summary": "This update introduces automated synchronization from the Docs repository, enhancing workflow efficiency. Key additions include a new sync-from-docs workflow that triggers on updates and an auto-merge workflow for bot-created pull requests. Additionally, instructions for using Claude Code have been added to streamline the syncing process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#47",
+      "title": "Enhance Sync Workflow with Downstream Dispatch in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "workflow",
+        "dispatch",
+        "sync",
+        "docs",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/47",
+      "summary": "This update introduces a downstream dispatch job to the Docs sync workflow, triggering repository_dispatch events for downstream repositories like MCP, CLI, API, and Skills after a successful sync from PlatformBackend. It ensures that only the repositories with actual changes are notified, improving efficiency and relevance of updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#46",
+      "title": "Enhance Suno OpenAPI with chirp-v5-5 model in Docs 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "openapi",
+        "suno",
+        "feature",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/46",
+      "summary": "This update adds the chirp-v5-5 model to the Suno OpenAPI specification model enum. Additionally, the example has been updated to reflect this new model, ensuring that users have the latest options available for generating music audio."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#387",
+      "title": "Updated default model to chirp-v5-5 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "update",
+        "suno",
+        "model",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/387",
+      "summary": "The default model for SUNO has been updated from chirp-v5 to chirp-v5-5 in the constants file. This change enhances the model's performance and capabilities. The update involves a minor modification in the source code, ensuring smoother functionality moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CopilotPlus#1",
+      "title": "Update Suno Agent for Chirp-v5-5 in Copilot Plus 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "CopilotPlus",
+        "update",
+        "suno",
+        "documentation",
+        "ai",
+        "music"
+      ],
+      "public": false,
+      "summary": "The Suno MCP agent documentation has been updated to reference the chirp-v5-5 model. This change ensures that users are informed about the latest model capabilities for AI music generation. The update includes a minor modification in the docstring for clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#4",
+      "title": "Enhance suno-music with chirp-v5-5 model in Skills 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "enhancement",
+        "suno-music",
+        "audio",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/4",
+      "summary": "The suno-music skill has been updated to include the chirp-v5-5 model in the SKILL.md model table. This addition enhances the options available for users, ensuring access to the latest and highest quality audio processing capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SunoCli#2",
+      "title": "Exciting New Model: Chirp V5.5 Support Added in Suno Cli 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SunoCli",
+        "feature",
+        "update",
+        "suno-cli",
+        "models"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SunoCli/pull/2",
+      "summary": "This update introduces support for the new Suno chirp-v5-5 model in SunoCli. Key changes include adding chirp-v5-5 to the SUNO_MODELS list, updating the model display in the output, and modifying the README and tests to ensure proper integration. Users can now leverage the latest model for enhanced performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#624",
+      "title": "Enhance model mapping with chirp-v5-5 for Suno provider in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "model-mapping",
+        "nebula",
+        "suno",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces the mapping for the chirp-v5-5 model to the suno_v55 in the nebula worker's core.ts file. This change enhances the model compatibility for the Suno provider, ensuring better performance and functionality. The modification includes a single addition to the existing model mappings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#221",
+      "title": "Enhance API with User Avatars in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "feature",
+        "backend",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update adds an avatar field to the platform rank API response, allowing the frontend to display user avatars in the ranking table and podium. The change enhances the user experience by providing a more personalized view of rankings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#252",
+      "title": "Exciting New Support for chirp-v5-5 in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "suno",
+        "api",
+        "documentation",
+        "billing"
+      ],
+      "public": false,
+      "summary": "This update introduces support for the chirp-v5-5 model in Suno's audio pricing and OpenAPI enums. Comprehensive documentation has been added in both English and Chinese, detailing the new model's capabilities. Additionally, focused API cost coverage for billing paths related to chirp-v5-5 has been implemented, enhancing the overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#385",
+      "title": "Revert draft URL handling for daily publish limit in Publisher 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "revert",
+        "error-handling",
+        "baijiahao",
+        "publish",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update reverts a previous change that allowed returning a draft URL instead of raising an error when the daily publish limit is reached. The modification affects the error handling in the Baijiahao publishing process, ensuring that a PublishError is raised instead of providing a draft URL. This change aims to maintain stricter error reporting for publishing constraints."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#44",
+      "title": "Revamp Suno Version Comparison Table in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "docs",
+        "suno",
+        "update",
+        "chinese"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/44",
+      "summary": "The Suno version comparison table in the simplified Chinese guide has been updated to reflect the new v5.5/mv layout. Additionally, the traditional Chinese guide has been synchronized to match the same table structure and values. A follow-up sentence has also been refreshed to align with the latest v5.5 release information."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#322",
+      "title": "Enhance Baijiahao Error Handling in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "bugfix",
+        "baijiahao",
+        "publisher",
+        "error-handling"
+      ],
+      "public": false,
+      "summary": "This update modifies the Baijiahao publishing logic to return a draft URL instead of raising an error when a daily publish limit is reached. The change prevents loss of the draft URL and improves the overall user experience by allowing users to access their saved drafts. The code now checks for specific error messages and responds accordingly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SunoAPI#4",
+      "title": "Enhance documentation with chirp-v5-5 model support in Suno API 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SunoAPI",
+        "documentation",
+        "update",
+        "sunoapi",
+        "model-support"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SunoAPI/pull/4",
+      "summary": "This update adds references for the chirp-v5-5 model to the SunoAPI documentation and README. Key changes include the addition of chirp-v5-5 to the model version table and updates to the introduction and comparison tables to highlight this latest model. These enhancements improve clarity for users integrating with the Suno API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#45",
+      "title": "Enhance Suno Documentation with chirp-v5-5 Model in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "documentation",
+        "suno",
+        "models",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/45",
+      "summary": "This update adds the chirp-v5-5 model to the Suno documentation, ensuring users have the latest information. Key changes include updates to model version tables in both English and Chinese, as well as the model parameter lists. The announcement text has also been revised to highlight chirp-v5-5 as the newest model available."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#42",
+      "title": "Exciting New Support for Chirp V5.5 Model in M C P Suno 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "feature",
+        "update",
+        "suno",
+        "model",
+        "music"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/42",
+      "summary": "This update introduces support for the new Suno chirp-v5-5 model, enhancing the capabilities of our music generation tools. Key changes include updates to the model types, tool descriptions, and integration tests to ensure chirp-v5-5 is recognized as the best option for longer songs. The README and info tools have also been updated to reflect these enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#623",
+      "title": "Enhance Suno with chirp-v5-5 Model Support in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "suno",
+        "ttapi",
+        "audio",
+        "model"
+      ],
+      "public": false,
+      "summary": "This update introduces support for the new chirp-v5-5 model in the ttapi worker. Key changes include adding chirp-v5-5 to model validation arrays, outgoing request mappings, and response mappings. This enhancement improves the functionality and versatility of the Suno audio processing capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#383",
+      "title": "Enhance Toutiao URL Extraction and Modal Handling in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "fix",
+        "toutiao",
+        "url-extraction",
+        "modal",
+        "publisher"
+      ],
+      "public": false,
+      "summary": "This update improves the resilience of the `extract_url` and `close_modal` functions against DOM changes in Toutiao. The `close_modal` function now uses a more flexible class matching strategy, while `extract_url` has been restructured to utilize a cascading selector approach. Additionally, the wait time for article pages has been increased, and helper functions have been extracted for better code reuse."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#622",
+      "title": "Enhance Suno Support with Chirp v5.5 in Platform Service 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "suno",
+        "audio",
+        "model-support",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces support for the chirp-v5-5 model in the openaihk Suno audio handler. Key changes include mapping chirp-v5-5 to the upstream chirp-fenix model alias and ensuring consistency across various request flows. The modifications enhance the functionality and flexibility of the audio processing capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#386",
+      "title": "Enhance LLMs.txt Accessibility in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "nginx",
+        "robots",
+        "llms",
+        "accessibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/386",
+      "summary": "This update introduces a new alias for `/.well-known/llms.txt` in the Nginx configuration, ensuring compliance with the llmstxt.org specification. Additionally, the `robots.txt` file has been modified to include a proper `Sitemap:` directive for the LLMs.txt reference, improving machine-readability and search engine indexing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#150",
+      "title": "Enhance AI Discoverability with New Nginx Route in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "nginx",
+        "frontend",
+        "llms",
+        "proxy",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a new Nginx proxy route at `/.well-known/llms.txt`, complementing the existing `/llms.txt` route. This addition aligns with the llmstxt.org specification, enhancing discoverability for AI search engines. The change involves a modification to the `nginx.conf.template`, ensuring both routes are effectively proxied to the PlatformBackend."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#251",
+      "title": "Enhance LLMs.txt Accessibility in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "llms",
+        "robots",
+        "urls"
+      ],
+      "public": false,
+      "summary": "This update introduces a new route for `/.well-known/llms.txt` and modifies the `robots.txt` file to include a machine-readable reference to LLMs.txt. The changes ensure compliance with the llmstxt.org specification, improving discoverability for crawlers and AI bots. The `Sitemap:` directive now properly points to both the sitemap and LLMs.txt, enhancing overall SEO and accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#149",
+      "title": "Enhance AI Crawler Support for Better Discoverability in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ai",
+        "seo",
+        "frontend",
+        "nginx",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "This update adds various AI search engine User-Agent patterns to the nginx prerender UA map, ensuring that AI crawlers receive fully rendered HTML instead of an empty SPA shell. Key additions include UAs from OpenAI, Anthropic, and Google, which will enhance the visibility of our pages to AI-powered search engines. The implementation incurs zero runtime cost while improving Generative Engine Optimization (GEO)."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#384",
+      "title": "Automate AI Issue Triage and PR Merging in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "automation",
+        "ai",
+        "workflows",
+        "github-actions",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces two new automated workflows for issue triage and PR merging. The 'auto-triage-issues' workflow identifies unassigned open issues and assigns them to Copilot, while the 'auto-merge-ai-prs' workflow merges AI-generated PRs that have passed all CI checks. These enhancements streamline the management of issues and pull requests, improving overall efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#381",
+      "title": "Fix(csdn): regenerate HTML after image processing to prevent image transfer failures in Publisher 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher"
+      ],
+      "public": false
+    }
+  ]
+}
