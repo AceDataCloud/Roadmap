@@ -3,6 +3,22 @@
   "date": "2026-03-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#625",
+      "title": "Enhance veo video generation with retry logic in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "video",
+        "retry",
+        "timeout",
+        "polling",
+        "refactor"
+      ],
+      "public": false,
+      "summary": "This update introduces a retry mechanism for veo video generation polling, allowing up to two retries if a timeout occurs. The `_pollVeoTask` method has been extracted for better reusability, and only `TimeoutError` will trigger a retry, while other errors will be thrown immediately. This change effectively extends the maximum wait time for video generation to approximately 90 minutes."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPSuno#43",
       "title": "Automate Docs Sync and Merging in M C P Suno 🚀",
       "tags": [
