@@ -3,6 +3,324 @@
   "date": "2026-03-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#47",
+      "title": "Sync Upstream Docs for API Spec Updates in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "api",
+        "docs",
+        "sync",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/47",
+      "summary": "This PR focuses on synchronizing the latest updates from the upstream Docs with our API specifications. Key changes include the addition of the chirp-v5-5 model and adjustments to various tests. Ensuring our repo aligns with these updates will enhance consistency and functionality across all downstream repositories."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/NanoBananaCli#6",
+      "title": "Sync verification complete for NanoBananaCli in Nano Banana Cli 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "NanoBananaCli",
+        "sync",
+        "verification",
+        "documentation",
+        "api",
+        "nano-banana"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/NanoBananaCli/pull/6",
+      "summary": "The sync check confirms that NanoBananaCli is fully aligned with the latest Docs specification. Recent updates to the documentation did not affect the `nano-banana.json` file, ensuring no code changes were necessary. All models, aspect ratios, resolutions, endpoints, and request parameters match perfectly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#41",
+      "title": "MCPSerp is fully in sync with openapi/serp.json in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "sync",
+        "verification",
+        "api",
+        "mcp",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/41",
+      "summary": "A recent sync check confirmed that the MCPSerp repository is fully aligned with the openapi/serp.json specification. Key endpoints and parameters were verified, showing no discrepancies. This ensures that all functionalities remain intact and up to date."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedanceCli#2",
+      "title": "Enhance CLI to Match OpenAPI Spec with New Features in Seedance Cli 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedanceCli",
+        "cli",
+        "api",
+        "features",
+        "fixes",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedanceCli/pull/2",
+      "summary": "This update aligns the CLI with the OpenAPI specification by introducing a `content` array format and renaming the `aspect_ratio` field to `ratio`. Several new optional parameters have been added, enhancing the flexibility of command usage. Additionally, various fixes have been implemented to improve functionality and reduce duplication in the codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/LumaCli#2",
+      "title": "Revamp CLI to Align with New Luma API Spec in Luma Cli 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "LumaCli",
+        "cli",
+        "api",
+        "update",
+        "enhancement",
+        "luma"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/LumaCli/pull/2",
+      "summary": "This update synchronizes the CLI with the latest Luma API specifications by removing the `model` parameter and introducing new fields such as `loop`, `enhancement`, and distinct `start_image_url`/`end_image_url` for images. Key commands have been modified to reflect these changes, enhancing usability and functionality. Additionally, several constants and commands related to models have been removed to streamline the codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#33",
+      "title": "Enhance video generation tools with new parameters in M C P Seedance 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "video",
+        "parameters",
+        "tools",
+        "testing",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/33",
+      "summary": "This update introduces two new parameters, `frames` and `execution_expires_after`, to the video generation tools. The `frames` parameter allows for precise frame count specification, while `execution_expires_after` sets a timeout threshold for tasks. Additionally, mutual exclusivity between `frames` and `duration` is enforced, ensuring proper payload handling and error management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedreamCli#2",
+      "title": "Fix payload field and add adaptive resolution in Seedream Cli 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedreamCli",
+        "fix",
+        "feature",
+        "update",
+        "cli"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedreamCli/pull/2",
+      "summary": "This update resolves discrepancies between the CLI and OpenAPI spec by correcting the payload field from `resolution` to `size`. Additionally, the `adaptive` resolution option has been introduced, enhancing the flexibility of image generation. The changes also include updates to the resolution display and test assertions to reflect the new options."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#44",
+      "title": "Syncing with Latest API Spec in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "sync",
+        "api",
+        "docs",
+        "update",
+        "luma"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/44",
+      "summary": "This PR aims to synchronize the MCPLuma repository with the latest updates from the upstream Docs API specification. Key changes include updates to models, endpoints, and parameters, ensuring consistency across all components. The sync process will follow the detailed instructions provided in the repository."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SoraCli#2",
+      "title": "Revamp Video Parameters to Align with OpenAPI Spec in Sora Cli 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SoraCli",
+        "video",
+        "api",
+        "cli",
+        "update",
+        "sora"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SoraCli/pull/2",
+      "summary": "This update synchronizes the `/sora/videos` endpoint schema with the CLI, introducing new parameters and validating existing ones. Key changes include updated `--size` and `--duration` options, along with the addition of `--version`, `--character-url`, `--character-start`, and `--character-end`. These enhancements improve user experience and ensure compliance with the latest API specifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/VeoCli#2",
+      "title": "Exciting New Model and Aspect Ratio Added in Veo Cli 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "VeoCli",
+        "feature",
+        "update",
+        "cli",
+        "models",
+        "aspect-ratio"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/VeoCli/pull/2",
+      "summary": "This update introduces the `veo31-fast-ingredient` model and a new portrait aspect ratio of `9:16` to the CLI. Key changes include updates to the output module, README, and tests to accommodate these additions. Users can now generate videos using the new model and aspect ratio seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPFlux#36",
+      "title": "MCPFlux is now fully verified with the latest flux.json spec in M C P Flux 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPFlux",
+        "verification",
+        "sync",
+        "mcpflux",
+        "spec",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPFlux/pull/36",
+      "summary": "The verification process confirmed that MCPFlux is in complete alignment with the latest flux.json specifications. Key findings include that the `FluxModel` matches the required models, and all necessary endpoints and parameters are fully covered. No code changes were needed, ensuring the repository remains in sync and functional."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPNanoBanana#49",
+      "title": "Enhance NanoBanana with New Model Support in M C P Nano Banana 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPNanoBanana",
+        "update",
+        "feature",
+        "model",
+        "documentation",
+        "image-generation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPNanoBanana/pull/49",
+      "summary": "This update introduces the `nano-banana-2` model to the NanoBanana suite, enhancing the existing options with pro-level quality at flash speed. The `NanoBananaModel` type has been updated to include this new model, and field descriptions for the `model` parameter in both `nanobanana_generate_image` and `nanobanana_edit_image` functions have been revised to reflect these changes. This enhancement aims to improve user experience and flexibility in image generation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#45",
+      "title": "Update video mode to comply with API specs in M C P Midjourney 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "video",
+        "api",
+        "update",
+        "types"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/45",
+      "summary": "This update restricts the video generation modes to only 'fast' and 'turbo' as per the API specifications. The changes include the introduction of a new `VideoMode` type and adjustments in the video tools to ensure type safety. All other endpoints are already aligned with the current spec, ensuring a smooth user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/OOBEIntegration#1",
+      "title": "Mainnet SAP Registration Now Live in O O B E Integration 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "OOBEIntegration",
+        "feature",
+        "sap",
+        "mainnet",
+        "solana",
+        "integration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/OOBEIntegration/pull/1",
+      "summary": "We've successfully added mainnet support to the SAP registration script, allowing AceDataCloud to register on the Solana mainnet. This update includes the introduction of a new command for mainnet registration and enhancements to the registration process, ensuring a smoother experience for users. Key components such as Agent PDA and various indexes have also been integrated."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedream#34",
+      "title": "Repo Sync Verified: No Changes Needed in M C P Seedream 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedream",
+        "sync",
+        "verification",
+        "docs",
+        "seedream",
+        "no-change"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedream/pull/34",
+      "summary": "The recent updates in the upstream Docs did not affect the Seedream spec, confirming that `openapi/seedream.json` remains unchanged. A thorough verification against the current code showed all components are in sync and functioning as expected. No code modifications are required at this time."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSora#42",
+      "title": "Clean Up Orientation Details in M C P Sora 📽️",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSora",
+        "documentation",
+        "cleanup",
+        "api",
+        "tools"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSora/pull/42",
+      "summary": "This update removes the unsupported `square` orientation from the documentation and tool descriptions. Key changes include updates to the README and video tool scripts, ensuring that only valid orientations (`landscape` and `portrait`) are mentioned. This enhances clarity and aligns the documentation with the API specifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SunoCli#5",
+      "title": "Chirp-v5-5 Model Sync Verified in Suno Cli 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SunoCli",
+        "sync",
+        "verification",
+        "api",
+        "tests",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SunoCli/pull/5",
+      "summary": "The `chirp-v5-5` model is confirmed to be in sync with the latest Docs specifications. Key checks include its presence in `SUNO_MODELS`, implementation of all 12 API endpoints, and successful passing of all tests. No code changes were necessary, ensuring the repository remains up to date."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#7",
+      "title": "Updated Available Models with chirp-v3-0 in Skills 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "sync",
+        "update",
+        "documentation",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/7",
+      "summary": "This update syncs the `suno-music/SKILL.md` file with the latest OpenAPI spec from AceDataCloud. The `chirp-v3-0` model has been added to the Available Models table, ensuring that all relevant models are accurately represented. All other skills remain in sync with the documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPVeo#43",
+      "title": "Sync verification complete with no changes needed in M C P Veo 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPVeo",
+        "sync",
+        "verification",
+        "api",
+        "tests",
+        "no-changes"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPVeo/pull/43",
+      "summary": "The recent verification confirmed that the MCPVeo is in sync with the Docs, with no drift found. All 14 tests passed successfully, ensuring that the API specifications remain intact. Key components like `VeoModel`, `VideoResolution`, and `AspectRatio` were all validated without any required code changes."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPSuno#59",
       "title": "Sync latest chirp-v5-5 model updates in M C P Suno 🚀",
       "tags": [
