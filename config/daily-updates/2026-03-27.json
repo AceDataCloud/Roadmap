@@ -3,6 +3,138 @@
   "date": "2026-03-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPSuno#59",
+      "title": "Sync latest chirp-v5-5 model updates in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "update",
+        "model",
+        "suno",
+        "integration",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/59",
+      "summary": "This update integrates the new `chirp-v5-5` model into the MCP server, reflecting the latest changes from the Suno API. Key modifications include updates to the model table, README documentation, and integration tests to ensure the new model is recognized. This enhances the overall model offerings and improves recommendations for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#57",
+      "title": "Sync model updates by removing chirp-v5-5 in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "sync",
+        "update",
+        "model",
+        "documentation",
+        "cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/57",
+      "summary": "This update removes the `chirp-v5-5` model from the codebase to align with the current upstream Docs specification. Key changes include updates to `core/types.py`, `tools/info_tools.py`, `README.md`, and `tests/test_integration.py`, ensuring that the model list and documentation reflect the latest available models. The current model enum now includes `chirp-v5`, `chirp-v4-5-plus`, and others, enhancing clarity for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#55",
+      "title": "Sync Up with New Chirp Model in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "sync",
+        "update",
+        "model",
+        "documentation",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/55",
+      "summary": "This update synchronizes the MCP server with the latest upstream Docs specification by adding the `chirp-v5-5` model. Key changes include updates to the model enum in `core/types.py`, enhancements to the model table in `tools/info_tools.py`, and modifications to the README and integration tests to reflect this new addition. Overall, this ensures users have access to the newest model features and capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#53",
+      "title": "Streamline Model Selection by Removing chirp-v5-5 in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "model",
+        "update",
+        "documentation",
+        "cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/53",
+      "summary": "The `chirp-v5-5` model has been removed from the codebase following its removal from the upstream OpenAPI spec. Key updates include modifications to `core/types.py`, `tools/info_tools.py`, and the `README.md`, promoting `chirp-v5` as the top-tier model. This change simplifies model selection and enhances clarity for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#51",
+      "title": "Enhance SunoModel with chirp-v5-5 in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "update",
+        "suno",
+        "model",
+        "documentation",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/51",
+      "summary": "This update integrates `chirp-v5-5` into the SunoModel, ensuring it aligns with the latest OpenAPI specifications. Key changes include updates to the model table in the documentation and the addition of `chirp-v5-5` to the available models list. This enhancement improves user access to the latest model version, promoting better quality outputs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#47",
+      "title": "Enhance Publish Workflow with Metadata Support in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "workflow",
+        "twine",
+        "metadata",
+        "publish",
+        "upgrade"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/47",
+      "summary": "This update upgrades Twine in the publish workflow to version 6.1.0, enabling support for Python package metadata 2.4. It introduces a twine check before uploads to ensure clearer error signals for metadata issues. Additionally, it allows various publishing processes to run concurrently after the build, improving overall efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#46",
+      "title": "Remove chirp-v5-5 model references in M C P Suno 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "model",
+        "update",
+        "cleanup",
+        "suno"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/46",
+      "summary": "This update removes all references to the `chirp-v5-5` model from the codebase following its removal from the upstream Suno OpenAPI specification. Key changes include updates to model tables, descriptions, and integration tests to ensure consistency with the available models. The `chirp-v5` model is now highlighted as the recommended option for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#626",
+      "title": "Enhance error handling for OpenAI requests in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "openai",
+        "testing",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update improves error recording for failed OpenAI requests by ensuring that actual error payloads are preserved in gateway usage entries. It also prevents embeddings records from overwriting stored error bodies and includes focused unit tests to validate these changes. Overall, this enhances the reliability and transparency of error handling in the Platform Service."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#625",
       "title": "Enhance veo video generation with retry logic in Platform Service 🚀",
       "tags": [
