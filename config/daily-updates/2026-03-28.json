@@ -3,6 +3,772 @@
   "date": "2026-03-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#90",
+      "title": "Fix environment variable handling to prevent merge conflicts in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "fix",
+        "kubernetes",
+        "deployment",
+        "environment-variables"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue with the environment variable configuration in the deployment YAML. By reverting to plain value fields for specific variables, we ensure compatibility with the existing deployment and prevent API server validation errors. The changes streamline the integration with Tencent SSM for runtime value injection."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SunoCli#12",
+      "title": "Update MCP Suno Repo URL in Suno Cli 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SunoCli",
+        "update",
+        "documentation",
+        "url",
+        "suno"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SunoCli/pull/12",
+      "summary": "This update modifies the README.md file to reflect the new GitHub URL for the MCP Suno repository, changing it from MCPSuno to SunoMCP. This ensures users have the correct link for accessing the MCP server version. The change enhances clarity and maintains up-to-date documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#13",
+      "title": "Sync and Clean Up Skills in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "sync",
+        "cleanup",
+        "skills",
+        "bugfix",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/13",
+      "summary": "This update resolves issues with stale deployed copies in the `.github/skills` and `.agents/skills` directories, ensuring they are now in sync with the canonical `skills/` files. It also removes nested directory artifacts caused by a bug in the sync workflow, enhancing the overall organization and efficiency of the project. Key changes include the implementation of a cleanup step in the sync process to prevent future issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#89",
+      "title": "Fix deployment issues with x402 env vars in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "fix",
+        "deployment",
+        "gateway",
+        "env-vars"
+      ],
+      "public": false,
+      "summary": "This update resolves deployment failures caused by incorrect `secretKeyRef` configurations for the X402 environment variables. By switching to plain empty string defaults, we ensure that the correct values are filled at pod startup, allowing for successful deployments. This fix is crucial as it unblocks all deployments that were stalled after the x402 merge."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/VeoCli#4",
+      "title": "Enhance video commands with new parameters in Veo Cli 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "VeoCli",
+        "video",
+        "cli",
+        "update",
+        "features",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/VeoCli/pull/4",
+      "summary": "This update introduces three new parameters to the CLI: `resolution`, `translation`, and the mandatory `action` field. Users can now specify output resolutions like `4k`, `1080p`, and `gif`, as well as enable or disable translation for video generation commands. The README has been updated to reflect these changes, and tests have been added to ensure functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/VeoMCP#47",
+      "title": "Updated GitHub URL in Veo M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "VeoMCP",
+        "update",
+        "jetbrains",
+        "kotlin",
+        "source-code",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/VeoMCP/pull/47",
+      "summary": "The GitHub URL in the JetBrains plugin Kotlin source has been updated from `MCPVeo` to `VeoMCP`. This change ensures that users are directed to the correct repository for the source code. It enhances the accuracy of the documentation and improves user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SunoMCP#66",
+      "title": "Update GitHub URL in JetBrains Plugin in Suno M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SunoMCP",
+        "update",
+        "jetbrains",
+        "kotlin",
+        "link",
+        "suno"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SunoMCP/pull/66",
+      "summary": "The GitHub URL in the JetBrains plugin's Kotlin source code has been updated from `MCPSuno` to `SunoMCP`. This change ensures that users are directed to the correct repository for the source code. It's a small but important update for maintaining accurate links."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SoraMCP#46",
+      "title": "Updated GitHub URL in Sora M C P 🔗",
+      "tags": [
+        "github",
+        "pr",
+        "SoraMCP",
+        "update",
+        "jetbrains",
+        "kotlin",
+        "source-code"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SoraMCP/pull/46",
+      "summary": "The GitHub URL in the JetBrains plugin Kotlin source has been updated from `MCPSora` to `SoraMCP`. This change ensures that users are directed to the correct repository for the source code, enhancing accessibility and clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/ShortURLMCP#33",
+      "title": "Updated GitHub URL in JetBrains Plugin in Short U R L M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "ShortURLMCP",
+        "update",
+        "jetbrains",
+        "kotlin",
+        "plugin",
+        "url"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/ShortURLMCP/pull/33",
+      "summary": "The GitHub URL in the JetBrains plugin's Kotlin source code has been updated from `MCPShortURL` to `ShortURLMCP`. This change ensures that users are directed to the correct repository for the plugin, enhancing accessibility and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SerpMCP#47",
+      "title": "Updated GitHub URL in JetBrains Plugin in Serp M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SerpMCP",
+        "update",
+        "jetbrains",
+        "kotlin",
+        "link",
+        "fix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SerpMCP/pull/47",
+      "summary": "The GitHub URL in the JetBrains plugin's Kotlin source code has been updated from `MCPSerp` to `SerpMCP`. This change ensures that users are directed to the correct repository for accessing the source code. It's a small but important update for maintaining accurate links."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedreamMCP#37",
+      "title": "Updated GitHub URL in JetBrains Plugin in Seedream M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedreamMCP",
+        "update",
+        "jetbrains",
+        "kotlin",
+        "plugin"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedreamMCP/pull/37",
+      "summary": "The GitHub URL in the JetBrains plugin's Kotlin source code has been updated from `MCPSeedream` to `SeedreamMCP`. This change ensures that users are directed to the correct repository, enhancing accessibility and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedanceMCP#39",
+      "title": "Updated GitHub URL in JetBrains Plugin in Seedance M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedanceMCP",
+        "update",
+        "jetbrains",
+        "kotlin",
+        "link",
+        "fix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedanceMCP/pull/39",
+      "summary": "The source code URL in the Kotlin files for the JetBrains plugin has been updated from `MCPSeedance` to `SeedanceMCP`. This change ensures that users are directed to the correct repository for accessing the source code. It's a small but important update for maintaining accurate links."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/NanoBananaMCP#51",
+      "title": "Updated GitHub URL in Nano Banana M C P 🌟",
+      "tags": [
+        "github",
+        "pr",
+        "NanoBananaMCP",
+        "update",
+        "jetbrains",
+        "kotlin",
+        "url",
+        "fix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/NanoBananaMCP/pull/51",
+      "summary": "This update modifies the source code URL in the JetBrains plugin Kotlin files, changing it from `MCPNanoBanana` to `NanoBananaMCP`. This ensures that users are directed to the correct repository for the project, enhancing accessibility and clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MidjourneyMCP#51",
+      "title": "Updated GitHub URL in Midjourney M C P 🔗",
+      "tags": [
+        "github",
+        "pr",
+        "MidjourneyMCP",
+        "update",
+        "jetbrains",
+        "kotlin",
+        "link",
+        "fix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MidjourneyMCP/pull/51",
+      "summary": "This update modifies the source code URL in the JetBrains plugin's Kotlin files, changing it from `MCPMidjourney` to `MidjourneyMCP`. This ensures that users are directed to the correct repository for the plugin. Such adjustments enhance user experience and maintain accurate links."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/LumaMCP#50",
+      "title": "Updated GitHub URL in Luma M C P 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "LumaMCP",
+        "update",
+        "jetbrains",
+        "kotlin",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/LumaMCP/pull/50",
+      "summary": "This update modifies the source code URL in the JetBrains plugin Kotlin files, changing it from `MCPLuma` to `LumaMCP`. This ensures that users are directed to the correct repository for the project. Such updates enhance user experience and maintain accuracy in documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FluxMCP#40",
+      "title": "Updated GitHub URL in JetBrains Plugin in Flux M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FluxMCP",
+        "update",
+        "jetbrains",
+        "kotlin",
+        "fluxmcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FluxMCP/pull/40",
+      "summary": "This update modifies the source code URL in the JetBrains plugin's Kotlin files, changing it from `MCPFlux` to `FluxMCP`. This ensures that users are directed to the correct repository for the plugin, enhancing user experience and accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/LumaMCP#49",
+      "title": "Standardize Repository References in Luma M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "LumaMCP",
+        "update",
+        "documentation",
+        "repository",
+        "links",
+        "standardization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/LumaMCP/pull/49",
+      "summary": "This update synchronizes the repository name references from the old `MCPXxx` convention to the new `XxxMCP` format. Key changes include updates to the README, CHANGELOG, and configuration files to reflect the new repository name, ensuring consistency across documentation and links. No API specifications were altered in this update."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedanceMCP#38",
+      "title": "Standardize Naming Conventions in Seedance M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedanceMCP",
+        "naming",
+        "documentation",
+        "update",
+        "seedance",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedanceMCP/pull/38",
+      "summary": "This update aligns the naming conventions across the Seedance MCP project by changing references from `MCPXxx` to `XxxMCP`. Key modifications include updates to the README, main module documentation, and various core files to reflect the new naming. These changes enhance clarity and consistency throughout the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/LumaCli#6",
+      "title": "Updated MCP Repo Name References in Luma Cli 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "LumaCli",
+        "update",
+        "documentation",
+        "sync",
+        "readme"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/LumaCli/pull/6",
+      "summary": "This update syncs the README to reflect the new naming convention for MCP repositories, changing references from `MCPXxx` to `XxxMCP`. The comparison section and table column in the README have been updated accordingly. All related endpoints and request parameters remain verified and consistent with the current OpenAPI spec."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#634",
+      "title": "Fix routing for image2video in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "api",
+        "kling",
+        "video",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update corrects the routing for the image2video action to the appropriate upstream endpoint, ensuring that head and tail frame images are respected during video generation. The changes also include tracking the effective upstream action for accurate polling endpoint routing and handling edge cases where text2video requests include start images. Overall, this enhances the functionality and reliability of the Kling Videos Generation API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SoraCli#4",
+      "title": "Update MCP Naming in Sora Cli 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SoraCli",
+        "documentation",
+        "update",
+        "sora",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SoraCli/pull/4",
+      "summary": "This update reflects the renaming of the MCP product from 'MCP Sora' to 'Sora MCP' in the documentation. The README.md has been modified to ensure consistency with the new naming conventions, with no changes to endpoints, parameters, or models. The OpenAPI spec remains fully in sync with the CLI."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SunoCli#11",
+      "title": "Fix parameter names in SunoCli for API compliance in Suno Cli 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "SunoCli",
+        "api",
+        "fix",
+        "suno-cli",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SunoCli/pull/11",
+      "summary": "This update corrects the parameter names for the `mashup-lyrics` command to align with the OpenAPI specification. The fields `lyric_a` and `lyric_b` have been changed to `lyrics_a` and `lyrics_b`, ensuring that the API processes requests correctly. All other endpoints and models are already in sync with the latest spec."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FluxMCP#39",
+      "title": "Sync with Docs complete in Flux M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FluxMCP",
+        "sync",
+        "docs",
+        "verification",
+        "compliance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FluxMCP/pull/39",
+      "summary": "This update aligns the repository with recent changes in the documentation, specifically the renaming of downstream references from `MCPFlux` to `FluxMCP`. All verification checks have passed, confirming that the model enums, endpoints, request parameters, and test suite are fully compliant with the updated specifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SoraMCP#45",
+      "title": "Update GitHub URL references for SoraMCP in Sora M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SoraMCP",
+        "update",
+        "documentation",
+        "links",
+        "sora",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SoraMCP/pull/45",
+      "summary": "This update standardizes the GitHub repository URL references from `mcp-sora` to `SoraMCP` in both `pyproject.toml` and `README.md`. Key changes include updated links for the homepage, repository, issues, and changelog. The PyPI package name and other identifiers remain unchanged, ensuring continuity for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MidjourneyMCP#50",
+      "title": "Updated GitHub Repo References in Midjourney M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MidjourneyMCP",
+        "update",
+        "documentation",
+        "links",
+        "midjourney"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MidjourneyMCP/pull/50",
+      "summary": "This update addresses stale GitHub URLs by renaming references from `mcp-midjourney` to `MidjourneyMCP`. Key changes include updates to the `README.md` for the correct clone URL and the `CHANGELOG.md` for accurate release tag links. The PyPI package name remains unchanged, ensuring consistency across platforms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SerpMCP#46",
+      "title": "Updated GitHub Repo References in Serp M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SerpMCP",
+        "update",
+        "documentation",
+        "urls",
+        "repository",
+        "sync"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SerpMCP/pull/46",
+      "summary": "This update modifies the GitHub repository references from the old `mcp-serp` naming convention to the new `SerpMCP`. Key changes include updates to the `pyproject.toml` and `README.md` files to reflect the new URLs. No functional code changes were made, ensuring that the PyPI package name and other tools remain unaffected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedreamCli#6",
+      "title": "Update MCP References for Clarity in Seedream Cli 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedreamCli",
+        "documentation",
+        "update",
+        "readme",
+        "mcp",
+        "seedream"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedreamCli/pull/6",
+      "summary": "This update modifies the README to reflect the new naming convention for MCP references, changing from `MCPXxx` to `XxxMCP`. The install command has also been updated to match the actual PyPI package name, ensuring users have the correct information. These changes enhance clarity and usability for developers interacting with the Seedream CLI."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SunoMCP#62",
+      "title": "Update default model to chirp-v5-5 and fix model naming in Suno M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SunoMCP",
+        "update",
+        "model",
+        "documentation",
+        "config",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SunoMCP/pull/62",
+      "summary": "This update synchronizes the default model to `chirp-v5-5`, enhancing the quality of audio generation. Key changes include updates to configuration files, README documentation, and test assertions to reflect the new model. The model name for `chirp-v3` has also been corrected to `chirp-v3-0` for consistency with the specification."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/VeoMCP#46",
+      "title": "Sync with Latest API Specification in Veo M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "VeoMCP",
+        "api",
+        "sync",
+        "updates",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/VeoMCP/pull/46",
+      "summary": "This PR aims to synchronize the VeoMCP repository with the latest updates from the upstream Docs API specification. Key changes include updates to model references and the addition of new features related to downstream repositories. The goal is to ensure that all models, endpoints, and parameters are accurately reflected in the codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedanceCli#6",
+      "title": "Sync API Specifications with Latest Docs Updates in Seedance Cli 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedanceCli",
+        "api",
+        "sync",
+        "docs",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedanceCli/pull/6",
+      "summary": "This PR focuses on synchronizing the API specifications with the latest updates from the upstream Docs. Key changes include updates to the MCP repo name references and enhancements to the API endpoints and parameters. The goal is to ensure that the Seedance CLI remains aligned with the most current API specifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#254",
+      "title": "Update MCP Repo Name References in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "chore",
+        "update",
+        "backend",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update modifies all references from the old MCP repository names (MCPXxx) to the new naming convention (XxxMCP) across various files. Key changes include updates in documentation and code files, ensuring consistency with the recent GitHub repository renames. This will enhance clarity and maintainability in the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#48",
+      "title": "Update MCP Repo Name References in Docs 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "docs",
+        "update",
+        "mcp",
+        "repository",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/48",
+      "summary": "This update modifies all references from the old MCP repository names (MCPXxx) to the new naming convention (XxxMCP) across various documentation files. Key changes include updates in workflow files and multiple language-specific documentation files, ensuring consistency and clarity for users. This will enhance the user experience by aligning documentation with the latest repository names."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/VeoMCP#44",
+      "title": "Updated all references to VeoMCP in Veo M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "VeoMCP",
+        "rename",
+        "documentation",
+        "update",
+        "consistency"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/VeoMCP/pull/44",
+      "summary": "This update renames all internal references from MCPVeo to VeoMCP across various files, including documentation and configuration files. Key changes include updates to README files and project structure links, ensuring consistency following the repository rename. This enhances clarity for users and contributors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SunoMCP#64",
+      "title": "Updated References to SunoMCP in Suno M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SunoMCP",
+        "refactor",
+        "documentation",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SunoMCP/pull/64",
+      "summary": "All internal references have been successfully updated from 'MCPSuno' to 'SunoMCP' across various files, including documentation and configuration files. This change ensures consistency following the repository rename and improves clarity for users and developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SoraMCP#43",
+      "title": "Updated repository references to SoraMCP in Sora M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SoraMCP",
+        "rename",
+        "documentation",
+        "update",
+        "sora"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SoraMCP/pull/43",
+      "summary": "This update renames all internal references from `MCPSora` to `SoraMCP` across various files, including documentation and configuration files. The changes ensure consistency following the repository rename, enhancing clarity for users and developers alike."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/ShortURLMCP#32",
+      "title": "Updated repository references for clarity in Short U R L M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "ShortURLMCP",
+        "refactor",
+        "documentation",
+        "update",
+        "config"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/ShortURLMCP/pull/32",
+      "summary": "All internal references have been successfully updated from `MCPShortURL` to `ShortURLMCP` following the repository rename. This change enhances consistency across documentation and configuration files. Key files modified include README documents and configuration settings in JetBrains and VS Code."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SerpMCP#44",
+      "title": "Updated internal references to SerpMCP in Serp M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SerpMCP",
+        "update",
+        "documentation",
+        "refactor",
+        "consistency"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SerpMCP/pull/44",
+      "summary": "All internal references have been successfully updated from MCPSerp to SerpMCP following the repository rename. Key files modified include README.md, various IDE-specific README files, and configuration files. This change ensures consistency across documentation and codebase, enhancing clarity for users and developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedreamMCP#35",
+      "title": "Updated repository references to SeedreamMCP in Seedream M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedreamMCP",
+        "refactor",
+        "documentation",
+        "update",
+        "repository",
+        "seedream"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedreamMCP/pull/35",
+      "summary": "All internal references have been updated from `MCPSeedream` to `SeedreamMCP` following the repository rename. Key files modified include README.md, gradle.properties, and various configuration files to reflect the new naming convention. This change ensures consistency across documentation and project files."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedanceMCP#36",
+      "title": "Updated Repository References in Seedance M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedanceMCP",
+        "chore",
+        "refactor",
+        "documentation",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedanceMCP/pull/36",
+      "summary": "All internal references have been successfully updated from `MCPSeedance` to `SeedanceMCP` following the repository rename. Key files modified include the README, CHANGELOG, and configuration files to reflect the new naming convention. This ensures consistency across documentation and code, enhancing clarity for users and contributors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/NanoBananaMCP#50",
+      "title": "Updated References to NanoBananaMCP in Nano Banana M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "NanoBananaMCP",
+        "refactor",
+        "documentation",
+        "update",
+        "chore"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/NanoBananaMCP/pull/50",
+      "summary": "All internal references have been successfully updated from `MCPNanoBanana` to `NanoBananaMCP` following the repository rename. Key files such as README, configuration files, and documentation have been modified to reflect this change, ensuring consistency across the project. This update enhances clarity and aligns with the new repository name."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MidjourneyMCP#48",
+      "title": "Updated repository references for clarity in Midjourney M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MidjourneyMCP",
+        "update",
+        "refactor",
+        "documentation",
+        "consistency"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MidjourneyMCP/pull/48",
+      "summary": "All internal references have been updated from `MCPMidjourney` to `MidjourneyMCP` following the recent repository rename. Key files modified include README documents, configuration files, and code references to ensure consistency across the project. This change enhances clarity and aligns with the new naming convention."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/LumaMCP#47",
+      "title": "Updated repository references to LumaMCP in Luma M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "LumaMCP",
+        "refactor",
+        "documentation",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/LumaMCP/pull/47",
+      "summary": "All internal references have been successfully updated from `MCPLuma` to `LumaMCP` following the repository rename. Key files modified include README documents, configuration files, and plugin properties. This change ensures consistency across documentation and code, enhancing clarity for users and developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FluxMCP#37",
+      "title": "Updated repository references to FluxMCP in Flux M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FluxMCP",
+        "chore",
+        "refactor",
+        "documentation",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FluxMCP/pull/37",
+      "summary": "All internal references have been successfully updated from `MCPFlux` to `FluxMCP` following the repository rename. Key files modified include README, configuration files, and documentation, ensuring consistency across the project. This change enhances clarity and aligns with the new repository name."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#388",
+      "title": "Mobile Download Entry Restored in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "mobile",
+        "download",
+        "android",
+        "update",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/388",
+      "summary": "This update restores the mobile download page and route that were accidentally reverted. Key changes include exposing the Android APK download entry in the header, footer, and user menu, along with fixing the Android GitHub Actions workflow for native plugin files. The changes enhance user accessibility to mobile downloads and improve the overall functionality of the app."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#630",
+      "title": "Optimize CI for Non-Service Changes in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "ci",
+        "docker",
+        "workflow",
+        "build",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "This update modifies the CI workflow to only trigger the `docker-compose build` for top-level directories containing a Compose file. It prevents failures in the build job caused by changes in non-service paths like `.github`. The change is limited to the existing `check-pr` workflow, ensuring a smoother CI process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#633",
+      "title": "Updated scaffold to version 0.9.0 in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "update",
+        "dependency",
+        "poetry",
+        "requirements",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update bumps the acedatacloud-scaffold to version 0.9.0 across all PlatformService workers that depend on it. Additionally, Poetry lockfiles have been refreshed for all affected workers, and the exported requirements.txt files for the openai and aichat workers have been updated accordingly. These changes ensure that the latest features and fixes from the scaffold are available to the workers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/ScaffoldPython#2",
+      "title": "Automate PyPI Publishing with CalVer in Scaffold Python 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "ScaffoldPython",
+        "ci",
+        "automation",
+        "pypi",
+        "versioning",
+        "github-actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/ScaffoldPython/pull/2",
+      "summary": "This update introduces a new GitHub Actions workflow that automates the publishing of packages to PyPI upon merging to the main branch. It utilizes CalVer versioning to ensure unique versioning based on the date and build counter, and includes concurrency control to prevent duplicate publishes. Additionally, it creates GitHub Releases with distribution artifacts for better version management."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformGateway#86",
       "title": "Update Tencent Cloud SDK to Latest Version in Gateway 🚀",
       "tags": [
