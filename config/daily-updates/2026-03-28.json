@@ -1,0 +1,138 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-28",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#627",
+      "title": "Update wcnb Domain and Enhance Logging in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "update",
+        "logging",
+        "security",
+        "domain",
+        "wcnb"
+      ],
+      "public": false,
+      "summary": "This update switches the wcnb upstream domain from `wcnb.ai` to `wcnbai.com` and updates the associated secret keys for nano, veo, and checker. Additionally, it introduces masked logging for wcnb API calls to improve production debugging. These changes aim to enhance security and streamline operations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedreamCli#4",
+      "title": "Sync CLI with OpenAPI Spec and Enhance Parameters in Seedream Cli 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedreamCli",
+        "cli",
+        "api",
+        "update",
+        "bugfix",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedreamCli/pull/4",
+      "summary": "This update fixes the `edit` command payload by renaming `image_urls` to `image` and removing the hardcoded action parameter. Additionally, new parameters have been added for both `generate` and `edit` commands, enhancing functionality and user experience. The changes ensure better alignment with the OpenAPI specification."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/LumaCli#4",
+      "title": "Enhance video commands with `--timeout` option in Luma Cli 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "LumaCli",
+        "feature",
+        "cli",
+        "timeout",
+        "luma"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/LumaCli/pull/4",
+      "summary": "This update introduces a `--timeout` parameter for the video commands in the Luma CLI, allowing users to specify a server-side data-return timeout. The new option has been integrated into the `generate`, `image-to-video`, and `extend` commands, with corresponding tests added to ensure functionality. Documentation has also been updated to reflect this new feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedanceCli#4",
+      "title": "SeedanceCli verified against latest Docs spec in Seedance Cli 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedanceCli",
+        "sync",
+        "verification",
+        "documentation",
+        "seedance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedanceCli/pull/4",
+      "summary": "This sync confirmed that the SeedanceCli repository is fully aligned with the current `openapi/seedance.json` specification. All models and parameters were verified, and no code changes were necessary as the spec remained unchanged. The repository is now fully in sync with the latest documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPLuma#46",
+      "title": "MCPLuma is in sync with OpenAPI specs in M C P Luma 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPLuma",
+        "sync",
+        "verification",
+        "openapi",
+        "luma",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPLuma/pull/46",
+      "summary": "This update confirms that MCPLuma is fully aligned with the specifications outlined in openapi/luma.json. The verification process showed no required changes, as all endpoints, parameters, and types are already consistent. Key functionalities such as video generation and task management are well-covered across the tool signatures."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSeedance#35",
+      "title": "Update model identifiers in README for accuracy in M C P Seedance 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSeedance",
+        "documentation",
+        "updates",
+        "models",
+        "accuracy"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSeedance/pull/35",
+      "summary": "The README model table has been updated to reflect the correct model identifiers, aligning with `core/types.py` and the upstream OpenAPI spec. Four model names were corrected to ensure consistency and accuracy, enhancing the documentation's reliability for users. This change eliminates any discrepancies between the README and the actual model identifiers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSerp#43",
+      "title": "Sync verification complete for SERP repo in M C P Serp 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSerp",
+        "sync",
+        "verification",
+        "openapi",
+        "serp",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSerp/pull/43",
+      "summary": "The SERP repository has been verified to be in sync with the latest `openapi/serp.json`. Key elements such as endpoints and parameters were compared and confirmed to be correctly mapped with no required changes. This ensures that the integration remains functional and up-to-date."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPMidjourney#36",
+      "title": "Enhance Midjourney MCP Icon Metadata in M C P Midjourney 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPMidjourney",
+        "metadata",
+        "update",
+        "midjourney",
+        "server",
+        "icon"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPMidjourney/pull/36",
+      "summary": "This update adds explicit icon metadata to the hosted Midjourney server card and standardizes the server.json icons and title metadata for registry consumers. Additionally, the website URL has been updated to point directly to the GitHub repository instead of the generic AceDataCloud platform brand. These changes improve the clarity and usability of the MCP Midjourney integration."
+    }
+  ]
+}
