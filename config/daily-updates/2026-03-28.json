@@ -3,6 +3,38 @@
   "date": "2026-03-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#86",
+      "title": "Update Tencent Cloud SDK to Latest Version in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "update",
+        "sdk",
+        "python",
+        "dependencies",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update bumps the `tencentcloud-sdk-python` package from version 3.1.57 to 3.1.61. Key changes include improvements and bug fixes from the latest releases, enhancing the functionality and stability of the SDK. The modifications were made in both `poetry.lock` and `pyproject.toml` files."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#632",
+      "title": "Enhance OpenAI Worker with Duration Tracking in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "openai",
+        "api",
+        "python",
+        "payment"
+      ],
+      "public": false,
+      "summary": "This update adds the `started_at` and `payflow` fields to the OpenAI worker, aligning its functionality with the TypeScript workers. The changes enable better API duration tracking and support for x402 payment flows. Key modifications ensure that these fields are correctly forwarded from query parameters, enhancing overall performance and consistency."
+    },
+    {
       "id": "gh:pr:AceDataCloud/ScaffoldPython#1",
       "title": "Enhance payflow parameter handling in Scaffold Python 🚀",
       "tags": [
