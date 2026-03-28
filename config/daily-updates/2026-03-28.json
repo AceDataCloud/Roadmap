@@ -3,6 +3,102 @@
   "date": "2026-03-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#95",
+      "title": "Ensure UTC-aware datetimes in auth phase for accuracy in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "datetime",
+        "auth",
+        "bugfix",
+        "gateway",
+        "utc"
+      ],
+      "public": false,
+      "summary": "This update replaces all remaining timezone-naive datetime calls in the authentication phase with UTC-aware datetime generation. Key changes include modifying the `started_at` timestamps and `credential.expired_at` comparisons to ensure consistency across the codebase. As a result, the `record()` function will now correctly handle datetime comparisons, eliminating potential errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#94",
+      "title": "Fix payment payload structure for facilitator in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "bugfix",
+        "payment",
+        "gateway",
+        "authorization",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update resolves the issue with the X402 payment flow failing due to missing authorization fields. The extracted inner payload is now correctly wrapped in the expected structure before being sent to the facilitator's verify/settle endpoints. All tests have passed successfully, ensuring the fix is robust."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#390",
+      "title": "Revamp Mobile Download Page for Clarity in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "ux",
+        "mobile",
+        "design",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/390",
+      "summary": "The mobile download landing page has been redesigned to enhance visual hierarchy and improve call-to-action clarity for different platforms. The header logo now displays the configured site logo correctly, and updated English and Chinese copy has been added to align with the new layout. These changes aim to provide a more user-friendly experience for mobile users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#93",
+      "title": "Fix datetime handling in record() for better stability in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "bugfix",
+        "datetime",
+        "gateway",
+        "stability",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update resolves a TypeError in the `/record` endpoint caused by subtracting offset-naive and offset-aware datetimes. The fix ensures that `finished_at` is always UTC-aware, improving the reliability of datetime operations. Additionally, redundant imports have been cleaned up, and all tests have passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#92",
+      "title": "Clean Up Tencent Cloud Integration in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "cleanup",
+        "tencent",
+        "integration",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update removes the unused Tencent Cloud SSM secrets loader, which was never enabled due to an empty configuration. Key changes include the deletion of the SSM loader script and the removal of related environment variables from the deployment YAML. The Tencent Cloud SDK remains in use for other functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#91",
+      "title": "Fix x402 Env Vars and Deployment Strategy in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "fix",
+        "deployment",
+        "kubernetes",
+        "x402",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update restores the use of `secretKeyRef` for x402 environment variables, addressing the issue where SSM was not enabled and vars remained empty. Additionally, the deployment strategy has been switched to `kubectl apply --server-side --force-conflicts` to prevent strategic merge conflicts, ensuring that any deployment failures are now visible. These changes enhance the stability and functionality of the x402 integration."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformGateway#90",
       "title": "Fix environment variable handling to prevent merge conflicts in Gateway 🚀",
       "tags": [
