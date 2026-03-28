@@ -3,6 +3,184 @@
   "date": "2026-03-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/ScaffoldPython#1",
+      "title": "Enhance payflow parameter handling in Scaffold Python 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "ScaffoldPython",
+        "feature",
+        "enhancement",
+        "payment",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/ScaffoldPython/pull/1",
+      "summary": "This update introduces the forwarding of the `payflow` query parameter from the Kong-injected query string to the `/record` endpoint payload. This enhancement allows the PlatformGateway to effectively identify x402 payment requests, improving the overall functionality of the system. Key modifications were made in the base handler to accommodate this new feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#631",
+      "title": "Enhance Payment Flow Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "payment",
+        "typescript",
+        "python",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update forwards the `payflow` query parameter from Kong to the Gateway's `/record` endpoint, allowing for better identification of x402 payment requests during billing. Key changes include updates to 13 TypeScript workers and one Python worker to extract and include the `payflow` field in the POST payload. This enhancement ensures that balance deductions are skipped for x402-settled requests, improving the payment processing workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#87",
+      "title": "Exciting x402 HTTP Micropayment Support for OOBE Synapse Agents in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "payment",
+        "api",
+        "gateway",
+        "usdc"
+      ],
+      "public": false,
+      "summary": "This update integrates the x402 HTTP micropayment protocol into PlatformGateway, allowing OOBE Synapse agents to make API payments using USDC without Bearer tokens. Key changes include the introduction of a feature flag for enabling the x402 flow, modifications to the Gateway Auth and record methods, and new utility functions for payment processing. The existing Bearer token flow remains unchanged, ensuring a smooth transition for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#88",
+      "title": "Enhance API Usage Timing Fields in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "api",
+        "gateway",
+        "update",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces the ability to accept and persist timing fields such as started_at, finished_at, and duration in the gateway record pipeline. The ApiUsage model has been extended to include these fields, ensuring that timing data is accurately recorded when API usage is created or updated. The changes improve the tracking and analysis of API performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#253",
+      "title": "Enhance API Usage Tracking in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "backend",
+        "enhancement",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This update introduces new indexed fields for tracking API usage timing, including 'started_at', 'finished_at', and 'duration'. These fields have been added to the ApiUsage model and exposed through the ApiUsage serializer. The migration has been applied locally to ensure smooth integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SunoCli#9",
+      "title": "Exciting New API Actions and Parameters Added in Suno Cli 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SunoCli",
+        "api",
+        "commands",
+        "update",
+        "suno-cli",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SunoCli/pull/9",
+      "summary": "This update syncs the Suno CLI with the latest AceDataCloud/Docs OpenAPI spec, introducing 5 new commands and enhancing 7 existing ones with additional parameters. New commands include `generate-persona-vox`, `all-stems`, `underpainting`, `overpainting`, and `samples`, each designed to expand the creative capabilities of users. The updates improve functionality and provide more options for audio manipulation, enhancing the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#629",
+      "title": "Enhance CI Workflow to Block Failures in Platform Service 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "ci",
+        "workflow",
+        "lint",
+        "prettier",
+        "build"
+      ],
+      "public": false,
+      "summary": "This update removes the `|| true` fallbacks from lint and prettier checks in the CI workflow, ensuring that any failures will block pull requests. Additionally, the fallback has been removed from the docker-compose build process, enhancing the reliability of the build jobs. These changes are scoped to the existing `check-pr` workflow, allowing current required checks to function correctly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#628",
+      "title": "Enhance API Timing Propagation in Platform Service ⏱️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "api",
+        "performance",
+        "update",
+        "timing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces the propagation of timing fields such as started_at, finished_at, and duration across the PlatformService worker usage records. These timing values are now persisted into task state before posting usage records to the gateway, ensuring that final timing values are included in worker success payloads for updated handlers. This enhancement improves tracking and performance analysis of API usage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#10",
+      "title": "Enhance Suno Music Skill with Latest Model and Actions in Skills 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "update",
+        "suno-music",
+        "documentation",
+        "bug-fix",
+        "actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/10",
+      "summary": "This update syncs the Suno Music skill documentation with the latest OpenAPI spec, introducing the chirp-v5-5 model and expanding the action enum. Key changes include updated examples, a bug fix for custom generation, and a comprehensive table of available actions. Additionally, a note on the variation_category parameter has been added to clarify its usage in version 5 and above."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#11",
+      "title": "Update Suno Music Model to Chirp-v5-5 in Skills 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "update",
+        "suno-music",
+        "documentation",
+        "model",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/11",
+      "summary": "The default model for the Suno Music skill has been updated from `chirp-v4-5` to `chirp-v5-5` in the documentation. Key examples in the Quick Start and Core Workflow sections have been modified to reflect this change. All other skills have been verified against the latest OpenAPI specs, confirming no additional updates are necessary."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPSuno#63",
+      "title": "Translation sync completed in M C P Suno 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPSuno",
+        "translation",
+        "localization",
+        "sync",
+        "verification",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPSuno/pull/63",
+      "summary": "This update synchronizes the zh-CN translations with the latest upstream Docs commit. No API changes were introduced, ensuring that all existing models and endpoints remain intact. The verification process confirmed that all tests are passing, maintaining the stability of the project."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#627",
       "title": "Update wcnb Domain and Enhance Logging in Platform Service 🚀",
       "tags": [
