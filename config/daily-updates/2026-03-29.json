@@ -3,6 +3,101 @@
   "date": "2026-03-29",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/VeoMCP#48",
+      "title": "Upgrade Codecov Action to Version 6 in Veo M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "VeoMCP",
+        "dependencies",
+        "ci",
+        "codecov",
+        "upgrade"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/VeoMCP/pull/48",
+      "summary": "This update bumps the Codecov Action from version 5 to 6, introducing support for Node 24. The change impacts the CI workflow by modifying the action version used for uploading coverage reports. This upgrade ensures compatibility with the latest features and improvements from Codecov."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#26",
+      "title": "Update Tencent Cloud SDK to Latest Version in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "update",
+        "backend",
+        "dependencies",
+        "python"
+      ],
+      "public": false,
+      "summary": "This update bumps the `tencentcloud-sdk-python` from version 3.1.60 to 3.1.64, ensuring that the latest features and fixes are integrated. The changes are reflected in both the `poetry.lock` and `pyproject.toml` files, enhancing the overall functionality of the backend services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SoraMCP#47",
+      "title": "Upgrade actions/checkout to version 6 in Sora M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SoraMCP",
+        "dependencies",
+        "upgrade",
+        "actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SoraMCP/pull/47",
+      "summary": "This update bumps the actions/checkout dependency from version 4 to 6. Key improvements include support for Node.js 24 and enhanced credential management. This change ensures better performance and security for workflows using this action."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SoraMCP#48",
+      "title": "Upgrade Codecov Action to Version 6 in Sora M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SoraMCP",
+        "dependencies",
+        "ci",
+        "codecov",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SoraMCP/pull/48",
+      "summary": "This update bumps the Codecov GitHub Action from version 5 to version 6. The new version introduces support for Node.js 24, which may affect systems not compatible with this version. The CI workflow has been updated accordingly to ensure seamless integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SerpMCP#49",
+      "title": "Upgrade actions/checkout to version 6 in Serp M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SerpMCP",
+        "dependencies",
+        "upgrade",
+        "actions",
+        "checkout",
+        "ci"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SerpMCP/pull/49",
+      "summary": "This update bumps the actions/checkout dependency from version 4 to 6, enhancing compatibility with Node.js 24 and improving credential management. Key changes include persisting credentials to a separate file and updates to the README for better clarity on requirements. This upgrade ensures smoother operations and better performance in CI/CD workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/ShortURLMCP#34",
+      "title": "Upgrade Codecov Action to Version 6 in Short U R L M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "ShortURLMCP",
+        "codecov",
+        "upgrade",
+        "ci",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/ShortURLMCP/pull/34",
+      "summary": "This update bumps the Codecov GitHub Action from version 5 to version 6. The new version introduces support for Node.js 24, which may affect systems not compatible with this version. The CI workflow has been updated accordingly to ensure seamless integration."
+    },
+    {
       "id": "gh:pr:AceDataCloud/VeoMCP#49",
       "title": "Upgrade actions/checkout to version 6 in Veo M C P 🚀",
       "tags": [
