@@ -3,6 +3,88 @@
   "date": "2026-03-29",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/VeoMCP#49",
+      "title": "Upgrade actions/checkout to version 6 in Veo M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "VeoMCP",
+        "dependencies",
+        "upgrade",
+        "actions",
+        "security"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/VeoMCP/pull/49",
+      "summary": "This update bumps the actions/checkout dependency from version 4 to 6, enhancing compatibility with Node.js 24 and improving credential management. Key changes include persisting credentials to a separate file and updating the README to reflect new requirements. This upgrade ensures smoother operations and better security practices in our workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/LumaMCP#51",
+      "title": "Upgrade Codecov Action to v6 for Enhanced Coverage Reporting in Luma M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "LumaMCP",
+        "dependencies",
+        "ci",
+        "codecov",
+        "upgrade"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/LumaMCP/pull/51",
+      "summary": "This update bumps the Codecov Action from version 5 to 6, introducing support for Node.js 24. The change is crucial for maintaining compatibility with the latest Node.js features and improvements. It also modifies the CI workflow to reflect this upgrade, ensuring seamless coverage uploads."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/LumaMCP#52",
+      "title": "Upgrade actions/checkout to version 6 in Luma M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "LumaMCP",
+        "dependencies",
+        "upgrade",
+        "actions",
+        "checkout",
+        "luma"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/LumaMCP/pull/52",
+      "summary": "This update bumps the actions/checkout dependency from version 4 to 6, enhancing compatibility with Node.js 24 and improving credential management by persisting them to a separate file. The changes also include updates to the README and adjustments for better functionality in Docker container action scenarios."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FluxMCP#41",
+      "title": "Upgrade actions/checkout to version 6 in Flux M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FluxMCP",
+        "dependencies",
+        "upgrade",
+        "actions",
+        "checkout",
+        "security"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FluxMCP/pull/41",
+      "summary": "This update bumps the actions/checkout dependency from version 4 to 6, enhancing compatibility with Node.js 24 and improving credential management. Key changes include persisting credentials to a separate file and updates to the README for better clarity on requirements. This upgrade ensures smoother operations and better security practices in the workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FluxMCP#42",
+      "title": "Upgrade Codecov Action to Version 6 in Flux M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FluxMCP",
+        "codecov",
+        "upgrade",
+        "ci",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FluxMCP/pull/42",
+      "summary": "This update bumps the Codecov GitHub Action from version 5 to version 6, enhancing support for Node 24. The change is reflected in the CI workflow configuration, ensuring that coverage reports are uploaded correctly. This upgrade may introduce breaking changes for systems not compatible with Node 24."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SunoMCP#67",
       "title": "Upgrade actions/checkout to version 6 in Suno M C P 🚀",
       "tags": [
