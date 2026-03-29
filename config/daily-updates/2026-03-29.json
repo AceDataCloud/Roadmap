@@ -1,0 +1,21 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-29",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#636",
+      "title": "Fix billing bug by renaming duration to elapsed in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "billing",
+        "workers",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical billing issue caused by naming collisions between timing fields and video duration. The `duration` field has been renamed to `elapsed` across 13 workers to prevent overwriting, and local time is now used for `startedAt` to eliminate timezone discrepancies. These changes ensure accurate billing and improved functionality."
+    }
+  ]
+}
