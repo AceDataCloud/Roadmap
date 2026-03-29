@@ -3,6 +3,72 @@
   "date": "2026-03-29",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/SunoMCP#67",
+      "title": "Upgrade actions/checkout to version 6 in Suno M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SunoMCP",
+        "dependencies",
+        "upgrade",
+        "actions",
+        "checkout",
+        "suno"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SunoMCP/pull/67",
+      "summary": "This update bumps the actions/checkout dependency from version 4 to 6, enhancing compatibility with Node.js 24 and improving credential management. Key changes include persisting credentials to a separate file and updates to the README for better clarity on requirements. This upgrade ensures smoother operations and better security practices in our workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SunoMCP#68",
+      "title": "Upgrade Codecov Action to Version 6 in Suno M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SunoMCP",
+        "dependencies",
+        "ci",
+        "codecov",
+        "upgrade"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SunoMCP/pull/68",
+      "summary": "This update bumps the Codecov GitHub Action from version 5 to 6, introducing support for Node.js 24. The change impacts the CI workflow by modifying the action version in the configuration file. This upgrade is essential for maintaining compatibility with the latest Node.js features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedreamMCP#38",
+      "title": "Upgrade Codecov Action to Version 6 in Seedream M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedreamMCP",
+        "ci",
+        "codecov",
+        "dependencies",
+        "upgrade"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedreamMCP/pull/38",
+      "summary": "This update bumps the Codecov action from version 5 to version 6 in the CI workflow. The new version introduces support for Node 24, which may affect systems not compatible with it. This change enhances coverage reporting capabilities and ensures the latest features are utilized."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedreamMCP#39",
+      "title": "Upgrade checkout action to version 6 in Seedream M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedreamMCP",
+        "dependencies",
+        "update",
+        "actions",
+        "checkout",
+        "nodejs"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedreamMCP/pull/39",
+      "summary": "This update bumps the actions/checkout dependency from version 4 to 6, enhancing compatibility with Node.js 24 and improving credential management by persisting them to a separate file. The change ensures that users benefit from the latest features and fixes, including better tag handling and worktree support."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#636",
       "title": "Fix billing bug by renaming duration to elapsed in Platform Service 🚀",
       "tags": [
