@@ -3,6 +3,22 @@
   "date": "2026-03-30",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#419",
+      "title": "Enhance Copilot Setup for Seamless Development in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "enhancement",
+        "copilot",
+        "setup",
+        "python",
+        "automation"
+      ],
+      "public": false,
+      "summary": "We've added a new configuration file, copilot-setup-steps.yml, to streamline the setup process for the GitHub Copilot coding agent. This includes steps for installing Python 3.10, Poetry, Playwright Chromium, and verifying the setup with the ruff linter. Note that the Copilot agent needs to be enabled in the repository settings for it to function correctly."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformPublisher#418",
       "title": "Sync Tests with Draft and Publish Flow in Publisher 🚀",
       "tags": [
