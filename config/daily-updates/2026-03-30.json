@@ -3,6 +3,204 @@
   "date": "2026-03-30",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#418",
+      "title": "Sync Tests with Draft and Publish Flow in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "tests",
+        "bilibili",
+        "weibo",
+        "mocking",
+        "pytest"
+      ],
+      "public": false,
+      "summary": "This update enhances the testing framework for Bilibili and Weibo publishers by mocking new draft and publish endpoints. Key changes include updating expected URLs in tests to reflect published article links and fixing test behaviors to align with actual platform operations. As a result, 494 tests passed successfully, addressing previous failures caused by outdated mocks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#19",
+      "title": "Sync SKILL.md Files for Enhanced API Specs in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "api",
+        "documentation",
+        "update",
+        "skills",
+        "sync"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/19",
+      "summary": "This update synchronizes the SKILL.md files for veo-video, seedance-video, nano-banana-image, and producer-music to align with the latest OpenAPI specifications. Key changes include model renames, new parameters, and endpoint modifications that improve functionality and clarity. The adjustments ensure that users have access to the most current API capabilities and documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedreamMCP#45",
+      "title": "Enhance Image Generation with Web Search Tools in Seedream M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedreamMCP",
+        "image-generation",
+        "web-search",
+        "api-update",
+        "v5.0",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedreamMCP/pull/45",
+      "summary": "This update introduces a new `tools` parameter for the image generation API, specifically enabling web search capabilities for the v5.0 model. Key changes include the addition of a new enum for web search tools, updates to the image generation function, and enhancements to the documentation reflecting these features. This allows users to generate images with context from web searches, improving the quality and relevance of generated content."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedreamMCP#43",
+      "title": "Exciting Updates for Seedream v5.0 in Seedream M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedreamMCP",
+        "seedream",
+        "update",
+        "image-generation",
+        "documentation",
+        "tools"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedreamMCP/pull/43",
+      "summary": "This update introduces the new Seedream v5.0 model, featuring a 3K size option and support for JPEG and PNG output formats. Key changes include updates to core types, image generation tools, and documentation to reflect these enhancements. The flagship model has been updated, ensuring users have access to the latest and highest quality image generation capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedreamCli#8",
+      "title": "Exciting updates with new model and features in Seedream Cli 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedreamCli",
+        "update",
+        "feature",
+        "model",
+        "cli",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedreamCli/pull/8",
+      "summary": "This update syncs the CLI with the latest OpenAPI specification, introducing the new model `doubao-seedream-5-0-260128` as the default. It adds support for a new `3K` resolution and introduces options for output formats and a web search tool. Additionally, tests and documentation have been updated to reflect these changes, enhancing the overall functionality of the CLI."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#17",
+      "title": "Update seedream-image documentation for new doubao models in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "documentation",
+        "api",
+        "models",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/17",
+      "summary": "The seedream-image SKILL.md has been updated to reflect significant changes in model names and API endpoints following the recent overhaul of the image editing API. Key updates include the replacement of old model identifiers with new doubao-* names and the introduction of new parameters for enhanced functionality. These changes aim to streamline the image generation and editing process for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#261",
+      "title": "Exciting Updates: New Pricing and OpenAPI for doubao-seedream-5.0-lite in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "openapi",
+        "documentation",
+        "testing",
+        "pricing"
+      ],
+      "public": false,
+      "summary": "This update introduces the pricing and OpenAPI specifications for the new doubao-seedream-5.0-lite model. Key changes include a cost of 0.35 credits/image, updates to the model enum in the OpenAPI spec, and comprehensive documentation in both English and Chinese. Additionally, new tests have been added to ensure the accuracy of cost calculations for this model."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#638",
+      "title": "Exciting new doubao-seedream-5.0-lite model support in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "image-generation",
+        "seedream",
+        "model-support",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces support for the doubao-seedream-5.0-lite model in the Seedream image generation worker. Key changes include new parameters for output format and tools, a new 3K resolution preset, and an updated default model. Additionally, regex fixes and refactoring enhance the model capability checks and CDN upload functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/OOBEIntegration#2",
+      "title": "Enhance API Endpoint Paths for SAP Services in O O B E Integration 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "OOBEIntegration",
+        "api",
+        "integration",
+        "update",
+        "services",
+        "oobe"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/OOBEIntegration/pull/2",
+      "summary": "This update introduces the `endpoint` field for each service in the AceDataCloud service catalog, ensuring OOBE agents have the correct API paths to POST requests. The endpoints have been verified to return HTTP 402 status with payment requirements, enhancing the integration's reliability and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#24",
+      "title": "Add x402 Discovery Endpoint in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "feature",
+        "x402",
+        "api",
+        "metadata"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/24",
+      "summary": "This update introduces the x402 protocol discovery endpoint at `/.well-known/x402`, which was previously missing and returning a 404 error. The new endpoint provides essential facilitator metadata in JSON format, including supported networks, currencies, and endpoint URLs. This change enables OOBE validation of the x402 payment flow, enhancing overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#639",
+      "title": "Fix wan video handler timeout loop and enhance error logging in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "logging",
+        "video",
+        "timeout",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical infinite polling issue in the wan video handler by correcting the timeout logic. Additionally, it improves error logging by capturing the upstream status code and response body when unexpected responses occur. These changes enhance the reliability and debuggability of the video handling process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#391",
+      "title": "Enhance Download Page with Missing i18n Keys in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "bugfix",
+        "ui",
+        "download",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/391",
+      "summary": "This update adds three missing English i18n keys for the download page buttons, ensuring that users see the correct button labels instead of raw key names. The keys added include 'Download Android', 'Download iOS', and 'Install iOS', which improve the user experience for mobile downloads. Additionally, minor adjustments were made to the download page's Vue component for better functionality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#637",
       "title": "Fix Seedream Bugs for Better Image Generation in Platform Service 🚀",
       "tags": [
