@@ -3,6 +3,21 @@
   "date": "2026-03-30",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#637",
+      "title": "Fix Seedream Bugs for Better Image Generation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "seedream",
+        "imagegeneration",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update addresses two critical bugs in the Seedream image generation handler. The trailing space in the SEED_MODELS array has been removed, ensuring the seed parameter is correctly passed to the Volcengine API. Additionally, the guidance_scale error message has been corrected to reflect the proper validation range of 1 to 10."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MidjourneyMCP#52",
       "title": "Upgrade Codecov Action to Version 6 in Midjourney M C P 🚀",
       "tags": [
