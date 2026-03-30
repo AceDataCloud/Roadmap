@@ -1,0 +1,72 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-03-30",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/SerpMCP#48",
+      "title": "Upgrade Codecov Action to Version 6 in Serp M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SerpMCP",
+        "dependencies",
+        "ci",
+        "codecov",
+        "upgrade"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SerpMCP/pull/48",
+      "summary": "This update bumps the Codecov action from version 5 to 6, introducing support for Node 24. The change is reflected in the CI configuration, ensuring that coverage uploads continue seamlessly. This upgrade enhances compatibility and maintains the integrity of our CI pipeline."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/NanoBananaMCP#52",
+      "title": "Upgrade actions/checkout to v6 in Nano Banana M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "NanoBananaMCP",
+        "dependencies",
+        "upgrade",
+        "actions",
+        "checkout",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/NanoBananaMCP/pull/52",
+      "summary": "This update bumps the actions/checkout dependency from version 4 to 6, enhancing compatibility with Node.js 24 and improving credential management. Key changes include persisting credentials to a separate file and updates to the README for better clarity. This upgrade ensures smoother operations and better performance in workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/NanoBananaMCP#53",
+      "title": "Upgrade Codecov Action to Version 6 in Nano Banana M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "NanoBananaMCP",
+        "dependencies",
+        "ci",
+        "codecov",
+        "upgrade"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/NanoBananaMCP/pull/53",
+      "summary": "This update bumps the Codecov GitHub Action from version 5 to 6, enhancing support for Node 24. The change impacts the CI workflow by ensuring compatibility with the latest features and improvements in the Codecov action. Adjustments have been made in the CI configuration to reflect this upgrade."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MidjourneyMCP#53",
+      "title": "Upgrade actions/checkout to version 6 in Midjourney M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MidjourneyMCP",
+        "dependencies",
+        "update",
+        "actions",
+        "checkout",
+        "security"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MidjourneyMCP/pull/53",
+      "summary": "This update bumps the actions/checkout dependency from version 4 to 6, enhancing functionality and compatibility. Key changes include support for Node.js 24 and improved credential management by persisting credentials to a separate file. This upgrade ensures better performance and security in workflows."
+    }
+  ]
+}
