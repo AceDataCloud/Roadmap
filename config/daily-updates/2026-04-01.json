@@ -3,6 +3,21 @@
   "date": "2026-04-01",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#641",
+      "title": "Enhance task response persistence in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "mongodb",
+        "taskmanagement",
+        "platformservice"
+      ],
+      "public": false,
+      "summary": "This update fixes an issue where successful task retrievals were not persisting the success response in MongoDB. The `sendSuccessResult` method now includes a call to `persister.updateTask`, ensuring that both successful and failed task responses are stored consistently. This change improves the reliability of task data management."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Roadmap#35",
       "title": "New Buyback Transactions Added in Roadmap 🚀",
       "tags": [
