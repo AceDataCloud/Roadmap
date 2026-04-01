@@ -1,0 +1,38 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-04-01",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#35",
+      "title": "New Buyback Transactions Added in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "buyback",
+        "transactions",
+        "solana",
+        "update",
+        "roadmap"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/35",
+      "summary": "This update introduces three new on-chain buyback transactions to the buyback history, including revenue buybacks and liquidity pool additions. The data has been verified on-chain via Solana RPC, ensuring transparency and accuracy. These additions enhance the financial tracking of ACE transactions and support ongoing project growth."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#640",
+      "title": "Fix post-processing of Suno stems to ensure correct item count in Platform Service 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "suno",
+        "api",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update addresses a change in the upstream behavior of the `stems` action, which now returns four music items instead of the expected two. The fix involves post-processing the response to separate vocals from instrumentals, ensuring only one of each is returned with the appropriate title suffixes. This change restores compliance with the documented API contract."
+    }
+  ]
+}
