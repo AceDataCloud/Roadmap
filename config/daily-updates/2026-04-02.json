@@ -3,6 +3,37 @@
   "date": "2026-04-02",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#653",
+      "title": "Handle 400 BadRequestError Properly in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "error-handling",
+        "api",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update ensures that when the upstream API returns a 400 error without a data field, the system now correctly throws a BadRequestError instead of an ApiError. The fix involves explicitly checking for a 400 status and returning the appropriate error message to the client. This change improves error handling and provides clearer feedback to users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#652",
+      "title": "Enhance Suno Remaster with Chirp V5-5 Support in Platform Service 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "enhancement",
+        "suno",
+        "openaihk",
+        "remaster"
+      ],
+      "public": false,
+      "summary": "This update adds support for the `chirp-v5-5` model in the Suno remaster action on the openaihk worker. Key changes include updating the remaster model whitelist and validation checks to include the new model. This aligns the functionality with the existing ttapi worker implementation, ensuring consistency across services."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#158",
       "title": "Update ESLint Plugin Promise to Latest Version in Frontend Web 🚀",
       "tags": [
