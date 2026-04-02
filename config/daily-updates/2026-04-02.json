@@ -1,0 +1,51 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-04-02",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#154",
+      "title": "Update postcss to latest version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "update",
+        "postcss"
+      ],
+      "public": false,
+      "summary": "This update bumps postcss from version 8.5.6 to 8.5.8, addressing a fix for the Processor#version. Additionally, it improves source map annotation cleaning performance, enhancing overall efficiency. These changes ensure better compatibility and performance for our frontend assets."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#160",
+      "title": "Updated Vue Plugin to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "frontend",
+        "vite"
+      ],
+      "public": false,
+      "summary": "This update bumps the @vitejs/plugin-vue dependency from version 6.0.1 to 6.0.5. Key changes include the removal of Vite 8 beta support and various dependency updates, enhancing compatibility and stability. This ensures a smoother development experience and improved performance for the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#161",
+      "title": "Upgrade eslint-plugin-import to 2.32.0 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "eslint",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps the eslint-plugin-import package from version 2.25.4 to 2.32.0, introducing several new features and fixes. Key additions include the new enforce-node-protocol-usage rule and TypeScript types, along with improvements to existing rules like order and extensions. This upgrade enhances linting capabilities and overall code quality in the project."
+    }
+  ]
+}
