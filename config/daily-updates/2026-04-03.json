@@ -3,6 +3,22 @@
   "date": "2026-04-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#151",
+      "title": "Upgrade Docker Buildx Action to v4 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "docker",
+        "buildx",
+        "frontend",
+        "dependencies",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps the Docker Buildx Action from version 3 to 4 across CI and deployment workflows. Key improvements include Node 24 as the default runtime and the removal of deprecated inputs and outputs, enhancing performance and compatibility. This change ensures that our build processes are up-to-date with the latest features and optimizations."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#153",
       "title": "Update TypeScript ESLint Parser to Latest Version in Frontend Web 🚀",
       "tags": [
