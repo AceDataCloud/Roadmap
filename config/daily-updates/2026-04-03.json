@@ -1,0 +1,36 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-04-03",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#155",
+      "title": "Update highlight.js to latest version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "update",
+        "highlightjs"
+      ],
+      "public": false,
+      "summary": "This update bumps highlight.js from version 11.7.0 to 11.11.1, addressing a regression with Rust grammar and enhancing emoji support in single quote strings. The changes improve syntax highlighting capabilities and ensure better compatibility with recent language features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#156",
+      "title": "Upgrade xterm addon to version 0.11.0 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "upgrade",
+        "frontend",
+        "xterm"
+      ],
+      "public": false,
+      "summary": "This update bumps the @xterm/addon-fit package from version 0.10.0 to 0.11.0, enhancing compatibility and performance. Key changes include a revamped attach addon and improved documentation for methods and events. This upgrade ensures a smoother user experience in terminal interactions."
+    }
+  ]
+}
