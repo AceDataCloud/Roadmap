@@ -3,6 +3,22 @@
   "date": "2026-04-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#654",
+      "title": "Fix Suno Audio Generation Endpoint for Instrumentals in Platform Service 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "suno",
+        "audio",
+        "generation",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the description-mode endpoint for Suno audio generation incorrectly produced instrumental lyrics despite the `instrumental: false` flag. By switching to the regular generate endpoint, the system now properly respects the `make_instrumental` constraint throughout the generation process, ensuring users receive the expected output. This change enhances the reliability of audio generation for non-instrumental requests."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#151",
       "title": "Upgrade Docker Buildx Action to v4 in Frontend Web 🚀",
       "tags": [
