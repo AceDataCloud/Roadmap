@@ -3,6 +3,135 @@
   "date": "2026-04-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#27",
+      "title": "Enhance Machine-Readable Metadata for Facilitator in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "metadata",
+        "testing",
+        "json",
+        "x402",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/27",
+      "summary": "This update introduces machine-readable JSON output for the facilitator metadata, including supported networks and endpoint links. A regression test has been added to ensure the well-known endpoint functions correctly. The changes aim to improve the overall usability and accessibility of the facilitator's metadata."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/.github#6",
+      "title": "Streamline README Generation Rules in .github 🚀",
+      "tags": [
+        "github",
+        "pr",
+        ".github",
+        "readme",
+        "update",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/.github/pull/6",
+      "summary": "This update enhances the README generation process by removing the Featured Repositories and Agent Surfaces sections, as well as the install command blocks under MCP Servers and CLI Tools. The Live Services section has been restructured into three columns: Service, Description, and Link. Additionally, the LLM prompt rules in generate.py have been updated to align with the new structure, ensuring consistency in generated content."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#164",
+      "title": "Revamp Coin Page Layout for Better UX in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ux",
+        "frontend",
+        "layout",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "The coin page layout has been updated to enhance user experience by changing the 'Discount Tiers Overview' and 'Your Benefits' sections to full-width stacked layouts. This adjustment reduces crowding and significantly improves readability for users. Key files modified include the layout configuration and the main coin page component."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#163",
+      "title": "Automated i18n Updates from zh-CN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This PR introduces automated updates for internationalization (i18n) translations based on changes from the zh-CN source. Key modifications include updates to usage.json files across multiple languages, enhancing the accuracy and consistency of translations. The changes aim to improve user experience for non-Chinese speaking users by ensuring they receive the most current translations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#162",
+      "title": "Enhanced Usage List with Elapsed Time Display in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "i18n",
+        "performance",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update introduces an 'elapsed' field to the usage models, allowing for the display of processing time for each API request. The console usage list now includes an 'elapsed' column, enhancing the visibility of performance metrics. Additionally, internationalization support has been added with labels in both English and Chinese."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#26",
+      "title": "Enhance Idempotent Settlement and Pending TX Handling in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "settlement",
+        "transaction",
+        "x402",
+        "improvement",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/26",
+      "summary": "This update improves the idempotent settlement process and pending transaction reconciliation for the x402 system. Key changes include returning success for already settled nonces, a new deterministic response for pending transactions, and minimal preflight fallback for transient errors. These enhancements aim to reduce false failures and streamline transaction handling without altering production data or requiring schema migrations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#6",
+      "title": "Upgrade Twine and Optimize Publish Jobs in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "upgrade",
+        "twine",
+        "publish",
+        "optimization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/6",
+      "summary": "This update addresses the publishing failures across all MCP repositories by upgrading Twine to version 6, which supports the necessary metadata format. Additionally, independent publish jobs have been parallelized to enhance efficiency, allowing for faster execution. The .github directory has been synchronized across all repositories to maintain consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/.github#4",
+      "title": "Revamp Profile Generation for Monorepos in .github 🚀",
+      "tags": [
+        "github",
+        "pr",
+        ".github",
+        "update",
+        "monorepo",
+        "ci",
+        "documentation",
+        "python"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/.github/pull/4",
+      "summary": "This update fixes the profile README generation by adapting it to the new monorepo structure for MCPs, Clis, and APIs. Key changes include new functions to discover resources from the monorepos and an updated CI workflow for sparse-checkout. The generated README now features sections for CLI tools and API documentation, enhancing the overall organization profile."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#4",
       "title": "Streamline Luma CLI by Removing Quality Parameter in Clis 🚀",
       "tags": [
