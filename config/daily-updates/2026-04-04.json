@@ -3,6 +3,213 @@
   "date": "2026-04-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#4",
+      "title": "Streamline Luma CLI by Removing Quality Parameter in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "luma",
+        "cleanup",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/4",
+      "summary": "This update removes the `quality` parameter from the Luma videos endpoint in the CLI, ensuring consistency with upstream changes. Key modifications include the deletion of the `--quality` option and related test cases from the command files. This cleanup enhances the user experience by simplifying command usage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#5",
+      "title": "Streamline Luma Video Tools by Removing Quality Parameter in M C Ps 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "luma",
+        "video",
+        "sync",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/5",
+      "summary": "This update removes the `quality` parameter from the Luma videos endpoint to align with upstream documentation changes. Key modifications include the deletion of the `LumaQuality` type and the `DEFAULT_QUALITY` constant in `core/types.py`, as well as the removal of the quality parameter from all relevant video tools in `video_tools.py`. These changes enhance code clarity and maintain synchronization with upstream standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#4",
+      "title": "Updated Luma Videos Endpoint Docs in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "api",
+        "luma",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/4",
+      "summary": "The `quality` parameter has been removed from the Luma videos endpoint documentation following its reversion in the upstream repository. This change ensures that the local documentation accurately reflects the current API functionality, enhancing clarity for users. The update specifically modifies the main request parameters list in the integration guide."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#23",
+      "title": "Streamline Luma Video Skill by Removing `quality` Parameter in Skills 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "luma",
+        "video",
+        "skills",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/23",
+      "summary": "The `quality` parameter has been removed from the Luma videos endpoint following its reversion in upstream documentation. This change updates the `/luma/videos` OpenAPI spec and simplifies the parameters for users. The modification enhances clarity and usability for developers working with the Luma video skill."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#2",
+      "title": "Enhance Video Generation with Quality Parameter in Clis 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "feature",
+        "video",
+        "cli",
+        "quality",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/2",
+      "summary": "This update introduces a new `--quality` parameter to the video generation commands in the CLI, allowing users to specify video quality as `standard`, `high`, or `ultra`. The change impacts the `generate`, `image-to-video`, and `extend` commands, ensuring that the selected quality is correctly forwarded to the API. Additionally, tests have been added to validate the functionality of this new parameter."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#1",
+      "title": "Streamline Notify Workflow by Removing Deprecated Job in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "workflow",
+        "cleanup",
+        "maintenance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/1",
+      "summary": "This update removes the `notify-vscode` job from the notify-downstream workflow, as the VSCodeMCP repository has been deprecated. The changes streamline the workflow by focusing on relevant jobs, enhancing maintainability and clarity. The new configuration now triggers updates only for the Index repository."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/LumaMCP#53",
+      "title": "Clean Up Publish Workflow in Luma M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "LumaMCP",
+        "workflow",
+        "cleanup",
+        "deprecation",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/LumaMCP/pull/53",
+      "summary": "This update removes the deprecated VSCodeMCP dispatch job from the publish workflow. The `notify-vscode-extension` job has been eliminated, streamlining the process as individual MCP extension repos are now utilized instead. This change enhances workflow efficiency and reduces unnecessary dependencies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#3",
+      "title": "Enhance Video Generation with Quality Parameter in M C Ps 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "video",
+        "quality",
+        "luma",
+        "tools",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/3",
+      "summary": "This update introduces a new `quality` parameter to the video generation tools, allowing users to select between 'standard', 'high', and 'ultra' quality levels. Key changes include the addition of a `LumaQuality` type and the integration of this parameter across all video tools. This enhancement aligns the MCP server with the latest Luma OpenAPI specifications, improving user control over video output quality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#2",
+      "title": "Enhance Luma Video Guide with Quality Parameter in A P Is 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "luma",
+        "api",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/2",
+      "summary": "This update adds a new `quality` parameter to the Luma videos generation guide, allowing users to specify video quality levels: `standard`, `high`, or `ultra`, with `standard` as the default. The change enhances documentation clarity and usability for developers integrating with the Luma API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#21",
+      "title": "Enhance Luma Video Skill with Quality Parameter in Skills 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "luma-video",
+        "quality",
+        "update",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/21",
+      "summary": "This update adds a new `quality` parameter to the Luma videos endpoint, enhancing the functionality of the luma-video skill. The parameter allows users to specify the quality level as `standard`, `high`, or `ultra`. The documentation has been updated accordingly to reflect this change."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#28",
+      "title": "Enhance Workspace with Recommended Extensions in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "vscode",
+        "extensions",
+        "workspace",
+        "development",
+        "tools"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `.vscode/extensions.json` file that includes recommended extensions for the AceDataCloud workspace. Key tools for Python, Vue, frontend development, and infrastructure are now suggested, while unrelated extensions have been marked as unwanted. This enhancement aims to streamline the development experience for all contributors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#27",
+      "title": "Clean Up Submodules in Index ✂️",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "cleanup",
+        "git",
+        "submodules",
+        "maintenance"
+      ],
+      "public": false,
+      "summary": "This update removes 13 submodule entries from the .gitmodules file that no longer correspond to existing directories in the repository. The removed submodules include DeploymentWisdom, CopilotPlus, and several others, streamlining the project's structure and improving maintainability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#26",
+      "title": "Enhance Ruff Linting to Focus on Python Files in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "linting",
+        "python",
+        "vscode",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update modifies the `.vscode/settings.json` to restrict Ruff linting to Python files only, effectively excluding non-Python file types such as Markdown and JSON. This change addresses and resolves false-positive syntax errors that were previously displayed in those files, improving the development experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Roadmap#36",
       "title": "All Q1 2026 Roadmap Items Marked as Completed in Roadmap 🚀",
       "tags": [
