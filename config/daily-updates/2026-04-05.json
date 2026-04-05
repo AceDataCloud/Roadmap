@@ -3,6 +3,435 @@
   "date": "2026-04-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#271",
+      "title": "Enhance AI Polish with New Env Vars in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "deployment",
+        "env-vars",
+        "ai",
+        "k8s"
+      ],
+      "public": false,
+      "summary": "This update introduces the `ACEDATACLOUD_API_BASE_URL` and `ACEDATACLOUD_API_TOKEN` environment variables to the K8s deployment. These variables utilize the existing `acedatacloud-api` secret to enhance the announcement AI polish endpoint. This change aims to improve the functionality and reliability of the AI polish feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#381",
+      "title": "Automated i18n Updates from zh-CN in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "automation",
+        "translations",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/381",
+      "summary": "This PR introduces automatic translation updates for internationalization (i18n) based on changes from the zh-CN source. A series of cache files have been renamed to reflect these updates, ensuring that the application remains up-to-date with the latest translations. This enhancement will improve the user experience for Chinese-speaking users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#16",
+      "title": "Enhance WanCli Mapping and Fix Lint Issues in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "wancli",
+        "lint",
+        "sync",
+        "readme",
+        "code-quality"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/16",
+      "summary": "This update adds a new mapping for the WanCli repository in sync.yaml and updates the README.md to include WanCli in the CLI tools table. Additionally, several ruff lint issues in the wan CLI have been resolved, improving code quality and maintainability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#29",
+      "title": "Exciting New npm Package and Codex Support in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "npm",
+        "codex",
+        "skills",
+        "ci",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/29",
+      "summary": "This update introduces the new npm package `acedatacloud-skills`, enabling easy skill distribution via `npx`. Additionally, an AGENTS.md file has been added to enhance OpenAI Codex compatibility and skill discovery. The README has been updated with installation instructions, and a CI workflow for npm publishing has been implemented to streamline releases."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#19",
+      "title": "Enhance README with MCPs and Publishing Status in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docs",
+        "update",
+        "documentation",
+        "development"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/19",
+      "summary": "This update enriches the README by adding four new MCPs: kling, hailuo, wan, and producer. It also introduces PyPI package names, a category column, and a section detailing the publishing channels' status. Additionally, the documentation now includes a full sync pipeline flow and a quick start guide for development."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#170",
+      "title": "Enhance Announcement Features in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "admin",
+        "localization",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update fixes several issues with the announcement popover and admin page. Key changes include correcting the pagination response key for announcements, improving header icon alignment, and adding AI polish functionality for titles and content. Additionally, Chinese placeholders have been introduced for input fields, enhancing the user experience for Chinese-speaking users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#270",
+      "title": "Enhance Announcement Features in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "announcement",
+        "backend",
+        "ai",
+        "features",
+        "improvements"
+      ],
+      "public": false,
+      "summary": "This update introduces auto-generation of `translation_key` from UUID during announcement creation when not provided. Additionally, a new AI-powered content polishing endpoint has been added for super users, enhancing the overall announcement management experience. URL ordering has also been fixed to ensure proper routing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#400",
+      "title": "Enhance Input Border Visibility in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "css",
+        "fix",
+        "ui",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/400",
+      "summary": "This update restores the visibility of borders for input, select, and textarea elements in both light and dark modes. The fix combines the existing box-shadow with a 1px inset border, ensuring a consistent appearance across themes. Redundant dark-mode-only border overrides have been removed for a cleaner implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#11",
+      "title": "Hatchling Version Pinning and Lint Fixes in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "hatchling",
+        "lint",
+        "format",
+        "cli",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/11",
+      "summary": "This update pins the `hatchling` package to versions less than 1.22.0 across five CLI projects to prevent compatibility issues with Twine 6.2.0. Additionally, it aligns the linting and formatting standards across all CLIs, ensuring consistency and improved code quality. Key files modified include `pyproject.toml` for each CLI and various client files."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#15",
+      "title": "Launch of the New WAN CLI Tool in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "wan",
+        "video",
+        "generation",
+        "acedata"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/15",
+      "summary": "We've introduced the `wan` CLI tool, fully aligned with the Tongyi Wansiang OpenAPI specifications. This tool enables users to generate videos from text prompts and images, manage tasks, and retrieve model information, all from the command line. With comprehensive support for various models and parameters, this addition enhances our CLI offerings significantly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#18",
+      "title": "Sync Confirmation for WAN - No Changes Needed in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "sync",
+        "documentation",
+        "api",
+        "validation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/18",
+      "summary": "The sync pipeline indicated a need for review of the `wan` API due to recent updates in the Docs repo. After investigation, it was confirmed that the only changes were related to a temporary test metadata field, with no actual API modifications. All models and parameters in `wan/` are already aligned with the Docs specification, ensuring consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#6",
+      "title": "Luma Docs Sync Verification Completed in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "sync",
+        "verification",
+        "luma"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/6",
+      "summary": "The verification of the Luma documentation against the Docs repository has been successfully completed. No changes were necessary as all guide markdown files remain unmodified and the content is already in sync. This PR serves to document the findings of the sync verification process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#10",
+      "title": "Enhance Wan Service Documentation in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "api",
+        "wan",
+        "integration",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/10",
+      "summary": "This update introduces comprehensive documentation for the Wan video generation service, including a new README and integration guides for both the video generation and tasks APIs. Key additions include quick-start examples, detailed API integration instructions, and a mapping update in the sync configuration. These enhancements will facilitate easier implementation and usage for developers working with the Wan service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#16",
+      "title": "Enhance video generation tools with size parameter in M C Ps 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "video",
+        "api",
+        "update",
+        "tools",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/16",
+      "summary": "This update synchronizes the `wan` MCP server with the latest OpenAPI specification, adding a crucial `size` parameter to the video generation tools. The `size` parameter allows users to specify the dimensions of the generated video, enhancing flexibility and control over video output. All other models and parameters are already aligned with the spec."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#31",
+      "title": "Sync wan-video SKILL.md with OpenAPI updates in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "sync",
+        "documentation",
+        "api",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/31",
+      "summary": "This update synchronizes the `wan-video/SKILL.md` file with the latest OpenAPI specification from `AceDataCloud/Docs`. Key changes include the addition of the `size` parameter and the removal of the `timeout` parameter, ensuring the documentation accurately reflects the current API capabilities. The `luma-video/SKILL.md` remains unchanged as it is already in sync."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#14",
+      "title": "Fix twine version and MCP Registry dependency in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "fix",
+        "workflow",
+        "dependency",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/14",
+      "summary": "This update pins the twine version to `>=5.0,<6.1` across all 15 MCP publish workflows to resolve the `InvalidDistribution` error caused by twine 6.2.0. Additionally, the `publish-mcp-registry` job dependency has been updated to ensure it waits for the PyPI upload to complete before validation. These changes will prevent workflow failures and improve the publishing process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#399",
+      "title": "Enhance Logo Display and Dark Mode Borders in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "dark-mode",
+        "logo",
+        "design",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/399",
+      "summary": "This update introduces a fix for the logo display, ensuring the favicon is shown when the sidebar is collapsed and the full logo when expanded. Additionally, subtle dark mode borders have been added to various form elements for a more polished appearance. These changes enhance the user interface and improve visual consistency across the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#10",
+      "title": "Cleanup: Enhance .gitignore and remove unnecessary files in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cleanup",
+        "gitignore",
+        "files",
+        "maintenance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/10",
+      "summary": "This update removes the accidentally committed `.coverage` binary file and enhances the `.gitignore` by adding entries for `.coverage`, `htmlcov/`, and `coverage.xml`. These changes improve project cleanliness and prevent unwanted files from being tracked in the repository."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#13",
+      "title": "Standardized MCP Server Structures in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "standardization",
+        "mcp",
+        "ci-cd",
+        "development",
+        "tools"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/13",
+      "summary": "This update aligns the file structure across all 15 MCP servers, using SunoMCP as the reference. Key changes include the addition of 67 new files, ensuring identical CI/CD, tooling, and development files across all servers. This standardization enhances maintainability and consistency in the development process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#396",
+      "title": "Enhance Solana X402 Payment Flow in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "solana",
+        "payment",
+        "upgrade",
+        "browser",
+        "wallet"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/396",
+      "summary": "This update upgrades the Solana X402 payment process to utilize `signAndSendTransaction`, addressing wallet warning issues and ensuring the user wallet acts as the fee payer. Additionally, the Node.js `Buffer` dependency has been removed for better browser compatibility, and a fallback to `signTransaction` is implemented for wallets that do not support the new method. These changes improve the overall user experience and align with best practices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#9",
+      "title": "Exciting New CLI Tools Added in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "features",
+        "update",
+        "tools",
+        "aceDataCloud"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/9",
+      "summary": "This update introduces four powerful CLI tools: Midjourney, Flux, SERP, and a unified AceDataCloud CLI. Each tool features a comprehensive command structure, rich output formatting, and a complete test suite. Additionally, the monorepo README has been updated to reflect these new additions, enhancing the overall functionality and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#12",
+      "title": "Exciting New Publish and Deploy Workflows for Hailuo, Wan, and Producer in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "workflows",
+        "deploy",
+        "publish",
+        "MCP",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/12",
+      "summary": "This update introduces new `publish.yml` and `deploy.yaml` workflows for the hailuo, wan, and producer MCP servers. The publish workflow enables publishing to multiple platforms including PyPI and the VS Code Marketplace, while the deploy workflow facilitates Docker builds and Kubernetes deployments. These enhancements streamline the development process and ensure seamless integration with existing systems."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#28",
+      "title": "Exciting New Wan-Video Skill Added in Skills 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "feature",
+        "video",
+        "ai",
+        "skills",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/28",
+      "summary": "We've introduced the new `wan-video` skill, enabling AI video generation using Wan (Alibaba) technology. This skill supports various features including text-to-video, image-to-video, and multi-resolution options, enhancing our AI-media plugin bundle. Additionally, the marketplace configuration has been updated to include this new skill."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#398",
+      "title": "Enhance Localization by Replacing Hardcoded Strings in Nexior 🌍",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "localization",
+        "i18n",
+        "x402pay",
+        "bugfix",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/398",
+      "summary": "This update replaces hardcoded strings in the X402Pay component with internationalization (i18n) keys, improving localization support. The changes include updating wallet titles and status labels to use existing keys for both English and Chinese locales. Note that WalletConnect integration has been deferred for future implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#269",
+      "title": "Enhance Dynamic Resource Discovery in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "api",
+        "dynamic",
+        "settings",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update replaces the hardcoded demo endpoint with a dynamic API resource list sourced from the database. It queries production APIs to build gateway URLs, which are cached for 5 minutes to optimize performance. Additionally, a new `X402_GATEWAY_URL` setting has been introduced to streamline configuration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#97",
+      "title": "Enhance X402 Payment Requirements with Timeout Feature in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "enhancement",
+        "payment",
+        "timeout",
+        "x402",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update introduces the `maxTimeoutSeconds` field to the Base and Solana payment requirements in 402 responses, with a default value of 600 seconds. This change is crucial for certain x402 clients to manage timeouts effectively. The timeout duration can be configured via the `X402_MAX_TIMEOUT_SECONDS` environment variable."
+    },
+    {
       "id": "gh:pr:AceDataCloud/FacilitatorX402#33",
       "title": "Enhance Transaction Handling in x402 🚀",
       "tags": [
