@@ -3,6 +3,197 @@
   "date": "2026-04-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Roadmap#38",
+      "title": "Revamped Q2-Q4 Roadmap with Actionable Deliverables in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "roadmap",
+        "updates",
+        "growth",
+        "deliverables",
+        "planning"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/38",
+      "summary": "This update replaces vague roadmap items for Q2-Q4 with specific, actionable deliverables sourced from the ACE growth plan. Key areas include Developer Platform enhancements, AI model updates, and ecosystem partnerships, ensuring all items are concrete and measurable. The roadmap now reflects a higher specificity level, aligning with Q1's standards for observable outcomes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#168",
+      "title": "Automated i18n Updates from zh-CN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update introduces automatic translation updates for internationalization (i18n) based on changes from the zh-CN source. Key modifications include enhancements across multiple languages, ensuring a more consistent and accurate user experience. The changes affect various language files, improving accessibility for a broader audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#29",
+      "title": "Streamline project structure by removing AutoCert in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "chore",
+        "cleanup",
+        "git",
+        "submodule"
+      ],
+      "public": false,
+      "summary": "This update removes the AutoCert submodule from the project, simplifying the repository structure. The AutoCert directory is now added to .gitignore, indicating it is a standalone repository. These changes enhance project clarity and maintainability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#31",
+      "title": "Clean Up Unused Workflow File in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "cleanup",
+        "workflow",
+        "maintenance"
+      ],
+      "public": false,
+      "summary": "The unused `.claude/claude-code-action.yml` file has been removed as it was incorrectly placed and had no effect on workflows. This cleanup helps streamline the repository and eliminates confusion regarding workflow configurations. No workflows were referencing this file, ensuring a smooth transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#30",
+      "title": "Enhance Claude with New Infra Management Commands in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "infra",
+        "commands",
+        "claude",
+        "update",
+        "management"
+      ],
+      "public": false,
+      "summary": "This update introduces five new slash commands for managing infrastructure within Claude: `/manage-cls`, `/manage-cos`, `/manage-dns`, `/manage-edgeone`, and `/manage-tke`. Each command is designed to streamline operations related to Tencent Cloud services, enhancing the overall functionality of the platform. Additionally, the CLAUDE.md skill table has been updated to reflect these changes, ensuring users have access to the latest command information."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#167",
+      "title": "Exciting New Announcement System UI in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "ui",
+        "announcement",
+        "admin",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update introduces a new announcement notification bell in the header bar, complete with a red unread badge. Users can now view announcements through the AnnouncementPopover component, which allows for marking announcements as read and managing them via an admin CRUD page. Additionally, the update includes new API endpoints for announcements and support for English and Chinese translations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#267",
+      "title": "Exciting New Announcement System in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "announcement",
+        "api",
+        "django",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive announcement system with new Django models for `Announcement` and `AnnouncementReadRecord`, featuring UUID primary keys and support for internationalization. Public API endpoints have been added for listing announcements, tracking unread counts, and marking announcements as read, alongside admin CRUD functionalities. The migration for the announcement system has also been included, enhancing the overall functionality of the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#166",
+      "title": "Enhanced ACE Token Visibility in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "carousel",
+        "ui",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "The $ACE Token carousel slide has been moved from position 6 to position 3 for improved visibility, right after the Claude Code slide. Additionally, the carousel autoplay interval has been standardized to 5 seconds across all slides, enhancing the user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#27",
+      "title": "Revamp Skill Documentation to Align with Latest Specs in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "documentation",
+        "skills",
+        "api",
+        "updates",
+        "fixes"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/27",
+      "summary": "This update corrects multiple `SKILL.md` files to ensure they match the latest OpenAPI specifications from AceDataCloud/Docs. Key changes include fixing parameter names, updating endpoints, and adding missing parameters across various skills like `fish-audio`, `google-search`, and `face-transform`. Additionally, new content has been added for skills such as `ai-chat` and `producer-music`, enhancing overall documentation accuracy and usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#8",
+      "title": "Enhance Luma CLI with Missing Models Command in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "luma",
+        "cli",
+        "feature",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/8",
+      "summary": "This update adds the previously missing `models` command to the Luma CLI, aligning it with the documentation and other CLI tools in the monorepo. Key changes include the addition of constants and a rich table renderer for model information, as well as the registration of the command in the CLI group. Users can now easily list available Luma models and their details."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#8",
+      "title": "Documentation is already in sync with upstream changes in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "sync",
+        "updates",
+        "luma",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/8",
+      "summary": "The luma documentation has been verified and confirmed to be in sync with the latest upstream changes. Recent commits only affected the `openapi/luma.json` file, resulting in no markdown updates needed for the documentation. All relevant guides are up to date and ready for use."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#10",
+      "title": "Luma MCP Verified: No Changes Needed in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "sync",
+        "documentation",
+        "api",
+        "verification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/10",
+      "summary": "The Luma MCP has been confirmed to be fully in sync with the documentation following a recent translation update. Key findings indicate that there were no discrepancies in the API parameters, and all current specifications are accurately reflected in the code. As a result, no code changes are necessary."
+    },
+    {
       "id": "gh:pr:AceDataCloud/FacilitatorX402#30",
       "title": "Enhance URL Handling with Proxy Headers in x402 🚀",
       "tags": [
