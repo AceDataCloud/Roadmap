@@ -3,6 +3,40 @@
   "date": "2026-04-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#30",
+      "title": "Enhance URL Handling with Proxy Headers in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "django",
+        "security",
+        "http",
+        "metadata",
+        "proxy"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/30",
+      "summary": "This update introduces support for proxy headers in Django, allowing the application to trust forwarded host and protocol headers. As a result, well-known metadata will now emit public HTTPS URLs instead of internal HTTP URLs, improving security and accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#29",
+      "title": "Enhance Middleware with Fallback for Well-Known Paths in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "middleware",
+        "well-known",
+        "x402",
+        "tests",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/29",
+      "summary": "This update introduces a middleware fallback for the /.well-known/x402 and /.well-known/x402/ paths, ensuring that requests to these endpoints are handled correctly. The existing facilitator metadata builder is reused for both middleware and view responses, and trailing-slash coverage has been added to the well-known tests. Overall, this enhances the robustness of the x402 service."
+    },
+    {
       "id": "gh:pr:AceDataCloud/FacilitatorX402#28",
       "title": "Enhance well-known route matching in x402 🚀",
       "tags": [
