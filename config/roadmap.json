@@ -591,22 +591,28 @@
       "icon": "spark",
       "groups": [
         {
-          "title": "Product and Distribution",
+          "title": "Developer Platform and Open APIs",
           "items": [
             {
-              "title": "Expand adoption of the mobile app through improved UX, stability, and workflow depth",
+              "title": "Launch OAuth 2.0 Authorization Server with PKCE support for third-party app integrations",
               "status": "in_progress",
               "target_at": null,
               "completed_at": null
             },
             {
-              "title": "Increase template-driven usage and real production activity",
-              "status": "in_progress",
+              "title": "Ship Developer Dashboard with app registration, API key management, and usage analytics",
+              "status": "planned",
               "target_at": null,
               "completed_at": null
             },
             {
-              "title": "Strengthen the feedback loop between app usage, workflows, and Nexior distribution",
+              "title": "Launch standalone API Playground page with multi-language code generation (Python, Node.js, curl)",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Publish Python and Node.js SDKs with full API coverage on PyPI and npm",
               "status": "planned",
               "target_at": null,
               "completed_at": null
@@ -614,16 +620,22 @@
           ]
         },
         {
-          "title": "Payments and Monetization",
+          "title": "ACE Token Holder Benefits",
           "items": [
             {
-              "title": "Expand X402-based settlement into more production workflows",
-              "status": "in_progress",
+              "title": "Display 'Hold ACE, Pay Less' discount comparison on all service pricing pages across Platform and Nexior",
+              "status": "planned",
               "target_at": null,
               "completed_at": null
             },
             {
-              "title": "Improve receipts, billing transparency, and automated settlement for developers and agents",
+              "title": "Launch wallet binding rewards: 5 Credits on registration, 10 on wallet binding, 20 on first ACE holding",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Ship ACE-exclusive features including priority queue, higher rate limits, and exclusive model access for holders",
               "status": "planned",
               "target_at": null,
               "completed_at": null
@@ -631,22 +643,57 @@
           ]
         },
         {
-          "title": "Data Services",
+          "title": "AI Model Updates and Services",
           "items": [
             {
-              "title": "Roll out structured data services as a real product line",
+              "title": "Kling 3.0 video generation with improved image-to-video and tail frame support is live",
+              "status": "in_progress",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Seedream 5.0 Lite image generation is live across Platform and Nexior",
+              "status": "done",
+              "target_at": null,
+              "completed_at": "2026-04-01"
+            },
+            {
+              "title": "Add Wan video generation, Fish TTS, and Seedance to the Nexior consumer app",
+              "status": "in_progress",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Launch Midjourney V8 with HD quality toggle across Platform, Nexior, and Dify",
+              "status": "done",
+              "target_at": null,
+              "completed_at": "2026-03-28"
+            }
+          ]
+        },
+        {
+          "title": "Payments and Settlement",
+          "items": [
+            {
+              "title": "Add PayPal as a payment method alongside existing Stripe, WeChat Pay, Alipay, and crypto options",
               "status": "planned",
               "target_at": null,
               "completed_at": null
             },
             {
-              "title": "Establish clear standards for ingestion, processing, and delivery",
+              "title": "Ship ACE token direct payment for API services with 1.5x credit bonus",
               "status": "planned",
               "target_at": null,
               "completed_at": null
             },
             {
-              "title": "Bind data more tightly into workflows so it becomes part of production pipelines",
+              "title": "X402 micropayment support expanded to SKALE chain with zero gas fees",
+              "status": "done",
+              "target_at": null,
+              "completed_at": "2026-03-15"
+            },
+            {
+              "title": "Launch automated invoice generation and billing history export for enterprise users",
               "status": "planned",
               "target_at": null,
               "completed_at": null
@@ -654,16 +701,68 @@
           ]
         },
         {
-          "title": "Ecosystem and Partnerships",
+          "title": "Mobile App and Consumer Growth",
           "items": [
             {
-              "title": "Land the first wave of practical partnerships",
+              "title": "Submit Nexior to the iOS App Store with compliance review, screenshots, and ASO optimization",
               "status": "in_progress",
               "target_at": null,
               "completed_at": null
             },
             {
-              "title": "Focus on co-built templates, integrations, and real delivery rather than announcements",
+              "title": "Add guided onboarding flow for new users with template recommendations and capability showcase",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Add image and file upload support in the chat interface for multimodal conversations",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            }
+          ]
+        },
+        {
+          "title": "Content and Documentation",
+          "items": [
+            {
+              "title": "Publish per-service quickstart guides with interactive code examples for all major APIs",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Complete MCP ecosystem article series covering all 11 servers across Claude Desktop, VS Code, and Cursor",
+              "status": "in_progress",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Ship X402 protocol integration guide and developer cookbook with end-to-end code examples",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            }
+          ]
+        },
+        {
+          "title": "Ecosystem Integrations",
+          "items": [
+            {
+              "title": "Submit all 13 Dify plugins to the official Dify marketplace for community discovery",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Publish all 11 MCP servers to PyPI with standardized packaging and demo GIFs",
+              "status": "in_progress",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Ship integration guides and tool packages for LangChain, CrewAI, and Vercel AI SDK",
               "status": "planned",
               "target_at": null,
               "completed_at": null
@@ -683,16 +782,22 @@
       "icon": "globe",
       "groups": [
         {
-          "title": "Platform and APIs",
+          "title": "Platform Scale and Reliability",
           "items": [
             {
-              "title": "Scale routing, fallback strategies, and concurrency support",
+              "title": "Implement advanced routing with automatic fallback and load balancing across model providers",
               "status": "planned",
               "target_at": null,
               "completed_at": null
             },
             {
-              "title": "Improve stability under higher and more complex workloads",
+              "title": "Add webhook management for async event notifications on job completion and billing events",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Launch real-time status page with per-service uptime and incident tracking",
               "status": "planned",
               "target_at": null,
               "completed_at": null
@@ -700,22 +805,28 @@
           ]
         },
         {
-          "title": "Workflows and Distribution",
+          "title": "Nexior Consumer Expansion",
           "items": [
             {
-              "title": "Expand workflow modules into more standardized, reusable components",
+              "title": "Launch AI music generation with Udio and Riffusion alongside Suno",
               "status": "planned",
               "target_at": null,
               "completed_at": null
             },
             {
-              "title": "Strengthen Nexior discovery and recommendation so high-quality contributions are easier to find and adopt",
+              "title": "Ship gallery and collection features with community sharing and watermarked exports",
               "status": "planned",
               "target_at": null,
               "completed_at": null
             },
             {
-              "title": "Improve contributor earning clarity tied to real usage",
+              "title": "Add share-to-X rewards and enhanced invite referral system to drive viral growth",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Submit Nexior to Google Play Store with Play Store ASO optimization",
               "status": "planned",
               "target_at": null,
               "completed_at": null
@@ -723,22 +834,97 @@
           ]
         },
         {
-          "title": "Token Mechanics (Research Phase)",
+          "title": "Ecosystem Partnerships",
           "items": [
             {
-              "title": "Continue careful research into staking and long-term participation models",
+              "title": "Land integrations with N8N, Make, and Zapier workflow automation platforms",
               "status": "planned",
               "target_at": null,
               "completed_at": null
             },
             {
-              "title": "No rushed deployments",
+              "title": "Submit ACE services to OpenRouter and LiteLLM as a model provider",
               "status": "planned",
               "target_at": null,
               "completed_at": null
             },
             {
-              "title": "Any pilot remains limited in scope and focused on contribution, not yield",
+              "title": "Launch OpenClaw chatbot deployment templates with multi-model and multi-channel support",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Establish co-marketing partnerships with Solana AI ecosystem projects",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            }
+          ]
+        },
+        {
+          "title": "Distribution and Earning System",
+          "items": [
+            {
+              "title": "Implement higher referral commission tiers for ACE token holders",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Ship contributor leaderboard with usage-based ranking and ACE holder badges",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Open Nexior template marketplace to third-party contributor submissions",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            }
+          ]
+        },
+        {
+          "title": "Documentation and Developer Experience",
+          "items": [
+            {
+              "title": "Ship multi-language SDK documentation with embedded playground for Python, Node.js, and Go",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Launch SEO-optimized documentation site with sitemap, structured data, and AI-crawler support",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Publish comprehensive error code reference and troubleshooting guides for all APIs",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            }
+          ]
+        },
+        {
+          "title": "Token Utility Research",
+          "items": [
+            {
+              "title": "Begin limited-scope pilot for ACE holder community features including exclusive Discord and Telegram channels",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Ship 'Why Hold ACE' benefits calculator and education landing page",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Research staking and DeFi integration models with focus on Raydium and Orca LP feasibility",
               "status": "planned",
               "target_at": null,
               "completed_at": null
@@ -758,22 +944,22 @@
       "icon": "shield",
       "groups": [
         {
-          "title": "Platform Maturity",
+          "title": "Platform Maturity and Enterprise Readiness",
           "items": [
             {
-              "title": "Deliver predictable release cadence",
+              "title": "Deliver predictable monthly release cadence with public changelog",
               "status": "planned",
               "target_at": null,
               "completed_at": null
             },
             {
-              "title": "Reduce operational surprises",
+              "title": "Ship enterprise team management with role-based access control and shared billing",
               "status": "planned",
               "target_at": null,
               "completed_at": null
             },
             {
-              "title": "Position Ace as a dependable platform rather than a toolbox",
+              "title": "Achieve 99.9% uptime SLA across core API services with automated monitoring and alerting",
               "status": "planned",
               "target_at": null,
               "completed_at": null
@@ -781,16 +967,74 @@
           ]
         },
         {
-          "title": "Ecosystem Sustainability",
+          "title": "Advanced Payment Infrastructure",
           "items": [
             {
-              "title": "Push toward a more self-sustaining loop of contributors, distribution, and usage",
+              "title": "Complete X402 protocol production hardening with multi-chain settlement reconciliation",
               "status": "planned",
               "target_at": null,
               "completed_at": null
             },
             {
-              "title": "Reduce reliance on manual curation or intervention",
+              "title": "Launch usage-based auto-billing with configurable spending limits and alerts",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Ship partner revenue settlement dashboard for distribution and referral payouts",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            }
+          ]
+        },
+        {
+          "title": "Ecosystem Self-Sustainability",
+          "items": [
+            {
+              "title": "Establish self-serve template and plugin submission pipeline for third-party contributors",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Reach integration coverage across all major AI orchestration frameworks including LangChain, CrewAI, AutoGen, Dify, and N8N",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Launch Ace-powered applications in GPTs Store, Raycast, and LobeChat marketplaces",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Ship push notifications and PWA offline support for mobile web users",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            }
+          ]
+        },
+        {
+          "title": "Content Publishing Infrastructure",
+          "items": [
+            {
+              "title": "Automate multi-platform content publishing with scheduled posting and translation across 30+ channels",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Launch video content production pipeline for TikTok and YouTube platforms",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Establish recurring AI model review and cost comparison content series",
               "status": "planned",
               "target_at": null,
               "completed_at": null
@@ -801,13 +1045,25 @@
           "title": "Token and Market Discipline",
           "items": [
             {
-              "title": "Re-evaluate buybacks only if: platform revenue is meaningfully larger, liquidity depth is already strong, and any buyback activity remains small, non-disruptive, and transparently disclosed",
+              "title": "Re-evaluate buybacks only with confirmed platform revenue stability and strong liquidity depth",
               "status": "planned",
               "target_at": null,
               "completed_at": null
             },
             {
-              "title": "Staking, if expanded, follows data from pilots and prioritizes stability",
+              "title": "Launch DeFi integrations if pilot data supports, starting with Raydium and Orca LP with locked tokens",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Ship on-chain governance proposal system for ACE holders on major ecosystem decisions",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Publish quarterly transparency reports on token allocation, revenue, and capital usage",
               "status": "planned",
               "target_at": null,
               "completed_at": null
