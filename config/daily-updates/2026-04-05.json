@@ -3,6 +3,174 @@
   "date": "2026-04-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#33",
+      "title": "Enhance Transaction Handling in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "transaction",
+        "settlement",
+        "testing",
+        "x402",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/33",
+      "summary": "This update introduces improved handling for pending transactions during settlement processes. Key changes include the addition of a `check_transaction_status()` method in the ChainHandler interface, which supports both Base and Solana chains. New tests have been implemented to ensure the persistence of transaction hashes and the reconciliation process, enhancing reliability and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#397",
+      "title": "Enhance Song List Layout with Text Overflow in Nexior 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "css",
+        "layout",
+        "suno",
+        "fix",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/397",
+      "summary": "This update introduces text overflow ellipsis functionality to the Suno task preview component. Key changes include adding CSS properties to ensure long song titles and styles are properly truncated, preventing layout breakage. The adjustments enhance the user experience by maintaining a clean and organized display."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#11",
+      "title": "Exciting New MCP Servers and Enhancements in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "mcp",
+        "features",
+        "improvements",
+        "video",
+        "music",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/11",
+      "summary": "This update introduces four new MCP servers: KlingMCP, HailuoMCP, WanMCP, and ProducerMCP, each equipped with a variety of tools for video and music generation. Additionally, cross-cutting improvements have been made across all 15 MCPs, including standardized documentation and version updates. These enhancements aim to streamline user experience and maintain consistency across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#392",
+      "title": "Introducing PayPal Payment Option in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "paypal",
+        "payment",
+        "i18n",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/392",
+      "summary": "This update adds a new PayPal payment option to the order detail page, controlled by the `ENABLE_PAYPAL` feature flag. The `PaypalPay.vue` component has been implemented with auto-refresh polling, ensuring a seamless payment experience. Additionally, internationalization entries for PayPal labels have been included for English and Chinese (zh-CN)."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#394",
+      "title": "Updated Navigator Logo with CDN Support in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "logo",
+        "cdn",
+        "ui",
+        "branding",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/394",
+      "summary": "This update introduces a new CDN-hosted brand logo for the navigator sidebar, ensuring consistent branding across the application. The logo's sizing has been adjusted to fit both expanded and collapsed states, enhancing visibility in dark and light modes. Key files modified include Logo.vue and Preview.vue, improving overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#268",
+      "title": "Exciting PayPal Payment Integration in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "payment",
+        "paypal",
+        "feature-flag",
+        "backend",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update introduces PayPal as a new payment option within the order system. Key changes include the addition of PayPal to the payment methods enum, new utility functions for creating and retrieving PayPal payments, and a feature flag to control its activation. The integration aims to enhance payment flexibility while maintaining existing order functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#22",
+      "title": "Integrate PayPal Payment Provider in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "feature",
+        "paypal",
+        "payments",
+        "backend",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update introduces PayPal payment endpoints, allowing users to create and query payments through PayPal. The new endpoints include `POST /payment/paypal` for payment creation and `GET /payment/paypal/{id}` for querying payment status. Configuration is managed via environment variables, ensuring flexibility in deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#32",
+      "title": "Revamp Tests for Multichain Views in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "tests",
+        "multichain",
+        "update",
+        "x402",
+        "production"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/32",
+      "summary": "This update rewrites tests to align with the production `views_multichain` code, replacing legacy imports and ensuring compatibility. Key changes include mocking the payment settlement method and adding tests for the `/supported` endpoint and idempotent settle functionality. All tests have been updated to ensure they accurately reflect the new multichain architecture."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#31",
+      "title": "Fix idempotency issue for settled nonce in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "bugfix",
+        "api",
+        "x402",
+        "settle"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/31",
+      "summary": "This update resolves an idempotency bug in the settle endpoint of `views_multichain.py`. Previously, attempting to re-settle an already-settled nonce resulted in an error; now it correctly returns a success response with the original transaction hash. This change ensures that callers can retry the `/settle` endpoint and receive consistent success responses."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#393",
+      "title": "Revamped UI with a Stunning Purple Theme in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "design",
+        "frontend",
+        "update",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/393",
+      "summary": "This update features a complete visual redesign of the Nexior UI, transitioning from teal to a vibrant purple brand identity across 75 files. Key enhancements include the addition of the Inter font, glassmorphism effects, and a redesigned navigator with category grouping and collapse support. The overhaul improves user experience through consistent design tokens and a refreshed layout for all tools and pages."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Roadmap#38",
       "title": "Revamped Q2-Q4 Roadmap with Actionable Deliverables in Roadmap 🚀",
       "tags": [
