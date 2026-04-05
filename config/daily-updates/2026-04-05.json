@@ -3,6 +3,168 @@
   "date": "2026-04-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#23",
+      "title": "Enhance OAuth Scope UI with Grouping and Auto-Select in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "oauth",
+        "ui",
+        "frontend",
+        "bugfix",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update fixes the checkbox binding for OAuth scopes by changing `:value` to `:label`, resolving a 400 error related to invalid scopes. Scopes are now organized into four tiers for better clarity, and selecting a `:write` scope will automatically check the corresponding `:read` scope. These improvements are applied to both the creation and editing dialogs for OAuth applications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#30",
+      "title": "Refactor OAuth Fields to ArrayField in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "refactor",
+        "oauth",
+        "postgresql",
+        "backend",
+        "models"
+      ],
+      "public": false,
+      "summary": "This update replaces space-separated string fields with PostgreSQL's native `ArrayField` for `redirect_uris` and `scopes` in the OAuth models. The migration has been rewritten, and model helpers have been simplified, enhancing code clarity and performance. Additionally, serializers now utilize `ListField` directly, improving the handling of these fields in API responses."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#174",
+      "title": "Fix FontAwesomeIcon Registration in Announcement Views in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "vue",
+        "icons",
+        "announcement"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the FontAwesome icons were not rendering in the announcement views due to missing imports and registrations. The `FontAwesomeIcon` component has been successfully added to both `AnnouncementPopover.vue` and `Announcement.vue`. This change ensures that the bullhorn and wand-magic-sparkles icons are displayed correctly in the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#175",
+      "title": "Enhance Coin Page Loading Experience in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "loading",
+        "ui",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the loading experience on the coin page by displaying skeleton loaders instead of incorrect placeholders. The stat cards now show a loading state until both coin info and policy data are fully loaded, eliminating any flash of incorrect data. Additionally, the discount tiers section waits for both API calls to complete before rendering, ensuring a smoother user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#404",
+      "title": "Enhance Selector Borders and Default to Dark Mode in Nexior 🌙",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "dark-mode",
+        "selectors",
+        "visibility",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/404",
+      "summary": "This update standardizes the borders of custom selector components to improve visibility in both light and dark modes. Additionally, chat model avatar icons now feature a solid border for better clarity. New users will default to dark mode unless a theme preference is set, ensuring a consistent user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#403",
+      "title": "Fixed DeepSeek Avatar Icon in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "avatar",
+        "icon",
+        "ui",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/403",
+      "summary": "The DeepSeek avatar icon has been updated from a dark, invisible image to the original clean blue logo on a white background. This change resolves the broken display issue in the model selector dropdown and chat messages on the DeepSeek page. Other model pages remain unaffected by this update."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#27",
+      "title": "Strengthen OAuth2 Security with Key Fixes in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth2",
+        "security",
+        "backend",
+        "testing",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update addresses critical OAuth2 security issues, including the preservation of refresh token scopes and improved field filtering based on user permissions. Key changes include the removal of a dead branch in the offline_access logic, fixes to scope handling, and the addition of 22 unit tests to ensure robust functionality. Overall, these enhancements significantly improve the security and usability of the authentication process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#402",
+      "title": "Enhance Task Previews with Text Overflow Handling in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "css",
+        "ui",
+        "enhancement",
+        "nexior",
+        "text-overflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/402",
+      "summary": "This update introduces improved text overflow handling across all task preview cards in Nexior. Key changes include the addition of CSS properties like `overflow: hidden`, `text-overflow: ellipsis`, and `white-space: nowrap` to ensure that long prompts are truncated appropriately. This enhancement affects 14 different components, ensuring a consistent user experience across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#401",
+      "title": "Update Default Veo Model to veo31-fast in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "update",
+        "veo",
+        "nexior",
+        "default",
+        "model"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/401",
+      "summary": "The default Veo model has been updated from `veo2-fast` to `veo31-fast` in Nexior. This change ensures that users will now load with the improved model selected by default, enhancing performance and user experience. The update includes modifications to the relevant configuration files."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#173",
+      "title": "Enhance Announcement Admin Buttons in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "buttons",
+        "announcement"
+      ],
+      "public": false,
+      "summary": "Updated the Edit and Delete actions in the announcement admin table to use proper rounded buttons instead of link-style buttons. The operation column width was increased from 160px to 200px to better accommodate the new button styling. This change improves the user interface and ensures that button functionalities remain intact."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#271",
       "title": "Enhance AI Polish with New Env Vars in Backend 🚀",
       "tags": [
