@@ -1,0 +1,22 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-04-05",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#28",
+      "title": "Enhance well-known route matching in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "routing",
+        "regex",
+        "django",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/28",
+      "summary": "This update switches the facilitator's well-known route to an explicit regex matcher, allowing both /.well-known/x402 and /.well-known/x402/ to resolve to the same view. The changes ensure better route handling and maintain compatibility. Verification checks have passed for the modified files."
+    }
+  ]
+}
