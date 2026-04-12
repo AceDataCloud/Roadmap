@@ -670,7 +670,7 @@ def main(argv: list[str]) -> int:
     parser.add_argument("--org", default="AceDataCloud")
     parser.add_argument("--daily-updates", default=str(repo_root / "config" / "daily-updates" / "index.json"))
     parser.add_argument("--state", default=str(repo_root / "config" / "pr-sync-state.json"))
-    parser.add_argument("--token-env", default="REPO_PAT")
+    parser.add_argument("--token-env", default="BOT_GITHUB_TOKEN")
     parser.add_argument(
         "--exclude-repo",
         action="append",

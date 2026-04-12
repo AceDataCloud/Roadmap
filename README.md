@@ -89,7 +89,7 @@ This repo auto-syncs merged PRs in the `AceDataCloud` GitHub org into `config/da
   - Index manifest: `config/daily-updates/index.json`
   - Per-day files: `config/daily-updates/YYYY-MM-DD.json`
   - Cursor/state: `config/pr-sync-state.json`
-- Secrets (optional): `REPO_PAT`, `ACEDATACLOUD_OPENAI_KEY`, `OPENAI_MODEL`, `OPENAI_BASE_URL`
+- Secrets (optional): `BOT_GITHUB_TOKEN`, `ACEDATACLOUD_OPENAI_KEY`, `OPENAI_MODEL`, `OPENAI_BASE_URL`
 
 ## Revenue Snapshot (Automation)
 
