@@ -1,0 +1,37 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-04-12",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#194",
+      "title": "Enhance Authorization Management UI in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "ui",
+        "authorization",
+        "frontend",
+        "management"
+      ],
+      "public": false,
+      "summary": "This update introduces a new application authorization management UI, accessible via the `ENABLE_APPLICATION_AUTHORIZATION` feature flag. Key additions include a dedicated route for authorization management, user search capabilities, and CRUD operations for authorizations. The UI enhancements aim to streamline the authorization process for users and improve overall application management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#678",
+      "title": "Fix Dockerfile to Copy Only server.py in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "docker",
+        "fix",
+        "build",
+        "service"
+      ],
+      "public": false,
+      "summary": "The Dockerfile has been updated to explicitly copy only the server.py file, addressing an issue with a corrupted previous build. This change improves clarity and ensures that only the necessary file is included in the Docker image. The adjustment enhances the reliability of the build process."
+    }
+  ]
+}
