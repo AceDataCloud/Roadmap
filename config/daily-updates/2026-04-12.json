@@ -3,6 +3,51 @@
   "date": "2026-04-12",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#192",
+      "title": "Update ESLint Plugin Prettier to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "eslint",
+        "prettier",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update bumps the `eslint-plugin-prettier` package from version 4.0.0 to 4.2.5. Key changes include improvements and fixes from the latest release, ensuring better compatibility and performance in our codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#193",
+      "title": "Upgrade TypeScript to 6.0.2 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "typescript",
+        "upgrade",
+        "frontend",
+        "dependencies"
+      ],
+      "public": false,
+      "summary": "This update bumps TypeScript from version 5.9.3 to 6.0.2, incorporating the latest features and fixes. Key changes include improved type-checking and performance enhancements. This upgrade is expected to enhance the development experience and maintain code quality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#28",
+      "title": "Update Tencent Cloud SDK to Latest Version in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "update",
+        "backend",
+        "dependencies",
+        "python"
+      ],
+      "public": false,
+      "summary": "This update bumps the `tencentcloud-sdk-python` package from version 3.1.64 to 3.1.70. Key changes include improvements and bug fixes from the latest releases, enhancing the functionality and stability of the SDK. The modifications were made in both the `poetry.lock` and `pyproject.toml` files to reflect the new version."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#684",
       "title": "Enhance Aspect Ratio Precision for Nano-Banana Edits in Platform Service 🎨",
       "tags": [
