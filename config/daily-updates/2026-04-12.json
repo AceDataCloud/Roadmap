@@ -3,6 +3,68 @@
   "date": "2026-04-12",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#684",
+      "title": "Enhance Aspect Ratio Precision for Nano-Banana Edits in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "aspect-ratio",
+        "image-processing",
+        "nano-banana",
+        "gcd",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update replaces the previous method of determining aspect ratios with a more precise GCD-based approach. All four nano-banana providers—mountsea, cqtai, wcnb, and openaihk—have been updated to use the exact proportions of input images, ensuring better fidelity in edits. The change improves the accuracy of image processing across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#98",
+      "title": "Enhance Application Authorization in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "authorization",
+        "billing",
+        "security",
+        "gateway",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces authorization-aware billing in the Gateway's auth/record flow. It ensures that requests from grantee users are validated for existing authorizations and available quotas, enhancing security and resource management. New utility functions and models have been added to support these features, improving observability and quota tracking."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#99",
+      "title": "Enhance can_skip_check for aichat2 API in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "bugfix",
+        "api",
+        "billing",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update adds the new aichat2 API ID to the `can_skip_check` logic, ensuring that non-chat actions do not incorrectly trigger billing checks. The change modifies the condition to include both aichat and aichat2 API IDs, streamlining the process for actions like retrieve and update. This enhancement improves the efficiency of API interactions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#683",
+      "title": "Enhance user filtering in Platform Service 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "api",
+        "auth",
+        "conversations"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the `retrieve_batch` function was not correctly filtering conversations due to the user ID being read from the request body instead of the authenticated context. The fix prioritizes the `ctx.userId` from the Kong auth context, ensuring accurate results when listing conversations via the public API. This change improves the reliability of user-specific data retrieval."
+    },
+    {
       "id": "gh:pr:AceDataCloud/FacilitatorX402#34",
       "title": "Upgrade Azure/k8s-set-context to v5 in x402 🚀",
       "tags": [
