@@ -3,6 +3,83 @@
   "date": "2026-04-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#272",
+      "title": "Restores Translation CronJob for Announcements in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "translation",
+        "cronjob",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update reinstates the `translate.py` script and the associated CronJob configuration that were previously removed. The CronJob is now set to run every 2 hours, ensuring that announcements are translated into 18 languages, addressing a critical gap where non-Chinese users received fallback content. Key files added include `translation.yaml` and `translate.py`, which handle the translation process effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#34",
+      "title": "Enhance Windows gh CLI Discovery and Encoding Fixes in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "windows",
+        "gh-cli",
+        "encoding",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update introduces a new helper function, `_find_gh()`, to locate the `gh.exe` executable on Windows systems, addressing common installation paths. Additionally, it sets the encoding to 'utf-8' for subprocess calls to resolve GBK decode errors with non-ASCII characters in gist content. These changes improve the functionality and reliability of the gist synchronization process on Windows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#33",
+      "title": "Boost Nexior with E2E Automation Testing in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "e2e",
+        "automation",
+        "testing",
+        "nexior",
+        "playwright"
+      ],
+      "public": false,
+      "summary": "This update introduces a new Playwright-based E2E testing skill for Nexior, enabling comprehensive testing across 22 pages of the hub.acedata.cloud platform. A detailed test plan has been established, and initial results show 17 out of 22 pages are clean, with 5 bugs identified. Additionally, test artifacts are now properly managed with updates to the .gitignore file."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#32",
+      "title": "Enhance Secret Management with Gist Sync in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "sync",
+        "secrets",
+        "gist",
+        "script",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `/sync-secrets` skill that allows users to sync sensitive `.env` and `settings.local.json` files to and from a private GitHub Gist. The script, located at `.claude/scripts/gist_sync.py`, supports commands for uploading, downloading, and listing files, with a dry-run option for safe previews. This enhancement streamlines the management of sensitive files across different machines."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#176",
+      "title": "Enhance Announcement Popover UI in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "frontend",
+        "design",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the announcement popover by opening details in a separate dialog for better user experience. The popover now features a modern look with a 16px border-radius and increased spacing for the bullhorn icon. Additionally, hover effects have been added to the announcement items, and the visibility of the unread badge has been ensured."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthFrontend#23",
       "title": "Enhance OAuth Scope UI with Grouping and Auto-Select in Frontend Web 🚀",
       "tags": [

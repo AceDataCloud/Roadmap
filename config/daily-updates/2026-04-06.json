@@ -1,0 +1,1442 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-04-06",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#297",
+      "title": "Exciting New Intro Pages for Dataset Services in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "frontend",
+        "design",
+        "features",
+        "responsive",
+        "dark-mode"
+      ],
+      "public": false,
+      "summary": "This update introduces HTML and CSS landing pages for five dataset services: AG News, DROP, RACE, CommonsenseQA, and OpenbookQA. Each page features a unique theme and is designed with responsive layouts and dark mode support, enhancing user experience across devices. The new pages are now accessible at their respective URLs, ready for verification."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#296",
+      "title": "New Dataset Intro Pages Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "datasets",
+        "backend",
+        "features",
+        "documentation",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces five new landing pages for reasoning and commonsense benchmark datasets: ARC, WinoGrande, BoolQ, PIQA, and COPA. Each page features a responsive design with dark mode support, showcasing key statistics, use cases, and getting-started steps. All pages have been verified and are now live on the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#295",
+      "title": "New Dataset Intro Pages for NLP Benchmarks in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "features",
+        "backend",
+        "nlp",
+        "datasets",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update introduces five new landing pages for popular NLP benchmark datasets: GLUE, WMT, LAMBADA, TriviaQA, and HellaSwag. Each page features a responsive design with dark mode support and includes essential sections like stats, features, and getting-started steps. All pages have been verified to return HTTP 200, ensuring they are live and accessible."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#294",
+      "title": "Exciting New Dataset Intro Pages Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "datasets",
+        "backend",
+        "features",
+        "documentation",
+        "launch"
+      ],
+      "public": false,
+      "summary": "We've launched Batch 7 of our dataset introduction pages, adding five new landing pages for MMLU, Natural Questions, SQuAD 2.0, MATH, and HumanEval. Each page features a unique theme and follows our standard template, ensuring a responsive design with dark mode support. All pages have been verified and are now live for users to explore."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#293",
+      "title": "Exciting New Dataset Service Introduction Pages in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "documentation",
+        "ui",
+        "services"
+      ],
+      "public": false,
+      "summary": "We've added HTML+CSS introduction landing pages for five new dataset services, enhancing user experience and accessibility. Each page features a standard template with dark mode support, detailed stats, and clear use cases. All services are live and verified at platform.acedata.cloud, ensuring seamless access for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#292",
+      "title": "New Dataset Service Introduction Pages Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "documentation",
+        "datasets",
+        "html",
+        "css"
+      ],
+      "public": false,
+      "summary": "We've introduced HTML+CSS landing pages for five new dataset services, enhancing our platform's offerings. The new services include Dolma, Falcon RefinedWeb, HH-RLHF, OpenOrca, and GSM8K, each with verified HTTP 200 status. This update improves user access to detailed information about these datasets."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#423",
+      "title": "Brand logo restored in Nexior sidebar 🌟",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "fix",
+        "navigation",
+        "desktop"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/423",
+      "summary": "This update restores the brand logo in the desktop sidebar navigator, which was removed in a previous commit. The logo is now clickable and navigates users back to the home page, enhancing user experience. It will only display in the desktop layout and not in the mobile version."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#31",
+      "title": "Exciting Docker Hub Publishing for MCP Servers in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docker",
+        "mcp",
+        "publishing",
+        "automation",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/31",
+      "summary": "This update introduces a new `publish-dockerhub` job across all 15 MCP server workflows. It enables the building of multi-platform Docker images and pushes them to Docker Hub with both CalVer and `latest` tags. This enhancement runs in parallel with existing publishing jobs, improving the overall deployment process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#291",
+      "title": "New Dataset Service Intro Pages Launched in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "documentation",
+        "services",
+        "html",
+        "css"
+      ],
+      "public": false,
+      "summary": "We've added HTML and CSS introduction landing pages for five new dataset services: Wikipedia, The Stack, C4, RedPajama-Data-1T, and ImageNet-1K. Each page features a standard layout with essential information, including stats, use cases, and getting started steps. All pages have been verified and are live with HTTP 200 status."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#183",
+      "title": "Fix CSS Specificity Issue for Console Padding in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "css",
+        "frontend",
+        "bugfix",
+        "layout"
+      ],
+      "public": false,
+      "summary": "This update resolves a CSS specificity conflict that prevented proper padding from applying to console pages. By wrapping the `<router-view />` in a new `<div class=\"content\">`, the padding is now effectively applied without being overridden. This change ensures a consistent layout across all console pages on both desktop and mobile devices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#43",
+      "title": "Standardize Token Setup with .env File in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "documentation",
+        "authentication",
+        "skills",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/43",
+      "summary": "This update enhances the authentication process by instructing users to create a `.env` file for token management instead of using bare exports. The documentation in `_shared/authentication.md` has been updated accordingly, and all 19 skill compatibility fields now reference the new setup. This change promotes better practices for environment variable management across sessions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#30",
+      "title": "Revamp README Files for All MCP Servers in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "documentation",
+        "readme",
+        "fixes",
+        "mcp",
+        "cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/30",
+      "summary": "This update enhances the README documentation across all MCP servers by correcting the server count from 11 to 15, fixing API reference links, and ensuring proper PascalCase in URLs. Additionally, the Flux README has been cleaned up by removing duplicates and fixing badges. These changes improve clarity and accuracy for users and developers alike."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#31",
+      "title": "Enhance OAuth Apps Table with Solid Buttons in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "buttons",
+        "oauth"
+      ],
+      "public": false,
+      "summary": "This update replaces link-style buttons with solid pill-shaped buttons for Edit and Delete operations in the OAuth Apps table. The new design improves usability and visual consistency, ensuring that users can easily identify actionable items. Additionally, the Edit button navigates to the app detail page, while the Delete button triggers a confirmation dialog."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#182",
+      "title": "Unify Console Page Spacing for a Cleaner Look in Frontend Web ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "design",
+        "refactor"
+      ],
+      "public": false,
+      "summary": "This update standardizes the outer padding across all console pages by moving it to the `Console.vue` layout, ensuring a consistent 30px padding. Additionally, section-level spacing is now uniformly set to `mb-5` (20px), replacing various previous margins. The table minimum height has been adjusted to `calc(100vh-350px)` for all list pages, enhancing the overall layout and responsiveness, especially for mobile views."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#42",
+      "title": "Standardize CLI Commands to Lowercase in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "cli",
+        "readability",
+        "update",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/42",
+      "summary": "This update modifies all CLI commands in the README to use lowercase references for the repository, changing `AceDataCloud/Skills` to `acedatacloud/skills`. This change enhances readability while maintaining the original case for GitHub URLs. Overall, it streamlines the user experience when using the CLI commands."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#41",
+      "title": "Enhance Marketplace Name and README Instructions in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "fix",
+        "documentation",
+        "enhancement",
+        "installation",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/41",
+      "summary": "This update fixes the marketplace name in the configuration file to comply with Claude Code requirements, changing it from `@acedatacloud/skills` to `acedatacloud-skills`. Additionally, the README has been rewritten to streamline installation instructions, promoting the use of `npx skills add` for a more efficient setup process. Four installation options have been added, simplifying the user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#290",
+      "title": "New Intro Pages for 5 Dataset Services in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "features",
+        "updates",
+        "backend",
+        "documentation",
+        "landing-pages"
+      ],
+      "public": false,
+      "summary": "This update introduces HTML and CSS landing pages for five dataset services, including CapsFusion-120M, MINT-1T, MMC4, YT-Temporal-1B, and HowTo-InterLink7M. Each page features a standardized layout with essential information, use cases, and a call-to-action. All pages have been verified for proper functionality with HTTP 200 status."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#289",
+      "title": "Update navigation path in Suno Claude article in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "update",
+        "navigation",
+        "suno",
+        "claude",
+        "backend"
+      ],
+      "public": false,
+      "summary": "The navigation path in the Suno Claude MCP article has been updated to reflect the current Claude.ai UI, changing from 'Settings → Integrations → Add More' to 'Customize → Connectors → Add More'. All screenshots have been verified for accuracy, and the count of 27 tools has been confirmed as correct. This ensures users have the most up-to-date guidance when using the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#30",
+      "title": "Style Alignment with PlatformFrontend in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "styles",
+        "ui",
+        "design",
+        "css"
+      ],
+      "public": false,
+      "summary": "This update aligns the global Element Plus styles in AuthFrontend with those in PlatformFrontend, ensuring a consistent look across the platform. Key changes include the introduction of CSS custom properties for border-radius, transforming buttons to a pill shape, and enhancing the rounded corners of various UI elements. Additionally, the width of the OAuth Apps name column has been adjusted for better proportions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#39",
+      "title": "Enhance Agent Compatibility and MCP-Flux Status in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "bugfix",
+        "documentation",
+        "mcp-flux",
+        "agent-compatibility",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/39",
+      "summary": "This update corrects agent compatibility claims by using the actual documented paths for each agent, ensuring accurate installation instructions. The `mcp-flux` package is now marked as hosted-only, clarifying its availability. Additionally, the agent and plugin skill counts have been updated to reflect the current numbers, enhancing the overall documentation and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#40",
+      "title": "Update versioning format for npm compliance in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "npm",
+        "versioning",
+        "calver",
+        "fix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/40",
+      "summary": "This update modifies the versioning format to comply with npm's semver requirements by changing from a 4-segment CalVer format to a 3-segment format. The new format is `YYYY.MDD.BUILD`, which aligns with the versioning used by MCP server VS Code extensions. This change resolves the `Invalid version` error and ensures successful publishing workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#36",
+      "title": "Enhance OAuth2 Applications Endpoint with PUT Support in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "backend",
+        "oauth2",
+        "update",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces a new mapping for the PUT method on the OAuth2 applications detail endpoint, allowing clients to perform full updates. Previously, only GET, PATCH, and DELETE methods were supported, leading to a 405 error for PUT requests. Now, users can successfully send PUT requests and receive a 200 response, while existing PATCH and DELETE functionalities remain intact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#38",
+      "title": "Automate npm Publishing with CalVer in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "ci",
+        "npm",
+        "automation",
+        "calver"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/38",
+      "summary": "This update replaces the manual release process with an automatic npm publish triggered by pushes to the main branch. It introduces CalVer versioning, generating versions based on today's date and existing builds. Additionally, a GitHub Release will be created automatically after a successful publish, while doc-only changes will be ignored for publishing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#421",
+      "title": "Exciting New Suno API Features Added in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "api",
+        "suno",
+        "ui",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/421",
+      "summary": "This update introduces support for five new Suno audio actions, including `upload_cover` and `artist_consistency`. Additionally, five new API endpoint operators have been added, enhancing functionality. The configuration UI has been updated with new components, and full internationalization support is now available for both English and Chinese."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#37",
+      "title": "Renamed npm package to @acedatacloud/skills in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "npm",
+        "cli",
+        "update",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/37",
+      "summary": "The npm package has been successfully renamed from `acedatacloud-skills` to `@acedatacloud/skills`, introducing a scoped package format. Additionally, a new CLI alias `adc-skills` has been added, and all relevant documentation has been updated to reflect these changes. This enhances usability and aligns with modern package management practices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#36",
+      "title": "Streamline Skills with Shared References in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "refactor",
+        "cleanup",
+        "symlinks",
+        "shared",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/36",
+      "summary": "This update significantly reduces duplication by extracting shared content into a new `_shared` directory, removing around 300 lines from each of the 19 SKILL.md files. Symlinks replace previously copied directories, eliminating 38 duplicate files and enhancing maintainability. Additionally, the noisy `sync.yml` workflow has been removed, and various tooling updates ensure smooth integration with the new structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#420",
+      "title": "Enhance SERP with Video and News Results in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "serp",
+        "video",
+        "news",
+        "ui",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/420",
+      "summary": "This update introduces rendering for video and news results on the SERP search page, addressing previous issues where these results were not displayed. Key changes include the addition of new components for video and news results, as well as updated types to support the new data structures. Users can now see relevant video thumbnails and news articles directly in their search results."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#287",
+      "title": "Streamline Announcement Translations in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "translations",
+        "backend",
+        "api",
+        "performance",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update removes the separate `translated_title` and `translated_content` fields from the `AnnouncementSerializer`, instead resolving translations directly into `title` and `content` based on the `Translation` model. It introduces per-object caching to enhance performance and ensures a fallback mechanism for language resolution. This change improves the accuracy of announcements displayed based on the user's language preference."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#181",
+      "title": "Streamline Announcement Display in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "announcements",
+        "refactor",
+        "typescript"
+      ],
+      "public": false,
+      "summary": "This update removes the deprecated `translated_title` and `translated_content` fields from the `IAnnouncement` interface. The `AnnouncementPopover.vue` component now directly uses `item.title` and `item.content`, aligning with the backend's new translation handling. This change enhances performance and simplifies the codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#288",
+      "title": "Revamp Serp Claude Article with Real Screenshots in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "update",
+        "screenshots",
+        "navigation",
+        "verification"
+      ],
+      "public": false,
+      "summary": "This update replaces all placeholder screenshots in the Serp Claude article with actual images captured via Playwright. Additionally, the navigation path has been corrected for better clarity. All 11 Serp MCP tools have been verified to match the actual connectors, ensuring accuracy and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#29",
+      "title": "Enhance OAuth Apps UI with Spacing and Dropdown Fixes in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "ui",
+        "frontend",
+        "oauth",
+        "design",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the OAuth Apps user interface by removing unnecessary borders and adjusting spacing for better visual clarity. Key changes include replacing radio buttons with a dropdown for client type selection and using link-style buttons to reduce crowding in the operations column. These enhancements aim to create a more user-friendly experience across both list and detail pages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#284",
+      "title": "Enhance URL Handling in Announcement AI in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "ai",
+        "polish",
+        "translate",
+        "url"
+      ],
+      "public": false,
+      "summary": "This update introduces explicit instructions for preserving URLs in AI polish and translate prompts, addressing an issue where the LLM was stripping the `https://` protocol. Additionally, it improves content parsing to support multiline AI responses, ensuring that all lines are returned after polish. These changes enhance the reliability of announcements containing URLs and multiline content."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#286",
+      "title": "Enhance ShortURL MCP Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "shorturl",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update improves the ShortURL MCP documentation by adding five real screenshots and correcting tool names for clarity. The navigation path has been updated to reflect the new structure, ensuring users can easily find the information they need. Additionally, the connector's functionality has been verified on Claude.ai, confirming its seamless operation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#285",
+      "title": "New Intro Pages for Research Datasets in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "datasets",
+        "frontend",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces HTML and CSS landing pages for five open research dataset services, including FineWeb, LAION-5B, Panda-70M, COYO-700M, and OBELICS. Key changes include the addition of service descriptions, thumbnail uploads, and public visibility for each dataset. All pages have been verified live and are accessible with a successful HTTP 200 response."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#283",
+      "title": "Enhance Dataset Services with New Intro Pages in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "updates",
+        "backend",
+        "services"
+      ],
+      "public": false,
+      "summary": "This update introduces HTML+CSS landing pages for three dataset services: WanJuan 1.0, WanJuan 2.0, and Common Crawl. Additionally, database records for service aliases and translations have been corrected. All pages have been verified and are live, ensuring users have access to comprehensive information about these datasets."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#15",
+      "title": "Streamlined Code and Enhanced Documentation in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "cleanup",
+        "documentation",
+        "logging",
+        "tests",
+        "refactor"
+      ],
+      "public": false,
+      "summary": "This update focuses on a low-risk cleanup phase, eliminating dead code and consolidating duplicate methods without affecting end-to-end behavior. Key improvements include reduced logging noise, updated SPEC.md with new fields, and documentation of missing API endpoints. All 746 mock tests continue to pass with identical results, ensuring stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#50",
+      "title": "New Suno Voice Clone API Documentation in Docs 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "documentation",
+        "api",
+        "suno",
+        "voice-cloning",
+        "openapi"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/50",
+      "summary": "We've added comprehensive documentation for the new Suno Voice Clone API, including the `POST /suno/voices` endpoint. This update introduces 13 total endpoints in the OpenAPI spec and provides guide pages for 18 different locales. The documentation enhances accessibility and usability for developers integrating this powerful voice cloning feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#656",
+      "title": "Streamline voice cloning process for Suno in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "voice-cloning",
+        "openai",
+        "suno",
+        "platform-service",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update simplifies the voice cloning flow for OpenAI-HK Suno by removing the voice recording verification step. The process is now reduced to a two-step flow, enhancing efficiency and compatibility with single audio inputs. Key modifications were made in the core.ts file to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#165",
+      "title": "Restore x402 Discovery Routing in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "nginx",
+        "routing",
+        "backend",
+        "frontend",
+        "discovery"
+      ],
+      "public": false,
+      "summary": "This update restores backend proxying for the /.well-known/x402 route, ensuring that the x402 discovery document is correctly served. Additionally, it prevents the SPA shell from interfering with the document on platform.acedata.cloud. The changes have been verified against the nginx configuration to confirm their accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#169",
+      "title": "Add PayPal Payment Option with Feature Flag in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "payment",
+        "paypal",
+        "frontend",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update introduces a new PayPal payment option to the order detail page, which is controlled by the `ENABLE_PAYPAL` feature flag. The PayPal button is now included in the order list pay_way filter and the admin revenue page, along with internationalization support for English and Chinese. Key components and configurations have been updated to accommodate this new payment method."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#179",
+      "title": "Fix announcement badge alignment in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "fix",
+        "frontend",
+        "ui",
+        "announcement"
+      ],
+      "public": false,
+      "summary": "This update resolves the misalignment of the red notification badge on the announcement bullhorn icon in the header. The badge now correctly sits at the top-right corner of the icon instead of floating at the top of the header container. A wrapper div has been added to ensure proper positioning and centering within the header."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#28",
+      "title": "Automatic i18n Updates from zh-CN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update introduces auto-generated internationalization (i18n) translation updates based on changes from the zh-CN source. Key modifications include updates to various language files, ensuring that the application supports multiple languages effectively. This enhancement improves accessibility for a broader audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#418",
+      "title": "Fix resolution case for cost display in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "wan",
+        "config",
+        "ui",
+        "cost"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/418",
+      "summary": "This update changes the resolution option values in the Wan configuration from uppercase to lowercase to ensure accurate cost matching in the consumption/credits preview. Key files modified include the resolution selector and preview components, enhancing the user experience by aligning with service cost rules. Testing will confirm the dynamic behavior of the consumption values and API functionality with the new lowercase values."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#282",
+      "title": "Enhance Wan Video Pricing with New Cost Rules in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "cost",
+        "backend",
+        "Nexior",
+        "video"
+      ],
+      "public": false,
+      "summary": "This update introduces a new service cost file for the Wan video generation service, enabling the display of consumption and credits on Nexior's Wan page. The added rules align with existing API billing structures, covering various model, resolution, and duration combinations. This enhancement ensures users have clear visibility of costs associated with their video generation services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#419",
+      "title": "Fix Wan Bot Avatar Loading Issue in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "avatar",
+        "nexior",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/419",
+      "summary": "The Wan bot avatar in the chat preview was previously hardcoded to a broken URL, resulting in a 404 error. This update replaces the hardcoded link with the `WAN_LOGO` constant, ensuring the avatar loads correctly. All other scenario avatars were verified and are functioning as expected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#34",
+      "title": "Enhance Task Polling Guidance in Skills 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "documentation",
+        "suno",
+        "producer",
+        "skills",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/34",
+      "summary": "This update introduces critical warnings in the Task Polling sections of both Suno and Producer skills documentation. It emphasizes the importance of checking the `state` field before presenting results, as intermediate `audio_url` values may be returned while the task is still pending. All relevant documentation across multiple directories has been updated to ensure consistency and clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#281",
+      "title": "Enhance MCP Article Quality Across 52 Files in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "mcp",
+        "quality",
+        "improvements",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update addresses quality issues in 52 MCP promotion articles by correcting CLI flags and JSON types, ensuring accuracy and consistency. Key changes include fixing header flags, updating JSON configurations, and adding informative cross-references. These improvements enhance the clarity and usability of the documentation for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#416",
+      "title": "Revamp SERP Page UI for a Sleeker Experience in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "design",
+        "serp",
+        "enhancement",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/416",
+      "summary": "This update enhances the SERP page UI with several key improvements. Favicons have been added to organic results, and a consistent card layout has been implemented for Knowledge Graph, Image Results, and People Also Ask sections. Additionally, Related Searches now feature custom pill buttons, and a new skeleton loading animation has been introduced for better user feedback during searches."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#415",
+      "title": "Fix image search results on SERP in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "serp",
+        "images",
+        "frontend",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/415",
+      "summary": "This update resolves the issue where the image search on the SERP page displayed 'no results found' despite the API returning valid image results. The root cause was identified in the `ResultPanel.vue`, where the `noResults` property failed to account for image results. A new check has been added to ensure accurate results are displayed for image searches."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#417",
+      "title": "Enhance Form Inputs for Better UX in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "ux",
+        "design",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/417",
+      "summary": "This update removes the 'small' size attribute from various form input components across 16 files, improving their visibility and aesthetics. Affected components include text inputs, number inputs, sliders, radio buttons, and switches, while buttons and tags remain unchanged. The changes enhance user experience by ensuring form controls are more user-friendly and visually appealing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#29",
+      "title": "Enhance Producer Polling Logic in M C Ps 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "fix",
+        "producer",
+        "polling",
+        "audio",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/29",
+      "summary": "This update applies a fix to the producer MCP server, ensuring that intermediate audio URLs are handled correctly during polling. Key changes include the addition of a critical polling rule in the documentation and updates to the task guidance logic to prevent premature polling stops. These improvements enhance the reliability of audio generation tasks and ensure users receive only completed results."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#280",
+      "title": "Streamline Suno Documentation with Cross-References in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "suno",
+        "backend",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update removes duplicate content from the Suno articles and enhances clarity by fixing command syntax and adding a scope table. Mutual cross-references have been introduced between the two articles, ensuring users can easily navigate related topics. All link formats have been verified for consistency, improving the overall documentation quality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#35",
+      "title": "Enable Writable is_active in OAuth Apps in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "api",
+        "backend",
+        "update",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update removes `is_active` from the read-only fields in the OAuth application serializers, allowing users to toggle the enabled/disabled status of their OAuth apps via the API. This change is essential for enhancing the frontend OAuth apps page UI. The implementation ensures that ownership filtering remains intact, allowing users to update only their own applications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#27",
+      "title": "Revamp OAuth Apps UI for Better Experience in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "ui",
+        "ux",
+        "oauth",
+        "frontend",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update enhances the OAuth apps page by wrapping the apps list in an `el-card` for improved styling. Key changes include replacing text links with icon buttons for edit/delete actions, adding a client type selection, and implementing a logo upload widget. Additionally, the client secret display has been fixed to show a descriptive message instead of placeholders."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#278",
+      "title": "Enhanced Suno MCP Documentation with Screenshots in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "suno",
+        "claude",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update adds 8 verified screenshots to the Suno MCP integration article for Claude.ai, illustrating the complete flow from connector setup to music generation. The documentation now includes detailed step-by-step subsections and has been localized for a global audience by changing demo prompts to English. Additionally, unnecessary emoji characters have been removed for cleaner formatting."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#277",
+      "title": "New Dataset Service Introduction Pages Launched in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "datasets",
+        "frontend",
+        "backend",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "We've added HTML and CSS landing pages for 27 dataset services, enhancing user experience and accessibility. This includes 18 classic ML datasets and 9 research datasets, each following a standardized template for consistency. All pages have been tested for functionality and are now live on the site."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#28",
+      "title": "Enhance Polling Logic for Audio Generation in M C Ps 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "bugfix",
+        "audio",
+        "polling",
+        "suno",
+        "llm"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/28",
+      "summary": "This update addresses a critical bug where the API returned intermediate audio URLs during the music generation process, causing early polling stops. Key changes include the addition of explicit state-aware guidance in tool outputs, docstrings, and LLM prompts to ensure polling continues until the task state is 'complete'. Additionally, the default model reference has been updated to chirp-v5-5, and the functionality of `suno_get_tasks_batch` has been improved to only show audio URLs for completed tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#27",
+      "title": "Unique OAuth Client IDs Assigned for MCP Servers in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "oauth",
+        "security",
+        "update",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/27",
+      "summary": "This update ensures that all MCP servers now have unique OAuth client IDs. The servers 'kling' and 'hailuo' have been assigned their own IDs, while 'wan' and 'producer' have been updated from placeholders to real client IDs. All OAuthApplication records in the AuthBackend database have been created or updated accordingly, enhancing security and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#26",
+      "title": "Enhance OAuth Apps Page with Pagination in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "pagination",
+        "oauth",
+        "frontend",
+        "user-interface",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `el-pagination` component to the OAuth apps list page, allowing users to view their apps in manageable chunks of 20 per page. The pagination feature activates only when the total number of apps exceeds the page size, ensuring a cleaner interface. Users can navigate through pages seamlessly, enhancing the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#21",
+      "title": "Standardize Icons and URLs Across MCP Servers in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "fix",
+        "icons",
+        "url",
+        "mcp",
+        "standardization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/21",
+      "summary": "This update applies a fix to align the `websiteUrl` and `Icon` type across all 14 remaining MCP servers. Each server's `websiteUrl` now points to its specific domain, ensuring that the correct favicon is displayed. Additionally, the `Icon` type has been explicitly set to improve compatibility with clients."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#20",
+      "title": "Align Favicon with MCP Logo for Consistency in M C Ps 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "favicon",
+        "logo",
+        "suno",
+        "update",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/20",
+      "summary": "This update resolves the inconsistency between the favicon and logo displayed in Claude for the Suno MCP server. The `websiteUrl` in `server.json` has been updated to point to the correct Suno domain, ensuring both elements now show the same image. Additionally, an explicit type declaration has been added to the `Icon` in `core/server.py` for improved rendering compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#412",
+      "title": "Automated i18n Updates for zh-CN in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "localization",
+        "automation",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/412",
+      "summary": "This update introduces auto-generated internationalization (i18n) translation updates based on changes from the zh-CN source. Several cache files have been renamed and new cache files have been added to enhance the translation process. This will improve the localization experience for users interacting with the Nexior platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#414",
+      "title": "Update CDN Logos for Wan, Kimi, and SERP in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "cdn",
+        "logos",
+        "update",
+        "nexior",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/414",
+      "summary": "This update replaces broken CDN URLs for the Wan logo and Kimi chat model icon with functional links. Additionally, a new `SERP_LOGO` constant has been added, and the Navigator.vue component has been updated to utilize this new logo instead of a Font Awesome icon. These changes enhance the visual consistency and reliability of the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#655",
+      "title": "Exciting New Suno Voice Cloning API Endpoint Added in Platform Service 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "api",
+        "suno",
+        "voice",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces a new API endpoint for voice cloning using Suno, allowing users to upload audio files to create custom voice personas. Key changes include the addition of handlers and methods for both TTAPI and OpenAI-HK workers, along with a new POST route for voice creation. The feature has been thoroughly tested, ensuring a smooth integration into the Platform Service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#49",
+      "title": "New Suno Voice Clone Guide Added in Docs 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "documentation",
+        "suno",
+        "voice-clone",
+        "api",
+        "guides"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/49",
+      "summary": "We've introduced a new guide for the Suno Voice Clone API, enhancing our documentation offerings. This includes a dedicated English guide page and updates to the navigation across all locales. Users can now easily access integration instructions for creating custom voice personas."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#275",
+      "title": "Introducing Suno Voice Clone API for Custom Voices in Backend 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "voice",
+        "suno",
+        "backend",
+        "feature"
+      ],
+      "public": false,
+      "summary": "We've added a new API endpoint for voice cloning via Suno, allowing users to create custom voice personas from audio files. This feature includes comprehensive documentation in both English and Chinese, along with cost testing that confirms all scenarios pass successfully. Key files have been added and modified to support this functionality, enhancing our audio generation capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#413",
+      "title": "Enhance Feature Toggles for New Services in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "update",
+        "navigation",
+        "i18n",
+        "admin"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/413",
+      "summary": "This update introduces feature setting toggles for the new services: Wan, Producer, Kimi, and SERP. The navigation sidebar has been updated to include entries for these services, and i18n labels have been added for both English and Chinese. These changes improve the admin interface and user experience by allowing better control over service visibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#406",
+      "title": "Exciting New Wan Video Generation Service Added in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "video",
+        "wan",
+        "nexior",
+        "ui",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/406",
+      "summary": "This update introduces the Wan video generation service, featuring four models: text-to-video, image-to-video, fast image-to-video, and reference video. A model-aware configuration panel allows users to select resolution, duration, and upload images for the respective models. The addition of new components and modifications to existing files enhances the overall functionality and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#405",
+      "title": "Introducing Kimi Chat Service in Nexior 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "chat",
+        "AI",
+        "Kimi"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/405",
+      "summary": "We've added Kimi, a new AI chat service powered by Moonshot AI, to Nexior! This integration includes three models: kimi-k2.5, kimi-k2-thinking, and kimi-k2-thinking-turbo, enhancing our chat capabilities. Additionally, we've implemented necessary routing, constants, and internationalization for both Chinese and English languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#411",
+      "title": "Introducing Instant SERP Google Search Service in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "serp",
+        "google",
+        "nexior",
+        "ui",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/411",
+      "summary": "This update adds a complete SERP (Search Engine Results Page) Google search service to Nexior, enabling instant results from a single API call. Key components include a new store module, TypeScript models for various SERP result types, and a responsive layout for the main search page. The integration enhances user experience by providing immediate access to search results without polling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#410",
+      "title": "Unleashing the Producer Music Generation Service in Nexior 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "music",
+        "AI",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/410",
+      "summary": "We've successfully integrated the Producer AI music generation service into Nexior, mirroring the architecture of the existing Suno service but with tailored features. Key updates include the introduction of the FUZZ model family, new actions for music manipulation, and a dedicated video endpoint. This enhancement significantly expands our music generation capabilities, providing users with more options and flexibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#409",
+      "title": "Streamline Sidebar with Permanent Narrow Mode in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "navigation",
+        "cleanup",
+        "design"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/409",
+      "summary": "This update permanently sets the sidebar to a narrow, icon-only mode, enhancing the user interface by removing the expand/collapse toggle and the AceData logo. Additionally, it cleans up related styles and unused code, resulting in a more efficient navigation experience. Key tests include verifying the sidebar's appearance on desktop and mobile, as well as ensuring tooltips and overflow functionality work as intended."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#20",
+      "title": "Automatic i18n Updates from zh-CN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update introduces auto-generated internationalization (i18n) translation updates based on changes from the zh-CN source. Key modifications include updates to various language files, enhancing the application's multilingual support and user experience across different regions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#14",
+      "title": "Enhance Group Chat Messaging Features in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "fix",
+        "feature",
+        "update",
+        "messaging",
+        "schema"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of sender information in group chats by correcting the sender_id and sender_name fields. A new conversation_name field has been added to better identify conversations, enhancing the overall messaging experience. The changes include schema updates and necessary migrations to ensure smooth integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#408",
+      "title": "Update Midjourney Default Version to V7 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "update",
+        "midjourney",
+        "version",
+        "nexior",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/408",
+      "summary": "This update changes the default version of Midjourney from 6.1 to 7 in the VersionSelector component. Users will now see version 7 selected by default when accessing the dropdown. This enhancement aims to streamline user experience and ensure the latest features are readily available."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#25",
+      "title": "Fix OAuth Apps List Data Retrieval in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "fix",
+        "frontend",
+        "oauth",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update corrects the data structure used for displaying OAuth applications by changing the reference from `results` to `items`. The `IOAuthAppListResponse` interface and the `OAuthApps.vue` component have been modified accordingly to ensure the app list loads correctly. Users can now access the OAuth Apps page seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#33",
+      "title": "Streamline OAuth Apps Response by Using Items Key Directly in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "backend",
+        "api",
+        "refactor",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update removes the backwards-compatible fallback to the `results` key in the OAuth applications list response, opting instead to return the `items` key directly. Additionally, tests have been simplified to align with this change, ensuring a more straightforward response structure. The modifications enhance clarity and maintain consistency across the API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#13",
+      "title": "Enhance Message Details with Sender Info in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "feature",
+        "messages",
+        "database",
+        "mentions",
+        "weixin"
+      ],
+      "public": false,
+      "summary": "This update introduces new fields for sender_id and sender_name in the message database model, allowing for accurate identification of message senders in group chats. It also implements parsing for @mentions within messages, enhancing user interaction. The changes ensure that existing database structures are updated seamlessly on startup."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#31",
+      "title": "Fix OAuth App List Extraction in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "pagination",
+        "testing",
+        "oauth"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the OAuthApplicationViewSet.list method was incorrectly handling paginated responses. The code now checks for 'items' first and falls back to 'results', preventing crashes in the frontend. Additionally, five regression tests have been added to ensure all response formats are covered."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#32",
+      "title": "Clean Up OAuth Scopes in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "cleanup",
+        "backend",
+        "documentation",
+        "tests"
+      ],
+      "public": false,
+      "summary": "The `balance:read` OAuth scope has been removed from the `SCOPE_DESCRIPTIONS` and `SCOPE_AGGREGATES` in `oauth2_provider.py`, reflecting the removal of Balance API endpoints from PlatformBackend. Additionally, test assertions in `test_oauth2_logic.py` have been updated, and the `OAUTH2_SCOPES_DESIGN.md` documentation has been revised accordingly. This streamlining enhances clarity and maintains alignment with current API capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#178",
+      "title": "Clean Up: Remove Unused Balance Operator in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "cleanup",
+        "frontend",
+        "refactor",
+        "balance"
+      ],
+      "public": false,
+      "summary": "This update removes the unused Balance operator and related imports from the Frontend Web. The entire `src/operators/balance/` directory has been deleted, along with references in the operators index and the application List.vue file. This change is part of the broader effort to streamline the codebase as the Balance API is being phased out from the PlatformBackend."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#274",
+      "title": "Clean Up Unused Balance Model in Backend 🧹",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cleanup",
+        "backend",
+        "refactor",
+        "maintenance"
+      ],
+      "public": false,
+      "summary": "This update removes the unused Balance model and all related code, including migrations, views, serializers, and URL routes. The Balance model was not utilized in the billing process, which now relies solely on Application.remaining_amount. This cleanup enhances code maintainability and reduces unnecessary complexity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#407",
+      "title": "Enhance model selector with Suno v5.5 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "bugfix",
+        "ui",
+        "suno",
+        "dropdown"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/407",
+      "summary": "This update adds the Suno v5.5 model option to the model selector dropdown in TypeSelector.vue, addressing a previous issue where the default model displayed a raw value instead of a user-friendly label. Additionally, the Suno v5.5 model is now included in feature checks for v5+ models, ensuring proper functionality across the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#12",
+      "title": "Enhance MCP Server Initialization for SDK 1.27 in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "fix",
+        "mcp",
+        "sdk",
+        "server",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update resolves the connection issue between the MCP server and Claude Code by adapting to the changes in the MCP SDK 1.27. Key modifications include repositioning the INSTRUCTIONS constant and passing necessary parameters directly to the Server constructor. The code has been verified to successfully connect using the updated initialization options."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#11",
+      "title": "Streamlined WeChat Message Capture in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "webrtc",
+        "frida",
+        "weixin",
+        "logging",
+        "streamlining"
+      ],
+      "public": false,
+      "summary": "This update simplifies the WeChat message capture process by removing the redundant per-contact listener setup. With Frida hooks enabled, all messages are now automatically captured, enhancing efficiency. Additionally, several client methods and tools have been removed, and improvements have been made to message resolution and logging."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#171",
+      "title": "Automatic i18n Updates from Chinese in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces automatic translation updates for internationalization (i18n) based on changes from the Chinese (zh-CN) source. Key modifications include updates to multiple language files, enhancing the user experience for various locales. The changes ensure that the application remains accessible and user-friendly across different languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#177",
+      "title": "Enhance Announcement Admin UI with Translation Features in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "frontend",
+        "translations",
+        "improvements"
+      ],
+      "public": false,
+      "summary": "This update improves the announcement admin UI by making the Translation Key field read-only and collapsible in the edit dialog. A new 'Translate to English' button has been added, which interacts with the backend to facilitate translations, along with appropriate success and failure messages in both English and Chinese. The changes enhance user experience and streamline the translation process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#273",
+      "title": "New translate-to-English endpoint for announcements in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "translations",
+        "api"
+      ],
+      "public": false,
+      "summary": "We've introduced a new `POST /announcements/admin/translate/` endpoint that translates Chinese announcement titles and content into English using a language model. The English translations are saved directly to the `Translation` table, ensuring easy access and management. This enhancement improves our multilingual support and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#10",
+      "title": "Introducing WeChat Channel Plugin for Claude Code in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "plugin",
+        "mcp",
+        "integration",
+        "messaging"
+      ],
+      "public": false,
+      "summary": "This update adds a new WeChat channel plugin that connects WeChat desktop messages to Claude Code sessions using the Model Context Protocol (MCP). Key components include an MCP server, an async HTTP client, and various skills for managing access and configuration. This integration enhances messaging capabilities and allows for real-time interactions within the Wisdom framework."
+    }
+  ]
+}

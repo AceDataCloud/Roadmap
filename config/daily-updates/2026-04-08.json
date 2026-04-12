@@ -1,0 +1,122 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-04-08",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#300",
+      "title": "Update voice clone integration guide for accuracy in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "update",
+        "suno",
+        "voice-cloning",
+        "backend"
+      ],
+      "public": false,
+      "summary": "The voice clone documentation has been corrected to replace the deprecated `action: \"vox\"` with the current `action: \"generate\"`. Both English and Chinese versions of the guide now include updated steps for creating a voice persona and generating music, along with real API response examples. This ensures users have the correct information for successful integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#669",
+      "title": "Enhance voice clone functionality by passing persona_id in Platform Service 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "voice-clone",
+        "ttapi",
+        "bug-fix",
+        "api",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update addresses issues with the voice clone feature by ensuring that the `persona_id` is passed for both `generate` and `cover` actions in the TTAPI. Key modifications were made in `audio.ts` and `core.ts` to include `persona_id` in the API payload, improving compatibility with the chirp-v4-5+ models. Extensive end-to-end testing confirmed successful song generation with the updated flow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#37",
+      "title": "Enhance Polling Efficiency with Throttling in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "polling",
+        "performance",
+        "throttling",
+        "async",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/37",
+      "summary": "This update introduces server-side polling throttling to improve the efficiency of async task polling. The maximum poll attempts have been increased from 20 to 100, allowing for a more effective wait time of up to 8 minutes for task completion. This change ensures that LLM clients do not exhaust their polling attempts too quickly, enhancing overall performance across multiple servers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#35",
+      "title": "Enhanced Error Handling for MCP Clients in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "error-handling",
+        "api",
+        "mcp",
+        "update",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/35",
+      "summary": "This update introduces a unified error handling mechanism across all MCP clients, ensuring that users receive accurate API error messages instead of generic responses. The new `_handle_error_response()` method parses error codes and messages from API responses for all 4xx and 5xx status codes, improving user experience significantly. Redundant handlers have been removed, streamlining the error management process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#36",
+      "title": "Enhance MCP Servers with Polling Guidance in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "polling",
+        "guidance",
+        "MCP",
+        "improvement",
+        "LLM"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/36",
+      "summary": "This update introduces explicit polling intervals and retry guidance across all MCP servers to improve task completion visibility for LLM clients. Key changes include a 15-second wait between polls, a maximum of 20 polling attempts, and clearer instructions on expected wait times. These enhancements aim to reduce confusion and ensure users are informed about task processing durations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#660",
+      "title": "Disable Nano Banana CDN Transfer by Default in Platform Service 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "performance",
+        "cdn",
+        "settings",
+        "environment"
+      ],
+      "public": false,
+      "summary": "This update introduces an environment flag, `ENABLE_NANOBANANA_CDN_TRANSFER`, to control the CDN transfer logic for nano banana images. By default, this flag is set to false, preventing frequent timeouts in production environments. When disabled, the system will return the original upstream URL directly, improving request efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#33",
+      "title": "Enhanced Debug Logging for OAuth Flow in M C Ps 🔍",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "oauth",
+        "logging",
+        "debug",
+        "mcp",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/33",
+      "summary": "This update introduces comprehensive debug logging to the OAuth callback and credential provisioning flow across all 15 MCP servers. Key changes include detailed logs for JWT exchanges, credential fetching, and error handling, which will aid in troubleshooting `403 No API credential found` errors. The new logging will only appear in debug mode, ensuring production environments remain clean."
+    }
+  ]
+}

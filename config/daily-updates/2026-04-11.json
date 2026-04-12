@@ -1,0 +1,84 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-04-11",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#306",
+      "title": "New Dataset Intro Pages Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "datasets",
+        "updates",
+        "backend"
+      ],
+      "public": false,
+      "summary": "We've introduced five new dataset service introduction pages for Batch 10, including TruthfulQA, xCodeEval, MADLAD-400, LibriTTS, and LibriTTS-R. Each page is designed with a standard template featuring dark mode support and comprehensive sections for better user engagement. This update enhances our documentation and provides users with essential information on these datasets."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#676",
+      "title": "Streamline Sandbox Execution with Subprocess in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "sandbox",
+        "docker",
+        "performance",
+        "architecture"
+      ],
+      "public": false,
+      "summary": "This update simplifies the sandbox architecture by eliminating Docker-in-Docker, opting for direct code execution via `subprocess`. Key changes include removing the Docker SDK, adjusting the Dockerfile to pre-install Node.js, and optimizing resource usage, resulting in faster startup times and reduced memory consumption. Overall, this leads to a more efficient and less error-prone architecture."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#305",
+      "title": "Enhance Application Authorization APIs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "authorization",
+        "backend",
+        "security",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces a new ApplicationAuthorization model along with its associated APIs for listing, creating, updating, revoking, and checking authorizations. A feature flag is implemented to control the visibility of these features, which are disabled by default to ensure safety in production. Credential creation permissions are now enforced for owners or active grantees, enhancing security and control."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#677",
+      "title": "Streamlined API Usage Recording in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "api",
+        "billing",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update fixes the issue of multiple API usage records being created for a single request due to retry attempts with upstream providers. The `record()` function has been moved to ensure it only executes once after all retries are complete, and an idempotency guard has been added to prevent duplicate submissions. Now, each request will accurately produce a single usage record, enhancing billing accuracy and reducing alert noise."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#674",
+      "title": "Revamp API Endpoints and Deploy Scripts in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "api",
+        "deployment",
+        "kubernetes",
+        "fix",
+        "scripts"
+      ],
+      "public": false,
+      "summary": "This update corrects the API endpoints for the aichat2 tool, aligning them with the actual Kong routes. Additionally, new deployment scripts have been added for CI/CD processes, enhancing the deployment of the aichat2 and sandbox services in Kubernetes. All changes have been tested successfully, ensuring robust functionality and seamless integration."
+    }
+  ]
+}

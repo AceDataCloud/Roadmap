@@ -1,0 +1,118 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-04-07",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#659",
+      "title": "Enhance nano-banana token routing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "api",
+        "update",
+        "routing",
+        "environment-variables"
+      ],
+      "public": false,
+      "summary": "This update introduces a new endpoint for routing nano-banana token models, specifically mapping `nano-banana-pro` to `gemini-3-pro-image-preview-token`. A new chat completions path has been established, allowing models with a `-token` suffix to be accessed via a configurable base URL. Additionally, new environment variables for API key and base URL have been added, ensuring backward compatibility with existing models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#32",
+      "title": "Enhanced OAuth Scopes for MCP Servers in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "oauth",
+        "fix",
+        "permissions",
+        "api",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/32",
+      "summary": "This update modifies the OAuth authorization process across all 15 MCP servers by changing the requested scope from 'profile' to 'profile platform'. This adjustment ensures that the necessary permissions for auto-provisioning API credentials are granted, resolving the previous error related to missing API credentials. Additionally, the OAuthApplication database records have been updated to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#658",
+      "title": "Enhance OpenAIHK with Missing Gemini Models in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "openaihk",
+        "gemini",
+        "config",
+        "fallback"
+      ],
+      "public": false,
+      "summary": "This update adds four missing Gemini models to the OpenAIHK checker configuration, aligning it with other providers like ephone and wcnb. The addition of these models enables OpenAIHK to serve as a fallback provider, improving reliability during request failures. The changes are configuration-only, ensuring seamless integration without the need for extensive testing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#39",
+      "title": "New Buyback Entry for April 7 Creator Fee in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "buyback",
+        "creator-fees",
+        "transparency",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/39",
+      "summary": "We've added a new buyback entry for the April 7 creator fee transaction, reflecting a total of $38 USD and 69,584 ACE purchased. This transaction is sourced from creator fees at a 5% rate and is now documented in our buyback history for transparency. Check out the details linked to Solscan for verification."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#657",
+      "title": "Enhance model validation for NanoBanana in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "validation",
+        "nano-banana",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update adds `nano-banana-2` to the model validation lists for both the cqtai and mountsea workers. Previously, requests with this model resulted in a 400 Bad Request error, despite it being included in the OpenAPI spec and supported by billing rules. Now, all three NanoBanana workers accept the same model list, improving consistency and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#299",
+      "title": "Exciting New Intro Pages for Multiple Datasets in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "frontend",
+        "ui",
+        "datasets",
+        "html",
+        "css"
+      ],
+      "public": false,
+      "summary": "This update introduces HTML and CSS landing pages for five dataset services, enhancing user experience and accessibility. The new pages include WSC273, ReCoRD, SQuAD 1.1, QuAC, and CoQA, each featuring unique themes and responsive layouts. All pages are designed to support dark mode and follow a standardized template."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#298",
+      "title": "Exciting New Intro Pages for Multiple Datasets in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "frontend",
+        "datasets",
+        "ui",
+        "html",
+        "css"
+      ],
+      "public": false,
+      "summary": "This update introduces HTML and CSS landing pages for five dataset services: XNLI, MultiNLI, SNLI, CoNLL-2003, and SST-2. Each page features a unique theme and includes responsive layouts with dark mode support. These enhancements improve user experience and accessibility for our dataset offerings."
+    }
+  ]
+}

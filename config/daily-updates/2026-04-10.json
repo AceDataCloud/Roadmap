@@ -1,0 +1,55 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-04-10",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/SeedreamMCP#46",
+      "title": "Update MCP Server Count to 15 in Seedream M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedreamMCP",
+        "update",
+        "readme",
+        "mcp",
+        "vs-code",
+        "extension"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedreamMCP/pull/46",
+      "summary": "The README has been updated to reflect the new total of 15 MCP servers, including the addition of Kling, Hailuo, Wan, and Producer. This change enhances the VS Code extension's description, providing users with the latest information for a seamless setup experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#673",
+      "title": "Introducing aichat2 AI Orchestrator and Sandbox Service in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "microservices",
+        "AI",
+        "sandbox",
+        "Nexior"
+      ],
+      "public": false,
+      "summary": "This update introduces two powerful microservices: aichat2, an AI orchestrator with multi-provider LLM support and a sandbox for secure code execution. Key features include MongoDB persistence, SSE streaming, and built-in tools for various tasks. The new services enhance the platform's capabilities, enabling more dynamic interactions and secure code execution environments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#304",
+      "title": "Revamp CI with Split Jobs for Better Deployments in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "ci",
+        "deployment",
+        "k8s",
+        "docker",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update splits the deployment workflow into two independent jobs: 'build' and 'deploy'. The 'build' job ensures that Docker images are pushed to GHCR regardless of K8s connectivity issues, while the 'deploy' job includes a retry mechanism for transient API timeouts. This change significantly enhances the reliability of the deployment process."
+    }
+  ]
+}

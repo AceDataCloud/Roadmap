@@ -1,0 +1,134 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-04-09",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#426",
+      "title": "Streamline Docker Hub Workflow in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "docker",
+        "workflow",
+        "fix",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/426",
+      "summary": "This update fixes the Docker Hub publish workflow by removing the arm64 platform from the build process. The previous configuration caused network timeouts during package installation due to QEMU emulation. Now, the workflow defaults to the host platform, ensuring a smoother and more efficient build for production."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#303",
+      "title": "Update Nexior Docker Image in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "docker",
+        "nexior",
+        "deployment",
+        "update"
+      ],
+      "public": false,
+      "summary": "All Nexior deployment documentation has been updated to reference the new Docker Hub image `acedatacloud/nexior:latest`. Key changes include updates to Sealos and promotion docs in both English and Chinese, ensuring users can easily pull and run the official image without local builds. This enhances accessibility and simplifies deployment processes for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#422",
+      "title": "Automated i18n Updates from zh-CN in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "localization",
+        "translations",
+        "automation",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/422",
+      "summary": "This PR introduces automated translation updates for internationalization (i18n) based on changes from the zh-CN source. Key modifications include updates to multiple language files, enhancing the localization experience across various languages. The changes aim to improve user accessibility and engagement in the Nexior application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#425",
+      "title": "Fix version conflict for smooth publishing in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "npm",
+        "workflow",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/425",
+      "summary": "This update resolves a persistent issue with the publish workflow that caused 18 consecutive failures. The `package.json` version has been bumped from `3.32.9` to `3.33.0` to align with the npm registry, and 17 stale change files that contributed to the conflict have been removed. Additionally, the actions for checkout and setup-node have been updated to their latest versions to address deprecation warnings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#424",
+      "title": "Streamline Docker Hub Publishing Workflow in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "docker",
+        "workflow",
+        "automation",
+        "release"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/424",
+      "summary": "This update introduces a new workflow for publishing the `acedatacloud/nexior` Docker image to Docker Hub upon pushes to the main branch. The image will be tagged with both 'latest' and a date-based version that includes the commit SHA. The workflow supports multi-platform builds for `linux/amd64` and `linux/arm64`, enhancing deployment flexibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#672",
+      "title": "Update TTAPI Base URL for Improved Uploads in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "ttapi",
+        "performance",
+        "uploads",
+        "timeout"
+      ],
+      "public": false,
+      "summary": "This update changes the TTAPI base URL from `api.ttapi.io` to `api.ttapi.org`, addressing 504 timeout errors during long-running upload operations. The new domain eliminates the 60-second sync timeout limit, enhancing the reliability of all TTAPI upstream calls, including Suno, Producer, and Sora. This change is expected to significantly improve the performance of upload requests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#302",
+      "title": "Reverting sync_docs to support all languages in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "sync",
+        "languages",
+        "revert"
+      ],
+      "public": false,
+      "summary": "This update reverts the recent change that limited the sync_docs function to only zh-CN and en languages. Now, it will sync all 18 language directories as intended. The fix for paths-ignore in deploy.yaml from the previous PR has been retained."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#301",
+      "title": "Enhance Doc Sync and Deploy Efficiency in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "optimization",
+        "deployment",
+        "documentation",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update resolves two critical issues affecting documentation synchronization and deployment. By removing the `docs/zh-CN/**` path from `paths-ignore`, documentation changes will now trigger deployments. Additionally, the `sync_docs()` function has been optimized to only process manually maintained languages, reducing the number of files handled from approximately 4,170 to around 602, significantly speeding up the runtime from 15 minutes to just 1 minute."
+    }
+  ]
+}
