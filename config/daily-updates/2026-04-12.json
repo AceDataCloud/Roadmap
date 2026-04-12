@@ -3,6 +3,282 @@
   "date": "2026-04-12",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#34",
+      "title": "Upgrade Azure/k8s-set-context to v5 in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "dependencies",
+        "upgrade",
+        "azure",
+        "k8s",
+        "x402"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/34",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 4 to 5, introducing features like ESM migration and Node version updates. The changes enhance compatibility and performance, ensuring smoother operations in the x402 area."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#37",
+      "title": "Upgrade Azure/k8s-set-context to v5 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "dependencies",
+        "backend",
+        "update",
+        "azure"
+      ],
+      "public": false,
+      "summary": "This update upgrades the Azure/k8s-set-context dependency from version 4 to 5. Key improvements include migration to ESM with esbuild and vitest, as well as an update to the Node version from 20 to 24. These changes enhance performance and compatibility within the backend workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#682",
+      "title": "Standardize GitHub Token Names for Clarity in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "chore",
+        "security",
+        "workflow",
+        "standardization"
+      ],
+      "public": false,
+      "summary": "This update standardizes GitHub token secret names across workflows by replacing the legacy `secrets.BOT_TOKEN` with the org-level standardized name `secrets.BOT_GITHUB_TOKEN`. This change reduces naming confusion and enhances the management and auditing of secrets, ensuring that both secrets resolve to the same bot account. The modifications have been verified to maintain functionality for various operations, including cloning and dispatching workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#35",
+      "title": "Standardize GitHub Token Names in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "chore",
+        "security",
+        "workflow",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update replaces the legacy `secrets.BOT_TOKEN` with `secrets.BOT_GITHUB_TOKEN` across key workflows, including `dependabot-auto-manage.yml` and `update-profile.yml`. These changes enhance security and maintain consistency in secret management. The modifications ensure that all references to the GitHub token are updated for better clarity and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/.github#7",
+      "title": "Standardize GitHub Token Secret Names in .github 🚀",
+      "tags": [
+        "github",
+        "pr",
+        ".github",
+        "chore",
+        "security",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/.github/pull/7",
+      "summary": "This update replaces the legacy `secrets.BOT_TOKEN` with `secrets.BOT_GITHUB_TOKEN` in the update-profile.yml workflow. The change ensures consistency in secret naming conventions, enhancing security and clarity in the workflow. All references to the old token have been updated to the new standard."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#41",
+      "title": "Standardize GitHub Token Names in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "chore",
+        "documentation",
+        "workflow",
+        "python",
+        "maintenance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/41",
+      "summary": "This update standardizes the naming of GitHub token secrets across the project. The legacy `REPO_PAT` has been replaced with `BOT_GITHUB_TOKEN` in the workflow, Python script, and README documentation, ensuring consistency and clarity. These changes enhance the maintainability of the codebase and improve the onboarding experience for new contributors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#312",
+      "title": "Standardize GitHub Token Names in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "chore",
+        "workflow",
+        "security",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update standardizes GitHub token secret names across several workflows for improved clarity and consistency. The `BOT_TOKEN` has been renamed to `BOT_GITHUB_TOKEN`, and `REPO_PAT` has been updated to `ADMIN_GITHUB_TOKEN` for the `publish-blog` workflow, which requires admin access to the personal repository. These changes enhance security and maintainability of the workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WeChatClaudeCode#10",
+      "title": "Standardize GitHub Token Names in We Chat Claude Code 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WeChatClaudeCode",
+        "chore",
+        "secrets",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/WeChatClaudeCode/pull/10",
+      "summary": "This update standardizes GitHub token secret names across workflows by replacing the legacy `secrets.BOT_TOKEN` with the org-level standardized name `secrets.BOT_GITHUB_TOKEN`. This change reduces naming confusion and simplifies management and auditing of secrets. The new naming convention ensures consistent access across repositories, enhancing overall workflow efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#32",
+      "title": "Standardize GitHub Token Names in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "chore",
+        "frontend",
+        "secrets"
+      ],
+      "public": false,
+      "summary": "This update standardizes the naming of GitHub token secrets by replacing the legacy `secrets.BOT_TOKEN` with the new `secrets.BOT_GITHUB_TOKEN`. This change enhances consistency across the organization and improves clarity in the workflow configurations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#195",
+      "title": "Standardize GitHub Token Names in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "chore",
+        "frontend",
+        "standardization"
+      ],
+      "public": false,
+      "summary": "This update standardizes the naming of GitHub token secrets by replacing the legacy `secrets.BOT_TOKEN` with the new `secrets.BOT_GITHUB_TOKEN`. This change helps eliminate naming confusion across repositories, ensuring consistency at the organization level."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#494",
+      "title": "Standardize GitHub Token Names for Clarity in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "chore",
+        "secrets",
+        "workflow"
+      ],
+      "public": false,
+      "summary": "This update standardizes GitHub token secret names across workflows by replacing the legacy `secrets.BOT_TOKEN` with the org-level standardized name `secrets.BOT_GITHUB_TOKEN`. This change reduces naming confusion and simplifies the management and auditing of secrets within the organization. The new naming convention ensures consistency and improves workflow efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#51",
+      "title": "Standardize GitHub Token Names in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "docs",
+        "secrets",
+        "standardization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/51",
+      "summary": "This update standardizes GitHub token secret names across workflows by replacing the legacy `secrets.BOT_TOKEN` with the org-level standardized name `secrets.BOT_GITHUB_TOKEN`. This change reduces naming confusion and improves the management and auditing of secrets. The new token has been verified to function correctly for various operations including cloning and dispatching workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#38",
+      "title": "Standardize GitHub Token Names for Clarity in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "chore",
+        "secrets",
+        "workflows"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/38",
+      "summary": "This update standardizes GitHub token secret names across workflows by replacing the legacy `secrets.BOT_TOKEN` with the org-level standardized name `secrets.BOT_GITHUB_TOKEN`. This change helps eliminate naming confusion and simplifies the management and auditing of secrets. The new token has been verified to work for various operations, including cloning and dispatching workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#429",
+      "title": "Standardize GitHub Token Names in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "chore",
+        "workflows",
+        "secrets"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/429",
+      "summary": "This update standardizes the naming of GitHub token secrets across the workflows. The legacy `secrets.BOT_TOKEN` and `secrets.REPO_PAT` have been replaced with `secrets.BOT_GITHUB_TOKEN` in multiple workflow files. This change enhances clarity and consistency in the token management process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#428",
+      "title": "Enhance chat tool-calling event support in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "chat",
+        "aichat2",
+        "sse",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/428",
+      "summary": "This update introduces support for tool-calling SSE events in the aichat2 chat models and operator. Key changes include the addition of new fields in the conversation request and response models, as well as modifications to the stream callback to forward all relevant tool-calling event data. This enhancement prepares the data layer for upcoming UI components that will utilize these events for real-time rendering."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#680",
+      "title": "Enhance SSE Compatibility for Nexior in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "sse",
+        "compatibility",
+        "nexior",
+        "aichat2",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces the `delta_answer` field to `text_delta` SSE events, ensuring backward compatibility with Nexior's existing stream parser. By including `delta_answer: event.content`, Nexior can now render streaming text seamlessly without requiring frontend code changes. This enhancement improves the integration between aichat2 and Nexior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#681",
+      "title": "Enhance Image Aspect Ratio Detection for Editing in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "image-processing",
+        "bug-fix",
+        "enhancement",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces automatic detection of input image aspect ratios when editing images without a specified ratio. The system now fetches the first 64KB of the image to determine its dimensions and maps them to the closest supported aspect ratio, improving the accuracy of image handling. If detection fails, it gracefully falls back to the previous default behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#40",
+      "title": "Boosting ACE with New Buyback Strategy in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "buyback",
+        "ace",
+        "transparency",
+        "amm",
+        "roadmap"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/40",
+      "summary": "This update introduces a new buyback transaction where $28 USDC has been converted into 61,000 ACE through the Pump.fun AMM. The buyback history has been updated to reflect this transaction, enhancing transparency and verifiability. This strategic move aims to strengthen the ACE ecosystem and support its growth."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#194",
       "title": "Enhance Authorization Management UI in Frontend Web 🚀",
       "tags": [
