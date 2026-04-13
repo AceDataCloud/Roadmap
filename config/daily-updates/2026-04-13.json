@@ -3,6 +3,151 @@
   "date": "2026-04-13",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#36",
+      "title": "Enhance SKALE Environment Variables in x402 Deployment 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "deployment",
+        "skale",
+        "environment",
+        "facilitator",
+        "x402"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/36",
+      "summary": "This update introduces SKALE RPC and signer environment variable mappings to the facilitator's production deployment. The deployment environment has been aligned with the existing multichain SKALE handler support, while keeping SKALE environment variables optional to facilitate a smoother rollout. These changes aim to improve the integration and functionality of the x402 deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#103",
+      "title": "Enhance SKALE Integration in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "integration",
+        "gateway",
+        "skale",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update introduces new runtime settings for SKALE, including `X402_SKALE_PAY_TO` and `X402_SKALE_USDC_ASSET`. It modifies the x402 payment requirements to support SKALE transactions, ensuring clients can successfully complete the verify/settle flow. Additionally, environment variables for SKALE have been wired in the production deployment, along with new tests to validate the integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#435",
+      "title": "Enhance OAuth Connector Management UI in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "oauth",
+        "ui",
+        "frontend",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/435",
+      "summary": "This update introduces the OAuth Connector management UI, allowing users to connect and disconnect various OAuth providers like Google, GitHub, and Slack. Key components include a new dialog for managing connections and a callback page for handling OAuth responses. Additionally, the update enhances existing chat functionalities by integrating connector support and improving internationalization for multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#687",
+      "title": "Enhance aichat2 with OAuth Connectors for Google, GitHub, and Slack in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "oauth",
+        "connectors",
+        "aichat2",
+        "google",
+        "slack"
+      ],
+      "public": false,
+      "summary": "This update introduces OAuth connectors for Google, GitHub, and Slack in aichat2, allowing users to seamlessly integrate their accounts. Users can now search Google Drive, manage GitHub repositories, and interact with Slack channels directly through the AI assistant. The implementation includes new handlers, persistence layers, and security measures for token management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#101",
+      "title": "Enhance billing management for connectors API in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "billing",
+        "connectors",
+        "oauth",
+        "api",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update introduces a billing skip feature for the new OAuth Connectors API endpoint. The connector API ID has been added to the billing check logic, ensuring that all CRUD operations for connectors do not incur billing charges. This change aligns with the ongoing development of the AI Orchestrator's Phase 4."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#689",
+      "title": "Enable nano-banana CDN transfer by default in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cdn",
+        "feature",
+        "settings",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update changes the default setting for the nano-banana CDN transfer to enabled, while still allowing users to opt-out by setting `ENABLE_NANOBANANA_CDN_TRANSFER=false`. The existing environment variable override semantics for explicit disable have been preserved. This change aims to enhance the default behavior for CDN transfers in the Platform Service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#102",
+      "title": "Unified x402 Gateway Responses to v2 Schema in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "fix",
+        "gateway",
+        "api",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update modifies the x402 gateway responses to conform to the v2 schema by changing the `x402Version` to 2. Additionally, it replaces `maxAmountRequired` with `amount` in payment requirements while keeping other metadata intact. These changes enhance consistency and clarity in the API responses."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#688",
+      "title": "Enhance CQTai Resilience in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cqtai",
+        "axios",
+        "timeout",
+        "retry",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update improves the CQTai client by reducing the retry sleep duration from 1000 seconds to just 1 second, addressing unit misuse. Additionally, the shared axios client timeout is set to 30 seconds to prevent indefinite request hangs while maintaining the same behavior for successful paths. These changes significantly reduce the risk of stuck requests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#35",
+      "title": "Unify x402 Requirements to v2 Fields in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "update",
+        "x402",
+        "tests",
+        "api",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/35",
+      "summary": "This update switches the `/supported` response to use `x402Version: 2` and modifies the Base/Solana chain handlers to prioritize reading `amount` with a fallback to `maxAmountRequired`. Additionally, facilitator tests have been aligned with the new v2 payload and requirements keys, ensuring consistency across the codebase."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#436",
       "title": "Enhance Task Previews with Full Text Display in Nexior 🚀",
       "tags": [
