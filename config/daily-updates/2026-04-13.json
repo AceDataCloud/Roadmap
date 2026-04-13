@@ -1,0 +1,35 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-04-13",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#185",
+      "title": "Update Solana Wallet Adapter to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "solana",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps the @solana/wallet-adapter-wallets package from version 0.19.37 to 0.19.38. Key changes include updated dependencies for Solflare and Phantom wallets, enhancing compatibility and performance. This ensures a smoother experience for users interacting with Solana wallets."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#191",
+      "title": "Update xterm web links addon to latest version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps the @xterm/addon-web-links package from version 0.11.0 to 0.12.0. Key changes include improvements and new documentation visuals, enhancing the overall user experience. The package updates are reflected in both package.json and yarn.lock files."
+    }
+  ]
+}
