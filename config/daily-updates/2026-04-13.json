@@ -3,6 +3,38 @@
   "date": "2026-04-13",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#430",
+      "title": "Enhance Chat with Tool-Calling UI in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "chat",
+        "ui",
+        "api",
+        "tools"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/430",
+      "summary": "This update migrates chat API calls to the new `/aichat2/conversations` endpoint, enabling enhanced tool-calling capabilities. A new ToolActivity component has been added to display tool calls inline, complete with loading indicators and success/error statuses. The chat model has been updated to support tool-related fields, improving the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#685",
+      "title": "Enhance Python Expression Output in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "python",
+        "sandbox",
+        "output",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update improves the sandbox code execution tool by enabling output for bare Python expressions. It utilizes AST transformation to automatically print the result of the last expression, ensuring that users see the computed results instead of '(no output)'. Key changes include handling various edge cases such as print statements and syntax errors."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#185",
       "title": "Update Solana Wallet Adapter to Latest Version in Frontend Web 🚀",
       "tags": [
