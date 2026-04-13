@@ -3,6 +3,102 @@
   "date": "2026-04-13",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#436",
+      "title": "Enhance Task Previews with Full Text Display in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "css",
+        "ui",
+        "enhancement",
+        "task-preview"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/436",
+      "summary": "This update removes the single-line ellipsis truncation from the prompt and title displays across all 15 AI service task preview components. Key changes include adjustments to the CSS properties, allowing for full text wrapping and improved readability. The modifications enhance user experience by ensuring that all relevant information is visible without truncation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#686",
+      "title": "Enhance Image Aspect Ratio Detection in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "image",
+        "aspect-ratio",
+        "utility",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a new utility function, `snapToNearestAspectRatio()`, which adjusts detected aspect ratios to the nearest supported value, ensuring compatibility with the upstream cqtai API. Additionally, the list of supported aspect ratios has been expanded to include new values like `1:4`, `1:8`, `4:1`, and `8:1`. This enhancement improves image editing reliability and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#432",
+      "title": "Standardize Sidebar Logo to Platform Favicon in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "logo",
+        "ui",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/432",
+      "summary": "This update ensures that the sidebar logo consistently uses the platform favicon from a fixed URL, rather than loading it dynamically from site configuration. This change simplifies the logo management and enhances the visual consistency across the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#433",
+      "title": "Enhance nanobanana prompt display in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "fix",
+        "nanobanana",
+        "display"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/433",
+      "summary": "This update removes the single-line ellipsis in the nanobanana task preview, allowing the prompt text to wrap and display fully. The changes ensure a better user experience by improving text visibility. All modifications have been verified with no Vue file errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#431",
+      "title": "Enhance Chat with MCP Server Management in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "chat",
+        "mcp",
+        "ui",
+        "management"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/431",
+      "summary": "This update introduces a new MCP (Model Context Protocol) server management UI to the chat interface. Key features include the ability to add, edit, delete, and test remote MCP servers, along with a dedicated dialog for managing these servers. Additionally, the chat header now displays a button with a badge indicating the count of enabled servers, enhancing user experience and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#100",
+      "title": "Skip Billing for Aichat2 MCP Servers in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "billing",
+        "aichat2",
+        "mcp",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update introduces a feature that allows all management operations for Aichat2 MCP servers to bypass billing checks. The relevant API ID and Kong service have been specified, ensuring that operations like create, list, update, delete, and test are free of charge. This change is part of Phase 3 of the AI Orchestrator project, enhancing the efficiency of MCP Connectors."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#188",
       "title": "Update typescript-cookie to latest version in Frontend Web 🚀",
       "tags": [
