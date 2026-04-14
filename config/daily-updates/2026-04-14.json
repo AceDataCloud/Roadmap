@@ -3,6 +3,115 @@
   "date": "2026-04-14",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#314",
+      "title": "Fix invitee count inconsistency in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "backend",
+        "data",
+        "leaderboard"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the platform-rank leaderboard displayed an invitee count of zero for users with invitees when date filters were applied. The fix aligns the invitee count with the purchase data by counting distinct invitees from the same filtered dataset, ensuring consistency in reporting. For all-time views, the original count method remains unchanged."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#16",
+      "title": "Enhance project with pywxdump dependency in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "dependencies",
+        "update",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces the `pywxdump>=3.0` dependency to the project by modifying the `pyproject.toml` file. This addition aims to enhance functionality and support for the project. Overall, it contributes to a more robust development environment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#313",
+      "title": "Updated Suno Voice Clone Examples for User Voice Flow in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "suno",
+        "voice",
+        "update",
+        "backend"
+      ],
+      "public": false,
+      "summary": "The documentation for Suno voice cloning has been updated with new validated examples in both English and Chinese. Key changes include replacing outdated sample audio URLs with real user voice recordings, updating response examples with actual successful values, and adding important notes regarding the OpenAI-HK channel. These enhancements ensure a smoother and more accurate user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#437",
+      "title": "Enhance Chat with Skills System UI in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "features",
+        "chat",
+        "typescript",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/437",
+      "summary": "This update introduces a new Skills System UI, allowing users to manage skills directly within the chat interface. Key components include a SkillManager dialog for skill selection, integration of skill management with localStorage, and updates to the Conversation.vue for skill button functionality. The implementation includes TypeScript interfaces and CRUD operations for skills, enhancing the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#104",
+      "title": "Skip Billing for Aichat2 Skills Endpoint in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "billing",
+        "api",
+        "skills",
+        "gateway",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces a billing skip for the `/aichat2/skills` endpoint, allowing all skill CRUD operations to bypass billing as they do not consume AI resources. The change affects the billing logic in the `can_skip_check` utility, ensuring smoother management actions for users. Related changes in the PlatformService are also noted for consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#691",
+      "title": "Introducing Skills System for Enhanced AI Capabilities in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "skills",
+        "backend",
+        "mongodb",
+        "features",
+        "aichat2"
+      ],
+      "public": false,
+      "summary": "This update implements a comprehensive skills system for the AI chat platform, featuring new skill types and built-in capabilities. Key changes include the addition of a CRUD handler for skills, MongoDB integration for user-created skills, and the introduction of six built-in skills such as data-analyst and content-writer. The architecture allows skills to augment the system prompt dynamically, enhancing user interactions significantly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#690",
+      "title": "Streamline Voice Cloning with New Endpoint in Platform Service 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "voice",
+        "api",
+        "update",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update replaces the outdated two-step voice cloning process with a new single-step endpoint, improving efficiency and reliability. The timeout has been increased to accommodate longer processing times, and enhancements have been made to the audio quality. Testing confirms successful integration with the OpenAI-HK API, ensuring a smoother user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#186",
       "title": "Update GitHub Markdown CSS to Latest Version in Frontend Web 🚀",
       "tags": [
