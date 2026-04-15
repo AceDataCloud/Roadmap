@@ -3,6 +3,22 @@
   "date": "2026-04-15",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#696",
+      "title": "Streamline URL Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "performance",
+        "url",
+        "upload",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update modifies the `smartUploadToCos` function to skip downloading and re-uploading for URL inputs, directly passing them to the upstream API. This change addresses timeout errors caused by lengthy downloads while maintaining the existing logic for base64 inputs. The result is a more efficient handling of URL inputs in the Platform Service."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#695",
       "title": "Align mountsea veo with cqtai schema in Platform Service 🚀",
       "tags": [
