@@ -1,0 +1,71 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-04-15",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#438",
+      "title": "Enhance Desktop Agent UI for Better Connectivity in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "enhancement",
+        "internationalization",
+        "desktop-agent",
+        "connectivity"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/438",
+      "summary": "This update introduces a new Desktop Agent connection manager UI, enhancing user experience by displaying connection status and installation instructions. The integration includes a button in the chat toolbar that indicates connectivity with a green dot. Additionally, internationalization support has been added for English and Chinese, ensuring accessibility for a broader audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#105",
+      "title": "Skip Billing for Desktop Agent Endpoints in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "billing",
+        "desktop",
+        "api",
+        "management",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update introduces billing exemptions for two desktop agent endpoints: the status check and WebSocket. Specifically, the endpoints `/aichat2/agent` and `/aichat2/ws/agent` will not incur any AI resource charges. This change enhances management efficiency without impacting resource consumption."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#692",
+      "title": "Exciting New WebSocket Infrastructure and CLI for Desktop Agent in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "websocket",
+        "cli",
+        "desktop-agent",
+        "infrastructure",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces a robust WebSocket infrastructure for the desktop agent, enabling seamless connections and command execution. Key features include a new WebSocket endpoint, connection management, and a Node.js CLI package for local tool integration. These enhancements significantly improve the interaction between local agents and the cloud orchestrator."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#693",
+      "title": "Fix NanoBanana API to Use Aspect Ratio Instead of Size in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "api",
+        "mountsea",
+        "nano-banana",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update resolves the issue with the Mountsea NanoBanana channel, which was previously broken due to an API schema change. The `size` field has been replaced with `aspect_ratio` in the relevant code, ensuring compatibility with the upstream API. This fix will restore functionality for generating and editing requests across all models and resolutions."
+    }
+  ]
+}
