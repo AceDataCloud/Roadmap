@@ -1,0 +1,53 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-04-16",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#198",
+      "title": "Update TypeScript ESLint Parser for Better Compatibility in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "typescript",
+        "eslint",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update bumps the @typescript-eslint/parser from version 8.58.0 to 8.58.2, addressing issues such as the removal of the tsbuildinfo cache file from published packages. Additionally, it enhances the eslint-plugin with improved checks for type predicates. These changes ensure better compatibility and performance in our frontend development."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#203",
+      "title": "Update Axios to Latest Version for Enhanced Security in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "security",
+        "frontend",
+        "axios",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps Axios from version 1.11.0 to 1.15.0, introducing critical security patches and runtime support for Deno and Bun. Key improvements include enhanced CI security measures and documentation updates, ensuring a more robust and secure integration for our frontend applications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#204",
+      "title": "Upgrade uuid to 13.0.0 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "upgrade",
+        "dependencies",
+        "uuid",
+        "frontend",
+        "web"
+      ],
+      "public": false,
+      "summary": "This update bumps the uuid package from version 8.3.2 to 13.0.0, introducing several breaking changes, including making browser exports the default. The changes also enhance performance and remove support for older Node.js versions. This upgrade ensures better compatibility and improved functionality in the project."
+    }
+  ]
+}
