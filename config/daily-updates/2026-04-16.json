@@ -3,6 +3,51 @@
   "date": "2026-04-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#196",
+      "title": "Update ESLint Config to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "eslint",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This PR updates the `eslint-config-prettier` package from version 8.5.0 to 10.1.8. The new version includes several patch changes that enhance compatibility and fix issues related to configuration. This update ensures our code style remains consistent and up-to-date with the latest standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#200",
+      "title": "Upgrade cross-env to 10.1.0 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "update",
+        "typescript"
+      ],
+      "public": false,
+      "summary": "This update bumps the cross-env package from version 7.0.3 to 10.1.0, introducing support for default value syntax. The changes enhance the flexibility of environment variable handling in scripts, allowing for fallback values. Additionally, the update modernizes the package with improved testing and TypeScript support."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#201",
+      "title": "Upgrade query-string to latest version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "upgrade",
+        "frontend",
+        "web"
+      ],
+      "public": false,
+      "summary": "This update bumps the query-string library from version 8.1.0 to 9.3.1. Key improvements include fixes for custom type functions with array formats and enhancements to the stringify method. This upgrade ensures better handling of query parameters and improves overall stability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#202",
       "title": "Update Vue Plugin to Latest Version in Frontend Web 🚀",
       "tags": [
