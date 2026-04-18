@@ -3,6 +3,410 @@
   "date": "2026-04-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#442",
+      "title": "Fix API Call Failures for Aichat2 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "api",
+        "authentication",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/442",
+      "summary": "This update resolves the Agent 405 error by implementing a new `AgentOperator` class that correctly sets the base URL and headers for API calls. Additionally, it fixes the token source in `ConnectorManager.vue` to ensure that the correct Bearer token is used for authentication, preventing connector API call failures. These changes enhance the reliability of the chat and connector functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#39",
+      "title": "Enhance Deploy Script to Surface Failures in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "deploy",
+        "script",
+        "fix",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/39",
+      "summary": "This update modifies the deploy script to remove the '|| true' clause, ensuring that deploy failures are now surfaced instead of being ignored. Additionally, it triggers a redeploy for the APPEND_SLASH fix, improving overall deployment reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#210",
+      "title": "Automatic i18n Updates from zh-CN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update introduces automatic translation updates for internationalization (i18n) based on changes from the zh-CN source. Key modifications include extensive updates to language files for Arabic, German, English, Spanish, French, Italian, Japanese, Korean, Portuguese, Russian, and Traditional Chinese, enhancing the multilingual support of the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#38",
+      "title": "Fresh deploy triggered in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "deploy",
+        "x402",
+        "actions",
+        "connectivity"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/38",
+      "summary": "An empty commit has been made to initiate a fresh deployment run. This action addresses previous failures caused by TKE CLB connectivity timeouts from GitHub Actions runners."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#709",
+      "title": "Enhance Kling Model Support in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "kling",
+        "api",
+        "pricing",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces support for the new `kling-v2-6`, `kling-v3`, and `kling-v3-omni` models in worker validation. It also allows flexible durations between 3-15 seconds for V3/V3-Omni models and updates the pricing table to reflect new billing structures. Additionally, the OpenAPI specification has been revised to include all current models and parameters."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#209",
+      "title": "Admin Publisher Bug Fixes and Enhancements in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "admin",
+        "frontend",
+        "permissions",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update addresses several critical bugs in the admin publisher interface. The task state display now correctly shows the state instead of the status, while the channel column has been improved to display icons and names. Additionally, user details such as avatar and email are now visible in the task table, and a permission guard has been added to restrict access for non-superusers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#441",
+      "title": "Fix chat toolbar bugs for smoother experience in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "toolbar",
+        "chat",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/441",
+      "summary": "This update addresses several issues with the chat toolbar, including hiding the connector button when no OAuth providers are available, which eliminates the 'No connectors available' error message. The toolbar layout has been improved using flexbox to prevent UI overlap with the wallet button, ensuring all buttons are clickable. Additional margin adjustments have been made to enhance usability across different viewports."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#321",
+      "title": "Exciting New Kling V3 Features Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "kling",
+        "v3",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "We've introduced five new promotional blurbs for Kling V3, highlighting its flexible 3-15 second duration, native audio generation, and per-second billing. The updates also include support for V3-Omni video reference input and V2.6 pro audio capabilities. These enhancements aim to elevate user experience and streamline AI video creation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#439",
+      "title": "Exciting New Model Support and Features in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "kling",
+        "audio",
+        "models",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/439",
+      "summary": "This update introduces support for the kling-v3, kling-v3-omni, and kling-v2-6 models in the ModelSelector, enhancing user options. A new GenerateAudioSelector toggle has been added, allowing users to generate audio with specific models. Additionally, the DurationSelector is now reactive, adapting to the selected model's capabilities, and the default model has been updated to kling-v2-5-turbo."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#44",
+      "title": "Enhance Kling Video Models in Skills 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "enhancement",
+        "models",
+        "audio",
+        "kling"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/44",
+      "summary": "This update introduces support for the kling-v3, kling-v3-omni, and kling-v2-6 models in the models table. A new `generate_audio` parameter has been added for synchronized audio generation, and the duration for v3 models has been updated to allow flexibility between 3 to 15 seconds. Additionally, examples have been updated to recommend using kling-v3 as the preferred model."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#206",
+      "title": "Exciting New Model Support for Kling in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "feature",
+        "kling",
+        "models",
+        "update",
+        "audio"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/206",
+      "summary": "This update introduces support for the `kling-v2-6`, `kling-v3`, and `kling-v3-omni` models in the plugin YAML. Additionally, the duration description for V3 has been updated to allow a flexible range of 3-15 seconds. A new `generate_audio` boolean parameter has also been added across the YAML, Python tool, and client, enhancing functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#53",
+      "title": "Enhance Kling OpenAPI Spec with New Models in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "openapi",
+        "kling",
+        "features",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/53",
+      "summary": "This update introduces `kling-v2-6`, `kling-v3`, and `kling-v3-omni` to the `/kling/videos` model enum. The duration field has been updated to support a flexible range of 3-15 seconds, replacing the previous fixed options. Additionally, a new `generate_audio` boolean parameter has been added, and the default model description is now set to `kling-v2-master`."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#40",
+      "title": "Exciting new Kling model support added in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "feature",
+        "kling",
+        "video",
+        "models",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/40",
+      "summary": "This update introduces support for the `kling-v2-6`, `kling-v3`, and `kling-v3-omni` models within the `KlingModel` Literal type. Additionally, the `Duration` type has been updated to allow for flexible durations between 3-15 seconds for V3 models. The `generate_audio` parameter has also been added to relevant video generation tools, enhancing functionality across the board."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#319",
+      "title": "Exciting New Model Support for Kling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "billing",
+        "openapi",
+        "tests",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update introduces support for Kling V3, V3-Omni, and V2.6 models, enhancing billing rules for various modes and audio generation options. The OpenAPI specification has been updated to include these new models, along with comprehensive documentation in Chinese. Additionally, 23 new cost tests have been added to ensure robust functionality across all model combinations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#440",
+      "title": "Exciting New GLM Model Group Added to Chat Interface in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "chat",
+        "models",
+        "i18n",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/440",
+      "summary": "This update introduces a new GLM model group featuring five models: glm-5.1, glm-5, glm-4.7, glm-4.5, and glm-4-flash. Additionally, internationalization entries for both English and Chinese have been added to enhance user experience. The changes aim to expand the capabilities of the chat interface with advanced AI models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#710",
+      "title": "Exciting New GLM Models Added to ephone Checker Config in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "models",
+        "ephone",
+        "config",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces 12 new GLM model capabilities to the ephone checker configuration. The models include glm-5.x, glm-4.x, and glm-3-turbo, each with specified ranks to enhance performance. Key testing will ensure that the checker correctly integrates these models and that API calls route effectively to the ephone."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#320",
+      "title": "Exciting New GLM Model Support Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "api",
+        "cost",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces support for 12 GLM models via the ephone provider, featuring a markup ratio of 31.537. Key changes include the addition of cost rules, an API cost file, and updates to the OpenAPI specification. All cost tests for the new models have passed successfully, ensuring robust integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#208",
+      "title": "Automatic i18n Updates from zh-CN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "localization",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces automated translation updates for internationalization (i18n) based on changes from the zh-CN source. Key modifications include updates to multiple language files, enhancing the localization experience across various languages. The changes aim to improve user accessibility and ensure consistency in translations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#207",
+      "title": "Enhance Admin Dashboard with Task Detail Drawer in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "admin",
+        "dashboard",
+        "i18n",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces a click-to-view detail drawer for publish tasks in the admin publisher dashboard. Users can now access comprehensive task details, including state, channel, document, user, URL, failure reasons, timing info, and metadata. The implementation includes internationalization support for both English and Chinese."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#37",
+      "title": "Fix APPEND_SLASH to Ensure Supported Endpoint Works in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "bugfix",
+        "django",
+        "proxy",
+        "client-discovery"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/37",
+      "summary": "This update disables the APPEND_SLASH setting in Django's configuration to prevent unnecessary redirects that were causing empty responses for the /supported endpoint. By setting APPEND_SLASH to False, we ensure that clients behind the Tencent stgw proxy receive the correct JSON response, enhancing client discovery functionality. The change has been tested to confirm that other endpoints remain functional."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#17",
+      "title": "Enhance dependencies with pywxdump in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "dependencies",
+        "update",
+        "poetry",
+        "maintenance"
+      ],
+      "public": false,
+      "summary": "This update introduces the pywxdump>=3.0 dependency to the project, ensuring enhanced functionality. The poetry.lock file has been regenerated to reflect the new dependency tree, optimizing package management. These changes will improve the overall performance and maintainability of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#180",
+      "title": "Automated i18n Updates from Chinese Translations in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This PR introduces automatic updates for internationalization (i18n) translations based on changes from the Chinese (zh-CN) source. Key modifications include updates to multiple language files, enhancing the application's multilingual support. The changes improve user experience by ensuring accurate translations across various languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#206",
+      "title": "New Admin Publisher Dashboard Unveiled in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "admin",
+        "dashboard",
+        "i18n",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "We've introduced a comprehensive admin Publisher dashboard at `/console/admin/publisher`. This feature includes statistics overview cards, a channel distribution table, and a task list with filters and pagination. Additionally, we've added internationalization support for both English and Chinese, enhancing accessibility for all users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#318",
+      "title": "Enhance Publish Task Stats and Filters in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "backend",
+        "filters",
+        "statistics",
+        "admin"
+      ],
+      "public": false,
+      "summary": "This update introduces a new API endpoint, `PublishTaskStatisticsView`, which provides aggregate statistics for publish tasks, including total counts and breakdowns by state and channel. Additionally, the filters for both `PublishTask` and `PublishConfig` lists have been extended to include state, channel_id, and validity fields, improving data retrieval capabilities for the admin dashboard."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#106",
+      "title": "Fix x402 record handling and payment format issues in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "bugfix",
+        "payment",
+        "x402",
+        "gateway",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update addresses critical issues with the x402 payment flow. The `application_id` guard was adjusted to ensure the x402 check executes properly, preventing silent drops of usage records. Additionally, the payment payload structure has been corrected to align with facilitator expectations, and payment requirements have been unified to use `maxAmountRequired` across all networks."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Docs#52",
       "title": "Enhance Claude Model Enum with New Addition in Docs 🚀",
       "tags": [
