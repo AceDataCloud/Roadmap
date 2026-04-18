@@ -3,6 +3,85 @@
   "date": "2026-04-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Docs#52",
+      "title": "Enhance Claude Model Enum with New Addition in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "enhancement",
+        "openapi",
+        "claude",
+        "docs"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/52",
+      "summary": "This update introduces the 'claude-opus-4-7' model to the Claude chat/completions model enum in the openapi/claude.json file. This addition expands the available options for developers, enhancing the flexibility of the API. The change is straightforward, with a single line added to the enum list."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#708",
+      "title": "Enhance OpenAI Configs with Claude Opus 4-7 in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "openai",
+        "config",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update adds the claude-opus-4-7 model to the upstream configurations for ephone, openaihk, wcnb, and xiaojingai. Each configuration now includes this model with the same rank as claude-opus-4-6, ensuring consistent routing capabilities across platforms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#317",
+      "title": "Introducing claude-opus-4-7 model with new pricing in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "api",
+        "model",
+        "pricing"
+      ],
+      "public": false,
+      "summary": "The claude-opus-4-7 model has been added with the same pricing and configuration as claude-opus-4-6. Key updates include modifications to billing rules, visibility in chat models, and updates to the OpenAPI specifications. All API cost tests have successfully passed, ensuring a smooth integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#315",
+      "title": "Enhance API Usage Brief with Elapsed Time in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "backend",
+        "enhancement",
+        "usage",
+        "serializer"
+      ],
+      "public": false,
+      "summary": "This update adds an `elapsed` field to the API usage brief endpoint, providing the request duration in seconds. The `ApiUsageBriefSerializer` has been modified to include this new field, ensuring that each usage record now reflects the time taken for the request. This enhancement improves the detail available for API usage analysis."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#316",
+      "title": "Enhance Mountsea Balance Monitoring in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "monitoring",
+        "credits",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces the `get_balance_mountsea()` function to monitor credit balances at `dk.mountsea.ai`. The new endpoint retrieves the current credits and calculates the remaining balance in RMB, integrating seamlessly with existing logging systems. This enhancement improves our ability to track and manage credit usage effectively."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#707",
       "title": "Fix model mapping and action for Veo client in Platform Service 🚀",
       "tags": [
