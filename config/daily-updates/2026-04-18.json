@@ -3,6 +3,115 @@
   "date": "2026-04-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#495",
+      "title": "Enhance CI/CD with Publisher API Deployment in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "ci-cd",
+        "deployment",
+        "api",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update introduces a new deployment manifest for the publisher API, enhancing the CI/CD pipeline. The API pod, previously stuck due to a hardcoded image tag, now dynamically uses the `${TAG}` variable for better reliability. The live pod has been successfully updated, ensuring seamless operation moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#118",
+      "title": "Enhance billing payload for multipart requests in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "billing",
+        "metadata",
+        "multipart",
+        "cost",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where the billing payload for multipart form data endpoints was empty, leading to incorrect cost calculations. By merging record metadata into the billing payload, cost rules will now match accurately based on the model used. Key tests have been outlined to ensure correct billing for different models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#334",
+      "title": "Enhance Claude.ai Steps and Introduce GLM Service in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "update",
+        "documentation",
+        "backend",
+        "service",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update refines the connection steps for Claude.ai, ensuring clearer instructions for users. Additionally, it introduces comprehensive service pages for GLM in both English and Chinese, enhancing accessibility and understanding of the service. The publisher's document rank has also been adjusted to improve content organization."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#218",
+      "title": "Fix document redirection to first expandable item in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "navigation",
+        "documents"
+      ],
+      "public": false,
+      "summary": "This update resolves the issue where the /documents route incorrectly redirected to Midjourney instead of the first expandable document. The code now builds a document tree from 500 items, ensuring accurate navigation to the first child of the first expandable root group. Users will now be redirected to the 'Claude Code VSCode Integration Guide' as intended."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#448",
+      "title": "Fix MCP Servers Dialog Loading Issue in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "mcp",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/448",
+      "summary": "The MCP servers dialog now correctly displays the list of servers instead of showing 'No MCP servers yet'. This was resolved by adding `immediate: true` to the `modelValue` watcher in `McpManager.vue`, ensuring the component updates as expected. Key tests confirm that the badge count and server listings function properly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#728",
+      "title": "Fix model remapping for nano-banana-2 in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "model",
+        "images",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update removes the incorrect mapping of the `nano-banana-2` model to `nano-banana-pro` in both `images_edits.py` and `images_generations.py`. The `nano-banana-2` model is now correctly passed through as-is, ensuring proper functionality for image generation and editing requests. Testing endpoints with the `nano-banana-2` model will confirm that it operates without remapping."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#727",
+      "title": "Enhance OAuth Security with Encryption Key in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "security",
+        "oauth",
+        "k8s",
+        "deployment",
+        "encryption"
+      ],
+      "public": false,
+      "summary": "This update introduces the `CONNECTOR_ENCRYPTION_KEY` to the K8s configuration for the MCP server, ensuring secure OAuth token encryption using AES-256-GCM. Additionally, the `OAUTH_REDIRECT_URI` environment variable has been added to the deployment settings, and the `.env.example` file has been updated to reflect these new configurations. These changes resolve issues with the OAuth flow failing due to encryption key requirements."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#726",
       "title": "Map nano-banana-2 to nano-banana-pro for upstream in Platform Service 🚀",
       "tags": [
