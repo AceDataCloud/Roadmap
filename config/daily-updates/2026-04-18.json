@@ -1,0 +1,38 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-04-18",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#707",
+      "title": "Fix model mapping and action for Veo client in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "api",
+        "mountsea",
+        "veo",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update aligns the mountsea worker's Veo client with Mountsea's official API by correcting model mappings and actions. Key changes include updating the `MODEL_MAPPING`, switching the action for `veo31-fast-ingredients`, clamping the aspect ratio, and removing unsupported resolution parameters. The public API remains unchanged, ensuring compatibility with existing user requests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#706",
+      "title": "Enhance lyric synthesis for missing aligned_lyrics in Platform Service 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "synthesis",
+        "lyrics",
+        "ttapi",
+        "platform-service",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a new synthesizer that generates `aligned_lyrics` from `aligned_words` when the upstream response omits it. This ensures that downstream consumers, like karaoke displays and the Nexior song player, receive the necessary line-level structure. The implementation has been verified to produce accurate results, maintaining compatibility with existing channels."
+    }
+  ]
+}
