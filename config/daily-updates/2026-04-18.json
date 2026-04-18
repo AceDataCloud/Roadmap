@@ -3,6 +3,259 @@
   "date": "2026-04-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#716",
+      "title": "Fix model override for ingredients2video action in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "model",
+        "platform",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update enforces the use of the 'veo31_fast' model for the ingredients2video action, replacing the previous 'veo31_fast_ingredients' model. This change addresses compatibility issues with the upstream mountsea service, which only accepts 'veo31_fast' for this action. The implementation ensures that other models remain unaffected for different actions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#45",
+      "title": "Standardize Veo Model Name for Clarity in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "documentation",
+        "update",
+        "skills",
+        "veo"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/45",
+      "summary": "This update standardizes the model name in the veo-video SKILL.md to `veo31-fast-ingredients`. The change enhances clarity and consistency in the documentation, ensuring users have the correct information for utilizing the ingredient mode effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#17",
+      "title": "Standardize Veo Model Name in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "fix",
+        "cli",
+        "veo",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/17",
+      "summary": "This update standardizes the Veo CLI output, tests, and README to consistently use the model name `veo31-fast-ingredients`. Key files modified include the README, test commands, and output handling, ensuring clarity and accuracy in model references. These changes enhance the usability and reliability of the CLI for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#41",
+      "title": "Standardize Veo Model Name to veo31-fast-ingredients in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "fix",
+        "veo",
+        "models",
+        "standardization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/41",
+      "summary": "This update standardizes the Veo model name across various components, specifically changing references to 'veo31-fast-ingredient' to 'veo31-fast-ingredients'. Key files modified include types, info tools, and video tools, ensuring consistency in model naming. This change enhances clarity and usability for developers working with the Veo models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#444",
+      "title": "Standardize VEO Model Name in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "ui",
+        "model",
+        "standardization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/444",
+      "summary": "This update standardizes the ModelSelector dropdown value and label from `veo31-fast-ingredient` to `veo31-fast-ingredients`. This change enhances consistency and clarity in the user interface, ensuring users see the correct model name."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#54",
+      "title": "Standardize VEO Model Name in Docs 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "docs",
+        "update",
+        "openapi",
+        "standardization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/54",
+      "summary": "This update standardizes the model name from `veo31-fast-ingredient` to `veo31-fast-ingredients` in the OpenAPI specification. This change ensures consistency in documentation and improves clarity for users. The modification involved a minor update in the JSON file."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#110",
+      "title": "Improve X402 Settlement Process in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "fix",
+        "performance",
+        "async",
+        "security",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update defers the X402 on-chain settlement to a background asyncio task, preventing Kong's timeout issues. By returning a 200 response immediately after verification, the system enhances user experience while maintaining security through EIP-712 signatures. This change ensures smoother payment processing without blocking the auth response."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#443",
+      "title": "UI Bug Fixes for Aichat2 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "errorhandling",
+        "aichat2",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/443",
+      "summary": "This update addresses several UI bugs in the Aichat2 component. Key changes include adding guards to dialog components to prevent unwanted rendering, adjusting z-index for the wallet button, and implementing silent error handling for CORS issues. These improvements enhance user experience by ensuring cleaner dialog interactions and better error messaging."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#323",
+      "title": "Revert veo model name to veo31-fast-ingredients in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "api",
+        "documentation",
+        "openapi",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update reverts the model name back to `veo31-fast-ingredients` across various files, correcting an earlier mistake made in PR #322. Key changes include updates to cost rules, OpenAPI specs, and documentation in both English and Chinese. The fix ensures consistency and accuracy in the API and documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#322",
+      "title": "Align Model Name with OpenAPI Spec in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "api",
+        "cost-rules",
+        "openapi"
+      ],
+      "public": false,
+      "summary": "This update corrects the model name for `veo31-fast-ingredient` in the cost rules to match the OpenAPI specification. Both the API billing rule and service display pricing files have been modified to ensure consistency with the external interface contract. This alignment enhances the reliability of the cost rules and prepares for future updates in the PlatformService worker."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#40",
+      "title": "Enhance DB Resilience for Payment Processing in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "bugfix",
+        "database",
+        "payments",
+        "x402",
+        "resilience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/40",
+      "summary": "This update improves the handling of database unavailability in the verify and settle views of the X402 payment system. It ensures that valid payments can still be processed even when the database is unreachable, preventing disruptions caused by DNS resolution failures. Key changes include catching all database exceptions and allowing on-chain settlements to proceed without prior verification records."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#713",
+      "title": "Enhance Error Handling and Logging in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "logging",
+        "json",
+        "platform-service",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves error handling by extracting upstream 4xx error messages in the `createTask()` function, providing clients with more accurate feedback instead of generic messages. Additionally, all `console.log` statements have been converted to structured JSON logging for better parsing and analysis in CLS, enhancing overall log clarity and utility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#108",
+      "title": "Fix URL issues and enhance request handling in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "bugfix",
+        "http",
+        "logging",
+        "x402"
+      ],
+      "public": false,
+      "summary": "This update resolves a trailing slash issue in the FACILITATOR_URL that was causing double-slash URLs, leading to 404 errors and JSON parsing failures. Additionally, it fixes the request body handling in the x402 authentication flow, ensuring that pre-read bytes are correctly passed to the handler. Debug logging has also been added for better visibility into facilitator responses."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#712",
+      "title": "Enhance error handling for task creation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "task-creation",
+        "http-errors",
+        "platform-service",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves error handling during task creation by extracting specific HTTP 4xx error messages from upstream responses. Instead of retrying and throwing a generic error, the system now throws a `BadRequestError` or `ForbiddenError` immediately, providing clearer feedback to clients. This change applies to both `mountsea` and `cqtai` workers, ensuring better error reporting and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#107",
+      "title": "Fix billing bug for Kling videos in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "bugfix",
+        "billing",
+        "Kling",
+        "Gateway"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical billing issue where Kling video generations were incorrectly billed at 0.0 credits. The root cause was identified in the payload merge order, which has now been corrected to prioritize request fields over response fields. This change ensures accurate billing for Kling videos while maintaining the integrity of LLM chat billing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#711",
+      "title": "Fix null crash by extracting taskId in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "error-handling",
+        "api",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update addresses a TypeError caused by the `_createTask()` method returning a null response from the upstream API. A null check has been added to ensure that if `data.taskId` is missing, a clear `ApiError` is thrown instead of passing a null object downstream. This change enhances error handling and prevents crashes in the application."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#442",
       "title": "Fix API Call Failures for Aichat2 in Nexior 🚀",
       "tags": [
