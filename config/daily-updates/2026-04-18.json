@@ -3,6 +3,22 @@
   "date": "2026-04-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#499",
+      "title": "Upgrade Deploy Workflow to Node 24 in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "upgrade",
+        "workflow",
+        "node24",
+        "deploy",
+        "actions"
+      ],
+      "public": false,
+      "summary": "This update enhances the deploy workflow by upgrading actions to use native Node 24 releases. The temporary override for FORCE_JAVASCRIPT_ACTIONS_TO_NODE24 has been removed, ensuring a cleaner configuration. The Docker Compose v2 deploy flow remains unchanged, maintaining stability in the deployment process."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformPublisher#498",
       "title": "Upgrade to Docker Compose v2 for Deployments in Publisher 🚀",
       "tags": [
