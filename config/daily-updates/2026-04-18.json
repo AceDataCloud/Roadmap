@@ -3,6 +3,227 @@
   "date": "2026-04-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#498",
+      "title": "Upgrade to Docker Compose v2 for Deployments in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "docker",
+        "compose",
+        "deployment",
+        "workflow",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update transitions the deployment workflow to use Docker Compose v2, replacing the legacy v1 implementation. Key changes include enabling Node 24 for JavaScript actions and optimizing the Docker setup by removing unnecessary installation steps. This should enhance reliability and performance during the build and push processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#497",
+      "title": "Modernize Deploy Workflow Actions in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "deploy",
+        "workflow",
+        "upgrade",
+        "actions"
+      ],
+      "public": false,
+      "summary": "This update enhances the deploy workflow by upgrading several GitHub actions to their latest versions, including `checkout`, `setup-buildx`, and `login-action`. Deprecated actions and methods have been removed to eliminate warnings and ensure compatibility with current standards. The build tagging behavior is preserved using the native GitHub run number, improving the overall deployment process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#336",
+      "title": "Adjusted GLM Pricing for Better Value in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "backend",
+        "glm",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update lowers the GLM family chat pricing in the runtime billing rules, aligning the visible pricing with the new credit coefficients. The GLM 5.1 model now costs $0.7000 per million prompt tokens and $0.9000 per million completion tokens, ensuring consistency across all GLM variants. Additionally, service-level estimation and pricing displays have been updated to reflect these changes accurately."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#1",
+      "title": "Enhance SKALE E2E Verification Script in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "skale",
+        "e2e",
+        "verification",
+        "script",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/1",
+      "summary": "This update introduces a new script for live SKALE verification against the AceDataCloud API, allowing engineers to validate the payment path end to end. Key changes include loading the SKALE private key from the environment, improved logging for payment requirements, and visibility into retry responses. This enhancement aims to streamline the validation process for production gateway interactions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#496",
+      "title": "Streamline Automation Token Handling in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "automation",
+        "workflow",
+        "tokens",
+        "stability"
+      ],
+      "public": false,
+      "summary": "This update enhances the automation workflows by normalizing token resolution across multiple YAML files. Explicit fail-fast checks have been added to ensure that missing tokens are caught early, preventing workflow failures due to secret-name discrepancies. As a result, scheduled tasks like triage, merge, and copilot assignments will now operate more reliably."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#14",
+      "title": "Revamped SDK Sync Workflow and Updated README Examples in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "sdk",
+        "workflow",
+        "documentation",
+        "updates",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/14",
+      "summary": "This update repairs the SDK sync workflow by fixing the issue-creation script and enhancing token validation. Additionally, README examples have been updated to reflect the correct usage of the SDK API, ensuring a smoother developer experience. These changes will lead to more reliable documentation-driven syncs and prevent silent workflow failures."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#13",
+      "title": "Fix sync-from-docs workflow in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "workflow",
+        "fix",
+        "automation",
+        "ci"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/13",
+      "summary": "The sync-from-docs workflow has been repaired to address recent failures. Key updates include a YAML-safe JSON payload for issue creation, enhanced token validation, and improved dynamic Copilot run detection. These changes ensure that the workflow is now more stable and reliable."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#18",
+      "title": "Fix sync-from-docs workflow for smoother operations in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "workflow",
+        "fix",
+        "automation",
+        "github-actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/18",
+      "summary": "The sync-from-docs workflow has been repaired by updating the YAML configuration to use a JSON payload for issue creation. Key improvements include explicit token validation and enhanced wait logic to accommodate dynamic Copilot runs. This ensures that the workflow can now successfully parse and create issues or PRs without timing out or breaking due to token issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#42",
+      "title": "Revamped sync-from-docs workflow for reliability in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "workflow",
+        "fix",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/42",
+      "summary": "The sync-from-docs workflow has been repaired with significant updates to enhance its functionality. Key changes include a restored YAML-safe issue creation step, early token validation, and improved Copilot run detection. These updates ensure that the workflow executes smoothly and is resilient to token configuration changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#119",
+      "title": "Enhance Billing Payload with x-billing Headers in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "billing",
+        "gateway",
+        "update",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update extends the `get_deducted_amount` function to include any `x-billing-*` response headers in the billing payload. This change ensures that multipart requests can accurately reflect billing based on the model used, addressing previous limitations where default billing rules were applied. The implementation complements existing worker-side changes for improved billing accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#731",
+      "title": "Enhance Billing Model Exposure in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "api",
+        "updates",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces the `x-billing-model` response header for successful nano-banana requests on the `/v1/images/edits` and `/v1/images/generations` endpoints. This change ensures accurate billing by allowing the model to be captured and processed correctly, addressing previous issues with multipart form data. The implementation is paired with updates in the PlatformGateway to enhance the billing payload integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#730",
+      "title": "Revamped Agentic Loop for Enhanced Performance in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "architecture",
+        "bugfix",
+        "performance",
+        "llm"
+      ],
+      "public": false,
+      "summary": "This update replaces the existing `AgenticEngine` with a new `queryLoop` architecture inspired by Claude Code's design. Key improvements include error recovery mechanisms, enhanced tool execution, and a more efficient context management system. The changes aim to eliminate output duplication and improve overall resilience during LLM streaming."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#8",
+      "title": "Enhance audio capabilities with fish provider in S D K 🎣",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "feature",
+        "audio",
+        "typescript",
+        "python",
+        "sdk"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/8",
+      "summary": "This update introduces the 'fish' audio provider to both TypeScript and Python SDKs, enhancing audio generation options. Key changes include the addition of 'fish' to the AudioProvider union type and the SERVICE_TASK_ENDPOINTS in both languages, allowing users to access fish-related audio tasks seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#335",
+      "title": "Enhance i18n Support and Fix Sitemap URLs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "i18n",
+        "fix",
+        "backend",
+        "sitemap",
+        "translations"
+      ],
+      "public": false,
+      "summary": "This update resolves approximately 121 i18n placeholders in llms.txt by fetching English translations from the Translation table, ensuring AI crawlers receive readable descriptions. Additionally, all 15 MCP servers have been added to llms.txt, and the robots.txt file has been corrected to use http:// for Sitemap URLs. These changes improve the overall functionality and accessibility of the platform."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformPublisher#495",
       "title": "Enhance CI/CD with Publisher API Deployment in Publisher 🚀",
       "tags": [
