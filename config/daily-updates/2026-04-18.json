@@ -3,6 +3,149 @@
   "date": "2026-04-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#726",
+      "title": "Map nano-banana-2 to nano-banana-pro for upstream in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "mapping",
+        "handlers",
+        "upstream",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update implements a mapping from `nano-banana-2` to `nano-banana-pro` in the image generation and editing handlers. The change ensures compatibility with the upstream nanobanana service, which only accepts specific model names. Key files modified include the handlers for image generations and edits, along with necessary environment configurations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#5",
+      "title": "Exciting Multi-Provider Support Added to Python SDK in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "feature",
+        "python",
+        "sdk",
+        "multi-provider",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/5",
+      "summary": "This update introduces a `provider` parameter for the Python SDK's image, video, and audio resources, aligning with the TypeScript SDK. New providers such as `producer`, `kling`, and others have been added to enhance functionality. Both TypeScript and Python READMEs have been updated with examples to guide users in utilizing the new multi-provider capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#217",
+      "title": "Enhance Document Sidebar Icon Alignment in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "alignment",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the vertical alignment of icons and text in the document sidebar by using inline-flex and center alignment. Additionally, long document names now truncate with an ellipsis for better readability. Icon sizing and alignment have also been fixed to ensure a polished user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#38",
+      "title": "Enhance CLS Dashboard Management Skills in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "dashboard",
+        "management",
+        "api",
+        "tencent",
+        "cls"
+      ],
+      "public": false,
+      "summary": "This update introduces a new management skill for CLS Dashboards, allowing users to list, create, and delete dashboards via a direct API interface. The implementation includes a script and documentation to facilitate usage, ensuring compatibility with the latest API requirements. Key functionalities have been tested and verified for seamless operation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#725",
+      "title": "Update NanoBanana Port Configuration in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "k8s",
+        "configuration",
+        "service"
+      ],
+      "public": false,
+      "summary": "The NANOBANANA_BASE_URL port has been updated from 3000 to 8000 to align with the K8s Service configuration. This change ensures that the `platform-service-openaihk-nanobanana` service correctly exposes the intended port. Testing will confirm that the `nano-banana` model functions properly via the specified endpoints."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#117",
+      "title": "Fix X402 null values crashing Kong serialization in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "bugfix",
+        "kong",
+        "x402",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where the X402 `/auth` response was sending null values for `application_id` and `credential_id`, causing a crash during query serialization in Kong. The fix involves omitting these fields entirely from the response and adding a helper function to handle potential null values defensively. As a result, X402 requests will now return a successful response instead of a server error after payment verification."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#447",
+      "title": "Streamline GLM Models by Removing Broken Ones in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "cleanup",
+        "frontend",
+        "models",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/447",
+      "summary": "This update removes three broken GLM models (glm-5, glm-4.5, glm-4-flash) from the frontend, ensuring a cleaner and more efficient user experience. The GLM group now features only the functional models: glm-5.1 and glm-4.7. Additionally, necessary changes were made to related constants, types, and internationalization files to reflect this update."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#331",
+      "title": "Removed 7 Broken GLM Models in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "glms",
+        "cleanup",
+        "backend",
+        "api",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update removes seven broken GLM models from the system, including glm-5-turbo and glm-4-plus, ensuring cleaner functionality. The OpenAPI specifications, service cost rules, and tests have been updated accordingly. Five operational models remain, enhancing the reliability of the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#332",
+      "title": "Exciting New NanoBanana Models for Image APIs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "api",
+        "testing",
+        "images",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces support for the new `nano-banana`, `nano-banana-2`, and `nano-banana-pro` models in the image generation and editing APIs. The OpenAPI specifications have been updated to include these models, and six new cost test cases have been added to ensure accurate pricing. All cost tests are passing locally, paving the way for enhanced functionality in image processing."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#215",
       "title": "Enhance Announcement Display with Markdown in Frontend Web 🎉",
       "tags": [
