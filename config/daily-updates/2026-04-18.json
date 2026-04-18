@@ -3,6 +3,402 @@
   "date": "2026-04-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#215",
+      "title": "Enhance Announcement Display with Markdown in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "markdown",
+        "frontend",
+        "vue",
+        "announcements",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces the use of the `VueMarkdown` component to render announcement content as markdown, allowing for clickable links and rich text formatting. Links will open in new tabs, enhancing user experience while maintaining the display of plain text announcements. Key files modified include the AnnouncementPopover component and the API models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#724",
+      "title": "Reverting taskId extraction changes in Platform Service 🔄",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "revert",
+        "fix",
+        "core",
+        "taskId",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update reverts the previous fix that extracted taskId from the upstream response. The change aimed to prevent null crashes but has been rolled back to restore the original behavior. The modification includes adjustments in the core.ts file, impacting how taskId is handled in the response."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#4",
+      "title": "Enhance SDK with Multi-Provider Support in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "feature",
+        "sdk",
+        "typescript",
+        "build",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/4",
+      "summary": "This update introduces multi-provider support for Images, Video, and Audio resources, allowing users to specify providers dynamically. Additionally, it adds several missing task endpoints and transitions the build process from `tsc` to `tsup` for improved module resolution and output formats. These changes enhance flexibility and usability for developers working with the AceDataCloud SDK."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#721",
+      "title": "Exciting New NanoBanana Model Support for Image Endpoints in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "nano-banana",
+        "openai",
+        "images",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces support for the NanoBanana models, allowing them to be routed through the OpenAI-compatible image endpoints. Key changes include the addition of model configurations, format transformations between OpenAI and NanoBanana, and updates to the model listing. This enhancement ensures seamless integration and improved functionality for image generation and editing tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#116",
+      "title": "Enhance Payload Normalization for Accurate Billing in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "billing",
+        "jsonlogic",
+        "normalization",
+        "api",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update introduces a new function to normalize payload string values, ensuring reliable JsonLogic evaluations for billing. Numeric strings are coerced to integers or floats, and non-numeric strings are converted to lowercase to prevent case mismatches. These changes address production billing anomalies and enhance the accuracy of cost rule evaluations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#213",
+      "title": "Enhance Document Sidebar with Icons in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "icons",
+        "typescript",
+        "sidebar"
+      ],
+      "public": false,
+      "summary": "This update introduces document icons in the sidebar tree by adding an `icon_url` to the `IDocument` TypeScript interface. Icons are conditionally rendered for all document types, enhancing visual identification. The implementation ensures that documents without icons still render correctly, maintaining a clean user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#114",
+      "title": "Enable Auth-Free Access for OpenAI Models in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "api",
+        "authentication",
+        "openai",
+        "metadata",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update adds the OpenAI models metadata endpoint to the list of APIs that can be accessed without authentication. The API ID `df57157e-2a4f-43f6-870b-fd3c530827e6` has been added to `SKIP_AUTH_API_IDS`, allowing users to retrieve model information without billing requirements. Other endpoints will continue to enforce authentication as usual."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#446",
+      "title": "Streamline API by Removing Deprecated Fields in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "api",
+        "cleanup",
+        "migration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/446",
+      "summary": "This update removes the deprecated `price`, `estimation`, and `unlimited` fields from the `Api` model, enhancing code clarity and maintainability. The `price` field has been replaced by `cost`, while `estimation` was never utilized, and `unlimited` was redundant. A Django migration is included to drop these columns effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#214",
+      "title": "Streamline API Model by Removing Deprecated Types in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "api",
+        "cleanup",
+        "django",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update removes the deprecated `IApiPrice` and `IApiEstimation` types from the API model, along with their associated fields. The changes include a Django migration to drop these columns, ensuring a cleaner and more efficient codebase. The removal of these fields will help streamline API responses and improve maintainability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#115",
+      "title": "Clean Up Deprecated Api Fields in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "refactor",
+        "api",
+        "cleanup",
+        "django"
+      ],
+      "public": false,
+      "summary": "This update removes the deprecated `price`, `estimation`, and `unlimited` fields from the `Api` model, streamlining the codebase. The `price` field has been replaced by `cost`, while `estimation` was never utilized, and `unlimited` was redundant. A Django migration is included to drop these columns, ensuring a cleaner API response."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#329",
+      "title": "Streamline Api Model by Removing Deprecated Fields in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "refactor",
+        "api",
+        "django",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update removes the deprecated `price`, `estimation`, and `unlimited` fields from the `Api` model, which were either unused or replaced by newer implementations. A Django migration has been included to drop these columns from the database. The changes enhance the clarity and efficiency of the API model."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#328",
+      "title": "Enhance Document Model with Icon URL in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "document",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces an `icon_url` field to the Document model, allowing for the storage of document icon URLs. This enhancement will enable the display of icons for parent documents in the PlatformFrontend, improving user experience. The necessary migration has been generated and applied."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#327",
+      "title": "Enhance Free API Cost Configuration in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "api",
+        "backend",
+        "cost"
+      ],
+      "public": false,
+      "summary": "This update introduces a new cost configuration for the free `/openai/models` API endpoint, setting its consumption to zero. A corresponding database record has been created to support this change. The implementation has been tested to ensure that it integrates smoothly with existing systems."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#719",
+      "title": "New OpenAI-Compatible Models Endpoint Added in Platform Service 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "api",
+        "openai",
+        "models",
+        "integration"
+      ],
+      "public": false,
+      "summary": "We've introduced a new `/v1/models` endpoint that returns a list of available models in the OpenAI SDK format. This update includes the `ModelsHandler` and a configuration for over 80 supported models, enhancing compatibility with tools like Banana Mall. The changes ensure seamless integration for users accessing model listings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#720",
+      "title": "Enhance GLM Support and Fix Routing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "bugfix",
+        "glm",
+        "checker",
+        "routing"
+      ],
+      "public": false,
+      "summary": "This update introduces support for 12 GLM models across multiple providers, ensuring robust failover capabilities. Additionally, the routing for GLM models has been fixed in `check.py`, preventing potential errors during health checks. The changes enhance the reliability and performance of the checker system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#113",
+      "title": "Refactor X402 Settlement Context Storage in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "refactor",
+        "x402",
+        "gateway",
+        "api",
+        "metadata"
+      ],
+      "public": false,
+      "summary": "This update refactors the storage of X402 settlement context by saving it in `ApiUsage.metadata` during the `/auth` phase, streamlining the process. The `/record` endpoint now retrieves this context using `trace_id`, eliminating the need for query parameters. Additionally, the `x402_settle` forwarding from the Lua plugin has been removed, simplifying the architecture without requiring changes to the PlatformService workers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#326",
+      "title": "Enhance Kling Videos OpenAPI Spec for Clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "openapi",
+        "kling",
+        "backend",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update improves the Kling Videos OpenAPI specification by correcting model descriptions, durations, and response examples. Key changes include clarifying the capabilities of each model and ensuring accurate documentation of audio support. These adjustments enhance the overall accuracy and usability of the API documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#111",
+      "title": "Enhance X402 Payment Settlement Process in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "payment",
+        "api",
+        "enhancement",
+        "gateway",
+        "x402"
+      ],
+      "public": false,
+      "summary": "This update moves the X402 payment settlement from the `/auth` phase to the `/record` phase, ensuring users are only charged when the API call is successful. Additionally, the default timeout for X402 has been increased from 600 to 3600 seconds to better accommodate long-running API calls. The changes also include passing a base64-encoded settlement context through the request chain for improved processing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#37",
+      "title": "Revamped create-service skill for enhanced clarity in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "feature",
+        "update",
+        "documentation",
+        "billing",
+        "service"
+      ],
+      "public": false,
+      "summary": "The create-service skill has undergone a comprehensive rewrite, expanding from 18 to 24 steps and from 8 to 10 phases. Key additions include coverage for packages, translations, MCP server structure, Dify plugin details, and end-to-end billing verification. This update also introduces a service types table and a new non-chat pricing strategy, enhancing user guidance and service integration accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#445",
+      "title": "Enhance MCP Server with OAuth 2.0 Support in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "oauth",
+        "mcp",
+        "authentication",
+        "ui",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/445",
+      "summary": "This update introduces OAuth 2.0 as a new authentication option for MCP servers, complementing existing methods. Users can now authorize servers via a new 'Authorize' button, which triggers a popup for the OAuth flow. Additionally, the update includes new API methods and types to facilitate OAuth interactions, enhancing the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#718",
+      "title": "Enhance OAuth 2.1 Support for MCP Integration in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "oauth",
+        "mcp",
+        "security",
+        "enhancement",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces the `MongoOAuthClientProvider`, which implements the MCP SDK's `OAuthClientProvider` interface, enabling MongoDB persistence and secure token storage. Key features include new handler actions for OAuth authorization flow and updates to the `MCPClientManager` for improved connectivity with OAuth-type MCP servers. The implementation supports the full OAuth 2.1 flow, enhancing security and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#211",
+      "title": "Enhance Documentation Experience with Collapsible Tree and Method Badges in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "documentation",
+        "frontend",
+        "ui",
+        "features",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update collapses the documentation sidebar tree by default, improving the user experience by preventing all nodes from being expanded initially. Additionally, HTTP method badges (POST, GET, PUT, DELETE, PATCH) have been added to API document titles, enhancing clarity with color coding. The `IDocument` interface has also been updated to include an `api_method` field, which will require a corresponding backend update."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#325",
+      "title": "Enhance DocumentIndexSerializer with API Method Field in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "serializer",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces an `api_method` field to the `DocumentIndexSerializer`, allowing the extraction of HTTP methods from `Api.definition.paths` for each document. This enhancement enables the frontend to display method badges in the document sidebar tree, improving user experience. Additionally, the implementation ensures that non-API documents return a null value for the `api_method` field."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#36",
+      "title": "Sync Local Files with New Skills and Updated Docs in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "chore",
+        "documentation",
+        "skills",
+        "tests",
+        "workflow"
+      ],
+      "public": false,
+      "summary": "This update introduces the new `create-service` skill and adds several MCP test scripts to enhance functionality. Additionally, the project documentation in `CLAUDE.MD` has been updated to reflect the latest changes, and the workflow for updating profiles has been modified for improved efficiency. These changes aim to streamline development and testing processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#324",
+      "title": "Update Veo Model Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "veo",
+        "models",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update clarifies the image count rules for various Veo models in the integration documentation. Key changes include correcting the image requirements for `veo2-fast` and `veo31-fast-ingredients`, as well as updating the model list to reflect all 7 models. The introduction pages have also been revised to accurately represent the new model count."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#716",
       "title": "Fix model override for ingredients2video action in Platform Service 🚀",
       "tags": [
