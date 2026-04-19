@@ -3,6 +3,376 @@
   "date": "2026-04-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/SolRadar#31",
+      "title": "Update assignment workflow to use Claude agent in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "workflow",
+        "graphql",
+        "update",
+        "agent",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update replaces the Copilot coding agent with the anthropic-code-agent in the assignment workflow. The change involves switching from a REST API to GraphQL to ensure proper handling of bot logins. This enhancement improves the reliability of issue assignments in the workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#29",
+      "title": "Streamline GitHub Token Usage in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "workflow",
+        "automation",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update modifies the workflow to utilize the default GITHUB_TOKEN for assigning the Copilot bot, resolving the 403 error encountered with the SOLRADAR_GITHUB_TOKEN. Key changes include pinning the create-issue and assign-copilot steps to the GITHUB_TOKEN, ensuring proper permissions and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#28",
+      "title": "Enhance Autonomous Agent Capabilities in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "autonomous",
+        "documentation",
+        "skills",
+        "trading",
+        "research"
+      ],
+      "public": false,
+      "summary": "This update transforms SolRadar into a fully autonomous agent-operated research and trading system. Key additions include comprehensive documentation in `AGENTS.md` and `README.md`, detailing mission objectives and operational guidelines. New skills for narrative signals and position management have been introduced, enhancing the agent's decision-making capabilities while maintaining strict budget controls."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#25",
+      "title": "Fix bot login for auto-merge guard in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "bot",
+        "auto-merge",
+        "fix",
+        "workflow"
+      ],
+      "public": false,
+      "summary": "This update corrects the bot login from `AceDataCloudDev` to `acedatacloud-dev` in the auto-merge guard configuration. This change ensures that reports pushed by the development bot are accepted, preventing unnecessary rejections when Copilot is disabled. The modification enhances the reliability of the auto-merge process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#24",
+      "title": "Strengthen Auto-Merge Guards for Reports in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "auto-merge",
+        "security",
+        "workflow",
+        "reports",
+        "policy"
+      ],
+      "public": false,
+      "summary": "This update introduces stricter auto-merge policies for pull requests affecting the reports directory. Now, a PR will only be auto-merged if it meets all four specified criteria, including author verification and file type restrictions. This change enhances security by preventing unauthorized or inappropriate changes from being merged automatically."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#42",
+      "title": "New buyback transaction added in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "buyback",
+        "transactions",
+        "updates",
+        "transparency"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/42",
+      "summary": "This update introduces a new buyback transaction recorded on April 19, 2026, where $59 USDC was converted into 168,000 ACE tokens. The transaction details, including the source and venue, have been added to the buyback history for transparency. This enhancement supports better tracking of on-chain buyback activities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#23",
+      "title": "Enhance Auto-Merge for Reports in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "automation",
+        "workflow",
+        "reports",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a 5-minute cron job to the auto-merge workflow for reports-only pull requests. It addresses the issue where PRs created by GitHub Apps, like the copilot-swe-agent, were not triggering the necessary workflows for auto-merging. The new triggers ensure that these PRs are efficiently processed without manual intervention, maintaining safety checks for file types."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#22",
+      "title": "Automated research cycle completed in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "automation",
+        "data",
+        "solana",
+        "errors"
+      ],
+      "public": false,
+      "summary": "The automated research cycle for April 19, 2026, has been completed, but all external data providers were unreachable, leading to a graceful degradation. Nine watchlist mints were reviewed, and all were skipped due to low liquidity and lack of security data. Source errors were logged for DEX Screener and GitHub, while Birdeye was not attempted due to a missing API key."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#9",
+      "title": "Revamped README with Flow Diagrams and Real Transactions in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "docs",
+        "update",
+        "readme",
+        "x402",
+        "user-guide"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/9",
+      "summary": "The README has been completely rewritten to address key user questions, including the payment flow and on-chain proofs. It now features a detailed sequence diagram, a setup guide, and a proof table with clickable transaction hashes from various chains. This update enhances user understanding and accessibility without any code changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#8",
+      "title": "Enhanced Billing Regression Testing for X402 in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "testing",
+        "billing",
+        "api",
+        "x402",
+        "regression"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/8",
+      "summary": "This update introduces a parameterized end-to-end test script that validates dynamic pricing and API usage recording for multiple APIs in the X402 billing system. Key scenarios include various models and their expected credits, ensuring accurate billing and API response handling. The script has been tested successfully, confirming that all pricing matches expected values and API usage records are created as intended."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#20",
+      "title": "Streamline HTTP Logic by Dropping Duplicates in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "cleanup",
+        "scripts",
+        "cli",
+        "improvement",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update removes five redundant shell scripts that were merely wrapping HTTP calls already handled by the `solradar_cli`. The new `analyze_watchlist.sh` script has been added to streamline the process of analyzing tokens from a watchlist without duplicating HTTP logic. Additionally, updates to the SKILL.md files clarify the usage of the CLI and ensure that all network calls are centralized."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#19",
+      "title": "Revamped Skills to Meet Agent Skills SPEC in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "skills",
+        "update",
+        "workflow",
+        "agent",
+        "solana"
+      ],
+      "public": false,
+      "summary": "This update restructures the skills directory to comply with the Agent Skills SPEC, enhancing the Copilot coding agent's ability to discover and utilize skills effectively. Key changes include the addition of YAML front matter, improved file organization, and new scripts for executing tasks. The workflow has also been tweaked to streamline the research cycle process, ensuring a more efficient operation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#43",
+      "title": "Integrate SDK, SolRadar, and X402Client as Submodules in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "submodules",
+        "integration",
+        "sdk",
+        "solradar",
+        "x402client"
+      ],
+      "public": false,
+      "summary": "This update registers the `SDK`, `SolRadar`, and `X402Client` as git submodules, tracking the `main` branch. The configuration follows the existing project convention with `ignore = all`. These additions enhance modularity and maintainability within the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#340",
+      "title": "Enhance billing rules for aichat2 conversations in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "billing",
+        "api",
+        "cost",
+        "backend",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a cost file for the aichat2 API, ensuring accurate billing for chat completions. The new JSON file references shared pricing models, aligning with the legacy aichat API. This change will enable the PlatformGateway to log and deduct costs appropriately during usage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#738",
+      "title": "Enhance LLM Usage Reporting for Accurate Billing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "aichat2",
+        "platformgateway",
+        "usage",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a new utility to report LLM usage back to the PlatformGateway, ensuring accurate billing for aichat2 conversations. The implementation mirrors legacy behavior while adding robust error handling and honoring usage exemptions. Key changes include modifications to the conversations handler and the addition of a new recording utility to streamline the billing process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#18",
+      "title": "Transforming SolRadar into an Agent-Operated Research Loop in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "workflow",
+        "automation",
+        "research",
+        "github-actions",
+        "solana"
+      ],
+      "public": false,
+      "summary": "This update pivots SolRadar's workflow to focus on agent-operated research, allowing Copilot to run research cycles and publish reports directly. Key changes include the introduction of a new `skills/` directory, modifications to the `Scheduled Research` workflow, and the implementation of an auto-merge process for report PRs. This shift enhances the efficiency of report generation while maintaining strict guidelines for automated processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#7",
+      "title": "Automate npm Publishing with CalVer in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "ci",
+        "npm",
+        "automation",
+        "release",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/7",
+      "summary": "This update revamps the npm publish pipeline to automatically release new versions of `@acedatacloud/x402-client` on every push to the main branch. Utilizing a date-based CalVer scheme, it ensures unique versioning throughout the day without manual intervention. The workflow now includes multiple jobs for building, publishing, and creating GitHub releases, streamlining the deployment process significantly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#456",
+      "title": "Exciting New Chat Models Added in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "chat",
+        "gpt",
+        "models",
+        "update",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/456",
+      "summary": "This update introduces three new ChatGPT models: gpt-5.4, gpt-5.4-mini, and gpt-5.4-nano. Key changes include the addition of new constants in the chat model group and updates to the internationalization files for English and Chinese. The modifications enhance the model offerings and improve user experience across supported languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#5",
+      "title": "Automate CalVer Versioning for NPM Releases in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "calver",
+        "npm",
+        "release",
+        "automation",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/5",
+      "summary": "This update replaces the static semver versioning with a CalVer format (`YYYY.M.D`) for npm publishes, aligning with AceDataCloud's MCP server standards. A new script automatically updates the `package.json` version at publish time, ensuring accurate release dates without manual intervention. The README has been updated to document this new release process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#457",
+      "title": "Enhance AI Skills Management in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "feature",
+        "ui",
+        "localization",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/457",
+      "summary": "This update resolves issues with the AI Skills dialog in Nexior by ensuring skills load on the first open and introducing functionality for creating and deleting custom skills. Users can now add skills through a new interface that supports various skill types and file uploads, along with a delete option for user-owned skills. Additionally, English and zh-CN localization strings have been added to support these features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#454",
+      "title": "Temporarily Hide Desktop Agent in Nexior 🛠️",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "chat",
+        "ui",
+        "update",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/454",
+      "summary": "This update hides the Desktop Agent toolbar entry in the Nexior chat conversation by using a conditional rendering approach. The underlying `DesktopAgentManager` component and its state remain intact, allowing for easy re-enabling in the future. This change aims to streamline the user interface while maintaining functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#455",
+      "title": "Enhance Sidebar Logo and Padding in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "design",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/455",
+      "summary": "This update improves the sidebar by enlarging the brand logo and balancing the padding. The logo height has been increased from 44px to 52px, and the padding has been adjusted to 6px top and 4px bottom. These changes ensure that the logo visually aligns with the service icons below, enhancing the overall user interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#6",
+      "title": "Enhance E2E Testing with Base and Solana Scripts in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "e2e",
+        "testing",
+        "scripts",
+        "solana",
+        "base"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/6",
+      "summary": "This update introduces Base and Solana end-to-end (E2E) testing scripts, which are now available for broader use. Both scripts securely read payer private keys from environment variables, ensuring no secrets are committed. The Solana RPC defaults to the public mainnet-beta endpoint, enhancing flexibility for testing environments."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#9",
       "title": "Enhance detection and scoring for low-quality batches in Sol Radar 🚀",
       "tags": [
