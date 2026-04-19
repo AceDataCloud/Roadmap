@@ -3,6 +3,137 @@
   "date": "2026-04-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/SolRadar#40",
+      "title": "Update workflow to use OpenAI coding agent in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "workflow",
+        "update",
+        "openai",
+        "ruleset",
+        "solradar"
+      ],
+      "public": false,
+      "summary": "This update modifies the workflow to replace the deprecated `copilot-swe-agent` with `openai-code-agent`, ensuring that ruleset violations are surfaced instead of causing silent failures. The change enhances visibility for research issues by allowing comments on violations to be displayed. Additionally, repo admins will need to manually add `openai-code-agent` to the bypass list for smooth operation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#38",
+      "title": "Reverted to Copilot Agent for Workflow Success in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "workflow",
+        "fix",
+        "agent",
+        "copilot",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update reverts the assignment of the coding agent back to the legacy Copilot agent in the workflow. The change addresses issues with the newer agents, which encountered repository ruleset violations. By restoring the previous setup, we aim to enhance workflow stability and ensure successful issue handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#12",
+      "title": "Refactor for TypeScript and Python Monorepo in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "refactor",
+        "python",
+        "typescript",
+        "monorepo",
+        "ci",
+        "sdk"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/12",
+      "summary": "This update splits the repository into a monorepo structure, introducing a new Python package alongside the existing TypeScript package. The Python package is designed for feature parity with the TypeScript version, enabling seamless integration with the AceDataCloud SDK. Key enhancements include CI workflows for both languages and a robust Python payment handler for X402 transactions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#34",
+      "title": "Route Research to OpenAI Coding Agent in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "workflow",
+        "fix",
+        "automation",
+        "openai"
+      ],
+      "public": false,
+      "summary": "This update modifies the workflow to route research tasks to the OpenAI coding agent instead of the Claude bot, which was blocked by a repository ruleset violation. The changes include updating the suggested actors filter and the step name in the scheduled research workflow. This adjustment ensures smoother operation and continued progress on the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#11",
+      "title": "Streamline SDK Integration by Removing Legacy Client in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "cleanup",
+        "sdk",
+        "refactor",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/11",
+      "summary": "This update removes the redundant `createX402Client` and related functions from the codebase, streamlining the integration with the `@acedatacloud/sdk`. Key changes include the deletion of `src/client.ts`, updates to the README for clarity, and the removal of outdated types. This cleanup ensures that all application paths utilize the SDK, enhancing maintainability and reducing complexity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#33",
+      "title": "Enhance Bot Assignment with PAT in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "workflow",
+        "bot",
+        "pat",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update modifies the workflow for bot assignment by utilizing a user-level Personal Access Token (PAT) instead of the workflow token, which previously returned a FORBIDDEN error. The change ensures that the bot can be assigned correctly, improving functionality for the Claude agent. Additionally, it maintains compatibility with forks by falling back to the workflow token when necessary."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#10",
+      "title": "Enhance Payment Handling with New Adapter in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "feature",
+        "sdk",
+        "payment",
+        "integration",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/10",
+      "summary": "This update introduces the `createX402PaymentHandler`, a new adapter that integrates seamlessly with the `@acedatacloud/sdk`. It simplifies the payment process by allowing the X402 Client to act as a plugin for the SDK, enhancing user experience without the need for a separate fetch wrapper. The README has been updated to reflect this integration, guiding users towards the SDK for production use."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#16",
+      "title": "Introducing Pluggable Payment Handler for Enhanced X402 Integration in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "feature",
+        "payment",
+        "x402",
+        "sdk",
+        "typescript",
+        "python"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/16",
+      "summary": "This update introduces a pluggable `paymentHandler` hook for handling `402 Payment Required` responses in the SDK. It allows the SDK to seamlessly integrate with on-chain payment solutions, eliminating the need for separate HTTP clients. Key changes include new TypeScript and Python implementations, along with updated documentation to guide users through the new integration pattern."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#31",
       "title": "Update assignment workflow to use Claude agent in Sol Radar 🚀",
       "tags": [
