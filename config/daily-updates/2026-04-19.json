@@ -3,6 +3,184 @@
   "date": "2026-04-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/SolRadar#7",
+      "title": "Enhancing Provider Reliability and Scoring Heuristics in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "reliability",
+        "scoring",
+        "improvements",
+        "testing",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update focuses on analyzing the research cycle output to identify areas for improvement in provider reliability. Key changes include the addition of duplicate-symbol detection in the pipeline and a scoring penalty for duplicates. Enhancements to the automation cycle report and comprehensive testing are also planned to ensure robustness."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#453",
+      "title": "Enhance chat submission readiness in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "chat",
+        "bugfix",
+        "ui",
+        "e2e",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/453",
+      "summary": "This update introduces a `ready` prop to the Composer component, which disables the submit button until the application and credentials are fully initialized. This change prevents premature message submissions that could lead to errors during the chat initialization process. The fix has been verified and is part of ongoing improvements following the aichat2 redesign."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#5",
+      "title": "Streamline PRs with Copilot Auto-Merge in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "automation",
+        "workflow",
+        "copilot",
+        "efficiency"
+      ],
+      "public": false,
+      "summary": "This update introduces an automated workflow for merging pull requests authored by the Copilot agent or those in the copilot/* branches. The new configuration ensures that PRs are automatically merged once they are ready for review and have passed CI checks, enhancing the efficiency of the development process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#4",
+      "title": "Enhance provider resilience with graceful error handling in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "error-handling",
+        "provider-resilience",
+        "automation",
+        "testing",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update improves the error handling for Birdeye, DexScreener, and GitHub clients, preventing full enrichment failures during provider outages. Key changes include returning empty results instead of crashing and adding a new counter for candidates with provider warnings in the automation report. Comprehensive tests have also been added to ensure graceful degradation of service during network errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#737",
+      "title": "Enhance file attachment handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "file-attachments",
+        "llm",
+        "testing",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of non-image file attachments by converting them into upstream-safe text blocks before dispatching to the LLM. Image blocks remain unchanged, ensuring that existing tool_result splitting is preserved. Additionally, new tests have been added to cover the file attachment message conversion, enhancing overall reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#452",
+      "title": "Enhance SSE Error Handling in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "sse",
+        "error-handling",
+        "chat",
+        "frontend",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/452",
+      "summary": "This update improves the handling of Server-Sent Events (SSE) errors in the chat feature. It forwards SSE error messages through the chat operator response and ensures that the streaming conversation promise is rejected when an error event is emitted by the backend. This change prevents blank assistant responses by rendering visible error messages instead."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#4",
+      "title": "Enhance npm Publishing Workflow in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "npm",
+        "ci",
+        "workflow",
+        "documentation",
+        "release"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/4",
+      "summary": "This update introduces a robust GitHub Actions CI workflow for npm operations, including installation, building, and packaging. It also adds a publish workflow triggered by GitHub Releases, ensuring safer scoped-package publishing with updated configurations. The README has been enhanced with current npm status, release flow, and verification results for improved clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#3",
+      "title": "Enhance Payment Regression Script in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "regression",
+        "payments",
+        "solana",
+        "skale",
+        "x402"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/3",
+      "summary": "This update introduces a comprehensive regression script for the `/openai/chat/completions` endpoint, covering payment flows for base, Solana, and Skale networks in a single run. Key improvements include switching to the real SDK flow for Solana transactions and enhancing CLS matching robustness. The script is designed to work seamlessly with existing internal tools and secrets."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#451",
+      "title": "Sync to Nexior version 3.34.0 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "release",
+        "changelog",
+        "workflow",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/451",
+      "summary": "This update synchronizes the repository's release state with the already-published `@acedatacloud/nexior@3.34.0`. It includes the removal of consumed change files and records the changelog entry for version 3.34.0. Additionally, the `publish` workflow on `main` has been unblocked, resolving issues with repeated republishing attempts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#735",
+      "title": "Enhance Local Execution and Artifact Flow in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "local-execution",
+        "artifact-flow",
+        "testing",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces local execution capabilities for the `code_execute` tool, prioritizing the connected desktop agent with a fallback to the cloud sandbox. Additionally, the `file_manager` has been extended to support local file operations and artifact uploads, enhancing the multimodal conversation experience. Comprehensive tests have been added to ensure the reliability of the new features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#450",
+      "title": "Enhance Artifact Messaging in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "chat",
+        "artifact",
+        "ui",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/450",
+      "summary": "This update extends the chat functionality to include artifact metadata and structured message payloads. It allows for the rendering of artifact events in the conversation stream as image or file blocks, improving the message preview UI by displaying file names instead of URLs. These changes enhance user experience by providing clearer context for shared files."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#736",
       "title": "Update Nanobanana Upstream to Mountsea in Platform Service 🚀",
       "tags": [
