@@ -1,0 +1,184 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-04-19",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#736",
+      "title": "Update Nanobanana Upstream to Mountsea in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "update",
+        "openai",
+        "nanobanana",
+        "platform-service",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "The default `NANOBANANA_BASE_URL` has been switched from the `openaihk` supplier to `mountsea` to improve compatibility with the `nano-banana-2` model. This change ensures that requests to `/v1/images/generations` and `/v1/images/edits` are correctly routed without encountering bad requests. The worker code remains unchanged, requiring only a redeployment to apply the new settings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#41",
+      "title": "Enhanced Debug Logging for X402 Facilitator in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "debug",
+        "logging",
+        "x402",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/41",
+      "summary": "This update introduces trace-id aware logging for verify and settle requests in the X402 facilitator. Key request details such as network, nonce, payTo, asset, amount, and payer context are now logged, enhancing failure and replay diagnostics while maintaining existing settlement behavior. The changes aim to improve debugging and monitoring capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#122",
+      "title": "Enhanced Debug Logging and Metadata Fixes in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "debug",
+        "logging",
+        "metadata",
+        "x402",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update corrects the SKALE EIP-712 domain metadata to align with the on-chain USDC.e contract. Additionally, it introduces x402 request/response summaries and trace-id forwarding for facilitator verify/settle calls, while preserving richer diagnostics for x402 records, including missing settlement context and failed transaction hashes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#734",
+      "title": "Enhance Error Recovery Modules for Aichat2 in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "aichat2",
+        "improvement",
+        "testing",
+        "recovery"
+      ],
+      "public": false,
+      "summary": "This update introduces dedicated error recovery modules for handling prompt length issues, output token limits, and fallback models in Aichat2. Key changes include the implementation of retry mechanisms in the query loop and the addition of integration tests for all recovery paths, ensuring a more robust user experience. These enhancements aim to improve system resilience and performance during error scenarios."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#733",
+      "title": "Enhance aichat2 Context Pipeline for Better Performance in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "testing",
+        "aichat2",
+        "truncation",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update introduces a dedicated truncation layer for context fitting, ensuring that auto-compact summaries are preserved during hard truncation. Additionally, focused tests have been added to validate tool result budgeting, auto-compaction, truncation, and fallback mechanisms in the query loop. These changes aim to improve the efficiency and reliability of the aichat2 context management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#732",
+      "title": "Revamp aichat2 Tool Orchestration for Enhanced Performance in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "tooling",
+        "orchestration",
+        "performance",
+        "aichat2",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update replaces the monolithic `AgenticEngine` with a more modular `QueryEngine` and `queryLoop`, allowing for improved tool orchestration. Key changes include the introduction of concurrency-safe tools that can run in parallel, while write tools remain serialized. Additionally, the update enhances conversation persistence and introduces focused tests for better validation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#2",
+      "title": "Enhance X402 Client Protocol Handling in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "x402",
+        "client",
+        "solana",
+        "evm",
+        "documentation",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/2",
+      "summary": "This update aligns the EVM envelopes with the new `x402Version: 2` and makes the Solana client ESM-safe by replacing lazy `require(...)` with dynamic imports. Additionally, the README now documents the verified flows for `base`, `solana`, and `skale`, ensuring that users have accurate integration guidance. The changes improve compatibility and functionality for browser and ESM consumers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#121",
+      "title": "Enhance x402 Handling in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "bugfix",
+        "gateway",
+        "x402",
+        "settlement",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update modifies the `/record` endpoint to read the `payflow` value from the request query string as a fallback. This ensures that x402 requests are processed correctly, allowing them to enter the dedicated settlement branch without being prematurely blocked by the application ID check. As a result, requests from Base, Solana, and SKALE will now be handled reliably."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#39",
+      "title": "Archived AI Orchestrator Design Document in Index 📁",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "archive",
+        "documentation",
+        "design",
+        "plans"
+      ],
+      "public": false,
+      "summary": "This update successfully archives the AI Orchestrator design document into the .plans/ directory. The document, previously located in DESIGN-AI-ORCHESTRATOR.md, has been added with a total of 4916 lines. This change helps streamline project documentation and organization."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#40",
+      "title": "Streamline GEO Plans and Normalize AGENTS Guide in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "planning",
+        "growth",
+        "normalization",
+        "GEO"
+      ],
+      "public": false,
+      "summary": "This update consolidates the GEO growth plan into a single canonical document while removing outdated entries from the backlog. The root assistant guide has been renamed to AGENTS.md for consistency, ensuring that tools can reliably access project instructions. The changes enhance clarity in planning and documentation, improving overall project organization."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#449",
+      "title": "Enhance MCP OAuth Callback Handling in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "oauth",
+        "ui",
+        "fix",
+        "nexior",
+        "chat"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/449",
+      "summary": "This update improves the MCP OAuth popup callback flow in the chat UI by allowing successful completion with only a `code` parameter. It also ensures that the `state` parameter is forwarded when present, maintaining compatibility with existing connector OAuth flows. Additionally, the authorization button now properly resets when the popup is closed, enhancing user experience."
+    }
+  ]
+}
