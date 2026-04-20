@@ -1,0 +1,88 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-04-20",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/SDK#17",
+      "title": "Enhance error handling in SDK 🛠️",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "bugfix",
+        "sdk",
+        "python",
+        "typescript"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/17",
+      "summary": "This update improves the error handling in both the Python and TypeScript SDKs by allowing them to tolerate non-dict 'error' responses from the server. Previously, the Python SDK would crash with an AttributeError, while TypeScript would silently drop messages. Tests have been added to ensure robust handling of various response formats."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#16",
+      "title": "Align PyPI Workflow with SDK Standards in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "workflow",
+        "pypi",
+        "sdk",
+        "fix",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/16",
+      "summary": "This update modifies the PyPI publishing workflow to resolve path issues during twine uploads. It introduces the use of PYPI_TOKEN to align with SDK conventions, ensuring smoother integration and deployment processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#15",
+      "title": "Fix twine upload path for better asset handling in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "fix",
+        "workflow",
+        "pypi",
+        "error-handling"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/15",
+      "summary": "This update corrects the twine upload path in the workflow, ensuring it accesses the correct 'dist/*' directory after changing to the 'python' directory. Additionally, a minor enhancement was made to the version computation script to improve error handling. These changes will streamline the package publishing process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#14",
+      "title": "Align Version Format with SDK in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "ci",
+        "versioning",
+        "sdk",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/14",
+      "summary": "This update standardizes the version format of the X402 Client to match the format used by the @acedatacloud/sdk. The new format is YYYY.MDD.BUILD, ensuring consistency across packages. Key changes include modifications to the publish workflow, which now computes the version using a month-day combination for better semantic versioning."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#13",
+      "title": "Streamline PyPI Publishing with Twine in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "ci",
+        "python",
+        "pypi",
+        "workflow",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/13",
+      "summary": "This update modifies the PyPI publishing workflow to utilize Twine with a `PYPI_TOKEN`, aligning it with the existing Python SDK process. The workflow is now scoped to only trigger on changes within the Python directory and the workflow file itself, preventing unnecessary triggers from TypeScript changes. After merging, adding the `PYPI_TOKEN` secret will enable successful publishing to PyPI."
+    }
+  ]
+}
