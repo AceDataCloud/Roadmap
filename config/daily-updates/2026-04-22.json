@@ -3,6 +3,53 @@
   "date": "2026-04-22",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#221",
+      "title": "Update FontAwesome Icons to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "frontend",
+        "icons"
+      ],
+      "public": false,
+      "summary": "This update bumps the @fortawesome/free-regular-svg-icons package from version 6.7.2 to 7.2.0, ensuring access to the latest icons and improvements. The change impacts the package.json and yarn.lock files, reflecting the new version and optimizing dependencies. This upgrade enhances the overall icon library used in the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#228",
+      "title": "Update FingerprintJS to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "frontend",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update bumps the FingerprintJS library from version 5.1.0 to 5.2.0, introducing a new 'userAgentData' as an entropy source and fixing an issue with font preferences in Chrome. Additionally, the README has been updated to reflect these changes. This enhancement aims to improve the accuracy and reliability of user fingerprinting."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#749",
+      "title": "Exciting New OpenAI-Compatible Image Endpoints in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "api",
+        "images",
+        "openai",
+        "ttapi",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "We've introduced OpenAI-compatible `/images/generations` and `/images/edits` endpoints in the ttapi worker, leveraging TTAPI's unofficial generation and fetch capabilities. This update includes support for multiple image models and enhances the request/response structure to align with OpenAI's native APIs, ensuring seamless integration for users. Additionally, new multipart handling and async capabilities have been implemented for improved performance."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#748",
       "title": "Fix model mapping and resolution validation in Platform Service 🚀",
       "tags": [
