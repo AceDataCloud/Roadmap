@@ -1,0 +1,21 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-04-22",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#748",
+      "title": "Fix model mapping and resolution validation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "model",
+        "validation",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update corrects the model mapping logic for the nano-banana series, ensuring that requests for `nano-banana-2` and `nano-banana-pro` are processed correctly. The default model is now set to the external `nano-banana` name, and requests for unsupported resolutions will be rejected with a 400 error. These changes enhance the accuracy of model handling and improve user experience."
+    }
+  ]
+}
