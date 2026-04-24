@@ -3,6 +3,22 @@
   "date": "2026-04-24",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#750",
+      "title": "Enhance OpenAI Deployment for Production in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "kubernetes",
+        "deployment",
+        "openai",
+        "production",
+        "ttapi"
+      ],
+      "public": false,
+      "summary": "This update introduces production Kubernetes manifests for the ttapi OpenAI variant, aligning with the existing deployment patterns. Key changes include the addition of a new deployment and service configuration, which enhances scalability and integrates with existing MongoDB secrets."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#222",
       "title": "Chore(deps): bump markdown-it-anchor from 8.6.7 to 9.2.0 in Frontend Web 🔧",
       "tags": [
