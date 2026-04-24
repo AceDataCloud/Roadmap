@@ -3,6 +3,36 @@
   "date": "2026-04-24",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#752",
+      "title": "Enhance OpenAI Integration with New Edits and Generations in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "openai",
+        "updates",
+        "deployments",
+        "enhancements"
+      ],
+      "public": false,
+      "summary": "This update introduces significant improvements to the OpenAI integration within the Platform Service. Key changes include the addition of a new endpoint for image edits and enhancements to the generations endpoint, allowing for better handling of requests. The deployment scripts have also been updated to streamline the deployment process for OpenAI services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#751",
+      "title": "Integrate OpenAI Deployment in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "deployment",
+        "openai",
+        "kubernetes",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces the deployment of OpenAI services to the Kubernetes cluster. Key modifications include updates to the deployment scripts and adjustments in the package-lock file to accommodate new dependencies. Additionally, the OpenAI handler has been refined to align with the latest API specifications."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#750",
       "title": "Enhance OpenAI Deployment for Production in Platform Service 🚀",
       "tags": [
