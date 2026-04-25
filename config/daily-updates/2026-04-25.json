@@ -1,0 +1,53 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-04-25",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#341",
+      "title": "Exciting Update: Added GPT-5.5 and GPT-5.5-Pro to Chat APIs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "api",
+        "gpt",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces the `gpt-5.5` and `gpt-5.5-pro` models to the chat completion APIs, enhancing the available options for developers. The changes include updates to the OpenAPI model enum and visible models arrays, ensuring these new models are integrated seamlessly. This addition follows previous updates that established pricing rules for these models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#754",
+      "title": "Streamlined Configuration Files in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "config",
+        "optimization",
+        "error-handling",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update modifies several configuration files by removing deprecated model entries, enhancing clarity and performance. Additionally, the error handling in the base handler has been refined for better response management. These changes aim to optimize the overall functionality of the Platform Service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#753",
+      "title": "Enhance OpenAI Model Configurations in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "openai",
+        "models",
+        "config",
+        "improvements",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update significantly improves the OpenAI model configurations by modifying multiple JSON files and enhancing the checker logic in Python scripts. Key changes include adjustments to model ranks and the addition of new models, ensuring better performance and compatibility. The updates aim to optimize the API interactions and improve overall service reliability."
+    }
+  ]
+}
