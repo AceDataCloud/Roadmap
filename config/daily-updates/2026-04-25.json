@@ -3,6 +3,38 @@
   "date": "2026-04-25",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#757",
+      "title": "Enhance Model Fallbacks for Account Issues in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "fallback",
+        "model",
+        "reliability",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a fallback mechanism for model requests when no valid account is found, allowing the system to substitute with cheaper-or-equal alternatives. Key files modified include the fallback resolver and a new JSON configuration for model priorities and pricing. The changes ensure that requests can still be served even during account outages, enhancing overall system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#756",
+      "title": "Enhance OpenAI Worker to Report Elapsed Time in Platform Service ⏱️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "openai",
+        "performance",
+        "frontend",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update fixes the issue where the Elapsed column on the PlatformFrontend Console Usage page showed '-' for many chat completion requests. The openai worker's record() method now computes and forwards both finished_at and elapsed time to the PlatformGateway, ensuring accurate request duration reporting. This change improves the usability of the usage page by providing meaningful duration metrics."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#229",
       "title": "Enhance credentials page with global fallback in Frontend Web 🚀",
       "tags": [
