@@ -3,6 +3,478 @@
   "date": "2026-04-25",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/SolRadar#70",
+      "title": "Research Cycle Update: Data Providers Unreachable in Sol Radar 🚨",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "data",
+        "update",
+        "solana",
+        "report"
+      ],
+      "public": false,
+      "summary": "The scheduled research cycle for April 25, 2026, faced significant challenges as all external data providers were unreachable due to DNS failures and API key issues. As a result, a graceful-degradation report was published, indicating no new-listing candidates and a lack of actionable signals. The report highlights the health of data providers as degraded, impacting the overall analysis and intents."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#22",
+      "title": "Enhance AI Dialogue API with aichat Service Docs in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "api",
+        "aichat",
+        "integration",
+        "developer"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/22",
+      "summary": "This update introduces comprehensive documentation for the new `aichat` service, which supports multi-model AI dialogue capabilities. Key additions include a service landing page, an integration guide for the Conversations API, and updates to the main README to reflect the new service. These enhancements will streamline the integration process for developers and improve overall usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#68",
+      "title": "Enhance Discovery and Auto-Wire GitHub PAT in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "enhancement",
+        "discovery",
+        "automation",
+        "skills"
+      ],
+      "public": false,
+      "summary": "This update broadens the discovery capabilities of the Sol Radar by integrating multiple free data sources and auto-wiring the GitHub Personal Access Token (PAT). Key changes include the addition of new sources like GeckoTerminal and CoinGecko, which enhance project scoring and discovery even when primary sources are down. The GitHub PAT fallback mechanism significantly increases the rate limit for API calls, improving overall performance and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#21",
+      "title": "SDK Verified in Sync with OpenAI Docs 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "sdk",
+        "openai",
+        "documentation",
+        "verification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/21",
+      "summary": "The investigation confirmed that the removal of `gpt-5.4` from the OpenAI spec model enum does not necessitate any changes to the SDK. Both TypeScript and Python SDKs allow model names as free-text strings, ensuring compatibility with the updated documentation. Overall, the SDK remains fully aligned with the latest specifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#348",
+      "title": "Enhance AI Chat Models in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "openapi",
+        "aichat",
+        "gpt-5",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update adds the latest GPT-5.x variants, including gpt-5.5 and gpt-5.4, to the model enum in the AI chat specifications. The changes ensure that the openapi/aichat conversations spec is aligned with existing chat-completion specs. Once merged, these updates will propagate through various components via the Sync from Docs workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#347",
+      "title": "Add Seedream Image-Generation Probe in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "testing",
+        "seedream"
+      ],
+      "public": false,
+      "summary": "This update introduces a continuous probe for the Seedream service, specifically targeting the `/documents/seedream-images` endpoint. The probe will run every 5 minutes to manage resource usage effectively, while skipping certain models that require input images or have compatibility issues. Key files added include a deployment configuration and an end-to-end test script to ensure functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#19",
+      "title": "Streamline README by Removing Duplicates in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "docs",
+        "cleanup",
+        "readme",
+        "x402-client"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/19",
+      "summary": "The root README has been cleaned up by removing duplicated content from the TypeScript and Python README files. This change eliminates redundancy and enhances readability, ensuring users find the necessary information without repetition. The root README now correctly truncates at the License section, maintaining a clear structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#62",
+      "title": "Reintroduce gpt-5.4 to AI Chat Model List in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "gpt",
+        "ai",
+        "skills",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/62",
+      "summary": "This update restores the `gpt-5.4` model to the AI chat skills, following a reversion from upstream Docs. The model is now listed in the OpenAI GPT model table, positioned between `gpt-5` and `gpt-5-mini`, enhancing the options available for high-performance next-gen applications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#67",
+      "title": "Research Cycle Update: No New Listings in Sol Radar 📉",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "update",
+        "solradar",
+        "data",
+        "analysis"
+      ],
+      "public": false,
+      "summary": "The latest research cycle conducted on April 25, 2026, resulted in the analysis of 9 watchlist mints, all scoring a low CLI floor value of 30/100. Unfortunately, all external data providers were fully degraded, leading to no buy or hold signals and no new-listing candidates discovered. A report has been published to maintain ledger continuity despite the lack of actionable data."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#65",
+      "title": "Revamped Agent Workflow for Research Tasks in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "workflow",
+        "automation",
+        "agent",
+        "research",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update reintroduces the agent-based workflow for scheduled research tasks, aligning it with established patterns from related projects. Key changes include the removal of outdated workflows and the implementation of a new 'wait-and-merge' job that efficiently handles issue creation and merging. The integration of the Copilot Coding Agent is now fully operational, enhancing automation and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#23",
+      "title": "Exciting New OpenAI CLI Features Added in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "openai",
+        "cli",
+        "features",
+        "update",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/23",
+      "summary": "This update introduces a brand new OpenAI CLI, fully synchronized with the latest OpenAPI specifications. Key commands include `chat`, `embed`, `image`, `edit`, and `response`, allowing seamless interaction with various OpenAI models, including the latest `gpt-5.4` and `gpt-5.5`. The addition of comprehensive documentation and example usage enhances user experience and accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#66",
+      "title": "Launch OpenAI MCP Server with Full API Support in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "openai",
+        "mcp",
+        "api",
+        "integration",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/66",
+      "summary": "This update introduces a new OpenAI MCP server, fully synchronized with the OpenAPI specifications from AceDataCloud. It includes five tools mapped to OpenAPI endpoints, extensive model coverage, and a structured setup following monorepo conventions. Key features include chat completions, image generation, and text embeddings, enhancing the capabilities of the AceDataCloud platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#346",
+      "title": "Enhance GLM Service with New Chat-Completion Probe in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "e2e",
+        "testing",
+        "deployment",
+        "glm"
+      ],
+      "public": false,
+      "summary": "This update introduces a continuous probe for the GLM service, specifically targeting the `/glm/chat/completions` endpoint. It includes new deployment configurations and an end-to-end test script to ensure proper functionality. The addition aligns the GLM service with existing provider probes, enhancing monitoring and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#18",
+      "title": "Updated OpenAI Docs with GPT-5.4 and Image Models in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "openai",
+        "gpt-5",
+        "api",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/18",
+      "summary": "This update syncs the OpenAI documentation with AceDataCloud, restoring the GPT-5.4 and GPT-5.4-pro models while adding the new GPT-image-2. Key changes include updates to the integration guide and README to reflect these enhancements and clarify versioning. These updates improve the clarity and usability of the documentation for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#18",
+      "title": "Documented Verified Multi-Chain Settlements in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "docs",
+        "settlements",
+        "testing",
+        "multi-chain"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/18",
+      "summary": "This update introduces a new section in the README detailing verified end-to-end settlements across multiple chains, showcasing successful transactions from a real funded wallet. Key changes include parameterization of API endpoints and request bodies in test scripts, enhancing their flexibility and usability. The documentation now provides clear instructions on reproducing these tests, ensuring better accessibility for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#23",
+      "title": "Sync Check Complete: OpenAI SDK Verified in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "sync",
+        "openai",
+        "sdk",
+        "typescript",
+        "python"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/23",
+      "summary": "After a canary test involving the `gpt-5.4` model, we confirmed that no changes are needed for the OpenAI SDK. Both TypeScript and Python SDKs handle model names as free-text strings, ensuring compatibility with the current API. The SDK remains fully in sync with the latest documentation updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#59",
+      "title": "Verify Copilot Assignment Permissions in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "permissions",
+        "copilot",
+        "testing",
+        "collaboration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/59",
+      "summary": "This update confirms that the Germey token has the necessary permissions to assign GitHub Copilot to issues in the repository. No code changes were made; the assignment and response from Copilot validate the token's permissions. This ensures smoother collaboration and task management moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#345",
+      "title": "Enhance Probe Paths for Chat-Completion in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "e2e",
+        "backend",
+        "improvement",
+        "probe",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update modifies the chat-completion probes to utilize provider-specific paths, improving data visibility in per-provider dashboards. The changes include updates to the paths for OpenAI, Claude, Gemini, Kimi, Deepseek, and Grok, ensuring that probe traffic is accurately reflected. Live verification shows successful responses from the new paths, enhancing the overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#344",
+      "title": "Enhance Probe Logging with Trace IDs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "logging",
+        "trace",
+        "backend",
+        "e2e",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update adds trace context to every probe log line, enabling better tracking of probe failures to their corresponding CLS traces. Key additions include `request_id`, `trace`, and `upstream_request_id`, which enhance the logging detail and facilitate debugging. The changes have been tested with existing smoke tests, confirming no regressions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#62",
+      "title": "No-op sync for test-canary in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "sync",
+        "automation",
+        "no-op",
+        "canary"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/62",
+      "summary": "This update addresses an automated sync issue triggered by the non-existent `test-canary` service. Since there are no corresponding files or directories for this service in the repository, no code changes were necessary. The `test-canary` serves as a canary payload to test the sync pipeline end-to-end."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#19",
+      "title": "Fix Copilot Assignment in SDK 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "fix",
+        "workflow",
+        "graphql",
+        "copilot",
+        "sdk"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/19",
+      "summary": "This update resolves the Sync from Docs workflow failures caused by invalid fields in the issue-creation request. The `agent_assignment` field and the invalid assignee have been removed, and Copilot is now assigned correctly using GraphQL. This change restores the auto-sync functionality that has been blocked since April."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#58",
+      "title": "Fix workflow for Copilot assignment in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "bugfix",
+        "workflow",
+        "graphql",
+        "copilot",
+        "sync"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/58",
+      "summary": "This update resolves a critical issue in the Sync from Docs workflow that was causing HTTP 422 errors during issue creation. The changes include removing invalid fields from the create-issue payload and implementing a new method to assign Copilot using GraphQL. This fix restores auto-sync functionality that has been blocked since April."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#19",
+      "title": "Fix Copilot Assignment in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "workflow",
+        "fix",
+        "graphql",
+        "copilot",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/19",
+      "summary": "This update resolves the HTTP 422 errors in the Sync from Docs workflow by removing invalid fields from the issue creation payload. It now successfully assigns Copilot using GraphQL after creating the issue, ensuring smoother auto-sync functionality. The changes eliminate a regression that has hindered operations since April."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#14",
+      "title": "Fix workflow for Copilot assignment in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "workflow",
+        "bugfix",
+        "graphql",
+        "automation",
+        "sync"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/14",
+      "summary": "This update resolves the HTTP 422 errors occurring in the Sync from Docs workflow by removing invalid fields from the issue-creation payload. The changes include dropping the `agent_assignment` field and the invalid assignee, while successfully assigning Copilot using GraphQL. This fix restores the auto-sync functionality that has been blocked since April."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#60",
+      "title": "Fix Copilot Assignment in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "bugfix",
+        "workflow",
+        "graphql",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/60",
+      "summary": "This update resolves the HTTP 422 errors in the Sync from Docs workflow by removing invalid fields from the issue-creation payload. It now correctly assigns Copilot using GraphQL after creating the issue, ensuring smoother auto-sync functionality. The changes have been verified with a successful dry run, restoring operations that were blocked since April."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#43",
+      "title": "Fix fee payer signing for Solana V0 transactions in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "solana",
+        "fix",
+        "payments",
+        "x402",
+        "signature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/43",
+      "summary": "This update addresses a critical issue where Solana V0 transactions were being signed incorrectly, leading to rejected settlements. By prepending the necessary `0x80` prefix during the signing process, we ensure that the facilitator's signature now matches the on-chain runtime verification. This fix restores full functionality for X402 payments on the Solana mainnet."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#343",
+      "title": "Fix CrashLoopBackOff by Running Probes as Modules in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "deployment",
+        "backend",
+        "yaml",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update resolves the CrashLoopBackOff issue affecting all `platform-backend-test-*` Deployments by modifying their command configurations. The commands have been changed to run the tests as Python modules, ensuring the correct package imports. This is a YAML-only change with no code modifications, aimed at stabilizing the deployment process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#64",
+      "title": "Implement CI-Direct Research Fallback in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "ci",
+        "workflow",
+        "research",
+        "fallback",
+        "solradar"
+      ],
+      "public": false,
+      "summary": "This update introduces a CI-only research workflow that bypasses the need for a Copilot Coding Agent, ensuring continuity in research activities. Key additions include a new workflow for direct research execution, a markdown report renderer, and a fallback script for pipeline failures. The changes maintain the project's operational cadence while awaiting necessary platform adjustments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#342",
+      "title": "Continuous Smoke Probes for Chat & Image Services in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "e2e",
+        "testing",
+        "monitoring",
+        "deployment",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces 12 long-running deployment-mode smoke probes that continuously verify the functionality of various upstream services. Each probe makes periodic requests to the API, logging status, latency, and response summaries, ensuring robust monitoring of chat and image generation services. The implementation includes new test files and modifications to existing deployment configurations."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#341",
       "title": "Exciting Update: Added GPT-5.5 and GPT-5.5-Pro to Chat APIs in Backend 🚀",
       "tags": [
