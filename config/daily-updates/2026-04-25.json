@@ -3,6 +3,56 @@
   "date": "2026-04-25",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#229",
+      "title": "Enhance credentials page with global fallback in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "user-experience",
+        "bugfix",
+        "credentials"
+      ],
+      "public": false,
+      "summary": "This update improves the credentials page by ensuring it defaults to the user's global application when the application_id is absent. Key changes include fetching the global application for the credential list and create dialog, while preserving existing query parameters during pagination. This enhances user experience by making direct access more friendly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#27",
+      "title": "Introducing the New AiChat CLI Tool in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "aichat",
+        "ai",
+        "chat",
+        "gpt",
+        "acedata"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/27",
+      "summary": "This update introduces the AiChat CLI tool, enabling users to interact with AI models directly from the command line. Key features include conversation continuation, stateful sessions, and support for multiple AI models. The implementation includes comprehensive unit tests and Docker support for easy deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#70",
+      "title": "Introducing AiChat MCP Server in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "aichat",
+        "mcp",
+        "update",
+        "features",
+        "integration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/70",
+      "summary": "This update adds a new `aichat` MCP server to the monorepo, featuring a complete implementation including core components, tools, and tests. Key additions include an async HTTP client, support for multiple AI models, and utilities for managing conversations. The integration enhances the AceDataCloud platform by enabling advanced AI dialogue capabilities."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#70",
       "title": "Research Cycle Update: Data Providers Unreachable in Sol Radar 🚨",
       "tags": [
