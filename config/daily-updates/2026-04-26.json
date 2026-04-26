@@ -3,6 +3,664 @@
   "date": "2026-04-26",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#71",
+      "title": "Add DALL-E 2 to Image Models in Clis 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "openai",
+        "image",
+        "cli",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/71",
+      "summary": "This update integrates `dall-e-2` into the IMAGE_MODELS list, allowing users to select it via the `--model` option for both image generation and editing commands. The change ensures that the CLI is fully aligned with the latest OpenAPI specifications, enhancing functionality for users. All other models and parameters remain unchanged."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#119",
+      "title": "New REAL-MONEY Playbook for Safe Trading in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "docs",
+        "safety",
+        "trading",
+        "guidelines",
+        "updates"
+      ],
+      "public": false,
+      "summary": "We've introduced a comprehensive `docs/REAL-MONEY.md` that serves as a pre-flight checklist for users engaging in real-money trades. This document outlines essential safety gates, recommended caps, and crucial guidelines to ensure a secure trading experience. Additionally, the README now directs users to this playbook as the first step before initiating live trades."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#755",
+      "title": "Enhance capability validation logic in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "validation",
+        "logging",
+        "stability"
+      ],
+      "public": false,
+      "summary": "This update modifies the account validation process to prevent premature invalidation on transient failures. Now, a capability will only be marked as invalid after more than two failures, allowing for better stability and logging of warnings for transient issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#765",
+      "title": "Enhance ephone and wcnb with grok-4 capabilities in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "grok-4",
+        "ephone",
+        "wcnb",
+        "checker"
+      ],
+      "public": false,
+      "summary": "This update introduces grok-4 support to both ephone and wcnb, enhancing their capabilities significantly. The checker will automatically adjust to validate these models once upstream support is available. Additionally, grok-4-1-fast-non-reasoning has been added to ephone, ensuring better performance options."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#364",
+      "title": "Enhance OpenAPI with DALL-E 2 Support in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "openapi",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update adds `dall-e-2` to the `model.enum` for the `POST /openai/images/edits` endpoint in the OpenAPI specification. The documentation now accurately reflects the supported models, ensuring users are aware of all available options for image editing. Cost rules have also been verified to include `dall-e-2`, maintaining billing accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#118",
+      "title": "Enhance Jupiter Slippage Gate for Smarter Trades in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "feature",
+        "slippage",
+        "trading",
+        "liquidity",
+        "safety"
+      ],
+      "public": false,
+      "summary": "This update introduces a new slippage gate feature that checks for liquidity before executing trades, ensuring that swaps do not incur excessive price impacts. The implementation includes a new CLI flag for slippage checks and an environment variable to set maximum price impact thresholds. With this addition, the manual-live-trade pipeline will now refuse trades that do not meet liquidity requirements, enhancing overall trading safety."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#237",
+      "title": "Fix nested optional fields rendering in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "api",
+        "frontend",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update addresses the incorrect rendering of nested optional fields in API documentation. Previously, all nested fields were marked as required, regardless of the OpenAPI specification. The fix ensures that only the appropriate fields are marked as required, improving the accuracy of the API docs across all endpoints."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#58",
+      "title": "Enhance OpenAI Integration with New Guides in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "openai",
+        "integration",
+        "documentation",
+        "api",
+        "guides"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/58",
+      "summary": "This update introduces two new integration guides for OpenAI services: the Chat Completion API for the `gpt-4o-image` model and the Embeddings API for generating embedding vectors. These additions fill gaps in the existing documentation and provide users with essential information on utilizing these powerful AI tools effectively. The existing guides remain up-to-date with the latest models, ensuring comprehensive support for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#363",
+      "title": "Enhance OpenAI Spec with Missing Fields in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "openai",
+        "api",
+        "specification",
+        "backend",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update enriches the OpenAI chat completions OpenAPI specification by adding 20 missing fields and enhancing existing ones. Key additions include parameters for sampling controls, operational metadata, and enriched response details, ensuring the API documentation aligns with the official OpenAI schema. These changes improve usability and accuracy for developers integrating with the OpenAI API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#117",
+      "title": "New Budget Cap Gates for Enhanced Trade Safety in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "budget",
+        "safety",
+        "trading",
+        "ledger",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces new per-trade and rolling-24h budget cap gates to enhance trade safety. The new settings prevent excessive trades that could drain wallets due to misconfigurations or runaway scripts. A trade ledger has been added to track past trades, ensuring compliance with the new budget limits. Comprehensive tests confirm the functionality of these new features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#362",
+      "title": "Revamped onboarding guides for platform-token and platform-config in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "backend",
+        "api",
+        "chinese",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update includes a comprehensive rewrite of the onboarding documentation for platform-token and platform-config in Chinese. Key changes include detailed examples verified against the live production API, corrections to response schemas, and the establishment of conventions for future documentation updates. These enhancements aim to improve clarity and usability for developers integrating with the Ace Data Cloud platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#102",
+      "title": "Enhance ImageModel with DALL-E 2 in M C Ps 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "openai",
+        "image",
+        "update",
+        "specification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/102",
+      "summary": "This update adds `dall-e-2` to the `ImageModel` type in the OpenAI service, aligning it with the latest OpenAPI specification. The change ensures consistency across the image generation models and updates the model field description accordingly. This enhancement will improve the functionality of the image generation endpoint."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#361",
+      "title": "Fix broken OpenAI image in Backend 🛠️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "openai",
+        "images",
+        "edits",
+        "backend"
+      ],
+      "public": false,
+      "summary": "Updated the integration guide for the OpenAI images/edits by replacing a broken CDN URL with a regenerated image. This change ensures that users can view the correct bookshelf example in the zh-CN documentation. The fix enhances the overall user experience by providing accurate visual references."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#116",
+      "title": "Enhance Buy Verification with Cycle-Stability Gate in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "feature",
+        "verification",
+        "safety",
+        "trading",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces a new cycle-stability gate that enhances the buy verification process by analyzing historical cycles for potential risks. The system now refuses buy intents if any of the last N cycles for the same mint had a conflicting action or rationale indicating suspicious activity. This change aims to improve the safety and reliability of trading decisions within the SolRadar platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#115",
+      "title": "Enhance Pre-Trade Safety with Intent Verification in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "feature",
+        "safety",
+        "verification",
+        "trading",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update introduces a new command, `solradar verify-intent <mint> --action buy`, which performs comprehensive safety checks before executing trades. It integrates into the manual live trade workflow, ensuring that trades are only executed if all safety gates pass, thus preventing potential losses from stale data. Additionally, eight unit tests have been added to validate this functionality, enhancing the reliability of the trading process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#13",
+      "title": "Enhance audio capabilities with `fish` provider in S D K 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "audio",
+        "typescript",
+        "python",
+        "sdk",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/13",
+      "summary": "This update introduces the `fish` audio provider to the SDK, allowing users to access Fish music generation features. Key changes include updates to TypeScript and Python files to include `fish` in the AudioProvider union type and the SERVICE_TASK_ENDPOINTS. Additionally, the READMEs have been updated to reflect this new provider, enhancing documentation for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#359",
+      "title": "Enhance OpenAI Image Generation Docs in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "openai",
+        "images",
+        "backend",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update improves the OpenAPI specification for image generation by adding support for the DALL-E 2 model and introducing a dropdown of curated example prompts. The documentation now accurately reflects the capabilities of the backend, allowing users to select from 14 preset prompts or enter their own. No changes were made to backend functionality or cost rules."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#37",
+      "title": "Documentation Update for OpenAI in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "documentation",
+        "openai",
+        "sdk",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/37",
+      "summary": "This update confirms that the recent documentation changes for OpenAI are purely informational and do not affect the SDK. The OpenAI endpoints remain consistent with the SDK, and newly documented models are already included in the spec. No changes to the SDK are necessary, ensuring both TypeScript and Python versions remain in sync."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#49",
+      "title": "Enhance OpenAI Image API Docs with Nano Banana Models in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "openai",
+        "api",
+        "updates",
+        "models"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/49",
+      "summary": "This update syncs the latest documentation for the Nano Banana series models, including `nano-banana`, `nano-banana-2`, and `nano-banana-pro`, into the OpenAI Images API guides. Key changes include updated introductions and dedicated sections in both the generations and edits integration guides, along with examples for usage and parameter restrictions. The README has also been updated to reflect these new models, ensuring comprehensive coverage for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#360",
+      "title": "Updated GPT-Image-2 Sample Images in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "images",
+        "update",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update refreshes the broken sample images in the GPT-Image-2 section of the documentation. The task IDs for the images were updated after re-running the examples, ensuring all images now return successfully. The other language variants of the document remain unchanged as they do not include this section."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#114",
+      "title": "Enhance Threshold Documentation in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "documentation",
+        "improvement",
+        "transparency",
+        "thresholds"
+      ],
+      "public": false,
+      "summary": "This update introduces a new section in the README that classifies every numeric threshold as either 'backtest-validated' or 'guess'. It highlights the current status of thresholds, ensuring users are aware that none are validated for live trading as of April 2026. Additionally, the IMPROVEMENT-PLAN has been updated to reflect this change."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#91",
+      "title": "Documentation Sync Confirmation in M C Ps 📚",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "documentation",
+        "sync",
+        "no-op",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/91",
+      "summary": "This update confirms that the automated sync for the overview service is purely documentation-related, triggered by changes to the `mcp/overview.mdx` files. No API service or code changes were involved, ensuring the MCPs monorepo remains fully in sync without any modifications needed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#93",
+      "title": "Documentation Sync for Overview in M C Ps 📚",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "documentation",
+        "sync",
+        "translations",
+        "no-op"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/93",
+      "summary": "This update addresses a no-op sync for the `overview` service, which is purely documentation-related. The changes involve translation updates for `mcp/overview.mdx` and related OpenAI guide pages, with no modifications to API schemas or server implementations. All existing MCP server implementations remain in sync, requiring no code changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#113",
+      "title": "Track 4.5 Completed with Real-Data Verification in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "track45",
+        "verification",
+        "data",
+        "improvement",
+        "pipeline"
+      ],
+      "public": false,
+      "summary": "This update marks the completion of Track 4.5 with a successful clean real-data verification run. The results show that 31 out of 33 mints returned valid data, confirming the reliability of the pipeline. However, Track 4.3 remains blocked due to the absence of historical 'buy' or 'hold' decisions, necessitating further adjustments to the scoring system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#34",
+      "title": "Documentation Sync Complete: Overview Translations in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "documentation",
+        "translations",
+        "sync",
+        "no-code-change"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/34",
+      "summary": "This update confirms that the recent documentation sync only involved translation changes in the `mcp/overview.mdx` file, with no impact on the SDK. The translations from English to Chinese affect 17 language variants, ensuring consistency across documentation. All other components remain in sync with the latest specifications, and no code changes are necessary."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#40",
+      "title": "Enhance README with WanAPI entry in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "update",
+        "api",
+        "readme"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/40",
+      "summary": "This update adds the missing `wan/` entry to the README APIs table, ensuring it reflects the full range of available services. The addition includes a link to the WanAPI documentation, which supports video generation. This change improves clarity and accessibility for users navigating the API documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#358",
+      "title": "Add Chinese Dev Guide for GLM Chat Completion API in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "glossary",
+        "api",
+        "chinese",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive development guide for the GLM Chat Completion API in Chinese, enhancing user experience for developers. The guide includes sections on application processes, basic usage, streaming responses, multi-turn conversations, and error handling, all supported by real API call examples. This addition aligns GLM's documentation with other LLM services, providing essential resources for integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#46",
+      "title": "Documentation updates for overview translations in Clis 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "documentation",
+        "translations",
+        "localization",
+        "cli"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/46",
+      "summary": "This update includes documentation-only changes related to the translation of the `mcp/overview.mdx` file. Key modifications involve the localization of card labels and subtitles, ensuring clarity for users in different languages. No changes to CLI code or API schemas were necessary as this update pertains solely to documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#88",
+      "title": "Documentation updates synced smoothly in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "documentation",
+        "sync",
+        "updates",
+        "translations"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/88",
+      "summary": "This update reflects no operational changes, focusing solely on the documentation for the `mcp/overview.mdx` translations across 17 languages. All modifications are confined to documentation files, ensuring no impact on API services or server code. The repository remains in sync with upstream changes, confirming a seamless integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#84",
+      "title": "Enhance Async Image Task Retrieval with New API Tools in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "feature",
+        "api",
+        "openai",
+        "tasks",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/84",
+      "summary": "This update introduces new tools for the Tasks API, allowing users to retrieve and list async image tasks. Key additions include the `openai_get_task` and `openai_list_tasks` functions, enhancing the MCP server's capabilities. Documentation has been updated to reflect these changes, providing clear usage examples for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#112",
+      "title": "Enhance Historical Backtesting with Real Data in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "enhancement",
+        "backtesting",
+        "geckoterminal",
+        "solana",
+        "historical-data"
+      ],
+      "public": false,
+      "summary": "This update introduces Track 4.5, implementing a true point-in-time historical price layer for backtesting in SolRadar. The new functionality replaces the previous DEX Screener's rolling-24h snapshot with actual returns sourced from GeckoTerminal, improving accuracy in backtest results. Key files updated include the addition of a new historical provider and modifications to the backtest service, along with comprehensive unit tests to ensure reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#377",
+      "title": "Update GitHub Markdown CSS to Latest Version in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "update",
+        "css",
+        "markdown"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/377",
+      "summary": "This update bumps the GitHub Markdown CSS package from version 5.8.1 to 5.9.0. Key changes include the addition of CSS files for all GitHub themes, enhancing the styling options available. The update also includes various improvements and fixes that contribute to better rendering of markdown content."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#236",
+      "title": "Automated i18n Updates from Chinese in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates",
+        "accessibility"
+      ],
+      "public": false,
+      "summary": "This update introduces auto-generated internationalization (i18n) translation updates based on changes from the Chinese (zh-CN) source. Key modifications include updates to multiple language files, enhancing the application's accessibility for non-Chinese speakers. The changes ensure that users across various languages receive accurate translations, improving user experience significantly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#427",
+      "title": "Exciting New Tool Calling UI Components for aichat2 Integration in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "frontend",
+        "ui",
+        "aichat2",
+        "components",
+        "typescript"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/427",
+      "summary": "This update introduces new frontend components and types for the aichat2 AI orchestrator tool-calling UI. Key additions include `ToolCallBlock`, `ArtifactBlock`, and `ThinkingBlock`, enhancing the user experience with collapsible displays and artifact previews. Additionally, a new API method, `chatConversationV2`, has been implemented to handle SSE events efficiently while maintaining backward compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#434",
+      "title": "Automated i18n Updates from zh-CN in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "automation",
+        "localization",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/434",
+      "summary": "This update introduces automated translation updates for internationalization (i18n) based on changes from the zh-CN source. Several cache files have been renamed and new files added to streamline the translation process. This enhancement will improve localization efforts and ensure timely updates for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#458",
+      "title": "Dynamic Default Route Based on Site Features in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "router",
+        "navigation",
+        "constants",
+        "fix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/458",
+      "summary": "This update introduces a dynamic root route that redirects based on enabled site features, enhancing user navigation. Key changes include modifications to the router to read from `site.features`, ensuring the first enabled feature is prioritized. Additionally, a new constant for `ROUTE_SERP_INDEX` has been added, and import paths have been corrected for better consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#461",
+      "title": "Update README to Include OpenAI Image in Nexior 🌟",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "documentation",
+        "readme",
+        "update",
+        "ai",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/461",
+      "summary": "This update adds OpenAI Image to the AI Image service list in the README.md for both English and Chinese sections. This change ensures that the documentation aligns with the recent integration, enhancing clarity for users. The README now accurately reflects the available services, improving the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#235",
+      "title": "Enhance code snippet highlighting on language switch in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "highlighting",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update fixes the issue where code snippets on the API documentation page were not retaining syntax highlighting when users switched between language tabs. The solution involved resetting the highlighting state before reapplying styles, ensuring a consistent user experience across all language selections. Manual testing confirmed that the highlighting now works seamlessly for all transitions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#234",
+      "title": "Revamped Document Balance & Key Panel for Clarity in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "design",
+        "usability",
+        "update"
+      ],
+      "public": false,
+      "summary": "The right-side balance and key panel on the document detail page has been completely redesigned for improved usability. Key features now include a polished card layout displaying both instance and general balances, an easily accessible App ID, and a streamlined API key section. This update enhances user experience by providing essential information at a glance and maintaining consistency across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#111",
+      "title": "Exciting New Backtest CLI for SolRadar in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "feature",
+        "cli",
+        "backtest",
+        "analytics",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces the `solradar backtest` CLI subcommand, which replays recent research reports to provide survival and 24-hour directional statistics. Key files have been added and modified, including a new backtest service and parser, enhancing the tool's analytical capabilities. The initial run shows promising survival rates across score buckets, although caution is advised for higher scores due to potential inaccuracies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#460",
+      "title": "Exciting New OpenAI Image Features in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "openai",
+        "image",
+        "nexior",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/460",
+      "summary": "This update introduces a comprehensive OpenAI Image module to Nexior, enabling users to generate and edit images with async task polling. Key additions include a dedicated OpenAI Image page, various configuration components, and support for multiple languages. The integration enhances user experience by allowing seamless image processing and management."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#110",
       "title": "Finalize report front-matter for distribution signals in Sol Radar 🚀",
       "tags": [
