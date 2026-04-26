@@ -3,6 +3,67 @@
   "date": "2026-04-26",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/SolRadar#84",
+      "title": "Automated research cycle completed in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "automation",
+        "report",
+        "degradation",
+        "solradar"
+      ],
+      "public": false,
+      "summary": "The automated research cycle for April 26, 2026, has been successfully completed. All external enrichment providers experienced degradation, leading to the review of 9 watchlist candidates, all of which were skipped due to lack of liquidity and market data. The detailed report documents these findings and maintains ledger continuity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#80",
+      "title": "Fix heredoc bug in workflow for report quality gate in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "bugfix",
+        "workflow",
+        "python",
+        "validation",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update resolves a heredoc bug in the scheduled-research workflow that caused failures in report validation. The validation logic has been extracted to a new Python script, ensuring that reports are checked for required content before auto-merging. Key changes include modifications to the workflow file and the addition of the report quality gate script."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#351",
+      "title": "Remove Seedream E2E Probe in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "chore",
+        "e2e",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update removes the Seedream end-to-end probe as per product request. The files `test-seedream.yaml` and `test_seedream.py` have been deleted, ensuring that no future deployments will recreate the Deployment. The existing live Deployment will be manually deleted after the merge."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#71",
+      "title": "Strengthen Agent Task Prompts and Introduce Quality Gates in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "workflow",
+        "quality",
+        "enhancement",
+        "reporting"
+      ],
+      "public": false,
+      "summary": "This update enhances the agent task prompt by incorporating a detailed checklist and acceptance criteria. Additionally, it implements quality gates to prevent low-quality skeleton reports from being merged, ensuring higher standards in report content."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#77",
       "title": "Research Cycle Update: Data Providers Unreachable in Sol Radar 🚨",
       "tags": [
