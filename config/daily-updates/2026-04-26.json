@@ -3,6 +3,314 @@
   "date": "2026-04-26",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/SolRadar#110",
+      "title": "Finalize report front-matter for distribution signals in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "reporting",
+        "improvement",
+        "updates",
+        "solradar"
+      ],
+      "public": false,
+      "summary": "This update finalizes the report front-matter by adding new fields: top10_holder_pct and creator_rug_count to the report-format contract. Additionally, the template has been annotated with these new intent fields, and Track 2.3 has been marked complete in the IMPROVEMENT-PLAN. These changes enhance the reporting capabilities and data insights for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#109",
+      "title": "Enhance Token Analysis with Holder Distribution and Creator History in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "enhancement",
+        "token-analysis",
+        "security",
+        "pipeline",
+        "scripts"
+      ],
+      "public": false,
+      "summary": "This update introduces new scripts for holder distribution and creator history, enhancing the token analysis capabilities. The `holder_profile` and `creator_history` probes have been integrated into the security provider and wired into the pipeline for improved scoring. Additionally, updates have been made to the research cycle and the improvement plan to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#45",
+      "title": "Introducing manage-cls-alarm skill for enhanced alarm management in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "feature",
+        "alarm",
+        "management",
+        "cli",
+        "tencent"
+      ],
+      "public": false,
+      "summary": "This update introduces a new **manage-cls-alarm** skill, distinct from the existing log-search capabilities. It includes a comprehensive CLI tool for managing CLS alarm policies, notice groups, and execution logs, enhancing the precision of tool selection for users. Key files added are the skill definition and the alarm management script, which supports various alarm operations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#357",
+      "title": "Documentation Sync for Pricing and Service Intros in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "sync",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update includes a mechanical synchronization of 11 files, resulting in a net change of +379/-1162 lines. Key updates include refreshed pricing JSON for cost APIs and OpenAPI schemas, along with updated Chinese service introductions for several datasets. This ensures that our documentation remains accurate and up-to-date."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#108",
+      "title": "Enhance Security Probes in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "security",
+        "pipeline",
+        "cli",
+        "enhancement",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update integrates a multi-source security probe into the pipeline, enriching candidates with RugCheck and GoPlus risk flags. A new CLI command, `solradar security-check`, has been added to facilitate on-chain security checks. Documentation has also been updated to reflect these enhancements, ensuring users are informed of the new capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#38",
+      "title": "Enhance OpenAI Tasks API Documentation in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "openai",
+        "api",
+        "integration",
+        "tasks"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/38",
+      "summary": "A new integration guide for the OpenAI Tasks API has been added, detailing how to retrieve async image generation results using the `/openai/tasks` endpoint. Key features include the `retrieve` and `retrieve_batch` actions, along with a full response schema and an end-to-end example for implementation. This guide is essential for developers looking to utilize callback functionality effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#42",
+      "title": "Enhance CLI with Async Task Retrieval in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "feature",
+        "cli",
+        "openai",
+        "tasks",
+        "async"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/42",
+      "summary": "This update introduces a new `tasks` command group to the CLI, allowing users to retrieve results of async image generation and editing tasks. Key features include the ability to fetch single tasks by ID or trace ID, as well as batch retrieval using various filters. The README has been updated with usage examples, and 11 new tests have been added to ensure robust functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#86",
+      "title": "OpenAI MCP Server Verified Against Docs Spec in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "openai",
+        "sync",
+        "verification",
+        "documentation",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/86",
+      "summary": "The recent sync check for the OpenAI service confirmed that the MCP server is fully aligned with the latest OpenAPI specifications. Key components, including models, endpoints, and parameters, were thoroughly verified, and no code changes were necessary. This ensures that all functionalities remain intact and up-to-date."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#32",
+      "title": "Fix OpenAI Chat Completions Endpoint in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "bugfix",
+        "sdk",
+        "openai",
+        "typescript",
+        "python"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/32",
+      "summary": "This update corrects the routing for the OpenAI chat completions endpoint in both TypeScript and Python SDKs. The endpoint has been changed from `/v1/chat/completions` to the proper AceDataCloud path `/openai/chat/completions`, ensuring compliance with the OpenAPI specification. All other OpenAI endpoints remain unaffected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#107",
+      "title": "Enhance On-Chain Security with RugCheck & GoPlus in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "security",
+        "solana",
+        "improvement",
+        "skills",
+        "rugcheck",
+        "goplus"
+      ],
+      "public": false,
+      "summary": "This update introduces a new security skill that integrates RugCheck and GoPlus to provide comprehensive on-chain security assessments for Solana tokens. It addresses the previous issue of null security values by offering detailed reports on mint authority, freeze authority, and other critical metrics. Additionally, a living document has been created to track ongoing improvements and ensure alignment with future updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformDeployment#4",
+      "title": "Add Kong Service for OpenAI Tasks in Platform Deployment 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformDeployment",
+        "kong",
+        "openai",
+        "tse",
+        "deployment",
+        "python"
+      ],
+      "public": false,
+      "summary": "This update introduces an idempotent Python script that registers the Kong service and route for the `POST /openai/tasks` endpoint on the TSE gateway. The script has already been executed in production, ensuring that the path is now correctly routed, preventing 404 errors. This addition enhances the PlatformService's functionality by integrating the OpenAI tasks endpoint seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#356",
+      "title": "Enhance OpenAI Tasks Integration Guide in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "openai",
+        "backend",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update introduces comprehensive integration guides for the OpenAI Tasks API in both English and Simplified Chinese. The new markdown files provide detailed instructions on querying tasks submitted in callback mode, enhancing user experience and accessibility. The guides are now accessible in the platform sidebar, ensuring users can easily find the information they need."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#459",
+      "title": "Streamlined Image Uploads with Clipboard Paste in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "upload",
+        "images",
+        "user-experience",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/459",
+      "summary": "This update introduces a new feature allowing users to paste images directly into upload fields across all image upload components in Nexior. By simply using `Ctrl+V` or `Cmd+V`, users can upload images without saving them to disk first, significantly enhancing workflow efficiency, especially for services that rely heavily on reference images. The implementation includes a new utility and mixin that seamlessly integrates with existing upload components."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#30",
+      "title": "Enhance SDK with OpenAI Image and Embedding Features in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "sdk",
+        "openai",
+        "typescript",
+        "python",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/30",
+      "summary": "This update integrates new OpenAI endpoints for image generation, editing, and embeddings into both TypeScript and Python SDKs. Key changes include the addition of the `Images` and `Embeddings` classes, which provide methods for generating images and creating embeddings. This enhancement improves user experience by enabling access to powerful OpenAI functionalities directly within the SDKs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#34",
+      "title": "Updated MCP Servers Intro for Clarity in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "update",
+        "mcp",
+        "readme",
+        "sync"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/34",
+      "summary": "This update synchronizes the MCP Servers introduction in the README with the authoritative English source. The wording now includes 'and others' alongside the listed AI assistants, enhancing clarity. The MCP server table remains unchanged and fully in sync."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#82",
+      "title": "Documentation sync for overview service in M C Ps 📚",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "documentation",
+        "sync",
+        "translation",
+        "no-op"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/82",
+      "summary": "This update reflects a no-op sync triggered by recent Chinese translation edits in the documentation for the overview service. The content remains unchanged, and there are no corresponding OpenAPI specifications to sync. Overall, the repository is now in sync with the latest documentation updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#38",
+      "title": "Documentation Sync for Overview Service in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "documentation",
+        "sync",
+        "no-code",
+        "overview"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/38",
+      "summary": "This update confirms that recent changes to the `overview` service are solely documentation-related, with no updates to the CLI or OpenAPI specifications. The only modified file is `mcp/overview.mdx`, ensuring that no code changes are necessary. Additionally, a check on the `aichat` model confirms consistency across related files."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#104",
+      "title": "New Research Cycle Report Published in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "report",
+        "solana",
+        "candidates",
+        "analysis"
+      ],
+      "public": false,
+      "summary": "The latest research cycle report for April 26, 2026, has been published, adding a comprehensive analysis of 15 candidates. Key decisions include 9 holds, notably for ORCA and RAY, which showed significant 24-hour gains. No candidates met the buy threshold, highlighting the current market conditions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#355",
+      "title": "Updated Pricing Links for Claude Code Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "fix",
+        "localization",
+        "claude"
+      ],
+      "public": false,
+      "summary": "This update corrects the pricing link in the Claude Code service documentation across all 12 localized versions. The previous link incorrectly directed users back to the Claude Code service page instead of the intended Claude API service. Now, users will be directed to the correct pricing details, enhancing their experience and clarity."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#764",
       "title": "Fix silent deploy failures for Docker pushes in Platform Service 🚀",
       "tags": [
