@@ -3,6 +3,86 @@
   "date": "2026-04-26",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#761",
+      "title": "Fix(worker): delay /record by 5s to avoid duplicate ApiUsage rows in Platform Service 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#88",
+      "title": "Fix(workflow): drop bash-breaking '<context>' quotes in issue body in Sol Radar 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#87",
+      "title": "Feat(narrative-signals): add Grok Twitter credibility probe in Sol Radar ✨",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#760",
+      "title": "Refactor(openai/worker): unify handler hierarchy + USAGE_FIELD_MAP in Platform Service 🧹",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#230",
+      "title": "Fix(documents): group credential selector by application + show token name in Frontend Web 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#125",
+      "title": "Feat(redact): scrub base64 data URLs and cap oversize bodies in /record metadata in Gateway ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#759",
+      "title": "Feat(openai/worker): record success bodies + tighten model routing in Platform Service ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#124",
+      "title": "Fix(record): store raw worker request/response in ApiUsage metadata in Gateway 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway"
+      ],
+      "public": false
+    },
+    {
       "id": "gh:pr:AceDataCloud/APIs#26",
       "title": "Enhance README with MCP Servers Info in A P Is 🚀",
       "tags": [
