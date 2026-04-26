@@ -3,6 +3,490 @@
   "date": "2026-04-26",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#464",
+      "title": "Automatic i18n Updates from zh-CN in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "localization",
+        "translations",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/464",
+      "summary": "This update introduces automated translation updates for internationalization (i18n) based on changes from the zh-CN source. Key modifications include updates to multiple language files, enhancing the localization experience across various languages. The changes ensure that users have access to the latest translations, improving usability and accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#130",
+      "title": "Enhance auto-issue logic for decision-ready tracking in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "enhancement",
+        "automation",
+        "issue-tracking",
+        "audit",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update strengthens the auto-issue logic for the Track 4.3 milestone, ensuring that the next decision-ready flip is fully auditable. It also addresses and closes stale issue #126, which was a false positive due to earlier loose criteria. Key modifications include the addition of logic to surface ready buckets and criteria for better verification."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#766",
+      "title": "Enhance conversation retrieval format in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "api",
+        "serializer",
+        "aichat2",
+        "ui",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a new API serializer that normalizes the format of conversation data retrieved from the aichat2 worker. It enriches `tool_use` blocks and integrates `tool_result` data, ensuring a consistent output shape for clients like Nexior and Dify. This change improves the UI experience by preventing garbled user messages and simplifies the handling of tool calls across different models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#129",
+      "title": "Enhance Shadow Trader for Timely Price Snapshots in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "bugfix",
+        "workflow",
+        "shadow-trader",
+        "data-accuracy"
+      ],
+      "public": false,
+      "summary": "This update addresses a bug where 37 ledger entries had missing entry prices due to timing issues. By adding a push trigger for report merges, we ensure that price snapshots are captured within the fresh cycle window, improving data accuracy and reducing the need for backfilling. This change enhances the overall functionality of the Shadow Trader workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#463",
+      "title": "Enhance OpenAI Image Feature Visibility in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "localization",
+        "bugfix",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/463",
+      "summary": "This update adds the OpenAI Image feature toggle to the site settings and ensures it appears in the dynamic default route. Additionally, the feature is now visible in the navigator without relying on the ChatGPT toggle. Localization updates have also been made for 18 languages, ensuring consistent user experience across different regions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#128",
+      "title": "Documenting Real Shadow-Trader Run and Fixes in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "documentation",
+        "improvement",
+        "trading",
+        "real-money",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update documents the first real cron run of the shadow-trader, highlighting the output and the importance of the changes made in PR #127. Key modifications include a new section in REAL-MONEY.md and an entry in IMPROVEMENT-PLAN.md that clarify the updated criteria for tradeable buckets. These adjustments enhance the robustness of the trading model and ensure accurate decision-making."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#127",
+      "title": "Enhance Decision Criteria for Shadow Trader in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "bugfix",
+        "shadowtrader",
+        "criteria",
+        "tests",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update tightens the decision-making criteria for the shadow trader by implementing two key gates: a tradeable-bucket gate and a friction floor. The new rule ensures that `decision_ready` is only set to true when specific conditions are met, improving the accuracy of buy signals. Additionally, tests have been updated and verified, resulting in 95 passing tests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/.github#9",
+      "title": "Clean Up 404 Links for GitHub Repos in .github 🚀",
+      "tags": [
+        "github",
+        "pr",
+        ".github",
+        "bugfix",
+        "documentation",
+        "cleanup",
+        "profile"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/.github/pull/9",
+      "summary": "This update fixes the issue of linking to non-existent GitHub repositories on the AceDataCloud organization landing page. The script now filters out MCP, CLI, and API rows that point to missing repositories or PyPI packages, ensuring that only valid links are displayed. The README has been regenerated, resulting in a cleaner and more accurate profile."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#119",
+      "title": "Streamline task_tools.py formatting in M C Ps ✨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "formatting",
+        "linting",
+        "code-quality"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/119",
+      "summary": "This update applies the ruff formatting tool to the tools/task_tools.py file, collapsing a multi-line Field description into a single line. This change addresses a linting issue that was causing the main branch to fail after an auto-sync. The modifications enhance code readability and maintainability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#462",
+      "title": "Fix landing page routing to follow feature order in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "router",
+        "features",
+        "landingpage"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/462",
+      "summary": "This update resolves an issue where all Nexior sites were defaulting to the ChatGPT landing page, regardless of the configured feature order. The router now respects the order of features as returned by the platform API, allowing site operators to set their preferred landing page. If no recognized feature is available, it will still default to ChatGPT, ensuring consistent behavior across configurations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#44",
+      "title": "New buyback record added for April 2026 in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "buyback",
+        "roadmap",
+        "update",
+        "transactions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/44",
+      "summary": "This update introduces a new on-chain buyback record scheduled for April 26, 2026, utilizing creator fees. The transaction will convert $25 into 75,520 ACE through the Pump.fun AMM venue. The buyback history has been updated accordingly to reflect this addition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#77",
+      "title": "Exciting New Hailuo CLI and Midjourney Updates in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "hailuo",
+        "midjourney",
+        "cli",
+        "updates",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/77",
+      "summary": "This update introduces a brand new Hailuo CLI, enabling users to generate AI videos from text prompts and manage tasks effectively. Additionally, the Midjourney CLI has been enhanced with new billing flags and improved task retrieval options, ensuring a smoother user experience. These changes significantly expand the functionality and usability of both CLIs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#72",
+      "title": "New Hailuo Service Documentation and Midjourney Verification in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "api",
+        "hailuo",
+        "midjourney",
+        "integration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/72",
+      "summary": "This update introduces comprehensive documentation for the new Hailuo video generation service, including integration guides for both video and task APIs. The Midjourney documentation remains in sync with the existing guides, ensuring consistency across services. These enhancements aim to streamline developer access and usage of the Hailuo API features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#125",
+      "title": "Enhance Shadow Trader with Backfill and CLI Features in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "enhancement",
+        "cli",
+        "automation",
+        "shadow-trader",
+        "backfill"
+      ],
+      "public": false,
+      "summary": "This update introduces a backfill-safe entry price for the Track 4.3 shadow trader, allowing immediate ingestion of historical intents. A new CLI command, `solradar shadow-status`, provides real-time status on decision readiness. Additionally, an automated issue creation feature streamlines tracking when conditions are met, enhancing operational efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#43",
+      "title": "Boosting Marketing Insights with New KPIs in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "kpi",
+        "roadmap",
+        "marketing",
+        "api",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/43",
+      "summary": "This update introduces two new marketing KPIs to the Roadmap page: 'New Signups' and 'Top Services by Usage'. The 'New Signups' metric tracks registrations over the last 7/30 days, while the 'Top Services' feature visualizes the most used APIs. These enhancements improve the visibility of key performance indicators, aiding in better decision-making."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#117",
+      "title": "Enhance Midjourney Task Queries with New Parameters in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "midjourney",
+        "tasks",
+        "api",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/117",
+      "summary": "This update syncs the Midjourney MCP server with the latest upstream Docs commit. Key enhancements include the addition of `trace_id`, `trace_ids`, `offset`, and `limit` parameters to the `/midjourney/tasks` endpoint, allowing for more flexible task retrieval options. These changes improve the usability of the task query tools, enabling better handling of task identification and pagination."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#124",
+      "title": "Accelerate Track 4.3 with Shadow Trading in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "feature",
+        "shadow-trading",
+        "automation",
+        "testing",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a shadow paper-trading layer that allows for immediate tracking of borderline buy/hold intents without the previous 30-day wait. Key features include new CLI commands for recording and grading shadow entries, an hourly workflow for automated data collection, and comprehensive unit tests to ensure reliability. This enhancement paves the way for quicker statistical validation, enabling potential real-money investments sooner than expected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#349",
+      "title": "Boosting E2E Testing with New Probes in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "e2e",
+        "testing",
+        "backend",
+        "probes",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces 10 new continuous end-to-end probes for `api.acedata.cloud`, enhancing the diversity of prompts and inputs across existing chat and image probes. Key changes include the addition of various testing scenarios, such as token counting and localization, along with improved randomization in prompt selection. These enhancements aim to improve the robustness and reliability of our testing framework."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#44",
+      "title": "Enhance OpenAI Service Sync with New Models in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "openai",
+        "sdk",
+        "updates",
+        "models",
+        "parameters"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/44",
+      "summary": "This update verifies that the SDK is in sync with the latest OpenAI service specifications, which now include new models like `gpt-5.5` and `gpt-5.5-pro`. Additionally, 20 new optional parameters have been added to the `chat/completions` schema, and the `images/edits` schema is now fully documented. No code changes were necessary as the SDK already accommodates these updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#123",
+      "title": "Enhance Report Validation for Track 2.3 in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "enhancement",
+        "validation",
+        "reporting",
+        "tests",
+        "cli"
+      ],
+      "public": false,
+      "summary": "This update introduces a new validation mechanism for report front-matter in Track 2.3, ensuring that every 'buy' or 'hold' intent includes necessary fields: `top10_holder_pct` and `creator_rug_count`. A new CLI command has been added for linting reports, and the workflow now aborts trades if these fields are missing. Additionally, 10 unit tests have been implemented to ensure the robustness of these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#367",
+      "title": "Revamped API Docs with Real Responses in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "api",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "All 30 platform meta-API documentation files have been completely rewritten to include real, tested API responses. Key changes include the addition of a new file, updated field descriptions, and corrected pagination keys to align with actual API behavior. This update enhances clarity and accuracy for developers using the Ace Data Cloud platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#65",
+      "title": "Updated OpenAI Docs Image URLs in APIs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "updates",
+        "openai",
+        "images",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/65",
+      "summary": "This update synchronizes the OpenAI documentation with the latest changes from AceDataCloud. Key modifications include updated image URLs in the integration guides, ensuring that the examples reflect the most current assets. These changes enhance the accuracy and usability of the documentation for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#68",
+      "title": "New API Docs for Claude, DeepSeek, Gemini, Grok, and Kimi in APIs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "api",
+        "documentation",
+        "updates",
+        "developer",
+        "guides",
+        "integration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/68",
+      "summary": "This update introduces comprehensive API documentation for five new services: Claude, DeepSeek, Gemini, Grok, and Kimi. Each service now has its own directory with detailed guides covering usage, integration, and API references, enhancing developer resources on the AceDataCloud platform. Key fixes were also applied during the conversion process to ensure accuracy and consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#122",
+      "title": "Enhance Post-Trade Monitoring with Rugpull Alerts in Sol Radar 🚨",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "monitoring",
+        "alerts",
+        "security",
+        "testing",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update introduces a robust post-trade rugpull alarm system that monitors currently open positions for critical changes. Key features include a new CLI command for position monitoring, scheduled checks every 30 minutes, and alerts for significant price drops, liquidity changes, and security issues. The implementation includes comprehensive unit tests and updates to relevant documentation, ensuring users are promptly notified of potential risks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#46",
+      "title": "OpenAI SDK Sync Verified: No Changes Needed in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "sdk",
+        "openai",
+        "update",
+        "verification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/46",
+      "summary": "The upstream `openai.json` spec has been updated with new optional parameters and the addition of `dall-e-2` to model enums. Our SDK's flexible design allows it to accommodate these changes without any code modifications. This ensures that users can seamlessly utilize the latest features without disruption."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#366",
+      "title": "Fix critical OpenAPI spec issues in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "openapi",
+        "bugfix",
+        "backend",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update addresses two major OpenAPI specification bugs identified during a comprehensive audit. Key changes include renaming an empty property in the Midjourney tasks endpoint, correcting the action field requirements, and replacing incorrect example data in the Hailuo videos endpoint. These fixes enhance the accuracy and usability of the API documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#365",
+      "title": "Enhanced OpenAI-Compatible Chat Specs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "openapi",
+        "enhancement",
+        "backend",
+        "specification",
+        "chat-completions"
+      ],
+      "public": false,
+      "summary": "This update enriches six sibling chat-completion specifications by applying OpenAI-canonical enhancements. Each spec now features a significant increase in fields, expanding from 6-7 to 28-29 fields, which includes new request body parameters and enriched response details. The changes improve compatibility and functionality across various providers, ensuring a more robust integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#111",
+      "title": "Enhance OpenAI Image Model Documentation in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "documentation",
+        "openai",
+        "image-models",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/111",
+      "summary": "This update adds the missing `dall-e-2` model to the OpenAI image model documentation. Key changes include the addition of `dall-e-2` to the `openai_list_image_models` table and the Supported Image Models list in the README. These updates ensure that the documentation is fully aligned with the latest OpenAPI specifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#121",
+      "title": "Enhance Twitter Scraping with Real Data in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "twitter",
+        "scraping",
+        "data",
+        "grok",
+        "solradar",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces a real Twitter scraping feature via AceDataCloud's Serp, replacing previously fabricated mention counts with accurate ground-truth data. Key changes include the addition of new scripts for scraping and verification, as well as modifications to the Grok credibility check to ensure it only labels sentiment without generating numbers. The implementation has been verified against known tokens, returning reliable data with zero errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#120",
+      "title": "Enhance Security Probes to Close Gaps in Criticality Checks in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "security",
+        "improvement",
+        "testing",
+        "criticality",
+        "solradar"
+      ],
+      "public": false,
+      "summary": "This update introduces three new fallback rules to the security probe's criticality checks, addressing previously identified gaps in the detection of suspicious mints. The changes ensure that all known-suspicious mints are now correctly demoted, enhancing the overall security of the system. Additionally, new tests have been added to validate these improvements and ensure robustness."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#71",
       "title": "Add DALL-E 2 to Image Models in Clis 🎨",
       "tags": [
