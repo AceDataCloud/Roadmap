@@ -79,8 +79,11 @@ jobs:
       - name: Generate API usage snapshot
         if: ${{ env.TENCENT_CLOUD_SECRET_ID != '' && env.TENCENT_CLOUD_SECRET_KEY != '' }}
         continue-on-error: true
+        env:
+          PGSQL_PORT: ${{ secrets.PGSQL_PORT != '' && secrets.PGSQL_PORT || '5432' }}
+          PGSQL_AUTH_DATABASE: ${{ secrets.PGSQL_AUTH_DATABASE != '' && secrets.PGSQL_AUTH_DATABASE || 'acedatacloud_auth' }}
         run: |
-          pip install tencentcloud-sdk-python
+          pip install tencentcloud-sdk-python psycopg2-binary
           python3 scripts/generate_api_usage_snapshot.py
 
       - name: Commit and push

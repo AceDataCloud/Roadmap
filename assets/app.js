@@ -1952,6 +1952,15 @@
         },
       ];
 
+      // New Signups (shown only when data is available)
+      if (windowData.new_signups != null) {
+        statItems.push({
+          label: "New Signups",
+          value: formatCompact(windowData.new_signups),
+          raw: formatNum(windowData.new_signups),
+        });
+      }
+
       for (const stat of statItems) {
         const iconWrap = el("div", {
           class:
@@ -2006,6 +2015,7 @@
               );
             });
             renderStats();
+            renderTopServices();
           },
         },
         w.label,
@@ -2020,6 +2030,79 @@
       wrap.appendChild(tabs);
     }
     wrap.appendChild(statsGrid);
+
+    // Top Services
+    const topServicesWrap = el("div", { class: "mt-6" });
+
+    function renderTopServices() {
+      topServicesWrap.innerHTML = "";
+      const windowData = snapshot[activeKey];
+      const services = windowData?.top_services;
+      if (!services || !services.length) return;
+
+      const heading = el(
+        "h4",
+        {
+          class:
+            "mb-3 text-sm font-semibold text-slate-700 dark:text-white/90",
+        },
+        "Top Services by Usage",
+      );
+      topServicesWrap.appendChild(heading);
+
+      const list = el("div", {
+        class: "space-y-2",
+      });
+
+      const maxCalls = services[0]?.calls || 1;
+
+      for (const svc of services) {
+        const pct = Math.round((svc.calls / maxCalls) * 100);
+        const row = el(
+          "div",
+          {
+            class:
+              "relative overflow-hidden rounded-xl bg-slate-900/5 px-4 py-2.5 shadow-ring dark:bg-white/5",
+          },
+          [
+            el("div", {
+              class:
+                "absolute inset-y-0 left-0 bg-cyan-500/15 dark:bg-cyan-400/15 transition-all",
+              style: `width:${pct}%`,
+            }),
+            el(
+              "div",
+              { class: "relative flex items-center justify-between gap-3" },
+              [
+                el(
+                  "span",
+                  {
+                    class:
+                      "truncate text-sm font-medium text-slate-800 dark:text-white/90",
+                  },
+                  svc.name,
+                ),
+                el(
+                  "span",
+                  {
+                    class:
+                      "shrink-0 text-sm font-semibold tabular-nums text-slate-600 dark:text-white/70",
+                    title: formatNum(svc.calls),
+                  },
+                  formatCompact(svc.calls),
+                ),
+              ],
+            ),
+          ],
+        );
+        list.appendChild(row);
+      }
+
+      topServicesWrap.appendChild(list);
+    }
+
+    renderTopServices();
+    wrap.appendChild(topServicesWrap);
 
     if (asOf) {
       wrap.appendChild(

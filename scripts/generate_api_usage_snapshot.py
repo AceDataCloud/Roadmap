@@ -68,6 +68,12 @@ _SQL_USERS = "* | SELECT count(DISTINCT user_id) as users"
 # SQL for distinct API count
 _SQL_ACTIVE_APIS = "* | SELECT count(DISTINCT api_name) as active_apis"
 
+# SQL for top services by call count
+_SQL_TOP_SERVICES = (
+    "* | SELECT api_name, count(*) as calls"
+    " GROUP BY api_name ORDER BY calls DESC LIMIT 10"
+)
+
 
 def _cls_query(client, query: str, from_ms: int, to_ms: int) -> dict:
     """Run a CLS SearchLog request and return the parsed response."""
@@ -120,6 +126,76 @@ def _query_active_apis(client, from_ms: int, to_ms: int) -> int:
     if rows:
         return rows[0].get("active_apis", 0)
     return 0
+
+
+def _query_top_services(client, from_ms: int, to_ms: int) -> list[dict]:
+    """Get top 10 services by call count for a time window."""
+    result = _cls_query(client, _SQL_TOP_SERVICES, from_ms, to_ms)
+    rows = _parse_analysis_records(result)
+    out = []
+    for row in rows:
+        name = row.get("api_name", "")
+        calls = row.get("calls", 0)
+        if name:
+            out.append({"name": name, "calls": int(calls)})
+    return out
+
+
+# ── Auth DB query (new signups) ─────────────────────────────────────────────
+
+
+def _query_new_signups(days: int) -> int | None:
+    """
+    Count users registered in the last *days* days from the auth database.
+
+    Returns None if DB credentials are not configured (graceful skip).
+    """
+    host = os.environ.get("PGSQL_HOST")
+    user = os.environ.get("PGSQL_USER")
+    password = os.environ.get("PGSQL_PASSWORD")
+    if not host or not user:
+        return None
+
+    port = int(os.environ.get("PGSQL_PORT", "5432"))
+    database = os.environ.get(
+        "PGSQL_AUTH_DATABASE",
+        os.environ.get("PGSQL_DATABASE_AUTH", "acedatacloud_auth"),
+    )
+
+    try:
+        import psycopg2  # type: ignore
+    except ImportError:
+        print(
+            "[api_usage_snapshot] WARN: psycopg2 not installed — skipping new_signups.",
+            file=sys.stderr,
+        )
+        return None
+
+    try:
+        conn = psycopg2.connect(
+            host=host,
+            port=port,
+            user=user,
+            password=password or "",
+            dbname=database,
+        )
+        try:
+            with conn.cursor() as cur:
+                cur.execute(
+                    "SELECT count(*) FROM auth_user"
+                    " WHERE date_joined >= NOW() - INTERVAL '%s days'",
+                    (days,),
+                )
+                row = cur.fetchone()
+                return row[0] if row else 0
+        finally:
+            conn.close()
+    except Exception as exc:
+        print(
+            f"[api_usage_snapshot] WARN: auth DB query failed: {exc}",
+            file=sys.stderr,
+        )
+        return None
 
 
 # ── main ─────────────────────────────────────────────────────────────────────
@@ -185,6 +261,7 @@ def main() -> int:
             total = _query_total(client, start_ms, now_ms)
             users = _query_unique_users(client, start_ms, now_ms)
             active_apis = _query_active_apis(client, start_ms, now_ms)
+            top_services = _query_top_services(client, start_ms, now_ms)
         except Exception as exc:
             print(
                 f"[api_usage_snapshot] ERROR querying CLS for {window_name}: {exc}",
@@ -192,11 +269,20 @@ def main() -> int:
             )
             return 2
 
-        payload[window_name] = {
+        window_data: dict = {
             "total_calls": total,
             "unique_users": users,
             "active_apis": active_apis,
         }
+        if top_services:
+            window_data["top_services"] = top_services
+
+        # New signups (optional — requires auth DB credentials)
+        signups = _query_new_signups(delta.days)
+        if signups is not None:
+            window_data["new_signups"] = signups
+
+        payload[window_name] = window_data
 
     _atomic_write_json(Path(args.output), payload)
     print(f"[api_usage_snapshot] Wrote {args.output}", file=sys.stderr)
