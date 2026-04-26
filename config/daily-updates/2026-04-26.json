@@ -3,6 +3,86 @@
   "date": "2026-04-26",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/APIs#26",
+      "title": "Enhance README with MCP Servers Info in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "mcp",
+        "updates",
+        "readme",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/26",
+      "summary": "This update enriches the README by adding a new section for MCP Servers, which includes descriptions and links for all 11 MCP servers. The translations from Chinese to English ensure that the documentation is accessible and in sync with the APIs monorepo. This enhancement improves user navigation and understanding of available services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#27",
+      "title": "Documentation Update for Overview in S D K 📚",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "documentation",
+        "update",
+        "translation",
+        "sdk"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/27",
+      "summary": "This update reflects a documentation-only change following a sync triggered by a recent commit. The primary modification involved translating card descriptions from Chinese to English in the overview section, with no alterations to the OpenAPI specifications or SDK functionality. All existing providers and endpoints remain consistent with the current documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#74",
+      "title": "Documentation Updates for MCP Overview in M C Ps 📚",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "documentation",
+        "translations",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/74",
+      "summary": "This update focuses on changes made to the documentation for the MCP overview, specifically the `mcp/overview.mdx` file. The modifications include translation updates for the zh-CN language, with no code changes or API specifications required. The repository remains in sync with no additional implementation needed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#31",
+      "title": "No updates needed for overview service in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "documentation",
+        "cli",
+        "sync",
+        "no-change"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/31",
+      "summary": "The recent changes to the overview service were purely documentation-related, with no modifications to API endpoints or CLI tools. The updates involved only translations in the `mcp/overview.mdx` file, ensuring that all CLI tools remain in sync with the documentation. As a result, no code changes are necessary."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#82",
+      "title": "Research Cycle Update: Data Providers Unreachable in Sol Radar 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "data",
+        "update",
+        "solradar",
+        "degradation"
+      ],
+      "public": false,
+      "summary": "The scheduled research cycle for April 26, 2026, has been completed, but all external data providers were degraded, resulting in no new-listing candidates. Nine watchlist mints were reviewed, all scoring 30/100, with no buy or hold signals possible due to lack of market data. This report has been published in accordance with the graceful-degradation policy to maintain ledger continuity."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#84",
       "title": "Automated research cycle completed in Sol Radar 🚀",
       "tags": [
