@@ -3,6 +3,371 @@
   "date": "2026-04-26",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#764",
+      "title": "Fix silent deploy failures for Docker pushes in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "ci",
+        "docker",
+        "deploy",
+        "fix",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where the deploy workflow continued despite a failed Docker push, leading to outdated code being served. The fix removes the '|| true' from the push step, ensuring that any registry failure will halt the workflow. Additionally, it refines the directory processing to only include service directories with a docker-compose.yaml file, preventing unnecessary failures on unrelated changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#233",
+      "title": "Enhance API Docs with Library Variants in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "api",
+        "frontend",
+        "documentation",
+        "enhancement",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update introduces a second-level pill selector for library variants in the API documentation code previews. Users can now select from multiple libraries for each programming language, such as `httpx`, `axios`, and `HTTPie`, enhancing the usability of the API examples. The implementation preserves existing formatting while adding new templates for various libraries."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#102",
+      "title": "Automated Solana Research Report Published in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "solana",
+        "research",
+        "report",
+        "automated",
+        "candidates"
+      ],
+      "public": false,
+      "summary": "The latest automated Solana research cycle report has been published, detailing the review of 15 candidates. Notably, there were 2 hold intents for ORCA and RAY, while 6 candidates were explicitly skipped due to suspicious signals. The data sources have been confirmed healthy, ensuring reliable insights for future evaluations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#100",
+      "title": "New Research Cycle Insights in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "candidates",
+        "data",
+        "report",
+        "analysis"
+      ],
+      "public": false,
+      "summary": "The latest research cycle has reviewed 21 candidates, including 9 from the watchlist and 12 new listings. Notably, there are no buy intents this cycle, with three candidates holding and six skipped due to low scores or liquidity issues. Additionally, the data source health remains stable, except for a degraded status from Grok due to an invalid token."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#232",
+      "title": "Automated i18n Updates from zh-CN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "frontend",
+        "automation",
+        "translations"
+      ],
+      "public": false,
+      "summary": "This update includes auto-generated i18n translation changes derived from the zh-CN source. Several cache files have been removed to streamline the translation process. These changes enhance the efficiency of our internationalization efforts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#98",
+      "title": "Update default Grok model for better performance in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "fix",
+        "grok",
+        "performance",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update changes the default Grok model from `grok-4-1-fast-reasoning` to `grok-4` in the grok_credibility.sh script. This fix addresses the issue of Grok credibility probes returning as `unknown` and encountering platform 500 errors. The environment variable override for `SOLRADAR_GROK_MODEL` remains intact for future enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#30",
+      "title": "Enhance OpenAI Image Guides with GPT-Image-2 in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "openai",
+        "images",
+        "gpt-image-2",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/30",
+      "summary": "This update integrates the latest documentation for the GPT-Image-2 model into the OpenAI images generation and edits guides. Key changes include new sections detailing the model's capabilities and usage patterns, along with updated intros to reflect multi-model support. These enhancements aim to improve user experience and provide clearer guidance on leveraging the new model's features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#78",
+      "title": "Enhance OpenAI Image Generation with Partial Images in M C Ps 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "openai",
+        "image-generation",
+        "feature",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/78",
+      "summary": "This update syncs the OpenAI MCP server with the latest OpenAPI specification by adding a new optional parameter, `partial_images`, to the `openai_generate_image` function. This parameter allows users to specify the number of intermediate frames to emit during streaming, enhancing the image generation experience. The change impacts how images are generated and streamed, providing more flexibility for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#34",
+      "title": "Enhance OpenAI Image Commands with New Parameters in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "openai",
+        "cli",
+        "enhancement",
+        "parameters",
+        "image"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/34",
+      "summary": "This update adds several missing parameters to the `image` and `edit` commands in the OpenAI CLI, aligning them with the latest OpenAPI specifications. Key additions include moderation levels, output compression options, and callback URLs for asynchronous processing. These enhancements improve functionality and user control over image generation and editing processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#763",
+      "title": "Fix default usage_field_map in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "api",
+        "openai",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update restores the default value for the `usage_field_map` parameter in the `_write_json_response` method, resolving the HTTP 500 errors encountered during non-streaming chat completions. The change ensures that all subclasses correctly inherit the behavior, allowing for successful responses across all routes. Verification shows that requests now return valid completions instead of errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#231",
+      "title": "Enhance Homepage with New Sections and Resources in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "homepage",
+        "frontend",
+        "features",
+        "ui",
+        "resources"
+      ],
+      "public": false,
+      "summary": "This update introduces four new sections to the homepage, enhancing user engagement and providing essential information. The new sections include Platform Stats, Developer Resources, an FAQ, and a Final CTA, all designed to guide users effectively. Additionally, minor fixes were made to improve icon rendering and component imports."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#25",
+      "title": "Introducing AiChat Resource for Enhanced Conversations in SDK 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "aichat",
+        "sdk",
+        "typescript",
+        "python",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/25",
+      "summary": "This update introduces the new `AiChat` resource to the SDK, enabling users to interact with the `POST /aichat/conversations` endpoint. It includes TypeScript and Python support, along with a comprehensive `AiChatModel` type covering 78 models. The client now exposes `client.aichat` for both synchronous and asynchronous operations, enhancing the overall functionality of the SDK."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#97",
+      "title": "Automated research cycle update in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "update",
+        "automated",
+        "candidates",
+        "data"
+      ],
+      "public": false,
+      "summary": "This PR introduces the latest automated research cycle report for April 26, 2026, featuring a detailed analysis of 20 candidates. Key highlights include the performance of ORCA with an 83.3% increase and the status of various data sources, with Grok experiencing degraded health. No new listings met the buy threshold, leading to a focus on holding strategies for certain candidates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#126",
+      "title": "Enhance OpenAI Task Access in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "api",
+        "openai",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update introduces the new `/openai/tasks` endpoint, allowing it to bypass authentication and billing, similar to existing endpoints like `/midjourney/tasks`. The endpoint retrieves task records submitted with a `callback_url`, ensuring that polling does not incur double charges. This change enhances user experience by streamlining access to OpenAI tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#353",
+      "title": "Enhance OpenAI Tasks API for Image Polling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "openai",
+        "backend",
+        "feature",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces the `POST /openai/tasks` endpoint, allowing for efficient image callback polling. Key additions include OpenAPI specifications and cost-rule regression tests to ensure functionality. The implementation is designed to mirror existing task structures, enhancing integration with the OpenAI service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#762",
+      "title": "Enhance Task Management with New Query Endpoint in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "api",
+        "mongodb",
+        "tasks",
+        "feature",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `/tasks` query endpoint that allows clients to retrieve task statuses for image generation and editing requests. When a request includes a `callback_url`, the corresponding task is persisted in MongoDB, enabling efficient tracking through task IDs and user IDs. The changes enhance the overall functionality and usability of the Platform Service API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#44",
+      "title": "Enhance Docs Auto-Sync Guardrails in Index 🚧",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "guardrail",
+        "sync",
+        "pipeline",
+        "agents"
+      ],
+      "public": false,
+      "summary": "This update introduces a critical guardrail in AGENTS.md to prevent accidental edits to the Mintlify Docs site. It clarifies the correct workflow for updating documentation, emphasizing that the Docs directory is auto-synced from the PlatformBackend. The changes aim to ensure that future agent sessions adhere to the proper documentation process, safeguarding against direct modifications to generated files."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#354",
+      "title": "Enhance Image Generation Guides with GPT-Image-2 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "openai",
+        "images",
+        "gpt-image-2",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new section for the GPT-Image-2 model in two Chinese developer documentation files. It includes real production examples and updates the API usage guidelines to reflect the capabilities of GPT-Image-2, enhancing image generation and editing processes. The changes aim to improve user experience by providing clearer instructions and showcasing the model's advanced features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#95",
+      "title": "Streamlined API Key Usage in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "api",
+        "update",
+        "documentation",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update simplifies the handling of the AceDataCloud API key by removing the unnecessary SOLRADAR_ prefix. Key files such as .env.example and various SKILL.md documents have been updated to reflect this change, ensuring consistency across the project. The new approach enhances clarity and reduces potential confusion for developers using the API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#92",
+      "title": "Enhance Diagnostics and Grok Integration in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "feature",
+        "diagnostics",
+        "grok",
+        "acedatacloud",
+        "performance",
+        "workflow"
+      ],
+      "public": false,
+      "summary": "This update introduces the `solradar diagnose` command, allowing agents to self-report the visibility of environment variables without exposing sensitive values. Additionally, Grok now routes through AceDataCloud by default, improving the reliability of data retrieval. The changes also include lazy imports for better performance and a refined workflow checklist for enhanced operational efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#352",
+      "title": "Fix blog publishing issue by updating DOCS_DIR in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "workflow",
+        "blog",
+        "backend"
+      ],
+      "public": false,
+      "summary": "The publish-blog workflow was failing due to a directory restructuring, which left the root 'docs/' without any .md files. This update points the DOCS_DIR to 'docs/zh-CN', ensuring the workflow can access the necessary markdown files for the Chinese blog. The change includes a minor modification in the workflow configuration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#90",
+      "title": "Automated Research Cycle Completed in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "updates",
+        "solana",
+        "candidates",
+        "report"
+      ],
+      "public": false,
+      "summary": "The latest automated research cycle has been successfully completed, resulting in a comprehensive report detailing the review of 19 candidates. Key findings include 1 buy recommendation for SPIKE and 14 hold suggestions, while 4 candidates were skipped due to various concerns. The report is now available for review and will aid in future decision-making."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#91",
+      "title": "Enhance Quality Gate Tolerance in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "quality",
+        "update",
+        "bugfix",
+        "solradar"
+      ],
+      "public": false,
+      "summary": "This update modifies the quality gate logic to allow for per-source degradation as long as at least one source reports a healthy status. Previously, any line containing 'unknown' would block the PR, which led to unnecessary rejections. The new rule improves the flexibility of the quality checks, ensuring that valid reports are not hindered by isolated issues."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#761",
       "title": "Fix(worker): delay /record by 5s to avoid duplicate ApiUsage rows in Platform Service 🐛",
       "tags": [
