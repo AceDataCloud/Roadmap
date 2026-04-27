@@ -3,6 +3,118 @@
   "date": "2026-04-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/SolRadar#149",
+      "title": "Fix RPC Throttle and Auto-Create Issue Label in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "bugfix",
+        "audit",
+        "rpc",
+        "workflow",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update addresses two critical issues in the audit workflow: the absence of the 'smart-money-audit' label and handling 429 errors from the public RPC. An idempotent step has been added to ensure the label exists before creating issues, while the retry logic for RPC calls has been enhanced to prevent unnecessary operator toil. The audit workflow can now be re-triggered seamlessly, improving overall efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#43",
+      "title": "Exciting New Public API Endpoints for Connections in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "api",
+        "backend",
+        "oauth",
+        "features",
+        "connections"
+      ],
+      "public": false,
+      "summary": "This update introduces a new connections service layer that enhances authorization state management, token persistence, and provider catalog functionalities. Key public API endpoints have been added, including those for listing providers, authorizing connections, and handling callbacks. Additionally, serializers for connection resources and provider catalog responses have been implemented, streamlining data handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#42",
+      "title": "Unified OAuth Provider Adapters Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "backend",
+        "auth",
+        "integration",
+        "providers"
+      ],
+      "public": false,
+      "summary": "This update introduces a unified OAuth provider adapter contract along with token and profile data classes. Six new adapter modules for GitHub, Google, Notion, Linear, GitLab, and Slack have been implemented, enhancing the provider registry. The existing authentication flow remains intact, ensuring compatibility with current APIs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#148",
+      "title": "Enhanced Retry Logic for Smart Money in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "retry",
+        "rpc",
+        "smart-money",
+        "solana",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update improves the retry mechanism for the Smart Money feature by increasing the throttle to 2.5 seconds and implementing a three-retry exponential backoff strategy. These changes aim to reduce the frequency of 429 errors encountered during RPC calls, enhancing the reliability of wallet snapshots. Tests have been updated to validate the new retry behavior and ensure non-429 errors are still handled promptly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#768",
+      "title": "Enhance Persona Management with MongoDB Storage in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "mongodb",
+        "suno",
+        "persona",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces MongoDB-based persona storage across all four Suno providers, enabling users to manage their personas effectively. Key changes include the addition of a new `personas` collection, CRUD methods for persona management, and a new endpoint for listing and deleting personas. This enhancement sets the stage for an improved voice management UI in Nexior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#41",
+      "title": "Enhanced OAuth Support with Connection Model in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "backend",
+        "security",
+        "models",
+        "utilities"
+      ],
+      "public": false,
+      "summary": "This update introduces a new Connection model and ConnectionStatus for managing OAuth grants at the platform level. It includes a migration for unique constraints and indexes to streamline refresh workflows, as well as vault utilities for secure token encryption and decryption. Additionally, new settings for various provider OAuth credentials have been added, laying the groundwork for future enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#40",
+      "title": "Enhance OAuth Connections Design Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "documentation",
+        "oauth",
+        "backend",
+        "design",
+        "chinese"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive platform-level OAuth Connections RFC in Chinese, detailing the connection vault model, token storage, and refresh strategies. Key decisions include reusing the existing GitHub OAuth app and opting for Kubernetes CronJob for token refresh. This documentation serves as a blueprint for future implementation across multiple services."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#146",
       "title": "New Research Cycle Insights in Sol Radar 🚀",
       "tags": [
