@@ -1,0 +1,169 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-04-27",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#139",
+      "title": "Enhance Smart-Money Signals Infrastructure in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "smart-money",
+        "infrastructure",
+        "updates",
+        "solana",
+        "data"
+      ],
+      "public": false,
+      "summary": "This update introduces a new infrastructure for tracking curated smart-money wallet behaviors, allowing for faster cohort analysis by reducing the required sample size. Key additions include a curated wallet list, a refresh script for snapshots, and a service for diffing token holdings. The design emphasizes provenance and fail-soft operations to ensure reliability and accuracy in data collection."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#469",
+      "title": "Introducing a Standalone Connectors Page in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "connectors",
+        "i18n",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/469",
+      "summary": "This update adds a dedicated `/connectors` page to Nexior, featuring a two-column layout for easy navigation and management of connectors. Users can browse built-in providers, add custom MCP servers, and manage permissions, all while benefiting from internationalization support in English and Chinese. The new UI enhances user experience by providing detailed connector information and streamlined actions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#767",
+      "title": "Enhance Connector Providers and MCP Catalog in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "connectors",
+        "mcp",
+        "catalog",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive catalog of connector providers, including new entries for Notion, Linear, and GitLab, ensuring users can view all available options. Additionally, a built-in MCP server catalog has been added, allowing users to easily access and install public servers. These changes enhance user experience by providing a complete and interactive interface for managing connectors and MCP servers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#138",
+      "title": "Enhance Slippage Checks for Shadow Trades in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "feature",
+        "trading",
+        "slippage",
+        "shadow-trader",
+        "cli"
+      ],
+      "public": false,
+      "summary": "This update introduces an optional slippage check for shadow trades, ensuring only candidates that can be filled without exceeding a specified price impact are recorded in the ledger. Key changes include new CLI flags for slippage checks and enhancements to the shadow trader workflow for immediate production benefits. The implementation aims to improve the accuracy of trading statistics by filtering out unfillable candidates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#137",
+      "title": "Automated research cycle update in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "automated",
+        "reports",
+        "analysis",
+        "crypto"
+      ],
+      "public": false,
+      "summary": "This update introduces a new report file under `reports/` as part of the automated research cycle for April 27, 2026. A total of 16 candidates were reviewed, with 3 held and 8 skipped due to high holder concentration or suspicious activity. The Grok service experienced degradation during the analysis, impacting the confidence in some decisions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#470",
+      "title": "Streamline Pre-Commit with lint-staged in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "chore",
+        "linting",
+        "husky",
+        "dev-dependency",
+        "cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/470",
+      "summary": "This update replaces the existing pre-commit hook to utilize lint-staged, ensuring that only staged files are fixed during commits. It also includes a one-time cleanup of existing lint violations across several components, enhancing the overall code quality. Contributors will now experience fewer distractions from unrelated linting changes in their working tree."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#468",
+      "title": "Restore Sidebar Logo Customization in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "fix",
+        "logo",
+        "favicon",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/468",
+      "summary": "This update fixes the sidebar logo issue by restoring the dynamic logic for displaying site-specific logos and favicons. The platform favicon is now only used as a fallback, ensuring that custom logos set in the site settings are displayed correctly. Both expanded and collapsed sidebar views have been updated to prioritize the site's logo and favicon as intended."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#135",
+      "title": "fix research cycle slug and eliminate drift in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "bugfix",
+        "automation",
+        "documentation",
+        "scripting"
+      ],
+      "public": false,
+      "summary": "This update addresses recurring auto-research PR failures caused by wall-clock drift in cycle slug generation. The script now requires the slug as an argument, ensuring consistency between the report path and issue body. Additionally, documentation has been updated to reflect these changes, enhancing clarity for future users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#467",
+      "title": "Simplify chat background for cleaner look in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "chat",
+        "design",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/467",
+      "summary": "This update removes the radial-gradient backgrounds from the chat conversation dialogue, responding to user feedback for a simpler design. The changes affect the `.dialogue` selector in the Conversation.vue file, and the dark mode override has also been eliminated as it is no longer necessary. Overall, this enhances the visual clarity of the chat interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#18",
+      "title": "Introducing the Go SDK for AceDataCloud in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "go",
+        "sdk",
+        "api",
+        "development",
+        "release"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/18",
+      "summary": "We've added an official Go SDK that mirrors the existing Python and TypeScript SDKs, enhancing our API's accessibility. Key features include a versatile client with functional options, support for various resources like OpenAI and Images, and robust error handling. This SDK is designed for seamless integration and efficient task management, making it easier for developers to leverage the AceDataCloud API."
+    }
+  ]
+}
