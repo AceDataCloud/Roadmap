@@ -3,6 +3,137 @@
   "date": "2026-04-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/SolRadar#143",
+      "title": "Enhance Smart Money Roster with Freshness Audit in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "audit",
+        "smart-money",
+        "workflow",
+        "cli",
+        "solana"
+      ],
+      "public": false,
+      "summary": "This update introduces a new CLI command for auditing the freshness of the curated smart-money roster, addressing the risk of stale signals. It classifies wallets as Active, Idle, Unreachable, or NoSigs based on recent on-chain activity, and automates weekly checks to ensure the roster remains valid. The implementation includes a service layer for wallet audits and a workflow that tracks stale wallets for human review."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#142",
+      "title": "Enhance CI with Smart-Money Refresh in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "ci",
+        "workflow",
+        "smart-money",
+        "automation",
+        "solana"
+      ],
+      "public": false,
+      "summary": "This update integrates a new step in the CI pipeline to refresh the smart-money snapshot on an hourly basis. It ensures that the decision-gate logic can now function correctly by producing the necessary `smart_money_emerging.json` file. The changes also maintain the integrity of the shadow recorder, allowing it to operate even if the smart-money data is unavailable."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#475",
+      "title": "Exciting UX Enhancements for Suno in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ux",
+        "suno",
+        "enhancements",
+        "features",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/475",
+      "summary": "This update implements key P1 and P2 UX improvements for the Suno feature, including inspiration tags, enhanced search and sort functionalities, inline editing, and a progress bar. Users will also benefit from a new mashup multi-select option, making the interface more intuitive and user-friendly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#141",
+      "title": "Unlocking Smart-Money Confirmation for Faster Decisions in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "feature",
+        "decision-making",
+        "smart-money",
+        "performance",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update introduces a new flag for shadow recording that allows tagging of buyers at the moment of purchase, significantly enhancing the decision-making process. By implementing a relaxed decision gate, the system can now recognize a path with as few as 20 entries plus one smart-money confirmation, reducing the time to investment readiness from 5-7 days to just 2-3 days. Key changes include new tagging logic and updated decision criteria to maintain profitability checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#140",
+      "title": "Seeded 8 High-Quality Wallets from GMGN Rankings in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "wallets",
+        "smart-money",
+        "data",
+        "update",
+        "gmgn"
+      ],
+      "public": false,
+      "summary": "This update populates the smart-money YAML with 8 carefully selected wallets based on GMGN's 30D and 7D rankings. Each wallet meets strict criteria, including a win rate of at least 55% and a trade count of over 380, ensuring only high-quality entries are included. The changes enhance the smart-money signals, providing users with reliable data for informed decision-making."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#473",
+      "title": "Revamped UX for Music Creation in Nexior 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ux",
+        "enhancement",
+        "music",
+        "suno",
+        "interface"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/473",
+      "summary": "This update introduces significant UX enhancements to the Suno music creation page, including a redesigned model dropdown with grouped models and Pro badges, a new tab switcher for Simple/Custom modes, and a style tag cloud for easier genre selection. Additionally, the song action menu has been organized into logical groups, and the lyrics toolbar now features an Undo button and an Enhance lyrics input. These changes aim to improve user experience and accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#472",
+      "title": "Enhance Connectors with Built-In Badges and Icons in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "connectors",
+        "ui",
+        "enhancement",
+        "bugfix",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/472",
+      "summary": "This update refines the connectors page based on live-testing feedback. Key improvements include the addition of a **BUILT-IN** badge for installed connectors, proper icon rendering for built-in cards, and adjustments to card widths to prevent description truncation. These cosmetic changes enhance user experience without altering API functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#471",
+      "title": "Automated i18n Updates in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "translations",
+        "localization",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/471",
+      "summary": "This update introduces auto-generated internationalization (i18n) translation updates from the zh-CN source. Key changes include the addition of multiple language files, enhancing support for various languages such as Arabic, German, Spanish, and more. The English connector.json file has also been modified to improve clarity and consistency."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#139",
       "title": "Enhance Smart-Money Signals Infrastructure in Sol Radar 🚀",
       "tags": [
