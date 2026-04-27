@@ -3,6 +3,414 @@
   "date": "2026-04-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#484",
+      "title": "Centralized OAuth Management for Connectors in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "oauth",
+        "connectors",
+        "frontend",
+        "refactor",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/484",
+      "summary": "This update introduces centralized management of OAuth grants at AuthFrontend, streamlining the user experience. Nexior now provides a read-only view of existing connections and redirects all connection actions to AuthFrontend, ensuring users can return seamlessly. Key files have been modified to support this new flow, enhancing the overall functionality and user interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#480",
+      "title": "Automated i18n Updates from zh-CN in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "translations",
+        "automation",
+        "updates",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/480",
+      "summary": "This update introduces automatic translation updates for internationalization (i18n) based on changes from the zh-CN source. Key modifications include enhancements across multiple language files, ensuring a more consistent and accurate user experience. The changes impact various languages, improving accessibility for a broader audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#482",
+      "title": "Enhance Recent Songs Panel with Advanced Filters in Nexior 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "suno",
+        "filters",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/482",
+      "summary": "This update introduces a new Filter popover in the Suno Recent panel, allowing users to refine their song searches by type, duration, video presence, and model. The user experience is enhanced with active filter counts, a reset option, and improved accessibility for different languages. These changes aim to streamline song discovery and improve user interaction."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#38",
+      "title": "Enhance Connectors Menu with URL Feature Toggle and Icon Fixes in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "frontend",
+        "icons",
+        "bugfix",
+        "url"
+      ],
+      "public": false,
+      "summary": "This update introduces a URL-based feature toggle for the Connectors menu, allowing users to enable it via query parameters without needing to rebuild the Docker image. Additionally, several missing Font Awesome icons have been registered, ensuring the Connectors page displays correctly. These changes enhance user experience and streamline feature testing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#771",
+      "title": "Centralize OAuth Connector Management in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "oauth",
+        "authbackend",
+        "aichat2",
+        "platform",
+        "refactor"
+      ],
+      "public": false,
+      "summary": "This update centralizes OAuth grant management by routing all connector interactions through AuthBackend, eliminating redundancy in the aichat2 worker. Key changes include the removal of the local connectors store, updates to the connection API for fresh access tokens, and deprecation of old write actions. This enhances the sharing of OAuth grants across all platform consumers, ensuring a more streamlined user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#481",
+      "title": "Enhance Voice Manager with Favorites Tab in Nexior 🌟",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "voice-manager",
+        "favorites",
+        "ui",
+        "local-storage"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/481",
+      "summary": "This update introduces a new **Favorites** tab in the voice manager, allowing users to easily access their frequently-used voices. Key changes include the addition of a `favoritePersonaIds` field for persistence, a toggle button for favoriting voices, and updated internationalization support. The feature enhances user experience by enabling better voice management without requiring backend changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#37",
+      "title": "Enhance OAuth Scope Selection for Connectors in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "oauth",
+        "frontend",
+        "ui",
+        "localization",
+        "permissions"
+      ],
+      "public": false,
+      "summary": "This update introduces a new scope selection dialog for OAuth flows on the Connectors page, allowing users to choose which permissions to grant when connecting to providers like Google. By pre-selecting all bundles except 'login', users can easily authorize additional access, enhancing the overall functionality. The changes include updates to the user interface and localization files for improved user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#49",
+      "title": "Enhance OAuth Flow with Required Parameter in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "backend",
+        "fix",
+        "google",
+        "authorization"
+      ],
+      "public": false,
+      "summary": "This update fixes an issue with the Google connector OAuth flow by adding the missing `response_type=code` parameter to the authorization URL. This change ensures compliance with the OAuth 2.0 specification, preventing errors during the authorization process. The modification was made in the `start_authorize()` function within the connections service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#36",
+      "title": "Enhance OAuth Callback Handling in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "oauth",
+        "frontend",
+        "auth",
+        "update",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update improves the OAuth callback handling by distinguishing between the AuthBackend connection flow and the SSO login flow. It introduces a new generic callback page for providers without dedicated SSO pages and modifies existing GitHub and Google callback components to forward requests correctly. These changes ensure that OAuth connections are properly persisted and enhance the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#48",
+      "title": "Streamline OAuth Redirect for Connectors in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "backend",
+        "auth",
+        "fix",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update modifies the OAuth redirect URI for connector flows to use the AuthFrontend's callback page, ensuring compatibility with GitHub's restrictions. The change allows the same OAuth app registration to serve both SSO login and connector flows, simplifying the setup for users. Additionally, documentation has been updated to reflect the new redirect URI requirements for various providers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#155",
+      "title": "Enhance Price Lookup Tolerance for Thin Pools in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "bugfix",
+        "price-lookup",
+        "thin-pools",
+        "data-accuracy",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update addresses a structural issue in the price lookup mechanism for thin pools, which previously resulted in pending null rows. By implementing a two-stage lookup with a 2-hour tolerance, the system can now better handle gaps in candle data, improving the chances of resolving these nulls. The changes are expected to enhance data accuracy and support better strategy assessments moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#34",
+      "title": "Introducing Connectors Management Page in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "oauth",
+        "frontend",
+        "management",
+        "user"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `/user/connections` page, allowing users to manage their third-party OAuth connectors such as GitHub, Google, and Slack. The feature is hidden by default and can be enabled via a feature flag. Key API endpoints for listing, authorizing, and managing connections have been added to the auth-backend, enhancing user experience and integration capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#479",
+      "title": "Enhance Audio Upload with Browse/Record Dialog in Nexior 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "audio",
+        "ui",
+        "i18n",
+        "suno"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/479",
+      "summary": "This update introduces a new audio Browse/Record dialog that aligns with Suno's UX. Users can now upload audio files via drag-and-drop or record directly in the browser, with features like a timer and preview. The implementation reuses existing API flows, ensuring no backend changes are necessary, while also adding internationalization support for English and Chinese."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#154",
+      "title": "Enhance Shadow Trader to Retry Transient Gaps in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "bugfix",
+        "shadow-trader",
+        "data-reliability",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update fixes an issue where rows with transient price provider gaps were not retried, leading to potential data loss. The logic now ensures that only rows with valid return percentages or errors are considered terminal, allowing pending rows to be retried in future cron cycles. This change enhances data reliability and ensures that future provider hiccups won't permanently lose important data points."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#474",
+      "title": "Automated i18n Updates for Multiple Languages in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "localization",
+        "translations",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/474",
+      "summary": "This update introduces auto-generated internationalization (i18n) translation updates from the zh-CN source. Key modifications include enhancements across various language files, ensuring improved localization for users. The changes affect multiple languages including Arabic, German, Spanish, and more, enhancing the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#478",
+      "title": "Exciting New P0 Features for Create Page in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "features",
+        "ui",
+        "i18n",
+        "suno",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/478",
+      "summary": "This update introduces essential P0 features for the create page based on the Suno.com gap analysis. Key additions include character counters for lyrics and style, a toggle for manual or AI-generated lyrics, and a 'Clear All' button to reset the form. Internationalization support has also been added for English and Chinese."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#770",
+      "title": "Introducing Auth-Backend Connection Client in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "migration",
+        "auth",
+        "connections",
+        "aichat2"
+      ],
+      "public": false,
+      "summary": "This update introduces a new connection client for aichat2 that interfaces with the auth-backend's centralized connection vault. Key features include methods for token management and connection listing, enabling a smooth transition alongside existing MongoDB connectors. The migration strategy is outlined to ensure a seamless shift to PostgreSQL in future phases."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#46",
+      "title": "Enhance K8s Secrets for Connection System in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "kubernetes",
+        "secrets",
+        "oauth",
+        "backend",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces Kubernetes secrets and environment variables for the connection system, enhancing security with vault encryption and OAuth credentials. Key changes include the addition of a provisioning script for creating secrets and updates to deployment configurations to utilize these secrets effectively. The new healthcheck and refresh cronjobs ensure proactive management of active connections."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#47",
+      "title": "Enhance K8s Deployment and OAuth Setup Guide in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "documentation",
+        "kubernetes",
+        "oauth",
+        "deployment",
+        "guide"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive guide for deploying the connection system to Kubernetes and registering OAuth applications with various providers. Key sections include generating secrets, updating K8s secrets, and troubleshooting common issues. This documentation is essential for ensuring a smooth deployment process and effective OAuth integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#153",
+      "title": "Enhance Smart Money Tracking with Amount-Aware Diff in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "enhancement",
+        "smart-money",
+        "trading",
+        "bug-fix",
+        "snapshot"
+      ],
+      "public": false,
+      "summary": "This update introduces an amount-aware diff mechanism to address the blind spot in swing-trade signals for smart money wallets. By persisting raw on-chain amounts, the system can now detect significant position increases, ensuring that swing-buy events are accurately captured. This change is expected to improve the accuracy of smart money confirmations and enhance trading strategy measurements moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#122",
+      "title": "Exciting New Tools and Parameters Added in M C Ps 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "features",
+        "update",
+        "suno",
+        "api",
+        "tools"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/122",
+      "summary": "This update introduces eight new audio tools and three new parameters to enhance the Suno OpenAPI integration. Key additions include voice creation, persona management, and advanced music generation options. The infrastructure has also been updated to support these new features, improving overall functionality and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#76",
+      "title": "Enhance Suno API Docs with New Features in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "api",
+        "suno",
+        "update",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/76",
+      "summary": "This update syncs the Suno API documentation with the latest OpenAPI specifications, introducing new capabilities. Key changes include expanded action descriptions in the `suno_audios_generation_api_integration_guide.md` and the addition of a new guide for the `POST /suno/voices` endpoint, which allows users to create custom voice personas. These enhancements improve clarity and usability for developers integrating with the Suno API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#45",
+      "title": "Enhance Connection Management with CronJobs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "k8s",
+        "cronjob",
+        "healthcheck",
+        "refresh",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces K8s CronJob infrastructure for proactive connection token refresh and daily health checks. Key additions include management commands for refreshing expiring connections and checking the health of active connections, along with corresponding CronJob manifests for scheduling these tasks. This enhancement aims to improve connection reliability and system health monitoring."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#477",
+      "title": "Enhance Lyrics Editing with Fullscreen Mode in Nexior 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "localization",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/477",
+      "summary": "This update introduces a new expand button in the lyrics toolbar, allowing users to open a fullscreen dialog for more comfortable editing of lyrics. The dialog features a 20-row textarea and includes all existing toolbar actions, improving the overall editing experience. Additionally, new icons have been registered for the expand and compress functions, and localization support has been added for both English and Chinese."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#368",
+      "title": "Enhance Suno Persona API with GET/DELETE Support in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "backend",
+        "update",
+        "openapi",
+        "suno",
+        "persona"
+      ],
+      "public": false,
+      "summary": "This update introduces GET and DELETE methods for the Suno Persona API, allowing users to list and remove personas efficiently. The cost rule has been adjusted to charge 0.02 credits for POST requests while GET and DELETE are now free. Additionally, OpenAPI specifications have been updated to reflect these changes, ensuring seamless integration with the PlatformService and Nexior voice management UI."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#152",
       "title": "Fix Helius Holder Concentration Issues in Sol Radar 🚀",
       "tags": [
