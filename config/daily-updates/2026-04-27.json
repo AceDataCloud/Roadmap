@@ -3,6 +3,23 @@
   "date": "2026-04-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/SolRadar#144",
+      "title": "Enhance Holder Distribution with Helius DAS in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "enhancement",
+        "helius",
+        "holder-distribution",
+        "solscan",
+        "api",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces Helius DAS as the primary source for holder distribution, addressing previous issues with Solscan's public API. Key improvements include better aggregation of token accounts by owner and a fallback mechanism to ensure reliability. Operators need to add the new Helius API key as a repo secret to activate this feature."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#143",
       "title": "Enhance Smart Money Roster with Freshness Audit in Sol Radar 🚀",
       "tags": [
