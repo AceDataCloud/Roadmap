@@ -3,6 +3,38 @@
   "date": "2026-04-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/SolRadar#146",
+      "title": "New Research Cycle Insights in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "updates",
+        "candidates",
+        "liquidity",
+        "findings"
+      ],
+      "public": false,
+      "summary": "This update introduces a new research cycle with a detailed report added to the repository. Key findings include a review of 17 candidates, with 6 held and 11 skipped due to liquidity concerns. Notable mentions include MARSCOIN and BELKA, both flagged for suspicious activity despite their high scores."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#147",
+      "title": "Enhance RPC Handling with Throttling and Retry in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "rpc",
+        "throttle",
+        "retry",
+        "smart-money",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where 6 out of 8 wallets were being rate-limited, leading to degraded smart-money signals. By implementing a throttle mechanism and a retry strategy for 429 errors, we ensure that wallet data is consistently captured without exceeding RPC limits. The changes include updated tests to validate the new behavior, enhancing the overall reliability of the system."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#144",
       "title": "Enhance Holder Distribution with Helius DAS in Sol Radar 🚀",
       "tags": [
