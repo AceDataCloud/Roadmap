@@ -3,6 +3,86 @@
   "date": "2026-04-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/SolRadar#152",
+      "title": "Fix Helius Holder Concentration Issues in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "bugfix",
+        "security",
+        "helius",
+        "data",
+        "solana"
+      ],
+      "public": false,
+      "summary": "This update addresses two critical bugs in the Helius DAS path that inflated the top-10 token holder concentration metrics. By implementing the correct methods to retrieve token supply and largest accounts, the calculations now accurately reflect the true distribution of token holders. The changes enhance the reliability of data provided to users and ensure consistency with external validation sources."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#44",
+      "title": "Enhance Internal Connections API and Authentication in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "api",
+        "authentication",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces an internal token authentication mechanism for service-to-service communication, utilizing the `X-Internal-Token` header. New endpoints have been added under `/internal/v1/` for fetching, listing, and invalidating access tokens. This enhancement lays the groundwork for improved internal API interactions and sets the stage for future cronjob tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#476",
+      "title": "Enhance Voice Management UI with Persona Selector in Nexior 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "suno",
+        "voice",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/476",
+      "summary": "This update introduces a new voice management UI for Suno, enabling users to create, list, select, and delete voice personas directly from the Nexior frontend. Key features include a redesigned persona input with a searchable dropdown, a new VoiceManager panel for managing saved personas, and a VoiceCreateDialog for creating new voices from songs or audio uploads. Additionally, internationalization support has been added for English and Chinese."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#769",
+      "title": "Revamp persona API to RESTful standards in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "api",
+        "rest",
+        "bugfix",
+        "platformservice"
+      ],
+      "public": false,
+      "summary": "This update refactors the persona API to utilize GET and DELETE methods instead of POST for listing and deleting personas. The changes enhance adherence to RESTful principles, improving the API's usability and clarity. Additionally, a bug fix was implemented to correct the parameter order in the ttapi persister's getPersonas method."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#151",
+      "title": "Automated Research Cycle Results in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "solana",
+        "candidates",
+        "report",
+        "trending"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive report covering 19 candidates from various sources including the watchlist and trending platforms. Key findings include 5 holds and 14 skips based on liquidity and security assessments, with detailed rationale for each decision. The report also highlights degradation notes regarding trending mints and rugcheck issues."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#149",
       "title": "Fix RPC Throttle and Auto-Create Issue Label in Sol Radar 🚀",
       "tags": [
