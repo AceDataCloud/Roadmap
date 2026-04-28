@@ -3,6 +3,85 @@
   "date": "2026-04-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#52",
+      "title": "Enhance OAuth Support with Custom Connectors in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "backend",
+        "custom",
+        "integration",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces support for custom OAuth connectors by extending the `Connection` model with new metadata fields and client credentials. Key features include custom authorization flows, dynamic client registration, and improved internal APIs for connection management. These enhancements will streamline the integration of various OAuth providers, improving flexibility for service consumers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#50",
+      "title": "Fix OAuth Connection Refresh Issues in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "oauth",
+        "backend",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update addresses two critical bugs affecting the OAuth connection refresh process. The first bug caused a 500 error during manual refresh due to incorrect serializer usage, while the second bug resulted in a crash-loop for the connection-refresh CronJob due to missing environment variables. Key changes include fixing the serializer instantiation and properly wiring the required environment variables into the deployment configurations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#51",
+      "title": "Revamping OAuth Connectors Design in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "backend",
+        "design",
+        "refactor",
+        "connections"
+      ],
+      "public": false,
+      "summary": "This update redefines the approach to custom OAuth connectors by integrating them into the existing platform-level Connection model, eliminating the need for a separate MCPConnection table. Key changes include shared token management and lifecycle processes with preset providers, while introducing new fields for custom OAuth metadata. The design aims to streamline the OAuth flow and enhance consistency across connection types."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#485",
+      "title": "Fix TypeScript Build Issues in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "typescript",
+        "fix",
+        "connectors",
+        "build"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/485",
+      "summary": "This update resolves TypeScript build errors caused by the recent removal of certain methods in the connector operator. Key changes include updating the `ConnectorManager.vue` to utilize `openConnectionsManager` and modifying `ConnectorDetail.vue` to accept an optional argument for type-checking. All tests have passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#164",
+      "title": "Automated research cycle update in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "automation",
+        "data",
+        "analysis",
+        "solradar"
+      ],
+      "public": false,
+      "summary": "This update introduces a new research file for the automated cycle conducted on April 28, 2026. It includes a review of 8 candidates, with 7 skipped due to low liquidity. Key insights on candidate actions and their scores are documented, highlighting the health of various data sources used in the analysis."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthFrontend#35",
       "title": "Automatic i18n Updates from zh-CN in Frontend Web 🚀",
       "tags": [
