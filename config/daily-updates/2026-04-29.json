@@ -3,6 +3,67 @@
   "date": "2026-04-29",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#241",
+      "title": "Upgrade copy-to-clipboard to v4.0.2 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "frontend",
+        "clipboard"
+      ],
+      "public": false,
+      "summary": "This update bumps the copy-to-clipboard package from version 3.3.3 to 4.0.2, enhancing functionality and fixing issues. Key improvements include ensuring execCommand works in fullscreen mode and various dependency updates. This change will improve the reliability of clipboard operations in the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#246",
+      "title": "Update vue-router to latest version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "vue",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps the vue-router dependency from version 5.0.4 to 5.0.6, addressing a bug related to a missing closing quote in generated imports. The changes enhance the stability and functionality of the routing system within the application. Additionally, it includes improvements from previous versions that optimize parameter parsing and fix race conditions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#247",
+      "title": "Upgrade Sass to 1.99.0 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "sass",
+        "frontend",
+        "update",
+        "dependencies"
+      ],
+      "public": false,
+      "summary": "This update bumps Sass from version 1.92.1 to 1.99.0, introducing several enhancements. Key changes include support for parent selectors at the document root and the lifting of restrictions on user-defined functions like 'calc' and 'clamp'. These updates will improve styling capabilities and flexibility in our CSS."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#174",
+      "title": "Automated research cycle completed in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "solana",
+        "automated",
+        "report",
+        "analysis"
+      ],
+      "public": false,
+      "summary": "The latest automated research cycle for April 29, 2026, has been successfully completed, adding a new report file. A total of 16 candidates were reviewed, with 9 held on the watchlist and 4 skipped due to low liquidity. All provider health checks are nominal, ensuring reliable data for future analyses."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#172",
       "title": "Automated Research Cycle Update in Sol Radar 🚀",
       "tags": [
