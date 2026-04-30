@@ -3,6 +3,69 @@
   "date": "2026-04-30",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#56",
+      "title": "Enhance OAuth Connection Flow in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "backend",
+        "improvement",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update improves the custom OAuth callback exchange process by allowing it to complete from a signed state without needing a live browser session. It also ensures that active connections are preserved during re-authorization attempts and that requested OAuth scopes are maintained even when token responses omit them. Additionally, focused tests for connection scope helpers have been added to enhance reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#139",
+      "title": "Enhance OAuth Scope for MCP Access in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "oauth",
+        "mcp",
+        "access",
+        "update",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/139",
+      "summary": "This update introduces the 'mcp:access' scope for hosted MCP OAuth in all server packages. It ensures that this scope is returned in authorization-code and refresh-token responses while maintaining compatibility with existing AceDataCloud API key bearer access. Additionally, representative OAuth tests have been added to validate the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#183",
+      "title": "Automated Research Cycle Update in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "update",
+        "automated",
+        "candidates",
+        "liquidity"
+      ],
+      "public": false,
+      "summary": "This update introduces a new report file detailing the automated research cycle conducted on April 30, 2026. A total of 20 candidates were reviewed, with 10 being skipped due to low liquidity concerns. The best candidate identified for holding is 'Children', which has a score of 72 and shows promising liquidity and volume metrics."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#243",
+      "title": "Update react-dom to 19.2.4 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "frontend",
+        "react"
+      ],
+      "public": false,
+      "summary": "This update bumps the react-dom package from version 19.2.3 to 19.2.4, enhancing the stability and performance of the application. Key improvements include additional DoS mitigations for Server Actions and hardening of Server Components. This change is expected to improve the overall security and reliability of the frontend."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#499",
       "title": "Empower Chat with AuthBackend Connections in Nexior 🚀",
       "tags": [
