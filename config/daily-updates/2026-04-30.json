@@ -3,6 +3,68 @@
   "date": "2026-04-30",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#373",
+      "title": "Implement OpenAI Embeddings Probe in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "openai",
+        "embeddings",
+        "e2e",
+        "probe",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces an end-to-end smoke probe for OpenAI embeddings using the existing continuous probe framework. A new production test deployment has been added to run the embeddings probe every minute, logging embedding vector lengths and token usage for monitoring purposes. Key files modified include the deployment configuration and test scripts to support this functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#41",
+      "title": "Clean Up Unused Files in Index 🧹",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "cleanup",
+        "maintenance",
+        "repository",
+        "files"
+      ],
+      "public": false,
+      "summary": "This update removes several stale root-level files from the Index repository, including `.DS_Store`, `yarn.lock`, and various logo images. These files were either unnecessary or already managed in submodules, streamlining the repository and improving clarity. The essential files as outlined in the README remain intact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#42",
+      "title": "Enhance .gitignore and Document X402 Test Command in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "gitignore",
+        "documentation",
+        "x402",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces important changes to the `.gitignore` file by adding entries for `.tmp/`, `SDK/`, `SolRadar/`, and `X402Client/`, ensuring that unnecessary files are not tracked. Additionally, a new documentation file for the X402 payment-flow test procedure has been added, providing clear guidelines for testing related changes. These updates streamline project management and enhance clarity for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#45",
+      "title": "Streamline API Usage Section by Removing Top Services in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "api",
+        "roadmap",
+        "update",
+        "cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/45",
+      "summary": "This update removes the 'Top Services by Usage' list from the API Usage section, ceasing its publication in the generated API usage snapshot. The Roadmap copy and historical update text have been updated to reflect this change, ensuring no references to the removed feature remain. This streamlining enhances clarity and focus on key metrics."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#245",
       "title": "Upgrade uuid to version 14.0.0 in Frontend Web 🚀",
       "tags": [
