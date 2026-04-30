@@ -3,6 +3,360 @@
   "date": "2026-04-30",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#785",
+      "title": "Enhance Gemini Fallback for Backup Providers in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "gemini",
+        "fallback",
+        "providers",
+        "reliability",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update enables the native fallback for Gemini capabilities across multiple backup providers, including xiaojingai, openaihk, and ephone. By marking the relevant models as native, the system can now utilize the multi-provider failover during outages, significantly improving reliability. This change addresses previous issues where only one provider was eligible for fallback, ensuring smoother operations during disruptions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#249",
+      "title": "Update invitees page title for clarity in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "frontend",
+        "localization",
+        "ui",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update corrects the title on the console distribution invitees page, changing it from 'Inviter' to 'Invitees' in English and from '邀请人' to '受邀用户' in Simplified Chinese. Additionally, translator comments have been updated to clarify that the page lists users invited by the current user. These changes enhance user understanding and improve localization accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#46",
+      "title": "Enhance Image Validation with New Skill in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "feature",
+        "validation",
+        "image-processing",
+        "testing",
+        "gpt-image-2"
+      ],
+      "public": false,
+      "summary": "This update introduces the `/validate-image-2` skill, which validates the `gpt-image-2` image generation and editing endpoints across 14 production scenarios. Key features include comprehensive testing for various image sizes and formats, with detailed reporting on the outcomes. The implementation ensures robust performance and reliability for image processing tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#56",
+      "title": "Confirming OpenAI SDK Sync with Latest Docs Spec in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "openai",
+        "sdk",
+        "documentation",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/56",
+      "summary": "This PR verifies that the OpenAI SDK remains in sync with the latest updates to the documentation, requiring no code changes. Key updates include new enum values for image sizes and the restoration of the `dall-e-2` model in the edits model enum. Additionally, new parameters for chat completions have been documented, but the SDK's existing structure accommodates these changes seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#93",
+      "title": "OpenAI CLI Sync Verified with Latest Docs Spec in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "sync",
+        "openai",
+        "cli",
+        "docs",
+        "verification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/93",
+      "summary": "The OpenAI CLI has been confirmed to be in sync with the latest documentation specifications, with no changes required. All model enums and endpoint paths match the current spec, and 68 existing tests have successfully passed. This ensures that users can rely on the CLI's accuracy and functionality without any additional updates needed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#88",
+      "title": "Updated OpenAI Docs: New Size/Billing Info in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "openai",
+        "gpt-image-2",
+        "billing",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/88",
+      "summary": "This update removes references to `gpt-image-1.5` and introduces a detailed size and billing tier table for `gpt-image-2` in the OpenAI documentation. Key changes include updates to the integration guides and the README file, ensuring users have the latest information on supported image sizes and billing structures. The new tables clarify the available resolutions and their respective billing tiers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#134",
+      "title": "OpenAI service spec verified with no changes needed in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "openai",
+        "sync",
+        "audit",
+        "spec",
+        "no-change"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/134",
+      "summary": "The audit of the `openai` service spec confirms that the MCP server is fully in sync with the latest upstream Docs. Key components such as `ChatModel`, `ResponsesModel`, `ImageModel`, and `EmbeddingModel` have all been verified against the current specifications, showing complete alignment. No code changes were necessary as all enums and endpoint paths match the spec."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#371",
+      "title": "Enhance gpt-image-2 Size Handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "tests",
+        "documentation",
+        "gpt-image-2"
+      ],
+      "public": false,
+      "summary": "This update relaxes the size whitelist for the gpt-image-2 model, allowing 'auto' or omitted size parameters to be accepted. Key changes include the addition of cost tests for these scenarios and updates to the zh-CN documentation to reflect these adjustments. Overall, 698 tests pass without altering existing billing rules."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#783",
+      "title": "Enhance size handling for gpt-image-2 in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "hotfix",
+        "gpt-image-2",
+        "size",
+        "update",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This hotfix updates the handling of the `size` field in the gpt-image-2 model to accept both 'auto' and missing values, allowing upstream to determine the default size. The change ensures that existing presets continue to function while providing better flexibility for users. A successful test confirms that the new behavior works as intended without breaking existing functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#784",
+      "title": "Streamline Nano Banana Edits in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "cleanup",
+        "cqtai",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update aligns the handling of Nano Banana edits with the verified behavior from Mountsea. It omits the auto aspect ratio when not specified by callers, ensuring the field remains unset for upstream while maintaining detection for logging. Additionally, the now-unnecessary snap-to-nearest aspect ratio helper has been removed to clean up the codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#130",
+      "title": "Enhance Chat Completion with New Parameters in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "openai",
+        "chat",
+        "completion",
+        "update",
+        "parameters"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/130",
+      "summary": "This update introduces two new parameters, `reasoning_effort` and `service_tier`, to the chat completion tool, aligning with the latest OpenAPI spec. The `reasoning_effort` parameter allows users to control the intensity of reasoning for o-series models, while `service_tier` enables selection of the API processing tier. These enhancements improve flexibility and control for developers using the chat completion feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#54",
+      "title": "Enhance Image Editing with New Parameters in S D K 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "images",
+        "edit",
+        "openai",
+        "sdk",
+        "typescript",
+        "python"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/54",
+      "summary": "This update introduces two new optional parameters, `mask` and `partial_images`, to the `images.edit()` endpoint for both TypeScript and Python SDKs. The `mask` parameter allows users to specify a PNG mask for editable regions, while `partial_images` enables streaming of partial image counts. These enhancements improve the flexibility and functionality of image editing capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#88",
+      "title": "Enhance CLI with New Reasoning and Service Tiers in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "openai",
+        "update",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/88",
+      "summary": "This update introduces new options for the CLI's `chat` command, adding a `minimal` reasoning effort tier and `scale` and `priority` service tiers. The help text has been updated to reflect these changes, ensuring users are aware of all valid options. These enhancements keep the CLI in sync with the latest OpenAPI specifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#89",
+      "title": "Enhance CLI with Latest OpenAPI Features in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "enhancement",
+        "openai",
+        "cli",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/89",
+      "summary": "This update synchronizes the CLI with the latest OpenAPI specifications for OpenAI, introducing new enum values for chat and image endpoints. Key additions include new reasoning effort options and service tiers for chat, as well as high-resolution size options for image generation and editing commands. These enhancements improve user experience and expand functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#124",
+      "title": "Enhance OpenAI Image Size Options in M C Ps 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "openai",
+        "image",
+        "update",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/124",
+      "summary": "This update introduces new 2K and 4K image size presets to align with the latest OpenAPI specifications for the OpenAI service. Key changes include expanded `ImageSize` and `ImageEditSize` types in `core/types.py`, updated parameter descriptions in `image_tools.py`, and an extended size table in `info_tools.py`. These enhancements improve the flexibility and options available for image generation and editing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#370",
+      "title": "Update GPT-Image-2 Pricing and Size Support in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "documentation",
+        "gpt-image-2",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update enhances the GPT-Image-2 service by introducing tiered pricing for 2K and 4K sizes, correcting previous discrepancies on the public pricing page and developer documentation. Key changes include the addition of a new pricing rule for 2K/4K sizes and comprehensive documentation updates in Chinese, ensuring clarity on supported sizes and billing tiers. These improvements will streamline user experience and provide accurate information for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#781",
+      "title": "Refine Mountsea Aspect Ratio Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "mountsea",
+        "aspect-ratio",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update corrects the aspect ratio handling for Mountsea edits by omitting auto-detected ratios when not explicitly provided. The change ensures that the first input image ratio is preserved, enhancing the accuracy of image edits. Additionally, the validation for `aspect_ratio` remains intact, ensuring robust functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#54",
+      "title": "Enhance User Admin with Search and Filters in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "admin",
+        "search",
+        "filters",
+        "django",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update improves the Django admin user list by adding a search box and filters. Admins can now easily look up users by ID, username, email, and more. Additionally, the user display has been updated to show email and phone numbers, enhancing usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#780",
+      "title": "Refine Mountsea Aspect Ratio Handling in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "mountsea",
+        "nano-banana",
+        "aspect-ratio",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update replaces the previous broad fix for Nano Banana with a more focused solution for Mountsea's aspect ratio handling. The code now snaps auto-detected image ratios to the nearest supported values, ensuring compatibility with Mountsea's model-specific allowlist. This change maintains existing resolution forwarding for `nano-banana-2` and `nano-banana-pro`, while addressing issues with invalid aspect ratios in edit requests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#53",
+      "title": "Enhance OAuth Callback with Connection ID in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "backend",
+        "improvement",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update introduces the inclusion of `connection_id` in the custom OAuth redirect URI for better connection handling. By maintaining the same redirect URI in connection metadata, the token exchange process can now accurately identify pending connections, preventing generic error states. Key modifications were made in the connection service to support this functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#52",
+      "title": "No SDK Changes Needed After OpenAI Docs Update in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "openai",
+        "sdk",
+        "update",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/52",
+      "summary": "The recent update to the OpenAI documentation introduced structural changes that do not require any modifications to the SDK. Key updates include the addition of `dall-e-2` to the model enum and new sizes for image edits and generations, both of which are already accommodated in the current SDK implementation. All OpenAI endpoints remain correctly mapped across TypeScript, Python, and Go."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#80",
+      "title": "Update OpenAI Docs for New Models in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "openai",
+        "models",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/80",
+      "summary": "This update syncs the OpenAI documentation with recent changes from AceDataCloud, incorporating new models such as `gpt-5.5` and `gpt-image-1.5`. The `README.md` has been revised to reflect the removal of `gpt-5-pro` and to enhance the GPT-5.x description. Additionally, integration guides have been updated to include the latest models, ensuring comprehensive and accurate documentation."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#85",
       "title": "Enhance OpenAI CLI with New Parameters in Clis 🚀",
       "tags": [
