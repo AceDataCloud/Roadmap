@@ -1,0 +1,151 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-04-30",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Clis#85",
+      "title": "Enhance OpenAI CLI with New Parameters in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "enhancement",
+        "openai",
+        "cli",
+        "features",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/85",
+      "summary": "This update introduces several new parameters to the OpenAI CLI, aligning it with the latest OpenAPI specifications. Key additions include options for the `chat`, `edit`, and `response` commands, enhancing functionality for users. Notably, new sampling controls and image editing features have been added, improving the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#126",
+      "title": "Enhance OpenAI Image Size Options in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "openai",
+        "images",
+        "enhancement",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/126",
+      "summary": "This update introduces 10 new high-resolution image size options to the OpenAI service, enhancing the flexibility for image generation and editing. Key changes include the addition of sizes such as 2048x2048 and 3840x2160 in the `openai/core/types.py` file, along with updated descriptions in the `openai/tools/image_tools.py`. These enhancements will allow users to create and edit images with greater detail and variety."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#369",
+      "title": "Exciting New Size Presets and Pricing for GPT-Image-2 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "openai",
+        "images",
+        "pricing",
+        "backend",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces new size presets (1K, 2K, and 4K) for the GPT-Image-2 model, along with tiered pricing structures. The OpenAPI specifications have been updated to reflect these changes, allowing for 15 whitelisted size values. Comprehensive tests have been added to ensure the accuracy of the new cost rules, all passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#778",
+      "title": "Enhance gpt-image-2 with 1K/2K/4K Size Presets in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "gpt-image",
+        "ttapi",
+        "updates",
+        "routing"
+      ],
+      "public": false,
+      "summary": "This update introduces support for 1K, 2K, and 4K size presets for the gpt-image-2 model in the TTAPI worker. The public API remains OpenAI-shaped, while the internal variant, gpt-image-2-plus, is utilized for higher resolutions. Key routing logic has been implemented to handle size requests effectively, ensuring compliance with upstream constraints."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#170",
+      "title": "New Research Cycle Results in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "updates",
+        "candidates",
+        "liquidity",
+        "findings"
+      ],
+      "public": false,
+      "summary": "The latest research cycle has been completed, adding a new report file with insights from 20 candidates. Key findings include a hold recommendation for EMC2 due to strong buy pressure, while several candidates were skipped due to low liquidity and coordinated bot activity. The report highlights the importance of social confirmation for potential upgrades."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#498",
+      "title": "Enhance request ID generation for better compatibility in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "auth",
+        "uuid",
+        "axios",
+        "fix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/498",
+      "summary": "This update resolves an issue with request ID generation in WebView environments lacking `crypto.randomUUID`. The method has been switched to use the `uuid` package, ensuring consistent functionality across platforms. This change improves the reliability of API requests in affected environments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#248",
+      "title": "Enhance request ID generation for better compatibility in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "auth",
+        "frontend",
+        "webview",
+        "uuid",
+        "axios"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue with generating request IDs in certain WebView environments, such as WeChat, where `crypto.randomUUID` is unavailable. The solution involves switching to the `uuid` package for generating `x-request-id`, ensuring smoother API requests across different platforms. Validation steps have been completed to confirm the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#40",
+      "title": "Fix request ID generation for WeChat compatibility in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "auth",
+        "frontend",
+        "bugfix",
+        "axios",
+        "uuid"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue with the WeChat WebView environment where `crypto.randomUUID` is unavailable, causing axios request interceptors to fail. The solution involved switching the generation of `x-request-id` from `crypto.randomUUID()` to the `uuid` package, ensuring smoother login requests. The changes have been validated with linting and a successful build."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#39",
+      "title": "Enhance OAuth Connector Support in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "oauth",
+        "frontend",
+        "update",
+        "connections",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update introduces support for custom OAuth/MCP connectors on the Connections page of the AuthFrontend. Key additions include new operator methods for authorization and exchange, as well as a callback endpoint for handling OAuth responses. Locale files for Chinese and English have been updated to reflect these changes, enhancing user experience."
+    }
+  ]
+}
