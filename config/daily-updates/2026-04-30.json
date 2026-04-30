@@ -3,6 +3,55 @@
   "date": "2026-04-30",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#499",
+      "title": "Empower Chat with AuthBackend Connections in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "chat",
+        "auth",
+        "integration",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/499",
+      "summary": "This update integrates AuthBackend connections into the Nexior chat, allowing users to toggle between various MCP and connector options directly within the chat interface. Key changes include the addition of a unified connections list, enhanced toggle functionality, and improved user experience with localStorage persistence. Legacy MongoDB support remains intact for backward compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#788",
+      "title": "Enhance Aichat2 with New Connectors in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "connectors",
+        "aichat2",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces new connector tools for Notion, Linear, and GitLab, expanding the capabilities of Aichat2. Additionally, the GitHub connector has been enhanced with a new feature to comment on issues. Comprehensive tests have been added to ensure functionality, resulting in a clean test suite with all 55 tests passing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#787",
+      "title": "Enhance AuthBackend for Custom OAuth Connections in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "oauth",
+        "mcp",
+        "integration",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update allows `aichat2` to recognize and utilize custom OAuth connections as MCP servers, enhancing user experience by enabling tool access. Key changes include the addition of new methods for token management and the implementation of a minimal OAuth client provider. The legacy MongoDB path remains unchanged, ensuring a smooth transition for users."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#373",
       "title": "Implement OpenAI Embeddings Probe in Backend 🚀",
       "tags": [
