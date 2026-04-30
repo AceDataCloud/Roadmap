@@ -3,6 +3,184 @@
   "date": "2026-04-30",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/SDK#58",
+      "title": "OpenAI service updates fully integrated in SDK 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "openai",
+        "sdk",
+        "typescript",
+        "python",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/58",
+      "summary": "The recent updates to the OpenAI specification have been reviewed, confirming that both the TypeScript and Python SDKs are already compatible with the latest changes. The only modification was to the `size` field, which now accepts any free-form dimensions, enhancing flexibility for image generation. All existing endpoints remain intact with no additional changes required."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#138",
+      "title": "Enhance Image Size Flexibility in M C Ps 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "openai",
+        "image",
+        "update",
+        "flexibility",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/138",
+      "summary": "This update modifies the image size parameter for OpenAI image generation and editing, transitioning from a fixed enum to a flexible free-form string format. Key changes include updates to type definitions and documentation to support custom dimensions, allowing for more creative freedom in image generation. The new constraints ensure dimensions remain within specified limits, enhancing usability for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#97",
+      "title": "Enhance chat command with new OpenAPI parameters in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "feature",
+        "openai",
+        "cli",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/97",
+      "summary": "The chat command in the CLI has been updated to include four new options: `--store`, `--logprobs`, `--top-logprobs`, and `--parallel-tool-calls`. These enhancements align the CLI with the latest OpenAPI spec for the `POST /openai/chat/completions` endpoint. Note that some complex parameters were omitted due to their requirement for structured JSON input."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#92",
+      "title": "Updated OpenAI Docs for Image Generation and Edits in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "openai",
+        "api",
+        "updates",
+        "billing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/92",
+      "summary": "This update synchronizes the latest changes from upstream OpenAI documentation regarding the `gpt-image-2` size acceptance and billing tiers. Key clarifications include the acceptance of any `WIDTHxHEIGHT` format for sizes, along with explicit billing details for standard and custom sizes. Additionally, a note on output aliasing and an updated example asset URL have been included to enhance user understanding."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#48",
+      "title": "Enhance Nano Banana Validation Script in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "validation",
+        "script",
+        "nano",
+        "production",
+        "reporting"
+      ],
+      "public": false,
+      "summary": "We've added a new validation script, validate_nano.py, to assist with production checks for Nano Banana. This script facilitates callback-mode image generation and editing, while generating comprehensive JSON and Markdown reports detailing request payloads, responses, and image data. This enhancement aims to streamline validation processes and improve reporting accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#372",
+      "title": "Enhanced GPT-Image-2 Billing and Size Flexibility in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "billing",
+        "gpt-image-2",
+        "api",
+        "updates",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update removes the strict 15-preset whitelist for `gpt-image-2` sizes, introducing a two-tier billing model. Users can now utilize a broader range of dimensions, with specific billing rates for standard and custom sizes. Key changes include updates to pricing rules, API documentation, and test coverage enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#786",
+      "title": "Expanded GPT Image Size Options in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "gpt-image",
+        "billing",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update removes the strict 15-preset whitelist for `gpt-image-2` sizes, allowing any valid `WIDTHxHEIGHT` format. Users will now be billed at the 1K rate for specific sizes while other custom dimensions will fall under a new 'other' tier at 1.5x. The changes enhance flexibility in image requests and align billing with actual usage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#42",
+      "title": "Revamp Custom Connector Management UI in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "ui",
+        "frontend",
+        "oauth",
+        "custom-connector",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update enhances the connections table by adding provider details, scope tags, and timestamps for expiration and refresh. Custom MCP connectors are now treated as server/resource connections, and a new dialog for adding custom connectors has been introduced. Additionally, backend errors are now surfaced on the OAuth callback page, improving user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#55",
+      "title": "Enhance OAuth Support for Custom Connectors in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "backend",
+        "custom",
+        "connectors",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces support for manual OAuth client credentials in custom MCP connectors, allowing for a display name and the selection of token endpoint authentication methods based on server metadata. Dynamic client registration remains the default when no manual client ID is provided. Key files modified include serializers, services, and views to accommodate these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#47",
+      "title": "Enhance gpt-image-2 Validator for 1K Outputs in Index 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "validator",
+        "gpt-image-2",
+        "1k-output",
+        "cdn",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update improves the `gpt-image-2` validator by introducing a new flag that allows for a +/-2% tolerance in aspect ratio checks for 1K outputs, addressing previous pixel-imprecision issues. Additionally, the fetch mechanism now attempts a Range request before falling back to a standard GET, enhancing compatibility with CDN edges. The overall validation suite has passed successfully, ensuring robust functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#250",
+      "title": "Automated i18n Updates from Chinese Sources in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "automation",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This PR introduces automatic translation updates for internationalization (i18n) based on changes from the Chinese (zh-CN) source. Key modifications include updates to multiple language files, ensuring that translations are current and accurate across various languages including Arabic, German, English, Spanish, French, Italian, Japanese, Korean, Portuguese, Russian, and Traditional Chinese. This enhancement improves user experience by providing timely and relevant translations."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#785",
       "title": "Enhance Gemini Fallback for Backup Providers in Platform Service 🚀",
       "tags": [
