@@ -68,13 +68,6 @@ _SQL_USERS = "* | SELECT count(DISTINCT user_id) as users"
 # SQL for distinct API count
 _SQL_ACTIVE_APIS = "* | SELECT count(DISTINCT api_name) as active_apis"
 
-# SQL for top services by call count
-_SQL_TOP_SERVICES = (
-    "* | SELECT api_name, count(*) as calls"
-    " GROUP BY api_name ORDER BY calls DESC LIMIT 10"
-)
-
-
 def _cls_query(client, query: str, from_ms: int, to_ms: int) -> dict:
     """Run a CLS SearchLog request and return the parsed response."""
     from tencentcloud.cls.v20201016 import models
@@ -126,19 +119,6 @@ def _query_active_apis(client, from_ms: int, to_ms: int) -> int:
     if rows:
         return rows[0].get("active_apis", 0)
     return 0
-
-
-def _query_top_services(client, from_ms: int, to_ms: int) -> list[dict]:
-    """Get top 10 services by call count for a time window."""
-    result = _cls_query(client, _SQL_TOP_SERVICES, from_ms, to_ms)
-    rows = _parse_analysis_records(result)
-    out = []
-    for row in rows:
-        name = row.get("api_name", "")
-        calls = row.get("calls", 0)
-        if name:
-            out.append({"name": name, "calls": int(calls)})
-    return out
 
 
 # ── Auth DB query (new signups) ─────────────────────────────────────────────
@@ -261,7 +241,6 @@ def main() -> int:
             total = _query_total(client, start_ms, now_ms)
             users = _query_unique_users(client, start_ms, now_ms)
             active_apis = _query_active_apis(client, start_ms, now_ms)
-            top_services = _query_top_services(client, start_ms, now_ms)
         except Exception as exc:
             print(
                 f"[api_usage_snapshot] ERROR querying CLS for {window_name}: {exc}",
@@ -274,8 +253,6 @@ def main() -> int:
             "unique_users": users,
             "active_apis": active_apis,
         }
-        if top_services:
-            window_data["top_services"] = top_services
 
         # New signups (optional — requires auth DB credentials)
         signups = _query_new_signups(delta.days)
