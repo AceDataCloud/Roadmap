@@ -3,6 +3,85 @@
   "date": "2026-05-01",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#58",
+      "title": "Enhance Internal API for Skill Discovery in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "api",
+        "backend",
+        "skills",
+        "auth",
+        "development"
+      ],
+      "public": false,
+      "summary": "This update introduces three new internal API endpoints for skill discovery and asset management, enhancing the functionality of the AuthBackend. The new endpoints allow the aichat2 worker to retrieve active skills, update usage timestamps, and generate presigned URLs for asset bundles. Additionally, a management command has been added to validate skill provider references, ensuring data integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#251",
+      "title": "Update Azure/k8s-set-context to v5 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "updates",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 4 to 5, introducing several enhancements including migration to ESM and updates to the Node version from 20 to 24. The changes also include various Dependabot updates to improve security and compatibility across workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#790",
+      "title": "Enhance COS Uploads with Service Prefix in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cos",
+        "upload",
+        "refactor",
+        "service",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update ensures that the `openaihk/worker` uploads artifacts to specific service folders in the COS bucket, preventing clutter in the root directory. Key changes include the addition of per-service CDN path constants and a new helper function to enforce valid path prefixes. The modifications improve organization and maintainability of uploaded files."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#57",
+      "title": "Exciting New Skill Model and API Features in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "features",
+        "api",
+        "backend",
+        "skills",
+        "tencent"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `Skill` model along with a comprehensive REST API for managing skills, including CRUD operations and asset uploads to Tencent COS. Key features include a two-tier storage model for skills, validation for asset uploads, and JWT authentication for secure access. The changes enhance the platform's capability to manage user-generated skills effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#191",
+      "title": "Automated research cycle completed in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "automation",
+        "candidates",
+        "liquidity",
+        "report"
+      ],
+      "public": false,
+      "summary": "The latest automated research cycle has been successfully executed, reviewing 15 candidates with key insights documented in the new report. Notably, all new listings failed to meet liquidity lock or holder concentration requirements, resulting in zero buy intents. The report includes detailed scores and actions for each candidate, providing valuable data for future decisions."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#789",
       "title": "Revamp Code Execution to Bash with Enhanced Sandbox Features in Platform Service 🚀",
       "tags": [
