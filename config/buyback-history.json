@@ -4,6 +4,34 @@
   "subtitle": "On-chain buyback transactions — transparent, verifiable, and linked to Solscan.",
   "transactions": [
     {
+      "tx_hash": "3wEjVvqDKjCrtaDnLEy16v8x6ZpmmxNwCM8ze3tpwmf6auwG7CNCRxpVGRiPyvszvPh1vwWaQTsxeJo1cTjdRjg5",
+      "occurred_at": "2026-05-01T17:36:43Z",
+      "amount_usd": 735.11,
+      "ace_bought": 2208234.809468,
+      "pair": "USDC → ACE",
+      "venue": "OKX Labs 2",
+      "source": "Revenue",
+      "source_percentage": 1,
+      "period": "2026-05-01",
+      "from_label": "Buyback Wallet",
+      "from_address": "6hVavSsYRaNk86UbNZa6V4JfSwqkRGk9HgYZqKNsdU1w",
+      "note": "Revenue buyback — 20% of the 5% revenue allocation (≈1% of revenue). Routed USDC → USDT → WSOL → ACE via OKX DEX aggregator (GoonFi V2 + Pump.fun AMM)."
+    },
+    {
+      "tx_hash": "45XFqHx2PTUJPanNpmrg5FofVwaGwJqGEWGwd4hqehKy16ZQg9QuNgbknFP1WiEuFWEGi16rB6sifv8KePJM167L",
+      "occurred_at": "2026-05-01T17:34:34Z",
+      "amount_usd": 2450.48,
+      "ace_bought": 0,
+      "pair": "ACE + WSOL → LP Token",
+      "venue": "Pump.fun AMM",
+      "source": "Revenue",
+      "source_percentage": 4,
+      "period": "2026-05-01",
+      "from_label": "Buyback Wallet",
+      "from_address": "6hVavSsYRaNk86UbNZa6V4JfSwqkRGk9HgYZqKNsdU1w",
+      "note": "Revenue LP add — 80% of the 5% revenue allocation (≈4% of revenue). Deposited 3,778,875.578613 ACE (~$1,247.47) + 14.3 WSOL (~$1,203.01) into the Pump.fun AMM ACE-WSOL pool and minted 214.451077605 LP tokens."
+    },
+    {
       "tx_hash": "2XE35fZ4Dg8fGfREvrthJi598a3LYNnJv8maihBgg42zJEgMFeU6yvZNuFcqzguReKc9Yjf7PScFsGsQgNBqq9wr",
       "occurred_at": "2026-05-01T17:17:57Z",
       "amount_usd": 42.54,
