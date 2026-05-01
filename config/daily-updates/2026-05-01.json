@@ -3,6 +3,83 @@
   "date": "2026-05-01",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#789",
+      "title": "Revamp Code Execution to Bash with Enhanced Sandbox Features in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "sandbox",
+        "security",
+        "bash",
+        "cli"
+      ],
+      "public": false,
+      "summary": "This update introduces a new execution tool named 'Bash', replacing the previous 'code_execute' functionality. Key enhancements include environment variable injection, file materialization, and preinstalled provider CLIs, streamlining the execution process for various skills. Additionally, security measures have been strengthened by preventing subprocesses from inheriting the environment, ensuring a more secure runtime environment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#47",
+      "title": "New Revenue Transactions Added in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "revenue",
+        "buyback",
+        "liquidity",
+        "transactions",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/47",
+      "summary": "This update introduces two new on-chain transactions to the buyback history feed, both dated 2026-05-01. The changes implement a new revenue allocation rule, allocating 5% of revenue with 80% going to liquidity provision and 20% to buyback. These transactions enhance transparency and tracking of revenue utilization."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#44",
+      "title": "Enhance inviter_id recovery for better user referrals in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "bugfix",
+        "auth",
+        "frontend",
+        "cookies",
+        "referrals"
+      ],
+      "public": false,
+      "summary": "This update implements a defense-in-depth fix that allows the recovery of the inviter_id from a nested redirect query parameter when it is not available at the top level. This change ensures that user referrals are correctly captured even in cases of legacy or malformed URLs, enhancing the reliability of the authentication process. The fix complements a related change in Nexior, providing additional protection against potential regressions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#500",
+      "title": "Fix inviter_id binding for custom domains in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "oauth",
+        "custom-domain",
+        "referral",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/500",
+      "summary": "This update resolves issues with the inviter_id not being preserved during the authentication redirect for custom-domain Nexior deployments. Key changes include replacing the logout action with resetAll to prevent race conditions and ensuring inviter_id is correctly passed in the URL. This fix enhances the referral binding experience for users signing up via OAuth providers like WeChat."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#46",
+      "title": "Feat: add 2026-05-01 buyback and first creator-fee LP add in Roadmap ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/46"
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#189",
       "title": "Scheduled Research Cycle Report Published in Sol Radar 🚀",
       "tags": [
