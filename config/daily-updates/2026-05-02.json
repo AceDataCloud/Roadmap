@@ -3,6 +3,370 @@
   "date": "2026-05-02",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#56",
+      "title": "Enable Connections and Skills by Default in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "frontend",
+        "update",
+        "navigation"
+      ],
+      "public": false,
+      "summary": "This update removes the feature flag gating for the `/user/connections` and `/user/skills` menu entries, allowing them to be enabled by default. The underlying backends have been fully integrated, and the stale `isFeatureEnabled` gate has been removed. The flag system remains in place for future feature rollouts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#55",
+      "title": "Enhance MCP Tools Display for Connections in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "mcp",
+        "ui",
+        "enhancement",
+        "tools"
+      ],
+      "public": false,
+      "summary": "This update transforms the connections page by displaying live MCP tools instead of a single access row, significantly improving user experience. Key changes include new types for connection tools, lazy-fetching capabilities, and enhanced UI components to represent each tool with its respective permissions. The backend has also been updated to support fetching these tools from the MCP server."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#63",
+      "title": "Enhance MCP Tool Exposure for Custom OAuth Connections in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "oauth",
+        "mcp",
+        "backend",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces a new endpoint to retrieve the MCP server's tools list for custom OAuth connections, allowing for a detailed display of available tools. The implementation includes a refresh mechanism for access tokens and supports both JSON and SSE response formats. Additionally, three new unit tests have been added to ensure the functionality works as intended."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#378",
+      "title": "Introducing the DeepSeek V4 Flash Model in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "deepseek",
+        "api",
+        "pricing"
+      ],
+      "public": false,
+      "summary": "We've added the new DeepSeek V4 Flash model, enhancing cost rules, OpenAPI specifications, and service display pricing. Key updates include new pricing multipliers and visibility adjustments for the model across various services. This update aims to improve API billing and service interactions significantly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#805",
+      "title": "New deepseek-v4-flash model registered in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "openai",
+        "checker",
+        "deepseek",
+        "platform"
+      ],
+      "public": false,
+      "summary": "The `deepseek-v4-flash` model has been successfully registered in the OpenAI worker checker configurations. This allows live traffic to effectively route to upstream providers, maintaining the existing rank patterns for providers. The ephone remains the highest-rank fallback provider, ensuring consistency across the deepseek family."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#510",
+      "title": "Enhance Chat Composer with Inline Skills and Connectors in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "features",
+        "localization",
+        "chat"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/510",
+      "summary": "This update replaces the previous upload button in the chat composer with three new inline pill buttons: 'Add files or photos', 'Skills', and 'Connectors'. The changes include a new button style and updated localization keys for both English and Chinese. These enhancements aim to improve user experience by providing quick access to essential features directly within the chat interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#509",
+      "title": "Improve sidebar logo display in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "ui",
+        "navigation",
+        "frontend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/509",
+      "summary": "This update fixes the sidebar logo rendering issue by ensuring that the collapsed navigator uses the favicon instead of the full site logo. The `collapsed` prop is now correctly passed to the logo component, enhancing the visual consistency of the interface. The full-width header remains unchanged, continuing to display the wordmark."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WebExtrator#7",
+      "title": "Enhance CI Compatibility in Web Extrator 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WebExtrator",
+        "ci",
+        "deployment",
+        "bash",
+        "script"
+      ],
+      "public": false,
+      "summary": "Updated the deploy script to ensure compatibility with sh by changing the shebang to /bin/sh. This modification allows the script to run correctly under dash on Ubuntu, improving reliability during deployment. The script now uses 'set -eu' for error handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#804",
+      "title": "Fix Drive Search Quoting for Google Workspace Skills in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "documentation",
+        "google-workspace",
+        "skills",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update corrects the quoting syntax for Drive search terms in the Google Workspace skills documentation. The PR replaces the incorrect single-quoted JSON wrapper with the proper single-quoted format around the JSON and double quotes around the values. Additionally, it introduces a multi-term recipe and a heredoc fallback for terms containing apostrophes, ensuring better functionality and clarity in usage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#46",
+      "title": "Automatic i18n Updates from zh-CN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This PR introduces automatic translation updates for the i18n files based on changes from the zh-CN source. Key modifications include the addition of new language files and updates to existing ones for Arabic, German, and Greek, enhancing the multilingual support of the application. These changes will improve user experience for non-English speakers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WebExtrator#6",
+      "title": "Fix CI permissions for package deployment in Web Extrator 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WebExtrator",
+        "ci",
+        "permissions",
+        "deployment",
+        "github-actions"
+      ],
+      "public": false,
+      "summary": "This update addresses the deployment failures on the main branch caused by permission issues with the GITHUB_TOKEN. By adding explicit permissions for packages: write in the deploy job, we ensure successful pushes to the GitHub Container Registry. This change enhances the reliability of our CI/CD pipeline."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#54",
+      "title": "Revamped Skills Page with Claude-style Layout in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "design",
+        "skills",
+        "update"
+      ],
+      "public": false,
+      "summary": "The `/user/skills` page has been redesigned to feature a two-column layout, enhancing user experience by displaying the skill list on the left and detailed previews on the right. Key updates include an inline expandable skill view, new dialogs for uploading and writing skills, and improved internationalization support. This update streamlines navigation and interaction, making skill management more intuitive."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#53",
+      "title": "Streamline Provider Data with Server-Driven Approach in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "auth",
+        "update",
+        "dynamic",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update removes hard-coded provider mappings from the connector page, allowing the client to render provider data directly from the AuthBackend. Key fields like name, icon_url, and description are now dynamically fetched, enhancing flexibility and maintainability. This change pairs with backend updates to ensure seamless integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#62",
+      "title": "Enhance Connector Metadata for Dynamic Provider Info in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "backend",
+        "features",
+        "metadata",
+        "oauth",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces server-rendered fields for connection metadata, including name, icon URL, and description, allowing the AuthFrontend to eliminate hard-coded provider tables. Key changes include new attributes in the OAuthProviderAdapter and updates to built-in adapters to populate these fields. The ProviderCatalogSerializer and ConnectionSerializer now expose the new metadata, streamlining the process of adding new connectors without requiring client releases."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#49",
+      "title": "Enhance Service Creation Process in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "bugfix",
+        "enhancement",
+        "documentation",
+        "service",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update fixes several bugs related to service and API fields, ensuring that the correct attributes are used for display and metadata. New steps have been added to streamline the service creation process, including explicit instructions for uploading service icons and creating document trees. Overall, the skill now includes 26 steps across 10 phases, improving clarity and usability for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#377",
+      "title": "Enhance WebExtrator Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "webextrator",
+        "backend",
+        "api",
+        "translations"
+      ],
+      "public": false,
+      "summary": "This update completes the WebExtrator service registration by adding comprehensive documentation, including integration guides and service introductions. Key additions include markdown files for various API endpoints and translations for both English and Chinese. This enhancement aims to improve user understanding and ease of integration with the WebExtrator service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#803",
+      "title": "Revamp CLI Documentation for Enhanced Accuracy in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "documentation",
+        "cli",
+        "improvement",
+        "bugfix",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update includes a comprehensive rewrite of the SKILL.md files for Google Workspace, GitHub, GitLab, Linear, Notion, and Slack, ensuring all commands align with verified CLI syntax. Key improvements include streamlined command usage, clearer documentation on parameters, and the introduction of sanity checks for authentication. These changes enhance the user experience by reducing errors and improving command efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#376",
+      "title": "Enhance Kling API Documentation with 4K Mode in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "kling",
+        "api",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update enhances the Kling Videos Generation API documentation in Chinese by adding details about the new `mode=4k` option. This mode is specifically for kling-v3 and kling-v3-omni, and it replaces the previous options of `std` and `pro`. The changes ensure that users are informed about the compatibility and usage of the new 4K feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#508",
+      "title": "Launch Independent Nexior Stack for Studio! 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "k8s",
+        "frontend",
+        "seo",
+        "deployment",
+        "independent"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/508",
+      "summary": "This update introduces a separate Kubernetes stack for `studio.acedata.cloud`, allowing it to serve the Nexior bundle independently from `hub.acedata.cloud`. Key changes include new deployment, service, and ingress configurations, along with host-aware SEO adjustments to ensure proper canonicalization and routing. This enhancement improves accessibility and performance for users accessing Nexior through the studio domain."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#802",
+      "title": "Enhance Google Workspace Skill Documentation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "documentation",
+        "google-workspace",
+        "skills",
+        "api",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update rewrites the Google Workspace skill documentation to clarify the correct usage of path parameters and available helper commands. Key changes include a new section on calling methods, explicit examples for path parameters, and the introduction of new recipes for common tasks. These improvements aim to streamline user interactions with the Google Workspace API and reduce errors in command invocations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#507",
+      "title": "Enhance image2video submission validation in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "validation",
+        "user-experience",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/507",
+      "summary": "This update improves the image2video submission process by adding validation to ensure at least one reference image is uploaded. If no images are provided, a clear warning message will be displayed to the user instead of a generic error. Additionally, empty image URLs will be stripped from the payload to prevent issues with future requests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#52",
+      "title": "Revamped Connectors Page with Claude-Style Layout in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "design",
+        "connectors",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "The Connectors page has been redesigned to feature a Claude-style two-pane layout. The left pane includes a search input and a collapsible list of connected and available connectors, while the right pane displays detailed information for each connector. This update enhances user experience and maintains existing dialog functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#375",
+      "title": "Launch WebExtrator Service with APIs and Cost Rules in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "api",
+        "backend",
+        "webextrator",
+        "cost"
+      ],
+      "public": false,
+      "summary": "This update introduces the new WebExtrator service to the AceDataCloud platform, enabling high-concurrency web page rendering and intelligent content extraction. Key features include three new API endpoints for rendering, extracting, and task management, along with associated cost rules and OpenAPI specifications. The service is now fully integrated and ready for use, with all tests passing successfully."
+    },
+    {
       "id": "gh:pr:AceDataCloud/WebExtrator#5",
       "title": "Make .env file optional for CI in Web Extrator 🚀",
       "tags": [
