@@ -3,6 +3,102 @@
   "date": "2026-05-02",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#512",
+      "title": "Enable Image and File Uploads for More Models in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "chat",
+        "upload",
+        "multimodal"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/512",
+      "summary": "This update allows image and file uploads for the Claude, Gemini, and Grok-4 models by setting the appropriate capability flags. Previously, only the GPT-5.4 family had these flags enabled, leaving other models with a disabled upload button. Now, users can seamlessly attach images and files, enhancing the multimodal capabilities of these models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#59",
+      "title": "Enhance Tool Permissions and Actions in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "localization",
+        "permissions",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update adds missing English translations for tool permissions and enhances the UI by replacing static icons with interactive buttons for allow, ask, and deny actions. The changes improve user experience by making permissions more intuitive and persistent across sessions. Additionally, the update includes localization for new action tooltips and ensures that the interface aligns with design expectations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#64",
+      "title": "Enhance Custom MCP Icons with Direct Favicon Links in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "favicon",
+        "custom_oauth",
+        "backend",
+        "fix",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update fixes the issue where custom MCP connections displayed a generic globe icon instead of the actual server favicon. The solution involves using the server's favicon URL directly for `custom_oauth` connections, ensuring that the correct icon is shown. Tests have been added to verify the functionality and ensure robust handling of various input scenarios."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#806",
+      "title": "Enhance tool-result engagement in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "aichat2",
+        "system-prompt",
+        "tool-integration"
+      ],
+      "public": false,
+      "summary": "This update introduces a new generic directive in the system prompt to ensure that tool results are treated as authoritative input. It addresses two key issues in aichat2: async tasks stalling and search results not being synthesized. The change is designed to improve the model's interaction with various tools and enhance user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#511",
+      "title": "Enhance Chat Toolbar with External Link Icons in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "chat",
+        "enhancement",
+        "tooltip",
+        "icons"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/511",
+      "summary": "This update simplifies the tooltip text for the Skills and Connections buttons in the chat composer, removing the URL for a cleaner look. Additionally, a new external-link icon has been added next to each button, aligning with the design used in AuthFrontend's sidebar. These changes improve user experience by providing a consistent visual cue for external links."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#58",
+      "title": "Unify Connections Pane Design for a Sleeker Look in Frontend Web ✨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "design",
+        "ui",
+        "visual",
+        "polish"
+      ],
+      "public": false,
+      "summary": "This update enhances the visual consistency of the connections page by unifying the background color of the list and detail panes to white. Key changes include a refined active state for list items, improved search input styling, and adjustments to padding and widths for better layout. Overall, these changes aim to create a more polished and user-friendly interface."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthFrontend#56",
       "title": "Enable Connections and Skills by Default in Frontend Web 🚀",
       "tags": [
