@@ -3,6 +3,180 @@
   "date": "2026-05-02",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/WebExtrator#5",
+      "title": "Make .env file optional for CI in Web Extrator 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WebExtrator",
+        "ci",
+        "docker",
+        "env",
+        "deployment",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update marks the `.env` file reference in the Docker Compose configuration as optional. This change resolves the CI failure during the `docker compose push` step, allowing for smoother deployments without requiring a local `.env` file. Production environment variables will continue to be managed through Kubernetes manifests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#374",
+      "title": "Exciting Launch of Native 4K Mode for Kling in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "kling",
+        "4k",
+        "backend",
+        "api",
+        "testing"
+      ],
+      "public": false,
+      "summary": "The new native 4K mode has been officially added to Kling, specifically for the kling-v3 and kling-v3-omni models. Key updates include modifications to the OpenAPI to support the new mode, updated API and service cost rules, and the addition of comprehensive tests to ensure functionality. This enhancement allows users to generate high-quality 4K videos at a competitive rate of $0.42 per second."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#801",
+      "title": "Unlocking Native 4K Support for Kling in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "kling",
+        "4k",
+        "pricing",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces support for native 4K mode in Kling, specifically for the kling-v3 and kling-v3-omni models. Key changes include validation for 4K mode usage and updated pricing entries, ensuring a seamless experience for users. The pricing for 4K is set at $0.42 per second, with no audio surcharge applicable."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#800",
+      "title": "sanitize MCP server names for OpenAI compatibility in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "mcp",
+        "openai",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical bug where invalid MCP server names could disrupt tool calling in OpenAI. The new `slugifyServerName` function ensures that server names are sanitized to meet OpenAI's regex requirements, preventing issues for users with problematic MCP connections. Comprehensive tests have been added to verify the functionality, ensuring all existing tests pass successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#799",
+      "title": "Enhance model skill usage guidance in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "aichat2",
+        "skills",
+        "model",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update improves the model's understanding of the `<skills>` block by clarifying that these are playbooks, not tools. The `DEFAULT_SYSTEM_PROMPT` has been updated to accurately reflect available tools and how to invoke skills. Additionally, a preamble has been added to the `<skills>` block to prevent confusion during skill activation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#51",
+      "title": "Enhance CI for Auto-Translate PRs in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "ci",
+        "frontend",
+        "automation",
+        "github-actions"
+      ],
+      "public": false,
+      "summary": "This update resolves the issue where auto-translate PRs were stuck in a BLOCKED state due to the use of the default GITHUB_TOKEN. By switching to the BOT_GITHUB_TOKEN for actions like checkout and create-pull-request, we ensure that these PRs will now trigger the necessary CI checks. This change will improve the workflow for future auto-translate runs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#798",
+      "title": "Fix skill catalog bundling issue in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "docker",
+        "skills",
+        "aichat2"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where the SKILL.md files were not included in the runtime image, causing the 'google-workspace' skill to be unavailable. The Dockerfile has been modified to copy the necessary skill catalog from the builder stage, ensuring that the skills loader can access the required files. Post-deployment verification will confirm that the skills are now correctly recognized and functional."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#50",
+      "title": "Enhance Skills UX with Tabs and Inline Editing in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "ux",
+        "frontend",
+        "skills",
+        "icons",
+        "editing"
+      ],
+      "public": false,
+      "summary": "This update addresses four key UX issues on the `/user/skills` page, improving user interaction significantly. Tabs have replaced icon toggles for a cleaner interface, and inline editing has been introduced for `SKILL.md`, allowing users to edit directly within the preview. Additionally, missing icons have been registered to enhance visual consistency across the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#61",
+      "title": "Streamline SKILL.md Handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "backend",
+        "database",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update resolves issues with double-storing SKILL.md and fixes 404 errors for markdown-only skills. The validation process has been enhanced to ensure that SKILL.md is consistently included in the asset bundle manifest, improving user experience and data integrity. Additionally, existing rows have been backfilled to maintain consistency across the database."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WebExtrator#4",
+      "title": "Exciting New Routes for AceDataCloud Integration in Web Extrator 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WebExtrator",
+        "feature",
+        "integration",
+        "api",
+        "redis",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces new platform-compatible routes for the WebExtrator, including `POST /webextrator/render`, `POST /webextrator/extract`, and `POST /webextrator/tasks`. These routes follow the AceDataCloud upstream worker contract, enabling both synchronous and asynchronous processing with a standardized response format. Additionally, tasks are now persisted in Redis, enhancing reliability and scalability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#797",
+      "title": "Enhance Midjourney Image Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "midjourney",
+        "cdn",
+        "imageprocessing",
+        "platformservice"
+      ],
+      "public": false,
+      "summary": "This update addresses issues with `sub_image_urls` from the Midjourney API, ensuring they are routed through the platform CDN instead of the Discord CDN. The fix includes deriving image URLs from COS-hosted images and correcting the reported dimensions to match the actual grid size. This change improves accessibility and consistency for users relying on these images."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#506",
       "title": "Fix skill button to link directly to skills management in Nexior 🎉",
       "tags": [
