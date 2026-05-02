@@ -3,6 +3,150 @@
   "date": "2026-05-02",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#506",
+      "title": "Fix skill button to link directly to skills management in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "cleanup",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/506",
+      "summary": "This update resolves a bug where the skills dialog failed to load due to a deleted endpoint. The skill button now opens a direct link to the skills management page at auth.acedata.cloud/user/skills. Several unused components and code related to the previous skills dialog have been removed, streamlining the chat interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#195",
+      "title": "Enhancements to Analytics and Pool Selection in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "analytics",
+        "improvements",
+        "liquidity",
+        "filters",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces key improvements including a new analytics filter to exclude historical `buy` actions below the minimum score, enhancing the accuracy of aggregated statistics. Additionally, LLM prompt hardening has been implemented to enforce new liquidity rules, preventing erroneous `buy` actions. Finally, the base-token pool selection logic has been refined to eliminate null grader rows by ensuring only relevant pools are considered."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#194",
+      "title": "Enhance Strategy: Block Thin-LP Rugs & Enforce Minimum Buy Score in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "enhancement",
+        "strategy",
+        "trading",
+        "security",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update introduces critical enhancements to the strategy by implementing a new flag to block thin-LP rugs and enforcing a minimum buy score for shadow buys. The changes include a scoring penalty for insufficient LP lock and a new CLI option to demote below-threshold buy actions. These improvements aim to enhance model quality and ensure safer trading practices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#796",
+      "title": "Fix production token issues for aichat2 in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "production",
+        "aichat2",
+        "auth",
+        "deployment",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical production blocker by adding the `CONNECTION_INTERNAL_TOKEN` and `AUTH_BACKEND_URL` to the aichat2 deployment configuration. These changes ensure that the aichat2 worker can successfully authenticate with the AuthBackend, preventing silent failures and credential issues for signed-in users. Additionally, unnecessary environment variables have been removed to streamline the deployment process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#795",
+      "title": "Enhance MCP Integration with Auto-Promoted Virtual Skills in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "mcp",
+        "integration",
+        "skills",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature that allows prompts from active MCP connections to be treated as virtual skills, enhancing the integration with the model. Key changes include the implementation of a new MCPClientManager method for listing prompts, adjustments to the conversations handler for merging skills, and updates to the requestSkills flow. Additionally, new tests have been added to ensure the functionality works as expected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#49",
+      "title": "Fix radio binding and ensure SKILL.md visibility in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "bugfix",
+        "frontend",
+        "skills",
+        "ui",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update resolves two key issues on the `/user/skills` page. The radio button for selecting markdown now binds correctly, and SKILL.md will always be displayed in the file tree, even for markdown-only skills. Additionally, the sidebar icon for skills has been registered to eliminate the blank square issue."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#793",
+      "title": "Seamless Skill Integration for Conversations in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "integration",
+        "skills",
+        "oauth",
+        "conversations"
+      ],
+      "public": false,
+      "summary": "This update implements the core functionality for skill integration within the conversation flow, allowing the model to utilize skills end-to-end. Key changes include the introduction of a per-conversation flow for managing active skills and the ability to inject OAuth tokens dynamically. Additionally, new asset shipping capabilities have been added to enhance the interaction with external tools."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#48",
+      "title": "Enhanced Skills UI with File Tree and Previews in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "features",
+        "skills",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces a new file tree and per-file preview feature in the skills detail drawer, significantly improving the user experience on the `/user/skills` page. The drawer now displays skill metadata alongside a file browser, allowing users to easily navigate and preview files with various renderers for markdown, HTML, images, and code. Additionally, security measures have been implemented to ensure safe rendering of content."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#60",
+      "title": "Enhance File Fetching for Skill Previews in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "api",
+        "testing",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update introduces a new endpoint `GET /api/v1/skills/<id>/files/?path=<rel-path>` for fetching individual files from a skill's asset bundle, enhancing the preview UI. Key changes include improved content serving, a caching mechanism for efficiency, and comprehensive tests to ensure functionality and security. The new features will support a more dynamic user experience in the upcoming frontend integration."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthFrontend#47",
       "title": "Feat(skills): accept .zip + .tar archives in upload form in Frontend Web ✨",
       "tags": [
