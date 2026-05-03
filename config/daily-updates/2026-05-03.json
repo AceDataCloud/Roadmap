@@ -3,6 +3,214 @@
   "date": "2026-05-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#547",
+      "title": "Enhance User Message Bubble Padding in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "design",
+        "chat",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/547",
+      "summary": "This update improves the user message bubble by increasing the horizontal padding from 16px to 20px and adjusting the border-radius from 16px to 18px. These changes create a more comfortable reading experience, especially for Chinese punctuation. The adjustments only affect user messages, leaving AI responses and edit modes unchanged."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#501",
+      "title": "Upgrade Node Setup Action for Enhanced Performance in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "workflow",
+        "ci",
+        "nodejs",
+        "upgrade"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/501",
+      "summary": "This update bumps the actions/setup-node from version 3 to 6 across multiple workflow files. Key changes include improved caching mechanisms and dependency upgrades, which enhance overall workflow performance and maintain compatibility with the latest Node.js versions. The update ensures that the CI/CD processes are more efficient and streamlined."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#503",
+      "title": "Upgrade Docker Build-Push Action to v7 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "docker",
+        "build",
+        "upgrade",
+        "ci",
+        "action"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/503",
+      "summary": "This update bumps the Docker Build-Push Action from version 6 to 7, introducing several enhancements including Node 24 as the default runtime and the removal of deprecated environment variables. The changes improve compatibility and streamline the build process, ensuring a more efficient workflow for our CI/CD pipeline."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#530",
+      "title": "Automated i18n Updates from zh-CN in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "automation",
+        "translations",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/530",
+      "summary": "This update introduces automatic translation updates for internationalization (i18n) based on changes from the zh-CN source. The changes primarily involve renaming cache files to reflect the latest translations, ensuring that the application remains up-to-date and accessible for Chinese-speaking users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#546",
+      "title": "Revamp Dark Mode Palette for a Sleeker Look in Nexior 🌙",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "theme",
+        "dark-mode",
+        "ui",
+        "design",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/546",
+      "summary": "This update neutralizes the dark mode palette by replacing the overpowering blue and purple tones with a balanced cool gray, aligning with GitHub's style. Key variables have been adjusted to enhance the overall aesthetic of the chat area and other components without affecting the light mode. The changes ensure a more modern and cohesive user experience across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#545",
+      "title": "Updated DeepSeek Logo for a Fresh Look in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "logo",
+        "update",
+        "visual",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/545",
+      "summary": "The DeepSeek logo used in Nexior has been updated to a cleaner asset, enhancing the visual consistency of the application. The change affects the `CHAT_MODEL_ICON_DEEPSEEK` constant in `src/constants/chat.ts`, ensuring all references to the logo are now using the new image. This update simplifies the logo management across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#544",
+      "title": "Revamp el-card Background to Clean White in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "theme",
+        "ui",
+        "design",
+        "fix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/544",
+      "summary": "This update addresses the background color of `el-card` components in light mode, changing it from a grayish tint to a clean white. The adjustment aligns the appearance with the PlatformFrontend, enhancing visual clarity across various console pages. Dark mode settings remain unchanged, preserving the existing glass effect."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#206",
+      "title": "Automated research cycle completed in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "automated",
+        "crypto",
+        "report",
+        "analysis"
+      ],
+      "public": false,
+      "summary": "The latest automated research cycle has been successfully completed, reviewing 16 candidates and generating a detailed report. Key findings include 9 candidates on the watchlist, 4 new listings from Birdeye, and 3 trending tokens from GeckoTerminal. Decisions were made to hold SOL while skipping several candidates due to low liquidity and suspicious activity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#76",
+      "title": "Fix Slack OAuth Permissions for Bot Installation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "slack",
+        "oauth",
+        "backend",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update removes the `search:read` scope from the bot scope bundle, addressing installation failures of the AceDataCloud Slack OAuth app. The change ensures that only valid bot scopes are included, allowing for a successful installation process. Future bot-side search functionalities can utilize granular variants instead."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#543",
+      "title": "Enhance chat action icons for better usability in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "chat",
+        "enhancement",
+        "usability"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/543",
+      "summary": "This update enlarges the action icons (copy, restart, edit) in the chat interface from 12px to 14px, improving click accuracy. Additionally, the gap between icons has been increased from 8px to 10px, and the margin-top adjusted from 2px to 4px for better spacing. These changes enhance the overall user experience on both desktop and mobile platforms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#74",
+      "title": "Removed Linear Translations in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "i18n",
+        "cleanup",
+        "translations",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update removes the `scope.issues` and `_issues.comment` translation keys from 18 locale files due to the deprecation of the Linear connector. The changes streamline the internationalization process by eliminating unused translations, ensuring a cleaner codebase and improved maintainability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#77",
+      "title": "Remove Linear OAuth Connector in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "cleanup",
+        "oauth",
+        "backend",
+        "kubernetes",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "The Linear OAuth connector has been deprecated and all related code and configurations have been removed from the AuthBackend. Key changes include the deletion of the Linear adapter directory, updates to the registry, and the removal of environment variables related to Linear in Kubernetes manifests. Documentation has also been updated to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#815",
+      "title": "Removed Linear Connector from Aichat2 in Platform Service 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "chore",
+        "cleanup",
+        "aichat2",
+        "linear"
+      ],
+      "public": false,
+      "summary": "The Linear connector has been officially removed from the Aichat2 worker, streamlining the codebase. Key changes include the deletion of the built-in Linear skill and the removal of its token mapping from the environment variable configuration. This update enhances the overall efficiency of the platform by eliminating unused components."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthFrontend#71",
       "title": "Enhance cross-site user identity handling in Frontend Web 🚀",
       "tags": [
