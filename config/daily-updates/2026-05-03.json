@@ -3,6 +3,315 @@
   "date": "2026-05-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#571",
+      "title": "Feat(kling): duration slider + mode resolution suffix + summary chip (UX polish) in Nexior 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/571"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#570",
+      "title": "Feat(kling): Inspiration & Presets drawer for prompt building (mirror kling.ai) in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/570"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#569",
+      "title": "Fix site origin lookup for studio access in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "frontend",
+        "backend",
+        "site",
+        "redirect"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/569",
+      "summary": "This update resolves a critical bug preventing the studio.acedata.cloud site from correctly identifying its origin, which impacted the visibility of subsite features. The `getSiteOrigin()` function has been modified to always return a bare hostname, aligning with backend storage conventions. Additionally, a permanent redirect from hub.acedata.cloud to studio.acedata.cloud has been implemented to ensure seamless access."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#90",
+      "title": "Fix(connections): use typing.List for py3.8-compat scope annotations in Backend 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#72",
+      "title": "Sync: veo SDK already in sync with ingredients2video action addition in S D K ✨",
+      "tags": [
+        "github",
+        "pr",
+        "SDK"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/72"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#566",
+      "title": "Feat(kling): add Motion Control tab + Avatar coming-soon (mirror kling.ai 3-tab UX) in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/566"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#120",
+      "title": "Sync(veo): add 4 new endpoint guides, fix image input rules in A P Is 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "APIs"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/120"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#167",
+      "title": "Enhance veo31-fast-ingredients with ingredients2video action in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "video",
+        "update",
+        "ingredients",
+        "model",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/167",
+      "summary": "This update introduces the `ingredients2video` action for the `veo31-fast-ingredients` model, improving the accuracy of multi-image fusion workflows. The `veo_image_to_video` function now dynamically selects the appropriate action based on the model, ensuring correct processing. Additionally, the documentation for `veo_list_models` has been updated to reflect this change."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#125",
+      "title": "Feat(veo): add `ingredients-to-video` command synced from updated OpenAPI spec in Clis ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Clis"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/125"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#89",
+      "title": "Refactor(connections): collapse /providers/ + /catalog/, slim /connections/ in Backend 🧹",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#389",
+      "title": "Register new Veo processing endpoints in Backend ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "veo",
+        "api",
+        "backend",
+        "openapi",
+        "migration",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This PR registers four new Veo endpoints—`/upsample`, `/extend`, `/reshoot`, and `/objects`—in the PlatformBackend. It includes OpenAPI specs, JsonLogic cost rules, migrations to create matching `Api` rows, and zh-CN documentation. Tests for all endpoints have been added and passed, ensuring correct billing and functionality. The changes expand video processing capabilities while maintaining alignment with existing Veo service tiers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#564",
+      "title": "Enhance Task Preview with Reference Images in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "ui",
+        "kling",
+        "task-preview"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/564",
+      "summary": "This update improves the task preview in Nexior by displaying start and end reference images when users upload them for video generation. The implementation mirrors the existing functionality in NanoBanana, utilizing a new computed property to render thumbnails in a horizontally-scrollable layout. No backend changes were necessary, as the required fields were already available in the model."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#820",
+      "title": "Expanded Veo Endpoints for Enhanced Video Processing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "video",
+        "api",
+        "mountsea",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces four new endpoints to the Mountsea Veo worker, significantly expanding its capabilities. The new endpoints include /upsample, /extend, /reshoot, and /objects, allowing for advanced video processing features such as upscaling and object manipulation. Additionally, backward compatibility is maintained for existing functionalities, ensuring a seamless transition for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#563",
+      "title": "fix: update OpenAI Image bot avatar to ChatGPT logo in Nexior 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "avatar",
+        "openai",
+        "chatgpt"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/563",
+      "summary": "This update fixes the OpenAI Image bot avatar, which previously showed a banana icon. The issue was caused by a hard-coded CDN URL in the `Preview.vue` file. The logo is now correctly set to the ChatGPT icon, matching the navigator section. No other changes were made, and all tests pass successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#562",
+      "title": "Revamped Kling ConfigPanel UI with 4K, camera control, and smarter toggles in Nexior 🎬",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "kling",
+        "configpanel",
+        "camera-control",
+        "4k",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/562",
+      "summary": "This update aligns the Kling ConfigPanel UI with the `/kling/videos` API. Users can now select 4K mode (disabled when unsupported), control cameras with a new 6-axis selector, and see previously hidden audio and duration options as disabled instead of removed. Type definitions for reference videos and elements were added for future UI integrations, and i18n support was extended to zh-CN and en. Dead code was removed and payload sanitization ensures only valid camera control data is sent."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#819",
+      "title": "Fix(ephone/kling): transfer upstream video to platform CDN in Platform Service 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#163",
+      "title": "OpenAI MCP server confirmed fully in sync with Docs in M C Ps ✅",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "openai",
+        "sync",
+        "documentation",
+        "mcp",
+        "verification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/163",
+      "summary": "Recent commits to documentation and translation files triggered a sync check of the OpenAI MCP server. A full comparison against the OpenAPI spec, core types, and tool implementations showed all models and endpoints are up to date. No code changes were needed, confirming the server is already aligned with the latest spec. Firewall restrictions prevented external connection attempts, but verification was completed locally."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#116",
+      "title": "Sync OpenAI API Docs for Task & Completion Updates in APIs ✨",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "docs",
+        "sync",
+        "openai",
+        "api",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/116",
+      "summary": "This PR synchronizes updates from the upstream Docs repo to the OpenAI API documentation. Key changes include fixes in error handling, improved field descriptions for the gpt-image series, and new sections on multi-round dialogue and vision models. Truncated code blocks were also fixed and translations updated for better clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#121",
+      "title": "Enhance OpenAI Image Size Flexibility in Clis 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "openai",
+        "cli",
+        "image",
+        "update",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/121",
+      "summary": "This update modifies the OpenAI CLI to accept free-form WIDTHxHEIGHT strings for the image generation and editing commands. The previous fixed enum for the `--size` parameter has been replaced with a regex validation, allowing for custom dimensions while still enforcing valid formats. This change enhances user experience by providing more flexibility in image generation options."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#70",
+      "title": "Sync: add OpenAI tasks namespace to TypeScript and Python SDKs in S D K ✨",
+      "tags": [
+        "github",
+        "pr",
+        "SDK"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/70"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#388",
+      "title": "Align OpenAI Task Types for Consistency in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "openapi",
+        "documentation",
+        "backend",
+        "api",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update modifies the OpenAPI specification to align the `type` enum for the `/openai/tasks` endpoint, ensuring consistency across different workers. The `type` now includes 'images', 'images_generations', and 'images_edits', improving clarity for clients and preventing task filtering issues. Additionally, documentation has been updated to reflect these changes and provide clear mappings between worker outputs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#561",
+      "title": "Fix OpenAI Image Task List Rendering in Nexior 🖼️",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "openai",
+        "ui",
+        "pagination",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/561",
+      "summary": "The issue with the 'My Tasks' list not loading on the OpenAI Image page has been fixed by removing an outdated client-side type filter. The previous filter caused the list to appear empty despite valid backend data being available. Additionally, the total task count logic has been updated to prevent pagination errors and infinite loops."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#560",
       "title": "Enhance Navbar with 'My Subsites' Dropdown in Nexior 🎉",
       "tags": [
