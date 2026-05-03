@@ -3,6 +3,70 @@
   "date": "2026-05-02",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#505",
+      "title": "Upgrade Java Setup Action to Version 5 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "upgrade",
+        "ci-cd",
+        "security"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/505",
+      "summary": "This update bumps the actions/setup-java dependency from version 4 to 5, ensuring compatibility with the latest features and improvements. Key changes include an upgrade to Node 24 and various dependency updates that enhance security and performance. The build workflow has been modified to reflect this change, optimizing our CI/CD pipeline."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#514",
+      "title": "Revamp logo and navigator styles in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "design",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/514",
+      "summary": "This update introduces a new logo style and adjusts the navigator's padding for improved aesthetics. The logo dimensions have been increased to enhance visibility, while the navigator's padding has been fine-tuned for better alignment. These changes aim to elevate the overall user interface experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#513",
+      "title": "Exciting updates to Claude model lineup in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "chat",
+        "update",
+        "models",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/513",
+      "summary": "This update enhances the Claude model lineup at `/claude/conversations` by upgrading to the latest versions: Opus 4.7, Sonnet 4.6, and Haiku 4.5. Key changes include renaming constants, updating imports, and modifying internationalization entries for the new models. All updates ensure compatibility with existing billing and routing systems."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#807",
+      "title": "Enhance message merging for smoother AI chat responses in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "api",
+        "enhancement",
+        "tests",
+        "aichat2",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces a new merging process for consecutive same-role messages in the /aichat2/conversations API, improving the user experience by consolidating multiple assistant messages into a single response. The changes ensure that the public API representation aligns with the existing SSE stream, while maintaining the internal storage format. Comprehensive tests have been added to validate the new functionality and ensure robustness."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#199",
       "title": "New Research Cycle Report Published in Sol Radar 🚀",
       "tags": [

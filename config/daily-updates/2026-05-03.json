@@ -1,0 +1,70 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-05-03",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#483",
+      "title": "Automated i18n Updates from zh-CN in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "localization",
+        "automation",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/483",
+      "summary": "This update introduces automated translation updates for the i18n files based on changes from the zh-CN source. All relevant cache files have been renamed to reflect these updates, ensuring that the localization remains current and accurate. This enhancement will streamline the localization process and improve user experience for Chinese-speaking users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#515",
+      "title": "Fix auto-sync for package.json before publish in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "release",
+        "workflow",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/515",
+      "summary": "This update resolves a critical issue where the publish workflow was failing due to a version mismatch between the local package.json and the npm registry. The package.json version has been bumped to 3.35.0, and a new auto-recovery step has been added to ensure future discrepancies are automatically corrected. This change will streamline the publishing process and prevent similar issues from arising in the future."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#516",
+      "title": "Enhance CI with BOT_GITHUB_TOKEN in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "workflow",
+        "automation",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/516",
+      "summary": "This update modifies the translate workflow to use the BOT_GITHUB_TOKEN instead of the default GITHUB_TOKEN. This change ensures that auto-translate PRs will trigger CI checks and can be auto-merged once they pass. The previously stuck PR will be unblocked through a close and reopen process using the bot's PAT."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#504",
+      "title": "Upgrade GitHub Release Action to v3 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "update",
+        "github-actions",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/504",
+      "summary": "This update bumps the softprops/action-gh-release from version 2 to 3, transitioning the action runtime from Node 20 to Node 24. The change ensures compatibility with the latest Node environment, enhancing performance and security. The workflow file has been updated accordingly to reflect this new version."
+    }
+  ]
+}
