@@ -3,6 +3,291 @@
   "date": "2026-05-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#71",
+      "title": "Enhance cross-site user identity handling in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "auth",
+        "frontend",
+        "user-experience",
+        "security",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update introduces a cross-site user identity guard to ensure users are directed to the correct account when navigating between AceDataCloud sub-sites. It adds a `user_id` parameter to outbound links, which is evaluated by the destination site's router guard to manage user sessions effectively. The implementation includes new utility functions and router modifications to enhance user experience and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#542",
+      "title": "Enhance Cross-Site User Identity Management in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "security",
+        "user-experience",
+        "router",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/542",
+      "summary": "This update introduces a cross-site user ID guard to ensure users are correctly authenticated when navigating between AceDataCloud sub-sites. It adds a new utility for appending the current user ID to outbound links, preventing confusion when users are logged into different accounts. The router guard has been integrated to handle user ID validation, enhancing the overall user experience and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#255",
+      "title": "Enhance cross-site user experience with identity guard in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "user-experience",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces a cross-site user identity guard to ensure users are directed to the correct account when navigating between AceDataCloud sub-sites. Key changes include the addition of a utility for annotating outbound links with the current user ID and a router guard to handle incoming links. This enhancement improves user experience by preventing confusion caused by mismatched sessions across different sites."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#73",
+      "title": "Fix logo height on OAuth callback page in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "bugfix",
+        "oauth",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where the AceData logo was displayed at an incorrect size on the connector OAuth callback page. By adding a height constraint to the logo component, it now matches the sizing used in other callback pages, ensuring a consistent appearance across connectors. This change impacts all connectors that share the same callback structure, enhancing the user interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AutoCert#8",
+      "title": "Expanded Domain Coverage for AutoCert in Auto Cert 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AutoCert",
+        "feature",
+        "update",
+        "documentation",
+        "certificates"
+      ],
+      "public": false,
+      "summary": "This update adds `*.studio.acedata.cloud` to the AutoCert domain list for wildcard certificate issuance. The `renew.py` script and `README.md` have been updated accordingly to reflect this change. The new domain will require a manual trigger of GitHub Actions post-merge for it to take effect."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#53",
+      "title": "Update Nexior Consumer App URL in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "update",
+        "nexior"
+      ],
+      "public": false,
+      "summary": "The documentation for the Nexior consumer app has been updated to reflect its new primary URL, now accessible at https://studio.acedata.cloud/. This change is documented in the `AGENTS.md` file, which also includes a symlink to `CLAUDE.md`. Both the old and new URLs will continue to serve the same Nexior bundle for the time being."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#540",
+      "title": "Update fallback origin to studio.acedata.cloud in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "router",
+        "json-ld",
+        "fallback",
+        "update",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/540",
+      "summary": "This update modifies the SSR/initial-paint fallback origin in the router's WebApplication JSON-LD schema, changing it from 'https://hub.acedata.cloud' to 'https://studio.acedata.cloud'. This change only affects scenarios where the window location is unavailable, ensuring that the actual hostname is still used during real visits. Both hostnames will continue to serve the same Nexior bundle."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#381",
+      "title": "Update Chinese Docs to Reflect New Studio URL in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "update",
+        "chinese",
+        "branding",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update replaces all instances of `hub.acedata.cloud` with `studio.acedata.cloud` in the Chinese documentation located in `docs/zh-CN/`. Key changes include modifications across 25 files, ensuring consistency in branding. Additionally, the publish script has been updated to point to the new consumer URL, facilitating a smoother documentation pipeline."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#48",
+      "title": "Update CTAs to Open Studio in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "update",
+        "roadmap",
+        "studio",
+        "cta",
+        "links"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/48",
+      "summary": "This update modifies the public roadmap CTAs to direct users to the new Studio Platform at studio.acedata.cloud. Key changes include updates to the top navigation, hero section, and footer buttons, ensuring a seamless transition from the previous Hub links. The README has also been updated to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#253",
+      "title": "Update Links to New Studio Domain in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "links",
+        "seo",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update modifies user-facing links in the PlatformFrontend to point to the new Studio Platform domain, `https://studio.acedata.cloud`. Key changes include updates to the 'Try Now' menu item, footer links, and SEO JSON-LD data. This ensures a seamless transition for users while maintaining compatibility with existing links."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#69",
+      "title": "Update sidebar to reflect Studio Platform in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "localization",
+        "update"
+      ],
+      "public": false,
+      "summary": "The sidebar entry previously labeled 'UX Platform' has been renamed to 'Studio Platform' and now directs users to studio.acedata.cloud. This change includes updates to constants, utility functions, and localization files across 18 languages, ensuring a consistent user experience. The new link is already live and serves the same Nexior bundle."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#541",
+      "title": "Add missing i18n keys for better localization in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "localization",
+        "bugfix",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/541",
+      "summary": "This update adds 13 missing static i18n keys across various components, including API, headshots, QR art, site, and suno. The changes ensure that users see the correct translated labels instead of raw key strings, enhancing the overall user experience. The new keys have been added to both English and Chinese locale files, with other languages to be updated in the next translation cycle."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#254",
+      "title": "Automated i18n Updates from zh-CN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This PR introduces automatic updates for internationalization (i18n) translations based on changes from the zh-CN source. Key modifications include updates to console.json files across multiple languages, enhancing the user experience for non-Chinese speakers. The changes ensure that the platform remains accessible and user-friendly for a diverse audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#538",
+      "title": "Fix download button localization in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "localization",
+        "bugfix",
+        "i18n",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/538",
+      "summary": "This update adds the missing localization for the download button in the chat entity card, ensuring it displays the correct translated labels in both English and Chinese. The key 'common.button.download' has been defined in the respective language files, resolving the issue where the raw key was shown instead of the intended text. After deployment, users will see 'Download' or '下载' as expected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#539",
+      "title": "Fix chat URL navigation issue in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "navigation",
+        "chat",
+        "vue",
+        "router"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/539",
+      "summary": "This update resolves a bug where the chat URL did not update correctly when switching conversations, leading to issues with page refresh and navigation. The fix involves replacing params-only router pushes with path-based pushes, ensuring the URL reflects the current conversation. This change enhances user experience by maintaining accurate navigation paths across different chat models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#252",
+      "title": "Enhance Console with OAuth Links in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "oauth",
+        "i18n",
+        "navigation"
+      ],
+      "public": false,
+      "summary": "This update introduces three new external links in the Console's left sidebar, directing users to OAuth Apps, Connectors, and Skills pages on auth.acedata.cloud. These additions are strategically placed under the User Profile section for better organization and accessibility. The i18n files for English and Chinese have been updated to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#537",
+      "title": "Polish chat UI with icon alignment and button restoration in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "chat",
+        "bugfix",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/537",
+      "summary": "This update addresses three UI regressions in the chat message row, enhancing the overall professionalism of the interface. Key changes include aligning the edit and copy icons, ensuring the assistant's avatar and answer text are vertically aligned, and restoring the copy and regenerate buttons for all non-empty responses. These improvements contribute to a more cohesive and user-friendly chat experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#68",
+      "title": "Fix GitHub SSO client_id fallback for smoother logins in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "auth",
+        "frontend",
+        "bugfix",
+        "oauth"
+      ],
+      "public": false,
+      "summary": "This update corrects the GitHub SSO client_id fallback to align with the historical OAuth App credentials. The previous configuration caused invalid redirect URI errors due to mismatched client IDs. Now, the frontend is back in sync with the production settings, ensuring a seamless login experience for users."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#536",
       "title": "Streamline chat toolbar by removing skill and connector buttons in Nexior 🚀",
       "tags": [
