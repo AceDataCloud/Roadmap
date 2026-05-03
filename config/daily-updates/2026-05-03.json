@@ -3,6 +3,249 @@
   "date": "2026-05-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#502",
+      "title": "Update create-pull-request to v8 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "update",
+        "workflow",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/502",
+      "summary": "This update bumps the create-pull-request action from version 7 to 8, enhancing compatibility with Node 24 and requiring Actions Runner v2.327.1 or later for self-hosted runners. Key changes include updates to the checkout action version and improvements in handling API calls. This upgrade aims to streamline pull request creation and enhance overall workflow efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#553",
+      "title": "Automated i18n Updates for Multiple Languages in Nexior 🌍",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "translations",
+        "localization",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/553",
+      "summary": "This PR introduces auto-generated internationalization (i18n) translation updates from the zh-CN source. Key changes include modifications and additions to language files for Arabic, German, English, Spanish, Finnish, French, Italian, Japanese, Korean, Polish, Portuguese, and Russian. These updates enhance the localization support across various languages, improving accessibility for users worldwide."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#549",
+      "title": "Migrated Nexior from Yarn to NPM in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "migration",
+        "npm",
+        "yarn",
+        "cloudflare",
+        "devops"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/549",
+      "summary": "This update transitions the Nexior project from Yarn 1 to NPM, enabling Cloudflare Pages branch previews and aligning with the toolchain of other monorepo projects. Key changes include the removal of `yarn.lock`, the addition of `package-lock.json`, and updates to various CI workflows to utilize NPM commands instead of Yarn. This migration aims to resolve dependency issues and streamline the development process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#818",
+      "title": "Enhance BYOK Support for Chat Routing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "byok",
+        "chat",
+        "llm",
+        "feature",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update integrates the Bring Your Own Key (BYOK) feature into the chat handler, allowing user-supplied API keys to route traffic directly to the intended LLM providers. Key changes include modifications to the LLMClientOptions to support BYOK mode, ensuring that internal identifiers are stripped from requests for user privacy. Additionally, error handling has been improved to provide clear feedback on BYOK-related issues without silent fallbacks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#76",
+      "title": "Enhance Connector Browsing Experience in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "ui",
+        "frontend",
+        "connections",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update introduces a new 'Browse Connectors' dialog in the AuthFrontend, allowing users to easily explore and add connectors. Key features include a dropdown menu for adding connectors, a comprehensive sidebar for filtering by source and category, and improved card displays for each connector. Additionally, the installation process has been streamlined with two response types to enhance user interaction."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#81",
+      "title": "Enhance Synthetic Provider Display in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "backend",
+        "ui",
+        "improvement",
+        "synthentic-providers"
+      ],
+      "public": false,
+      "summary": "This update improves the display of synthetic providers in the connections list by ensuring that the correct catalog display fields are shown. Key changes include fetching the display name, icon URL, and description from the connection profile when no registered adapter is found. This enhancement provides a clearer and more informative UI for users interacting with synthetic providers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#552",
+      "title": "Enhance SEO and Branding for White-Label Subsidiaries in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "seo",
+        "branding",
+        "white-label",
+        "nexior",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/552",
+      "summary": "This update modifies the SEO and branding logic for white-label subsites by pulling site-specific data from the store state. Key changes include dynamic generation of `<title>`, Open Graph tags, and JSON-LD properties based on the subsite's configuration, ensuring accurate representation across platforms. The implementation maintains existing behavior for first-party origins while allowing for customized branding on subsites."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#551",
+      "title": "Empower Users with 'My Subsites' Management UI in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "subsite",
+        "management",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/551",
+      "summary": "This update introduces a new 'My Subsites' management UI, allowing users to create and manage their subsites directly from their profile menu. The feature is gated by the parent site's configuration, ensuring it only appears where enabled. Key changes include new routes, UI components, and backend integrations to support subsite creation and management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#817",
+      "title": "Enhance BYOK Credential Management in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "byok",
+        "credentials",
+        "security",
+        "api",
+        "nexior"
+      ],
+      "public": false,
+      "summary": "This PR introduces the foundational CRUD operations for BYOK (Bring Your Own Key) credentials within the Nexior chat framework. It establishes a new endpoint for managing user credentials securely, utilizing AES-256-GCM encryption for sensitive data. The feature is designed to operate independently within the `aichat2` module, ensuring that existing services remain unaffected while laying the groundwork for future enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#816",
+      "title": "Enhanced Sandbox with Preinstalled Toolkit in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "sandbox",
+        "pdf",
+        "ocr",
+        "data-analysis",
+        "docker"
+      ],
+      "public": false,
+      "summary": "The sandbox image has been upgraded to include a comprehensive toolkit, featuring essential utilities and libraries for PDF processing, data analysis, and OCR. This update also enforces non-root execution and improves resource allocation to prevent out-of-memory issues. The README has been rewritten to provide clear guidance on the preinstalled tools available for skill authors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#80",
+      "title": "Enhance Slack Connection Profile with User Info in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "slack",
+        "backend",
+        "user-info",
+        "profile",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update enriches the Slack connection profile by adding user details such as real name, email, and avatar. The `fetch_profile` method now includes a call to `users.info` after `auth.test`, ensuring that the frontend receives complete user information. Additionally, the connection process remains robust, allowing fallback to existing data if the `users.info` call fails."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#550",
+      "title": "Enhance Studio Ingress with Wildcard Support in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ingress",
+        "wildcard",
+        "tls",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/550",
+      "summary": "This update introduces a wildcard route for `*.studio.acedata.cloud` in the studio ingress configuration, directing traffic to the existing `studio-frontend` service. This change prepares the system for future subsite configurations, ensuring that the correct branding is rendered once the necessary backend setups are complete. Additionally, it includes updates to the TLS certificate requirements for the new wildcard domain."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#79",
+      "title": "Enhance Connector Catalog with Install Endpoint in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "api",
+        "connections",
+        "catalog"
+      ],
+      "public": false,
+      "summary": "This update introduces a functional install endpoint for the connector catalog, allowing users to create connections directly from the Browse Connectors interface. The new POST endpoint supports various authentication modes, streamlining the connection process for users. Additionally, it ensures that each connection is tagged with a catalog identifier for better tracking in the directory."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#382",
+      "title": "Enhance Subsite Creation Flow with Gating in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "subsite",
+        "backend",
+        "features",
+        "validation",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces a new subsite creation gate, allowing parent Sites to manage subsite creation effectively. Key changes include the addition of a `features.subsite` configuration block, new validators for subsite slugs, and a secure creation process that enforces parent Site identity. The implementation ensures zero behavioral changes for existing Sites until explicitly enabled."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#78",
+      "title": "Introducing Browse Connectors Catalog in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "api",
+        "backend",
+        "connectors",
+        "catalog"
+      ],
+      "public": false,
+      "summary": "This update adds a new 'Browse Connectors' catalog to AuthBackend, allowing users to easily discover and connect to supported connectors without needing to reference documentation. Key features include a new ConnectorCatalogItem model, read APIs for listing and retrieving catalog items, and user-specific installation tracking. The initial seed includes five official connectors, paving the way for future enhancements."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#547",
       "title": "Enhance User Message Bubble Padding in Nexior ✨",
       "tags": [
