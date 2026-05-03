@@ -36,7 +36,7 @@ Links:
 - Roadmap: `https://roadmap.acedata.cloud`
 - All Services: `https://platform.acedata.cloud/services`
 - Developer Documentation: `https://platform.acedata.cloud/documents`
-- Try Now (Hub): `https://hub.acedata.cloud`
+- Try Now (Studio): `https://studio.acedata.cloud`
 - Open-source (Nexior): `https://github.com/AceDataCloud/Nexior`
 
 ## How $ACE Fits
