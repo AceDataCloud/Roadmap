@@ -3,6 +3,87 @@
   "date": "2026-05-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#83",
+      "title": "Expanded Connector Catalog with New Entries in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "features",
+        "backend",
+        "connectors",
+        "updates",
+        "data"
+      ],
+      "public": false,
+      "summary": "This update significantly expands the connector catalog from 5 to 20 entries, adding 14 AceDataCloud official connectors and 5 partner integrations. The new entries include various categories such as video, image, and music, enhancing the platform's capabilities without altering any code paths. All new icons have been verified for authenticity and are ready for deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#554",
+      "title": "Empower Subsite Owners with Custom Domain Binding in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "custom-domain",
+        "subsite",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/554",
+      "summary": "This update introduces a user-friendly custom domain binding wizard for subsite owners, allowing them to bind their own hostnames directly from the browser. Key features include a status panel that tracks the binding process and provides real-time feedback, eliminating the need for backend or DevOps involvement after the initial binding action. The implementation includes new models, operators, and UI components to enhance the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#384",
+      "title": "Empower Custom Domains with Automated Lifecycle in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "custom-domain",
+        "automation",
+        "backend",
+        "dns",
+        "edgeone"
+      ],
+      "public": false,
+      "summary": "This update introduces Phase 2 of the custom domain feature, allowing site owners to bind their own hostnames to subsites with a fully automated lifecycle. Key enhancements include a state machine for DNS verification, EdgeOne domain provisioning, and free DV HTTPS certificate issuance, all without manual intervention. The implementation includes new models, serializers, and views to support this functionality, ensuring a seamless experience for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#383",
+      "title": "Fix subsite inviter ID leak in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "subsite",
+        "backend",
+        "referrals"
+      ],
+      "public": false,
+      "summary": "This update addresses a referral-attribution leak during subsite creation by ensuring that the `default_inviter_id` is set to the subsite owner at the time of creation. Previously, if an anonymous visitor opened the subsite first, their ID would incorrectly be credited for signups. The fix involves a small code change that prevents this issue from occurring."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#555",
+      "title": "Empower Your Chat with BYOK Settings Page and Active-Key Badge in Nexior 🔑",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "chat",
+        "byok",
+        "ui",
+        "settings"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/555",
+      "summary": "This update introduces a new settings page for Bring Your Own Key (BYOK) functionality, allowing users to register, edit, test, and delete their API credentials directly within the Nexior console. Additionally, an active-key badge is now displayed in the chat header when a user's key is in use, enhancing the user experience by providing clear visibility of their active credentials. This feature streamlines the integration of user-supplied API keys, ensuring that chat traffic is billed directly to the user's provider account."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#502",
       "title": "Update create-pull-request to v8 in Nexior 🚀",
       "tags": [
