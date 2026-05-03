@@ -3,6 +3,123 @@
   "date": "2026-05-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#560",
+      "title": "Enhance Navbar with 'My Subsites' Dropdown in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "navbar",
+        "subsite",
+        "ui",
+        "accessibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/560",
+      "summary": "This update adds a 'My Subsites' option to the navbar avatar dropdown, improving accessibility for users on subsite-enabled origins. The dropdown now links to the subsite index and utilizes the faSitemap icon for visual clarity. This change ensures that users can easily navigate to their subsites directly from the main interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#88",
+      "title": "Fix discovery and reuse issues in Backend 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "oauth",
+        "dcr",
+        "mcp",
+        "connector"
+      ],
+      "public": false,
+      "summary": "This update addresses three critical issues identified during smoke-testing. It fixes OAuth metadata endpoint errors for Stripe, improves the handling of dynamic client registration to prevent token exchange failures, and ensures official AceDataCloud connectors now expose valid MCP URLs for proper integration. The changes enhance connector reliability and streamline the user experience with real OAuth tokens."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#78",
+      "title": "Enhance Scope Selection Dialog with Localized Details in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "localization",
+        "ui",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update improves the scope-selection dialog by integrating backend-localized bundle details, ensuring consistency with the main detail panel. The dialog now displays the correct labels and descriptions for GitHub access permissions, enhancing user experience. Additionally, the dialog width has been increased to accommodate the new layout without text wrapping."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#77",
+      "title": "Feat(connections): render backend-localized bundle / scope label + desc in Frontend Web ✨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#86",
+      "title": "Fix OAuth Scope ID Translation Keys in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "i18n",
+        "backend",
+        "oauth"
+      ],
+      "public": false,
+      "summary": "This update resolves a bug where raw OAuth scope IDs were displayed instead of their corresponding translation keys on the connections card. A new helper function has been introduced to sanitize and format these IDs consistently, ensuring that both seed data and runtime lookups match. Additionally, the connection serializer now slugs the scope IDs before composing the keys, improving the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#557",
+      "title": "Streamline Cloudflare Workers Setup by Removing Redundant Redirects in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "cloudflare",
+        "workers",
+        "redirects",
+        "nexior",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/557",
+      "summary": "This update removes the `public/_redirects` file, which was causing an infinite loop error in Cloudflare Workers due to its conflicting rules. The SPA fallback is now handled directly at the Worker level, making the redirects unnecessary. Additionally, a comment has been added to `wrangler.jsonc` for clarity on the configuration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#559",
+      "title": "Revamp chat composer for a cleaner look in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "design",
+        "chat",
+        "cosmetic"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/559",
+      "summary": "The chat composer has been updated to enhance its appearance by adopting a cleaner design inspired by ChatGPT. Key changes include a plain background, a thin hairline border, and a soft drop shadow, ensuring a clear separation from the page. These cosmetic adjustments improve the user experience without altering any functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#558",
+      "title": "Chore(deploy): redirect hub.acedata.cloud → studio.acedata.cloud in Nexior 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/558"
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#387",
       "title": "Fix(subsite): three follow-ups (SDK warmup + Failed retry + ICP message) in Backend 🐛",
       "tags": [
