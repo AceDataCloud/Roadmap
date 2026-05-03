@@ -3,6 +3,134 @@
   "date": "2026-05-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#576",
+      "title": "Reposition task-type tabs to the sidebar in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "layout",
+        "tabs",
+        "kling",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/576",
+      "summary": "This update moves the Kling task-type tabs from a full-width strip at the top of the page to the left sidebar, aligning with user feedback and established design patterns. Key changes include modifications to the layout files and adjustments to the TabSwitcher component for better fit and usability. The functionality remains unchanged, ensuring a seamless user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#391",
+      "title": "Fix TencentCloud Version Issue in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "sdk",
+        "tencentcloud",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where the TencentCloud SDK's version attribute was missing due to conflicting package installations. A defensive patch has been implemented in the AppConfig to ensure that the correct version is set during startup, preventing runtime errors when constructing the TEO client. The solution has been verified with successful local tests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#575",
+      "title": "Fix subsite translations for better user experience in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "i18n",
+        "localization",
+        "frontend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/575",
+      "summary": "This update resolves an issue where the subsite was displaying raw translation keys instead of the intended strings. By adding 'subsite' to the I18N_SCOPES in the i18n configuration, the application will now correctly render localized content for both Chinese and English. Users will see the appropriate titles, subtitles, and button texts upon refreshing the subsite."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#80",
+      "title": "Clean Up Dead Keys in Frontend Web ✨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "cleanup",
+        "localization",
+        "frontend",
+        "i18n",
+        "maintenance"
+      ],
+      "public": false,
+      "summary": "This update removes unused scope and permission keys from the localization files, streamlining the codebase. A total of 884 lines were deleted across 18 locale files, enhancing maintainability and performance. The changes ensure that the frontend now relies solely on the catalog endpoint for localization, eliminating hardcoded translations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#390",
+      "title": "Streamline Site Creation by Removing Subsite Gate in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "features",
+        "authorization",
+        "site-creation"
+      ],
+      "public": false,
+      "summary": "This update eliminates the `features.subsite.enabled` flag, which was causing issues for users by locking them out of site creation. The backend now relies solely on the parent Site origin for access control, ensuring a smoother user experience. Key changes include the removal of unnecessary checks and adjustments to how subdomain zones are handled, maintaining existing authorization models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#574",
+      "title": "Refactor top tab navigation to match Midjourney style in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "ui",
+        "tabs",
+        "kling",
+        "midjourney"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/574",
+      "summary": "The top tab navigation on the Kling page has been refactored to align with the Midjourney el-tabs style, enhancing visual consistency across the application. The new implementation uses `<el-tabs stretch>` and `<el-tab-pane>`, while maintaining the same public API and functionality. The avatar tab remains disabled with a tooltip, and mobile responsiveness has been preserved."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#573",
+      "title": "Enhance Subsite Visibility by Dropping Client-Side Gate in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "frontend",
+        "bugfix",
+        "visibility",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/573",
+      "summary": "This update removes the client-side feature gate for the 'My Subsites' entry, ensuring it is always visible for users on studio.acedata.cloud. The changes include modifying the logic in Center.vue and Index.vue to rely solely on hostname checks, eliminating reliance on the Vuex store state. As a result, all logged-in users will have consistent access to the subsite feature without unexpected redirects."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#79",
+      "title": "Refactor connections to use catalog endpoint in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "refactor",
+        "frontend",
+        "connections",
+        "catalog",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update aligns the frontend with the backend changes by driving all connection data from the new catalog endpoint. Key modifications include the removal of outdated interfaces and the introduction of a streamlined permission structure. The connections page now fetches and displays data directly from the catalog, enhancing consistency and reducing complexity."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#571",
       "title": "Feat(kling): duration slider + mode resolution suffix + summary chip (UX polish) in Nexior 🐛",
       "tags": [
