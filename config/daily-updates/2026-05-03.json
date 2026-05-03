@@ -3,6 +3,508 @@
   "date": "2026-05-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#68",
+      "title": "Enhance GitHubAdapter for Refreshable Tokens in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "oauth",
+        "backend",
+        "refresh"
+      ],
+      "public": false,
+      "summary": "This update enables the GitHubAdapter to handle refreshable tokens after transitioning to a GitHub App. Key changes include modifying the adapter to support token rotation and implementing a refresh mechanism that works seamlessly with existing connections. The migration ensures that users retain their identities while benefiting from improved token management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#62",
+      "title": "Remove Redundant Permission Buttons in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "ui",
+        "cleanup",
+        "frontend",
+        "auth"
+      ],
+      "public": false,
+      "summary": "This update eliminates the non-functional allow/ask/deny buttons from the user connections page, as they lacked backend support and had no impact on the system. The changes streamline the UI by removing unnecessary elements and related code, resulting in a cleaner user experience. The update involves modifications to a single file, reducing the codebase significantly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#813",
+      "title": "Enhance OpenAI Checker Scheduling for Better Coverage in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cronjob",
+        "openai",
+        "checker",
+        "configuration",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update modifies the OpenAI checker CronJob configuration to improve its efficiency and coverage. By changing the concurrency policy to 'Forbid' and adjusting the schedule to every 5 minutes, the checker can now complete a full pass without interruption, ensuring that all capabilities are validated in a timely manner. This change significantly reduces the risk of outdated capabilities being marked as valid, enhancing overall system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#812",
+      "title": "Enhance Runtime Model Fallback for Resilient Responses in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "fallback",
+        "resilience",
+        "update",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces a runtime model fallback chain that activates when all providers for a requested model fail. By refactoring the account retrieval and request handling processes, the system can now successfully return responses from fallback models instead of a generic error. This improvement enhances user experience by ensuring more reliable access to model services even during provider outages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#532",
+      "title": "Clean Up Dead Code in Nexior 🧹",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "cleanup",
+        "refactor",
+        "chat",
+        "codebase"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/532",
+      "summary": "This update removes unused code related to the chatConversationV2 method and associated types, which were remnants from an earlier prototype. The changes include the deletion of 197 lines of code across two files, streamlining the chat operator functionality. The active chatConversation method remains intact, ensuring continued support for the current production entry point."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#811",
+      "title": "Enhance error handling for upstream failures in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "security",
+        "retryable-errors",
+        "platform-service",
+        "bug-fix"
+      ],
+      "public": false,
+      "summary": "This update introduces a mechanism to treat specific upstream account-side 4xx errors as retryable, preventing sensitive billing messages from being exposed to end users. Key changes include the addition of a soft-failure detection method and improved sanitization of error responses. The implementation ensures that users receive a generic error message instead of detailed upstream errors, enhancing user experience and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#61",
+      "title": "Enhance Skills Discovery with New Browse Skills Dialog in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "skills",
+        "ui",
+        "feature",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a new 'Browse Skills' dialog that allows users to explore a directory of skills, enhancing the previous functionality that did not provide any useful interaction. The dialog features a responsive grid layout, search functionality, and a streamlined installation process for skills. Key files have been added and modified to support this new feature, improving user experience significantly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#66",
+      "title": "Launch of Public Skill Catalog in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "skills",
+        "catalog",
+        "api",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a public skill catalog that allows users to browse curated skills from upstream sources, enhancing the user experience significantly. Key features include a new model for catalog items, REST endpoints for fetching and installing skills, and a management command for syncing skills from external repositories. The implementation ensures that users can easily discover and install skills without duplicating storage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#60",
+      "title": "Hide Refresh Button for Unsupported Providers in Frontend Web 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "bugfix",
+        "ui",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update hides the Refresh button for GitHub connections that do not support refresh tokens, addressing a user experience issue. The change is implemented by adding a new 'supports_refresh' flag to the connection interface, allowing the UI to conditionally render the button. Other connections, such as Google, remain unaffected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#65",
+      "title": "Enhance Connection Serializer with Refresh Support Flag in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "serializer",
+        "connections",
+        "auth"
+      ],
+      "public": false,
+      "summary": "This update introduces a new boolean field, **supports_refresh**, in the Connection serializer to indicate whether a connection can be refreshed. This change prevents confusion for users by hiding the Refresh button for providers that do not support refresh tokens, such as GitHub OAuth Apps. The implementation is read-only and does not alter existing database behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#531",
+      "title": "Enhance Chat with Streaming Reasoning Block in Nexior 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "chat",
+        "feature",
+        "streaming",
+        "ui",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/531",
+      "summary": "This update introduces a new 'Thinking...' block that streams reasoning from models like DeepSeek-R1 and Claude 4, enhancing user interaction in the chat interface. The block auto-collapses to a 'Thought process' toggle once the model's answer is provided, ensuring a seamless experience. Key components have been rewritten to support this feature, including updates to the conversation handling and internationalization."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#810",
+      "title": "Enhance Model Reasoning Visibility in Platform Service 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "aichat2",
+        "reasoning",
+        "Nexior",
+        "Claude",
+        "streaming"
+      ],
+      "public": false,
+      "summary": "This update improves the aichat2 worker's handling of reasoning content by ensuring that all reasoning-capable models can surface their thinking processes. Key changes include the introduction of a new ThinkTagSplitter to manage in-band reasoning tags and automatic enabling of extended thinking for Claude models. These enhancements will allow Nexior to render a 'Thinking...' block effectively, improving user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#519",
+      "title": "Automated i18n Updates for Multiple Languages in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "localization",
+        "translations",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/519",
+      "summary": "This update introduces auto-generated internationalization (i18n) translation updates from the Chinese (zh-CN) source. Key modifications include enhancements across various language files, ensuring better localization support for users. The changes aim to improve user experience by providing accurate translations in multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#524",
+      "title": "Streamline Grok Module by Removing Unsupported Models in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "grok",
+        "cleanup",
+        "models",
+        "nexior",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/524",
+      "summary": "This update simplifies the Grok module in Nexior by removing unsupported models: `grok-3-reasoning` and `grok-3-deepsearch`. Key changes include the deletion of constants and references in multiple files, ensuring that only valid models are available for selection. This enhances the user experience by preventing routing requests to non-billable models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#523",
+      "title": "Optimize Vuex Module Loading in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "performance",
+        "vuex",
+        "lazy-loading",
+        "optimization",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/523",
+      "summary": "This update introduces lazy loading for per-app Vuex modules, significantly reducing the entry chunk size from 717 KB to 626 KB. The new lazy registration ensures that only the necessary modules are loaded when users navigate to specific routes, improving performance and user experience. Additionally, persisted state is maintained across sessions, enhancing the application's reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#520",
+      "title": "Streamline Initial Load by Removing PSL and Lazy-Loading FingerprintJS in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "performance",
+        "optimization",
+        "lazy-loading",
+        "dependencies",
+        "cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/520",
+      "summary": "This update enhances the initial load performance of Nexior by eliminating the `psl` dependency and implementing lazy-loading for `FingerprintJS`. The entry chunk size has been significantly reduced from 206 KB to 142 KB gzipped, contributing to a total reduction of approximately 700 KB in initial download size. Key changes include an inline implementation for domain resolution and deferring fingerprint initialization to improve critical path execution."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#527",
+      "title": "Introducing a Stunning 404 Page in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "error-handling",
+        "design",
+        "router"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/527",
+      "summary": "This update introduces a beautifully designed 404 error page that enhances user experience by providing a clear call-to-action. Users will now see a vibrant, branded not-found page with animated backgrounds and options to navigate back home or return to the previous page. The catch-all route ensures that any unknown URL leads to this informative page instead of a blank screen."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#526",
+      "title": "Add DeepSeek V4 Flash to Chat Model Selector in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "chat",
+        "localization",
+        "backend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/526",
+      "summary": "This update introduces the DeepSeek V4 Flash model to the Nexior chat model selector, enhancing user options. Key changes include updates to the constants and localization files, ensuring that users can now select V4 in the consumer app. The backend is already configured, and the model is now visible in the chat interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#528",
+      "title": "Upgrade to GPT-5.5 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "chat",
+        "gpt",
+        "update",
+        "feature",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/528",
+      "summary": "This update introduces the new default chat model, GPT-5.5, while removing the outdated GPT-5.4-nano. The ChatGPT group now supports models GPT-5.5, GPT-5.4, and GPT-5.4-mini, ensuring users have access to the latest technology. All necessary backend support is already in place, making this change effective immediately upon deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#525",
+      "title": "Enhance chat composer with popover actions and improved previews in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "chat",
+        "ui",
+        "fix",
+        "enhancement",
+        "json"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/525",
+      "summary": "This update consolidates the chat composer actions into a single popover menu, streamlining the user interface. File previews are now displayed inline above the textarea, resolving previous overlap issues with the toolbar. Additionally, raw JSON tool-call blobs are now rendered correctly in the assistant's text, improving readability and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#522",
+      "title": "Streamline initial load by optimizing element-plus chunking in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "performance",
+        "optimization",
+        "chunking",
+        "lazy-loading",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/522",
+      "summary": "This update removes the manual chunking rule for `element-plus`, allowing Rollup to automatically split components into smaller chunks. As a result, the initial download size is reduced by approximately 156 KB-gz, improving load times significantly. The critical path now only includes essential components, while others are fetched lazily as needed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#521",
+      "title": "Enhance chat with inline entity cards in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "chat",
+        "ui",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/521",
+      "summary": "This update introduces inline rendering of rich-output entity cards in chat messages, replacing the previous flat URL-only display for media artifacts. The new `EntityCard` component supports various types including audio, video, images, and files, enhancing user interaction and experience. Backwards compatibility is maintained, ensuring older deployments function as expected without disruption."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#809",
+      "title": "Enhance Media Interaction with Rich Entity Cards in Platform Service 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "aichat2",
+        "liquid",
+        "media",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces rich entity cards using the `<acard>` tag, allowing the aichat2 assistant to present media artifacts like audio and video as interactive components. The new card parser processes these tags in real-time, ensuring a seamless user experience while maintaining backwards compatibility. Additionally, the system prompt has been restructured into Liquid templates for better management and scalability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#52",
+      "title": "Streamline PR Workflow for Agents in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "workflow",
+        "agents",
+        "documentation",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update reorders the pull request workflow for agents, allowing users to create a PR before running heavy local validations. By surfacing the PR URL immediately, users can start reviewing while tests run in the background. The changes also clarify the workflow steps to prevent reverting to the old process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#51",
+      "title": "Organize Worktrees for a Cleaner Workspace in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "git",
+        "workspace",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update improves the organization of worktrees by placing them in a dedicated `.worktrees/` directory at the workspace root. This change prevents clutter in the main workspace and ensures that worktrees do not appear in the `git status` output. The documentation has been updated to reflect this new structure and explicitly advises against the previous sibling-of-submodule placement."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#50",
+      "title": "Enhance Parallel Sessions Workflow in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "workflow",
+        "git",
+        "agents",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a new section in AGENTS.md detailing the 'Parallel Sessions & Git Worktrees' workflow. It establishes guidelines for managing concurrent AI threads working on the same submodule, emphasizing the importance of using worktrees to prevent cross-session bugs. Additionally, the PR workflow has been updated to reflect these changes, ensuring a smoother development process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#517",
+      "title": "Enhance Chat Experience with URL Routing and Lazy Loading in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "chat",
+        "url-routing",
+        "lazy-loading",
+        "bug-fix",
+        "ui-update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/517",
+      "summary": "This update fixes the URL bug in the side-panel and implements URL-driven conversation routing, allowing for scenario-specific conversation management. Key changes include lazy-loading message history and improved conversation fetching, enhancing user experience with instant access to previously opened conversations. The side-panel has been cleaned up to rely on server-side filtering, streamlining the conversation display."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#808",
+      "title": "Enhance Conversations List with Model Group Filtering in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "api",
+        "performance",
+        "mongodb",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update splits the `/conversations` list endpoint into two phases, allowing for faster loading by filtering rows based on `model_group`. Key changes include the introduction of a `model_group` field, a new summary endpoint that returns conversation previews without messages, and the implementation of MongoDB indexes for efficient querying. A backfill script is also provided to populate the `model_group` for existing conversations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#518",
+      "title": "Optimize Load Time by Dropping Vendor-Web3 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "performance",
+        "optimization",
+        "web3",
+        "solana",
+        "load-time"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/518",
+      "summary": "This update significantly reduces the initial load size by removing the vendor-web3 chunk, which previously included all Web3-related packages. Key changes include lazy loading of the Solana Web3 module and making third-party requests non-blocking, resulting in a lighter and faster application. The overall eager JS and CSS size has decreased from approximately 3.9 MB to 1.8 MB, enhancing user experience on first paint."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#486",
+      "title": "Enhance Playback Options with Speed Adjustment and Prompt Reuse in Nexior 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "suno",
+        "ui",
+        "i18n",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/486",
+      "summary": "This update introduces two key features: the 'Adjust Speed' action and the 'Reuse Prompt' functionality. Users can now adjust playback speed with segmented choices and easily reuse prompts from previous tasks, enhancing the editing experience. Additionally, internationalization support has been added for both English and Chinese languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#201",
+      "title": "Automated research cycle update in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "update",
+        "solradar",
+        "candidates",
+        "data"
+      ],
+      "public": false,
+      "summary": "This update introduces a new report covering 19 candidates, including 8 new listings, 2 trending from GeckoTerminal, and 9 from the watchlist. Key outcomes include 1 hold on GME, 9 skips due to various red flags, and no buys meeting the score threshold. The report is based on multiple data sources, ensuring comprehensive analysis."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#483",
       "title": "Automated i18n Updates from zh-CN in Nexior 🚀",
       "tags": [
