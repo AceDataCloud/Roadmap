@@ -3,6 +3,286 @@
   "date": "2026-05-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#536",
+      "title": "Streamline chat toolbar by removing skill and connector buttons in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "chat",
+        "cleanup",
+        "toolbar"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/536",
+      "summary": "This update removes the skill and connector entry buttons from the top-right toolbar of the chat conversation page. The changes simplify the interface by eliminating links that opened separate tabs for skills and connections, while leaving other functionalities intact. No additional translations or icon registrations were affected by this modification."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#66",
+      "title": "Reverting GitHub SSO Client ID for Better User Experience in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "rollback",
+        "oauth",
+        "frontend",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update rolls back the GitHub App migration due to issues with token scopes and user re-authorization requirements. The classic OAuth App tokens will continue to be used, ensuring a smoother experience as they do not expire. Additionally, the refresh button remains hidden to maintain the intended user interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#75",
+      "title": "Reverted GitHubAdapter to Classic OAuth App Behavior in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "backend",
+        "rollback",
+        "auth"
+      ],
+      "public": false,
+      "summary": "This update rolls back the GitHub App migration, restoring the classic OAuth App credentials for the K8s 'oauth-github' Secret. Key changes include the reversion of token handling, ensuring existing users are unaffected while new authorizations correctly populate scopes. Additionally, the refresh button feature has been adjusted to enhance user experience by hiding it when not applicable."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#64",
+      "title": "Streamline Skills Modal by Removing Sidebar in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "cleanup",
+        "skills"
+      ],
+      "public": false,
+      "summary": "The left sidebar in the Skills page's Browse Skills modal has been removed to enhance user experience. This change eliminates unnecessary space and focuses on the active 'Skills' tab, allowing the main content area to utilize the full width of the dialog. Unused CSS selectors related to the sidebar have also been deleted, simplifying the codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#204",
+      "title": "Enhance Shadow Portfolio Reporting in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "feature",
+        "reporting",
+        "cli",
+        "tests",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update introduces the `solradar shadow-portfolio` CLI, which generates a markdown report from existing JSONL files, providing a clear view of counterfactual P&L for paper trades. The report is automatically updated with each cron cycle, allowing users to track performance without manual calculations. Additionally, new tests ensure the reliability of the report generation process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#65",
+      "title": "Enhance Browse Skills with Installed Badges in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "skills",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces visual indicators for installed skills in the Browse Skills dialog, enhancing user experience. Cards now display a green checkmark for installed items, while installable items show a '+' sign. Additionally, a soft sync mechanism has been implemented to handle installation conflicts gracefully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#74",
+      "title": "Enhance Skill Catalog with Installed Flag in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "skills",
+        "ui",
+        "database"
+      ],
+      "public": false,
+      "summary": "This update introduces an 'installed' flag for each skill in the catalog, allowing the UI to accurately display whether a user has installed a skill. A new indexed field, `catalog_identifier`, tracks the original identifier of catalog items, ensuring correct identification even after renames. The implementation maintains efficient database queries, ensuring performance remains optimal."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#73",
+      "title": "Enhance GitHub App Token Handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "auth",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of requested scopes for GitHub App user-to-server tokens, which previously returned empty scopes. By carrying resolved scopes through the signed state, the system now correctly populates Tool Permissions on the connections page, even when the upstream token response omits them. Existing connections will need to be re-authorized to reflect the updated scopes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#535",
+      "title": "Streamlined DeepSeek Model Names in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "localization",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/535",
+      "summary": "This update simplifies the display names of DeepSeek models in the chat model picker for better consistency. The labels have been changed to a uniform short form, enhancing clarity without affecting the underlying model names or functionality. Only the English and Chinese localization files were modified, ensuring a smooth user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#534",
+      "title": "Enhance chat input handling for IME users in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "chat",
+        "ime",
+        "bugfix",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/534",
+      "summary": "This update addresses an issue where pressing Enter while using a CJK IME would unintentionally submit the chat message. The fix involves modifying the key event handling in both the main chat input and the message edit textarea to prevent submission during IME composition. Users can now confirm their IME candidates without sending messages prematurely."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#72",
+      "title": "Enhanced Logging for GitHub OAuth in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "logging",
+        "oauth",
+        "security",
+        "backend",
+        "error-handling"
+      ],
+      "public": false,
+      "summary": "This update introduces detailed logging for the GitHub OAuth process, improving error traceability during login failures. Key changes include enhanced exception handling in the AuthViewSet and better logging of API responses in the GitHubAdapter. Sensitive information is now redacted in logs, ensuring security while maintaining visibility into issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#71",
+      "title": "Fix GitHub SSO 500 Error Handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "sso",
+        "backend",
+        "auth"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical 500 error during GitHub SSO login by improving error handling when the GitHub App lacks the 'Email addresses' permission. The changes include normalizing the response from the `/user/emails` endpoint and implementing defensive checks in the login process to prevent crashes. These enhancements ensure a smoother user experience and maintain system stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#57",
+      "title": "Automated i18n Updates from zh-CN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "localization",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces auto-generated translation updates for internationalization (i18n) based on changes from the zh-CN source. Key modifications include updates to various language files, enhancing the localization experience across multiple languages. The changes aim to improve user accessibility and engagement with the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#63",
+      "title": "Fix GitHub SSO client_id for seamless login in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "bugfix",
+        "auth",
+        "frontend",
+        "sso"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue with GitHub SSO login in production. The client_id in the configuration file has been updated to match the new GitHub App, resolving the 500 error during login attempts. This change ensures users can authenticate smoothly without encountering errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#70",
+      "title": "fix connection deletion response in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "api",
+        "backend",
+        "http",
+        "connections"
+      ],
+      "public": false,
+      "summary": "The DELETE endpoint for connections now correctly returns a 204 No Content status instead of a 500 Internal Server Error. This change resolves a pre-existing bug where the response was not properly handled after a successful deletion. The fix involved moving the return statement to ensure the correct response is sent back to the frontend."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#533",
+      "title": "Fix chat composer dropdown issue in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "chat",
+        "dropdown",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/533",
+      "summary": "This update resolves a bug where the composer dropdown in the chat interface was unresponsive when clicking the '+' button. The fix involves wrapping the tooltip in a dedicated trigger element to ensure proper functionality of the dropdown. After the change, the dropdown now opens correctly, displaying the options for 'Upload from files', 'Skills', and 'Connectors'."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#69",
+      "title": "Enhance Skill Catalog with Composio Source and Auto-Sync in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "cronjob",
+        "skills",
+        "sync"
+      ],
+      "public": false,
+      "summary": "This update introduces the ComposioHQ curated source, adding 28 new community skills to the catalog, bringing the total to approximately 45. A new CronJob has been implemented to automatically sync the skill catalog every 6 hours, ensuring up-to-date skills are available. Additionally, improvements to the matching logic allow for better handling of different directory structures."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#814",
+      "title": "Boosted OpenAI Checker with Parallelism and Priority Sorting in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "performance",
+        "parallelism",
+        "openai",
+        "checker"
+      ],
+      "public": false,
+      "summary": "This update introduces significant enhancements to the OpenAI checker by implementing parallel processing for account checks and prioritizing capabilities based on their urgency. The new structure allows for up to 32 concurrent HTTP probes, drastically reducing the time for a full pass from minutes to approximately 10 seconds. Additionally, capabilities are now sorted to ensure that the most critical checks are performed first, improving the overall efficiency and responsiveness of the system."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthBackend#68",
       "title": "Enhance GitHubAdapter for Refreshable Tokens in Backend 🚀",
       "tags": [
