@@ -3,6 +3,125 @@
   "date": "2026-05-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#387",
+      "title": "Fix(subsite): three follow-ups (SDK warmup + Failed retry + ICP message) in Backend 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#556",
+      "title": "Automated i18n Updates from zh-CN in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "localization",
+        "translations",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/556",
+      "summary": "This update introduces auto-generated internationalization (i18n) translation updates based on changes from the zh-CN source. Key additions include new language files for Arabic, German, and Greek, along with modifications to existing console and subsite translations. This enhancement improves localization support across multiple languages, ensuring a better user experience for diverse audiences."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#85",
+      "title": "Chore(deps): bump tencentcloud-sdk-python from 3.1.85 to 3.1.89 in the python-deps group in Backend 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#82",
+      "title": "Enhance Localization for Connectors in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "localization",
+        "backend",
+        "translations",
+        "api",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update migrates the localization of connectors and scopes from the frontend to the backend, introducing a new Translation model and a CronJob for automated translations. Key changes include the addition of a Language enum, improved API responses with localized descriptions, and a management command for seeding translations. This enhances the user experience by providing accurate and timely translations across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#127",
+      "title": "Enhance billing checks for BYOK credentials in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "billing",
+        "api",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update introduces a new condition in the billing check logic for the BYOK credentials endpoint, allowing it to bypass billing checks as it is metadata-only and never chargeable. The change involves a minor addition to the `can_skip_check.py` file, ensuring that the gateway correctly handles requests for the `/aichat2/credentials` path. This enhancement supports seamless integration with the existing API structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#385",
+      "title": "Feat(aichat2): register /aichat2/credentials Api row for BYOK in Backend ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#386",
+      "title": "Fix(subsite): harden custom-domain view + auto-apply migrations on deploy in Backend 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#84",
+      "title": "Enhance Public Connector Catalog with CronJob in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "kubernetes",
+        "cronjob",
+        "oauth"
+      ],
+      "public": false,
+      "summary": "This update introduces a new public connector catalog with eight community-driven Streamable-HTTP MCP servers, all utilizing OAuth Dynamic Client Registration. A Kubernetes CronJob has been added to sync the catalog every six hours, ensuring it reflects the latest changes automatically. Additionally, the deployment script has been updated to include this new CronJob for seamless integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#208",
+      "title": "Automated research cycle update in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "update",
+        "solana",
+        "candidates",
+        "liquidity"
+      ],
+      "public": false,
+      "summary": "This update introduces a new research file for the automated cycle conducted on May 3, 2026. A total of 18 candidates were reviewed, with 11 skipped due to low liquidity. The intents include 1 hold and 7 skips, with detailed insights on each candidate's performance and signals."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthBackend#83",
       "title": "Expanded Connector Catalog with New Entries in Backend 🚀",
       "tags": [
