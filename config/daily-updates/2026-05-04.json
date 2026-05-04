@@ -3,6 +3,343 @@
   "date": "2026-05-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#834",
+      "title": "Introducing WeChat Official Account Skill for Enhanced Integration in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "wechat",
+        "skills",
+        "integration",
+        "api",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update adds a new built-in skill for managing WeChat Official Accounts, allowing users to generate articles, manage drafts, and send customer service messages through the WeChat MP API. The skill is automatically discovered and integrates seamlessly with the existing WeChat connector, enhancing the functionality available to users. Key safety features and error handling have also been implemented to ensure a smooth user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#833",
+      "title": "Fix billing for generated images in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "bugfix",
+        "seedream",
+        "platform",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update addresses a significant under-billing issue in the Seedream image generation process. Previously, group generation requests were incorrectly billed as if they only produced a single image, leading to a ~93% under-charge. The fix ensures that the actual number of generated images is tracked and forwarded for accurate billing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#403",
+      "title": "Enhance Seedream API with Group Generation Support in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "openapi",
+        "billing",
+        "tests",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces two new parameters to the Seedream API for group image generation, enhancing user experience by allowing consistent character and style across multiple images. The OpenAPI specification has been updated to include these parameters, and a thorough audit of the pricing structure ensures accurate billing for multi-image requests. Additionally, new tests have been added to validate the changes and ensure reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#112",
+      "title": "Add WeChat Official Account BYOC Connector in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "wechat",
+        "connector",
+        "backend",
+        "byoc"
+      ],
+      "public": false,
+      "summary": "This update introduces a new BYOC connector for WeChat Official Accounts, allowing users to connect their AppID and AppSecret to the platform. The integration enables functionalities such as generating articles, managing drafts, and sending customer messages through the WeChat MP API. The connector is now available in the connection catalog, enhancing communication capabilities for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#70",
+      "title": "Automatic i18n Updates from zh-CN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This PR introduces automated updates for internationalization (i18n) translations based on changes from the zh-CN source. Key modifications include updates to various language files, enhancing the user experience for multiple languages. The changes ensure that users across different regions receive accurate and up-to-date translations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#88",
+      "title": "Enhance BYOC Connector Visibility in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "bugfix",
+        "byoc",
+        "tencentcloud"
+      ],
+      "public": false,
+      "summary": "This update introduces Tencent Cloud to the inline list of BYOC connectors on the connections page. The change modifies the available rows logic to include 'byoc' alongside 'oauth_preset', allowing for a seamless user experience when connecting. Additionally, it streamlines the authorization process by directly opening the credentials dialog without unnecessary redirects."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#111",
+      "title": "Streamline BYOC Credential Encryption in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "encryption",
+        "security",
+        "backend",
+        "byoc",
+        "refactor"
+      ],
+      "public": false,
+      "summary": "This update refines the BYOC credential encryption process by eliminating the previously introduced `CONNECTION_CRYPT_KEY` and reusing the existing `CONNECTION_VAULT_KEY`. Key changes include modifications to the `connection_crypto.py` file to implement a unified encryption path, ensuring better security and maintainability. The production impact is zero, as the new format aligns with trusted existing mechanisms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#830",
+      "title": "Enhance BYOC Credential Injection for Skills in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "byoc",
+        "credentials",
+        "skills",
+        "tencentcloud",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update integrates the BYOC credentials into the skill sandboxes, allowing seamless access to user-specific secrets during chat interactions. Key changes include the addition of a new interface for credentials, an allowlist for BYOC providers, and enhanced error handling to ensure smooth operation. This enhancement is crucial for enabling the Tencent Cloud connector and will facilitate future integrations with other cloud services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#170",
+      "title": "Exciting New Tencent Cloud Skills Added in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "tencentcloud",
+        "skills",
+        "devops",
+        "features",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/170",
+      "summary": "This update introduces six official skills for Tencent Cloud, enhancing user capabilities in areas like object storage, log management, and Kubernetes operations. Each skill is designed for loose coupling, allowing users to install only what they need while leveraging the official Tencent Cloud SDK for seamless integration. The rollout is independent of previous AuthBackend changes, ensuring immediate availability once the catalog is synced."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#831",
+      "title": "Enhance Microsoft Integration with New Skills in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "microsoft",
+        "skills",
+        "integration",
+        "platform-service",
+        "oauth"
+      ],
+      "public": false,
+      "summary": "This update introduces three new skills for Microsoft services: OneDrive, Outlook Mail, and Outlook Calendar, allowing users to manage files, emails, and calendar events directly through the platform. The Microsoft Graph access token is now properly wired into the environment variable injection map, ensuring seamless functionality. Users can expect improved interactions without fallback errors when querying their Outlook inbox or managing OneDrive files."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#109",
+      "title": "Fix connection row collision for Microsoft OAuth in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "oauth",
+        "microsoft",
+        "backend",
+        "icons"
+      ],
+      "public": false,
+      "summary": "This update resolves a bug where multiple Microsoft connectors would overwrite each other's connection data due to shared OAuth provider identifiers. The unique constraint for connection rows has been extended to include a catalog identifier, allowing distinct rows for each catalog item. Additionally, proper product icons have been uploaded to enhance visual differentiation in the sidebar."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#107",
+      "title": "New BYOC Credentials Endpoint for Sandbox Injection in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "api",
+        "security",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a new endpoint for fetching BYOC credentials, enabling the aichat2 worker to inject these credentials into the skill sandbox as environment variables. Key changes include the addition of the `InternalConnectionByocCredentialsView` and a new route for `connections/byoc-credentials`, along with comprehensive tests to ensure functionality and security. This enhancement will streamline the integration of BYOC connections for skills like Tencent Cloud."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#104",
+      "title": "Add Tencent Cloud Connector for BYOC Support in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "tencentcloud",
+        "byoc",
+        "backend",
+        "connector"
+      ],
+      "public": false,
+      "summary": "This update introduces the Tencent Cloud connector as part of the BYOC (Bring Your Own Credentials) feature, allowing users to manage Tencent Cloud services using their own credentials. A new entry has been added to the connectors.yaml file, enabling the display of a Tencent Cloud card in the user interface. This change sets the stage for further integration with associated skills in future updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#606",
+      "title": "Enhance Image Viewer for Fullscreen Experience in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "image-viewer",
+        "ui",
+        "chat",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/606",
+      "summary": "This update modifies the image viewer in chat to ensure it overlays the entire viewport when an image is clicked. By setting the `preview-teleported` prop to true in both the EntityCard and ArtifactBlock components, the viewer now displays a dark backdrop with a centered, freely-zoomable image. This change improves user experience by eliminating distractions from the rest of the page."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#102",
+      "title": "Enhance BYOC Authentication for User Credentials in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "authentication",
+        "encryption",
+        "backend",
+        "connector"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `byoc` authentication mode for user-supplied credentials, enabling support for services like Tencent Cloud and AWS. Key changes include the addition of encrypted credential storage and a new endpoint for submitting credentials. This sets the foundation for a future multi-skill connector design, enhancing flexibility for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#87",
+      "title": "Enhance BYOC Credential Dialog for Seamless Integration in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "ui",
+        "security",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new BYOC (Bring Your Own Credentials) dialog component, allowing users to input SecretId and SecretKey for various connectors. Key features include schema-driven form rendering, enhanced security measures like hard-clearing fields on close, and improved error handling. The changes ensure a smoother user experience when connecting to services like Tencent Cloud."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#106",
+      "title": "Register AceDataCloud Skills as Catalog Source in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "skills",
+        "catalog",
+        "backend",
+        "features",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update registers AceDataCloud's Skills repository as the first catalog source, making 26 new skills visible in the user-facing catalog. Key changes include modifications to the DEFAULT_SOURCES in the skill catalog, ensuring that AceDataCloud appears at the top of the publisher dropdown. This enhancement improves accessibility for users browsing skills on the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#139",
+      "title": "Enhance video command help text for clarity in Clis 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "video",
+        "help",
+        "documentation",
+        "midjourney",
+        "cli"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/139",
+      "summary": "This update improves the help text for the `video` command to clarify that Midjourney video generation is strictly image-to-video, requiring an `image_url` for the `generate` action. Additionally, the `extend-video` command's docstring has been refined to align with the updated API description. These changes enhance user understanding and ensure accurate usage of the commands."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#400",
+      "title": "Streamline Site Domain Management with Caddy in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "refactor",
+        "caddy",
+        "tls",
+        "backend",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This update refactors the SiteDomain model by removing the EdgeOne integration, simplifying the structure to focus on Caddy's on-demand TLS capabilities. Key changes include the deletion of obsolete fields and the introduction of a new proxy_cname. The migration ensures a smooth transition without risking any active data, enhancing overall performance and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#605",
+      "title": "Automated i18n Updates from zh-CN in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "localization",
+        "translations",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/605",
+      "summary": "This update introduces auto-generated internationalization (i18n) translation updates derived from changes in the zh-CN source. Key modifications include updates to multiple language files, enhancing the localization experience across various languages. The changes aim to improve user accessibility and engagement in the Nexior platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#182",
+      "title": "Update Midjourney Video Tool for Image-to-Video Only in M C Ps 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "midjourney",
+        "video",
+        "update",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/182",
+      "summary": "The Midjourney video generation tool has been updated to clarify that it only supports image-to-video generation. The `image_url` parameter is now explicitly required for the `generate` action, and the documentation has been revised to reflect this constraint. These changes ensure users are aware of the limitations and requirements when using the tool."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SDK#78",
       "title": "Enhance VideoProvider with Midjourney in S D K 🎥",
       "tags": [
