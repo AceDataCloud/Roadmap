@@ -1,0 +1,106 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-05-04",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#578",
+      "title": "Enhance action derivation for video generation in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "video",
+        "ux",
+        "kling"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/578",
+      "summary": "This update fixes the issue where the `end_image_url` was incorrectly rejected during text-to-video requests. The `onGenerate()` method now automatically derives the action based on the provided inputs, ensuring smoother video generation. Additionally, the image upload limit has been corrected to one image, aligning the user experience with the intended functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#130",
+      "title": "Exciting CLI Updates with New Features in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "updates",
+        "features",
+        "veo",
+        "glm",
+        "webextrator"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/130",
+      "summary": "This update introduces new CLI tools for `glm` and `webextrator`, along with significant enhancements to the `veo` CLI. New endpoints for video manipulation in `veo` include `extend`, `reshoot`, `objects`, and `upscale`. The `glm` CLI now supports chat completions with multiple models, while `webextrator` offers commands for extracting and rendering web content."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#124",
+      "title": "Enhance Documentation for GLM and WebExtrator Services in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "api",
+        "glm",
+        "webextrator",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/124",
+      "summary": "This update introduces comprehensive documentation for the GLM and WebExtrator services, which were previously missing from the repository. Key additions include detailed guides, API integration instructions, and usage examples for both services, enhancing developer accessibility and understanding. The new documentation aims to streamline the integration process and provide clear insights into the functionalities offered by these APIs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#74",
+      "title": "Exciting New Resources Added in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "sdk",
+        "glm",
+        "veo",
+        "webextrator",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/74",
+      "summary": "This update introduces new resources for GLM, Veo, and WebExtrator services, enhancing the SDK's capabilities. The GLM service now supports chat completions with multiple model options, while Veo adds several new video operations. Additionally, WebExtrator provides advanced web extraction and rendering features, improving user control over browser interactions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#392",
+      "title": "Enhance Document Rows and API Mapping for New Endpoints in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "documentation",
+        "veo",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces four new `Document` rows for the Veo API endpoints, ensuring they are properly linked and displayed on the platform. Additionally, it refreshes the `service_api_mapping.json` file, which is crucial for the Docs sync pipeline, allowing all six Veo endpoints to be included in the documentation. The changes enhance the API reference and improve user access to the new features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#212",
+      "title": "Automated Research Cycle Results in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "solana",
+        "crypto",
+        "report",
+        "analysis"
+      ],
+      "public": false,
+      "summary": "The latest automated research cycle has been completed, analyzing 14 candidates across various sources. Notably, SOL and BONK have been marked as 'Hold' while 12 candidates were eliminated due to stringent checks. The report highlights key insights and health statuses of the sources used in the analysis."
+    }
+  ]
+}
