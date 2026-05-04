@@ -3,6 +3,233 @@
   "date": "2026-05-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#826",
+      "title": "Enhance YouTube Video Playback with Embed URLs in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "youtube",
+        "embed",
+        "video",
+        "bugfix",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update rewrites YouTube URLs to use the embed format, allowing videos to play correctly in the assistant. The changes include normalizing various YouTube URL formats and updating the card type to 'embed' for proper rendering. Extensive testing confirms that all scenarios are covered, ensuring a seamless user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#84",
+      "title": "Enhance Skills Browsing with Pagination and Publisher Dropdown in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "pagination",
+        "ui",
+        "skills",
+        "frontend",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update introduces pagination to the Browse Skills dialog, reducing the displayed skills per page to 12 for improved usability. Additionally, the publisher dropdown now shows all available publishers regardless of the current page, ensuring users can filter effectively. These changes enhance the overall user experience by making navigation and filtering more intuitive."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#100",
+      "title": "Enhance Skill Catalog with 4 New Sources in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "features",
+        "skills",
+        "backend",
+        "enhancement",
+        "catalog"
+      ],
+      "public": false,
+      "summary": "This update adds four high-star, MIT-licensed Skill repositories to the default sources, expanding the total installable skills from approximately 25 to 233. The new sources include popular repositories like 'superpowers', 'mattpocock', 'scientific', and 'marketing', which collectively cover a broader range of skills. The integration is seamless, with automatic updates through the existing sync job, ensuring users have access to a richer skill set."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#595",
+      "title": "Enhance Chat Image Loading and Caption Style in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "chat",
+        "ui",
+        "enhancement",
+        "loading",
+        "caption"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/595",
+      "summary": "This update introduces a loading placeholder for images in the chat component, preventing a broken-image flash during loading. Additionally, the caption style has been refined for better aesthetics, featuring centered alignment and a softer color scheme to enhance the visual appeal without overpowering the image."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#594",
+      "title": "Enhance chat experience by persisting composer drafts in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "chat",
+        "usability",
+        "vue",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/594",
+      "summary": "This update introduces a new feature that allows users to retain their unsubmitted composer drafts when switching between chat groups. By implementing an in-memory store for the draft, users can seamlessly transition between conversations without losing their typed content. This enhancement improves usability, especially for users exploring different models or deep-linking through connectors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#99",
+      "title": "Update default suggestion model_group to ChatGPT in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "auth",
+        "nexior"
+      ],
+      "public": false,
+      "summary": "This update changes the default suggestion model_group from Claude to ChatGPT in both the sync_connector_catalog and ConnectorCatalogItemSerializer. This ensures that users are directed to the expected ChatGPT model when deep-linking from the AuthFrontend, enhancing the user experience. Overrides in the manifest for specific suggestions remain intact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#98",
+      "title": "Ensure DB Migrations Run Before Traffic in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "deployment",
+        "migrations",
+        "backend",
+        "kubernetes",
+        "auth"
+      ],
+      "public": false,
+      "summary": "This update introduces an initContainer to the AuthBackend deployment, ensuring that database migrations are applied before the main pod starts serving traffic. This change addresses a critical issue where a missing column caused 500 errors in production. The initContainer reuses the main container's environment variables, streamlining the deployment process and preventing future migration-related errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#592",
+      "title": "Enhance Boot Screen Theme and Branding in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "branding",
+        "theme",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/592",
+      "summary": "This update improves the Nexior boot screen by addressing two key issues: the white flash for dark-mode users and the lack of brand identity. It implements a pre-paint inline script to resolve the user's theme preference before the first paint, ensuring a seamless experience. Additionally, the boot screen now features the 'Ace Data Cloud' branding, enhancing the overall visual appeal."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#589",
+      "title": "Streamline Subsite Management and Enhance BYOK in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "user-experience",
+        "byok",
+        "settings",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/589",
+      "summary": "This update integrates subsite management directly into the user-settings dialog, improving user experience by eliminating the standalone subsite page. It introduces a one-click 'Build same site' feature on the About tab for the main site, while also scoping BYOK API keys per site using the x-site-origin header. These changes enhance usability and security for users managing multiple subsites."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#591",
+      "title": "Clean up Kling sidebar by removing disabled Avatar tab in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "cleanup",
+        "localization",
+        "kling"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/591",
+      "summary": "This update removes the permanently disabled '数字人' (Avatar) tab from the Kling sidebar, streamlining the user interface. The change affects the TabSwitcher component and updates localization files to eliminate orphaned keys. Now, users will only see the actionable '视频生成' (Video Generation) and '动作控制' (Motion Control) tabs, enhancing usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#95",
+      "title": "Enhance Connector Descriptions for Better Localization in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "localization",
+        "backend",
+        "connectors",
+        "translations",
+        "mcp"
+      ],
+      "public": false,
+      "summary": "This update improves the `acedata/*` connector catalog seeds by translating and rewriting descriptions to better serve zh-CN users. Key changes include enhanced `short_description` and `description` fields that now feature brand keywords and detailed capability lists, optimizing them for keyword matching. This ensures that on-demand MCP loaders can accurately route to the right tools, enhancing user experience across all 15 official connectors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#96",
+      "title": "Fix catalog icons to CDN for seamless access in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "cdn",
+        "connectors",
+        "backend",
+        "icons"
+      ],
+      "public": false,
+      "summary": "This update rehosts all connector icons on the CDN at cdn.acedata.cloud, ensuring reliable access and preventing broken images in the Browse Connectors dialog. The changes include updates to both community and partner rows in the connectors YAML files, with all URLs verified to return the correct image MIME types. This enhancement improves the overall user experience by eliminating potential failures due to third-party favicon links."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#590",
+      "title": "Elapsed Time Now Visible on Task Previews in Nexior ⏱️",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "tasks",
+        "performance",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/590",
+      "summary": "This update introduces an 'Elapsed' time display on task preview cards across 15 generation scenarios, allowing users to see how long each task took without needing to access DevTools or logs. The elapsed time is now included in the task summary, enhancing user experience and providing immediate feedback on task performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#94",
+      "title": "Exciting New 'Try It' Prompts for Connectors in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "features",
+        "localization",
+        "frontend",
+        "backend",
+        "connectors"
+      ],
+      "public": false,
+      "summary": "This update introduces server-driven 'Try It' chat prompts to the connector catalog, enhancing user interaction. Each connector now includes hand-curated suggestions that are pre-localized based on the user's language preferences. The integration simplifies the frontend requirements, allowing for dynamic updates without additional releases."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#825",
       "title": "Enhance BYOK Credential Scoping for Multi-Site Support in Platform Service 🚀",
       "tags": [
