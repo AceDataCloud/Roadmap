@@ -3,6 +3,72 @@
   "date": "2026-05-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#580",
+      "title": "Automated i18n Updates from zh-CN in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "translations",
+        "localization",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/580",
+      "summary": "This update introduces auto-generated internationalization (i18n) translation updates based on changes from the zh-CN source. Key modifications include extensive updates across multiple language files, enhancing the localization for various languages such as Arabic, German, and Spanish. This will improve user experience by providing more accurate translations in the Nexior application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#583",
+      "title": "Enhance legacy task image display in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "frontend",
+        "image",
+        "compatibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/583",
+      "summary": "This update fixes the issue where reference images for legacy edit tasks were not displayed in the chat history. By introducing a computed property that prioritizes new fields while falling back to older ones, users can now see the relevant thumbnails immediately. This change ensures compatibility with both new and existing tasks without any regressions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#585",
+      "title": "Revamp BYOK Test Button for Better User Experience in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "byok",
+        "user-experience",
+        "frontend",
+        "backend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/585",
+      "summary": "This update replaces the 'Save and Test Connection' button with a dedicated 'Test' button in the BYOK credential dialog. The new button prevents unintended draft saves during testing and displays the masked API key for better visibility. Additionally, the backend has been updated to support the new payload structure, enhancing the overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#584",
+      "title": "Enhance chunk loading and caching strategy in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "performance",
+        "nginx",
+        "error-handling",
+        "frontend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/584",
+      "summary": "This update introduces a robust solution for handling stale chunk errors by modifying the caching strategy for `index.html` and implementing a new error handler. The `nginx.conf` file now prevents caching of the main HTML file, while a new utility listens for chunk load errors and triggers a cache-busted reload. These changes ensure users experience seamless navigation even during deployments."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#135",
       "title": "Enhance CLI with New Video Parameters in Clis 🎥",
       "tags": [
