@@ -3,6 +3,192 @@
   "date": "2026-05-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#90",
+      "title": "Upgrade Vue TypeScript tooling for faster, stable builds in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "vue",
+        "typescript",
+        "tooling",
+        "performance",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update upgrades `vue-tsc` to 2.x and TypeScript to 5.x, resolving frequent hangs and high memory usage during type-checks. The `tsconfig.json` now includes `skipLibCheck` for consistent, faster builds. Convenience scripts `type-check` and `type-check:watch` were added. No runtime code was changed, ensuring stable build output."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#113",
+      "title": "Auto-install Connector Skills on Activation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "skills",
+        "connectors",
+        "backend",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update introduces an auto-installation feature for connector skills when a user’s connection becomes ACTIVE. The required skills for each connector are now automatically installed into the user’s personal Skill rows, mirroring manual installation via Browse Skills. This enhances the user experience by ensuring relevant skills are available without additional steps or configuration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#181",
+      "title": "Restore reliable auto-merges for Docs updates in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "ci",
+        "workflow",
+        "automation",
+        "docs",
+        "bugfix",
+        "copilot"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/181",
+      "summary": "This PR fixes the broken `Sync from Docs` workflow that left dozens of PRs in draft or zombie states. It introduces proper PR-to-issue binding, closes stale Copilot PRs automatically, extends workflow timeouts, and hardens the merge step with retries and branch deletion. Permissions are widened to ensure merges succeed, and the observable `isDraft` signal replaces unreliable polling. After this update, every docs dispatch will either merge, close, or surface a failure clearly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#174",
+      "title": "Synced Midjourney, Kling, and Veo skills with new endpoints and updates in Skills ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "midjourney",
+        "kling",
+        "veo",
+        "api-update",
+        "post-generation",
+        "sync"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/174",
+      "summary": "This update brings the Midjourney, Kling, and Veo skills back in sync with upstream Docs. Midjourney's high-quality GPU cost has been corrected, Kling now supports a native 4K mode, and Veo introduces multi-image blending, updated image limits, and four new post-generation endpoints for upscaling, extending, reshooting, and object editing. Frontmatter and Gotchas sections have been updated to reflect these changes, improving clarity and usability for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#35",
+      "title": "Fix CI validation to catch nested skill directory regressions in Skills 🛠️",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "ci",
+        "bugfix",
+        "validation",
+        "workflow",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/35",
+      "summary": "This update resolves a bug in the sync workflow that caused nested duplicates in the skill directory. It introduces new validation steps in `validate.yml` to detect any future regressions, ensuring proper structure and syncing of SKILL.md files across the project. The validation checks for nested skill directories and ensures consistency between synced and canonical sources."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#180",
+      "title": "Migrated 11 Connector Skills to Skills Repo in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "migration",
+        "connectors",
+        "skills",
+        "authbackend",
+        "refactor"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/180",
+      "summary": "This PR moves 11 connector-driven skills from the PlatformService repo to the Skills repo, normalizing the frontmatter for consistency. The migration ensures that users only load the connectors they need, reducing unnecessary prompt-budget overhead. The changes will be automatically picked up by the AuthBackend during the next deployment, enhancing skill catalog visibility without code changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#179",
+      "title": "Instantly sync AuthBackend skill catalog on main merges in Skills ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "ci",
+        "workflow",
+        "kubernetes",
+        "authbackend",
+        "sync",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/179",
+      "summary": "Added a GitHub Actions workflow to immediately trigger the AuthBackend `skill-catalog-sync` CronJob whenever changes are pushed to `skills/**` or `.claude-plugin/marketplace.json` on `main`. This ensures new or updated skills appear in the AuthBackend interface without waiting for the scheduled CronJob. The workflow handles concurrency by queuing parallel merges and provides logs for up to 8 minutes to surface failures. Manual triggers via `workflow_dispatch` are also supported for re-syncing when needed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#836",
+      "title": "Fix sandbox SKILL_DIR resolution in Platform Service 🛠️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "skills",
+        "sandbox",
+        "security",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This PR resolves an issue where `$SKILL_DIR` was incorrectly resolved on the worker pod instead of within the sandbox container, leading to missing paths and minor information leaks. The fix ensures that SKILL_DIR is now resolved correctly within the sandbox, preventing errors in built-in skills like `tencentcloud-cls`, `microsoft-onedrive`, and others. The change also prevents potential path leaks between the worker and sandbox containers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#110",
+      "title": "Reorganize Google and Microsoft connectors in Backend 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "google",
+        "microsoft",
+        "refactor",
+        "backend",
+        "connector"
+      ],
+      "public": false,
+      "summary": "This update merges the two Microsoft Outlook cards into one and splits the Google connector into four separate cards for Drive, Gmail, Calendar, and Tasks. These changes improve UX by offering more targeted permission requests. The update also includes a migration to remove legacy connector rows, ensuring a cleaner catalog structure and preventing stale entries from resurfacing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#832",
+      "title": "Revamp Google and Microsoft Skills for Clarity in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "skills",
+        "google",
+        "microsoft",
+        "oauth",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update refactors the skill layer by splitting Google skills into four distinct products: Drive, Gmail, Calendar, and Tasks, each with its own OAuth scope. Additionally, it merges Outlook Mail and Calendar into a single Outlook skill, streamlining access and reducing ambiguity. The changes enhance user experience by allowing independent installation of skills and improving token management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#607",
+      "title": "Group generation now live with 5.0 model in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "seedream",
+        "group-generation",
+        "model-5.0",
+        "cost-preview",
+        "ui-update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/607",
+      "summary": "The Seedream tab in Nexior Studio now supports group generation with up to 15 images, thanks to the addition of the 5.0 model. Users can select the new 3K resolution and see accurate cost previews based on selected image counts. Group generation ensures consistency across multiple images, enhancing the experience for users creating sets of related visuals."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#834",
       "title": "Introducing WeChat Official Account Skill for Enhanced Integration in Platform Service 🚀",
       "tags": [
