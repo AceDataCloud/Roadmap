@@ -3,6 +3,195 @@
   "date": "2026-05-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#825",
+      "title": "Enhance BYOK Credential Scoping for Multi-Site Support in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "security",
+        "multi-site",
+        "credentials",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This update introduces a significant enhancement to the BYOK credential management system by scoping credentials per site rather than just per user. Key changes include modifications to the persistence layer to accommodate site-specific keys, updates to service methods to handle site origins, and the addition of a migration script to backfill existing records. This ensures that each site maintains its own independent set of credentials, improving security and usability for multi-site tenants."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#398",
+      "title": "Streamline Site Defaults for New Subs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "refactor",
+        "site",
+        "defaults",
+        "backend",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update refactors the handling of default values for newly created subsites by extracting the logic into a dedicated utility function. The `apply_site_defaults` function ensures that new subsites are initialized with complete default settings for features, auth, and language at creation time, eliminating the previous delay. Additionally, comprehensive tests have been added to validate the new functionality and ensure existing behavior remains intact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#83",
+      "title": "Exciting New \"Try It\" Prompts for Connectors in Frontend Web 🌟",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "ui",
+        "localization",
+        "frontend",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update introduces a hand-curated \"Try It\" section on each connector's detail pane, enhancing user interaction by providing server-localized chat prompts. The prompts open a new tab in Nexior's chat composer, streamlining the user experience without requiring frontend changes for updates. Key files modified include connection types, rendering logic, and localization support."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#588",
+      "title": "Enhance Chat with Deep-Link Support in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "chat",
+        "deep-link",
+        "enhancement",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/588",
+      "summary": "This update enables the chat feature to read `?query=` parameters from AuthFrontend's connector chips, allowing users to deep-link prompts directly into the composer. The implementation ensures that prompts are pasted without auto-submitting, preserving user experience by allowing edits before sending. Additionally, it safeguards against overwriting existing conversations and maintains local drafts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#82",
+      "title": "Fix iframe embedding issue for Nexior auth in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "nginx",
+        "auth",
+        "iframe",
+        "security",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update removes the `X-Frame-Options: SAMEORIGIN` header from the Nginx configuration, which was blocking iframe embedding for the Nexior authentication process across various platforms. The change ensures that users can successfully log in through the Nexior web and mobile applications without encountering errors. Additional comments have been added to prevent future reintroduction of this header, maintaining security through existing postMessage checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#587",
+      "title": "Streamline User Menu by Removing Connections Entry in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "user-interface",
+        "cleanup",
+        "navigation",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/587",
+      "summary": "This update removes the redundant 'Connections' entry from the user-avatar dropdown in the User Center. The functionality remains accessible through the Composer.vue's '+' menu, ensuring a cleaner and more efficient user experience. Key changes include the deletion of the associated dropdown item and its handler, simplifying the user interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#824",
+      "title": "Enhance On-Demand MCP Server Tool Loading in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "performance",
+        "mcp",
+        "tooling",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "This update introduces the `load_mcp_server` tool, allowing for on-demand loading of MCP server tools, significantly reducing token usage during chat requests. The system now defers loading tools until explicitly requested, improving efficiency and performance. Additionally, a new `<mcp-servers>` block has been added to the system prompt to inform the model of available servers without overwhelming it with unnecessary data."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#81",
+      "title": "Enhance Marketplace Connector Display in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "bugfix",
+        "ui",
+        "connectors",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update fixes the display issues for marketplace-installed MCP connectors by ensuring they show the correct icon and localized name instead of a generic fallback. Key changes include modifying the catalog fetching logic and updating how connections are resolved based on their identifiers. As a result, users will now see a more informative and visually appealing representation of their connectors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#214",
+      "title": "New Research Cycle Insights in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "solana",
+        "crypto",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces a new research report covering 18 candidates, with key findings on holds, skips, and buys. Notable decisions include holding SOL and BONK while skipping several candidates due to liquidity concerns and potential risks. The report ensures a comprehensive overview of the current market landscape."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#92",
+      "title": "Enhance Deploy Process with Immediate Catalog Sync in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "deploy",
+        "backend",
+        "sync",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces immediate triggering of the skill and connector catalog sync jobs right after each deploy. This ensures that any seed YAML edits are reflected in the database without waiting for the next scheduled CronJob, improving the deployment experience. The changes are safe and idempotent, preventing any potential conflicts during re-deploys."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#91",
+      "title": "Update Google Connector Icon for 2025 in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "icon",
+        "branding",
+        "update",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update replaces the Google connector's catalog icon with the new 2025 gradient 'G' logo, ensuring compliance with branding standards. The previous icon was awkwardly rendered and violated the HTTPS URL requirement. The new icon is now hosted on the AceData CDN and will automatically sync with the database via the existing CronJob."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#823",
+      "title": "Enhance BYOK Test Action for Better UX in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "user-experience",
+        "testing",
+        "api",
+        "credentials"
+      ],
+      "public": false,
+      "summary": "This update improves the credentials `test` endpoint by allowing validation of provider, API key, and base URL without requiring a saved credential ID. Users can now test configurations directly, enhancing user experience and reducing clutter in the store. The changes include a new `TestInput` object and updated response handling, along with comprehensive tests for both ID-based and ad-hoc testing flows."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#580",
       "title": "Automated i18n Updates from zh-CN in Nexior 🚀",
       "tags": [
