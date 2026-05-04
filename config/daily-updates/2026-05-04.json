@@ -3,6 +3,240 @@
   "date": "2026-05-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#405",
+      "title": "Fix(subsite): seed default features in superuser create path in Backend 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#116",
+      "title": "Feat(connectors): add read+write scopes to google/{drive,gmail,calendar,tasks} in Backend ✨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#613",
+      "title": "Fix(subsite): make row actions look like buttons + drop empty Title column + shrink empty-state icon in Nexior 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/613"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#611",
+      "title": "Fix(chat): citation chips show source name + favicon, suppress before metadata lands in Nexior 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/611"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#838",
+      "title": "Fix(aichat2): stable citation chip ordering + per-conversation logging in Platform Service 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#115",
+      "title": "Fix(connectors): show Microsoft account info on connector card in Backend 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/x402Guard#13",
+      "title": "Fix(web): proxy /health through nginx to the api pod in x402 Guard 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "x402Guard"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/x402Guard/pull/13"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/x402Guard#12",
+      "title": "Fix(deploy): three real bugs caught running the full docker stack e2e in x402 Guard 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "x402Guard"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/x402Guard/pull/12"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/x402Guard#11",
+      "title": "Feat(deploy): Dockerfiles + docker-compose + K8s manifests + CI + DEMO.md in x402 Guard ✨",
+      "tags": [
+        "github",
+        "pr",
+        "x402Guard"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/x402Guard/pull/11"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/x402Guard#10",
+      "title": "Feat(web): vault flows — create / top-up / pause / resume / clawback / MCP-sessions in x402 Guard ✨",
+      "tags": [
+        "github",
+        "pr",
+        "x402Guard"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/x402Guard/pull/10"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#610",
+      "title": "Fix(subsite): polish custom-domain dialog (round buttons, per-action loading, i18n) in Nexior 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/610"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#258",
+      "title": "Ci: auto-translate i18n from zh-CN in Frontend Web 🧪",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/x402Guard#9",
+      "title": "Feat(web): Vue 3 Dapp scaffold + Phantom adapter + landing page in x402 Guard ✨",
+      "tags": [
+        "github",
+        "pr",
+        "x402Guard"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/x402Guard/pull/9"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#257",
+      "title": "Feat(usage): show before/after balance + status-code & free-record filters in Frontend Web ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#404",
+      "title": "Feat(usage): add status_code filter + distinct status codes endpoint in Backend ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/x402Guard#8",
+      "title": "Feat(api): MCP endpoint + spend executor + per-vault session tokens in x402 Guard ✨",
+      "tags": [
+        "github",
+        "pr",
+        "x402Guard"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/x402Guard/pull/8"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/x402Guard#7",
+      "title": "Feat(api): Phantom auth + vault tx builders + delegation key wrap in x402 Guard ✨",
+      "tags": [
+        "github",
+        "pr",
+        "x402Guard"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/x402Guard/pull/7"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#114",
+      "title": "Refactor(catalog): rename \"acedata\" namespace to \"acedatacloud\" everywhere in Backend 🧹",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/x402Guard#6",
+      "title": "Feat(api): FastAPI backend scaffold + fix declare_id placeholder in x402 Guard 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "x402Guard"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/x402Guard/pull/6"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/x402Guard#4",
+      "title": "Feat(anchor): pause / resume / update_policy / clawback (owner ops) in x402 Guard ✨",
+      "tags": [
+        "github",
+        "pr",
+        "x402Guard"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/x402Guard/pull/4"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/x402Guard#2",
+      "title": "Feat(anchor): spend ix — policy enforcement + PDA-signed SPL transfer in x402 Guard ✨",
+      "tags": [
+        "github",
+        "pr",
+        "x402Guard"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/x402Guard/pull/2"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/x402Guard#1",
+      "title": "Feat(anchor): scaffold agent_vault program + create_vault ix in x402 Guard ✨",
+      "tags": [
+        "github",
+        "pr",
+        "x402Guard"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/x402Guard/pull/1"
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthFrontend#90",
       "title": "Upgrade Vue TypeScript tooling for faster, stable builds in Frontend Web 🚀",
       "tags": [
