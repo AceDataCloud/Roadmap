@@ -3,6 +3,364 @@
   "date": "2026-05-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/SDK#78",
+      "title": "Enhance VideoProvider with Midjourney in S D K 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "video",
+        "midjourney",
+        "sdk",
+        "typescript",
+        "python"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/78",
+      "summary": "This update adds 'midjourney' to the VideoProvider type in both TypeScript and Python SDKs, enabling access to the new `/midjourney/videos` endpoint. The client.video provider tables in the READMEs have also been updated to reflect this addition. Users can now generate video tasks using Midjourney seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#108",
+      "title": "Enhance Microsoft OAuth Integration in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "microsoft",
+        "backend",
+        "k8s",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update wires the Microsoft OAuth K8s secret, enabling the auth-backend to read necessary environment variables for proper configuration. Additionally, it expands the scope options for Microsoft connectors, allowing users to opt for read/write permissions during installation. These changes improve the overall functionality and user experience when integrating Microsoft services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#602",
+      "title": "Streamline CNAME Flow and Simplify Domain Management in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "cname",
+        "domains",
+        "i18n",
+        "frontend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/602",
+      "summary": "This update refactors the domain management process by collapsing the SiteDomain schema to a single CNAME instruction, enhancing user experience. The changes include dropping the EdgeOne wizard and streamlining the verification process, which now uniformly offers a 'Verify Now' action for all non-active rows. Additionally, internationalization files have been updated to reflect these changes, ensuring consistency across languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#604",
+      "title": "Fix input clipping issue in Nexior 🛠️",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "midjourney",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/604",
+      "summary": "This update addresses a clipping issue with input focus rings in the Midjourney tab of the Nexior app. By insetting the tab-pane content by 4px, the focus glow now displays correctly without visual regression across all inputs. The change ensures that the focus rings are fully visible while maintaining the integrity of the layout."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#603",
+      "title": "Enhance Video Tab UX with Required Image Indicator in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ux",
+        "midjourney",
+        "video",
+        "frontend",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/603",
+      "summary": "This update introduces two key UX improvements for the Midjourney video generation feature. A red asterisk has been added to the first-frame image label to indicate that an image is required, and a client-side check now prompts users with a message if they attempt to generate a video without uploading an image. These changes aim to reduce user errors and improve the overall experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#401",
+      "title": "Fix video pricing display and clarify image requirements in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "api",
+        "pricing",
+        "documentation",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update resolves issues with the video pricing display, ensuring accurate costs based on selected modes and resolutions. Additionally, it clarifies the requirement for an image URL when generating videos, preventing unnecessary errors for users. The changes enhance user experience and align the API documentation with actual constraints."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#256",
+      "title": "Enhance dark mode color consistency in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "scss",
+        "dark-mode",
+        "frontend",
+        "accessibility",
+        "bug-fix"
+      ],
+      "public": false,
+      "summary": "This update modifies the SCSS for dark mode to ensure proper color rendering by deriving light and dark color variables from a single source of truth. The changes prevent light-on-light text issues in dark mode, enhancing visual accessibility. The light mode remains visually unchanged, ensuring a seamless experience across themes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#86",
+      "title": "Enhance Dark Mode Visibility for Installed Cards in Frontend Web 🌙",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "dark-mode",
+        "ui-fix",
+        "frontend",
+        "scss",
+        "accessibility"
+      ],
+      "public": false,
+      "summary": "This update addresses visibility issues for installed skill cards in dark mode on the user skills page. The fix involves redefining color variables to ensure proper contrast, replacing near-white backgrounds with darker shades. As a result, text within installed cards is now clearly visible, improving user experience across multiple components."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#593",
+      "title": "Automated i18n Updates from zh-CN in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "automation",
+        "translations",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/593",
+      "summary": "This update introduces automated translation updates for internationalization (i18n) based on changes from the zh-CN source. All relevant cache files have been renamed to reflect these updates, ensuring that the application remains up-to-date with the latest translations. This enhancement will improve the user experience for Chinese-speaking users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#600",
+      "title": "Enhance health check for kubelet in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "kubelet",
+        "healthcheck",
+        "caddy",
+        "deployment",
+        "fix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/600",
+      "summary": "This update modifies the tenant-proxy configuration to include a dedicated `/healthz` endpoint that bypasses the HTTP to HTTPS redirect. The readiness probe is now pointed at this new endpoint, ensuring the kubelet can successfully check the pod's health without encountering TLS issues. This change stabilizes the deployment process and improves pod readiness in the live cluster."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#105",
+      "title": "Integrate Microsoft 365 Connectors in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "microsoft",
+        "connectors",
+        "backend",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update introduces a new OAuth provider for Microsoft 365, enabling integration with OneDrive, Outlook Mail, and Outlook Calendar. Users can now access these services through a unified Microsoft account picker, enhancing the connector experience. Additionally, new environment variables and catalog entries have been added to support this functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#103",
+      "title": "Update Connector URLs for Streamable HTTP in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "connectors",
+        "migration",
+        "backend",
+        "http",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update migrates the public connectors for Linear, Atlassian, and Asana from legacy SSE endpoints to the new Streamable HTTP endpoints. A migration script ensures existing user connections are updated without requiring re-authentication. The change enhances the reliability of the Browse Connectors UI by ensuring all connectors are using the correct transport method."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#829",
+      "title": "Enhance Image Processing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "imageprocessing",
+        "mcp",
+        "aichat2",
+        "platformservice"
+      ],
+      "public": false,
+      "summary": "This update addresses two critical bugs affecting image-driven flows in the Nano Banana MCP server. The first fix ensures that the `image_url` is recognized as a fetchable string, allowing the model to utilize it correctly without prompting the user for a re-upload. The second fix enhances the pre-load mechanism to include slugs from previously loaded MCP servers, ensuring a seamless user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#599",
+      "title": "Enhance Chat with Inline Source-Citation Chips in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "chat",
+        "citations",
+        "ui",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/599",
+      "summary": "This update introduces inline source-citation chips in the chat UI, allowing users to see citations as small numbered chips with hover preview cards. Each chip provides a quick view of the source label, title, snippet, and URL, enhancing the user experience by making it easier to reference information. The implementation ensures backward compatibility and maintains the integrity of existing chat functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#828",
+      "title": "Enhance Aichat2 with Inline Source Citations in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "aichat2",
+        "citations",
+        "parser",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces inline source citation tags (`<acite>`) to Aichat2 conversations, allowing users to see references as superscript chips that link to original sources. The new feature enhances the user experience by providing provenance for external references, making it easier to track information sources. Additionally, the parser has been generalized to handle both `<acard>` and `<acite>` tags, ensuring seamless integration and improved functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#598",
+      "title": "Introducing Caddy Tenant-Proxy for On-Demand TLS in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "infrastructure",
+        "tls",
+        "caddy",
+        "deployment"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/598",
+      "summary": "This update adds the Caddy tenant-proxy, enabling on-demand Let's Encrypt TLS for tenant custom domains. It includes a new deployment configuration and service setup, ensuring that SSL certificates can be issued automatically upon request. The architecture supports up to 50,000 tenants with persistent storage for certificates, enhancing security and ease of use."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#101",
+      "title": "Fix skill source URLs to prevent 404s in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "skills",
+        "backend",
+        "url",
+        "404"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where skill source URLs were incorrectly generated, leading to 404 errors when accessing certain skills. The fix includes adding the skill root prefix back into the URL construction and addressing a deduplication bug for multi-root sources. As a result, users will now be able to view the correct source links for all skills in the Browse Skills dialog."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#85",
+      "title": "Refine Badge Logic for BYO MCP Connectors in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "bugfix",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update modifies the badge display logic for connectors on the Connections page. Now, only genuinely user-authored MCP connectors will receive the 'Custom' badge, while catalog-curated connectors like Stripe and others will not, enhancing clarity for users. The change involves a single file modification to better differentiate between user-created and vendor-installed integrations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#399",
+      "title": "Add public ask URL for Caddy on-demand TLS in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "caddy",
+        "tls",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces a new public endpoint for the Caddy on-demand TLS feature, allowing it to validate tenant custom domains before issuing Let's Encrypt certificates. The endpoint is designed to be anonymous and does not affect existing functionality, ensuring a seamless transition as we migrate away from EdgeOne. This change is purely additive and sets the stage for future enhancements related to domain management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#597",
+      "title": "Enhance Video Playback with Iframes in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "video",
+        "iframe",
+        "bugfix",
+        "chat"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/597",
+      "summary": "This update modifies the video card rendering in the chat component to use iframes instead of HTML5 video elements. This change ensures that YouTube URLs play correctly, addressing a previous issue where users encountered a black screen. The new implementation maintains compatibility with direct media URLs while providing a consistent user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#827",
+      "title": "Fix YouTube Card Type to Video in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "youtube",
+        "frontend",
+        "tests",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update corrects the handling of YouTube cards by ensuring the type remains 'video' instead of flipping to 'embed'. The change simplifies the frontend rendering process, allowing all video cards to be displayed using iframes without requiring a separate embed type. All tests have been updated and passed successfully, ensuring compatibility with previous card types."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#596",
+      "title": "Display Original Filenames in Chat Bubbles in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "chat",
+        "ui",
+        "enhancement",
+        "files",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/596",
+      "summary": "This update enhances the chat experience by displaying the original filenames instead of opaque CDN URLs in message bubbles. Key changes include the introduction of a new computed property in the Composer component to track filenames and updates to the Conversation component to ensure these names are preserved when messages are sent. This improvement allows users to easily identify files in their chat history."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#826",
       "title": "Enhance YouTube Video Playback with Embed URLs in Platform Service 🎥",
       "tags": [
