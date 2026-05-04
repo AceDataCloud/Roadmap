@@ -3,6 +3,335 @@
   "date": "2026-05-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#135",
+      "title": "Enhance CLI with New Video Parameters in Clis 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "kling",
+        "video",
+        "update",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/135",
+      "summary": "This update synchronizes the CLI with the latest Kling OpenAPI specifications by adding new parameters for video generation, including camera control and element lists. Additionally, the character orientation option has been updated to enforce an enum, ensuring consistency with the API. These changes enhance functionality and improve user experience when generating videos."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#130",
+      "title": "Updated Kling Docs with Latest Changes in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "sync",
+        "updates",
+        "api",
+        "kling"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/130",
+      "summary": "This update syncs the Kling documentation with the latest upstream English guides, incorporating key changes to the video and motion generation API integration guides. Notable modifications include updated column headers and prompt examples to enhance clarity and alignment with the source material. The documentation now reflects the most current model capabilities and usage instructions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#178",
+      "title": "Enhance Kling Video Tools with New Parameters in M C Ps 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "video",
+        "tools",
+        "update",
+        "tests",
+        "kling"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/178",
+      "summary": "This update introduces two new optional parameters, `element_list` and `video_list`, to the Kling video generation tools. The `element_list` allows referencing subjects from the subject library, while `video_list` enables input of reference videos with specific constraints. Additionally, eight unit tests have been added to ensure these parameters are correctly handled."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#133",
+      "title": "Introducing Kling AI Video Generation CLI in Clis 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "video",
+        "ai",
+        "kling",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/133",
+      "summary": "This update introduces the Kling CLI, enabling users to generate videos from text prompts and images using the Kling AI service. Key commands include video generation, motion transfer, and task management, all structured within a standard monorepo format. The CLI supports various models and modes, enhancing flexibility for users in video creation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#128",
+      "title": "Enhance Kling AI Video Generation API Documentation in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "api",
+        "kling",
+        "video-generation",
+        "integration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/128",
+      "summary": "This update introduces comprehensive documentation for the Kling AI video generation API, including guides for video generation, motion generation, and task management. Key files added include integration guides and a detailed capability matrix, which consolidates model constraints for easier reference. These enhancements aim to streamline the developer experience and improve API usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#822",
+      "title": "Revert image URL persistence changes in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "revert",
+        "image",
+        "platform",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update reverts the recent changes made to the image URL persistence functionality in the Platform Service. The modifications removed code that captured reference image inputs for task snapshots, impacting how images are displayed in chat history. This change aims to restore previous behavior and ensure consistency in image handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#76",
+      "title": "Enhance Kling API with New Video and Motion Endpoints in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "kling",
+        "api",
+        "sdk",
+        "video",
+        "motion"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/76",
+      "summary": "This update introduces a dedicated Kling resource with enhanced capabilities, including a new `/kling/videos` schema and a `/kling/motion` endpoint. The SDK now supports specific Kling parameters through the `Kling` and `AsyncKling` classes, allowing for more tailored video generation and motion transfer functionalities. Key changes include the addition of TypeScript and Python resource files, improving client access to Kling features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#176",
+      "title": "Enhance Kling with 4K Mode and Model Updates in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "kling",
+        "video",
+        "update",
+        "documentation",
+        "models"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/176",
+      "summary": "This update introduces `4k` as a valid mode in the Kling OpenAPI spec, enhancing video generation capabilities. Additionally, the model list has been updated to include `kling-v2-6`, `kling-v3`, and `kling-v3-omni`, ensuring users have access to the latest options. Documentation for the new mode and its constraints has also been improved for clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#397",
+      "title": "Enhance Kling Model Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "kling",
+        "api",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive capability matrix for Kling models, detailing support for parameters like `end_image_url`, `generate_audio`, and `camera_control`. Additionally, descriptions in the API reference have been refined to clarify model and mode constraints, helping users avoid common errors. These changes aim to improve user experience and reduce confusion when switching between models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#581",
+      "title": "Enhance Kling Capability Matrix with User Confirmation in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "kling",
+        "capabilities",
+        "user-experience",
+        "frontend",
+        "confirmation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/581",
+      "summary": "This update introduces a comprehensive capability matrix for Kling video models, ensuring users are informed before applying unsupported settings. Key changes include the addition of conflict detection and user confirmation prompts in the Model, Mode, and Duration selectors. The enhancements aim to improve user experience by preventing silent failures and providing clear guidance on supported configurations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#582",
+      "title": "Fix site admin initialization for existing records in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "site",
+        "admin",
+        "initialization",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/582",
+      "summary": "This update ensures that Nexior correctly initializes existing Site records that have an empty `admins` list when an authenticated user accesses the site. The change modifies the site initialization logic to trigger the backend process that assigns the first authenticated user as an admin, addressing a previously unhandled scenario. Additionally, a patch change file has been added for release tracking."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#396",
+      "title": "Ensure Consistent Site Ownership in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "site-creation",
+        "bugfix",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update fixes the site creation process to ensure that the authenticated creator is always recorded as the site owner or admin. Key changes include the addition of a helper function to normalize owner fields and the implementation of default values for superuser-created sites. Additionally, existing rows missing critical user information can now be repaired through a dedicated API endpoint."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#821",
+      "title": "Fix image persistence in edit tasks for better chat history in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "images",
+        "edits",
+        "chat",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where reference image thumbnails were not displayed in the chat history for edited tasks. The fix involves modifying the `ImagesEditsHandler.prepare()` method to ensure that `image_urls` and `action` fields are included in the task snapshot. As a result, users will now see the correct reference images and task type labels in their chat history."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#567",
+      "title": "Automated i18n Updates from Chinese in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "localization",
+        "translations",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/567",
+      "summary": "This update introduces automated translation updates for internationalization (i18n) from the Chinese (zh-CN) source. Key files have been modified across multiple languages, enhancing the localization experience for users. The changes include significant additions and modifications to various language files, improving the overall accessibility of the Nexior platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#568",
+      "title": "Fix site persistence issue to prevent flag-flip outages in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "performance",
+        "user-experience",
+        "localstorage"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/568",
+      "summary": "This update removes the 'site' key from the persisted state in localStorage, addressing a critical issue where users would see outdated feature flags after a site update. By ensuring that the site data is fetched fresh on each page load, we eliminate the risk of users being locked out of new features. The change is seamless for users, requiring no action on their part for the fix to take effect."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#572",
+      "title": "Enhance User Experience with Inline Pills for Inspiration Chips in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "accessibility",
+        "inspiration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/572",
+      "summary": "This update introduces inline removable pills for selected inspiration chips, allowing users to see their choices directly above the prompt textarea. The new component, InspirationPills, ensures a seamless experience by maintaining a single source of truth for selected presets, eliminating the need for state changes. Additionally, internationalization support has been added for the remove button's aria-label, enhancing accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#579",
+      "title": "Exciting New Veo Endpoints and Features in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "veo",
+        "features",
+        "endpoints",
+        "ui",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/579",
+      "summary": "This update introduces four new Veo endpoints, enhancing user capabilities with actions like upsampling to 4K, video extension, and object manipulation. The ActionSelector now supports eight actions, and several new components have been added for improved user interaction. Additionally, internationalization support has been expanded with new language keys."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#395",
+      "title": "Enhance Admin Permissions Check in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "permissions",
+        "admin",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update fixes a critical issue in the admin permissions check that caused a server error when `obj.admins` was None. By implementing a short-circuit for superusers and ensuring a fallback for None values, admin operations can now proceed without encountering a 500 error. This change is essential for maintaining functionality in legacy subsites created under previous configurations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#577",
+      "title": "Enhance BYOK Experience in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "byok",
+        "i18n",
+        "ui",
+        "settings",
+        "user-feedback"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/577",
+      "summary": "This update introduces three key improvements to the BYOK (Bring Your Own Key) page based on user feedback. The i18n format has been flattened for better compatibility, the Base URL has been moved out of the 'advanced' section for easier access, and the BYOK settings have been relocated to the Settings dialog for a more intuitive user experience. These changes streamline the user interface and enhance usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#172",
+      "title": "Exciting Updates: New GLM and WebExtractor Servers with Enhanced VEO Endpoints in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "glm",
+        "webextrator",
+        "veo",
+        "mcp",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/172",
+      "summary": "This update introduces new MCP servers for GLM and WebExtractor, enhancing functionality for chat completions and web rendering. Additionally, VEO has been extended with four new endpoints, allowing for advanced video processing capabilities. Key changes include the addition of new tools and types, ensuring better integration and performance across services."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#578",
       "title": "Enhance action derivation for video generation in Nexior 🎥",
       "tags": [
