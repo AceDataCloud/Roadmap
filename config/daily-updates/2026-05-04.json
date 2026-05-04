@@ -3,6 +3,143 @@
   "date": "2026-05-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#614",
+      "title": "Fix(telemetry): use Aegis 'report id' (RUM /collect/* was 403) in Nexior 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/614"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#119",
+      "title": "Fix(connections): refresh re-fetches profile + un-stick EXPIRED on transient errors in Backend 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#91",
+      "title": "Feat(connections): show skeleton during initial catalog load in Frontend Web ✨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/x402Guard#17",
+      "title": "Docs(readme): full testing+usage runbook — CLI smoke, MCP inspector, troubleshooting in x402 Guard 📝",
+      "tags": [
+        "github",
+        "pr",
+        "x402Guard"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/x402Guard/pull/17"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/x402Guard#16",
+      "title": "Docs(readme): full end-to-end testing + usage runbook in x402 Guard 📝",
+      "tags": [
+        "github",
+        "pr",
+        "x402Guard"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/x402Guard/pull/16"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/x402Guard#15",
+      "title": "Fix(anchor + api + web): real program ID, devnet target, BPF stack-frame fit in x402 Guard 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "x402Guard"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/x402Guard/pull/15"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#118",
+      "title": "Chore(connectors): rewrite Try-It suggestions to be generic templates in Backend 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#183",
+      "title": "Feat(skills): add write recipes to google-{drive,gmail,calendar,tasks} in Skills ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/183"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/x402Guard#14",
+      "title": "Fix(deploy): rewrite manifests to AceDataCloud platform conventions; site is live in x402 Guard 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "x402Guard"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/x402Guard/pull/14"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#612",
+      "title": "Feat(telemetry): integrate Tencent Cloud RUM (Aegis) for Nexior in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/612"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#837",
+      "title": "Chore(aichat2): drop the 11 builtin connector skills (migrated to AceDataCloud/Skills) in Platform Service 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#406",
+      "title": "Refactor(site): extract create-path tail to remove duplication in Backend 🧹",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#117",
+      "title": "Fix(deploy): add readinessProbe + preStop hook to auth-backend (closes 502 during rolling update) in Backend 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend"
+      ],
+      "public": false
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#405",
       "title": "Fix(subsite): seed default features in superuser create path in Backend 🐛",
       "tags": [
