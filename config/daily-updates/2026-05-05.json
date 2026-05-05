@@ -3,6 +3,325 @@
   "date": "2026-05-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#848",
+      "title": "Enhance localization API to track elapsed time in Platform Service ⏱️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "localization",
+        "api",
+        "fix",
+        "metrics",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update fixes the localization worker by capturing `started_at`, `finished_at`, and `elapsed` time metrics, which were previously missing from the payload sent to the PlatformGateway. As a result, the Elapsed column for Localization API rows on the usage console will now display accurate durations, aligning with other services. This change is purely additive and does not affect the translation pipeline's behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#94",
+      "title": "Enhance Captcha Options with Cloudflare Turnstile in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "captcha",
+        "frontend",
+        "feature",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces Cloudflare Turnstile as an optional captcha provider alongside the existing hCaptcha. Users can opt-in to use Turnstile by appending `?features=turnstile` to the URL, while the default behavior remains unchanged. The integration is non-breaking, ensuring existing functionalities are preserved unless users choose to enable the new feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#622",
+      "title": "Enhance Pagination and Slim Down Loading Indicator in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "pagination",
+        "loading",
+        "ui",
+        "enhancement",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/622",
+      "summary": "This update addresses two key issues in Nexior's pagination system. First, it implements an IntersectionObserver to ensure that the pagination auto-triggers when reaching the top of the scroll, enhancing user experience. Additionally, the loading indicator has been redesigned to be slimmer and more visually appealing, improving the overall interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#95",
+      "title": "Enhance API Path Handling in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "cloudflare",
+        "api",
+        "auth",
+        "frontend",
+        "proxy"
+      ],
+      "public": false,
+      "summary": "This update introduces a Cloudflare Worker to properly reverse-proxy authentication API paths, ensuring that requests to `/api/...`, `/oauth2/...`, and `/sso/...` are correctly routed to the auth backend. The changes prevent the frontend from misinterpreting HTML responses as JSON, which previously caused login and SSO flows to fail. Additionally, the configuration for the Worker has been updated to align with production settings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#266",
+      "title": "Fix API Path Handling in Frontend Web 🌐",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "cloudflare",
+        "api",
+        "frontend",
+        "workers",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update introduces a Cloudflare Worker to reverse-proxy API paths for the PlatformFrontend, addressing issues where API calls fell through to the SPA fallback. Key changes include the addition of a new worker script and updates to the configuration file to ensure proper routing of requests. This enhancement allows the frontend to correctly handle API requests, improving functionality in the preview environment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#124",
+      "title": "Enhance Connector Prompts for Clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "connectors",
+        "improvement",
+        "user-experience",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update improves the clarity of suggestion prompts for various connectors by disambiguating names that could confuse users. For example, prompts for Google Drive and OneDrive now explicitly include their service names. This change enhances user experience by ensuring that the correct service is targeted during interactions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#123",
+      "title": "Enhance Captcha Options with Cloudflare Turnstile in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "captcha",
+        "cloudflare",
+        "hcaptcha",
+        "backend",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces Cloudflare Turnstile as an optional captcha provider alongside the existing hCaptcha, allowing for a seamless transition without breaking changes. The implementation includes a new request field to specify the captcha provider and maintains compatibility with existing clients. Both verifiers are now managed through a unified dispatcher, ensuring consistent behavior across the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#264",
+      "title": "Migrated to npm for seamless Cloudflare Builds in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "migration",
+        "npm",
+        "cloudflare",
+        "frontend",
+        "builds"
+      ],
+      "public": false,
+      "summary": "This update transitions the project from Yarn to npm, aligning it with Nexior and enhancing Cloudflare Workers Builds previews. Key changes include updates to the Dockerfile, CI workflows, and README instructions, along with the removal of the yarn.lock file and the addition of a package-lock.json. This migration ensures a single lockfile for dependency management, improving build reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#847",
+      "title": "Enhance User Interaction with New Prompt Guidance in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "aichat2",
+        "user-experience",
+        "prompt",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a new partial for the aichat2 system prompt, providing guidance on when to utilize the `ask_user_question` tool. It includes a structured schema reminder and integrates the tool into the capabilities list, enhancing the model's ability to engage users effectively. The changes ensure that the model can clarify user requirements and present options more intuitively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#627",
+      "title": "Enhance User Interaction with Ask User Question Card in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "frontend",
+        "interaction",
+        "chat"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/627",
+      "summary": "This update introduces the Ask User Question card to the Nexior frontend, allowing users to interactively respond to questions during conversations. The card supports single and multi-select options, a free-text fallback, and collapses to a summary after submission. Key files added include the card component and associated tests, enhancing the overall user experience and conversation flow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#846",
+      "title": "Enhance User Interaction with Pause/Resume in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "enhancement",
+        "user-interaction",
+        "query-loop",
+        "tool-integration"
+      ],
+      "public": false,
+      "summary": "This update integrates the `ask_user_question` tool into the queryLoop and conversation handler, enabling a seamless pause and resume functionality. Key changes include the addition of a new `tool_results` field in the request body and enhancements to the state management of tool interactions. These improvements will enhance user experience by allowing for dynamic question prompts during conversations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#844",
+      "title": "Scaffolding for User Question Feature in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "validation",
+        "types",
+        "tool"
+      ],
+      "public": false,
+      "summary": "This update introduces the initial scaffolding for the `ask_user_question` feature, including new types and a validator to handle user input. The tool is currently inert at runtime, ensuring no changes in production until the next PR integrates it into the tool registry. Key modifications include updates to type definitions and validation rules to support the new functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#92",
+      "title": "Streamlined Cloudflare Deploys and Toolchain Update in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "cloudflare",
+        "npm",
+        "deploy",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces Cloudflare Workers preview deploys, allowing automatic preview URLs for each PR, enhancing the development workflow. Additionally, the project has transitioned from Yarn to npm, ensuring consistent dependency management while preserving version integrity. Key files have been updated to reflect these changes, including the removal of Yarn-specific configurations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#122",
+      "title": "Restore catalog-whitelist filtering for Connection scopes in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "fix",
+        "security",
+        "testing",
+        "oauth",
+        "permissions"
+      ],
+      "public": false,
+      "summary": "This update reinstates the catalog-whitelist filter for Connection scopes, addressing issues where Microsoft over-grants permissions on token issuance. The fix ensures that only relevant scopes are returned based on the user's consent, improving security and compliance. Additionally, new tests have been added to validate the functionality and ensure robustness."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#626",
+      "title": "Stabilize Default Landing Route in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "router",
+        "features",
+        "stability",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/626",
+      "summary": "This update fixes the default landing route for logged-in users by replacing the unordered feature map with a stable priority array. The previous implementation caused users to be redirected to an incorrect route due to the unpredictable order of features in the database. Now, users will consistently land on the expected `/chatgpt/conversations` page, enhancing the user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#263",
+      "title": "Automatic i18n Translation Updates in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update introduces auto-generated translation updates for various languages based on changes from the zh-CN source. Key modifications include updates to usage.json files for Arabic, German, English, Spanish, French, Italian, Japanese, Korean, Portuguese, Russian, and Traditional Chinese, enhancing the application's multilingual support."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#262",
+      "title": "Streamline Cloudflare Workers Setup for Preview Deploys in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "cloudflare",
+        "workers",
+        "preview",
+        "deployment",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `wrangler.jsonc` configuration for Cloudflare Workers, enabling automatic deployment of the PlatformFrontend SPA on every push and PR. Once merged, each PR will receive a unique preview URL, enhancing the development workflow and allowing for seamless testing of changes. The setup mirrors the existing configuration used for Nexior, ensuring consistency across projects."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#261",
+      "title": "Enhance UI: Status Filter & Export Button Adjustments in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "frontend",
+        "improvement",
+        "usability",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update refines the layout of the status filter and export button for better usability on desktop. The status-code dropdown width has been reduced, and the export button has been widened to ensure 'Export CSV' fits on one line. Additionally, the placeholder text for the status filter has been shortened for clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#121",
+      "title": "Enhance security by redacting passwords in Backend 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "security",
+        "logging",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update improves security by redacting the password value in the email/password login debug log line. Previously, the plaintext password could be exposed in logs, potentially leaking sensitive information. Now, the debug logs will show 'password=<set>' instead, ensuring better protection of user credentials."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#625",
+      "title": "Enhance Android Login Flow in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "android",
+        "login",
+        "bugfix",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/625",
+      "summary": "This update improves the Android login experience by re-running the main app initialization once the authenticated user ID is available. It introduces a monotonic run ID to prevent overlapping initialization processes, ensuring that stale requests do not interfere with the logged-in state. This change resolves issues where the app remained in a skeleton state after login until a restart."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#624",
       "title": "Enhance Mobile Settings Dialog Usability in Nexior 📱",
       "tags": [
