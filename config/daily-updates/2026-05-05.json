@@ -3,6 +3,193 @@
   "date": "2026-05-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#129",
+      "title": "Enhance User Verification Process in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "verification",
+        "backend",
+        "user-experience",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update allows users who have already completed verification to re-submit their information, addressing issues with incorrect details. Key changes include removing the early rejection for verified users and adjusting uniqueness checks to exclude the user's own ID card. This ensures that users can correct mistakes without losing access, while maintaining security through SMS verification."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#104",
+      "title": "Enhance User Verification Experience in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "user-experience",
+        "frontend",
+        "verification"
+      ],
+      "public": false,
+      "summary": "This update introduces a 'Re-verify' button for users who have already completed real-name verification, allowing them to correct any mistakes in their information. The button was previously hidden and is now fully functional, enabling users to update their details seamlessly. This change improves user experience by providing a straightforward way to rectify errors without needing to contact support."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#128",
+      "title": "New onboarding survey endpoints added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "survey",
+        "backend",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces three new endpoints for the post-registration onboarding survey, allowing users to read, submit, and dismiss their survey responses. The survey data is stored in the existing User metadata, enabling flexibility without requiring database migrations. The implementation ensures data integrity with server-enforced whitelists and idempotent operations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#102",
+      "title": "Enhance Profile with Editable Banner and Advanced Avatar Cropper in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "frontend",
+        "ui",
+        "cdn",
+        "avatar",
+        "banner"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `ImageCropper` component for avatars and banners, allowing users to edit their profile images with features like zoom, rotate, and flip. The upload process has been improved to utilize CDN for image storage, enhancing performance and user experience. Additionally, a new `Banner` component has been added to allow easy editing of the profile banner, replacing the previous hardcoded image."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#127",
+      "title": "Enhance user profiles with a banner field in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "user",
+        "profile",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a new nullable `banner` field to the `User` model, allowing users to set a custom profile cover image. The change includes a migration to add the field and ensures compatibility with existing user data. The frontend will utilize this new feature to enhance user profile customization."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#101",
+      "title": "Enhance Skill Management by Allowing Deletion of Catalog Skills in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "skills",
+        "user-experience",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update modifies the Skills page to allow users to delete skills installed from the catalog. Previously, these skills were incorrectly categorized, preventing deletion despite backend support. Now, both uploaded and catalog skills are grouped under Personal Skills, enabling users to manage them effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#852",
+      "title": "Fix task retrieval issue by omitting undefined type in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "api",
+        "tasks",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where the task retrieval API returned empty results when no type filter was provided. By conditionally spreading the type parameter, the API now correctly retrieves all task types, enhancing functionality for users. The fix has been applied to both the mountsea and cqtai services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#96",
+      "title": "Update Tencent Cloud SDK to Latest Version in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "dependencies",
+        "update",
+        "python",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update bumps the `tencentcloud-sdk-python` package from version 3.1.61 to 3.1.89 in the Python dependencies. The change ensures that the latest features and fixes from Tencent Cloud are integrated, enhancing the functionality and reliability of the PlatformGateway. The modifications are reflected in the poetry.lock file."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#129",
+      "title": "Fix timezone awareness for credential expiration checks in Gateway 🌐",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "bugfix",
+        "auth",
+        "datetime",
+        "configuration",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update sets `USE_TZ=True` in the configuration to ensure that datetime comparisons involving `Credential.expired_at` are consistent and avoid errors. Previously, a mismatch between naive and aware datetime objects caused 500 errors on authenticated endpoints. With this change, all relevant datetime fields will now be timezone-aware, improving the stability of the authentication process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#99",
+      "title": "Enhance BYOC Connection Details in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "bugfix",
+        "frontend",
+        "ui",
+        "byoc",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update improves the display of BYOC (Bring-Your-Own-Credentials) connection details by replacing the placeholder avatar with a meaningful meta-grid. The grid shows the connection status and the configured credential fields, ensuring users have the necessary information at a glance. Additionally, the connection type has been updated to include 'byoc' for better categorization."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#411",
+      "title": "Update Seedream Image Generation Docs for Clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "seedream",
+        "openapi",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update corrects inaccuracies in the Seedream image-generation documentation and OpenAPI specification. Key changes include a detailed breakdown of supported size tiers for each model and clarification that only the `doubao-seedream-3.0-t2i` model supports the `seed` parameter. These adjustments ensure users have accurate information for optimal usage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#663",
+      "title": "Fix Seedream Size Tiers and Seed Parameter in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "seedream",
+        "ui",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/663",
+      "summary": "This update corrects the size tiers for the `doubao-seedream-4.5` model to only accept 2K and 4K, aligning with the official Volcengine documentation. Additionally, the `seed` parameter is now restricted to the `doubao-seedream-3.0-t2i` model, preventing errors when users select unsupported options. These changes enhance the user experience by ensuring the UI accurately reflects the capabilities of the models."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthBackend#126",
       "title": "Resolve 502 Errors on Connections API in Backend 🚀",
       "tags": [
