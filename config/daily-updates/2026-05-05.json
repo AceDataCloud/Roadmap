@@ -3,6 +3,258 @@
   "date": "2026-05-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#624",
+      "title": "Enhance Mobile Settings Dialog Usability in Nexior 📱",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "mobile",
+        "ui",
+        "responsive",
+        "settings",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/624",
+      "summary": "This update improves the Settings dialog for mobile viewports by introducing a responsive design. Key changes include a new mobile flag that adjusts the dialog width to 94vw, removes the fixed sidebar, and implements a horizontal tab strip for easier navigation. The desktop layout remains unchanged, ensuring a seamless experience across devices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#623",
+      "title": "Hide Mobile App Entry in User Dropdown on Native Platforms in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "user-interface",
+        "mobile",
+        "dropdown",
+        "fix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/623",
+      "summary": "This update removes the 'Mobile App' entry from the user-avatar dropdown when the app is running natively on iOS or Android. The change prevents unnecessary links for users already on the native app and addresses potential App Store review concerns. The dropdown item will still appear in web builds, ensuring a seamless experience across platforms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#842",
+      "title": "Streamlined Message Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "refactor",
+        "performance",
+        "migration",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update collapses the message structure into a single folded shape, resolving critical production bugs related to message retrieval and updates. Key changes include the removal of the serializer, strict validation for message formats, and a new migration script to ensure data consistency. Overall, this enhances the reliability and performance of chat interactions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#260",
+      "title": "Streamline Status Code Filter for Better UI in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "frontend",
+        "improvement",
+        "filter",
+        "desktop"
+      ],
+      "public": false,
+      "summary": "The status-code filter on the `/console/usages` page has been moved inline with the other filters, enhancing the layout for desktop users. This change reduces vertical space usage and improves the overall balance of the filter row. Additional adjustments include removing the redundant label and repositioning the Export button for cleaner alignment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#618",
+      "title": "Fix conversation ID retention on refresh in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "chat",
+        "url",
+        "refresh",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/618",
+      "summary": "This update addresses a bug where refreshing the chat page caused the conversation ID to disappear from the URL. The fix involves adding guards in three components to ensure that the conversation ID remains intact during page refreshes, enhancing user experience by preserving the selected chat model. Additionally, the changes prevent unnecessary resets of the active model when switching between groups."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#620",
+      "title": "Streamline Citation Chips by Removing Favicon in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "accessibility",
+        "performance",
+        "design"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/620",
+      "summary": "This update enhances the citation chips in chat by removing the redundant favicon, resulting in a cleaner, label-only design. Additionally, the pill's padding and height have been adjusted for improved readability. These changes not only reduce network calls but also maintain accessibility standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#841",
+      "title": "Enhance citation anchoring for chat UX in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "citation",
+        "chat",
+        "ux",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update modifies the citation rules to ensure that citation chips are anchored to the primary entity rather than secondary attributes. The change clarifies that `<acite>` should be placed directly after the primary label of the entity, improving the accuracy of citations across various data types. This adjustment enhances the user experience by ensuring clearer and more relevant citations in chat responses."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#619",
+      "title": "Fix chat model display issue in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "chat",
+        "ui",
+        "production"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/619",
+      "summary": "This update addresses a production JavaScript crash in the chat feature by adding a guard to the model display logic in the ModelSelector component. The fix ensures that even when the model's methods are stripped during state persistence, the trigger will still render the model's name instead of throwing an error. This change improves stability and user experience when refreshing the chat page."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#120",
+      "title": "Refine OneDrive Scopes to Prevent Outlook Leaks in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "fix",
+        "oauth",
+        "permissions",
+        "backend",
+        "oneDrive"
+      ],
+      "public": false,
+      "summary": "This update narrows the `Connection.scopes` for OneDrive to only include permissions from its catalog, preventing unwanted Outlook scopes from appearing. Key changes include the implementation of a new function to filter scopes before persistence, ensuring that existing connections self-heal on refresh. All tests have passed successfully, confirming the effectiveness of the fix."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#54",
+      "title": "Enhance Code Comment Guidelines in Index ✍️",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "guidelines",
+        "code-quality"
+      ],
+      "public": false,
+      "summary": "This update introduces a new guideline for code comments in the project, emphasizing brevity by limiting comments to three lines. The change aims to improve code readability by encouraging developers to focus on explaining the 'why' rather than the 'what'. This adjustment is based on user feedback for clearer and more concise documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#259",
+      "title": "Fix fallback to 'credit' unit for Balance After in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "localization",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the Balance After column displayed a raw i18n key when the service was null, resulting in an incorrect display of 'service.unit.nulls'. The fix applies a fallback to the 'credit' unit in the getRemainingAmount function, ensuring that the display shows the correct localized unit. This change enhances the user experience by providing clearer information in the usage console."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#839",
+      "title": "Enhance SSE Resilience for Chat Engine in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "sse",
+        "chat",
+        "engine",
+        "platformservice"
+      ],
+      "public": false,
+      "summary": "This update decouples the engine lifecycle from the SSE output, preventing the engine from aborting when the SSE client disconnects. Users will now receive complete messages even if they refresh the chat or experience network interruptions, ensuring accurate billing and improved user experience. The fix has been verified with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#840",
+      "title": "Clamp max_turns to a constant for better control in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "security",
+        "improvement",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update modifies the `DEFAULT_MAX_TURNS` constant from 25 to 50, ensuring that the maximum turns for the agentic loop are capped effectively. The changes in `config.ts` and `handlers/conversations.ts` prevent clients from exceeding this limit, protecting the system from potential misuse. All tests have passed successfully, confirming the stability of the implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#617",
+      "title": "Enhance Wallet Display with Balance in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "wallet",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/617",
+      "summary": "This update transforms the wallet icon in the top-right corner into a compact pill that displays the current balance, providing users with immediate feedback on their credits. The functionality remains unchanged, ensuring that users can still access the application picker dialog seamlessly. Additionally, the balance formatting adapts based on the amount, enhancing usability across different screen sizes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#407",
+      "title": "Removed costly e2e probes for Veo and Producer in Backend 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "deploy",
+        "cost-saving",
+        "backend",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update removes the scheduled end-to-end probes for the Veo and Producer services, which were incurring high costs due to real API calls. The corresponding deployment files have been deleted, and the changes have been applied immediately in the cluster to halt unnecessary spending. Local testing scripts remain available for ad-hoc runs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#616",
+      "title": "Fix wallet selection persistence across reloads in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "user-experience",
+        "wallet",
+        "persistence"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/616",
+      "summary": "This update addresses an issue where the user's wallet selection was not retained after a page reload. The fix modifies the logic to ensure that if a user has made a selection, it will be preserved even if the selected package is expired or exhausted. This change enhances user experience by preventing unwanted auto-replacements of their choices."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#615",
       "title": "Fix(midjourney): wrap long prompts in task list instead of truncating with ellipsis in Nexior 🐛",
       "tags": [
