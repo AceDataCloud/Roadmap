@@ -3,6 +3,512 @@
   "date": "2026-05-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#646",
+      "title": "Streamline Suno Model Dropdown by Removing Pro Tag in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "suno",
+        "cleanup",
+        "frontend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/646",
+      "summary": "The Pro tag has been removed from the Suno model dropdown options, simplifying the interface for all users. This change eliminates visual clutter, as all AceDataCloud users have access to every Suno model without tier distinctions. The update involved modifications to the TypeSelector component and related styles, resulting in a cleaner presentation of model options."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#645",
+      "title": "Polish UI Elements for Consistency in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "design",
+        "polish",
+        "suno"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/645",
+      "summary": "This update enhances the UI by unifying section headers and adjusting the font size of the lyrics textarea. The Vocal Gender block's margin has been refined for better alignment, and the Persona section title has been changed to match the styling of other headings. Additionally, the lyrics textarea font size has been increased for improved readability without overwhelming the layout."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#644",
+      "title": "Streamline Task Services with New Base Operator in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "vuex",
+        "abstraction",
+        "performance",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/644",
+      "summary": "This update successfully refactors 14 task services by migrating them to a shared base operator and factory, resulting in a significant reduction of over 3,200 lines of code. Key improvements include the introduction of generic abstractions that eliminate redundant boilerplate, enhancing maintainability and performance. All previous bugs have been addressed, ensuring a smooth transition to the new structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#643",
+      "title": "Streamline Token Initialization in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "chat",
+        "bugfix",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/643",
+      "summary": "This update refactors the token-dependent initialization process in the chat component by moving all related operations into a single watcher. This change eliminates race conditions that previously caused issues during cold logins, ensuring that conversations load correctly without errors. The previous retry mechanism has been removed, simplifying the code and improving performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#642",
+      "title": "Suno UI Enhancements for a Sleeker Look in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "design",
+        "suno",
+        "nexior",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/642",
+      "summary": "This update refines the Suno configuration panel by adjusting the sizing of various UI components for better visual consistency. Key changes include shrinking the font size of the lyrics textarea, restoring the visibility of the Manage Voices button, and aligning the sizes of input elements. These improvements enhance the overall user experience without altering any existing functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#188",
+      "title": "Enhance Google Skills with GWS CLI Support in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "google",
+        "tencent",
+        "skills",
+        "documentation",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/188",
+      "summary": "This update introduces optional Google Workspace CLI (`gws`) documentation for Gmail, Calendar, and Drive skills, optimizing specific operations for better user experience. Additionally, it removes misleading `pip install` hints from Tencent skills, clarifying that dependencies are preinstalled in the sandbox environment. These changes aim to streamline interactions and improve error messaging for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#408",
+      "title": "Align Suno Service Costs with API Billing in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cost",
+        "fix",
+        "backend",
+        "suno",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update resolves a discrepancy between the displayed cost on Nexior's Suno panel and the actual API billing. The service cost file has been updated to reflect the correct pricing, ensuring users see accurate consumption indicators. Additionally, model conditions have been normalized for consistency with the API cost file."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#637",
+      "title": "Refactor task operators to BaseTaskOperator in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "operators",
+        "nexior",
+        "migration",
+        "code-cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/637",
+      "summary": "This update migrates 12 task operators to the new `BaseTaskOperator` structure, enhancing code consistency and maintainability. The migration preserves existing behavior and reduces the codebase by over 1,300 lines. Key operators like `seedance`, `sora`, and `veo` have been successfully transitioned, ensuring a smoother integration moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#641",
+      "title": "Revamp Suno Mode Switcher with el-tabs in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "suno",
+        "tabs",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/641",
+      "summary": "The Suno page's left config panel has been updated to replace the custom mode buttons with an `el-tabs` component for switching between Simple and Custom modes. This change enhances visual consistency with Midjourney's interface and simplifies styling by utilizing Element Plus tokens. The new setup ensures that only relevant fields are displayed for each mode, improving user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#638",
+      "title": "Fix conversation loading issue in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "chat",
+        "ui",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/638",
+      "summary": "This update addresses a race condition that prevented conversations from displaying in the chat panel after a fresh login. A new watcher on the credential token has been added to ensure that conversations are fetched once the token is available, improving the user experience. The fix has been tested across multiple chat groups to ensure consistent functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#640",
+      "title": "Improve song list appearance with line clamp in Nexior 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "css",
+        "suno",
+        "ui",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/640",
+      "summary": "This update implements a CSS-only fix to limit song descriptions in the Suno song list to two lines, enhancing the overall appearance of the recent panel. By adding the `-webkit-line-clamp` property, long descriptions will now be truncated with ellipses, preventing clutter and improving readability. Other elements in the panel remain unchanged."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#630",
+      "title": "Revamped User Question Wizard for Enhanced UX in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ux",
+        "wizard",
+        "frontend",
+        "enhancement",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/630",
+      "summary": "The user question card has been transformed into a sleek one-at-a-time wizard, improving clarity and user experience. Each question now features its own 'Other' option with an inline textarea, and navigation has been streamlined with clear progress indicators. This update not only enhances usability but also changes the output structure for better data handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#850",
+      "title": "Enhance Sandbox with Tencent Cloud SDKs and kubectl in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "sandbox",
+        "tencent",
+        "sdk",
+        "kubectl",
+        "docker",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update adds the `tencentcloud-sdk-python` and `kubectl` to the sandbox environment, addressing critical dependencies for several Tencent skills. The Dockerfile has been modified to include these tools, along with smoke checks to ensure their proper installation. As a result, skills relying on these packages will function correctly without runtime installation errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#849",
+      "title": "Fix skill directory display for model in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "skills",
+        "header",
+        "testing",
+        "sandbox"
+      ],
+      "public": false,
+      "summary": "This update modifies the response header for the `load_skill` function to display the correct skill directory as `$SKILL_DIR` instead of the worker pod path. This change prevents errors when the model attempts to access files that do not exist in the sandbox environment. Additionally, tests have been updated to ensure the correct placeholder is used and that the worker path is not leaked."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#223",
+      "title": "Streamline Copilot PR Management in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "workflow",
+        "automation",
+        "cleanup",
+        "copilot",
+        "pr-management"
+      ],
+      "public": false,
+      "summary": "This update enhances the scheduled research workflow by implementing automatic closure of stale Copilot PRs, addressing a backlog of 11 open PRs. New steps have been added to close lingering drafts before starting a new cycle and to handle failures during the merge process. This ensures that only one open Copilot PR exists at any time, improving workflow efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#83",
+      "title": "Fix auto-merge for Sync-from-Docs workflow in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "ci",
+        "fix",
+        "workflow",
+        "automation",
+        "sdk"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/83",
+      "summary": "This update resolves multiple bugs in the Sync-from-Docs workflow that caused PRs to remain in draft status and accumulate over time. Key changes include improved cleanup of stale PRs, enhanced binding of PRs to issues, and a more reliable completion signal. The adjustments aim to streamline the merging process and prevent silent failures, ensuring a smoother workflow experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#148",
+      "title": "Fix auto-merge for Sync-from-Docs workflow in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "ci",
+        "workflow",
+        "bugfix",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/148",
+      "summary": "This update addresses multiple bugs in the Sync-from-Docs workflow that caused PRs to remain in draft status and accumulate over time. Key improvements include enhanced cleanup of stale PRs, better binding of PRs to issues, and a more reliable completion signal. With these changes, every docs update will now lead to a clear outcome, reducing backlog and improving efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#143",
+      "title": "Fix Sync-from-Docs Auto-Merge Issues in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "ci",
+        "bugfix",
+        "workflow",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/143",
+      "summary": "This update resolves multiple bugs in the Sync-from-Docs workflow that caused PRs to accumulate without merging. Key changes include improved cleanup of stale PRs, enhanced binding of PRs to issues, and a more reliable completion signal. The adjustments aim to streamline the process, ensuring that each docs update dispatch results in a clear outcome."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#608",
+      "title": "Automated i18n Updates from zh-CN in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "automation",
+        "translations",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/608",
+      "summary": "This PR introduces automated translation updates for internationalization (i18n) based on changes from the zh-CN source. All relevant cache files have been renamed to reflect these updates, ensuring that the application remains up-to-date with the latest translations. This enhancement will improve the user experience for Chinese-speaking users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#220",
+      "title": "Scheduled Research Cycle Update in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "update",
+        "candidates",
+        "tokens",
+        "liquidity"
+      ],
+      "public": false,
+      "summary": "This update introduces the latest research cycle for May 5, 2026, with a comprehensive review of 20 candidates. Key decisions include holding two tokens, ELITE and OSAMA, while skipping nine due to red flags. The data source health is mostly stable, though some sources are degraded, impacting credibility checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#147",
+      "title": "Enhance Image Generation Options in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "image-generation",
+        "cli",
+        "update",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/147",
+      "summary": "This update introduces two new optional parameters for the image generation command in the CLI. Users can now specify the maximum number of sequential images and choose an optimization mode for prompts, enhancing the flexibility and performance of image generation tasks. These changes align the CLI with the latest API updates, ensuring a smoother user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#190",
+      "title": "Documentation Update for Overview Service in M C Ps 📚",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "documentation",
+        "update",
+        "overview",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/190",
+      "summary": "This update introduces a documentation-only change for the overview service, adding a new `<Note title=\"Tip\">` section to the `mcp/overview.mdx` file across 18 language variants. There are no changes to the OpenAPI specifications or the directory structure, ensuring a seamless sync process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#142",
+      "title": "Enhance MCP Servers Section with Helpful Tip in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "mcp",
+        "readme",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/142",
+      "summary": "This update adds a new tip note to the MCP Servers section of the README, reflecting the recent addition in the upstream documentation. The note clarifies the purpose of the MCP servers, emphasizing their role in facilitating information exchange among AI assistants. This enhancement aims to improve user understanding and engagement with the MCP servers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#633",
+      "title": "Centralize Webhook Callback URL in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "webhook",
+        "constants",
+        "code-quality",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/633",
+      "summary": "This update refactors the webhook callback URL by moving it from 20 hard-coded instances into a single helper function, `getWebhookCallbackUrl()`, located in `src/constants/endpoint.ts`. This change simplifies future migrations to different webhook hosts and ensures consistency across the codebase, with no behavior changes expected. All affected files have been updated to use the new helper function, maintaining the same runtime payload."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#631",
+      "title": "Centralize Surface Checks with New Helpers in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "utils",
+        "code-quality",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/631",
+      "summary": "This update refactors the handling of Capacitor surface checks by introducing new utility functions in `src/utils/surface.ts`. The previous checks, which were duplicated across seven locations, are now centralized, improving maintainability and readability. The changes ensure no behavioral alterations while streamlining the codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#82",
+      "title": "Documentation Update: No SDK Changes Needed in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "documentation",
+        "sdk",
+        "updates",
+        "non-breaking"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/82",
+      "summary": "Recent updates to the documentation for the overview service have been reviewed and confirmed as non-breaking. Key changes include the addition of a note block and optional parameters in the OpenAPI files, but no new providers or endpoints were introduced. The SDK remains fully compatible with all existing features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#632",
+      "title": "Ensure Fresh User Selection Reflected in Nexior 🔄",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "application",
+        "user-experience",
+        "frontend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/632",
+      "summary": "This update addresses an issue where the application picker displayed stale balance information due to reliance on persisted data. The fix ensures that the latest values from the server are used, preserving user selection while reflecting accurate balances. Key changes include modifying the logic to return fresh application data instead of outdated persisted references."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#96",
+      "title": "Refine Connector Actions for Clarity in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "ui",
+        "frontend",
+        "visual",
+        "cleanup",
+        "accessibility"
+      ],
+      "public": false,
+      "summary": "This update enhances the visual layout of the Connectors detail header by reducing the gap between the 'Refresh' and 'Disconnect' buttons from 8px to 4px, making them appear as a cohesive group. Additionally, the 'Disconnect' button has been changed to a 'danger' type to emphasize its destructive nature, aligning with user feedback for clearer action indicators."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#629",
+      "title": "Streamline Dependencies and Wallet Adapters in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "solana",
+        "optimization",
+        "cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/629",
+      "summary": "This update drops three unused dependencies, including React and PSL, which had zero imports in the source code. Additionally, it switches from a catch-all Solana wallet meta-package to individual adapters for Phantom, Solflare, Nightly, and WalletConnect, resulting in a significant reduction of 367 packages in node_modules. This change enhances the project's efficiency and reduces potential vulnerabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#128",
+      "title": "Enhance timestamp parsing for better API logging in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "bugfix",
+        "logging",
+        "api",
+        "timestamp",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update improves the timestamp parsing functionality in the API logging system. It allows the system to handle various timestamp formats, including epoch milliseconds and seconds, ensuring accurate logging of request durations for Kong-only proxy services. Additionally, deprecated timezone handling has been updated to align with Django 5 standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#628",
+      "title": "Optimize Vuex Storage to Prevent Quota Overflow in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "vuex",
+        "localstorage",
+        "optimization",
+        "bugfix",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/628",
+      "summary": "This update addresses a critical issue where the Vuex localStorage quota was exceeded due to excessive task data being persisted for each app. The solution involves removing the per-app `.tasks` entries from localStorage and implementing a quota-safe storage adapter that handles `QuotaExceededError`. Users will experience smoother performance without manual localStorage clearing after the update."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#848",
       "title": "Enhance localization API to track elapsed time in Platform Service ⏱️",
       "tags": [
