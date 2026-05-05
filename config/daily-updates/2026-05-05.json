@@ -3,6 +3,379 @@
   "date": "2026-05-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#126",
+      "title": "Resolve 502 Errors on Connections API in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "performance",
+        "backend",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update addresses random 502 errors experienced on the connections API by implementing three key changes. The probe handler was modified to eliminate unnecessary database queries, the number of uvicorn workers was increased to prevent blocking, and resource limits were adjusted to enhance capacity. These changes collectively improve the reliability and performance of the API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#98",
+      "title": "Enhance Phone Forms with Persistent Country Code in Frontend Web 🌍",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "frontend",
+        "auth",
+        "localstorage",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update introduces a feature that allows users to persist their selected country calling code across multiple phone-number forms in AuthFrontend. The change affects the login, registration, password reset, and profile edit dialogs, ensuring that users do not have to reselect their country code on each visit. A new utility for managing localStorage preferences has been added to streamline this functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#657",
+      "title": "Enhance Model Awareness for Size and Image Inputs in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "frontend",
+        "bugfix",
+        "user-experience",
+        "model-awareness"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/657",
+      "summary": "This update improves the Nexior frontend by making the SizeSelector model-aware, ensuring users only see valid size presets based on the selected model. The ImageInput is hidden for the text-to-image model, preventing invalid requests. Additionally, new help text has been added to clarify supported presets for each model, enhancing user experience and reducing errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#661",
+      "title": "Fix WAV/MIDI Download Responses in Nexior 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "frontend",
+        "suno",
+        "download",
+        "response"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/661",
+      "summary": "This update corrects the response shapes for WAV and MIDI downloads in the Nexior frontend. The changes ensure that the application correctly reads the actual data returned by the worker, preventing errors during file downloads. Additionally, the MIDI response handling has been adjusted to save structured note data as a JSON file, allowing users to convert it to MIDI format as needed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#639",
+      "title": "Automated i18n Updates from zh-CN in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "translations",
+        "localization",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/639",
+      "summary": "This update introduces automated translation updates for internationalization (i18n) based on changes from the zh-CN source. Key modifications include enhancements to various language files, ensuring improved localization across multiple languages. The changes enhance user experience by providing more accurate translations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#660",
+      "title": "Enhance Seedream API Controls in Nexior 🌟",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "api",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/660",
+      "summary": "This update expands the Seedream panel by adding a full set of API parameters, including new inputs for seed, guidance scale, and output format. The size dropdown has been enriched with additional options, ensuring users can select from a wider range of resolutions and custom dimensions. These enhancements improve usability and align the panel with the upstream API specifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#659",
+      "title": "Revamped Producer Config Panel for Enhanced UX in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ux",
+        "feature",
+        "ui",
+        "producer",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/659",
+      "summary": "This update completely rebuilds the Producer config panel to align with the Suno-class UX, addressing user feedback about its simplicity. Key changes include a new tabbed interface for mode selection, improved visibility for advanced parameters, and enhanced audio upload functionality. The panel now supports a wider range of audio formats and provides clearer model descriptions, significantly improving user experience and accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#653",
+      "title": "Enhance Kling UI: Block Invalid Video Combos in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "kling",
+        "video",
+        "bugfix",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/653",
+      "summary": "This update improves the Kling video configuration UI by preventing users from submitting invalid combinations of video settings. Key changes include enforcing the requirement for a start image when an end image is provided, disabling camera control for unsupported model/mode combinations, and enhancing user feedback through tooltips. These adjustments aim to streamline the user experience and reduce errors during video generation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#658",
+      "title": "Fix task visibility for veo post-processing in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "veo",
+        "ui",
+        "tasks"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/658",
+      "summary": "This update resolves an issue where post-processing tasks like upsample, extend, reshoot, and object manipulation were not appearing in the recent tasks panel. By removing the static type filter in the task actions, all veo task types can now be aggregated and displayed correctly. Users will now see their submitted tasks alongside existing video tasks, enhancing usability and visibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#656",
+      "title": "Enhance Video Task Thumbnails and Parameters in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ux",
+        "video",
+        "midjourney",
+        "enhancement",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/656",
+      "summary": "This update addresses two key UX issues in the Midjourney video generation feature. Thumbnails for the first and last frame images are now displayed alongside the prompt, and essential request parameters such as Action, Video Quality, Speed, and Video Loop are included in the task alerts. These changes improve user visibility and interaction with video tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#655",
+      "title": "Enhance Seedance UI with Input Frame Images and Service Tier Fixes in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "bugfix",
+        "enhancement",
+        "seedance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/655",
+      "summary": "This update improves the Seedance interface by displaying input frame images in the results column, allowing users to see the images they uploaded. Additionally, it addresses layout issues with the Service Tier label, ensuring the icon remains visible and the dropdown fits appropriately. These changes enhance usability and visual consistency across the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#654",
+      "title": "Enhance AI Lyrics Generation with User Prompt in Nexior 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "ai",
+        "lyrics",
+        "user-input",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/654",
+      "summary": "This update introduces a user prompt for the AI lyrics generation feature on the Suno page. Instead of relying on silent fallbacks, users are now prompted to describe the song's theme, improving the relevance of generated lyrics. Additionally, internationalization support has been added for both English and Chinese languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#652",
+      "title": "Display Elapsed Time in Task Alerts in Nexior ⏱️",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "midjourney",
+        "ui",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/652",
+      "summary": "This update enhances the Midjourney task alerts by displaying the elapsed time for each task variant, including 'imagine', 'videos', and 'describe'. The elapsed time is shown in success and failure alerts, improving user experience by providing more context about task durations. Additionally, localization support has been added for English and Chinese, with plans for other languages to follow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#649",
+      "title": "Enhanced Image Size Options for gpt-image-2 in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "openai",
+        "image",
+        "customization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/649",
+      "summary": "This update introduces a dynamic size dropdown for the gpt-image-2 model, allowing users to select from a comprehensive list of supported image sizes, including custom dimensions. The dropdown now categorizes sizes into 1K, 2K, and 4K presets, enhancing user experience and aligning with OpenAPI specifications. Inline validation ensures that custom sizes meet required constraints, improving overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#651",
+      "title": "Enhance UX for Frame Preview and Duration Selection in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ux",
+        "css",
+        "localization",
+        "dropdown",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/651",
+      "summary": "This update addresses two key UX issues reported by users on the Kling interface. The frame preview now eliminates the empty rectangle by overriding default CSS properties, while the video duration selection has been improved by replacing the slider with a dropdown for better usability. Additionally, new placeholder text has been added to support localization in both English and Chinese."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#410",
+      "title": "Fix price display for describe tab in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "backend",
+        "nexior",
+        "midjourney"
+      ],
+      "public": false,
+      "summary": "This update corrects the displayed price on the Image Description tab in Nexior, changing it from 1.08 Credits to the accurate 0.18 Credits. A new top-priority rule for type='describe' was added to ensure the correct cost is shown, while existing rules for other types remain unchanged. Verification through tests confirmed that all service-cost calculations are now accurate."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#650",
+      "title": "Enhance text2video with aspect ratio selector in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "feature",
+        "video"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/650",
+      "summary": "This update exposes the aspect ratio selector for the text2video action in the Veo studio, allowing users to choose from multiple ratios including 9:16. The selector was previously hidden due to a conditional rendering issue in the UI. Now, users can easily select their desired aspect ratio while generating videos, improving the overall functionality of the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#648",
+      "title": "Fix conflicting model flags for Midjourney in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "midjourney",
+        "niji"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/648",
+      "summary": "This update resolves an issue where users could select both the niji model and conflicting version or HD flags, leading to invalid prompts. The prompt builder now omits these flags when niji is selected, and the UI has been updated to hide these options accordingly. This ensures a smoother user experience and prevents invalid submissions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#125",
+      "title": "Fix translation import issue for Python 3.8 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "python",
+        "translation",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update resolves an import error in `translate.py` caused by incompatible annotation syntax for Python 3.8. By adding a future import for annotations, the module now compiles successfully, allowing the CronJob to function properly. This fix will enable the translation of connector prompts into various locales, enhancing user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#97",
+      "title": "Enhance Avatar Display for Connections in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "bugfix",
+        "ui",
+        "frontend",
+        "avatar",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update introduces a fallback avatar for connections that lack a profile photo, specifically addressing cases like personal Outlook accounts. When no avatar is available, the first letter of the account name is displayed in a tinted circle, improving visual consistency. This change applies to all providers that may not have an avatar, ensuring a better user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#409",
+      "title": "Sync Display Costs Across 8 Services in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cost",
+        "billing",
+        "backend",
+        "fix",
+        "audit",
+        "synchronization"
+      ],
+      "public": false,
+      "summary": "This update resolves discrepancies between displayed costs and actual billing for eight services, ensuring accurate pricing for users. Key fixes include adjustments for services like producer, wan, and openai, where display prices were either overstated or understated. A comprehensive audit and simulation confirmed that all affected services now align with the upstream API charges."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#851",
+      "title": "Rehost Midjourney Videos for Seamless Playback in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "video",
+        "cdn",
+        "midjourney",
+        "fix",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update resolves playback issues for Midjourney-generated videos by rehosting them on our COS CDN. The new function downloads videos from the upstream source and ensures they are accessible from various networks, particularly improving access for users in mainland China. This change enhances user experience by guaranteeing that videos play correctly on the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#647",
+      "title": "Fix tab switching for video tasks in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "midjourney",
+        "config"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/647",
+      "summary": "This update resolves an issue where clicking 'Extend' on a video task did not switch the ConfigPanel to the Video Generation tab. The root cause was an incorrect field name and value in the configuration. The fix ensures that the correct tab is activated, allowing users to see the extend form as expected."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#646",
       "title": "Streamline Suno Model Dropdown by Removing Pro Tag in Nexior 🎉",
       "tags": [
