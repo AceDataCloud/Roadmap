@@ -3,6 +3,130 @@
   "date": "2026-05-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#665",
+      "title": "Improve subsite error messaging in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "frontend",
+        "error-handling",
+        "localization",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/665",
+      "summary": "This update enhances the user experience by providing a friendly error message when a subsite slug is already taken. Instead of displaying raw API JSON, users will now see a localized message indicating the conflict. Additionally, the code structure has been improved to handle various error scenarios more gracefully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#412",
+      "title": "Improve subsite creation error handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "api",
+        "backend",
+        "error-handling"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where the API returned a generic error code when a subsite origin was already taken. The code now raises a specific 'duplication' exception, allowing clients to handle conflicts programmatically. Additionally, the error message has been improved for better user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#93",
+      "title": "Fix Worker Name Mismatch in Configuration in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "configuration",
+        "cloudflare",
+        "frontend",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update resolves a naming inconsistency between the Wrangler configuration file and the deployed Worker in the Cloudflare Dashboard. The Worker name has been changed from 'auth-frontend' to 'authfrontend' to ensure alignment across environments. This change helps maintain consistency and prevents potential issues during deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#100",
+      "title": "Automated i18n Updates from zh-CN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "i18n",
+        "localization",
+        "frontend",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update introduces automated translation updates for internationalization (i18n) based on changes from the zh-CN source. Multiple cache files have been renamed and new files added to enhance the localization process, ensuring a smoother user experience for Chinese-speaking users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#105",
+      "title": "Enhance Login Divider Background for Dark Mode in Frontend Web 🌟",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "bugfix",
+        "ui",
+        "darkmode",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update fixes the background color of the 'Other login methods' divider on the login and registration pages. By overriding the background to match the card surface, the black rectangle issue in dark mode is resolved, ensuring a seamless visual experience. The change maintains consistency across both dark and light modes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#103",
+      "title": "Enhance User Experience with Onboarding Survey in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "survey",
+        "frontend",
+        "user-experience",
+        "onboarding",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update introduces a post-registration onboarding survey on the user profile page, enhancing user engagement. The survey prompts new users with five questions to better tailor their experience, allowing them to submit, dismiss, or skip the survey. Key components include a dialog for the survey and a persistent banner, ensuring users are reminded to participate until they do."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#131",
+      "title": "Enhance Survey Autosave and Reward System in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "autosave",
+        "reward",
+        "survey",
+        "backend",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces a per-keystroke autosave feature for the survey, allowing users to retain their answers even if they close the tab. Additionally, it implements a reward system that grants 5 credits upon the first completion of the survey, ensuring that users cannot exploit the system by toggling answers. The GET endpoint now also returns the draft state along with the reward status, improving the user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#130",
+      "title": "Align Google OAuth Scopes for Connectors in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "google",
+        "oauth",
+        "backend",
+        "permissions",
+        "connectors"
+      ],
+      "public": false,
+      "summary": "This update aligns the Google connector permissions with the newly verified OAuth consent screen. Key changes include the removal of unapproved scopes and the addition of new ones, such as `gmail.compose` and `calendar.events`. The adjustments ensure that users have the correct permissions available for their Google integrations, enhancing functionality while maintaining compliance."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthBackend#129",
       "title": "Enhance User Verification Process in Backend 🚀",
       "tags": [
