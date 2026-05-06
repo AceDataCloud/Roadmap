@@ -3,6 +3,200 @@
   "date": "2026-05-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#865",
+      "title": "Ensure JSON payload is correctly forwarded for alias-rewrite in Platform Service ⚡️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "openai",
+        "images",
+        "edits",
+        "alias-rewrite",
+        "bugfix",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update fixes the `/openai/images/edits` endpoint to properly set `Content-Type: application/json` when a model alias rewrite occurs. The previous implementation relied on a state flag, which failed because headers were sent before the body. The fix computes the alias condition inline for both headers and body, ensuring consistent behavior. Existing endpoints for gpt-image-2 generations and chat handlers remain unchanged."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#864",
+      "title": "Switching to Xiaojingai's GPT-Image-2 for Reliability in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "update",
+        "api",
+        "reliability",
+        "image-processing"
+      ],
+      "public": false,
+      "summary": "This update replaces the unreliable upstream `gpt-image-2` route with Xiaojingai's `gpt-image-2-reverse`, ensuring consistent performance for image generation and editing requests. The public API remains unchanged, allowing seamless user experience while the backend now utilizes a more reliable model. Key changes include updates to configuration files and handler logic to support the new model aliasing mechanism."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#265",
+      "title": "Align Worker name in Wrangler config to deployed version in Frontend Web ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "wrangler",
+        "cloudflare",
+        "frontend",
+        "configuration",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update modifies the `wrangler.jsonc` configuration file to ensure the Worker name matches the deployed Worker in Cloudflare. The change corrects a naming mismatch, preventing potential deployment inconsistencies. Only a single line in the configuration was updated, keeping other settings intact. This helps maintain smoother CI/CD workflows for the frontend environment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#106",
+      "title": "Survey Dialog Fixes and Improvements in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "bugfix",
+        "ui",
+        "translations",
+        "user-feedback",
+        "improvements"
+      ],
+      "public": false,
+      "summary": "This update addresses several critical issues in the survey dialog, including fixing the single-select binding, correcting broken translations, and enhancing the layout for better readability. Additionally, the community group question has been removed based on user feedback, streamlining the survey process. The changes ensure a smoother user experience and improved accessibility for all users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#276",
+      "title": "Fix admin announcement handling for consistent translations in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "admin",
+        "translations",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update ensures that the admin announcement page correctly uses the Chinese language for editing, preventing any overwriting of translations. Key changes include forcing the 'Accept-Language' header to 'zh-CN' for admin endpoints and modifying the translation submission process. These adjustments will maintain the integrity of translations across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#271",
+      "title": "Update Vue to 3.5.34 with key bug fixes in Frontend Web ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "vue",
+        "dependencies",
+        "bug-fix",
+        "frontend",
+        "reactivity",
+        "sfc"
+      ],
+      "public": false,
+      "summary": "This PR upgrades Vue from version 3.5.33 to 3.5.34. The update includes several bug fixes in compiler-sfc, reactivity, runtime-core, and suspense, addressing issues like orphan effects, DOM leaks, and symbol coercion during props validation. Dependencies in package.json and package-lock.json were updated to reflect this change, ensuring smoother framework behavior and improved stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#275",
+      "title": "Update ESLint Plugin for Prettier in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "eslint",
+        "prettier",
+        "dependencies",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps the eslint-plugin-prettier from version 4.2.5 to 5.5.5, enhancing compatibility and fixing several issues. Key changes include updates to dependencies and improvements in rule options handling, which will help maintain code quality and consistency across the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#419",
+      "title": "Fix translation logic for announcements in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "translation",
+        "backend",
+        "frontend",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where the translation for announcements was incorrectly using client-posted text instead of the original Chinese content. The backend now strictly utilizes the `translation_key` to fetch the correct Chinese source for translations, ensuring accuracy and consistency. Additionally, the frontend has been updated to streamline the translation process by removing unnecessary fields and enforcing proper locale handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#677",
+      "title": "Streamline User Onboarding with Silent Application Grants in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "user-experience",
+        "onboarding",
+        "toast",
+        "application",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/677",
+      "summary": "This update replaces the modal dialog for new users with a silent auto-grant of global applications, enhancing the onboarding experience. Users will now receive a friendly toast welcoming them and informing them of their free credits upon their first visit. Existing users will also see this toast once per browser session after the update, ensuring everyone feels welcomed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#233",
+      "title": "Automated Solana Token Research Published in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "solana",
+        "research",
+        "tokens",
+        "report",
+        "crypto"
+      ],
+      "public": false,
+      "summary": "The latest automated Solana token research report has been published, reviewing 18 candidates. Key findings include three tokens recommended to hold, while nine were skipped due to low scores and liquidity concerns. Notably, USMC had the highest pipeline score but was flagged as suspicious, leading to its exclusion."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#420",
+      "title": "Enhance WeChat Announcement Broadcasting in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "wechat",
+        "announcement",
+        "integration",
+        "backend",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces a new integration for broadcasting announcements to WeChat customer groups via the Wisdom service. When an admin publishes an announcement, the system now automatically sends the title and content to specified WeChat groups, ensuring that the messages are delivered efficiently and logged for any errors. Key changes include new utility functions for sending messages, updates to the announcement views, and additional environment settings for configuration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#863",
+      "title": "Enhance Image Generation with OpenAI Compatibility in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "openai",
+        "image-processing",
+        "api",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces OpenAI-compatible image generation and editing endpoints backed by ephone's new `gpt-image-2` async task API. Key changes include the addition of `/images/generations` and `/images/edits` routes, which allow for seamless integration with existing OpenAI workflows. This enhancement provides a second upstream provider for image processing, enabling better load balancing and improved service reliability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPs#220",
       "title": "Enhance Suno API with New Audio Features in M C Ps 🎶",
       "tags": [
