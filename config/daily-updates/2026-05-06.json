@@ -3,6 +3,22 @@
   "date": "2026-05-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#854",
+      "title": "Enhance WAV File Handling Across All Providers in Platform Service 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "wav",
+        "suno",
+        "cdn",
+        "cos",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update reopens a previous PR to extend the mirroring of WAV files to all four Suno providers: nebula, ttapi, openaihk, and suandao. It corrects the path for ttapi and implements a new helper function to ensure WAV files are stored in COS, preventing 403 errors from the upstream CDN. The changes improve the reliability of WAV file access for users."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#853",
       "title": "Fix lyric handling in Platform Service 🎶",
       "tags": [
