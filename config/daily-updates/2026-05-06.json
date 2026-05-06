@@ -3,6 +3,36 @@
   "date": "2026-05-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#853",
+      "title": "Fix lyric handling in Platform Service 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "audio",
+        "suno",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses a bug where user-provided lyrics were silently dropped when submitting a cover request without the custom flag. The fix introduces an effective custom flag that ensures lyrics are preserved when provided, enhancing user experience. The changes were made across multiple audio handler files to ensure consistent behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#413",
+      "title": "Enhance Suno Docs for Replace Section Clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "suno",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update improves the documentation for the Suno `replace_section` feature by clarifying that it only returns the infill segment and requires a follow-up `concat` call to obtain the full song. The examples have been rewritten to reflect actual test results, ensuring users understand the workflow. Changes were made to both English and Chinese documentation files."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#267",
       "title": "Trim Whitespace from App ID and User ID Inputs in Frontend Web ✨",
       "tags": [
