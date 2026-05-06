@@ -3,6 +3,105 @@
   "date": "2026-05-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPs#220",
+      "title": "Enhance Suno API with New Audio Features in M C Ps 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "suno",
+        "api",
+        "audio",
+        "features",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/220",
+      "summary": "This update introduces two new parameters to the Suno MCP server, aligning it with the upstream OpenAPI spec. The `audio_weight` parameter allows for advanced control over audio influence in cover operations, while the `lyric_prompt` enables auto-generation of lyrics when the lyric field is empty. These enhancements improve the flexibility and usability of the audio generation tools."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#862",
+      "title": "Hide Google connector skills for DeepSeek models in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "aichat2",
+        "deepseek",
+        "google",
+        "skills",
+        "connector-policy",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This PR updates the `aichat2` worker to prevent DeepSeek models from accessing Google connector skills. A new policy file defines denied connectors per model group, and the skill filtering is applied in-place during request processing. Unit tests cover all edge cases, and the full worker test suite passes with no issues. This change ensures DeepSeek models no longer attempt unreliable multi-step OAuth flows, improving system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#418",
+      "title": "Clarify 30-day retention for mirrored WAV URLs in Backend 🎵",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "suno",
+        "wav",
+        "cdn",
+        "retention",
+        "backend"
+      ],
+      "public": false,
+      "summary": "Updated the Suno WAV integration docs to specify that mirrored WAV files on our CDN are retained for 30 days. The change only affects the Chinese documentation; other languages will update via the translation CronJob. No service code was modified, as the retention is handled by the COS bucket lifecycle policy. Users are advised to download files if they need them beyond the 30-day window."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#416",
+      "title": "Enhance sync functionality and optimize writes in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "sync",
+        "optimization",
+        "backend",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update introduces critical improvements to the sync process in `sync.py`, addressing two main issues. The `--force` flag now functions correctly, significantly reducing unnecessary database writes from 7,500 to approximately 315 per deploy. Additionally, the order of operations has been adjusted to prioritize syncing documentation, ensuring that user-visible content is updated even in case of partial runs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#415",
+      "title": "Ensure full hourly sync and immediate post-deploy updates in Backend ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cronjob",
+        "sync",
+        "deploy",
+        "backend",
+        "resources",
+        "docs"
+      ],
+      "public": false,
+      "summary": "This PR updates the platform-backend-sync CronJob to run hourly instead of every 5 minutes and prevents overlapping jobs by setting concurrencyPolicy to Forbid. Resource limits are increased to allow completion of large syncs, including ~4,400 doc entries. Additionally, deploy/run.sh now triggers an immediate post-deploy job, ensuring PR edits land in the database without waiting for the next scheduled run."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#861",
+      "title": "Correct mountsea channel usage in Platform Service 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "mountsea",
+        "api-usages",
+        "channel",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "Updated the mountsea worker to record `channel: 'sea'` instead of `'cortex'` in all api-usages payloads. This ensures the worker is correctly distinguished in CLS from other workers like ai318 and openaihk. The change affects three locations in the code: `response`, `request.json`, and `payload`. Build and type checks passed cleanly."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#860",
       "title": "Normalize Empty Aspect Ratio and Resolution in Platform Service 🚀",
       "tags": [
