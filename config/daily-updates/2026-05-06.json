@@ -3,6 +3,21 @@
   "date": "2026-05-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#267",
+      "title": "Trim Whitespace from App ID and User ID Inputs in Frontend Web ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "admin",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where leading or trailing spaces in App ID and User ID inputs caused queries to return no results. The inputs are now trimmed before being sent to the backend in various actions, ensuring accurate UUID string matches. The form will also reflect the trimmed values, enhancing user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#229",
       "title": "New Research Cycle Insights in Sol Radar 🚀",
       "tags": [
