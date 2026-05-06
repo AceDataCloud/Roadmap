@@ -3,6 +3,52 @@
   "date": "2026-05-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#860",
+      "title": "Normalize Empty Aspect Ratio and Resolution in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "nano-banana",
+        "http",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where 96% of `/nano-banana/images` requests were returning HTTP 400 errors due to empty aspect ratio and resolution values. By normalizing these values to undefined, the system now allows for default fallbacks, improving the success rate of image generation requests. The fix has been applied across all relevant workers to ensure consistent behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#414",
+      "title": "Update Suno WAV Documentation for CDN Mirroring in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "suno",
+        "wav",
+        "api",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update enhances the documentation for the Suno WAV API, reflecting the new persistent CDN mirror URL. Key changes include replacing outdated examples and clarifying the mirroring process to prevent 403 errors after upstream purges. The OpenAPI specification has also been updated to align with the new URL pattern, ensuring users have accurate information."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#132",
+      "title": "Fix survey module loading issue for Python 3.8 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "python",
+        "backend",
+        "survey"
+      ],
+      "public": false,
+      "summary": "This update resolves a 500 Internal Server Error occurring for authenticated users when accessing the survey endpoint. The root cause was the use of PEP 585 generic syntax in a module that was being loaded in a Python 3.8 environment. By adding a future import for annotations, the code is now compatible with Python 3.8 while maintaining functionality for Python 3.9 and above."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#231",
       "title": "Weekly research update highlights TROLL hold and multiple skips in Sol Radar 🚀",
       "tags": [
