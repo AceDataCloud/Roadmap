@@ -3,6 +3,52 @@
   "date": "2026-05-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/X402Client#20",
+      "title": "Add SKALE x402 live demo walkthrough in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "documentation",
+        "demo",
+        "skale",
+        "x402",
+        "e2e",
+        "walkthrough"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/20",
+      "summary": "Introduces `docs/SKALE_DEMO.md`, a full end-to-end guide for running a live x402 micropayment demo on SKALE. The walkthrough covers API calls resulting in `402 Payment Required`, signing EIP-3009 transactions, and successful on-chain settlement on SKALE Europa. All steps use real data from the 2026-05-07 production run, making it fully reproducible for presentations. No code changes were made; this is a documentation-only addition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#866",
+      "title": "Mirror OpenAI image payloads to CDN and backfill prompts in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "openai",
+        "images",
+        "cdn",
+        "tencent-cos",
+        "nexior",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "This PR updates the OpenAI image generation paths to replace large `b64_json` payloads with CDN URLs, reducing payload size for clients. It also ensures `revised_prompt` is populated when missing, maintaining compatibility with Nexior task cards. Tencent COS integration was added for async uploads, and configuration values were wired in the production deployment. Existing image pools and opt-out paths remain unchanged."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#679",
+      "title": "Fix(welcome): only toast on actual first global application creation in Nexior 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/679"
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#235",
       "title": "New SolRadar Research Cycle Published in Sol Radar 🚀",
       "tags": [
