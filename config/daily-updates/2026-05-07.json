@@ -3,6 +3,255 @@
   "date": "2026-05-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#278",
+      "title": "Expanded multi-language survey support in Frontend Web 🌐",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "survey",
+        "frontend",
+        "translations",
+        "multi-language"
+      ],
+      "public": false,
+      "summary": "This PR adds auto-translated survey content from zh-CN to multiple languages including Arabic, German, Spanish, French, Italian, Japanese, Korean, Portuguese, Russian, and Traditional Chinese. The English survey strings were also refined for clarity and reward messaging. These updates ensure users across regions see consistent and accurate survey prompts and feedback notifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#277",
+      "title": "Introducing a Schema-Driven Survey Dialog in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "survey",
+        "frontend",
+        "localization",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update implements a fully schema-driven SurveyDialog component in the console, allowing for dynamic survey rendering based on backend templates. It includes features for user interaction, such as reward notifications upon survey completion, and integrates localization for multiple languages. The changes enhance user engagement and streamline survey management for admins."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#421",
+      "title": "Launch generic survey engine with atomic rewards in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "survey",
+        "backend",
+        "atomic-rewards",
+        "models",
+        "api",
+        "onboarding"
+      ],
+      "public": false,
+      "summary": "The survey system was migrated from AuthBackend to a generalized engine on PlatformBackend, enabling onboarding, NPS, and churn surveys to be defined as data rather than code. SurveyTemplate and SurveyResponse models were added with JSON-based schemas, triggers, and reward rules. Submissions now run atomically, creating Orders and crediting users without risk of duplicate rewards. All API endpoints, admin views, and seed data for onboarding surveys are included and verified."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#869",
+      "title": "Refine model selection for gpt-image-2 requests in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "routing",
+        "image-processing",
+        "gpt",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update enhances the model selection logic to ensure that the high-res variant swap only occurs for explicit `gpt-image-2` requests. It introduces an explicit `requested_model` argument in the `resolve_upstream_model()` function, improving clarity and preventing future issues with implicit assumptions. The changes affect three files, streamlining the routing process for image generation and editing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#685",
+      "title": "Tightened mobile chat spacing to prevent awkward text wraps in Nexior 📱",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "mobile",
+        "chat-ui",
+        "responsive",
+        "scss",
+        "ux"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/685",
+      "summary": "Updated the mobile chat layout to reclaim horizontal space on narrow screens by reducing author gutter width, avatar sizing, and bubble padding below the 640px breakpoint. The change adds roughly 24px of usable text width on small devices, improving paragraph wrapping and eliminating single-word last lines in assistant messages. The update is limited to scoped SCSS in Message.vue with no template or JavaScript changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#684",
+      "title": "Clean up mobile resize listeners to prevent leaks in Nexior 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "mobile",
+        "bugfix",
+        "vue",
+        "performance",
+        "refactor"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/684",
+      "summary": "Refactored Main.vue and Console.vue to use named resize handlers and remove them on component unmount. This prevents accumulation of anonymous window resize listeners on repeated navigation, which could retain unmounted component instances and degrade performance on mobile. No reactive behavior changes were made; mobile breakpoint logic remains unchanged. The updates ensure smoother and more memory-efficient mobile navigation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#683",
+      "title": "Enable pinch-zoom on web and Android while preserving iOS workaround in Nexior 🔍",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "mobile",
+        "accessibility",
+        "web",
+        "android",
+        "ios",
+        "viewport"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/683",
+      "summary": "This update modifies the viewport meta at runtime to allow pinch-zoom on web and Android, while keeping the iOS Capacitor input-focus zoom workaround intact. The change ensures accessibility compliance with WCAG 1.4.4 and allows users to zoom into images or screenshots. Native shells remain unaffected, maintaining existing UX on iOS."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#682",
+      "title": "Optimize console list pages for 360px phones in Nexior 📱",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "mobile",
+        "responsive",
+        "ui",
+        "el-table",
+        "console"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/682",
+      "summary": "This update adjusts the console list pages—order, usage, and application—to display properly on small mobile screens. Key changes include reducing the scroll-panel padding in Console.vue and hiding secondary el-table columns below 640px. Desktop layouts remain unchanged, ensuring mobile users can access essential columns without horizontal scrolling. The modification impacts 5 files with a net addition of 53 lines and removal of 10 lines."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#681",
+      "title": "Clamp dialogs on small screens to prevent overflow in Nexior 📱",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "mobile",
+        "ui",
+        "dialogs",
+        "css",
+        "responsiveness"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/681",
+      "summary": "Added a global CSS rule to clamp `.el-dialog` widths on screens narrower than 540px, ensuring payment, wallet, confirmation, and chat dialogs no longer overflow. This approach preserves deliberately small dialogs while keeping the close button reachable and vertical scrolling functional. No JavaScript changes were required, and all affected dialogs were visually verified on multiple iPhone presets. The update maintains consistency with Element Plus mobile breakpoints and existing gutters."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#680",
+      "title": "Fix iOS safe-area layout for navigators, drawer buttons, and wallet pill in Nexior 📱",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ios",
+        "mobile",
+        "layout",
+        "safe-area",
+        "css",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/680",
+      "summary": "This update ensures all mobile layouts in Nexior respect iOS safe-area insets. The wallet pill, bottom navigator, and drawer toggle buttons now adjust using `env(safe-area-inset-*)` and the viewport meta is updated with `viewport-fit=cover`. Changes apply across 23 files, mainly CSS adjustments, without impacting Android or web layouts. Visual tests on iPhone simulators confirm proper spacing above the notch and home indicator."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#868",
+      "title": "Route 2K/4K image requests to the high-res variant in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "images",
+        "openai",
+        "xiaojingai",
+        "high-res",
+        "routing"
+      ],
+      "public": false,
+      "summary": "This PR updates image routing for the xiaojingai pool so that 2K and 4K size requests use the `gpt-image-2-reverse-4k` model instead of being downgraded to 1K. Changes include a new `resolve_upstream_model` function and integration in both `images_generations.py` and `images_edits.py`. Verification shows full-resolution output now matches requested dimensions, with 4K images taking ~150–180s upstream. All other models and 1K requests remain unchanged."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#107",
+      "title": "Auto-translate i18n updates in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "i18n",
+        "localization",
+        "translations",
+        "frontend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces auto-generated i18n translation updates from the zh-CN source, enhancing the localization of the application. New translations have been added for multiple languages, including Arabic, German, Spanish, and more, while existing English translations have been refined. These changes aim to improve user experience by providing a more accessible interface for a diverse audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#108",
+      "title": "Fix tenant branding on auth pages in Frontend Web ✨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "branding",
+        "auth",
+        "frontend",
+        "nexior",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update ensures that custom tenant logos, titles, and favicons correctly display on authentication pages. The `getSiteOrigin` function now returns a bare lowercase hostname matching backend storage, resolving previous mismatches. The site initialization also updates the document title and favicon dynamically. AuthFrontend now fully supports Nexior's tenant-aware branding without backend changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#274",
+      "title": "Upgrade ESLint Standard config to 17.1.0 in Frontend Web ⚡️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "eslint",
+        "dependencies",
+        "linting",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This PR updates the `eslint-config-standard` dependency from version 16.0.3 to 17.1.0. The update adds Node engine support, compatibility with the latest `eslint-plugin-n`, and new `maxBOF` settings for `no-multiple-empty-lines`. It also updates related package lock entries to reflect the new version, ensuring consistent linting rules across the codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#867",
+      "title": "Add GPT-image-2 deployment and service for ephone in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "kubernetes",
+        "deployment",
+        "service",
+        "ephone",
+        "gpt-image-2",
+        "images"
+      ],
+      "public": false,
+      "summary": "Introduces Kubernetes Deployment and Service for the `platform-service-ephone-images` worker, enabling `/images/generations` and `/images/edits` endpoints to serve traffic. Updates `deploy/run.sh` to apply the new resources. Uses a separate replica pool to isolate long-running image generation jobs from other ephone subservices, maintaining predictable latency for existing endpoints."
+    },
+    {
       "id": "gh:pr:AceDataCloud/X402Client#20",
       "title": "Add SKALE x402 live demo walkthrough in X402 Client 🚀",
       "tags": [
