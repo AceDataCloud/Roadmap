@@ -3,6 +3,58 @@
   "date": "2026-05-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/X402Client#23",
+      "title": "Show full HTTP request and response logs in X402 Client 🔍",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "logging",
+        "http",
+        "e2e",
+        "skale",
+        "demo",
+        "client"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/23",
+      "summary": "This update enhances `test-skale-e2e.ts` by adding verbose logging for all HTTP calls, capturing complete URLs, headers, and truncated request/response bodies. Both unauthenticated probes and paid retries now print detailed timing and gateway headers for better visibility during stage testing. No production code or protocol changes were made, ensuring the gateway behavior remains identical. Documentation and sample outputs were updated to reflect the new logging format."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#22",
+      "title": "Switch to fast GPT chat demo + on-chain settlement display in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "skale",
+        "demo",
+        "chat-completions",
+        "on-chain",
+        "bugfix",
+        "typescript"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/22",
+      "summary": "This PR updates the SKALE demo to use GPT chat completions instead of Suno, reducing end-to-end run time to under a second. It prints detailed on-chain settlement information after successful API calls and pretty-prints the signed EIP-712 envelope. Bug fixes include correcting the default SKALE RPC endpoint and updating the FAQ on gas payments. Changes improve demo clarity and reliability while ensuring accurate payment verification."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#239",
+      "title": "Completed comprehensive SolRadar research cycle in Sol Radar 📊",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "report",
+        "solradar",
+        "data-quality",
+        "candidate-analysis"
+      ],
+      "public": false,
+      "summary": "Executed a full research cycle and published the resulting report, fully populating the seeded template with provider diagnostics, candidate analysis, and machine-readable intents. Reviewed 29 candidates, skipping 13 for low liquidity, and updated hold/skip decisions with detailed reasoning and metrics like top10_holder_pct and creator_rug_count. Data source health was documented, including Grok provider timeouts and errors, ensuring full traceability of results."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#280",
       "title": "Auto-translate i18n updates in Frontend Web 🚀",
       "tags": [
