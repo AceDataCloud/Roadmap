@@ -3,6 +3,198 @@
   "date": "2026-05-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#427",
+      "title": "Simplify gpt-image-2 pricing to a flat rate in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "gpt-image-2",
+        "backend",
+        "billing",
+        "cost",
+        "simplification"
+      ],
+      "public": false,
+      "summary": "This update standardizes `gpt-image-2` costs to a single flat 0.09 cr per call, removing previous size-dependent tiers. All generation and edit requests now apply the same rate, simplifying both billing and service display. Legacy size-specific rules and whitelists were deleted, while other models remain unaffected. Verification tests confirm accurate calculation across multiple resolutions and edit cases."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#285",
+      "title": "Automatic i18n Updates from zh-CN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "localization",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces auto-generated internationalization (i18n) translation updates based on changes from the zh-CN source. Key modifications include updates to various language files, enhancing the localization for multiple languages such as Arabic, German, English, Spanish, French, Italian, Japanese, Korean, Portuguese, Russian, and Traditional Chinese. These changes aim to improve user experience by providing accurate translations across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#269",
+      "title": "Upgrade @types/node to v25.6.0 in Frontend Web ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "typescript",
+        "node",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps the @types/node dependency from version 16.18.126 to 25.6.0 in the project. Both package.json and package-lock.json were updated, reflecting the new version and integrity hashes. The change ensures compatibility with the latest Node.js type definitions, improving type safety across the codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#270",
+      "title": "Update @types/uuid to latest version in Frontend Web ⚡️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependency-update",
+        "typescript",
+        "uuid",
+        "frontend",
+        "npm"
+      ],
+      "public": false,
+      "summary": "This PR upgrades the @types/uuid package from version 8.3.4 to 11.0.0. The package-lock.json and package.json files were updated to reflect the new version. This ensures type definitions for UUIDs are current, improving type safety and compatibility with other dependencies. No functional changes were introduced."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#281",
+      "title": "Exciting New Site Management Features in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "features",
+        "frontend",
+        "localization",
+        "ui",
+        "site-management"
+      ],
+      "public": false,
+      "summary": "This update introduces the wiring of four key tabs on the site detail page, enhancing the user experience for managing general information, domains, subsites, and advanced settings. A new `siteDomain` operator has been added, along with a build-flag-gated navigation entry for the Sites console, ensuring a smoother integration with existing features. Localization improvements have also been made to support multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#283",
+      "title": "Polish order detail page with labeled payment tags in Frontend Web ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "orders",
+        "visual",
+        "frontend",
+        "vue",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "Updated the order detail page to render Payment Method as colored tags instead of plain text, improving readability and visual consistency. Removed bold styling from the Amount field so it aligns with other description rows. Added helper methods for tag labeling and type selection, simplifying the template logic. ESLint and TypeScript checks passed with zero errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#873",
+      "title": "Fix aspect ratio detection for nano-banana edits in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "image-processing",
+        "nano-banana",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update restores the functionality to snap detected aspect ratios for the nano-banana image editing feature. Previously, the aspect ratio was being discarded, causing all outputs to default to a square format. The fix ensures that the correct aspect ratio is passed to upstream services, preserving the original image proportions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#284",
+      "title": "Automatic i18n Updates from zh-CN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update introduces automatic translation updates for internationalization (i18n) from the zh-CN source. Key files such as order.json for English, French, and Portuguese have been modified to reflect these changes, enhancing the multilingual support of the platform. Several cache files were also removed or renamed as part of the cleanup process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#282",
+      "title": "Display Reward payment and credit amounts clearly in Frontend Web ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "order-detail",
+        "reward",
+        "credits",
+        "i18n",
+        "vue",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update adds support for displaying 'Reward' as a payment method and surfaces the associated credit amount on the order detail page. Previously, reward orders showed an empty payment method and lacked credit information. Now, reward orders display both the method and credits, while paid top-ups also show credit counts alongside USD prices. The changes include Vue template updates and i18n additions for English and Chinese."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#426",
+      "title": "Enhance Reward Order Descriptions with Credit Count in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "survey",
+        "reward",
+        "backend",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update modifies the order description for survey rewards to include the credit count, making it more user-friendly. Previously, the description displayed an internal alias, which was not meaningful to users. Now, it will read as 'Survey reward — X credits', improving clarity for users viewing their orders."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#425",
+      "title": "Increase onboarding survey max selections to 6 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "survey",
+        "backend",
+        "migration",
+        "localization",
+        "schema-update"
+      ],
+      "public": false,
+      "summary": "The onboarding survey's `use_cases.max_select` has been raised from 3 to 6 to better accommodate users with multiple needs. Corresponding hints in both English and Simplified Chinese have been updated. A new migration refreshes the schema and translation rows without affecting other locales or options, ensuring existing deployments serve the correct limits."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#874",
+      "title": "Streamline CDN Path by Renaming Prefix in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cdn",
+        "refactor",
+        "images",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update removes the `openaihk` prefix from the CDN path for images, aligning it with existing ephone outputs. The new path format will be `/gpt-image/<task_id>_<idx>.<ext>`, ensuring consistency across services without altering response shapes. The change affects only the CDN path constant in the codebase, with no impact on existing URLs."
+    },
+    {
       "id": "gh:pr:AceDataCloud/X402Client#23",
       "title": "Show full HTTP request and response logs in X402 Client 🔍",
       "tags": [
