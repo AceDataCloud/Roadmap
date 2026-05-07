@@ -3,6 +3,38 @@
   "date": "2026-05-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPs#228",
+      "title": "Verified `claude-code` docs require no monorepo updates in M C Ps ✅",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docs",
+        "sync",
+        "verification",
+        "no-op"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/228",
+      "summary": "The PR confirms that the `claude-code` service referenced in Docs has no corresponding MCP server in this repository. The sync configuration and server inventory were reviewed, showing no mappings or directories for `claude-code`. No repository files were changed, ensuring the monorepo remains unaffected by the Docs update."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#241",
+      "title": "New SolRadar Research Report Published in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "report",
+        "solradar",
+        "updates",
+        "diagnostics"
+      ],
+      "public": false,
+      "summary": "This update introduces the latest SolRadar research report for the cycle dated 2026-05-07, now available under the reports directory. Key deliverables include comprehensive diagnostics, a watchlist review, and detailed candidate analyses, ensuring all necessary outputs are met. The report also addresses risk management by documenting partial degradation and maintaining source error visibility."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#288",
       "title": "Add platform-tenant Caddy proxy alongside platform-frontend in Frontend Web 🚀",
       "tags": [
