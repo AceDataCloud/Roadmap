@@ -3,6 +3,166 @@
   "date": "2026-05-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#280",
+      "title": "Auto-translate i18n updates in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "accessibility",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces auto-generated internationalization (i18n) translations from the zh-CN source. New language files have been added for Arabic, German, Spanish, French, Italian, Japanese, Korean, Portuguese, Russian, and Traditional Chinese, enhancing accessibility for a broader audience. Additionally, the English site.json has been modified to improve clarity and consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#872",
+      "title": "Launch dedicated OpenAIHK /images deployments for cortex routing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "openaihk",
+        "images",
+        "cortex",
+        "deployment",
+        "kubernetes",
+        "cos"
+      ],
+      "public": false,
+      "summary": "Introduces a dedicated `platform-service-openaihk-openai` deployment mirroring the public `/images/{generations,edits}` endpoints. This isolates vendor-specific quirks from the shared worker, handling URL-to-binary conversion, COS rehosting, and `channel: cortex` labeling. The new handlers support both JSON and multipart inputs, keeping response shapes compatible with existing clients. Kubernetes manifests and deployment scripts are updated to deploy and expose this new service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#279",
+      "title": "Scaffold Affiliate Console for Site Management in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "console",
+        "routing",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This PR introduces a feature-flagged scaffold for the affiliate and sub-site management console, including site operators, routes, and skeleton pages. Key additions include the SiteOperator for API interactions, new routes for site management, and initial page structures for site details and listings. The console is gated by a build-time flag to ensure it does not affect the production bundle until fully rolled out."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#424",
+      "title": "Enhance Site Metadata for Pricing Control in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "pricing",
+        "metadata",
+        "validation",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a validated `metadata.pricing` block for each Site, allowing affiliates to adjust the platform price without affecting distribution. Key features include a `markup_ratio`, currency normalization, and a controlled `applies_to` field. The implementation is supported by extensive unit tests ensuring robust functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#686",
+      "title": "Enhance Image Upload Experience with New Cropper in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "cropper",
+        "i18n",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/686",
+      "summary": "This update replaces the generic upload button in the site-settings panel with a new image cropper for logos, favicons, and QR codes. The cropper, ported from AuthFrontend, ensures users can only upload images that meet the recommended dimensions, improving the overall user experience. Additionally, new internationalization keys have been added for better guidance during image uploads."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#109",
+      "title": "Fix site state persistence issue in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "bugfix",
+        "frontend",
+        "localstorage",
+        "vuex"
+      ],
+      "public": false,
+      "summary": "This update addresses a bug where the site state persisted in localStorage could lead to incorrect branding being displayed when visiting the login page without a `?site=` parameter. The fix ensures that when no site is found, the persisted site state is cleared, allowing the default AceDataCloud branding to be shown. This change enhances the user experience by preventing unintended branding from appearing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#422",
+      "title": "Fix custom domain resolution for bound Sites in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "site",
+        "backend",
+        "custom-domain"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where custom domains bound to existing Sites were incorrectly resolving to new, empty Sites. The root cause was identified in the lookup process, which only considered the original Site identifier. The fix implements a new method to ensure that requests for bound custom domains return the correct Site, preventing unauthorized admin access and improving user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#871",
+      "title": "Enhance OpenAI Image Routing with Cortex Channel in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "openai",
+        "images",
+        "routing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces a new routing option for the OpenAI image generation and editing endpoints, allowing users to specify `channel: cortex` for accessing the `gpt-image-2` model. The implementation ensures that requests with the cortex channel are directed to the appropriate provider without affecting existing functionalities. Additionally, symmetry is maintained by tagging the xiaojing channel for the reverse model."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#423",
+      "title": "Add English onboarding survey seed to fix UI fallback in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "i18n",
+        "survey",
+        "migration",
+        "backend",
+        "english"
+      ],
+      "public": false,
+      "summary": "This PR adds a new migration that seeds English translations for the onboarding-2026 survey. Previously, English users saw Chinese text because the initial migration only included zh-cn keys and the CronJob delay caused a fallback. Now, 110 English keys are created hand-written, ensuring immediate correct display for new users. Other locales remain unaffected and continue to be handled by the regular CronJob."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#870",
+      "title": "Normalize Gemini-3 fallback keys to prevent 500 errors in Platform Service ⚙️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "fallbacks",
+        "gemini-3",
+        "platform-service",
+        "stability"
+      ],
+      "public": false,
+      "summary": "This update fixes a latent fallback bug for Gemini-3 models where `get_account()` failed to find valid substitutes, causing 500 errors. The fallback keys in `model_fallbacks.json` are now normalized to match upstream model names, ensuring proper lookup. Existing price checks remain unchanged, and non-Gemini fallback chains are unaffected. After the fix, requests automatically route to the next available model when all primary providers are down."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#278",
       "title": "Expanded multi-language survey support in Frontend Web 🌐",
       "tags": [
