@@ -3,6 +3,223 @@
   "date": "2026-05-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#288",
+      "title": "Add platform-tenant Caddy proxy alongside platform-frontend in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "caddy",
+        "tenant-proxy",
+        "platform-frontend",
+        "deployment",
+        "loadbalancer"
+      ],
+      "public": false,
+      "summary": "This PR introduces a new Caddy deployment and service (`caddy-platform-tenant-proxy`) next to `platform-frontend` to handle sub-sites under platform.acedata.cloud. It includes a dedicated ConfigMap, PVC, Deployment, and LoadBalancer Service, ensuring isolated TLS state and separate traffic from Nexior's existing studio proxy. The deployment is applied via an update to `deploy/run.sh`, integrating with the existing CI/CD workflow without changing other services. This ensures correct routing and on-demand TLS for platform tenants without impacting studio tenants."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#226",
+      "title": "No changes applied as `claude-code` service is absent in M C Ps ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "sync",
+        "audit",
+        "no-op",
+        "docs",
+        "ace-data-cloud"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/226",
+      "summary": "The sync process detected updates for `claude-code`, but this service is not present in the monorepo and is not mapped in `sync.yaml`. After auditing the repository, it was confirmed that no implementation changes were necessary. This no-op ensures that existing MCP services remain unaffected and avoids speculative edits."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#432",
+      "title": "Add comprehensive Nexior product docs for connectors, BYOK, Subsite, Studio, WebExtractor, and Claude Code 5-min in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "nexior",
+        "zh-cn",
+        "backend",
+        "new-features",
+        "user-guides"
+      ],
+      "public": false,
+      "summary": "This update adds six new zh-CN documentation files covering key Nexior features: Connectors, BYOK, Subsite, Studio, WebExtractor, and a 5-minute Claude Code guide. All files are newly created, totaling 579 lines, with detailed setup instructions and usage scenarios for end users. These docs improve discoverability of platform capabilities and provide clear step-by-step guidance, reducing support queries. Translation automation will propagate content to 17 additional languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#289",
+      "title": "Add i18n key coverage guard to block incomplete locales in Frontend Web 🛡️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "ci",
+        "workflow",
+        "frontend",
+        "translations",
+        "regression-guard"
+      ],
+      "public": false,
+      "summary": "Introduces a CI script that ensures every non-base locale matches the key set of zh-CN. The workflow now fails if translations are missing keys, preventing partial auto-translated PRs from merging. Updates include adding `check_i18n_coverage.py` and integrating it into both the CI and translation pipelines. This change improves reliability of the localization process without altering shipped code behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#287",
+      "title": "Backfilled 930 missing i18n keys across 11 locales in Frontend Web 🌐",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "localization",
+        "frontend",
+        "bugfix",
+        "multilingual"
+      ],
+      "public": false,
+      "summary": "This PR restores 930 previously missing translation keys across 11 locales, including homepage, order, and pt site files. All affected JSON files were patched in place, preserving existing translations and placeholders. After the update, a full audit confirms zero missing keys, ensuring consistent multi-language rendering for AceDataCloud users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#434",
+      "title": "Enable per-parent proxy CNAME for tenant domains in Backend ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "site-domain",
+        "proxy",
+        "dns",
+        "nexior",
+        "multi-tenant"
+      ],
+      "public": false,
+      "summary": "This PR adds support for per-parent Site CNAME resolution for tenant custom domains. The helper `resolve_proxy_cname` now determines the correct Caddy reverse-proxy target based on the parent Site's metadata, defaulting to the global proxy if unset. `SiteDomainViewSet.create` snapshots this value on creation, ensuring DNS instructions show the correct proxy without affecting existing rows. Eight unit tests verify correct fallback and metadata handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#222",
+      "title": "Added deepseek-v4-flash and new Seedream generation options in M C Ps ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "aichat",
+        "seedream",
+        "deepseek",
+        "image-generation",
+        "api-sync"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/222",
+      "summary": "This update syncs MCP servers with the latest OpenAPI spec changes. The `aichat` service now includes `deepseek-v4-flash` in its model listings. `seedream_generate_image` gained `sequential_image_generation_options` for controlling batch image output and `optimize_prompt_options` for prompt optimization. All other services remain consistent with their current API specs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#433",
+      "title": "Complete hands-on Nexior deployment guides for 7 platforms in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "nexior",
+        "deployment",
+        "backend",
+        "troubleshooting",
+        "guides"
+      ],
+      "public": false,
+      "summary": "This update adds detailed, step-by-step deployment sections to 7 Nexior documentation files, covering Docker, Vercel, Netlify, Sealos, Zeabur, GitCode, and Tencent Cloud. Each doc now includes build settings, environment variable references, post-deploy verification checklists, and platform-specific troubleshooting. No existing instructions were removed, ensuring current users retain the original tutorials. The changes total 528 insertions across all files, improving clarity and reducing common support issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#431",
+      "title": "Revamped top-funnel docs with current models and cURL examples in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "zh-cn",
+        "promotion",
+        "api",
+        "integration",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This PR rewrites four long-form promotion articles in zh-CN, updating outdated content and adding real model integrations, working cURL examples, async callbacks, troubleshooting, and concrete scenarios. Chat API integration now covers 11 apps with detailed URL and API key guidance. Headshots, Luma, and Suno docs received expanded instructions, updated models, and removed deprecated examples or anti-pattern advice. Overall, the updates improve accuracy, usability, and developer onboarding for top-of-funnel content."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#286",
+      "title": "Automated Portuguese i18n updates from zh-CN in Frontend Web 🌐",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "portuguese",
+        "frontend",
+        "auto-generated"
+      ],
+      "public": false,
+      "summary": "This PR applies auto-generated translations from the zh-CN source to the Portuguese locale. Key updates include adding 134 new translations and removing 12 outdated entries in site-related JSON files. The changes enhance the internationalization coverage and improve user experience for Portuguese-speaking users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#430",
+      "title": "Updated Model Matrix for OpenAI, Claude, Gemini, and Nexior in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "updates",
+        "models",
+        "nexior",
+        "openai",
+        "claude"
+      ],
+      "public": false,
+      "summary": "This update refreshes the model matrix across four key marketing documents, ensuring that all live models are accurately represented. Key additions include new tags for OpenAI's GPT-5.x series, Claude's latest Opus version, and several Gemini model updates. The changes enhance the clarity and completeness of our documentation, providing users with the most current information."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#428",
+      "title": "Clean up critical P0 docs issues and unsafe links in Backend ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "bugfix",
+        "zh-cn",
+        "security",
+        "links",
+        "nexior"
+      ],
+      "public": false,
+      "summary": "This PR addresses five high-priority documentation issues in `docs/zh-CN/`. It removes an AI prompt leak from `terms.md`, deletes a misleading token reference in `support.md`, fixes stray characters in API URLs, eliminates hard-coded inviter IDs, and replaces a typosquatted Luma link with the official site. Changes improve accuracy, security, and clarity for end users. The translations for other languages will update automatically in the next CronJob run."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#429",
+      "title": "Revamped Documentation for Promotion APIs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "api",
+        "backend",
+        "update",
+        "chinese"
+      ],
+      "public": false,
+      "summary": "All 12 promotion_short_*.md documents in the Chinese documentation have been completely rewritten to include accurate model lists, cURL examples, and relevant use cases. This update resolves previous issues such as broken links, incorrect product information, and lack of technical content, enhancing clarity and usability for developers. The new format ensures each document provides concise value propositions and verifiable model details."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#427",
       "title": "Simplify gpt-image-2 pricing to a flat rate in Backend 🚀",
       "tags": [
