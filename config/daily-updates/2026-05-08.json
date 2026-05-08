@@ -3,6 +3,22 @@
   "date": "2026-05-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#875",
+      "title": "Fix empty image_urls handling for generate requests in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "validation",
+        "api",
+        "integration",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update modifies the validation for `image_urls` in generate requests, allowing empty arrays to be accepted. Previously, any empty array would trigger a 400 error, impacting integrations like Dify. The fix ensures that empty arrays are treated as valid input for generate actions while maintaining strict checks for edit actions."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#245",
       "title": "New Research Cycle Completed in Sol Radar 🚀",
       "tags": [
