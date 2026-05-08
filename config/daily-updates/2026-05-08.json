@@ -3,6 +3,58 @@
   "date": "2026-05-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#689",
+      "title": "Streamline i18n coverage and backfill missing keys in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "python",
+        "ci",
+        "workflow",
+        "backfill",
+        "cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/689",
+      "summary": "This PR replaces `@transmart/cli` with a Python-based translation script and introduces a coverage guard to prevent missing keys. It backfills 1056 keys across 16 locales and 37 namespaces, ensuring full alignment with the zh-CN source. CI workflows now validate key coverage during PRs and after auto-translation. All previous cache files and transmart dependencies have been removed for a cleaner setup."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#291",
+      "title": "Streamline Caddy proxy naming for clarity in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "caddy",
+        "proxy",
+        "rename",
+        "kubernetes",
+        "frontend",
+        "infra"
+      ],
+      "public": false,
+      "summary": "This PR renames the platform-side Caddy reverse proxy from `caddy-platform-tenant-proxy` to `caddy-platform-proxy`, aligning it with Nexior's parallel rename. All Kubernetes resource names, YAML files, and related references are updated, while DNS and PVCs remain untouched to ensure backwards compatibility. The change improves clarity and symmetry between the platform and studio proxies, simplifying internal operations and deployments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#688",
+      "title": "Rename tenant proxy to studio proxy for clarity in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "infra",
+        "rename",
+        "kubernetes",
+        "nexior",
+        "deployment"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/688",
+      "summary": "This PR renames internal Kubernetes resources from `caddy-tenant-proxy` to `caddy-studio-proxy` to more accurately reflect that it fronts only studio sub-sites. The deployment YAML, ConfigMap, Service, and related labels were updated, while DNS and the persistent volume remain unchanged. Minor documentation in `site_domain.ts` and the deploy script were also updated to match the new naming. No production tenants are affected, so HTTPS certificates will refresh on first access without disruption."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#290",
       "title": "Replace Transmart with safe diff-and-fill translator in Frontend Web 🚀",
       "tags": [
