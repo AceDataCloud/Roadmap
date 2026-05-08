@@ -3,6 +3,85 @@
   "date": "2026-05-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#435",
+      "title": "Update default proxy CNAME for clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "dns",
+        "proxy",
+        "backend",
+        "update",
+        "naming"
+      ],
+      "public": false,
+      "summary": "The default public-facing proxy CNAME has been renamed from `tenant-proxy.acedata.cloud` to `studio-proxy.acedata.cloud` to align with internal Kubernetes naming conventions. This change improves clarity for users by ensuring that the public name directly reflects the associated application. Existing DNS records remain intact, ensuring no disruption for current tenants."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#293",
+      "title": "Update CNAME Documentation for Clarity in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "documentation",
+        "dns",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update aligns the documentation for customer-facing CNAMEs with the newly established public hostnames: `studio-proxy.acedata.cloud` and `platform-proxy.acedata.cloud`. Key changes include updates to the platform-proxy YAML file and inline comments in the console sites page, ensuring users have accurate information to avoid confusion. Legacy hostnames remain as DNS aliases, maintaining compatibility for existing users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#691",
+      "title": "Update CNAME Documentation for Studio Proxy in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "documentation",
+        "dns",
+        "update",
+        "infrastructure"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/691",
+      "summary": "This update modifies the documentation for the studio-proxy configuration, reflecting the new public hostname `studio-proxy.acedata.cloud`. The legacy hostname `tenant-proxy.acedata.cloud` remains as a permanent DNS alias, ensuring compatibility for existing tenants without requiring DNS changes. This change aims to clarify the CNAME setup process for new users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#877",
+      "title": "Enhance OpenAI Image API to Support Form Data in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "api",
+        "express",
+        "openai",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update fixes an issue where the OpenAI Images API returned a 400 error for requests with `application/x-www-form-urlencoded` bodies. By adding support for this content type in the Express middleware, the API now correctly parses incoming requests, allowing for seamless integration with various clients. This change ensures that both JSON and form data callers are handled uniformly, improving overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#876",
+      "title": "Enhance AI Chat Tool to Prevent Token Waste in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "improvement",
+        "aichat",
+        "tokenmanagement",
+        "safety"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where the AI chat tool could enter a runaway loop, resulting in excessive token consumption without meaningful output. Key changes include a revised prompt to clarify supported capabilities, a duplicate tool call detector to halt repeated requests, and an environment leak deny-list to prevent unnecessary data exposure. These improvements aim to enhance user experience and reduce credit deductions significantly."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#247",
       "title": "Scheduled Research Cycle Report Published in Sol Radar 🚀",
       "tags": [
