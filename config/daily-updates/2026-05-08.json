@@ -1,0 +1,39 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-05-08",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#290",
+      "title": "Replace Transmart with safe diff-and-fill translator in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "python",
+        "ci",
+        "frontend",
+        "translations",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This PR removes `@transmart/cli` and replaces it with a Python-based diff-and-fill translator for i18n. Missing keys across all locales are now detected and translated with strict validation, ensuring no dropped translations. The workflow has been updated to use Python 3.12, and idempotent runs produce zero unnecessary writes. Cache files and unsafe Node dependencies have been fully removed, improving reliability and coverage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#243",
+      "title": "Completed SolRadar 2026-05-08 research cycle in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "solradar",
+        "research",
+        "data-health",
+        "candidate-analysis",
+        "cycle-report"
+      ],
+      "public": false,
+      "summary": "The scheduled SolRadar research report for 2026-05-08 was published as a single-file addition. It includes fully populated research content with explicit actions, reasons, and reviewed candidates. Data source health is documented with provider degradation details, and narrative gating rules were applied to flag suspicious candidates. Key assets like SOL were assessed for liquidity and risk, while high-risk pump-and-bump candidates were skipped."
+    }
+  ]
+}
