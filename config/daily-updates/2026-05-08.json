@@ -3,6 +3,39 @@
   "date": "2026-05-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#690",
+      "title": "Standardize PVC Naming for Studio in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "infra",
+        "naming",
+        "kubernetes",
+        "deployment"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/690",
+      "summary": "This update renames the studio-side Persistent Volume Claim from `caddy` to `caddy-studio`, aligning it with the naming convention used for other resources. Key changes include modifications to the `studio-proxy.yaml` file to inline the PVC declaration and update deployment references. This ensures consistency across both studio and platform resources, enhancing clarity and maintainability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#110",
+      "title": "Backfill missing i18n keys and switch to Python-based translation in Frontend Web 📝",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "i18n",
+        "translations",
+        "python",
+        "ci",
+        "coverage",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "Replaces the old transmart workflow with new Python scripts for translating and verifying i18n keys. Adds a coverage guard to ensure all locales match zh-CN, and backfills 262 missing keys in fr and ko survey.json files. Removes transmart dependencies, cached sentinel files, and updates CI/translation workflows for Python 3.12. The new process is idempotent, strict on missing translations, and prevents silent regressions."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#689",
       "title": "Streamline i18n coverage and backfill missing keys in Nexior 🚀",
       "tags": [
