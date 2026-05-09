@@ -3,6 +3,232 @@
   "date": "2026-05-09",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#696",
+      "title": "Fix Manage Dialog Opening for Subsites in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "routing",
+        "dialog",
+        "settings",
+        "subsite"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/696",
+      "summary": "This update resolves an issue where clicking 'Manage' on a subsite led to a blank settings page. The approach has been switched to use a query flag, allowing the settings dialog to auto-open on mount without timing issues. Key changes include modifications to the routing logic and the addition of a new method to handle query parameters effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#238",
+      "title": "Docs alignment verified for OpenAI in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docs",
+        "openai",
+        "sync",
+        "verification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/238",
+      "summary": "This PR confirms that the MCP server is fully aligned with the latest OpenAPI specifications for OpenAI models and endpoints. A thorough review of the relevant endpoints and model enums was conducted, ensuring no discrepancies exist. Importantly, no code changes were necessary as the current implementation already meets the required standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#695",
+      "title": "Display Friendly Domain Taken Message in Nexior 🌐",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "localization",
+        "error-handling",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/695",
+      "summary": "This update enhances the user experience by providing a friendly error message when a custom domain is already bound to a site. The `CustomDomain.vue` component now checks for a duplication error and displays a localized message instead of the raw backend response. Additionally, this change includes updates to 18 locale files to support the new message format."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#668",
+      "title": "Upgrade vue-router to version 5.0.6 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "update",
+        "vue-router",
+        "bug-fix",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/668",
+      "summary": "This update bumps the vue-router dependency from version 4.6.4 to 5.0.6, introducing several bug fixes and features. Key improvements include enhanced compatibility and performance optimizations, ensuring a smoother routing experience in the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#879",
+      "title": "Enhance error handling for unsupported capabilities in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "aichat2",
+        "errorhandling",
+        "userexperience"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of unsupported capabilities in the aichat2 model by modifying prompt rules and error messages. Key changes include the introduction of a clear section outlining unsupported capabilities and instructions to avoid fallback to Bash for unsupported tasks. This ensures users receive appropriate responses instead of unnecessary Bash calls, enhancing the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#669",
+      "title": "Update TypeScript ESLint Parser to Latest Version in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "typescript",
+        "eslint",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/669",
+      "summary": "This update bumps the @typescript-eslint/parser from version 8.59.1 to 8.59.2. Key fixes include handling crashes on recursive template literal types and improvements in object destructuring values. This change ensures better stability and performance for TypeScript linting in the Nexior project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#670",
+      "title": "Upgrade uuid to 14.0.0 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "upgrade",
+        "security",
+        "node"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/670",
+      "summary": "This update bumps the uuid package from version 11.1.1 to 14.0.0, introducing breaking changes that require Node.js version 20 or higher. The new version drops support for Node.js 18 and enhances security by ensuring that the crypto module is globally defined. These changes will improve the overall performance and security of the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#671",
+      "title": "Update cross-env to latest version in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "update",
+        "nexior",
+        "dev"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/671",
+      "summary": "This update bumps the cross-env package from version 7.0.3 to 10.1.0. Key improvements include support for default value syntax and modernization of the package, enhancing compatibility and functionality for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#672",
+      "title": "Upgrade copy-to-clipboard to version 4.0.2 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "update",
+        "clipboard",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/672",
+      "summary": "This update bumps the copy-to-clipboard package from version 3.3.3 to 4.0.2, introducing important fixes and enhancements. Notably, it ensures that the execCommand function works in fullscreen mode and includes several dependency updates for improved performance. This upgrade enhances the overall functionality and reliability of the clipboard operations in the Nexior project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#673",
+      "title": "Update eslint-plugin-vue to 10.9.1 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "eslint",
+        "vue"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/673",
+      "summary": "This update bumps the eslint-plugin-vue package from version 10.9.0 to 10.9.1. The new version includes a fix for parsing errors in Vue single-file components by updating the peer dependency for vue-eslint-parser. This change enhances the linting accuracy for Vue projects."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#676",
+      "title": "Update Node Types for Better Compatibility in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "update",
+        "typescript",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/676",
+      "summary": "This update bumps the @types/node package from version 22.19.17 to 25.6.2, ensuring improved compatibility and access to the latest type definitions. Changes were made to both package.json and package-lock.json, reflecting the new versioning. This enhancement will help maintain code quality and support for newer Node.js features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#662",
+      "title": "Fix WAV Download Issue in Nexior 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "frontend",
+        "suno",
+        "producer",
+        "download"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/662",
+      "summary": "This update addresses a bug where the WAV download feature failed due to incorrect data handling. The frontend now correctly reads the `file_url` from the response data array, ensuring successful downloads. Changes were made in both the Suno and Producer components to improve functionality and maintain compatibility with legacy response shapes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#236",
+      "title": "OpenAI MCP Sync Confirmed in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "openai",
+        "mcp",
+        "sync",
+        "docs",
+        "verification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/236",
+      "summary": "This update verifies that the OpenAI MCP service is fully aligned with the latest OpenAPI specifications from the Docs. Key checks confirmed that model enums, endpoint mappings, and tool parameters are all in sync, ensuring no code changes were necessary. This enhances the reliability of the integration without impacting existing functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#438",
+      "title": "Clarify n > 1 Support for GPT Image Models in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "openai",
+        "backend",
+        "api",
+        "images"
+      ],
+      "public": false,
+      "summary": "This update documents that the GPT Image family and Nano Banana models do not support requests for multiple images (n > 1). Key changes include updated descriptions in the OpenAPI specifications and documentation to reflect this limitation. Users are advised to send multiple parallel requests for variations instead."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#437",
       "title": "Improve Duplicate Hostname Handling in Backend 🚀",
       "tags": [
