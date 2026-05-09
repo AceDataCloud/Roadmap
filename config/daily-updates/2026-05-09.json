@@ -1,0 +1,22 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-05-09",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#251",
+      "title": "Published full SolRadar research cycle with candidate reviews in Sol Radar 📊",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "report",
+        "candidate-review",
+        "solradar",
+        "data-health"
+      ],
+      "public": false,
+      "summary": "This PR adds the complete SolRadar research report for the 2026-05-09 cycle. It includes detailed candidate evaluations, explicit intents, and provider health reporting. The report finalizes previous templates, preserves machine-readable front matter, and ensures all data sources and low-liquidity exclusions are clearly documented. Downstream automation can now consume the fully populated report without placeholders."
+    }
+  ]
+}
