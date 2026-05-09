@@ -3,6 +3,104 @@
   "date": "2026-05-09",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#437",
+      "title": "Improve Duplicate Hostname Handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "error-handling",
+        "duplication",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update enhances the error handling for duplicate hostnames in the site domain creation process. The `ValidationError` for already-bound hostnames has been replaced with a specific `Duplication` exception, allowing the frontend to better identify and manage duplicate collisions. The response structure remains consistent, ensuring a smooth user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#232",
+      "title": "Audit Complete: All MCP Services in Sync with OpenAPI Specs in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "audit",
+        "openapi",
+        "mcp",
+        "sync",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/232",
+      "summary": "This update confirms that all 19 MCP services are fully aligned with the current OpenAPI specifications. A thorough audit of model enums and endpoint paths shows no discrepancies, ensuring that all services are operating with the latest translation and localization changes. No code changes were necessary as everything is already in sync."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#694",
+      "title": "Streamline Settings Navigation by Removing Duplicate Page in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "navigation",
+        "settings",
+        "cleanup",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/694",
+      "summary": "This update eliminates the redundant `/site` page, consolidating all settings access through a new `/settings` route. The change enhances user experience by automatically opening the settings dialog, improving navigation for subsites and admin entries. Key modifications include the deletion of the old page and the introduction of a new route that supports deep-linking to specific tabs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#693",
+      "title": "Revamp Custom Domain Management in Nexior 🌐",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "settings",
+        "custom-domain",
+        "localization",
+        "refactor"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/693",
+      "summary": "This update moves the custom-domain management feature to a dedicated tab within each subsite's settings, enhancing usability for subsite admins. The previous per-row action in the main site's My Subsites list has been removed, streamlining the interface. Additionally, new localization entries have been added to support this feature across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#436",
+      "title": "Enhance Privacy Policy with Google API Disclosure in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "privacy",
+        "google",
+        "oauth",
+        "documentation",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update adds a crucial section to the privacy policy, detailing the 'Limited Use' requirements mandated by Google for OAuth verification. Both English and Chinese versions of the document have been updated to ensure compliance, allowing for immediate review by Google. The changes also include a deep link for users to manage their data access, enhancing transparency and user control."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#253",
+      "title": "Scheduled SolRadar Research Report Published in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "report",
+        "solradar",
+        "updates",
+        "analytics"
+      ],
+      "public": false,
+      "summary": "This update delivers the scheduled SolRadar research report for May 9, 2026, featuring comprehensive diagnostics and candidate analysis. Key changes include finalized report structure, explicit provider statuses, and detailed intent blocks for decision-making. The report now includes a thorough review of candidates, with reasons for actions taken based on credibility probes."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#251",
       "title": "Published full SolRadar research cycle with candidate reviews in Sol Radar 📊",
       "tags": [
