@@ -3,6 +3,269 @@
   "date": "2026-05-10",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#705",
+      "title": "Clean Up Dead OAuth Callback Page in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "cleanup",
+        "oauth",
+        "i18n",
+        "refactor",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/705",
+      "summary": "This update removes the obsolete `/chat/oauth/callback` page and its associated i18n strings from the Nexior project. The OAuth flow has been streamlined to exclusively manage connections at `auth.acedata.cloud`, making this page redundant. By eliminating this dead code, we enhance the overall codebase and prepare for future integrations without legacy clutter."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#708",
+      "title": "Automated i18n Updates for Multiple Languages in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "localization",
+        "translations",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/708",
+      "summary": "This update introduces auto-generated translation updates for the i18n files based on changes from the zh-CN source. A total of 16 language files have been modified, each receiving 8 new additions to enhance localization support. This ensures a more inclusive experience for users across different languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#710",
+      "title": "Enhance AuthFrontend Branding with Site Parameter in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "auth",
+        "branding",
+        "nexior",
+        "fix",
+        "frontend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/710",
+      "summary": "This update ensures that the `site` parameter is passed to AuthFrontend across various user actions, including profile access and embedded logins. By implementing this change, the correct branding for white-label tenants will be displayed, preventing default Ace Data Cloud branding from appearing. The modifications affect multiple components, aligning them with the recent updates from a previous PR."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#709",
+      "title": "Enhance Chat Skills/Connections Branding in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "branding",
+        "chat",
+        "auth",
+        "nexior",
+        "fix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/709",
+      "summary": "This update ensures that when users access Skills or Connections from a Nexior subsite, the correct branded logo is displayed on the AuthFrontend page. The changes involve modifying the URL parameters to include the site context, allowing AuthFrontend to render the appropriate branding. This fix enhances the user experience by maintaining brand consistency across different sites."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#252",
+      "title": "Align Seedance MCP with Docs 2.0 models in M C Ps 🎬",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "seedance",
+        "model-sync",
+        "docs-update",
+        "tests",
+        "video-generation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/252",
+      "summary": "This PR updates the Seedance MCP server to match the latest Seedance 2.0 models defined in the OpenAPI spec. New models `doubao-seedance-2-0-260128` and `doubao-seedance-2-0-fast-260128` were added to the type definitions, video generation tools, prompts, and documentation. Parametrized tests were introduced to ensure the new models are correctly accepted and processed in video generation. Overall, this ensures full parity with the Docs and smooth usage of the new model variants."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#295",
+      "title": "Create Sub-site Dialog Now Live in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "ui",
+        "localization",
+        "frontend",
+        "subsite"
+      ],
+      "public": false,
+      "summary": "This update introduces the long-awaited **Create Sub-site** dialog in the console's Sites Index, allowing users to create sub-sites directly from the UI. Key changes include a new button for creating sub-sites, real-time slug validation, and improved error handling. The implementation enhances user experience by streamlining the sub-site creation process and ensuring proper localization across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#246",
+      "title": "Introduce Fish Audio TTS MCP server in M C Ps 🎵",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "tts",
+        "mcp",
+        "fish-audio",
+        "voice-cloning",
+        "api",
+        "acedata"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/246",
+      "summary": "This PR adds a new Fish MCP server to implement the Fish Audio TTS API with three endpoints: audio generation, voice cloning, and task status polling. The server structure follows the established monorepo pattern with core, tools, prompts, and a main entry point. Environment, configuration, and sync mapping updates were also included to support the new MCP. This enables LLMs to generate speech and manage TTS tasks via the AceDataCloud API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#445",
+      "title": "Enhance Seedance 2.0 Model Support in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "seedance",
+        "backend",
+        "pricing",
+        "testing",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces two new Seedance 2.0 model IDs to the OpenAPI enum and updates JsonLogic billing rules accordingly. The new models, `doubao-seedance-2-0-260128` and `doubao-seedance-2-0-fast-260128`, come with provisional pricing mirrored from the 1.5-pro rates. Additionally, 10 new test cases have been added to ensure proper functionality and pricing accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#881",
+      "title": "Enhance Seedance Support for Ephone Integration in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "seedance",
+        "ephone",
+        "integration",
+        "update",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces support for two new Seedance models, `doubao-seedance-2-0-260128` and `doubao-seedance-2-0-fast-260128`, by routing requests through the existing VolcEngine worker to Ephone. Key changes include the addition of new settings, task creation methods, and a streamlined dispatch process that maintains backward compatibility with existing models. The deployment also requires confirmation of API key access for the new models before rollout."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#446",
+      "title": "Enhance Fish API Documentation with Integration Guides in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "migration",
+        "fish",
+        "api",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces integration guides for the Fish TTS and Fish Model APIs, ensuring they are displayed alongside their respective API endpoints in the browser. A new migration creates the necessary document entries and links them correctly, improving the user experience for developers. The changes also include proper ranking adjustments for seamless integration into the existing documentation structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#706",
+      "title": "New Seedance 2.0 Models Added in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "seedance",
+        "ui",
+        "localization",
+        "audio"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/706",
+      "summary": "This update introduces two new Seedance 2.0 model IDs, `doubao-seedance-2-0-260128` and `doubao-seedance-2-0-fast-260128`, to the SeeDance configuration UI. The **Generate Audio** toggle is now enabled for the 2.0 family, enhancing audio support as per the validated Ephone specification. Additionally, localization updates have been made for both English and Chinese."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#704",
+      "title": "Enhance Prompt Textareas with Autosize and Fullscreen in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "refactor",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/704",
+      "summary": "This update introduces a new `PromptTextarea` component that allows prompt textareas across all generation pages in Nexior to automatically resize based on user input. Additionally, a fullscreen expand button has been added for a better editing experience. The changes reduce code duplication and improve maintainability while enhancing user interaction with larger, more flexible textareas."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#248",
+      "title": "Documented no-op for fish service in M C Ps 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "sync",
+        "no-op",
+        "documentation",
+        "service"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/248",
+      "summary": "This update confirms that the `fish` service does not have a corresponding MCP target in the monorepo. After thorough checks, it was verified that there are no relevant directories or mappings for `fish`, resulting in a no-op outcome. No code changes were made as part of this PR."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#444",
+      "title": "Exciting New Fish TTS and Model Endpoints Registered in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "api",
+        "fish",
+        "backend",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update integrates new Fish TTS and Model endpoints into the platform, making them discoverable and billable. Key endpoints include `POST /fish/tts`, `POST /fish/model`, and `GET /fish/model`, enhancing the Fish service capabilities. The changes ensure proper API resolution and usage recording, crucial for billing accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#261",
+      "title": "Scheduled SolRadar Research Cycle Published in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "solradar",
+        "research",
+        "reports",
+        "analytics",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces the completed SolRadar research cycle for May 10, 2026, featuring a detailed report on market analysis. Key enhancements include populated universe metrics, a non-empty intents block, and a comprehensive diagnostics section. The report also addresses risk signals and includes Grok credibility assessments for candidates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#242",
+      "title": "Confirmed no changes needed for `overview` docs in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docs",
+        "sync",
+        "no-op",
+        "verification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/242",
+      "summary": "This update verifies that the recent docs sync for the `overview` service does not require any changes to the MCP packages. The `overview` service is not present in the monorepo layout or mapped in `sync.yaml`, confirming a no-op sync result. No code, tests, or service documentation were modified as part of this process."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#701",
       "title": "Enhance Video Playback Reliability in Nexior 🎥",
       "tags": [
