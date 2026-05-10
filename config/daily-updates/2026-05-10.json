@@ -3,6 +3,269 @@
   "date": "2026-05-10",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#450",
+      "title": "Updated Pricing for Seedance 2.0 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "backend",
+        "updates",
+        "seedance",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update corrects the pricing for the Seedance 2.0 service, aligning it with the actual vendor costs which were significantly higher than previously charged. The changes replace outdated pricing rules with five new ones that reflect accurate consumption and official prices across various resolutions. All tests have passed, ensuring the integrity of the pricing model."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#713",
+      "title": "Add clear admin and official hints to settings tabs in Nexior ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ux",
+        "settings",
+        "admin",
+        "official",
+        "i18n",
+        "components"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/713",
+      "summary": "Introduces a new `SectionNotice` component to display inline hints at the top of restricted settings tabs. Admin-only tabs (Site, SEO, Distribution, Function, Custom Domain) now show a visual cue indicating they are restricted to administrators, while the My Subsites tab shows an official-only hint. The update improves clarity without changing access rules. All relevant tabs import the component, and i18n keys for English and Chinese were added."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#449",
+      "title": "Split Fish Model API into separate POST and GET endpoints in Backend ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "backend",
+        "migration",
+        "billing",
+        "openapi",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update separates the Fish Model API into two distinct rows: POST for creation with a flat cost of 5 units, and GET for queries with a flat cost of 0. OpenAPI specs and cost definitions were updated accordingly, and tests were split to cover each endpoint independently. Migration ensures method-aware gateway routing without affecting billing semantics or requiring additional service changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/x402Guard#22",
+      "title": "Streamlined 60-second devnet verification with live tx badge in x402 Guard ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "x402Guard",
+        "readme",
+        "devnet",
+        "verification",
+        "documentation",
+        "aceguard",
+        "x402"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/x402Guard/pull/22",
+      "summary": "The README now guides users through a verified 60-second MCP endpoint check on Solana devnet. It adds a live \"green\" badge, documents `aceguard_spend` request/response, and clarifies that `aceguard_pay_for_api` only works on mainnet. Step-by-step instructions ensure users can confirm balances and on-chain transactions without SDK or client plumbing. Example errors and nonce replays demonstrate the on-chain program boundaries."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#296",
+      "title": "Streamline Boot Screen with Spinner Only in Frontend Web 🎡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "cleanup",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update removes the title and subtitle from the pre-app boot screen, leaving only the spinner for a cleaner look. Changes were made exclusively in the `index.html` file, eliminating unnecessary markup and CSS rules. The result is a more minimalistic loading experience that aligns with user preferences."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/x402Guard#21",
+      "title": "Fix SpendRecord Persistence Issues in x402 Guard 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "x402Guard",
+        "bugfix",
+        "spend",
+        "persistence",
+        "solana",
+        "solders"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/x402Guard/pull/21",
+      "summary": "This update addresses two critical bugs in the SpendRecord persistence process that caused successful on-chain spends to fail before recording in the database. The first bug involved a type error with the Signature object, while the second bug was related to the unhashable enum value of TransactionConfirmationStatus. With these fixes, the system now correctly records spends and returns accurate results, enhancing overall reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#712",
+      "title": "Streamline Boot Screen Design in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "design",
+        "ui",
+        "frontend",
+        "branding"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/712",
+      "summary": "This update simplifies the boot screen by removing the title and subtitle, leaving only the spinner. The spinner's color palette has been updated to match PlatformFrontend's branding, enhancing visual consistency across user flows. These changes are minimal and focus solely on static markup, ensuring a seamless user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#112",
+      "title": "Fix site query propagation for seamless navigation in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "bugfix",
+        "frontend",
+        "navigation",
+        "branding",
+        "router"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where the `?site=` query parameter was lost during internal navigation, causing tenant branding to revert to the default. A new router guard has been implemented to ensure that the `site` parameter is carried forward during navigation, preserving the correct branding across all pages. This change enhances user experience by maintaining consistent branding even after page refreshes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#711",
+      "title": "Exciting New Fish Audio TTS Surface Added in Nexior 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "tts",
+        "fish",
+        "ui",
+        "vuex"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/711",
+      "summary": "This update introduces a brand new Fish Audio top-level surface under `/fish`, featuring the `/fish/tts` text-to-speech page. Key components include a new Vuex module, various UI elements for configuration, and a robust integration with the Fish API for TTS tasks. The implementation is additive, ensuring existing functionalities remain unaffected while enabling future enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#448",
+      "title": "Enhance API Method Stamping for Spec-less Rows in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "backend",
+        "migration",
+        "data",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a data migration to stamp the `Api.method` for six spec-less rows that were previously left as NULL. By leveraging the deployed Kong route table, we ensure that these rows accurately reflect their corresponding HTTP methods, enhancing API precision. The migration is safe and can be re-run without issues, maintaining the integrity of the data."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#130",
+      "title": "Enhance API Lookup with Method Awareness in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "api",
+        "enhancement",
+        "gateway",
+        "refactor",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces method awareness to the `get_api_by_path` function, allowing it to handle multi-method endpoints more effectively. Key changes include the addition of a new `method` field in the API model and the refactoring of the lookup function to prioritize method-specific queries. This enhancement paves the way for future migrations to split multi-method endpoints into distinct rows, improving API management and documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/x402Guard#20",
+      "title": "Fix CI Issues with Image Naming and Rollout Variables in x402 Guard 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "x402Guard",
+        "ci",
+        "fix",
+        "deployment",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/x402Guard/pull/20",
+      "summary": "This update resolves critical CI failures caused by mixed-case repository names in image tags and mismatched environment variable names during rollout. The workflow now correctly builds and pushes images to GHCR, ensuring that production can pick up changes from the main branch. Additionally, the rollout step has been adjusted to use the correct image tags, preventing deployment issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/x402Guard#19",
+      "title": "Enhance MCP Connectivity with New CLI Tools in x402 Guard 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "x402Guard",
+        "cli",
+        "mcp",
+        "documentation",
+        "enhancement",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/x402Guard/pull/19",
+      "summary": "This update introduces two new scripts, `demo.py` and `mcp-curl.sh`, allowing users to interact with the MCP endpoint without relying on specific LLM clients. Additionally, the README has been revised to clarify the connection process for Claude Desktop, ensuring users can effectively troubleshoot and verify their MCP configurations. These changes enhance user experience and provide clearer guidance for successful MCP integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/x402Guard#18",
+      "title": "Fix payment scheme for better facilitator compatibility in x402 Guard 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "x402Guard",
+        "bugfix",
+        "payment",
+        "facilitator",
+        "x402",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/x402Guard/pull/18",
+      "summary": "This update resolves a critical issue where the X-Payment envelope was incorrectly using `scheme: \"solana\"`, causing payment failures. The fix changes it to `scheme: \"exact\"`, aligning with the expectations of the upstream facilitator and ensuring successful payment processing. All related checks have been verified, confirming that the new implementation meets the required standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#447",
+      "title": "Enhance API Lookup with Method Field in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "backend",
+        "feature",
+        "migration",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `method` field to the `Api` model, enabling the gateway to differentiate between multi-method endpoints. The schema change allows for better routing and billing of API requests, ensuring that each HTTP verb can be registered independently. A data migration has also been implemented to backfill existing records while maintaining backward compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#882",
+      "title": "Add seedance deployment to ephone script in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "deployment",
+        "kubernetes",
+        "script",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update modifies the `ephone/deploy/run.sh` script to include the deployment of seedance alongside existing services. By adding the necessary `kubectl apply` commands, the rollout of `platform-service-ephone-seedance` will now occur with future merges to `main`. This change ensures that the deployment process is complete and consistent across all services."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#705",
       "title": "Clean Up Dead OAuth Callback Page in Nexior 🚀",
       "tags": [
