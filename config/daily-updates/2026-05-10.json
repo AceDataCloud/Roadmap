@@ -3,6 +3,165 @@
   "date": "2026-05-10",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#132",
+      "title": "Updated custom authentication plugin in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "authentication",
+        "plugin",
+        "gateway",
+        "update"
+      ],
+      "public": false,
+      "summary": "The custom authentication plugin was modified to ensure compatibility with the latest platform updates. No code changes were made, but the plugin package has been refreshed. This update keeps the gateway environment stable and ready for future enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#297",
+      "title": "Add Read Count to Admin Announcements in Frontend Web 📊",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "admin",
+        "ui",
+        "translations",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new 'Read Count' column to the admin announcements page, allowing administrators to see how many distinct users have opened each announcement. The column is sortable and displays a default value of 0 if the backend data is not yet available. Additionally, translations for this new field have been added across all supported languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#453",
+      "title": "Add Read Count to Admin Announcement Endpoints in Backend 📊",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "admin",
+        "announcement",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `read_count` field to the admin announcement list and detail endpoints, allowing admins to see how many distinct users have opened each announcement. The implementation leverages existing data from the `AnnouncementReadRecord` model, ensuring accurate counts without duplicating user interactions. The public announcement serializer remains unchanged, maintaining security for non-admin users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#85",
+      "title": "Upgrade build-push-action to version 7 in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "docker",
+        "build",
+        "upgrade",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update bumps the docker/build-push-action from version 6 to 7, introducing several enhancements. Key changes include the switch to Node 24 as the default runtime, removal of deprecated environment variables, and updates to dependencies. This upgrade improves the overall functionality and performance of the build process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#131",
+      "title": "Fix HTTP Method Propagation for Accurate Billing in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "bugfix",
+        "auth",
+        "billing",
+        "gateway",
+        "http"
+      ],
+      "public": false,
+      "summary": "This update ensures that the user's original HTTP method is correctly propagated through the Kong to Platform Gateway authentication process. Key changes include adding the `X-Request-Method` header in the custom-auth plugin and modifying the controller to read this header for accurate API billing. This fix addresses a bug where all requests were incorrectly billed as POST, particularly impacting the new per-method API rows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#452",
+      "title": "Reduce Veo Fast Tier Consumption by 40% in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "veo",
+        "backend",
+        "cost",
+        "optimization",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update decreases the per-call consumption for Veo's fast tier from 1.2 to 0.72 credits across several models, including text2video and image2video. The change ensures competitive pricing against vendor quotes while maintaining healthy margins. All relevant tests have passed, confirming the accuracy of the adjustments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#135",
+      "title": "Enhance User Lookup with Privacy-Safe Endpoint in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "api",
+        "privacy",
+        "users",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new endpoint, `GET /users/resolve/`, allowing authenticated users to perform privacy-safe lookups for user information. The endpoint returns a minimal `UserPublicSerializer` payload, masking sensitive data while providing essential user details. This change enhances user experience in UIs like Nexior's site settings by replacing raw UUIDs with friendly identifiers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#714",
+      "title": "Automated i18n Updates from zh-CN in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "localization",
+        "translations",
+        "automation",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/714",
+      "summary": "This update introduces automated translation updates for internationalization (i18n) based on changes from the zh-CN source. Key modifications include the addition of new messages and descriptions across multiple language files, ensuring better accessibility and user experience for non-Chinese speakers. The changes impact various languages, enhancing the overall localization of the Nexior platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#451",
+      "title": "Recalibrate Seedance Models for Vendor Parity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "seedance",
+        "backend",
+        "updates",
+        "models"
+      ],
+      "public": false,
+      "summary": "This update adjusts all Seedance models to align pricing with vendor parity for the largest customer package. A linear rescale across 20 rules ensures that the pricing is consistent and reflects the official vendor rates, eliminating previous markup discrepancies. The changes enhance customer satisfaction by providing a fairer pricing structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Guard#23",
+      "title": "Revamped Hand-Held Demo for New Users in X402 Guard 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Guard",
+        "documentation",
+        "demo",
+        "cli",
+        "usability",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Guard/pull/23",
+      "summary": "This update significantly improves the README by providing a clear, step-by-step guide for new users to complete an on-chain spend using their Phantom wallet. The CLI scripts have been restructured to prioritize read-only operations, ensuring users can explore without making unintended transactions. All changes have been self-tested against the live production environment, confirming a smooth user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#450",
       "title": "Updated Pricing for Seedance 2.0 in Backend 🚀",
       "tags": [
