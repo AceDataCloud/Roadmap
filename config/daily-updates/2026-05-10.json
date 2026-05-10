@@ -3,6 +3,105 @@
   "date": "2026-05-10",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#720",
+      "title": "Enhance Landing Page with Lazy-Loaded Images and Alt Text in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "performance",
+        "accessibility",
+        "seo",
+        "images",
+        "lazy-loading"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/720",
+      "summary": "This update improves the landing page by implementing lazy loading for images and adding alt text for accessibility and SEO. Key changes include meaningful alt attributes for product images and the addition of loading and decoding attributes to enhance performance. The changes lead to better accessibility scores and optimized loading times, especially for mobile users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#719",
+      "title": "Enhance In-App Browsing Experience in Nexior 🌐",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "native",
+        "capacitor"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/719",
+      "summary": "This update fixes the issue where external links in the top header of the Nexior app would open in the device's default browser, disrupting the user experience. By utilizing the Capacitor in-app browser for these links, users can now navigate without leaving the app. The changes ensure a consistent browsing experience across the application, particularly for iOS and Android users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#716",
+      "title": "Fix audio element leaks on track swap in Nexior 🎧",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "audio",
+        "performance",
+        "cleanup",
+        "vue"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/716",
+      "summary": "This update addresses memory leaks caused by lingering `<audio>` elements and event listeners in the Suno and Producer components during track swaps. Key changes include implementing a teardown function to properly release resources and prevent stale listeners from affecting performance. The public API remains unchanged, ensuring seamless integration with existing player components."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#256",
+      "title": "Align Fish API Tools with Latest OpenAPI Updates in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "api",
+        "update",
+        "tools",
+        "fish",
+        "openapi"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/256",
+      "summary": "This update synchronizes the Fish API tools with the latest OpenAPI specifications, enhancing compatibility and functionality. Key changes include the transition to new endpoints, updates to the audio generation tool schema, and the removal of obsolete voice cloning capabilities. These improvements ensure a more streamlined experience for users interacting with the Fish API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#136",
+      "title": "Enhance User Resolution with Autocomplete in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "user",
+        "api",
+        "autocomplete"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `/users/resolve/` endpoint that accepts a single `q` query parameter, allowing for a more user-friendly experience by returning a list of up to 5 exact matches across multiple fields: id, username, email, and phone. The change simplifies the frontend interaction by eliminating the need for manual classification of input, while maintaining strict privacy standards by ensuring only exact matches are returned. Overall, this enhancement aims to improve the user experience for Nexior's inviter/admin picker."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#454",
+      "title": "Enhance Fish API with New Endpoint and Deprecate Legacy Paths in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "fish",
+        "backend",
+        "enhancement",
+        "deprecation"
+      ],
+      "public": false,
+      "summary": "This update introduces the `GET /fish/model/{id}` endpoint, allowing users to fetch individual voice models directly. Additionally, the legacy endpoints `/fish/audios` and `/fish/voices` have been deprecated and will no longer appear in public documentation, although they remain functional for existing integrations. The changes streamline the API and improve user experience while maintaining backward compatibility."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#263",
       "title": "New Research Cycle Findings in Sol Radar 🚀",
       "tags": [
