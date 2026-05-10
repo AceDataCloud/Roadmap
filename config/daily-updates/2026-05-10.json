@@ -3,6 +3,172 @@
   "date": "2026-05-10",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#701",
+      "title": "Enhance Video Playback Reliability in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "video",
+        "playback",
+        "fix",
+        "nexior",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/701",
+      "summary": "This update improves video playback by stopping the forced CORS on generated videos, which enhances compatibility with various CDNs. It also introduces a fallback option for users when media loading fails, allowing them to directly open or download the content. Overall, users should experience more reliable video previews and a smoother playback experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#700",
+      "title": "Added Client-Side Validation for Empty Generation Prompts in Nexior 🛡️",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "validation",
+        "android",
+        "localization",
+        "ux",
+        "vue",
+        "generation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/700",
+      "summary": "Added client-side validation to block empty generation requests for Luma, OpenAI Image, and Suno workflows before API calls are sent. The update trims prompt input, adds reusable text validation helpers, and ensures Suno requests include either prompts, music details, or audio input. New localized validation messages were added for both English and Simplified Chinese to improve feedback consistency across Android generation forms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#699",
+      "title": "Revamp Mobile Console Layout for Better Usability in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "mobile",
+        "ui",
+        "console",
+        "layout",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/699",
+      "summary": "This update transforms the mobile Console side menu into a compact horizontal navigation, enhancing accessibility on smaller screens. It also adjusts padding on the Applications page to prevent content clipping and ensures the Applications table remains scrollable within its card. These changes significantly improve the mobile user experience without altering the desktop layout."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#698",
+      "title": "Enhance Android Safe Area Support in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "android",
+        "ui",
+        "css",
+        "layout",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/698",
+      "summary": "This update introduces native surface classes and shared safe-area CSS variables to improve layout consistency for Android users. It adds fallbacks for top and bottom insets in WebView environments, ensuring that full-screen layouts do not overlap with system status and navigation bars. The changes enhance the user experience by providing reliable spacing without affecting browser or iOS behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#697",
+      "title": "Sync mobile app versions to 3.35.0 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "versioning",
+        "mobile",
+        "sync",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/697",
+      "summary": "This update synchronizes the Android and iOS native app versions to match the package version 3.35.0. Key changes include modifications to the versioning in build.gradle and project.pbxproj files, as well as updates to the mobile constants. The version sync process will now fail if expected patterns are missing, ensuring consistency across platforms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#56",
+      "title": "Add four new AceDataCloud commands for security, investigation, retros, and doc sync in Index ⚡️",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "commands",
+        "security",
+        "investigation",
+        "retrospective",
+        "documentation",
+        "aceDataCloud"
+      ],
+      "public": false,
+      "summary": "Introduces four new slash commands under `.claude/commands/`, rewritten for AceDataCloud's environment. `/audit-security` performs focused OWASP and STRIDE audits, `/investigate` enforces systematic root-cause debugging, `/sprint-retro` aggregates cross-repo weekly retrospectives, and `/sync-docs-after-release` ensures documentation consistency post-release. Updates AGENTS.md and copilot instructions to include the new skills, increasing available commands from 8 to 18. No runtime or deployment changes occur, as skills only activate on explicit invocation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#702",
+      "title": "Fix favicon transparency issue in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "favicon",
+        "transparency",
+        "imagecropper",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/702",
+      "summary": "This update resolves a critical issue where transparent PNGs uploaded as favicons or logos were being converted to black-background images. The ImageCropper component now correctly encodes images with alpha channels as PNGs and features a new checkerboard background for better visibility during cropping. Existing JPEG uploads remain unaffected, ensuring a seamless experience for all users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#55",
+      "title": "Exploring Hermes Agent Integration Opportunities in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "integration",
+        "planning",
+        "hermes-agent",
+        "opportunities",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This PR introduces a planning document analyzing the potential integration of the Hermes Agent framework with AceDataCloud. It outlines three tracks for opportunity, focusing on customer acquisition, internal operations, and architecture borrowing. The document serves as a foundational analysis to guide future implementation efforts and ensures key considerations are documented."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#880",
+      "title": "Add Fish-Audio-compatible TTS and model endpoints in Platform Service 🎵",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fish-audio",
+        "tts",
+        "voice-models",
+        "api",
+        "openaihk"
+      ],
+      "public": false,
+      "summary": "Introduces four new public endpoints on the openaihk worker to match Fish Audio's official API shapes. `/fish/tts` supports synchronous and optional async TTS with a `callback_url`, while `/fish/model` allows creating and retrieving voice models using JSON-with-URL format. Existing legacy endpoints remain unchanged to maintain backward compatibility. These changes enable Fish-native client integration without breaking current users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#443",
+      "title": "Reduce Fish Probe Frequency for Better Performance in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "e2e",
+        "performance",
+        "backend",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "The e2e probe interval for the `/fish/audios` endpoint has been adjusted from 180 seconds to 600 seconds. This change aims to reduce the excessive load generated by the test account, which was causing a high number of API calls and triggering alerts. The new interval still allows for adequate data collection while significantly lowering the daily call volume."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#259",
       "title": "New Research Cycle Report Published in Sol Radar 🚀",
       "tags": [
