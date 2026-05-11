@@ -3,6 +3,217 @@
   "date": "2026-05-11",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#464",
+      "title": "Revamp WebExtrator Docs for zh-CN in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "webextrator",
+        "zh-cn",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update rewrites the WebExtrator documentation in Chinese to accurately reflect the deployed service's functionality. Key changes include the deletion of outdated content, significant expansions of existing documents, and corrections to API details, ensuring users have the correct information for successful integration. The overall content has increased from 405 to 954 lines, enhancing clarity and usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#463",
+      "title": "Renaming Platform Token to Account Token for Clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "update",
+        "naming",
+        "clarity",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update renames the customer-facing label from '平台令牌 / Platform Token' to '账户令牌 / Account Token' to eliminate confusion regarding its purpose. The change is purely documentation-based, ensuring that all underlying code identifiers remain unchanged, allowing existing integrations to function without disruption. Key documentation files across multiple languages have been updated to reflect this new terminology."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#727",
+      "title": "Updated 'Platform Token' to 'Account Token' for Clarity in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "ui",
+        "localization",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/727",
+      "summary": "This update renames the 'Platform Token' to 'Account Token' across three user-facing locales in the Nexior console menu. The change aims to enhance clarity for users, aligning with similar terminology used in GitHub. The i18n key remains unchanged to ensure no disruption in routing or fallback behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#299",
+      "title": "Rename 'Platform Token' to 'Account Token' for Clarity in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "frontend",
+        "ui",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update renames the customer-visible label from 'Platform Token' to 'Account Token' across three user-facing locales: English, Simplified Chinese, and Traditional Chinese. This change aims to eliminate confusion regarding the token's purpose, ensuring users understand it represents their account rather than the platform itself. All other locales remain unchanged, maintaining backward compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#723",
+      "title": "Add API Code Snippets to Midjourney Results in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "api",
+        "midjourney",
+        "user-experience",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/723",
+      "summary": "This update introduces a new feature that displays equivalent API code snippets directly on Midjourney result cards within Nexior. Users can now easily view and copy the exact API calls that generated their results, streamlining the integration process. The feature supports multiple programming languages and includes a link for obtaining API keys, enhancing user experience and reducing friction."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WebExtrator#11",
+      "title": "Expand LLM extraction to recipes, videos, and jobs in Web Extrator 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WebExtrator",
+        "llm",
+        "schema",
+        "extraction",
+        "recipe",
+        "video",
+        "job"
+      ],
+      "public": false,
+      "summary": "This update adds three new LLM-typed schemas—recipe, video, and job—along with URL heuristics for each, extending the extractor to cover high-value content lacking JSON-LD. The LlmExtractionKind union now includes six types, and new back-fill rules populate missing description, byline, and publishedAt fields. Comprehensive tests validate URL detection, extraction, and failure handling, ensuring robust coverage for these new content types."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WebExtrator#10",
+      "title": "Boost Performance with Redis Caching in Web Extrator 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WebExtrator",
+        "performance",
+        "cache",
+        "redis",
+        "feature",
+        "web-extractor"
+      ],
+      "public": false,
+      "summary": "This update introduces a Redis-backed result cache for both render and extract jobs, significantly improving response times for repeated requests. By collapsing identical requests to a single Redis `GET`, the system can now serve results in under 1ms, reducing the need for resource-intensive Chromium navigation and LLM completions. Key changes include new cache configuration options and enhanced error handling to ensure reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WebExtrator#9",
+      "title": "Introducing LLM-First Typed Extractor for Non-Structured Sites in Web Extrator 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WebExtrator",
+        "extraction",
+        "llm",
+        "typed",
+        "enhancement",
+        "web"
+      ],
+      "public": false,
+      "summary": "This update adds an LLM-first typed extractor that serves as a secondary gate for pages lacking schema.org structured data. It enhances the extraction capabilities by ensuring that even sites like Amazon and Hacker News can return a consistent typed payload. The implementation includes type-specific Zod schemas and robust error handling to maintain reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#456",
+      "title": "Enhance Nexior Deployment Docs with Subsite Guidance in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "nexior",
+        "deployment",
+        "update",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a consistent 'Subsite first' callout across all seven Nexior deployment articles, emphasizing that most users can utilize the Subsite feature instead of self-hosting. Each article now includes a clear explanation of when self-deployment is necessary, along with a link to the Subsite documentation. This change aims to streamline user experience and reduce confusion for new users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#298",
+      "title": "Fix trailing slash issue in site operations in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "api",
+        "http",
+        "nexior"
+      ],
+      "public": false,
+      "summary": "This update removes the trailing slash from the `PATCH` and `DELETE` requests for site updates and deletions, resolving a 500 error from the backend. The change aligns the site operator with other operators in the codebase, ensuring consistency and preventing errors during site management. The fix has been verified and poses minimal risk as it only involves URL adjustments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#725",
+      "title": "Enable per-site primary colour picker in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "site-settings",
+        "theme",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/725",
+      "summary": "This update adds a primary colour picker to Settings → Site, allowing admins to set a custom brand colour for each site. Changes propagate across buttons, links, highlights, and brand gradients without backend modifications. Existing default teal remains unchanged if no custom colour is selected. CSS variables and live preview ensure a seamless, flash-free experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#461",
+      "title": "Enhance Site Theme with JSONField for Visual Customization in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "json",
+        "validation",
+        "theming"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `Site.theme` JSONField that allows for per-site visual overrides, starting with a `primary_color` key. This change aims to streamline theming by providing a dedicated field, reducing clutter in `metadata`, and facilitating future enhancements without requiring migrations. The implementation includes strict validation to ensure only valid hex color codes are accepted."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#274",
+      "title": "Fish MCP fully aligned with latest Docs OpenAPI spec in M C Ps ✅",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "fish",
+        "mcp",
+        "openapi",
+        "sync",
+        "audit"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/274",
+      "summary": "This PR audits the `fish` MCP against recent Docs OpenAPI updates and confirms full alignment. All endpoints, parameters, and enums—including `POST /fish/tts`, `GET /fish/model`, and `POST /fish/tasks`—match the current spec. No code changes were necessary, and the MCP remains up to date. Firewall blocks were noted for some upstream commit checks but did not impact the audit results."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#883",
       "title": "Reordered Claude Upstream Ranks for Better Caching in Platform Service 🚀",
       "tags": [
