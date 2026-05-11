@@ -3,6 +3,38 @@
   "date": "2026-05-11",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#883",
+      "title": "Reordered Claude Upstream Ranks for Better Caching in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "optimization",
+        "caching",
+        "config",
+        "performance",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update reorders the rank values for Claude upstreams in the configuration files to optimize prompt-cache hits. The changes ensure that traffic is directed towards upstreams that effectively support caching, significantly improving cache hit rates. The new ranking prioritizes `wcnb` and `openaihk`, which are expected to enhance performance and reduce costs for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#460",
+      "title": "Revamped Fish API Docs with Real Examples in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "api",
+        "fish",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "The Fish API documentation has been completely rewritten based on reviewer feedback, enhancing clarity and usability. Key updates include the addition of real `curl` examples for each endpoint, accurate parameter tables, and actual responses from live API calls. This overhaul aims to improve the developer experience by providing precise and practical guidance for using the Fish API."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthBackend#137",
       "title": "Update Tencent Cloud SDK to Latest Version in Backend 🚀",
       "tags": [
