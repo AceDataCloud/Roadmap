@@ -3,6 +3,154 @@
   "date": "2026-05-10",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPs#270",
+      "title": "Streamline Fish TTS by Removing Deprecated Action Parameter in M C Ps 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "update",
+        "api",
+        "fish",
+        "tts",
+        "cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/270",
+      "summary": "This update removes the deprecated `action` parameter from the `/fish/tts` endpoint, following the upstream changes in the OpenAPI spec. Key modifications include the deletion of the `FishAudioAction` type alias and the corresponding parameter from the `fish_generate_audio` function. Backward-compatible aliases for `prompt` and `voice_id` remain to assist users transitioning to the new field names."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#715",
+      "title": "Enhance User Management with Chips and Lookup in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "user-interface",
+        "features",
+        "privacy",
+        "internationalization",
+        "refactor"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/715",
+      "summary": "This update introduces user-friendly chips for displaying inviter and admin IDs, replacing opaque UUIDs with visually informative components. New lookup features allow operators to search by email, phone, or username, enhancing usability and privacy by masking sensitive information. Additionally, internationalization support has been expanded across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#136",
+      "title": "Enhance API Path Matching for Dynamic URLs in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "api",
+        "gateway",
+        "bugfix",
+        "regex",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a new regex-based matching mechanism for API paths that include placeholders, such as `{id}`. Previously, requests like `GET /fish/model/test123` would return a 404 error due to strict equality checks. Now, the system can dynamically match these requests to the correct API definitions, improving the routing accuracy and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#268",
+      "title": "Fish MCP is in sync with Docs OpenAPI in M C Ps 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "sync",
+        "fish",
+        "api",
+        "docs",
+        "verification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/268",
+      "summary": "The fish MCP implementation has been verified to be fully aligned with the latest Docs OpenAPI specifications. A thorough comparison confirmed that all endpoint paths, request parameters, and response shapes match the documented API surface, requiring no changes to the repository. This ensures continued compatibility and stability for users of the fish service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#458",
+      "title": "Enhance Fish Service Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "backend",
+        "fish-service",
+        "integration",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This update moves the `fish-tasks` section to the end of the Fish service sidebar, aligning with user expectations. Additionally, it introduces two new integration guides for `fish-model-query` and `fish-model-get`, ensuring that every public Fish endpoint is paired with comprehensive documentation. The migration also establishes necessary foreign key relationships to enhance the platform's UI navigation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WebExtrator#8",
+      "title": "Enhance JSON-LD Mapping and Fix Extraction Bugs in Web Extrator 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WebExtrator",
+        "json-ld",
+        "extraction",
+        "bugfix",
+        "schema-org",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces a dedicated schema.org JSON-LD mapper to the extraction pipeline, significantly improving the handling of structured data. Additionally, it resolves four quality bugs related to image links and descriptions when extracting data from Wikipedia. These enhancements aim to align the extractor's capabilities with Diffbot's standards, paving the way for future improvements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#457",
+      "title": "Enhance AI Chat v2 API Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "api",
+        "integration",
+        "backend",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update publishes the OpenAPI specification for the AI Chat v2 API, making it accessible alongside the existing v1 API. It includes comprehensive integration guides in both English and Chinese, ensuring users have the necessary resources to transition smoothly. The migration also registers new document entries for better visibility in the API browser."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#455",
+      "title": "Hide Legacy Fish Documents and Add New Sidebar Entries in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "migration",
+        "backend",
+        "api",
+        "documents",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This migration hides four legacy Documents related to fish-audios and fish-voices by setting them to private, ensuring they no longer appear in the sidebar. Additionally, it introduces two new Document entries for the fish model, enhancing clarity in the API browser. The changes maintain the original rank of hidden entries for easy reversion if needed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#721",
+      "title": "Streamline Suno/Producer Audio Player with Shared Components in Nexior 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "audio",
+        "components",
+        "vue",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/721",
+      "summary": "This update refactors the audio player components for both Suno and Producer by consolidating them into a shared structure. The new implementation reduces code duplication significantly, improving maintainability and performance. Key changes include the introduction of a composable for audio state management and the removal of redundant files, resulting in a cleaner codebase."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#265",
       "title": "Completed SolRadar Research Cycle in Sol Radar 🚀",
       "tags": [
