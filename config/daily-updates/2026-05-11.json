@@ -3,6 +3,119 @@
   "date": "2026-05-11",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPs#290",
+      "title": "Documentation update confirmed with no sync needed in M C Ps 📚",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "documentation",
+        "sync",
+        "overview",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/290",
+      "summary": "The upstream Docs repository was updated for the `overview` service, but it was determined that no code sync is necessary. This is due to the absence of an OpenAPI spec, MCP server subdirectory, and sync mapping in this monorepo. The changes are purely documentation and translation-related, leading to the closure of the issue as not applicable."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#465",
+      "title": "Revamp WebExtrator Landing Page for a Stunning User Experience in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "frontend",
+        "design",
+        "web",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update transforms the WebExtrator service introduction from a simple markdown file into a comprehensive HTML+CSS landing page, fully compliant with the DESIGN specifications. Key enhancements include a detailed pricing table, a robust FAQ section, and visually appealing brand styling, significantly improving user engagement and information accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#726",
+      "title": "Launch Voice Cloning Feature in Nexior 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "voice-cloning",
+        "feature",
+        "nexior",
+        "ui",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/726",
+      "summary": "This update introduces the new `/fish/model` voice cloning page, allowing users to create custom voices from their audio samples. Key changes include the addition of a model configuration panel, a voice list panel, and enhanced routing for seamless navigation. The feature is designed to integrate smoothly with the existing text-to-speech functionality, enhancing user experience and accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#728",
+      "title": "Align View Code Button for Consistency in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "css",
+        "ui",
+        "fix",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/728",
+      "summary": "This update modifies the alignment of the 'View code' button to ensure it matches the vertical position of its peers in the result rows. The change from `align-self: center` to `align-self: flex-start` resolves a minor visual offset caused by baseline alignment issues. This is a CSS-only fix with no impact on functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#269",
+      "title": "Scheduled SolRadar Research Report Published in Sol Radar 📊",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "report",
+        "solradar",
+        "data",
+        "analysis"
+      ],
+      "public": false,
+      "summary": "This update delivers the output of the scheduled SolRadar research cycle for May 11, 2026, as a comprehensive report. Key highlights include a detailed analysis of candidate reviews, liquidity metrics, and explicit data source health checks. The report also features non-empty machine-readable intents and a summary of decisions made regarding high-score candidates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#286",
+      "title": "Clarified `overview` docs sync as no-op in M C Ps 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docs",
+        "sync",
+        "no-op",
+        "validation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/286",
+      "summary": "This update confirms that the `overview` documentation does not have a mapped target in the MCPs monorepo, resulting in a no-op sync. The validation process verified that `overview` is absent from the `sync.yaml` mappings and that there is no corresponding server directory. As a result, no code or configuration changes were made."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#282",
+      "title": "Docs Sync Verification Completed in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docs",
+        "sync",
+        "verification",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/282",
+      "summary": "This update confirms that the documentation for `overview` and `webextrator` is aligned with the current OpenAPI specifications. The audit revealed no necessary code changes in the MCP repository, as all endpoint paths and enum values are already in sync with the documentation. The `webextrator` tool inputs and API payload fields are also compliant with the OpenAPI contract."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#464",
       "title": "Revamp WebExtrator Docs for zh-CN in Backend 🚀",
       "tags": [
