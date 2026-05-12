@@ -3,6 +3,285 @@
   "date": "2026-05-12",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPs#312",
+      "title": "Add Midjourney prompt shortening tool in M C Ps ✂️",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "midjourney",
+        "tooling",
+        "prompt-shortening",
+        "openapi",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/312",
+      "summary": "Introduces the `midjourney_shorten` tool to align with the OpenAPI spec, enabling prompt analysis and shortening. Key updates include a new client method `shorten()`, result formatting in `format_shorten_result()`, tool registration, and integration into action listings and server cards. Unit tests and mock responses ensure correct behavior and formatting of up to five candidate prompts. This enhances the ability to optimize long or complex prompts for Midjourney."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#733",
+      "title": "Unlock Midjourney V8.1 support with HD defaults in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "midjourney",
+        "v8.1",
+        "version-selector",
+        "quality",
+        "config-panel",
+        "hd"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/733",
+      "summary": "This update adds full support for Midjourney V8.1 in Nexior. The version selector now includes '8.1' and sets it as the default, enabling HD-by-default images, faster rendering, and reduced costs. Quality selectors and moodboard detection now correctly recognize both V8 and V8.1, ensuring users get the latest features without manual adjustments. Related components and computed checks were updated to maintain compatibility across the UI."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#885",
+      "title": "Enhance Midjourney V8.1 Detection in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "midjourney",
+        "ttapi",
+        "billing",
+        "v8.1"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of Midjourney V8.1 requests by fixing two critical bugs in the ttapi imagine handler. The regex for version detection has been updated to correctly capture versions like 8.1, and the logic now prevents incorrect downgrades to V6. These changes ensure accurate billing and support for new features in V8.1."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#472",
+      "title": "Roll out Midjourney V8.1 with cheaper HD and updated API in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "midjourney",
+        "v8.1",
+        "billing",
+        "api",
+        "tests",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This PR updates PlatformBackend to fully support Midjourney V8.1. Cost rules for HD, Q4, moodboard, and style reference have been added, reflecting ~3x cheaper HD generation. OpenAPI docs were updated to highlight V8.1 as the default HD version. Eight new parallel tests ensure correctness across API and end-to-end flows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#300",
+      "title": "Enhance Site Detail with Pricing and Advanced Tabs in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "features",
+        "debugging",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update introduces fully functional Pricing and Advanced tabs on the console Site Detail page. The Pricing tab allows sub-site owners to set markup ratios and select currencies, while the Advanced tab provides essential site metadata for debugging. These enhancements improve user experience and operational efficiency for site management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#471",
+      "title": "Fix proxy CNAME inheritance for subsites in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "dns",
+        "proxy",
+        "subsite",
+        "inheritance"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where subsites were incorrectly inheriting the proxy CNAME from their parent site. The function now checks three layers for the correct CNAME, ensuring that subsites like `germey.platform.acedata.cloud` point to the right proxy. Additionally, the DNS instructions have been updated to reflect these changes, preventing future misconfigurations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#469",
+      "title": "Exciting New /midjourney/shorten API Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "midjourney",
+        "backend",
+        "integration",
+        "feature"
+      ],
+      "public": false,
+      "summary": "We've introduced the new `/midjourney/shorten` API, which mirrors the functionality of the Midjourney Discord bot's `/shorten` command. This API analyzes prompts and returns five optimized candidate prompts with key concepts highlighted, enhancing user experience and prompt engineering. Comprehensive documentation and integration guides are now available in both English and Chinese."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#298",
+      "title": "Ensured All MCP Servers Are in Sync with Docs in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "sync",
+        "verification",
+        "docs",
+        "mcp",
+        "quality"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/298",
+      "summary": "A thorough sync check was performed across multiple MCP servers following upstream Docs changes. All affected services were verified to have matching OpenAPI specs, implementation tables, and passed linting and unit tests. No code changes were necessary as everything is already aligned."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#470",
+      "title": "Resolve Django migration conflicts with a merge in Backend ⚡️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "django",
+        "migrations",
+        "ci",
+        "backend",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "Introduces an empty `0143_merge` migration to unify two parallel 0142 leaves in the Django migration graph. This resolves CI failures caused by multiple leaf nodes, ensuring `makemigrations --check --dry-run` passes for all open PRs. No database operations are performed, and runtime behavior remains unchanged. After merging, dependent PRs will pass migration checks without rebasing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#884",
+      "title": "Enhance Midjourney with Shorten Endpoint in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "midjourney",
+        "feature",
+        "api",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces the new `/mj/submit/shorten` handler on the ephone worker, allowing users to submit prompts for analysis. The implementation includes validation, submission, polling for results, and error handling, ensuring a robust experience. Additionally, it modifies the server to integrate this new functionality seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#113",
+      "title": "Admins can now choose to continue as themselves or another user in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "auth",
+        "sso",
+        "admin",
+        "impersonation",
+        "frontend",
+        "ui"
+      ],
+      "public": false,
+      "summary": "Introduces the admin impersonation chooser for SSO flows. Superusers landing on the login redirect path can either continue as themselves or select another user via a privacy-safe search. Backend changes support an `as_user_id` parameter, logging impersonation events with limited token lifetime. Non-admin users experience no change, and existing login paths remain intact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#138",
+      "title": "Enhance superuser SSO impersonation flow in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "security",
+        "admin",
+        "sso",
+        "impersonation"
+      ],
+      "public": false,
+      "summary": "This update introduces an opt-in feature allowing superusers to mint SSO auth codes for other users, enhancing the admin tool's functionality. Key security measures are implemented, including a restricted access token lifetime and detailed logging for audit purposes. The feature is disabled by default and requires explicit activation in settings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#57",
+      "title": "Enhance create-service docs for whitelisting in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "api",
+        "platformgateway",
+        "whitelist",
+        "index"
+      ],
+      "public": false,
+      "summary": "This update adds crucial documentation to the `/create-service` skill, emphasizing the need to whitelist free polling endpoints in PlatformGateway's `SKIP_AUTH_API_IDS`. Key changes include expanded guidance on the API object creation and cross-references to ensure the gateway edits are included in the same PR cycle. This will prevent unnecessary DB lookups and credit checks for retrieve-only endpoints, streamlining service launches."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#137",
+      "title": "Skip auth and billing for new task polling APIs in Gateway ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "gateway",
+        "task-polling",
+        "auth",
+        "billing",
+        "backend",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "Added eight new task-polling endpoints to the SKIP_AUTH_API_IDS list, allowing their retrieve and retrieve_batch calls to bypass authentication and billing checks. This aligns their handling with existing free task APIs, preventing unnecessary database lookups and credit verifications. The update also ensures these calls are excluded from usage records. All changes were verified with pytest and cross-checked against PlatformBackend's Api table and cost rules."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#730",
+      "title": "Enhance button spacing for better clarity in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "design",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/730",
+      "summary": "This update improves the spacing between the favicon and label on the 'API 平台' button within the code dialog. The flex gap has been increased from 8px to 14px, enhancing the visual separation without affecting the external-link icon's margin. This change aims to provide a clearer and more user-friendly interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#731",
+      "title": "Center language and library selectors in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "css",
+        "design",
+        "frontend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/731",
+      "summary": "This update enhances the appearance of the 'View API code' dialog by centering the language and library selectors. The changes include adjusting the CSS for the `.languages` and `.variants` classes to ensure a balanced layout while keeping the code block left-aligned. This improves the overall user experience in the Nexior interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#732",
+      "title": "Stop iOS Safari auto-zoom on mobile chat composer in Nexior 🛠️",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ios",
+        "safari",
+        "mobile",
+        "composer",
+        "bugfix",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/732",
+      "summary": "This update fixes an issue on iOS Safari where tapping Send in the chat composer caused the page to zoom in. The mobile composer textarea font-size was increased from 15px to 16px to comply with iOS accessibility rules and prevent auto-zooming. Desktop styling remains unchanged. A comment was added to ensure the font-size stays at 16px for mobile."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPs#301",
       "title": "Clarified no-op for claude-code docs sync in M C Ps 🚀",
       "tags": [
