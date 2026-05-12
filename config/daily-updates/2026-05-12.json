@@ -3,6 +3,117 @@
   "date": "2026-05-12",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPs#301",
+      "title": "Clarified no-op for claude-code docs sync in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docs",
+        "sync",
+        "no-op",
+        "validation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/301",
+      "summary": "This update confirms that there are no changes required for the `claude-code` service within the MCPs monorepo. The `sync.yaml` file has been validated, showing no mapping for `claude-code`, and the documentation aligns with the existing OpenAPI specifications. Overall, this is a verified no-op with no server code updates necessary."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#302",
+      "title": "No Code Changes Needed for Claude Code Docs Update in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docs",
+        "sync",
+        "claude-code",
+        "guides"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/302",
+      "summary": "The sync check for the `claude-code` service revealed that all changes were limited to user-facing setup guides in the `guides/claude-code/*.mdx` files. There are no OpenAPI specs or corresponding MCP server mappings in the monorepo. As a result, no code changes are necessary, and the monorepo remains in sync."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#468",
+      "title": "Fix Documentation Bugs for Claude Code in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "bugfix",
+        "claude",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update addresses four critical issues in the Claude Code documentation, ensuring a smoother experience for new users. Key changes include correcting the base URL across 18 locales, removing fictitious commands, and registering two orphaned documentation files. These fixes enhance usability and accessibility for developers using the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#466",
+      "title": "Enhance MCP Integration Guides with Remote URL Config in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "mcp",
+        "integration",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update restructures 11 MCP integration guides to include a new section for using hosted MCP servers, providing users with a zero-install option. Each guide now clearly outlines how to connect via a remote URL, along with authentication details and configuration snippets for various platforms. The original local installation instructions remain intact for users needing offline access."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#467",
+      "title": "Revamped Developer Docs for AceDataCloud Platform in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "update",
+        "api",
+        "backend",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "All 32 developer documentation entries for the AceDataCloud platform have been completely rewritten to enhance clarity and consistency. The new titles now include the brand name and action verbs, making it easier for users to navigate and understand the API functionalities. This update also improves the overall user experience by providing detailed authentication guidance and structured content across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SolRadar#277",
+      "title": "New Research Cycle Findings in Sol Radar 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "research",
+        "updates",
+        "tokens",
+        "analysis",
+        "sol"
+      ],
+      "public": false,
+      "summary": "The latest research cycle has added a report covering 22 new listing candidates and 9 mainstream watchlist tokens. Notably, all new candidates were skipped due to high risk indicators, while SOL remains a hold with a score of 53 and significant liquidity. The data sources have been confirmed healthy, although some minor degradation was noted in specific checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#294",
+      "title": "Documentation updates confirmed no sync needed in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "documentation",
+        "updates",
+        "no-sync",
+        "resolved"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/294",
+      "summary": "The recent updates to the overview documentation for zh-CN translations do not require any MCP synchronization. Since the overview service lacks an OpenAPI spec and corresponding entries in sync configurations, no code changes were necessary. This PR is now resolved."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#275",
       "title": "Scheduled Research Cycle Report Published in Sol Radar 🚀",
       "tags": [
