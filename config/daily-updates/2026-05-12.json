@@ -3,6 +3,40 @@
   "date": "2026-05-12",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#734",
+      "title": "Fix BYOK provider dropdown overflow in Nexior ✅",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "byok",
+        "ui",
+        "dropdown",
+        "element-plus",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/734",
+      "summary": "This update resolves visual clipping in the Add API Key dialog's provider dropdown. Each option now correctly displays both the provider name and its description without overlapping the next item. The fix adds a dialog-specific popper class and adjusts item height and padding, affecting only the BYOK dropdown. ESLint and TypeScript checks pass with no errors, ensuring scoped impact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#317",
+      "title": "Updated Midjourney MCP for v8.1 specs in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "midjourney",
+        "mcp",
+        "update",
+        "specs",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/317",
+      "summary": "This update aligns the Midjourney MCP with the latest OpenAPI contract, incorporating version 8.1 into the supported models. Key changes include updated parameter descriptions and prompt guidance to reflect current specifications. Additionally, a unit test has been added to ensure the inclusion of version 8.1 in the type definitions."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPs#312",
       "title": "Add Midjourney prompt shortening tool in M C Ps ✂️",
       "tags": [
