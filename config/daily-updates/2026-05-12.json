@@ -3,6 +3,22 @@
   "date": "2026-05-12",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#114",
+      "title": "Fix radio selection and resize logo in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "bugfix",
+        "ui",
+        "frontend",
+        "el-radio",
+        "logo"
+      ],
+      "public": false,
+      "summary": "Updated ContinueAs.vue to address multiple interaction bugs: radios now use :label instead of :value to properly toggle selection and reveal inputs. The Continue button behavior was corrected when selecting 'self', and the logo size was constrained to match the login page. Verified with local preview and lint/build checks, ensuring expected functionality for both self and other options."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#279",
       "title": "Completed SolRadar 2026 research cycle with full diagnostics in Sol Radar 🚀",
       "tags": [
