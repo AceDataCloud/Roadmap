@@ -1,0 +1,39 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-05-13",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#321",
+      "title": "No-op Docs Sync Verification in M C Ps 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docs",
+        "sync",
+        "verification",
+        "no-op"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/321",
+      "summary": "This update confirms that the `overview` documentation is not mapped to any services in the MCPs repository. Verification showed that there are no corresponding MCP packages or OpenAPI specs for `overview`, resulting in no required updates. The PR serves as a no-op sync verification for the recent Docs update."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#315",
+      "title": "Docs parity verified for midjourney endpoints in M C Ps ✅",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docs",
+        "parity",
+        "midjourney",
+        "validation",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/315",
+      "summary": "This PR confirms that the MCP tools fully match the current Docs OpenAPI for `midjourney` endpoints. All endpoint paths, request enums, and task/query parameters are aligned with the specification. No code changes were needed as no drift was detected. The `overview` package was checked but requires no updates."
+    }
+  ]
+}
