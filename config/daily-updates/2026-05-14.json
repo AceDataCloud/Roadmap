@@ -1,0 +1,40 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-05-14",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#322",
+      "title": "Serve legacy SSE alongside Streamable HTTP for OOBE clients in M C Ps ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "sse",
+        "streamable-http",
+        "oobe",
+        "fastmcp",
+        "compatibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/322",
+      "summary": "This update mounts the legacy SSE transport (`/sse` + `/messages/`) alongside the existing Streamable HTTP (`/mcp`) for all 20 MCP services. SSE-only clients, such as those using the OOBE Synapse SDK, can now connect without additional deployments or ports. The changes maintain backwards compatibility and share the same FastMCP instance, ensuring session consistency. Local smoke tests confirm health endpoints and message streaming function as expected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#473",
+      "title": "Decouple TLS probe status from Caddy ask URL in Backend ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "tls",
+        "caddy",
+        "custom-domain",
+        "bugfix",
+        "unit-tests"
+      ],
+      "public": false,
+      "summary": "This update separates Caddy's on-demand TLS ask URL from the user-facing probe status, preventing transient DNS issues from causing permanent failures. The helper `decide_on_demand_tls_ask` now allows registered hostnames to return 200 regardless of their `Failed` status, while invalid or unregistered hosts are handled appropriately. `SiteDomainCheckView` was simplified to delegate decision logic to this helper. Twelve new unit tests verify all scenarios, including a production-repro case, and the full test suite remains green."
+    }
+  ]
+}
