@@ -4,6 +4,20 @@
   "subtitle": "On-chain buyback transactions — transparent, verifiable, and linked to Solscan.",
   "transactions": [
     {
+      "tx_hash": "4CHJjxUF4YCiCDWNhpxXK9R3qzzgtZ6Q7wv5wA7LKE7nioyDpHuvpGJwMbN4SA5RadxT8B5aSNxEUbiYakXo9dg6",
+      "occurred_at": "2026-05-11T18:56:09Z",
+      "amount_usd": 141.01,
+      "ace_bought": 233703.027452,
+      "pair": "USDC → ACE",
+      "venue": "OKX: DEX Router",
+      "source": "Creator Fees",
+      "source_percentage": 5,
+      "period": "2026-05-11",
+      "from_label": "Buyback Wallet",
+      "from_address": "6hVavSsYRaNk86UbNZa6V4JfSwqkRGk9HgYZqKNsdU1w",
+      "note": "Creator fee buyback — routed 141.018474 USDC → WSOL → ACE via the OKX DEX aggregator (Raydium CLMM + Whirlpools + Whale Street → Pump.fun AMM), receiving 233,703.027452 ACE."
+    },
+    {
       "tx_hash": "3wEjVvqDKjCrtaDnLEy16v8x6ZpmmxNwCM8ze3tpwmf6auwG7CNCRxpVGRiPyvszvPh1vwWaQTsxeJo1cTjdRjg5",
       "occurred_at": "2026-05-01T17:36:43Z",
       "amount_usd": 735.11,
