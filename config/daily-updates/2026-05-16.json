@@ -3,6 +3,214 @@
   "date": "2026-05-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#140",
+      "title": "Enhance Admin User Lookup with Detailed Query in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "admin",
+        "backend",
+        "user-management"
+      ],
+      "public": false,
+      "summary": "This update introduces a new admin-only endpoint, `GET /users/query/?q=<keyword>`, allowing superusers to retrieve full user details. It replaces the previous 404 error for user lookups on the admin page, providing a more robust solution for user management. The frontend has also been updated to support this new functionality, ensuring seamless integration for admin users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#117",
+      "title": "Enhance Admin Login Flow with ContinueAs Chooser in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "login",
+        "admin",
+        "frontend",
+        "refactor",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update improves the admin login experience by ensuring that the ContinueAs chooser is displayed even when admins log in without an active session. Key changes include refactoring the login logic to check for superuser status and redirect appropriately, enhancing the overall user experience. The implementation maintains existing behaviors for non-admin users and ensures no disruption in service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#754",
+      "title": "Fix stray margin in task preview for OpenAI Image in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "css",
+        "bugfix",
+        "ui",
+        "openaiimage"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/754",
+      "summary": "This update addresses a visual issue in the OpenAI Image studio task preview where a stray bottom margin was present on the last metadata row. By applying a CSS rule to reset the margin on the last rendered `<p>` element, the gap below the `任务 ID` is eliminated, ensuring a cleaner layout. The fix is effective across all branches of task status, maintaining consistency in the display."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#755",
+      "title": "Fix stray margin in task previews across all studios in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "css",
+        "bugfix",
+        "ui",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/755",
+      "summary": "This update applies a CSS fix to remove the stray bottom margin on the last metadata row in task previews for 15 studios, ensuring consistent rendering. The fix involves adding a specific rule to the existing styles for each studio's task preview component. This change enhances the visual consistency of the task previews, particularly when certain metadata fields are not displayed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#139",
+      "title": "Streamline Admin Impersonation Logic in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "refactor",
+        "auth",
+        "security",
+        "impersonation",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update removes the `IMPERSONATION_ENABLED` environment variable, simplifying the admin impersonation process. Now, impersonation relies solely on the `is_superuser` check, ensuring that only authorized users can impersonate others while maintaining robust security measures. The changes enhance clarity and functionality without requiring any production environment adjustments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#50",
+      "title": "Updated AI Q&A List: Kimi Takes the Stage in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "update",
+        "roadmap",
+        "api",
+        "kimi"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/50",
+      "summary": "This update replaces DeepSeek with Kimi in the public roadmap marketing string found in config/roadmap.json. The API capability for /deepseek/chat/completions remains intact, ensuring continuity in service. This change aligns with the maintainer's request to refine our offerings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#317",
+      "title": "Streamline Default Fallbacks and FAQ in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "update",
+        "faq",
+        "fallback",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update removes DeepSeek from the homepage FAQ for the Chinese version and replaces it with Kimi as the default fallback for Claude Code. The change enhances clarity in marketing materials while keeping DeepSeek models available for user selection. Additionally, minor modifications were made to the OpenClaw configuration to reflect this update."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#278",
+      "title": "Updated API Marketing Copy in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "api",
+        "documentation",
+        "cleanup",
+        "marketing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/278",
+      "summary": "The DeepSeek folder has been removed from the APIs marketing materials as per maintainer request. This includes the deletion of the DeepSeek README and integration guide, along with updates to the AI Chat README to remove references to DeepSeek. The /deepseek/chat/completions API endpoint remains intact, ensuring continued functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#57",
+      "title": "Streamlined Docs Navigation by Hiding DeepSeek in Docs 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "docs",
+        "navigation",
+        "cleanup",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/57",
+      "summary": "This update removes DeepSeek from the public documentation navigation and intro copy as requested by the maintainer. The source guides and OpenAPI specifications for DeepSeek remain intact, ensuring that users can still access the necessary resources without clutter in the navigation. This change enhances the clarity and focus of the documentation for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/OOBEIntegration#3",
+      "title": "Updated OpenAI Chat Blurb to Feature Kimi in O O B E Integration 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "OOBEIntegration",
+        "documentation",
+        "update",
+        "openai",
+        "marketing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/OOBEIntegration/pull/3",
+      "summary": "This update replaces mentions of DeepSeek with Kimi in the OpenAI chat capability blurb found in README.md and src/sap-register.ts. The functionality remains unchanged, as the /aichat capability continues to support DeepSeek models. This change enhances clarity in public documentation while maintaining existing capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/StatusPage#8",
+      "title": "Hide DeepSeek from Public View in Status Page 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "StatusPage",
+        "status",
+        "update",
+        "filter",
+        "public",
+        "monitoring"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/StatusPage/pull/8",
+      "summary": "This update introduces a filter to exclude the DeepSeek service from the public status page. The backend monitoring for DeepSeek remains unchanged, ensuring that service performance continues to be tracked. This change enhances the clarity of the public status board by only displaying relevant services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#323",
+      "title": "Updated Skills Marketing Copy in Skills ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "update",
+        "skills",
+        "marketing",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/323",
+      "summary": "DeepSeek has been temporarily removed from the public marketing copy across various documents, including AGENTS, README, and specific skill files. The API capability for /deepseek/chat/completions remains intact, ensuring no disruption in service. This change aligns with the maintainer's request for a streamlined presentation of available skills."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/.github#10",
+      "title": "Updated organization profile by removing DeepSeek in .github 🚀",
+      "tags": [
+        "github",
+        "pr",
+        ".github",
+        "chore",
+        "update",
+        "profile",
+        "marketing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/.github/pull/10",
+      "summary": "The organization profile has been updated to remove DeepSeek from the public marketing copy on the homepage, as requested by the maintainer. The API capability for /deepseek/chat/completions and existing customer integrations remain intact, ensuring continuity for users."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPs#326",
       "title": "Align OpenAI Task Filter with Updated Docs in M C Ps 🚀",
       "tags": [
