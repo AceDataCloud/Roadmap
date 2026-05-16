@@ -3,6 +3,146 @@
   "date": "2026-05-15",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/SolRadar#292",
+      "title": "Paused All Scheduled Jobs for SolRadar in Sol Radar ⏸️",
+      "tags": [
+        "github",
+        "pr",
+        "SolRadar",
+        "workflows",
+        "pause",
+        "maintenance"
+      ],
+      "public": false,
+      "summary": "The SolRadar project has been paused, leading to the suspension of all background cron-driven workflows. This update comments out the `schedule:` blocks in each affected workflow while preserving manual invocation options. The cron expressions remain as comments for easy reactivation when the project resumes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#474",
+      "title": "Enhance site filtering with origin suffix support in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "filtering",
+        "api",
+        "nexior"
+      ],
+      "public": false,
+      "summary": "This update transitions the `SiteListCreateViewSet.filterset_fields` to a dictionary format, enabling users to filter sites by DNS suffix using the `origin__endswith` query. This change resolves issues with superuser-created subsites not appearing in user-facing lists, ensuring a more reliable and comprehensive site listing experience. Existing query patterns remain unaffected, maintaining backward compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#49",
+      "title": "Added new buyback entry for May 2026 in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "buyback",
+        "update",
+        "roadmap",
+        "transactions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/49",
+      "summary": "This update introduces a new on-chain buyback entry for the creator-fee buyback executed on May 11, 2026. The transaction involved converting 141 USDC into 233,703 ACE via the OKX DEX Router. The entry has been added to the buyback history, maintaining the existing order of transactions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#25",
+      "title": "Major Python Dependencies Update in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "dependencies",
+        "update",
+        "python",
+        "backend",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update bumps several key Python dependencies, including `fastapi` from 0.76.0 to 0.128.8, `requests` from 2.31.0 to 2.32.5, and `uvicorn` from 0.17.6 to 0.39.0. These upgrades enhance performance, security, and compatibility with newer Python versions, ensuring a more robust backend experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#26",
+      "title": "Boost Performance with Async Handling in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "performance",
+        "async",
+        "deployment",
+        "kubernetes",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update enhances the PayBackend's responsiveness under load by wrapping blocking SDK calls in `asyncio.to_thread`, allowing the event loop to remain active. Additionally, the number of gunicorn workers has been increased from 1 to 4, and resource limits have been adjusted to support this change. Liveness and readiness probes have also been optimized to prevent premature pod restarts during slow payment processing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#310",
+      "title": "Update homepage logo: Kimi replaces DeepSeek in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "update",
+        "logo",
+        "nexior",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update replaces the DeepSeek logo card on the homepage's UnifiedHub with Kimi, a prominent app in Nexior. The logo's position and size remain unchanged, ensuring a consistent layout. A light translucent background has been added for better visibility against the dark page background."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#311",
+      "title": "Streamline Playground by Hiding AI Image Generation Demo in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update removes the AI Image Generation demo from the homepage playground, leaving only the AI Chat and Web Search options. The change was made to better align with current needs, while keeping the necessary i18n keys for future re-enablement. The default selection remains AI Chat, ensuring a seamless user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#745",
+      "title": "Enhance API Platform Logo Spacing in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "fix",
+        "design",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/745",
+      "summary": "This update improves the visual spacing between the API Platform logo and its label in the API code dialog. By replacing the ineffective gap with a margin, the logo now maintains proper separation from the text, ensuring a cleaner look. The change is also RTL-safe, automatically adjusting for Arabic locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#312",
+      "title": "Update FAQ for Global Accessibility in Frontend Web 🌍",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "faq",
+        "frontend",
+        "global",
+        "accessibility"
+      ],
+      "public": false,
+      "summary": "This update modifies the FAQ Q4 to remove specific references to mainland China, promoting a more neutral and globally inclusive message. The English and Chinese versions have been rephrased to emphasize worldwide access rather than regional limitations. Other locale files remain unchanged and will be auto-regenerated as per the platform's i18n convention."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SolRadar#291",
       "title": "Automated research cycle completed in Sol Radar 🚀",
       "tags": [

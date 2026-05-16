@@ -1,0 +1,52 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-05-16",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#500",
+      "title": "Optimize Cron Jobs for Efficiency in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "optimization",
+        "workflows",
+        "efficiency",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update reduces the frequency of two hourly workflows, `auto-merge-ai-prs.yaml` and `auto-triage-issues.yaml`, to every 6 hours. This change is expected to decrease the monthly fire count from approximately 720 to around 120, saving an estimated 600 Ubuntu minutes. The workflows remain offset to avoid competition, ensuring that AI PRs and unassigned issues are still addressed promptly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/StatusPage#7",
+      "title": "Optimize Cron Job Frequency for Efficiency in Status Page 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "StatusPage",
+        "optimization",
+        "workflow",
+        "efficiency",
+        "status-page"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/StatusPage/pull/7",
+      "summary": "This update changes the cron schedule for `update_data.yml` from every 5 minutes to every 30 minutes, significantly reducing the number of workflow executions from 288 to 48 per day. This adjustment is expected to save approximately 1,600 Ubuntu minutes per month, optimizing resource usage while maintaining adequate data freshness for users. The ability to manually trigger updates during incidents remains intact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#115",
+      "title": "Switch to Cloudflare Turnstile as Default Captcha in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "captcha",
+        "frontend",
+        "feature",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update changes the default captcha from hCaptcha to Cloudflare Turnstile for various user registration and sensitive operations. The implementation includes a simple toggle in the feature flags and ensures compatibility with existing links. No backend changes are required, and users can still opt for hCaptcha if needed."
+    }
+  ]
+}
