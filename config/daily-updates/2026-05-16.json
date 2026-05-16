@@ -3,6 +3,232 @@
   "date": "2026-05-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#316",
+      "title": "Automated i18n Updates from zh-CN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update introduces automated translation updates for the i18n files, specifically from the zh-CN source. Key languages affected include Arabic, German, Spanish, French, Italian, Japanese, Korean, Portuguese, Russian, and Traditional Chinese, with consistent modifications across all files. This enhancement ensures that the platform remains accessible and user-friendly for a diverse audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#314",
+      "title": "Enhance Site Management with Quota Display and Admin Controls in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ux",
+        "admin",
+        "quota",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces two key features on the Console → Sites page. First, a sub-site quota indicator is now visible, showing users their current usage against the maximum allowed subsites. Second, administrators can now be managed directly from the Advanced tab, allowing for easy addition and removal of admin users with real-time updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#747",
+      "title": "New Login Methods Tab for Site Settings in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "settings",
+        "admin",
+        "ui",
+        "authentication"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/747",
+      "summary": "This update introduces a new 'Login Methods' tab in the site settings, allowing admins to manage authentication providers displayed on the login screen. Site owners can now enable or disable providers like Email, Phone, Google, GitHub, and WeChat, as well as set a default login method. This enhancement improves user experience by providing a straightforward UI for managing login options."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#140",
+      "title": "Fix discount application for Global calls in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "bugfix",
+        "billing",
+        "discounts",
+        "tests",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where users with ACE discounts were not seeing the expected price reductions on Global and Balance-funded calls. The fix involves updating the discount lookup to use the API's owning service, ensuring that discounts are correctly applied. Additionally, new tests have been added to verify the functionality and prevent regressions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#476",
+      "title": "Enhance Order Creation with Affiliate Markup in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "orders",
+        "pricing",
+        "backend",
+        "markup"
+      ],
+      "public": false,
+      "summary": "This update integrates the affiliate Site's `markup_ratio` into the Order creation process, controlled by a new feature flag. The implementation introduces additional audit fields to `Order.metadata.pricing`, ensuring accurate tracking of pricing adjustments. Comprehensive tests have been added to validate the new functionality and maintain system integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#748",
+      "title": "Optimize CI Workflows for Cost Efficiency in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "actions",
+        "optimization",
+        "workflow",
+        "cost-saving"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/748",
+      "summary": "This update introduces per-branch concurrency to the CI workflow, significantly reducing unnecessary check runs and expected savings of 300-500 Ubuntu minutes per month. Additionally, the paths-ignore settings have been expanded across multiple workflows to prevent unnecessary triggers, potentially saving another 200-400 minutes monthly. These changes aim to enhance efficiency and reduce costs associated with GitHub Actions usage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#478",
+      "title": "Enhance security by blocking self-service redemption of free packages in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "security",
+        "backend",
+        "fix",
+        "audit",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This update implements a security fix to prevent authenticated users from redeeming system-managed free packages through the orders endpoint. Key changes include adding validation to block any package with a price of zero that is system-managed, ensuring that only trusted server-side flows can grant these packages. Additionally, a migration marks the survey-reward package as private for future-proofing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#315",
+      "title": "Streamline Site Creation Logic in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "refactor",
+        "localization",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update removes the `parent_site_id` surface and refines the logic for enabling sub-site creation. The `canCreate` functionality is now based on the host, enhancing performance by eliminating redundant data fetches. Additionally, several localization keys related to the parent site have been removed, ensuring a cleaner interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#138",
+      "title": "Critical security fix for credential cap enforcement in Gateway 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "security",
+        "bugfix",
+        "audit",
+        "tests",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical security issue identified in an internal audit, ensuring that the credential `limited_amount` cap is enforced correctly on billable APIs. A missing negation in the code allowed users to exceed their set limits, potentially draining application balances. The fix includes a code modification and new regression tests to prevent future occurrences of this issue."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#475",
+      "title": "Streamline MCP Documentation into Two Hubs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "consolidation",
+        "user-experience",
+        "backend",
+        "mcp"
+      ],
+      "public": false,
+      "summary": "This update consolidates over 50 scattered Chinese articles into two main hubs for easier navigation: one for Claude AI and Desktop, and another for Claude Code. Key improvements include a hub-and-spoke structure, enhanced content organization, and the addition of cross-links to facilitate user access. This restructuring aims to improve user experience and accessibility of documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#313",
+      "title": "Enhance site listing filter for console in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "filter",
+        "bugfix",
+        "console",
+        "site"
+      ],
+      "public": false,
+      "summary": "This update modifies the console subsites page to use a backend-side filter based on the origin suffix instead of a client-side filter. This change resolves an issue where superuser-created subsites were not displayed due to the previous filtering method. The new approach ensures that all relevant subsites are listed correctly, improving user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#292",
+      "title": "Enhance User Query Options in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "admin",
+        "user",
+        "i18n",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces new query options for users in the admin console, allowing searches by email or phone in addition to user ID. The Query User card now features three input fields, enhancing usability and accommodating support requests. All internationalization files have been updated to reflect these changes across 12 locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#746",
+      "title": "Enhance Subsite Listing with Origin Filter in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "subsite",
+        "backend",
+        "filter",
+        "user-experience",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/746",
+      "summary": "This update modifies the subsite fetching logic to utilize a new backend filter, allowing for more accurate listings based on the origin suffix. By switching to the `origin__endswith` filter, we ensure that subsites created by superusers are no longer hidden, improving user experience. The change preserves existing functionalities while enhancing the data retrieval process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#477",
+      "title": "Streamline Site Creation by Removing Redundant Metadata in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "refactor",
+        "metadata",
+        "dns",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update eliminates the `metadata.parent_site_id` from the site creation process and proxy CNAME resolution, ensuring that the DNS hierarchy is the sole source of truth for parent relationships. Key changes include modifications to the `SiteListCreateViewSet` and `resolve_proxy_cname`, enhancing the reliability of subsite creation and quota enforcement. All tests have passed successfully, confirming the stability of the system post-implementation."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformPublisher#500",
       "title": "Optimize Cron Jobs for Efficiency in Publisher 🚀",
       "tags": [
