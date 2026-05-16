@@ -3,6 +3,309 @@
   "date": "2026-05-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#892",
+      "title": "Revamp Midjourney Shorten with GPT Completions in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "midjourney",
+        "gpt",
+        "api",
+        "update",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update replaces the broken Discord upstream for the Midjourney shorten endpoint with a new implementation using OpenAI's chat completions. The public API contract remains unchanged, and a legacy Discord fallback is available as an opt-in option. Key improvements include enhanced error handling and a more reliable response format, ensuring seamless functionality moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#118",
+      "title": "Introducing Passkey Login and Management UI in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "passkey",
+        "webauthn",
+        "ui",
+        "auth"
+      ],
+      "public": false,
+      "summary": "This update introduces a complete Passkey/WebAuthn login and management UI, which is dark by default and flag-gated for controlled rollout. Key components include a new in-house WebAuthn shim, TypeScript models for passkeys, and user-friendly profile management features. The implementation ensures no impact on current users until the feature is enabled in production."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#142",
+      "title": "Enhance Passkey Support with New Models and Settings in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "passkey",
+        "webauthn",
+        "refactor"
+      ],
+      "public": false,
+      "summary": "This update introduces foundational support for Passkey/WebAuthn in the AuthBackend, including two new models: Passkey and PasskeyChallenge. It also adds necessary settings and a migration for the new database tables, while ensuring no new HTTP endpoints are exposed at this stage. The changes are fully additive and reversible, setting the stage for future enhancements without impacting existing functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#143",
+      "title": "Enhance Passkey Support with New Endpoints in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "passkey",
+        "webauthn",
+        "backend",
+        "api",
+        "authentication"
+      ],
+      "public": false,
+      "summary": "This update introduces the PasskeyViewSet and associated endpoints for WebAuthn, enhancing the backend's authentication capabilities. Key features include options for registration and authentication, along with management functionalities for user passkeys. The implementation is flag-gated, ensuring that the routes remain inactive in production until enabled."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#58",
+      "title": "Enhance Site Customization with New RFC in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "rfc",
+        "customization",
+        "frontend",
+        "backend",
+        "planning"
+      ],
+      "public": false,
+      "summary": "This update introduces the `.plans/SITE-CUSTOMIZATION-V2.md` RFC, which expands on the previous SITES-CONSOLE framework by addressing user feedback on service visibility, pricing granularity, and homepage customization. Key changes include a streamlined data model with a new JSON column and additional tables, alongside a detailed implementation sequence for future development. This RFC sets the stage for improved site management and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#141",
+      "title": "Introducing Passkey/WebAuthn Design for Seamless SSO in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "passkey",
+        "webauthn",
+        "sso",
+        "backend",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive design document for implementing Passkey/WebAuthn support in AceDataCloud SSO, located at `.plans/passkey.md`. Key features include a new RP ID for cross-subdomain functionality, backend library specifications, and the addition of two new tables for managing passkeys. The rollout will occur across six independent PRs, ensuring minimal disruption to existing services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#323",
+      "title": "Rename 'Try Now' to 'Studio' for Clarity in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "navigation",
+        "localization",
+        "ui"
+      ],
+      "public": false,
+      "summary": "The top navigation menu item previously labeled 'Try Now' has been renamed to 'Studio' to better reflect its destination. This change affects the English and Chinese language files, ensuring consistency across the platform. The URL remains unchanged, maintaining a seamless user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#322",
+      "title": "Enhance Site Branding at Boot in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "branding",
+        "frontend",
+        "site",
+        "update",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a mechanism to load tenant-specific branding elements such as logos, favicons, and titles at application startup. Key changes include the addition of site state management, fetching site data on boot, and applying branding dynamically across the platform. This ensures that users see their custom branding immediately, enhancing the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#321",
+      "title": "Improve Domain Binding Error Handling in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "error-handling",
+        "i18n",
+        "frontend",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update enhances the user experience by properly displaying error messages when attempting to bind a hostname that is already in use. A new helper function has been introduced to extract error messages from various backend response formats, ensuring users receive clear feedback. Additionally, new internationalization keys have been added to support multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#761",
+      "title": "Enhance DNS Instructions for Custom Domains in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dns",
+        "ui",
+        "enhancement",
+        "i18n",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/761",
+      "summary": "This update clarifies how to enter 'Host record' for various DNS providers in the Custom Domain settings. A new hint paragraph has been added to guide users on entering subdomain prefixes, apex domains, and full FQDNs. The changes improve user experience by preventing common mistakes when configuring DNS records."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#319",
+      "title": "Enhance DNS Host Record Guidance in Frontend Web 🌐",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ux",
+        "dns",
+        "frontend",
+        "i18n",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update improves user experience by clarifying how to enter 'Host record' values across various DNS providers. A new hint has been added under the DNS record table, explaining the expected input formats for subdomains and root domains. The change is purely UX-focused, with no backend modifications, ensuring that existing functionalities remain intact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#320",
+      "title": "Fix trailing slashes for site domain URLs in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "api",
+        "http"
+      ],
+      "public": false,
+      "summary": "This update resolves a 404 error when unbinding custom domains by ensuring that the `get` and `delete` methods in the SiteDomain operator include a trailing slash in their URLs. The backend is already configured to handle slashed URLs correctly, so this change will improve functionality without requiring backend modifications. After deployment, users will see the expected behavior when using the Unbind button."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#760",
+      "title": "Enhance UserPicker to Show Added Users in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "user-picker",
+        "ui",
+        "enhancement",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/760",
+      "summary": "This update modifies the UserPicker component to retain already-added users in the dropdown, marking them with a '已添加' label. The filtering logic has been adjusted to prevent misleading messages when searching for existing users. This change improves user experience by clearly indicating which users are already part of the admin list."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#759",
+      "title": "Enhance Subsite Domain Management in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ux",
+        "features",
+        "subsites",
+        "domains",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/759",
+      "summary": "This update introduces two key enhancements to the 'My Subsites' settings tab in Nexior. First, bound custom domains are now displayed alongside the default subdomain, providing better visibility for operators. Second, the 'Open' button now triggers a confirmation dialog that allows users to select from all reachable URLs for the subsite, improving the user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#757",
+      "title": "Fix overlapping description in Nexior settings 🛠️",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "css",
+        "bugfix",
+        "ui",
+        "settings"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/757",
+      "summary": "This update resolves a visual overlap issue in the Settings → Login Methods tab, where the description text for enabled login methods was overlapping with the toggle column. The fix involves adjusting the CSS for the layout, allowing the label column to grow and preventing it from pushing into the toggle area. The changes ensure a clean display at various dialog widths without affecting mobile layouts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#481",
+      "title": "Enhance Default Auth Providers for New Sites in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "authentication",
+        "backend",
+        "features",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update enables email, Google, GitHub, and phone authentication methods by default for new sites, while keeping WeChat disabled. Existing sites will automatically adopt these new settings during their next initialization without requiring manual updates. The change streamlines the onboarding process for new users and enhances the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#758",
+      "title": "Enhance User Feedback for Non-Existent Users in Nexior ⚠️",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "user-interface",
+        "bugfix",
+        "frontend",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/758",
+      "summary": "This update improves the user experience in the UserPicker component by displaying a warning message when a searched user is not found. A sentinel row is added to show '未找到该用户' when the API returns an empty response, ensuring users receive clear feedback. The backend remains unchanged, maintaining strict privacy constraints."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#756",
+      "title": "Enhance Upload Experience with Progress Indicators in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "upload",
+        "user-experience",
+        "fix",
+        "progress",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/756",
+      "summary": "This update introduces two key fixes to improve the user experience during image uploads. Users will now see a 0% progress overlay while files are uploading, preventing premature clicks on the Generate button. Additionally, the Generate action is blocked until all uploads are complete, ensuring that requests are sent with valid image URLs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#318",
+      "title": "Streamline User Query with Single Input in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "admin",
+        "frontend",
+        "i18n",
+        "user"
+      ],
+      "public": false,
+      "summary": "This update simplifies the user query process on the admin support page by replacing three separate input fields (User ID, Email, Phone) with a single input field. The new functionality allows superusers to perform exact matches across multiple user identifiers, enhancing the user experience and resolving the previous 404 error. Additionally, internationalization updates have been made for better accessibility."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthBackend#140",
       "title": "Enhance Admin User Lookup with Detailed Query in Backend 🚀",
       "tags": [
