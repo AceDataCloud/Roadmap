@@ -3,6 +3,118 @@
   "date": "2026-05-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPs#326",
+      "title": "Align OpenAI Task Filter with Updated Docs in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "openai",
+        "docs",
+        "testing",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/326",
+      "summary": "This update synchronizes the OpenAI MCP task filter contract with the latest OpenAPI specifications. Key changes include the introduction of a constrained literal union for task types and the removal of outdated references. Additionally, user-facing documentation has been updated, and a new unit test ensures the correct handling of the 'images' type filter."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#116",
+      "title": "Enhance Auth Provider Handling in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "auth",
+        "frontend",
+        "nexior",
+        "ui",
+        "reactivity"
+      ],
+      "public": false,
+      "summary": "This update introduces new helpers to ensure that the login, registration, and password reset pages respect per-site authentication provider settings from Nexior. The changes allow dynamic rendering of provider buttons based on site-specific configurations, improving user experience by accurately reflecting available login methods. The implementation ensures that any updates in the Nexior settings are immediately reflected in the UI."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#319",
+      "title": "Sync Confirmation: No Updates Needed for Overview in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "sync",
+        "documentation",
+        "no-op",
+        "verification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/319",
+      "summary": "This update confirms that the `overview` section does not require any modifications as it is not included in the MCP service mappings. Verification showed that there are no related packages or files in this repository, making this PR a no-op sync acknowledgment. No changes were made to source, test, or configuration files."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#480",
+      "title": "Clarify OpenAI Tasks Polling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "openai",
+        "integration",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update corrects the OpenAI Tasks integration documentation by clarifying that the `task_id` is returned synchronously in callback mode, while `trace_id` is optional. The documentation now accurately reflects the recommended polling method and updates examples accordingly. Additionally, a migration ensures that the documentation is the authoritative source for translations across multiple locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#752",
+      "title": "Upgrade Capacitor to v8 and Node to 22 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "upgrade",
+        "capacitor",
+        "node",
+        "android",
+        "ci"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/752",
+      "summary": "This update successfully migrates the Capacitor toolchain from version 7 to 8, ensuring compatibility with Node version 22. Key changes include updates to the Android native project configurations, Gradle, and various dependencies, while iOS remains unchanged due to already meeting the minimum deployment target. The CI configurations have also been adjusted to reflect the new Node version, enhancing the overall stability and performance of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#751",
+      "title": "Fix deploy permissions to restore production deploys in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "hotfix",
+        "deployment",
+        "permissions",
+        "actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/751",
+      "summary": "This hotfix updates the permissions in the deploy.yaml file from 'contents: read' to 'contents: write', allowing the build-number action to create necessary git references. This change resolves the production deploy failures that occurred after the recent consolidation PR. The fix ensures that the deployment pipeline functions correctly, restoring the ability to push tags and deploy updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#750",
+      "title": "Streamline Docker Builds for Efficiency in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "docker",
+        "actions",
+        "efficiency",
+        "cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/750",
+      "summary": "This update consolidates Docker image builds into a single workflow, reducing redundant builds and saving approximately 1,200 Ubuntu minutes per month. The previous separate workflows for GHCR and Docker Hub have been merged, allowing for simultaneous pushes with improved caching. Additionally, several cleanups have been made to enhance security and performance."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#316",
       "title": "Automated i18n Updates from zh-CN in Frontend Web 🚀",
       "tags": [
