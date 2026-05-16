@@ -3,6 +3,52 @@
   "date": "2026-05-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#145",
+      "title": "Passkey Feature Activated for Production AuthBackend in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "deployment",
+        "auth",
+        "backend"
+      ],
+      "public": false,
+      "summary": "The passkey feature has been successfully enabled in the production environment of the AuthBackend. This change allows the four passkey-related API routes to return HTTP 200 instead of the previous 503 error, facilitating user authentication via passkeys. The deployment includes necessary environment variable adjustments, ensuring a smooth rollout without additional configurations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#144",
+      "title": "Implement per-endpoint rate limits for Passkey in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "passkey",
+        "rate-limits",
+        "security",
+        "backend",
+        "throttling"
+      ],
+      "public": false,
+      "summary": "This update enforces per-endpoint rate limits as outlined in the Passkey design document. Key endpoints like `/auth/options/` and `/auth/verify/` now have specific limits to enhance security against abuse. The implementation reuses the existing `Activity` table for tracking, ensuring minimal deployment footprint while maintaining effective throttling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#893",
+      "title": "Switch to In-Cluster Backend for Midjourney Shorten in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "backend",
+        "midjourney",
+        "platform-service",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update changes the default backend for the `/midjourney/shorten` endpoint from an external service to the in-cluster `platform-service-openai`. This transition reduces latency, eliminates external billing, and maintains the same API contract. The override functionality remains intact, allowing for easy reversion if needed."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#892",
       "title": "Revamp Midjourney Shorten with GPT Completions in Platform Service 🚀",
       "tags": [
