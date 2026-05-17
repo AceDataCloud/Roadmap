@@ -3,6 +3,165 @@
   "date": "2026-05-17",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#325",
+      "title": "Enhance Solana Payment Flow with Transaction Confirmation in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "solana",
+        "payment",
+        "frontend",
+        "bugfix",
+        "usdc"
+      ],
+      "public": false,
+      "summary": "This update introduces crucial fixes to the Solana payment flow, addressing approximately 58% of historical X402 failures. Key improvements include client-side transaction confirmation before backend submission and a pre-flight check for USDC balance, ensuring users are informed of any issues before incurring costs. These changes enhance the reliability and user experience of the payment process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#764",
+      "title": "Revamp 'Open Subsite' Dialog for Better UX in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ux",
+        "dialog",
+        "improvement",
+        "frontend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/764",
+      "summary": "This update enhances the 'Open Subsite' dialog by streamlining its appearance and functionality. The dialog now skips when there are no custom domains, and the layout has been improved by placing URL options in the footer alongside the Cancel button. These changes aim to provide a cleaner and more intuitive user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#763",
+      "title": "Enhance Solana Payment Flow with Transaction Confirmation and Balance Check in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "solana",
+        "x402",
+        "usdc",
+        "fixes",
+        "payments"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/763",
+      "summary": "This update introduces two critical fixes to the Solana payment flow, addressing approximately 58% of historical X402 failures. The changes include client-side transaction confirmation before backend submission and a pre-flight check for USDC balance, ensuring users are informed of any issues before submitting transactions. These enhancements aim to improve user experience and reduce transaction errors significantly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#489",
+      "title": "Enhance Studio Documentation with Screenshots in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "enhancement",
+        "ui",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update improves the Studio introduction article by adding four inline screenshots to enhance visual engagement and clarity. Additionally, two redundant footer links have been removed to streamline the content, maintaining only the essential action-oriented bullets. These changes aim to provide a better user experience for readers navigating the documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#488",
+      "title": "Enhance Cost Management for GPT-5.4-Nano in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cost",
+        "backend",
+        "gpt-5.4-nano",
+        "aichat2",
+        "pricing",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature to the cost-ref resolver, allowing for per-endpoint pricing overrides via a 'prepend' array. Specifically, it sets the consumption of the 'gpt-5.4-nano' model to zero for the aichat2 endpoint while maintaining existing pricing for other endpoints. The changes ensure that the shared catalog remains intact, simplifying future maintenance and updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#762",
+      "title": "Introducing gpt-5.4-nano as the Free Default Chat Model in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "chat",
+        "gpt",
+        "nexior",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/762",
+      "summary": "This update adds the gpt-5.4-nano model to Nexior's chat offerings, marking it as free and setting it as the default for new users. Key changes include updates to the chat model constants, interface, and UI components to display a 'Free' badge. Existing users will retain their last-selected model, ensuring a smooth transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#120",
+      "title": "Enable Passkey Provider by Default in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "passkey",
+        "frontend",
+        "auth"
+      ],
+      "public": false,
+      "summary": "The default setting for the passkey login provider has been changed from disabled to enabled, making the Passkey chip visible on the login and profile pages. This change follows successful end-to-end testing on production, ensuring that the feature is ready for users while maintaining site-specific overrides. The update does not affect backend functionality or existing configurations for sites that have opted out."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#119",
+      "title": "Automated i18n Updates for Multiple Languages in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "localization",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces auto-generated translation updates for various languages based on changes from the zh-CN source. Key modifications include enhancements to user prompts and verification messages across multiple language files, ensuring a more consistent user experience. The changes impact languages such as Arabic, German, Spanish, and many others, improving accessibility for a broader audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#487",
+      "title": "Transforming Studio TODO into a Complete Intro Article in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "update",
+        "backend",
+        "content"
+      ],
+      "public": false,
+      "summary": "The development studio documentation has been revamped from a TODO outline to a comprehensive consumer-facing article. Key changes include renaming the file and rewriting placeholder sections into detailed prose, enhancing clarity and user engagement. This update ensures that users have a clear understanding of the platform's capabilities and features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#486",
+      "title": "Update gpt-image-2 Consumption Rate in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cost",
+        "api",
+        "update",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update raises the gpt-image-2 consumption rate from 0.09 to 0.11 across multiple files, including API cost configurations and related tests. The changes ensure that pricing aligns with the new consumption rate, and all related tests have passed successfully. This adjustment enhances the accuracy of cost calculations for image generations and edits."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Roadmap#51",
       "title": "Added new creator-fee buyback entry in Roadmap 🚀",
       "tags": [
