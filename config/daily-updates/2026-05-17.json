@@ -3,6 +3,71 @@
   "date": "2026-05-17",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#326",
+      "title": "Enhance Nginx Security by Blocking CN Regulator Networks in Frontend Web 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "nginx",
+        "security",
+        "frontend",
+        "blocklist",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces an Nginx configuration to block known Chinese regulator-operated networks from accessing platform.acedata.cloud. Users from these networks will receive a `403 Forbidden` response, ensuring compliance without upgrading the EdgeOne plan. Key files modified include `blocklist.conf`, `nginx.conf.template`, and a new script for generating the blocklist."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#324",
+      "title": "Revamp Document Navigation with New Categories in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "navigation",
+        "i18n",
+        "user-experience",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update enhances the document navigation by splitting the top navigation menu into three distinct categories: Development Docs, Use Cases, and Affiliate. Each category links to the same documents route but filters content based on the selected category, improving user experience and accessibility. Additionally, internationalization support has been added for all relevant languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#52",
+      "title": "Completed 7 Q2 Items in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "roadmap",
+        "q2",
+        "updates",
+        "completed",
+        "audit"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/52",
+      "summary": "This update marks seven Q2 2026 items as completed after auditing against the actual shipped code. The status of these items has been updated to 'done' with corresponding completion dates derived from their first-commit timestamps. The roadmap now reflects a total of 10 out of 24 items completed, enhancing visibility on project progress."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#491",
+      "title": "Enhance Error Handling for Non-JSON Responses in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "error-handling",
+        "backend",
+        "httpx",
+        "testing",
+        "json"
+      ],
+      "public": false,
+      "summary": "This update introduces a new helper function to handle non-JSON responses from the x402 facilitator, converting them into httpx.HTTPError exceptions. This change improves error visibility for operators by providing detailed information about the response, including status code and body excerpts. Additionally, regression tests have been added to ensure the new behavior is correctly implemented and validated."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#325",
       "title": "Enhance Solana Payment Flow with Transaction Confirmation in Frontend Web 🚀",
       "tags": [
