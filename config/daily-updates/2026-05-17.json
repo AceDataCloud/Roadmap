@@ -1,0 +1,23 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-05-17",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#328",
+      "title": "Enhance AiChat with New v2 Conversations Support in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "aichat",
+        "api",
+        "update",
+        "enhancement",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/328",
+      "summary": "This update introduces the new OpenAPI-aligned endpoint `/aichat2/conversations`, allowing for enhanced conversation management in AiChat. Key additions include the `AiChatClient.create_conversation_v2` method, new model types for v2, and updated documentation to reflect these changes. Test coverage has also been expanded to ensure robust functionality for the new features."
+    }
+  ]
+}
