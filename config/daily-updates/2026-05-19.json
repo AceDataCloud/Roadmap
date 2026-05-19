@@ -3,6 +3,66 @@
   "date": "2026-05-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#767",
+      "title": "Enhance WeChat Payment Experience in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "wechat",
+        "mobile",
+        "ui",
+        "i18n",
+        "payment"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/767",
+      "summary": "This update introduces a mobile-friendly long-press QR code for WeChat payments when accessed through the WeChat in-app browser. The new dialog state features a single-column layout and removes irrelevant desktop tutorial images, improving usability for mobile users. Additionally, it includes internationalization support for long-press instructions across 18 locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#335",
+      "title": "Make WeChat Pay QR mobile-friendly with long-press tip in Frontend Web 🖥️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "wechat",
+        "mobile",
+        "qr-code",
+        "i18n",
+        "frontend",
+        "ux"
+      ],
+      "public": false,
+      "summary": "This update introduces a dedicated mobile-in-WeChat payment dialog for the order page. The dialog now displays a single-column QR code with a long-press instruction, removing the desktop tutorial image and fitting 90% of the mobile width. All 12 locales received the new i18n key for the instruction. PC and mobile-outside-WeChat layouts remain unchanged."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#121",
+      "title": "Enable email, phone, and username login in WeChat browser in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "auth",
+        "wechat",
+        "login",
+        "frontend",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update removes the `!isWechat` restrictions on email, phone, and username login forms in `Login.vue`, allowing these login methods to appear inside the WeChat browser. GitHub, Google OAuth, and Passkey providers remain restricted due to compatibility issues. The change preserves login behavior in regular browsers and ensures users without a bound WeChat account can log in seamlessly. All updates were verified with TypeScript checks, ESLint, and manual review."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#334",
+      "title": "Feat(sites): hydrate override edit dialog from un-rendered zh-cn source in Frontend Web ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend"
+      ],
+      "public": false
+    },
+    {
       "id": "gh:pr:AceDataCloud/PayBackend#32",
       "title": "Redact WeChat secrets from debug logs in Pay Backend 🔒",
       "tags": [
