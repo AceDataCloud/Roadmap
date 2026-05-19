@@ -3,6 +3,166 @@
   "date": "2026-05-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#770",
+      "title": "Enhance Social Media Previews with Custom Card in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "seo",
+        "design",
+        "social-media",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/770",
+      "summary": "This update introduces a new 1200x630 social card for `og:image` and `twitter:image` on Nexior, replacing the previous logo image. The new design features a cohesive brand aesthetic and provides a more polished preview for social media platforms like Twitter and LinkedIn. Key files updated include the HTML template and associated scripts to ensure the new card is generated and served correctly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#902",
+      "title": "Enhance Aspect Ratio Handling in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "video",
+        "mountsea",
+        "aspect_ratio",
+        "platform_service"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue in the Mountsea Veo worker where non-9:16 aspect ratios were incorrectly coerced to 16:9. Now, the caller-selected aspect ratio is passed directly to the upstream, ensuring accurate video outputs. If an unsupported ratio is provided, a proper 4xx error is returned instead of a silent substitution."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#769",
+      "title": "Clean Up WeChat JSAPI Code in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "cleanup",
+        "wechat",
+        "i18n",
+        "code",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/769",
+      "summary": "This update removes the dead WeChat JSAPI UI and related internationalization keys from the Nexior codebase. Key changes include the deletion of unused functions and state blocks in the WeChat payment component, as well as the removal of 90 i18n keys across 18 locales. The overall behavior remains unchanged, as the JSAPI code path was previously unreachable."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#337",
+      "title": "Cleanup WeChat JSAPI Code in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "cleanup",
+        "wechat",
+        "i18n",
+        "frontend",
+        "code",
+        "maintenance"
+      ],
+      "public": false,
+      "summary": "This update removes dead code related to the WeChat JSAPI UI and associated i18n keys, following the previous PR. Key changes include the deletion of unused functions and templates in the WeChat payment component, as well as the removal of 120 i18n keys across 12 locales. The overall behavior remains unchanged as the JSAPI path was previously unreachable."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#500",
+      "title": "Cleanup WeChat Payment Logic in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cleanup",
+        "backend",
+        "payment",
+        "refactor"
+      ],
+      "public": false,
+      "summary": "This update removes the unnecessary WeChat jsapi/openid plumbing from the PlatformBackend. Key changes include the removal of `surface`, `client_ip`, and `openid` parameters from the payment creation process, ensuring that all calls now default to `surface=\"pc\"`. The modifications streamline the payment logic and eliminate dead code, with no behavioral changes observed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#338",
+      "title": "Verify No MCP Updates Needed for Overview in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "sync",
+        "verification",
+        "documentation",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/338",
+      "summary": "This PR confirms that the `overview` documentation change does not require any updates to MCP packages in the monorepo. The verification process showed that `overview` is not included in the `sync.yaml` mappings and no related MCP packages exist. As a result, this PR aims to close the sync issue as 'already in sync' for this repository."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#901",
+      "title": "Optimize Bananarouter for Faster Image Generation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "performance",
+        "optimization",
+        "bugfix",
+        "image-processing"
+      ],
+      "public": false,
+      "summary": "This update modifies the Bananarouter to default to returning URLs instead of base64 JSON blobs, significantly reducing latency. Key changes include adjustments to the routing and handling logic to ensure that the response format is correctly forwarded, improving performance by approximately 35%. Additionally, a timeout has been implemented for COS uploads to prevent long hangs during processing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#499",
+      "title": "Update aichat2 Free Model to gpt-5.4-mini in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "aichat2",
+        "billing",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update moves the aichat2 'free model' prepend override from gpt-5.4-nano to gpt-5.4-mini, ensuring that users see accurate billing information. The change prevents Nexior from incorrectly advertising mini as 'Free' while still charging at the catalog rate. Key tests confirm that the new setup works as intended, with all relevant tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#900",
+      "title": "Shorten Channel Name for Consistency in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "refactor",
+        "api",
+        "platform"
+      ],
+      "public": false,
+      "summary": "The recorded channel name emitted by the bananarouter worker has been changed from 'bananarouter' to 'br'. This adjustment aligns the value with the existing Kong canary routing header, ensuring consistency across logs and dashboards. The change simplifies the identifier used in API usage metrics without altering the wire format."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#768",
+      "title": "Default Chat Model Updated to GPT-5.4-Mini in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "chat",
+        "gpt",
+        "update",
+        "nexior",
+        "default"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/768",
+      "summary": "The default chat model has been updated to `gpt-5.4-mini`, which now carries the free badge in the model selector. The `gpt-5.4-nano` model has been completely removed due to its poor quality. This change ensures that new conversations start with the improved `gpt-5.4-mini` model, enhancing user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#899",
       "title": "Silently ignore unsupported `input_fidelity` for image edits in Platform Service 🎨",
       "tags": [
