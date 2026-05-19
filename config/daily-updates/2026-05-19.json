@@ -1,0 +1,87 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-05-19",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#32",
+      "title": "Redact WeChat secrets from debug logs in Pay Backend 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "security",
+        "wechat",
+        "logging",
+        "backend",
+        "pay"
+      ],
+      "public": false,
+      "summary": "This update prevents sensitive WeChat Pay credentials from being printed in debug logs on pod startup. The `WECHAT_MCH_PRIVATE_KEY_STRING` and `WECHAT_APIv3_KEY` now only report their presence and length, while non-secret identifiers continue to log normally. This closes a potential security exposure where logs could have been accessed by unauthorized users. No past log entries are altered; operators should rotate secrets and redeploy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#496",
+      "title": "Auto-translate site override titles and summaries in Backend ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "i18n",
+        "backend",
+        "site-override",
+        "translations",
+        "admin-tools",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This PR promotes admin-entered `display_title` and `display_summary` on `SiteServiceOverride` and `SiteDocumentOverride` into the i18n pipeline, enabling site homepages to render in the visitor's locale instead of always showing the admin's Chinese input. It adds read-only serializer fields to surface the original Chinese for admin edits, updates views to sync translations on create/update/delete, and includes a new translation utility module with unit tests. The changes are fully compatible with existing data and integrate with the hourly translation propagation CronJob."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#31",
+      "title": "Streamline WeChat AppID Handling in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "wechat",
+        "deployment",
+        "backend",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update refines the management of WeChat AppID by sourcing it directly from the `wechat` Secret, ensuring that the PayBackend's OA-credentials remain distinct from the `wechatpay` Secret. This change clarifies the responsibilities of each Secret and eliminates confusion regarding the dual AppID references. The modifications were made in both production and test deployment configurations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#30",
+      "title": "Fix WeChat App Secret Source for Deployment in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "fix",
+        "deploy",
+        "wechat",
+        "environment",
+        "production"
+      ],
+      "public": false,
+      "summary": "This update corrects the source of the `WECHAT_APP_SECRET` environment variable in the deployment configurations, switching it from the incorrect `wechatpay` Secret to the appropriate `wechat` Secret. This change resolves the `CreateContainerConfigError` that was preventing new pods from starting, ensuring that the JSAPI prepay functionality is live in production. No code changes were made, and the existing `wechatpay` Secret remains untouched for merchant credentials."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#766",
+      "title": "Enhance WeChat Payment Experience in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "wechat",
+        "payment",
+        "ui",
+        "frontend",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/766",
+      "summary": "This update introduces a three-state payment UI for WeChat, enhancing user experience across desktop and mobile platforms. Users can now seamlessly navigate payment options whether they are on a desktop browser, mobile browser, or within the WeChat app itself. Key changes include new UI components, improved localization support, and backend integration for a smoother payment process."
+    }
+  ]
+}
