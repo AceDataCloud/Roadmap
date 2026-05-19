@@ -3,6 +3,56 @@
   "date": "2026-05-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#898",
+      "title": "Switch bananarouter to share MongoDB with openaihk in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "mongodb",
+        "bananarouter",
+        "openaihk",
+        "deployment",
+        "tasks",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update changes the bananarouter deployment to use the shared `acedatacloud_openai` MongoDB database instead of its isolated one. As a result, tasks created by bananarouter are now visible through the public `POST /openai/tasks` API served by openaihk, resolving missing task visibility in user chat history. No code changes were made; only the deployment environment variable was updated. Future follow-ups include backfilling existing tasks and deprecating the old database."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#498",
+      "title": "Fix anonymous WeChat and AliPay payments redirect in Backend ⚡️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "payments",
+        "wechat",
+        "alipay",
+        "anonymous",
+        "bugfix",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update ensures that anonymous users paying via WeChat or AliPay are redirected to the public `/orders/<id>` page instead of the authenticated `/console/orders/<id>` view. The `create_alipay_payment` function now accepts a `return_url` parameter, and `OrderViewSet.pay` sets `anon_return_url` for unauthenticated callers. Three new tests verify correct URL handling for anonymous payments. E2E tests confirm that payment flows now complete without losing context for anonymous users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#331",
+      "title": "Confirmed No MCP Updates Needed for Overview Docs Sync in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docs",
+        "sync",
+        "no-op",
+        "verification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/331",
+      "summary": "This PR verifies that the `overview` documentation does not require any updates in the MCPs monorepo. A thorough scope check confirmed that there are no relevant packages or mappings for `overview`, resulting in no code or test file modifications. Consequently, the related issue can be closed as a no-op sync event."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#336",
       "title": "Enable Anonymous Payments for Orders in Frontend Web 🎉",
       "tags": [
