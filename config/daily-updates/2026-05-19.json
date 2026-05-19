@@ -3,6 +3,59 @@
   "date": "2026-05-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#336",
+      "title": "Enable Anonymous Payments for Orders in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "payments",
+        "frontend",
+        "anonymous",
+        "orders"
+      ],
+      "public": false,
+      "summary": "This update introduces a new public payment route for orders, allowing users to pay without signing in. The `/orders/:id` route is now accessible to anonymous users, enhancing the payment experience by preventing unnecessary login redirects. Additionally, the WeChat payment dialog now copies the correct public URL, ensuring seamless access for recipients."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#497",
+      "title": "Feat(orders): allow unauthenticated pay for shared order URLs in Backend ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformDeployment#6",
+      "title": "Feat(kong): canary route channel=br -> bananarouter for gpt-image-2 in Platform Deployment ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformDeployment"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#897",
+      "title": "Introduce Bananarouter GPT-Image-2 Canary Upstream in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "gpt-image-2",
+        "canary",
+        "bananarouter",
+        "images",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "Added a new submodule `bananarouter/` providing OpenAI-compatible `/images/generations` and `/images/edits` endpoints for the `gpt-image-2` model. The service includes routing, validation, error handling, and COS upload logic, isolated as a canary path via the `channel: br` header. Deployment manifests, Docker setup, and local development configs were included, enabling smooth opt-in without changing existing payloads. This allows traffic to shift to BananaRouter pods without affecting the default OpenAI upstream."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#767",
       "title": "Enhance WeChat Payment Experience in Nexior 🚀",
       "tags": [
