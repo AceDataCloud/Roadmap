@@ -3,6 +3,22 @@
   "date": "2026-05-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#899",
+      "title": "Silently ignore unsupported `input_fidelity` for image edits in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bananarouter",
+        "image-edit",
+        "bugfix",
+        "validation",
+        "openai-integration"
+      ],
+      "public": false,
+      "summary": "This update removes the hard rejection of the `input_fidelity` field in bananarouter image requests, allowing it to be silently ignored. The behavior now matches openaihk, preventing unnecessary 400 errors for valid Image Edit calls. README was updated to reflect that `input_fidelity` is now dropped without error. Core validations for `size` and `background: transparent` remain unchanged."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#898",
       "title": "Switch bananarouter to share MongoDB with openaihk in Platform Service 🚀",
       "tags": [
