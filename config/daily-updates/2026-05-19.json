@@ -3,6 +3,36 @@
   "date": "2026-05-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Index#59",
+      "title": "Removed PlatformDeployment Submodule in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "cleanup",
+        "submodule",
+        "maintenance",
+        "index"
+      ],
+      "public": false,
+      "summary": "The `PlatformDeployment` submodule has been removed from the Index monorepo as it is no longer maintained. Key changes include updates to `.gitmodules` and the repo discovery list, ensuring a cleaner project structure. The standalone `AceDataCloud/PlatformDeployment` repository remains available for any necessary scripts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#903",
+      "title": "Right-sizing production replicas for efficiency in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "k8s",
+        "optimization",
+        "resource-management",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update reduces the replica counts for five PlatformService deployments, addressing the issue of 28 pending pods due to insufficient resources. Key deployments like `platform-service-openai` and `platform-service-ttapi-suno` have been scaled down from 4 and 8 replicas to 2, respectively, optimizing resource usage and freeing up approximately 2.2 CPU cores and 3.5 Gi memory. This change will help alleviate the pending-pod backlog and improve overall cluster performance."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#770",
       "title": "Enhance Social Media Previews with Custom Card in Nexior 🎨",
       "tags": [
