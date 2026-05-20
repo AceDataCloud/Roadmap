@@ -1,0 +1,97 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-05-20",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#501",
+      "title": "Optimized Resource Allocation for PlatformBackend in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "k8s",
+        "optimization",
+        "backend",
+        "resource-management"
+      ],
+      "public": false,
+      "summary": "This update right-sizes the `platform-backend` and 21 test deployments, reducing over-provisioning and freeing up significant resources. The main API server's replicas have been reduced from three to two, and resource requests have been adjusted to better match actual usage. Overall, approximately 0.9 CPU cores and 2.25 GiB of memory have been reclaimed for more efficient scheduling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#239",
+      "title": "Optimize Resource Allocation for Dify Deployments in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "k8s",
+        "optimization",
+        "resource-management",
+        "deployment"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/239",
+      "summary": "This update addresses critical resource issues in the Dify deployments. The `dify-plugin-daemon` has been adjusted to prevent OOM crashes by increasing memory limits and reducing replicas, while the `dify-api` has been right-sized for CPU and memory requests, significantly reducing over-reservation. These changes enhance stability and efficiency without altering environment or application-level configurations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WebExtrator#13",
+      "title": "Optimize Resource Requests for WebExtrator Workers in Web Extrator 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WebExtrator",
+        "k8s",
+        "optimization",
+        "resource-management",
+        "web-extractor"
+      ],
+      "public": false,
+      "summary": "This update reduces the resource requests for `webextrator-worker` pods from 1 CPU and 1Gi memory to 100m CPU and 512Mi memory. This change alleviates resource wastage, allowing the Horizontal Pod Autoscaler to efficiently pack more workers onto smaller nodes without impacting application performance. The limits remain unchanged to ensure that workers can still burst as needed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#141",
+      "title": "Boost CPU Requests for Platform Gateway in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "k8s",
+        "performance",
+        "resource-management",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update raises the CPU request for the platform-gateway from 100m to 200m to better match actual usage, reducing throttling and improving performance. The Horizontal Pod Autoscaler will now require fewer replicas, stabilizing at around 15-20 pods instead of 30. Overall, this change aims to enhance responsiveness and efficiency without significantly increasing cluster resource usage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#338",
+      "title": "Optimize replica count for platform-frontend in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "k8s",
+        "optimization",
+        "frontend",
+        "resource-management"
+      ],
+      "public": false,
+      "summary": "Reduced the number of replicas for the platform-frontend from 3 to 2 to better align with resource needs. This change will help free up approximately 40m CPU and 128Mi memory, improving overall cluster efficiency. The adjustment ensures high availability across nodes while minimizing resource waste."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#147",
+      "title": "Reduced auth-backend replicas for efficiency in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "k8s",
+        "optimization",
+        "backend",
+        "resource-management"
+      ],
+      "public": false,
+      "summary": "The number of replicas for the auth-backend has been reduced from 4 to 2, optimizing resource usage in the cluster. This change is based on consistent performance metrics indicating that current traffic does not require the higher number of replicas. As a result, approximately 100m CPU and 512Mi memory will be freed up without impacting functionality."
+    }
+  ]
+}
