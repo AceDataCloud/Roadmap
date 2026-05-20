@@ -3,6 +3,84 @@
   "date": "2026-05-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#339",
+      "title": "Fix category preservation in sidebar navigation in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "navigation",
+        "frontend",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update ensures that the `?category=` query string is preserved when navigating sidebar items in the documents section. Previously, clicking an article would reset the top-nav highlight to 'Documents', causing confusion. Now, users will remain on the correct category tab, enhancing navigation consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#508",
+      "title": "Finalize Use Cases with 60 Service Stubs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "updates",
+        "backend",
+        "use-cases",
+        "service-stubs"
+      ],
+      "public": false,
+      "summary": "This update completes the Use Cases reorganization by adding 60 lean service stubs for six new editor hubs. Each hub now mirrors the structure of existing hubs, ensuring consistency across the platform. Key editors included are Windsurf, Cline, JetBrains AI, OpenCode, Codex CLI, and Gemini CLI."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#908",
+      "title": "Enhance API Key Management for Model Capabilities in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "api",
+        "platform",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a per-capability `api_key_env` override feature, allowing different API keys for various model groups. The checker now resolves environment variables for API keys, improving access to models that were previously restricted. Backward compatibility is maintained, ensuring existing configurations function as before."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#507",
+      "title": "New Suno Stubs for Editor Hubs in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "suno",
+        "editor",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces lean Suno stubs for six new editor hubs: Windsurf, Cline, JetBrains, OpenCode, Codex CLI, and Gemini CLI. Each stub provides a concise overview, configuration details, and usage prompts tailored for the respective editors. The content has already been applied to production and will be translated into 17 locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#506",
+      "title": "Complete Claude Desktop Service Articles in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "updates",
+        "backend",
+        "claude",
+        "use-cases"
+      ],
+      "public": false,
+      "summary": "This update adds three missing articles for the Claude Desktop service to the Use Cases hub, covering Serp, ShortURL, and Suno. With these additions, the hub now features a total of 12 articles, aligning it with the Claude Code hub. The content is already live in production, enhancing user access to comprehensive service documentation."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#505",
       "title": "Add zh-CN Sources for 8 Use Cases Hub Articles in Backend 🚀",
       "tags": [
