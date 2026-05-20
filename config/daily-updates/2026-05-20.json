@@ -3,6 +3,38 @@
   "date": "2026-05-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#905",
+      "title": "Enhance COS Upload Timeout Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cos",
+        "timeout",
+        "upload",
+        "platform-service",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces configurable timeout settings for COS uploads in the Platform Service, mirroring changes made in the bananarouter. Key modifications include the addition of environment variables for timeout management and adjustments to the SDK constructor to enforce these timeouts. As a result, stalled uploads will now fail more gracefully, improving overall reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#904",
+      "title": "Enhance COS Image Upload Performance in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cos",
+        "upload",
+        "performance",
+        "timeout",
+        "configuration"
+      ],
+      "public": false,
+      "summary": "This update introduces a bounded request timeout for COS SDK image uploads, ensuring faster responses when COS is unreachable. Additionally, it allows configuration of COS acceleration and custom domains without altering the bucket region. These changes aim to improve the reliability and speed of image uploads."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#501",
       "title": "Optimized Resource Allocation for PlatformBackend in Backend 🚀",
       "tags": [
