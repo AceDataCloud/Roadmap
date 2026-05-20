@@ -3,6 +3,70 @@
   "date": "2026-05-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#505",
+      "title": "Add zh-CN Sources for 8 Use Cases Hub Articles in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "localization",
+        "zh-CN",
+        "use-cases",
+        "markdown"
+      ],
+      "public": false,
+      "summary": "This update introduces the canonical zh-CN markdown sources for eight 'Use Cases' hub overview articles, ensuring the documentation aligns with the production database. These files are now editable within the repository, and the sync process will maintain consistency with the existing translations. This change enhances accessibility for Chinese-speaking users and supports ongoing content updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#342",
+      "title": "Gemini Docs Update: No Changes Needed in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docs",
+        "gemini",
+        "sync",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/342",
+      "summary": "This update confirms that the recent documentation changes for Gemini do not require any modifications to the MCPs codebase. A thorough verification showed that there is no Gemini mapping or related MCP package in the repository, ensuring that no server code or configurations are impacted. All systems remain unaffected and operational."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#907",
+      "title": "Enhance routing for gemini-3.5-flash in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "routing",
+        "gemini",
+        "update",
+        "platform",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces routing for the new `gemini-3.5-flash` model, establishing xiaojingai as the primary source and ephone as a fallback. Key changes include the addition of the model in both configuration files and a normalization rule in the chat handler to ensure consistent handling of future variants. This enhancement aims to improve model accessibility and performance on the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#504",
+      "title": "Exciting New Support for Gemini-3.5-Flash Model in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "gemini",
+        "backend",
+        "api",
+        "pricing"
+      ],
+      "public": false,
+      "summary": "This update introduces support for the newly released `gemini-3.5-flash` model within the Gemini service. Key changes include updated billing rules, display rules, and modifications to the API to incorporate this model. The pricing structure aligns with existing models, ensuring consistency across the Gemini-N flash tier."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#906",
       "title": "Enhance Error Messaging for Motion Control in Platform Service 🚀",
       "tags": [
