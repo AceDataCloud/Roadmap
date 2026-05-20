@@ -3,6 +3,37 @@
   "date": "2026-05-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#906",
+      "title": "Enhance Error Messaging for Motion Control in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "motion-control",
+        "user-experience",
+        "refactor"
+      ],
+      "public": false,
+      "summary": "This update improves the error handling in the ephone Kling motion-control handler by surfacing the actual upstream 400 error messages. Previously, users encountered a generic error message, making it difficult to identify issues. Now, the handler will log the raw upstream response and provide clearer feedback, enhancing user experience and troubleshooting capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AutoCert#9",
+      "title": "Fix certificate issues and enhance K8s integration in Auto Cert 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AutoCert",
+        "bugfix",
+        "k8s",
+        "certificates",
+        "enhancement",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update addresses three critical bugs related to certificate management in K8s. It ensures that ingress-nginx uses up-to-date certificates by updating all necessary fields in Secrets, adds support for the 'zhishuyun' profile, and expands the namespace coverage for the test environment. Additionally, new helper functions have been introduced to streamline certificate verification and fetching processes."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#905",
       "title": "Enhance COS Upload Timeout Handling in Platform Service 🚀",
       "tags": [
