@@ -1,0 +1,70 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-05-22",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#914",
+      "title": "Enable Global Accelerate by Default for Worker Uploads in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cos",
+        "upload",
+        "performance",
+        "enhancement",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update enables Tencent COS Global Accelerate by default for all workers uploading to the ap-beijing bucket, addressing issues with slow and timed-out uploads. Key changes include modifications to environment settings across multiple workers to ensure the use of accelerated uploads. This enhancement is expected to improve upload performance significantly for cross-region traffic."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#501",
+      "title": "Enhance COS Uploads with Global Accelerate by Default in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "cos",
+        "upload",
+        "enhancement",
+        "performance",
+        "configuration"
+      ],
+      "public": false,
+      "summary": "This update modifies the PlatformPublisher to default COS uploads to the global accelerate endpoint, improving upload efficiency for non-Beijing deployments. Key changes include the addition of configuration options in `app/setting.py` and adjustments in `app/utils/upload.py` to utilize the accelerate endpoint when applicable. This enhancement aims to reduce latency and avoid public internet traversal during uploads."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#18",
+      "title": "Enhance COS Uploads with Global Acceleration in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "cdn",
+        "cos",
+        "upload",
+        "enhancement",
+        "stability"
+      ],
+      "public": false,
+      "summary": "This update switches Wisdom's COS uploads to use the global accelerate endpoint by default, improving upload stability for non-Beijing regions. Key changes include the addition of configuration options in `config.py` and adjustments in the client creation logic in `cdn.py`. This enhancement ensures that uploads bypass the public internet, reducing latency and potential instability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#509",
+      "title": "Boost file uploads with COS acceleration in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "performance",
+        "upload",
+        "backend",
+        "cos",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update enhances the file upload process by implementing the COS accelerate endpoint, significantly reducing upload latency. Key changes include a new configuration for COS settings, a singleton client for connection reuse, and improved error handling to provide structured logs. These adjustments are expected to enhance user experience by minimizing upload failures and improving performance."
+    }
+  ]
+}
