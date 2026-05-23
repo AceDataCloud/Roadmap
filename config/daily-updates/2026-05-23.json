@@ -3,6 +3,69 @@
   "date": "2026-05-23",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#21",
+      "title": "Enhance Windows Release Pipeline and Clean Up Lint Issues in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "ci",
+        "windows",
+        "release",
+        "lint",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces a new Windows release pipeline that builds an obfuscated `wisdom.exe` and uploads it to Tencent COS. Additionally, a standalone uploader script has been added for local use, and several linting issues have been resolved to improve code quality. The deployment workflow has also been modernized to eliminate deprecated actions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#156",
+      "title": "Urgent OAuth Fix: Ensure Scope is Included in Backend 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "oauth",
+        "backend",
+        "urgent"
+      ],
+      "public": false,
+      "summary": "This hotfix addresses a critical issue where the OAuth authorization URL was missing the required `scope` parameter for deep links from Studio's connector consent card. By modifying the `start_authorize()` function to use resolved scopes instead of input scopes, users will no longer encounter a Google 400 error when attempting to authorize. Regression tests confirm that the fix works as intended across various scenarios."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#357",
+      "title": "Enhance Application Authorization with New Features in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ux",
+        "features",
+        "authorization",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update introduces a rich user picker for authorizations, replacing the previous input method with a searchable dropdown. Additionally, the authorizations table now displays user avatars and names instead of UUIDs, enhancing clarity. A new 'Authorized to Me' tab has been added to the applications console, allowing users to view their granted authorizations at a glance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#928",
+      "title": "Fix scaffold versioning issue in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "deployment",
+        "scaffold",
+        "platform-service",
+        "docker"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where the scaffold package version was not correctly upgraded in the production image due to an oversight in the poetry.lock file. The PR updates the poetry.lock to ensure that the correct version, 2026.5.23.0, is used, enhancing the functionality of the platform service. Additionally, defensive coding measures have been added to prevent future crashes related to authorization data retrieval."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformGateway#146",
       "title": "Stopped Tracking Kong Plugin ZIP Build Artifacts in Gateway 🧹",
       "tags": [
