@@ -3,6 +3,326 @@
   "date": "2026-05-23",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#149",
+      "title": "New Internal Connector Catalog Endpoint in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "api",
+        "internal",
+        "connector"
+      ],
+      "public": false,
+      "summary": "This update introduces a new internal endpoint `GET /internal/v1/connectors/catalog/` that allows authenticated access to all installable, non-hidden connector items. It enhances the aichat2 worker's ability to populate the `<connectors>` block efficiently without user-scoped REST interactions. The implementation includes a lean serializer and comprehensive tests to ensure reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#787",
+      "title": "Version bump to 3.35.1 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "release",
+        "versioning",
+        "android",
+        "ios"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/787",
+      "summary": "This update increments the version from 3.35.0 to 3.35.1, ensuring a unique versionCode of 33501 for the upcoming Play Store upload. Key files modified include package.json, build.gradle, and project.pbxproj to reflect the new versioning. The production submission for version 3.35.0 remains unaffected during this process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#786",
+      "title": "Finalize Android Release Signing Config in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "android",
+        "ci",
+        "release",
+        "dev",
+        "cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/786",
+      "summary": "This update finalizes the release signing configuration for the Android app and migrates the deprecated 'track' parameter to 'tracks' in the CI workflow. Key improvements include a new local development setup with a template for signing credentials and enhanced gitignore rules to prevent sensitive information from being committed. Overall, these changes streamline the development process without affecting CI behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#61",
+      "title": "Revamping Connector Consent Flow in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "design",
+        "ux",
+        "aichat2",
+        "connector",
+        "consent"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive design plan for the in-chat connector consent UX, enhancing user interactions with a new dialog for authorization. Key decisions include the naming of the tool as `get_connector_status`, leveraging existing catalog data, and ensuring seamless user experience with pause/resume functionality. This plan sets the stage for multiple upcoming PRs across various services, streamlining the integration process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#785",
+      "title": "Upgrade Java Version for Capacitor 8 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "android",
+        "java",
+        "build",
+        "capactor"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/785",
+      "summary": "This update bumps the JAVA_VERSION to 21 in the Android build workflow to support Capacitor 8. The previous JDK 17 setup caused compilation errors due to incompatible source release settings. This change ensures smoother builds and compatibility moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#781",
+      "title": "Enhance Auto-Translate Functionality in Nexior 🌍",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "translations",
+        "i18n",
+        "admin",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/781",
+      "summary": "This update introduces an auto-translate toggle directly within the Nexior subsite settings, allowing admins to manage translations without switching to the PlatformFrontend dev portal. Key changes include the addition of a new operator and component for translation management, as well as expanded internationalization support across 18 locales. This enhancement streamlines the editing process, ensuring that auto-translated content remains synchronized with user edits."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#784",
+      "title": "Improve card spacing for aspect ratios in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "layout",
+        "ui",
+        "fix",
+        "veo"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/784",
+      "summary": "This update refines the layout of the aspect ratio selector in the Veo component by adjusting the flex properties. The cards for `16:9` and `9:16` are now displayed side-by-side with a gap, enhancing visual coherence. This change addresses the previously large empty space between the cards, improving the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#516",
+      "title": "Fix serializer field declarations for site data in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "serializer",
+        "backend",
+        "tests",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update addresses the issue of missing derived fields in the site serializers by ensuring that `SerializerMethodField()` attributes are declared directly on each concrete serializer subclass. The fix includes new tests to verify that the fields are correctly included in API responses. Overall, this enhances the functionality of the site data retrieval process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#123",
+      "title": "Add Sign in with Apple login button in Frontend Web 🍏",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "authentication",
+        "apple",
+        "frontend",
+        "nexior"
+      ],
+      "public": false,
+      "summary": "This update introduces the Sign in with Apple feature as a primary login option on the authentication platform. It aligns with existing login methods like Google and GitHub, ensuring compliance with App Store guidelines for the Nexior iOS App. The implementation includes new components, configuration settings, and internationalization support for multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#148",
+      "title": "Add Sign in with Apple support for seamless login in Backend 🍏",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "authentication",
+        "apple",
+        "nexior",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces Sign in with Apple to the AuthBackend, addressing a critical requirement for the Nexior iOS app to comply with App Store Review Guideline 4.8. The implementation includes JWT verification of the identity_token and allows users to log in using their Apple accounts, enhancing the authentication options available. Key changes include new model fields, updated settings, and comprehensive tests to ensure functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#514",
+      "title": "Enhance site serializer to include translation sources in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "serializer",
+        "translations",
+        "nexior",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a mixin to the SiteIndexSerializer, allowing it to expose translation source fields alongside the existing detail serializer. As a result, both list and detail endpoints now return consistent data, enabling the auto-translate toggle in Nexior and PlatformFrontend to function correctly. All existing tests pass, and new tests have been added to ensure the mixin's integration is seamless."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#340",
+      "title": "No-op Update for Gemini Docs in M C Ps 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docs",
+        "sync",
+        "no-op",
+        "mappings"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/340",
+      "summary": "This update confirms that the `gemini` service is not mapped in the MCPs, resulting in a no-op. The service mapping was verified, and while the `openapi/gemini.json` exists upstream, there is no corresponding MCP subdirectory. The issue has been resolved by closing it as 'already in sync / not applicable'."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#917",
+      "title": "Enforce Supported Aspect Ratios in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "validation",
+        "veo",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update ensures that the `/veo/videos` workers—`mountsea`, `cqtai`, and `wcnb`—only accept the supported aspect ratios of `16:9` and `9:16`. Previously, unsupported ratios like `1:1` and `3:4` were accepted, leading to errors after credit reservation. Now, clients receive a clear `BadRequest` message at validation time, improving the user experience and reducing unnecessary resource usage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#515",
+      "title": "Refine aspect ratio for video uploads in Backend 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "openapi",
+        "backend",
+        "video",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update narrows the aspect ratio options for the `/veo/videos` endpoint to only `16:9` and `9:16`, aligning with Google Veo's upstream limitations. The OpenAPI specification has been modified to reflect this change, ensuring that invalid values are no longer accepted. This will prevent errors related to unsupported aspect ratios during video uploads."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#783",
+      "title": "Streamline Aspect Ratio Options for Veo in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "veo",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/783",
+      "summary": "This update restricts the aspect ratio selector in Veo to only support `16:9` and `9:16`, aligning with upstream requirements. Previously available options like `1:1`, `4:3`, and `3:4` have been removed to prevent user errors. The default setting remains `16:9`, ensuring a smooth experience for both new and existing users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#916",
+      "title": "Onboard Kiro Claude as Top-Priority Provider in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "integration",
+        "openai",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces the Kiro Claude upstream provider at rank 20000, making it the primary backend for six modern Claude models. Key changes include the addition of a new configuration file and updates to the cronjob for API key management. The integration has been validated with successful tests across all models, ensuring robust performance and caching improvements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#60",
+      "title": "Added iOS App Store Release Manual in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "ios",
+        "release",
+        "manual",
+        "nexior"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive operator-facing manual for shipping the Nexior iOS app to the App Store, located in the internal planning area. The manual covers essential steps including pre-flight checks, App Store metadata preparation, build and submission processes, and common rejection reasons with mitigations. This documentation aims to streamline the release process for the Nexior app."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#779",
+      "title": "Enhance iOS Compliance by Hiding Non-IAP UI and Adding Privacy Manifest in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ios",
+        "privacy",
+        "app-store",
+        "compliance",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/779",
+      "summary": "This update prepares the iOS bundle for App Store submission by hiding non-IAP payment UI elements in compliance with App Store Review Guideline 3.1.1. Additionally, a new PrivacyInfo.xcprivacy file has been added to meet Apple's submission requirements, ensuring user data privacy is properly declared. The changes are gated to only affect the iOS surface, leaving web and Android functionalities intact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#352",
+      "title": "Enhance Sites Console with Auto-Translate Toggle in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "i18n",
+        "features",
+        "ui",
+        "toggle"
+      ],
+      "public": false,
+      "summary": "This update introduces the `<AutoTranslateToggle>` component to the General tab of the Sites Console, allowing users to toggle between literal and auto-translated titles and descriptions. It integrates with new backend fields for seamless functionality and ensures graceful degradation in production until backend deployment. The implementation reuses existing internationalization keys, maintaining support for all 11 locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#513",
+      "title": "Enhance Auto-Translate Feature in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "translations",
+        "backend",
+        "features",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces a preserve-state mode for the auto-translate toggle, ensuring that toggling off retains the previous state during updates. Key changes include enhancements to the `sync_i18n_fields` function and integration of site title and description management. The modifications improve the overall user experience by maintaining translation integrity across various operations."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#915",
       "title": "Fix(suno): throttle lyrics polling loop to avoid upstream 429 in Platform Service 🐛",
       "tags": [
