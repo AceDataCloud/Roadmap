@@ -3,6 +3,53 @@
   "date": "2026-05-23",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#925",
+      "title": "Enhance TypeScript Workers with Authorization Fields in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "typescript",
+        "workers",
+        "authorization",
+        "platform-service",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces `authorization_id` and `actor_user_id` to the request context and payload for 16 TypeScript-based workers. These additions are crucial for enabling the PlatformGateway to accurately track and enforce application authorization quotas. The changes ensure that services routed through these workers can now properly update their authorization metrics."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#924",
+      "title": "Updated Python Workers to Latest Scaffold Version in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "update",
+        "python",
+        "workers",
+        "scaffold",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update bumps the scaffold version to 2026.5.23.0 across six Python workers, ensuring that the PlatformGateway receives essential fields like `authorization_id` and `actor_user_id` in the `/record` payloads. This change is crucial for enforcing per-grantee quota caps effectively. The workers updated include aichat, asiyun, investing, phoenix, qcloud, and serp."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#923",
+      "title": "Update scaffold version to fix record issues in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "hotfix",
+        "scaffold",
+        "update",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This hotfix updates the `acedatacloud-scaffold` version from `0.9.0` to `2026.5.23.0` in both `pyproject.toml` and `requirements.txt`. This change resolves an `AttributeError` that occurred during `record()` calls, ensuring that billing records are properly captured. After deployment, verification steps confirm the correct version is in use and that `record_completed` events are logged correctly."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthFrontend#128",
       "title": "Feat(apple): native iOS/Android bridge for Sign in with Apple in Frontend Web ✨",
       "tags": [
