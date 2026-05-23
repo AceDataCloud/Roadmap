@@ -3,6 +3,196 @@
   "date": "2026-05-23",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#932",
+      "title": "Enhance OAuth Routing for Connectors in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "oauth",
+        "connectors",
+        "routing",
+        "tests",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update improves the routing of OAuth preset connectors by ensuring they are processed through the correct loader, `load_skill`, instead of the default `load_mcp_server`. A new hint system has been implemented in the connectors block to guide the model on which loader to use based on the connector type. Additionally, tests have been added to verify the correct routing behavior for various connector scenarios."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#157",
+      "title": "Enhance Connector Catalog with Required Skills in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "backend",
+        "features",
+        "serialization",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update adds the `required_skills` field to the internal serializer for connector catalog items, allowing the aichat2 worker to correctly identify and utilize OAuth preset connectors. The change resolves previous errors related to misidentifying these connectors as MCP servers. Comprehensive tests have been added to ensure the new field is properly exposed and functioning as expected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#24",
+      "title": "Unblock E2E Release by Shipping Source Zip in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "release",
+        "workflow",
+        "e2e",
+        "zip",
+        "temporary"
+      ],
+      "public": false,
+      "summary": "This update temporarily disables native compilation to resolve E2E publishing issues caused by PyArmor and Nuitka. The workflow now ships a plain source zip instead of a compiled executable, streamlining the release process. Key changes include modifications to the release workflow and a reduction in timeout minutes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#931",
+      "title": "Fix connector status retrieval in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "aichat2",
+        "oauth",
+        "connector",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses a bug where OAuth connections marked as active were incorrectly displayed as unconnected in the aichat2 system. The fix involves adjusting the retrieval of the `catalog_identifier` to be a top-level field, ensuring accurate connection status reporting. Additionally, shared helper functions were introduced to maintain consistency across the codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#797",
+      "title": "Enhance Consent Card with Metadata and Continue Button in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "ui",
+        "oauth",
+        "consent",
+        "metadata"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/797",
+      "summary": "This update improves the consent card experience by adding catalog metadata and an in-card scope picker, allowing users to see real connector details. Additionally, a new 'Continue' button appears after the OAuth process, requiring explicit user confirmation for authorization. These changes streamline the user experience and enhance clarity during the consent process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#360",
+      "title": "Enhance Authorization Page Layout and Center Empty State in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "design",
+        "authorization",
+        "layout"
+      ],
+      "public": false,
+      "summary": "This update refines the Application Authorization page by displaying the actual application name and improving the layout of balance statistics. The empty state for 'Authorized to Me' is now centered, enhancing visual appeal. Additional adjustments include rebalancing form column widths and ensuring better alignment of elements for a cleaner user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#930",
+      "title": "Add missing deploy scripts for Python workers in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "deployment",
+        "fix",
+        "workers",
+        "kubernetes",
+        "scripts"
+      ],
+      "public": false,
+      "summary": "This update introduces the `deploy/run.sh` script for six Python workers: aichat, asiyun, investing, phoenix, qcloud, and serp. Previously, these workers were not updating their Kubernetes deployments due to the absence of this script, which has now been added to ensure proper deployment and functionality. This fix will allow the workers to utilize the latest images and ensure that API calls are processed correctly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#23",
+      "title": "Fix Nuitka Build Issue in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "fix",
+        "build",
+        "windows",
+        "nuitka"
+      ],
+      "public": false,
+      "summary": "This update removes the `--company-name`, `--product-name`, and `--file-description` flags from the Windows release workflow due to a build failure caused by Nuitka. The build will now proceed with default empty metadata, ensuring a smoother release process without requiring a version bump."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#359",
+      "title": "Fix long div formatting for prettier compliance in Frontend Web ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "lint",
+        "prettier",
+        "frontend",
+        "hotfix"
+      ],
+      "public": false,
+      "summary": "This update addresses a prettier violation that was introduced in a previous merge. The `<div>` opening tag in the Authorize.vue file has been reformatted to span multiple lines, ensuring compliance with linting rules without altering any functionality. This change prevents linting errors in future PRs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#22",
+      "title": "Streamline Release Process with Nuitka in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "release",
+        "nuitka",
+        "build",
+        "security",
+        "workflow"
+      ],
+      "public": false,
+      "summary": "This update replaces the previous PyArmor and PyInstaller setup with Nuitka for compiling the Wisdom application. Key changes include the removal of PyArmor and PyInstaller dependencies, simplifying the build process to a single Nuitka compile step. This transition not only eliminates licensing issues but also enhances the security of the compiled output by preventing decompilation back to Python source code."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#929",
+      "title": "Enhance consent requests with catalog_id for Nexior in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "aichat2",
+        "nexior",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces the `catalog_id` field to every `consent_request` entry emitted by the aichat2 worker. This change allows Nexior to directly access connector metadata, such as logos and localized names, without needing additional lookups. The implementation includes modifications to the types, status retrieval logic, and corresponding tests to ensure functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#358",
+      "title": "Polished application authorization UX with smarter quota context in Frontend Web ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ux",
+        "authorization",
+        "i18n",
+        "vue",
+        "applications"
+      ],
+      "public": false,
+      "summary": "Refined the application authorization experience with richer layout cards, dynamic unit-aware quota displays, clearer guidance text, and improved grantee previews across the Authorize page. Updated the Applications page to use a consistent radio-button switcher, inline authorization badges, and quick access to global balance authorization actions. The update also adds fully translated i18n coverage for 12 locales while keeping behavior and backend logic unchanged."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#21",
       "title": "Enhance Windows Release Pipeline and Clean Up Lint Issues in Wisdom 🚀",
       "tags": [
