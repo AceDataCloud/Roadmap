@@ -3,6 +3,232 @@
   "date": "2026-05-23",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#146",
+      "title": "Stopped Tracking Kong Plugin ZIP Build Artifacts in Gateway 🧹",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "gitignore",
+        "kong",
+        "build-artifacts",
+        "cleanup",
+        "devex"
+      ],
+      "public": false,
+      "summary": "Updated the repository to ignore generated Kong plugin ZIP files and removed the tracked custom-auth bundle from source control. This makes the Lua plugin source the single source of truth and prevents stale packaged artifacts from drifting from current code. The change also documents how to rebuild deployment ZIPs locally before uploading to TSE Kong."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#927",
+      "title": "Consent Install Links Now Use Public Auth Host in Platform Service 🔐",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "auth",
+        "kubernetes",
+        "aichat2",
+        "oauth",
+        "config",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "Updated AIChat2 auth configuration so consent-card install URLs always use the public auth domain instead of an internal Kubernetes ClusterIP. The change removes the frontend URL fallback to AUTH_BACKEND_URL in worker config and explicitly pins AUTH_FRONTEND_URL in the production deployment manifest. This prevents broken browser consent flows while preserving the existing SSE event format and connector authorization flow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#522",
+      "title": "Fix blockers for CVM deployment in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "deployment",
+        "tencent",
+        "wisdom",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update resolves three critical issues preventing the deployment of the `tencent_cvm`. Key changes include correcting environment variable names for Tencent Cloud credentials, addressing a namespace conflict in the `tencentcloud` SDK, and replacing placeholder values with actual resources for the Wisdom Service. As a result, the deployment process is now fully functional for provisioning a Wisdom CVM tenant."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#145",
+      "title": "Reverted custom-auth changes for identity fields in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "revert",
+        "custom-auth",
+        "gateway",
+        "plugin"
+      ],
+      "public": false,
+      "summary": "This update reverts recent modifications made to the custom-auth plugin, specifically addressing how identity fields are propagated. The changes included adjustments to the handling of JSON null values, which have now been reverted to the previous implementation. This rollback aims to restore functionality and prevent potential issues with query arguments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#144",
+      "title": "Align Authorization Handling for Consistency in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "bugfix",
+        "auth",
+        "gateway",
+        "custom-auth",
+        "stability"
+      ],
+      "public": false,
+      "summary": "This update modifies the default value of `authorization_id` to an empty string instead of None in the `/auth` path, aligning it with the existing x402 path. This change prevents serialization issues that previously caused crashes in the custom-auth plugin, ensuring smoother operation for non-delegated requests. Additionally, it wraps both `actor_user_id` and `authorization_id` in a fallback to maintain consistent response formatting."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#143",
+      "title": "Patch custom-auth null handling to stop Kong 5xx spikes in Gateway 🚑",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "kong",
+        "lua",
+        "hotfix",
+        "custom-auth",
+        "production",
+        "5xx"
+      ],
+      "public": false,
+      "summary": "This update fixes a production regression in the custom-auth plugin where Lua `cjson.null` values for optional identity fields were incorrectly propagated into Kong query params, triggering widespread 5xx errors on POST requests. The patch replaces truthiness checks with strict string type validation for `authorization_id` and `actor_user_id`, preventing userdata values from reaching `set_query()`. The plugin version was bumped from v0.11.0 to v0.11.1, enabling a safe roll-forward after the temporary rollback to v0.10.0."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#356",
+      "title": "Enhance Manage Page with CVM Controls in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "deployment",
+        "cvm",
+        "ui",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces CVM-aware controls on the Manage page, allowing users to start and stop deployments directly. The applicationOperator now supports stop and start deployment actions, enhancing user interaction for Tencent CVM workloads. Additionally, a new MCP Channel card has been added for easy access to API connection details, improving overall usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#355",
+      "title": "Enhance Application Configuration Routing in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "deployment",
+        "i18n",
+        "wizard"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `Dispatcher.vue` component that routes `/applications/:id/config` based on the `service.alias`. Additionally, a new `Wisdom.vue` wizard has been implemented, guiding users through a four-step deployment process while integrating multilingual support for deployment metadata. These changes improve the user experience and streamline the deployment workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#521",
+      "title": "Wisdom SaaS Service Registration Lands with Tencent CVM Metadata in Backend ⚙️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "wisdom",
+        "migration",
+        "tencent-cvm",
+        "pricing",
+        "docs"
+      ],
+      "public": false,
+      "summary": "Adds an idempotent migration to register the private Wisdom service with Tencent CVM deployment metadata, instance presets, environment token wiring, and exposure settings. Introduces per-preset monthly pricing definitions and a Chinese development guide covering deployment flow and usage. The service remains hidden with placeholder infrastructure values until operators complete configuration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#796",
+      "title": "Update iOS and Android Versions in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ios",
+        "android",
+        "version-update",
+        "testflight"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/796",
+      "summary": "This update bumps the Nexior package and native versions from 3.35.1 to 3.35.2, ensuring consistency across platforms. The iOS CURRENT_PROJECT_VERSION is updated for the upcoming TestFlight upload, and Android version metadata is kept in sync. These changes prepare the app for the next release cycle."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WisdomChannel#1",
+      "title": "Enhance PyPI Publishing and CLI Commands in Wisdom Channel 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WisdomChannel",
+        "pypi",
+        "cli",
+        "workflow",
+        "enhancement",
+        "python"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/WisdomChannel/pull/1",
+      "summary": "This update introduces a streamlined PyPI publishing workflow and new CLI commands for the Wisdom Channel. Key changes include the addition of CI workflows for testing across multiple Python versions, and the implementation of `init` and `doctor` commands for interactive configuration and connectivity checks. These enhancements will improve user experience and deployment efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#926",
+      "title": "Enhance WAV URL Handling for Better Performance in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "wav",
+        "performance",
+        "cost-saving",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a new helper function to check the availability of upstream WAV URLs, ensuring that playback and download traffic is prioritized from the official source. The changes include modifications to the transferWavFiles and transferAudios functions, which now fall back to a COS mirror only when the upstream URL is unreachable. This approach aims to reduce unnecessary egress costs while maintaining durability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#154",
+      "title": "Enhance Apple User Profiles with Nicknames and Avatars in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "apple",
+        "avatar",
+        "nickname",
+        "backend",
+        "user-profile"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of Apple user profiles by filling in nicknames and generating SVG avatars when necessary. It prioritizes the use of the user's first and last name from Apple, and if unavailable, derives a nickname from the email. This ensures that profiles are visually complete and not left as blank avatars."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#520",
+      "title": "Add Tencent CVM Workload Provider in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "deployment",
+        "tencent",
+        "cvm",
+        "backend",
+        "wisdom"
+      ],
+      "public": false,
+      "summary": "This update introduces the Tencent CVM workload provider, allowing for the provisioning of Windows CVM instances via the Tencent Cloud API. Key changes include the addition of new deployment functions, extended deployment results, and updated view actions to support CVM-specific operations. The integration is designed to enhance the deployment capabilities for applications that cannot run in containers, with Wisdom being the first application to utilize this feature."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#925",
       "title": "Enhance TypeScript Workers with Authorization Fields in Platform Service 🚀",
       "tags": [
