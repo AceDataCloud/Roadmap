@@ -3,6 +3,199 @@
   "date": "2026-05-23",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#128",
+      "title": "Feat(apple): native iOS/Android bridge for Sign in with Apple in Frontend Web ✨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#921",
+      "title": "Fix(openai/worker): include authorization_id and actor_user_id in record payload in Platform Service 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/ScaffoldPython#3",
+      "title": "Feat: propagate authorization_id and actor_user_id in record payload in Scaffold Python ✨",
+      "tags": [
+        "github",
+        "pr",
+        "ScaffoldPython"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/ScaffoldPython/pull/3"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#142",
+      "title": "Fix(custom-auth): propagate authorization_id and actor_user_id upstream in Gateway 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#518",
+      "title": "Fix(application): null-safe get_paid against None remaining_amount in Backend 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#922",
+      "title": "Feat(suno): prefer upstream WAV URL, COS mirror only as probe-based fallback in Platform Service ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#20",
+      "title": "Feat(oem): respect externally-written C:\\wisdom\\.env (cloudbase-init UserData) in Wisdom ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#354",
+      "title": "Chore(announcement): drop 5-min unread-count polling, fetch once on mount in Frontend Web 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#153",
+      "title": "Fix(apple): accept RS256-signed identity_tokens (not ES256) in Backend 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#502",
+      "title": "Fix(publisher): isolate Playwright user_data per (user, channel) to stop cross-channel cookie pollution in Publisher 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#62",
+      "title": "Plan: Wisdom SaaS — 7-PR roadmap for CVM-based productization in Index 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "Index"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#19",
+      "title": "Feat(auth): accept Bearer header OR ?token= query param in Wisdom ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#794",
+      "title": "Feat(chat): auto-resume consent card on OAuth return in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/794"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#126",
+      "title": "Feat(connections): /connections/install/:id deep-link install page with return_to in Frontend Web ✨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#793",
+      "title": "Feat(setting/auth): add Apple to the provider list in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/793"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#127",
+      "title": "Feat(apple): add Apple Sign In binding to user profile Third Party in Frontend Web ✨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#152",
+      "title": "Feat(apple): add /users/me/update-apple endpoint for account binding in Backend ✨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#125",
+      "title": "Refactor(apple): enable by default, hard-code Services ID in Frontend Web 🧹",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#151",
+      "title": "Refactor(apple): hard-code Services ID default, drop oauth-apple secret in Backend 🛡️",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend"
+      ],
+      "public": false
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#792",
       "title": "Introduce interactive connector consent card in Nexior ⚡",
       "tags": [
