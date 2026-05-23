@@ -3,6 +3,172 @@
   "date": "2026-05-23",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#792",
+      "title": "Introduce interactive connector consent card in Nexior ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "chat",
+        "connector",
+        "consent",
+        "oauth",
+        "vue",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/792",
+      "summary": "This update adds a new `<ConnectorConsentCard>` that appears when the assistant encounters unsatisfied connector requirements. Users can authorize connectors via OAuth URLs or skip them, with the card reflecting live and resolved states. Key helper functions, tests, and i18n support were added to manage consent entries and build the output contract for worker resumption. Messages and conversation components were updated to integrate the consent flow seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#150",
+      "title": "Enhance Apple OAuth Support in Backend 🍏",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "kubernetes",
+        "backend",
+        "apple",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces the optional `oauth-apple` Kubernetes secret, allowing for multiple Apple OAuth client IDs to be used in both production and test deployments. The `APPLE_OAUTH_CLIENT_IDS` environment variable now supports both the iOS bundle ID and a new web Services ID, facilitating the Sign-in-with-Apple feature for web applications. Existing deployments remain unaffected if the secret is not set, ensuring a smooth transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#353",
+      "title": "Enhanced Authorization UI for Superusers in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "authorization",
+        "frontend",
+        "superuser",
+        "feature-flag",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update introduces an additional client-side gate for the Application Authorization UI, restricting access to superusers during the rollout phase. The 'Authorize' button and associated page now require both the feature flag and superuser status, ensuring that regular users cannot access the feature prematurely. This change enhances control over the feature's visibility while maintaining existing backend contracts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#517",
+      "title": "Enable Application Authorization in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "deployment",
+        "authorization"
+      ],
+      "public": false,
+      "summary": "This update activates the `FEATURES_ENABLE_APPLICATION_AUTHORIZATION` flag in the production environment, allowing enterprise admins to manage application quotas effectively. With this change, grantees can now log in with their own accounts and utilize shared quotas seamlessly. The implementation is straightforward, requiring no additional code changes or database migrations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#920",
+      "title": "Enhance Consent Handling and Resume Logic in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "aichat2",
+        "consent",
+        "testing",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update finalizes the consent request handling in the aichat2 connector by allowing the `tool_results` submit endpoint to resolve pauses from consent requests. Key changes include improved detection of paused states and the clearing of pending consent requests upon submission. New tests have been added to ensure robust functionality and error handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#790",
+      "title": "iOS builds now auto-select Xcode 26+ for App Store compliance in Nexior 📱",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ios",
+        "github-actions",
+        "xcode",
+        "ci",
+        "testflight",
+        "app-store"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/790",
+      "summary": "Updated the iOS GitHub Actions workflow to automatically select the latest installed Xcode 26 version before archiving. The new step fails fast when no compatible Xcode version is available, preventing invalid App Store uploads. This ensures iOS builds use the required iOS 26 SDK and avoids App Store Connect 409 validation errors during TestFlight submissions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#919",
+      "title": "Add `get_connector_status` tool with structured consent pause in Platform Service ⚡️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "aichat2",
+        "connectors",
+        "consent",
+        "sse",
+        "tooling"
+      ],
+      "public": false,
+      "summary": "Introduces the `get_connector_status` built-in tool to preflight connector authorizations. Turns now pause with a `consent_request` SSE event when required connectors are unconnected, enabling structured user consent. Fast-path outcomes continue immediately if all requirements are met, while slow-path outcomes trigger the new pause and consent workflow. The change is fully tested with 352 passing tests, including 22 new ones for edge cases and payload validation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#789",
+      "title": "Disable code signing for all Pods targets in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ios",
+        "podfile",
+        "ci",
+        "code-signing",
+        "capacitor",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/789",
+      "summary": "The Podfile's `post_install` hook was updated to set `CODE_SIGNING_ALLOWED=NO` and `CODE_SIGNING_REQUIRED=NO` on every Pods target. This prevents CI build failures caused by Capacitor frameworks receiving manual provisioning profiles. Local `pod install` workflows remain unaffected, and the change ensures that only the App target is signed during CI builds. After merging, the next iOS build should successfully archive, export, and upload the IPA to TestFlight."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#918",
+      "title": "Revamp Connector Integration in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "connectors",
+        "testing",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "This update replaces the outdated `<mcp-servers>` block with a comprehensive `<connectors>` block that displays the entire connector catalog, including both first-party and third-party MCPs. Each connector is annotated with its connection status, enhancing the model's ability to manage user interactions effectively. Additionally, the update introduces new tests and optimizes the handling of connector statuses for improved performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#788",
+      "title": "Add comprehensive Android release runbook in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "documentation",
+        "android",
+        "release",
+        "ci",
+        "runbook",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/788",
+      "summary": "Introduces a detailed operator guide for Android releases in Nexior, complementing the existing setup documentation. Covers the full CI pipeline, daily release commands, promotion paths from internal to production, versioning rules, and common CI failure troubleshooting. Includes links to validation runs and prior PRs to ensure reproducibility. No code changes were made; this is purely documentation."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthBackend#149",
       "title": "New Internal Connector Catalog Endpoint in Backend 🚀",
       "tags": [
