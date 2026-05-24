@@ -3,6 +3,89 @@
   "date": "2026-05-24",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#150",
+      "title": "Retired legacy application authorization flow in Gateway ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "gateway",
+        "authorization",
+        "credentials",
+        "cleanup",
+        "quota",
+        "lua"
+      ],
+      "public": false,
+      "summary": "The Gateway fully removes the deprecated ApplicationAuthorization runtime path as part of the credential-as-authorization migration. Obsolete authorization models, lookup helpers, quota tracking logic, and Lua passthrough handling were deleted, while /auth and /record now rely solely on credential-side quota enforcement. The cleanup simplifies request handling, reduces maintenance overhead, and removes unused response metadata without changing production behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#940",
+      "title": "Enhance MCP Slug Handling for Connectors in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "enhancement",
+        "mcp",
+        "connectors",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where the system failed to recognize the correct MCP server identifier, leading to user errors. Key changes include the implementation of a mapping from catalog identifiers to their corresponding MCP slugs, ensuring accurate hints are provided in prompts. Additionally, the loader now accepts catalog identifiers as aliases, improving compatibility and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#546",
+      "title": "Fix CVM Status Tagging for Accurate Deployment Results in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "deployment",
+        "cvm",
+        "tests",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where the CVM workload provider was incorrectly tagged as 'helm' during deployment status polling. By ensuring that 'workload_provider' is consistently set to 'tencent_cvm' across all relevant functions, the platform will now accurately reflect the deployment status. Eight new unit tests have been added to verify the correct behavior, ensuring reliability in future deployments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#347",
+      "title": "Enhance Gmail Skill with Null-Guard Fix in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "bugfix",
+        "gmail",
+        "jq",
+        "skills",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/347",
+      "summary": "This update addresses a critical bug in the Gmail skill where unguarded jq expressions could crash when no messages are returned. The affected recipes have been modified to safely handle empty results by using `.messages // []`. This ensures smoother operation and provides clearer feedback to users when there are no unread emails."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#791",
+      "title": "Automated iOS encryption compliance handling in Nexior 🔐",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ios",
+        "app-store",
+        "compliance",
+        "testflight",
+        "release-automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/791",
+      "summary": "Added the `ITSAppUsesNonExemptEncryption=false` flag to the iOS Info.plist so App Store Connect no longer triggers the recurring “Missing Compliance” flow on new uploads. The change reflects Nexior’s use of Apple-provided networking and exempt encryption only. This removes a manual release step for future TestFlight and App Store builds, helping streamline weekly iOS deployments."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#810",
       "title": "Enhance Credential Handling in Nexior 🚀",
       "tags": [
