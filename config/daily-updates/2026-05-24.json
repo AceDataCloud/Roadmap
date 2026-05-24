@@ -3,6 +3,49 @@
   "date": "2026-05-24",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#806",
+      "title": "Fix(mobile): add top safe-area padding so content clears iOS Dynamic Island / Android status bar in Nexior 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/806"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#804",
+      "title": "Fix(ota): COS bucket region is ap-beijing, not ap-hongkong in Nexior 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/804"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#530",
+      "title": "Fix(wisdom): emit cloudbase-init magic header so UserData actually runs in Backend 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#802",
+      "title": "Ci(ota): publish-ota workflow + helper script for COS bundle releases in Nexior 🧪",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/802"
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#800",
       "title": "Ship OTA live updates via Capgo with COS-hosted bundles in Nexior 🚀",
       "tags": [
