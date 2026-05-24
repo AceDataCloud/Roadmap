@@ -3,6 +3,54 @@
   "date": "2026-05-24",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#133",
+      "title": "Remove legacy catalog_identifier alias and dead fallbacks in Frontend Web 🧹",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "cleanup",
+        "refactor",
+        "typescript",
+        "vue",
+        "api-alignment"
+      ],
+      "public": false,
+      "summary": "Drops the deprecated catalog_identifier alias from connection and skill TypeScript interfaces following backend changes. Cleans up dead fallback logic in Connections.vue that could no longer be triggered. Updates related comments to reflect the finalized API contract. This is a pure cleanup with no runtime behavior changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#35",
+      "title": "Auto-launch WeChat on Startup for Seamless Experience in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "feature",
+        "wechat",
+        "startup",
+        "automation",
+        "safety"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature that automatically launches WeChat if it is not already running when Wisdom starts. The implementation includes a helper function that checks for WeChat's status and initiates it if necessary, ensuring that users have a smooth experience without manual logon. Safety measures are in place to handle scenarios where WeChat is not found or fails to launch, preventing crashes during startup."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#132",
+      "title": "Fix connection and skill operators for seamless access in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "bugfix",
+        "api",
+        "frontend",
+        "production",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update repoints the connection and skill operators to their new API endpoints, resolving critical production issues. The changes ensure that the Connector tab and Skills section are fully functional again, restoring access to essential features without altering existing page behavior. All endpoints have been verified live to confirm successful integration."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#34",
       "title": "Streamline runner by removing unnecessary flag in Wisdom 🚀",
       "tags": [
