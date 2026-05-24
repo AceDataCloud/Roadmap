@@ -3,6 +3,23 @@
   "date": "2026-05-24",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#808",
+      "title": "Clean up legacy catalog_identifier in Nexior 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "cleanup",
+        "typescript",
+        "vue",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/808",
+      "summary": "This update removes the deprecated `catalog_identifier` alias from the `IUserConnectionSummary` interface and related components. The code has been streamlined to ensure only `connector_identifier` is used, enhancing clarity and maintainability. All tests have passed successfully, confirming no runtime behavior changes."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthFrontend#133",
       "title": "Remove legacy catalog_identifier alias and dead fallbacks in Frontend Web 🧹",
       "tags": [
