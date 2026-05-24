@@ -3,6 +3,183 @@
   "date": "2026-05-24",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#800",
+      "title": "Ship OTA live updates via Capgo with COS-hosted bundles in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ota",
+        "capacitor",
+        "capgo",
+        "live-update",
+        "mobile",
+        "feature-flag"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/800",
+      "summary": "Integrates @capgo/capacitor-updater to enable OTA delivery of JS/HTML/CSS bundles from a COS-hosted manifest, allowing hotfixes without app store releases. Adds a lightweight live update wrapper that runs fire-and-forget after the version gate to avoid blocking app startup. Updates Capacitor config, dependencies, and app bootstrap to support safe, feature-flagged update checks with rollback-safe behavior. Expands mobile release docs with a full OTA workflow and rollout guidance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#799",
+      "title": "Implement Version Gate for Native Apps in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "mobile",
+        "upgrade",
+        "localization",
+        "native"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/799",
+      "summary": "This update introduces a version gate for the native iOS and Android applications, enhancing user experience during app startup. Depending on the installed version, users may encounter a hard block or a soft prompt to update, ensuring they are always using a supported version. The implementation includes new logic for version comparison and localized messages for various languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#337",
+      "title": "Documentation sync for overview updates in M C Ps 📚",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "documentation",
+        "sync",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/337",
+      "summary": "This update reflects a no-op sync triggered by upstream documentation changes for the `overview` service, including zh-CN translations and a DeepSeek navigation adjustment. As `overview` is a documentation-only service without an OpenAPI spec or corresponding MCP server, no code changes were necessary. The monorepo is now fully in sync with the latest documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#526",
+      "title": "Enhance Suno Docs with Parameter Ranges in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "suno",
+        "openapi",
+        "backend",
+        "parameters"
+      ],
+      "public": false,
+      "summary": "This update improves the documentation for the Suno provider by clearly defining the valid ranges for the parameters `weirdness`, `style_influence`, and `audio_weight` as 0-1. The changes include updated descriptions in both English and Chinese documentation, as well as modifications to the OpenAPI schema to enforce these constraints. This ensures that SDK/UI integrators, including our Nexior frontend, can avoid validation errors when using these parameters."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#798",
+      "title": "Scale Advanced Sliders to 0-1 for Suno and Producer in Nexior 🎛️",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "i18n",
+        "suno",
+        "producer"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/798",
+      "summary": "This update adjusts the advanced sliders for 'weirdness', 'style influence', and 'audio weight' in the Suno and Producer panels to a range of 0-1, aligning with the upstream API requirements. A migration script has been added to correct any persisted values greater than 1, ensuring a smooth transition for existing users. Additionally, all internationalization descriptions have been updated to reflect the new range."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#529",
+      "title": "New mobile app version endpoint added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "mobile",
+        "feature",
+        "backend",
+        "nexior"
+      ],
+      "public": false,
+      "summary": "We've introduced a new public endpoint, `GET /api/v1/app-version/`, which allows mobile clients to check for the latest and minimum supported app versions. This feature is crucial for managing client upgrades and ensuring compatibility with backend changes. The endpoint is unauthenticated and can be easily configured via environment variables."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#31",
+      "title": "Fix .env loading to ensure API_TOKEN availability in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "configuration",
+        "security",
+        "wisdom"
+      ],
+      "public": false,
+      "summary": "This update modifies the configuration to load the `.env` file from the install root instead of the current working directory. This change ensures that the `API_TOKEN` is correctly read regardless of how the Wisdom application is launched, preventing bearer authentication from being disabled. This fix is crucial for the upcoming migration that renames the auto-provisioned key, enhancing security for tenant CVMs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#527",
+      "title": "Update wisdom deployment and fix API token issue in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "deployment",
+        "auth",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This update introduces a new migration that swaps the wisdom service deployment to the `img-eyraq5nz` image, which includes WeChat pre-installed and system Python 3.11. Additionally, the environment variable name has been corrected from `WISDOM_API_TOKEN` to `API_TOKEN`, resolving a silent authentication bug that affected bearer auth on tenant CVMs. These changes enhance the deployment process and ensure proper authentication functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#30",
+      "title": "Enhance Windows Autostart for Seamless Boot in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "windows",
+        "autostart",
+        "deployment",
+        "system",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update modifies the Windows autostart command in `run.ps1` to trigger at system boot rather than user logon. By using `/SC ONSTART` and running as `NT AUTHORITY\\SYSTEM`, the task ensures that Wisdom starts automatically without requiring user login, enhancing deployment efficiency. Additionally, a `/Query` example has been included for easier task inspection."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#29",
+      "title": "Streamline Windows Deployment by Using System Python Directly in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "refactor",
+        "windows",
+        "python",
+        "deployment",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update refactors the Windows deployment process by eliminating the creation of a virtual environment, which previously added unnecessary overhead. Now, dependencies are installed directly using the system Python 3.11, reducing boot time and simplifying the installation phase. The changes enhance efficiency and clarity for users running the deployment script."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#155",
+      "title": "Restore Python 3.8 Compatibility in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "python",
+        "compatibility",
+        "backend",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update adds a future import to the auth module, ensuring compatibility with Python 3.8 by preventing the evaluation of PEP 604 union types at import time. The change addresses a critical issue that caused deployment failures and ensures that future rollouts of the auth-backend will proceed smoothly. All tests remain unaffected, maintaining stability in production."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#28",
       "title": "Fix Windows PowerShell 5.1 parsing in deploy script and ASCII compatibility 🛠️ in Wisdom 🛠️",
       "tags": [
