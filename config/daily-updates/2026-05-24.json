@@ -3,6 +3,290 @@
   "date": "2026-05-24",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#34",
+      "title": "Streamline runner by removing unnecessary flag in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "refactor",
+        "performance",
+        "windows",
+        "script"
+      ],
+      "public": false,
+      "summary": "This update refactors the `run.ps1` script by eliminating the `-SkipBootstrap` flag, simplifying the boot process. The runner will now always execute the full flow, ensuring that new code changes are applied without the need for re-baking the image. This change enhances efficiency and maintains the public interface, while also keeping essential functions from previous updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#161",
+      "title": "Hotfixes oversized JWT token storage to restore admin logins in Backend 🚑",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "auth",
+        "hotfix",
+        "jwt",
+        "django",
+        "postgresql",
+        "login"
+      ],
+      "public": false,
+      "summary": "This update fixes a production login outage caused by JWT access and refresh tokens exceeding the legacy 3000-character database limit after expanded permission codenames increased token size. The AuthToken model now stores tokens as TextField values, removing the artificial cap without changing API behavior or authentication flows. A lightweight Django migration updates the schema safely on PostgreSQL and prevents future regressions as permission counts grow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#60",
+      "title": "Cleaned Up Broken AI Crawler References and Dead Assets in Docs 🧹",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "docs",
+        "cleanup",
+        "llms",
+        "dead-links",
+        "mintlify",
+        "validation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/60",
+      "summary": "Removed stale and fabricated entries from llms.txt and llms-full.txt after earlier content deletions left dozens of broken URLs behind. The update also deletes an unused api-key-bridge.js asset that was no longer referenced anywhere in the docs configuration. All remaining URLs were validated against existing .mdx files, bringing both crawler-facing indexes to zero broken links and improving documentation integrity for AI search tools and developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#160",
+      "title": "Completed the catalog-to-directory rename in Backend 🧹",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "refactor",
+        "migration",
+        "connectors",
+        "skills",
+        "urls",
+        "tests"
+      ],
+      "public": false,
+      "summary": "Renamed legacy catalog models, tables, modules, serializers, views, commands, and URLs to resource-typed Connector, Skill, and UserSkill names. Removed backward-compatible alias routes and serializer dual-fields, with a single reversible migration backfilling user skill sources from catalog to installed. Tests were updated around the new names and canonical paths, with obsolete alias and dual-field coverage removed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#59",
+      "title": "Standardize Chinese Locale Folders in Docs 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "localization",
+        "documentation",
+        "i18n",
+        "chinese",
+        "standardization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/59",
+      "summary": "This update normalizes the Chinese locale folders to align with Mintlify's BCP-47 standards. The previous 'cn' folder is now 'zh-Hans', and 'zh-TW' has been renamed to 'zh-Hant'. All relevant content has been moved into their respective folders, ensuring consistency across the documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#807",
+      "title": "Prepared the 3.35.3 mobile release rollout in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "release",
+        "mobile",
+        "ios",
+        "android",
+        "version-bump",
+        "testflight"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/807",
+      "summary": "Updated Nexior to version 3.35.3 across package metadata and regenerated the lockfile for release consistency. The release shell now aligns iOS and Android version identifiers with the live 3.35.3 web bundle, preparing builds for TestFlight and the Play internal track. This keeps native release pipelines synchronized ahead of deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#33",
+      "title": "Windows startup now finds preinstalled Python and skips unnecessary setup in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "windows",
+        "startup",
+        "python",
+        "bootstrap",
+        "autostart"
+      ],
+      "public": false,
+      "summary": "Updated the Windows runner to detect preinstalled Python from common install locations before attempting any downloads, preventing startup hangs on baked images. Added readiness checks for Wisdom and its dependencies plus a SkipBootstrap mode that can launch directly when the environment is already prepared. This speeds up autostart on pre-baked Windows images while preserving existing bootstrap behavior for fresh installations and development environments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#32",
+      "title": "Enhance API Security with Token Requirement in Wisdom 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "security",
+        "api",
+        "authentication",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update enforces API token authentication for all `/api/*` routes when the `API_TOKEN` environment variable is set. The implementation includes support for both Bearer token headers and query parameters, ensuring secure access to the API. Additionally, new tests have been added to validate the authentication mechanism."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#805",
+      "title": "Enhance OTA Upload Speed with Global Acceleration in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "ota",
+        "performance",
+        "upload",
+        "tencent"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/805",
+      "summary": "This update implements the COS global acceleration endpoint to improve upload speeds from GitHub Actions to the ap-beijing region. By routing uploads through Tencent's global edge, we significantly reduce timeout issues, enhancing the reliability of the publish-ota process. The necessary changes have been made to the client configuration and a new patch file has been added."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#801",
+      "title": "Refactor consent handling with new connector identifiers in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "consent",
+        "connector",
+        "backend",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/801",
+      "summary": "This update refactors the consent handling to use the new `connector_identifier` and updates the related URL paths to `/connectors/`. Key changes include modifications to the `ConnectorConsentCard` and `connectorCatalogCache` to support both the new and legacy identifiers during the transition. The implementation ensures backward compatibility while preparing for future cleanup in AuthBackend."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#1",
+      "title": "Shared types updated for connector and skill identifier rollout in Common Frontend 🔄",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "types",
+        "refactor",
+        "connectors",
+        "skills",
+        "backward-compatibility",
+        "api"
+      ],
+      "public": false,
+      "summary": "Shared frontend types now support the platform-wide catalog-to-connector/skill rename rollout by introducing canonical `connector_identifier` and `skill_identifier` fields alongside deprecated `catalog_identifier` aliases. The update also refreshes connector catalog documentation to reference the new `/connectors/` API alias while preserving compatibility with legacy endpoints. These are type-only changes with no runtime behavior impact, allowing downstream clients to safely migrate during the staged backend rollout."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#131",
+      "title": "Connector & Skill Identifier Rollout Lands in Frontend Web 🔄",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "typescript",
+        "connections",
+        "connectors",
+        "backward-compatibility",
+        "rollout"
+      ],
+      "public": false,
+      "summary": "Updated connection and skill operator types to adopt the new canonical `connector_identifier` and `skill_identifier` fields while preserving backward compatibility with legacy `catalog_identifier` aliases. The Connections view now safely joins against either backend schema version, keeping connector metadata and permissions rendering stable throughout the staged rollout. Documentation comments and API references were also refreshed to align with the new `/connectors/` naming."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#934",
+      "title": "Connector Identifier Rollout Lands Across AI Chat Connection Flows in Platform Service 🔄",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "connectors",
+        "backward-compatibility",
+        "aichat2",
+        "authbackend",
+        "refactor",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update completes the Stage 2 client-side migration from `catalog_identifier` to `connector_identifier` across AI chat connection handling, prompts, credential flows, and connector status checks. Matching logic now prioritizes the new field while preserving backward compatibility with legacy payloads during the rollout window. Tests were updated to validate both canonical and fallback paths, helping ensure safe deployment alongside the AuthBackend transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#159",
+      "title": "Refactor Connections: Rename Catalog Identifiers and Introduce New URL Aliases in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "refactor",
+        "backend",
+        "urls",
+        "compatibility",
+        "migrations"
+      ],
+      "public": false,
+      "summary": "This PR marks the first stage of a refactor to eliminate 'catalog' references in the AuthBackend. Key changes include renaming `catalog_identifier` columns to `connector_identifier` and `skill_identifier`, along with the introduction of new URL aliases for connectors and installed skills. Backwards compatibility is maintained through read-only aliases and dual-write mechanisms to ensure seamless integration for existing frontends."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#325",
+      "title": "Verified OpenAI MCP stays fully aligned with latest API docs in M C Ps ✅",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "openai",
+        "mcp",
+        "openapi",
+        "parity",
+        "schema",
+        "verification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/325",
+      "summary": "This update audited the openai MCP server against the latest OpenAPI documentation and confirmed full parity across supported endpoints, model enums, and request schema coverage. Checks covered chat completions, embeddings, image generation and edits, responses, and tasks APIs. No functional drift or missing schema mappings were identified, so no code changes were required."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#58",
+      "title": "Decoupling Docs from PlatformBackend & Revamping Structure in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "docs",
+        "update",
+        "architecture",
+        "content",
+        "sync"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/58",
+      "summary": "This update successfully disconnects the Mintlify documentation site from the PlatformBackend sync, allowing for direct edits within the repository. It also introduces a restructured information architecture, enhancing user navigation with new tabs for Pricing, FAQ, and About, while adding several new pages to improve content accessibility and coherence."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#334",
+      "title": "Documentation sync for overview updates in M C Ps 📚",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "documentation",
+        "sync",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/334",
+      "summary": "This update addresses a sync issue triggered by changes flagged in the upstream documentation for the 'overview' section. Since there are no corresponding MCP servers or relevant entries in this monorepo, the changes are purely documentation-related, such as navigation adjustments. No code changes were necessary as the repository remains in sync."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#806",
       "title": "Fix(mobile): add top safe-area padding so content clears iOS Dynamic Island / Android status bar in Nexior 🐛",
       "tags": [
