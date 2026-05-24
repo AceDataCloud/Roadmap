@@ -3,6 +3,233 @@
   "date": "2026-05-24",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#147",
+      "title": "Optimize Replica Count and HPA for Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "k8s",
+        "hpa",
+        "optimization",
+        "gateway",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update reduces the baseline replicas from 20 to 5 in the deployment configuration, allowing for more efficient resource usage. Additionally, a new Horizontal Pod Autoscaler (HPA) configuration has been added to manage scaling dynamically, enabling the system to handle bursts up to 40 replicas when needed. These changes aim to improve performance while saving CPU and memory resources."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#33",
+      "title": "Optimize CPU Requests for Pay Backend in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "optimization",
+        "k8s",
+        "cpu",
+        "pay-backend",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "The CPU request for the `pay-backend` service has been reduced from 200m to 50m, aligning better with actual usage of ~3 mcore/pod. This change saves 300m of CPU requests while keeping memory settings unchanged. The overall impact is low risk, as the CPU limit remains at 1 core, allowing for burst handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WebExtrator#14",
+      "title": "Optimize CPU Requests for WebExtrator in Web Extrator 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WebExtrator",
+        "k8s",
+        "optimization",
+        "cpu",
+        "resources",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update reduces the CPU requests for both the webextrator-api and webextrator-worker deployments based on actual usage metrics. The api's request has been decreased from 250m to 50m, and the worker's from 100m to 50m, leading to a total saving of approximately 400m CPU requests. Memory limits remain unchanged, ensuring stability while optimizing resource usage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#351",
+      "title": "Optimized CPU Requests for MCP Services in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "optimization",
+        "kubernetes",
+        "mcp",
+        "resources",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/351",
+      "summary": "This update reduces the CPU requests for all 15 MCP services from 100m to 30m, aligning with observed usage patterns and Kubernetes recommendations. The change results in a significant saving of 1050m in total CPU requests, freeing up resources for other workloads. The limits remain unchanged, ensuring that services can still handle traffic spikes effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#36",
+      "title": "Fixed COS CDN Cache Headers for Faster Rollouts in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "cdn",
+        "cache-control",
+        "cos",
+        "deployment",
+        "release",
+        "tencent-cloud"
+      ],
+      "public": false,
+      "summary": "Updated the COS publishing flow to apply explicit Cache-Control headers for deployment artifacts. Rolling `*-latest.zip` builds now refresh at CDN edges within minutes, while immutable versioned archives are cached aggressively for long-term efficiency. The release pipeline also logs applied cache headers and includes cache metadata in the generated manifest to simplify future debugging and verification."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#539",
+      "title": "Enhance Seedance MCP Documentation with Real Test Insights in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "seedance",
+        "claudeai",
+        "backend",
+        "promotion"
+      ],
+      "public": false,
+      "summary": "This update introduces a new promotional article in Chinese for using Seedance MCP with Claude.ai Web, featuring a hands-on end-to-end test. Key additions include a detailed connector flow, a comprehensive tool list, and a real test showcasing video generation capabilities. The article is designed to guide users through the process with screenshots and FAQs for better understanding."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#538",
+      "title": "Enhance Luma MCP with Claude.ai Integration in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "luma",
+        "claude",
+        "integration",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new documentation article detailing the integration of Luma MCP with Claude.ai, showcasing a real end-to-end test. Key features include the addition of Luma as a custom connector via OAuth and confirmation of all eight tools available. A live query demonstrated Luma's capabilities, generating a video in approximately 99 seconds, with the result now accessible online."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#537",
+      "title": "Enhance Claude.ai with Veo MCP for Seamless Video Generation in Backend 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "veo",
+        "claude",
+        "integration",
+        "video"
+      ],
+      "public": false,
+      "summary": "This update introduces a new documentation article detailing the integration of Veo MCP with Claude.ai, showcasing a real end-to-end test. Key features include the addition of various tools for video generation and the successful execution of a query that produced a 1080p video in approximately 92 seconds. Screenshots and a video link are provided for reference."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#536",
+      "title": "Revamped Claude.ai ShortURL Guide in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "shorturl",
+        "claudeai",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "The documentation for the ShortURL MCP has been completely rewritten based on a real end-to-end test with Claude.ai. Key updates include the addition of a custom connector via OAuth and confirmation of four essential tools. The article now features a structured template and includes live session screenshots demonstrating the functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#535",
+      "title": "Claude.ai Serp MCP guide rebuilt around live end-to-end testing in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "claude",
+        "mcp",
+        "serp",
+        "oauth",
+        "testing"
+      ],
+      "public": false,
+      "summary": "Reworked the Chinese Serp MCP promotion article using a fully verified Claude.ai web workflow instead of placeholder-style examples. The update documents connector setup, OAuth authorization, all 11 exposed tools, and a real Google search query executed through Claude with validated news results. The article structure was also standardized into a clearer step-by-step format with screenshots and reproducible instructions for live testing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#534",
+      "title": "Enhance Seedream MCP Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "seedream",
+        "claudeai",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive guide on using Seedream MCP within Claude.ai, featuring a real end-to-end test. The documentation includes detailed steps from setup to generating images with specific prompts, showcasing the integration's capabilities. Key changes include the addition of a new markdown file that provides insights and screenshots of the process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#533",
+      "title": "Enhance NanoBanana Integration with Claude.ai in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "integration",
+        "nanobanana",
+        "claudeai",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive guide on using NanoBanana MCP within Claude.ai, featuring a real end-to-end test. The documentation includes detailed steps, screenshots, and a successful image generation prompt, showcasing the seamless integration and performance of the service. Users can now easily generate images directly from Claude.ai, enhancing their creative workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#532",
+      "title": "Enhance Midjourney Integration with Claude.ai Walkthrough in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "midjourney",
+        "claudeai",
+        "backend",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive guide on using Midjourney MCP within Claude.ai, documented in a new article. The walkthrough details the entire process from setup to generating high-quality images, showcasing a successful test that produced a 2×2 grid image. Key features include automatic prompt handling and image generation, enhancing user experience significantly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#531",
+      "title": "Revamp of Suno × Claude Article with Real Testing in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "update",
+        "suno",
+        "claude",
+        "backend"
+      ],
+      "public": false,
+      "summary": "The Suno × Claude article has been completely rewritten to include a real end-to-end walkthrough of the integration process on Claude.ai. Key updates include new URLs, a detailed description of the tool permissions, and a disclaimer about the temporary nature of generated audio links. Enhanced screenshots have also been added to provide a clearer understanding of the user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#808",
       "title": "Clean up legacy catalog_identifier in Nexior 🔧",
       "tags": [
