@@ -1,0 +1,156 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-05-24",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#28",
+      "title": "Fix Windows PowerShell 5.1 parsing in deploy script and ASCII compatibility 🛠️ in Wisdom 🛠️",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "windows",
+        "powershell",
+        "deploy",
+        "encoding",
+        "compatibility"
+      ],
+      "public": false,
+      "summary": "This update resolves a PowerShell 5.1 parsing failure caused by Unicode dashes being misread under non-UTF-8 code pages. The script is now fully ASCII to ensure consistent parsing across Windows environments, including fresh installations. It also improves safety by renaming a shadowed automatic variable and adding a TLS 1.2 fallback for older .NET setups."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#933",
+      "title": "Unified OAuth Connection Naming Across Worker Flows in Platform Service 🔄",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "oauth",
+        "worker",
+        "refactor",
+        "mcp",
+        "auth",
+        "compatibility"
+      ],
+      "public": false,
+      "summary": "Updated worker-side connection and auth-mode vocabulary to align with AuthBackend and AuthFrontend, replacing legacy values with oauth_dcr, oauth_static, byoc, and public. Implicit connection handling now routes through public, while MCP and OAuth logic were updated to recognize the new identifiers consistently. Test fixtures and validation coverage were refreshed to match the renamed models, with all TypeScript checks and test suites passing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#130",
+      "title": "Align OAuth connection modes with AuthBackend vocabulary in Frontend Web 🔄",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "oauth",
+        "frontend",
+        "refactor",
+        "auth",
+        "typescript",
+        "vue"
+      ],
+      "public": false,
+      "summary": "Updated AuthFrontend to use the same shared connection-kind and auth-mode values as AuthBackend and aichat2-worker. The refactor replaces legacy values like `custom_oauth` and `oauth_preset` with `oauth_dcr`, `oauth_static`, `byoc`, and `public`, while removing `acedata_token` entirely. Connection filtering logic, inline auth handling, and related UI comments were refreshed to match the new platform-wide naming scheme. TypeScript and ESLint validation both completed cleanly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#158",
+      "title": "Unified OAuth and Connection Modes Across Install Flows in Backend 🔄",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "migration",
+        "connectors",
+        "auth",
+        "refactor",
+        "backend"
+      ],
+      "public": false,
+      "summary": "Standardized connection and connector auth enums around a shared vocabulary: oauth_dcr, oauth_static, byoc, and public, while removing the unused acedata_token path. Updated install flows, adapters, serializers, seeds, migrations, and tests to align with the new model and renamed the custom OAuth adapter stack to oauth_dcr. The migration safely remaps existing connection data and ensures downstream services can rely on consistent auth mode semantics during authorization and install handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#27",
+      "title": "Collapsed Windows Bootstrap Into One Re-runnable Script in Wisdom ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "windows",
+        "deployment",
+        "powershell",
+        "bootstrap",
+        "automation",
+        "devops"
+      ],
+      "public": false,
+      "summary": "The Windows deployment flow was simplified into a single `run.ps1` entrypoint that installs Python if needed, downloads the latest release, preserves existing `.env` files, sets up dependencies, and launches Wisdom directly. Legacy bootstrap wrappers, scheduled-task registration logic, marker files, and README instructions were removed to reduce operational complexity. The new approach is deterministic and re-runnable, with autostart setup now handled separately through an explicit one-time `schtasks` command."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#362",
+      "title": "URL-Driven Auth App Gating Lands in Frontend Web 🚦",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "feature-flags",
+        "authorization",
+        "vue",
+        "beta-rollout"
+      ],
+      "public": false,
+      "summary": "Application Authorization UI access now uses the sticky `?features=authapp` URL flag instead of relying on backend config checks. The update wires both the application list and authorization views into the shared frontend feature-flag utility, matching the existing `sites` rollout behavior with cookie persistence and opt-in controls. Backend authorization enforcement remains unchanged, while the frontend gains safer beta rollout and rollback flexibility without requiring redeploys."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#26",
+      "title": "Windows bootstrap automation lands for custom image deployments in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "windows",
+        "deployment",
+        "bootstrap",
+        "cloudbase-init",
+        "autostart",
+        "powershell"
+      ],
+      "public": false,
+      "summary": "Added a new Windows deployment bootstrap flow for custom images that downloads the latest Wisdom release from the CDN, installs it to C:\\\\wisdom, configures autostart, and launches the service automatically. The new PowerShell and batch bootstrap scripts support idempotent reruns, scheduled task self-healing, detailed bootstrap logging, and cloudbase-init integration. The flow also preserves externally provided .env configuration values, ensuring existing deployment token and environment precedence behavior remains intact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#25",
+      "title": "Windows One-Click Release Setup Lands in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "windows",
+        "release",
+        "installer",
+        "powershell",
+        "packaging",
+        "docs"
+      ],
+      "public": false,
+      "summary": "Added a full Windows-friendly install and launch flow for the Wisdom release zip, including new PowerShell scripts and double-clickable .bat shims for install, start, and stop operations. The release packaging workflow now ships all required scripts, configs, and helper files so end users can set up a local .venv and launch the server without manual CLI steps. README documentation was expanded with a guided quick-start flow for downloading, installing, and running Wisdom on Windows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#361",
+      "title": "Application Authorization UI Opens Up for All Users in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "feature-flags",
+        "authorization",
+        "vue",
+        "access-control"
+      ],
+      "public": false,
+      "summary": "The Application Authorization UI is now available to all users whenever the backend ENABLE_APPLICATION_AUTHORIZATION feature flag is enabled. This removes the previous superuser-only restriction so grantees can access the “Authorized to Me” tab and discover shared applications. Existing backend feature-flag gating and API-level access enforcement remain unchanged."
+    }
+  ]
+}
