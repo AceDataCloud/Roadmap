@@ -3,6 +3,320 @@
   "date": "2026-05-24",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#810",
+      "title": "Enhance Credential Handling in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "backend",
+        "authorization",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/810",
+      "summary": "This update introduces support for consuming Credential-as-Authorization grants from the backend, allowing Nexior to display shared applications without claiming ownership. Key changes include the addition of a 'Shared' badge in the UI and modifications to application loading logic to include granted apps. The implementation is backward-compatible, ensuring existing functionalities remain intact until the backend is fully deployed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#364",
+      "title": "Revamped Credential Authorization UI in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "ui",
+        "authorization",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces the Credential-as-Authorization feature, enhancing the application authorization user experience. Users can now opt-in to receive real credentials instead of the legacy quota-based model through a new feature flag. Key changes include a redesigned authorization interface and improved credential management functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#148",
+      "title": "Enhance ApiUsage with actor_user_id in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "api",
+        "usage",
+        "gateway",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces the `actor_user_id` field to the `ApiUsage` model, allowing for more efficient tracking of API calls made by grantees. The new field is indexed and ensures that grantees can easily retrieve their usage data without scanning the entire metadata. Additionally, the implementation includes thorough tests to validate the new functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#149",
+      "title": "Enhance Feature Flag Handling in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "gateway",
+        "performance",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a read-only mirror of the FeatureFlag model in the Gateway, allowing for efficient request-path gating without service boundary crossings. Key additions include async cached lookups and feature flag evaluation helpers, which ensure consistent flag behavior across services. Comprehensive tests have been added to validate the new functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#542",
+      "title": "Streamlined Autologon for Wisdom CVM in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "cvm",
+        "autologon",
+        "deployment",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update integrates an autologon feature into the CVM provisioner, ensuring that new Wisdom CVMs boot directly into a functional state without manual intervention. Key changes include the removal of legacy tasks and the introduction of a new scheduled task that runs with the highest privileges, enhancing the user experience and operational efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#939",
+      "title": "Enhance User Consent Handling and Skill Loader in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "user-consent",
+        "skill-loader",
+        "enhancement",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update refines the handling of user consent for connected connectors by preventing unnecessary calls to `request_user_consent`, thus improving efficiency. Additionally, the skill loader now accepts namespaced slugs, allowing for better compatibility with future bundled skills. These changes enhance the overall functionality and user experience within the Platform Service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#164",
+      "title": "Fix namespaced slug emission for active skills in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "backend",
+        "skills",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update ensures that the `/internal/v1/skills/active` endpoint returns the namespaced identifier for skills installed from the public catalog, resolving issues with the `load_skill` function. The `UserSkill.skill_identifier` is now serialized as `slug` when available, allowing for successful matches with required skills. A new test has been added to verify this functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#545",
+      "title": "Resolve Duplicate Migration Leaves in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "migrations",
+        "backend",
+        "fix",
+        "conflict"
+      ],
+      "public": false,
+      "summary": "This update merges two conflicting migration files created for the 0152 leaf-node issue. A new migration file, 0154_merge_duplicate_0153_leaves, has been added to flatten the graph and resolve the conflict. This ensures smooth production rollout and prevents further errors related to conflicting migrations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#544",
+      "title": "Resolve migration conflict for feature flags and user IDs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "migration",
+        "backend",
+        "django",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces a no-op merge migration to resolve a conflict between two migrations, `0152_featureflag` and `0152_actor_user_id`, which both depend on the same previous migration. The new migration ensures that the deployment can proceed without issues, as it touches disjoint schema elements and avoids any data migration risks. The rollout will unblock the current deployment process and stabilize the cluster."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#365",
+      "title": "Automated i18n Updates for Multiple Languages in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "localization",
+        "frontend",
+        "translations",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces automated translation updates for the i18n files from the zh-CN source. Key changes include the addition of new flag files and modifications to existing console files across various languages such as Arabic, German, Spanish, French, Italian, Japanese, Korean, Portuguese, Russian, and Traditional Chinese. This enhancement improves localization support and ensures a more inclusive user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#543",
+      "title": "Resolve migration conflicts with a merge in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "migration",
+        "backend",
+        "fix",
+        "database"
+      ],
+      "public": false,
+      "summary": "This update introduces a no-op merge migration to resolve conflicts caused by two parallel migrations, `0152_actor_user_id` and `0152_featureflag`. The merge ensures that the migration graph has a single leaf, allowing the `check-pr` workflow to pass and restoring the new replicaset to a running state. This change will also create the necessary columns in production, ensuring smooth operation moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#938",
+      "title": "Fix AuthBackend Endpoint for Aichat2 in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "aichat2",
+        "authbackend",
+        "production",
+        "consent"
+      ],
+      "public": false,
+      "summary": "This update corrects the endpoint path for the AuthBackend catalog in the Aichat2 worker, resolving a persistent 404 error in production. The change ensures that the worker can successfully fetch the connector catalog, allowing the consent flow to function properly. Local tests confirm that the worker now receives the expected data structure, enhancing the user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#363",
+      "title": "Empower Admins with Feature Flags Console in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "admin",
+        "ui",
+        "console",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new superuser-only console page for managing feature flags at `/console/admin/feature-flags`. Key features include a real-time rollout slider, scorecard comparisons for on/off cohorts, and evaluation tools for user targeting. The implementation enhances control over feature rollouts, improving the overall user experience and backend integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#38",
+      "title": "Update autostart recommendation for Windows in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "documentation",
+        "windows",
+        "autostart",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update refreshes the documentation in `deploy/windows/run.ps1` to recommend using the ONLOGON/Administrator autostart method instead of the previous SYSTEM/ONSTART approach. The change addresses issues with GUI applications running in session 0, ensuring that WeChat and other applications function correctly by launching in an interactive session. The legacy method remains commented out for reference, while the new documentation highlights potential task cache bugs and links to related resources."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#540",
+      "title": "Streamlined Credential Authorization Process in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "authorization",
+        "api",
+        "backend",
+        "credentials"
+      ],
+      "public": false,
+      "summary": "This update introduces Phase 1 of the Credential-as-Authorization redesign, simplifying the authorization model by allowing application owners to mint credentials directly for grantees. Key changes include the addition of `actor_user_id` for tracking API usage by grantees, and new endpoints for managing credentials and applications. Legacy authorization methods remain intact for compatibility during the transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#541",
+      "title": "Introducing a Dynamic Feature Flag System in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature-flag",
+        "backend",
+        "deployment",
+        "admin",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces a robust database-backed feature flag system to the PlatformBackend, allowing for percentage-based rollouts and kill switches without redeploying code. Key features include a new `FeatureFlag` model, an enhanced `/api/v1/config/` endpoint, and a Django admin interface for real-time flag management. This implementation ensures safer deployments and greater flexibility for operators managing feature access."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#937",
+      "title": "Enhance Consent Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "consent",
+        "aichat2",
+        "platform-service",
+        "defensive",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `consentGating` helper to prevent unauthorized skill and MCP server loads in the Platform Service. It ensures that if a requested skill or connector is unconnected, the system will return a structured error and prompt the model to request user consent instead of proceeding with the operation. This change addresses a critical regression identified in previous deployments and enhances overall system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#809",
+      "title": "Refactor consent tool naming for clarity in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "chat",
+        "consent",
+        "frontend",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/809",
+      "summary": "This update renames the consent tool from `get_connector_status` to `request_user_consent` across the frontend, aligning with changes made in the PlatformService. Key components such as Message.vue and consentReturn.ts have been updated to reflect this new naming convention. While the wire shape remains unchanged, historic conversations may not match the new tool name, which is an acceptable trade-off for improved clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#936",
+      "title": "Refactor consent handling for connectors in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "consent",
+        "connectors",
+        "rules",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update renames the `get_connector_status` function to `request_user_consent`, clarifying its purpose to demand user consent rather than simply checking status. The fast path for already-connected capabilities has been removed, ensuring that misuse errors are returned when consent is not properly requested. Additionally, the RULES block has been rewritten to enforce clearer guidelines for connector usage, enhancing overall system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#37",
+      "title": "Fix QR Code Rendering Issue in Wisdom 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "frontend",
+        "qr-code",
+        "login"
+      ],
+      "public": false,
+      "summary": "This update resolves a bug where the login screen displayed a broken image for the QR code due to missing the `data:image/png;base64,` prefix in the base64 string. The fix ensures that the QR code is correctly rendered by adding the necessary prefix and escaping HTML. This change improves the user experience by enabling WeChat scan-to-login functionality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformGateway#147",
       "title": "Optimize Replica Count and HPA for Gateway 🚀",
       "tags": [
