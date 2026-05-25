@@ -3,6 +3,55 @@
   "date": "2026-05-25",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#945",
+      "title": "Kept Async Tool Polling Alive with Smarter Deduping in Platform Service ⚙️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "async-tools",
+        "polling",
+        "deduplication",
+        "orchestrator",
+        "llm",
+        "testing"
+      ],
+      "public": false,
+      "summary": "Updated the orchestrator and prompt guidance so async tool workflows continue polling until work actually completes instead of stopping after placeholder status messages. The duplicate-call detector now fingerprints tool output alongside inputs, allowing legitimate polling loops with changing results to proceed while still catching genuinely stuck calls. Added comprehensive tests covering repeated calls with evolving outputs and reinforced schema-agnostic handling so the system works across MCP and non-MCP tools alike."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#367",
+      "title": "Enhance Feature-Flag Admin UX in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ux",
+        "frontend",
+        "admin",
+        "i18n",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update refines the feature-flag admin page by addressing key UX issues identified during initial use. Improvements include adding an icon to the sidebar, reorganizing the header layout for better clarity, and enhancing the create/edit dialog with better spacing and guidance. Additionally, internationalization files have been updated to reflect these changes, ensuring a consistent experience across languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#352",
+      "title": "Enhance Polling Metadata for Media MCPs in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "feature",
+        "metadata",
+        "polling",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/352",
+      "summary": "This update introduces machine-readable polling envelope fields for 13 media MCPs, enabling orchestrators to reliably detect ongoing asynchronous generation. Key fields like `recommended_action`, `should_poll`, and `terminal_state_reached` have been added to improve task management without altering existing human-readable messages. This change is strictly additive, ensuring backward compatibility."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#548",
       "title": "Superuser role filters now behave correctly in Backend 🛠️",
       "tags": [
