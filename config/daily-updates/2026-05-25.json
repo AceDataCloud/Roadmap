@@ -1,0 +1,70 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-05-25",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#366",
+      "title": "Streamlined Authorization UI and Methods in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "cleanup",
+        "frontend",
+        "ui",
+        "authorization",
+        "refactor"
+      ],
+      "public": false,
+      "summary": "This update removes the legacy ApplicationAuthorization UI and associated operator methods as part of the credential-as-authorization cleanup. Key components, including the legacy authorize page and several outdated methods, have been eliminated, simplifying the codebase significantly. The changes enhance performance and maintainability by ensuring the new authorization path is always active in production."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#941",
+      "title": "Strengthen Anti-Paraphrase Rules in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "anti-paraphrase",
+        "connectors",
+        "rules",
+        "model-improvement",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update enhances the anti-paraphrase rules within the connectors block by adding three new clauses to improve model responses. Key changes include forbidding clarifying questions for unconnected connectors, specifying exact parameter shapes for loaders, and preventing the naming of unobserved tools. These adjustments aim to reduce hallucinations and ensure more accurate interactions across all models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#165",
+      "title": "Fix management command for skill synchronization in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "cronjob",
+        "skills",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where the management command for syncing skills was incorrectly referenced, causing scheduled jobs to fail. The command has been updated from `sync_skill_catalog` to `sync_skills`, ensuring that the public Skill catalog is refreshed correctly. This fix will restore the functionality of the CronJob and allow new skills to be reflected in the `public_skills` table."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#547",
+      "title": "Retired Legacy ApplicationAuthorization Flow in Backend 🧹",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "cleanup",
+        "django",
+        "credentials",
+        "migration",
+        "feature-flags"
+      ],
+      "public": false,
+      "summary": "Completed the backend cleanup for the credential-as-authorization migration by removing the legacy ApplicationAuthorization model, API views, serializers, routes, and feature flags. Added a migration to safely drop the unused authorization table after confirming production no longer contains active rows. Credential creation logic was simplified by removing the old authorization lookup path, reducing backend complexity and eliminating dead configuration paths."
+    }
+  ]
+}
