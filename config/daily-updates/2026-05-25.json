@@ -3,6 +3,23 @@
   "date": "2026-05-25",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#548",
+      "title": "Superuser role filters now behave correctly in Backend 🛠️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "django",
+        "permissions",
+        "regression",
+        "testing",
+        "hotfix"
+      ],
+      "public": false,
+      "summary": "Fixed an applications query bug where superusers using role-based filters could unintentionally retrieve the entire applications table instead of scoped results. The update now honors `role=granted`, `role=owner`, and `include_granted` for all authenticated users while preserving unrestricted admin access when no role filter is provided. Added a dedicated regression test suite covering superuser and regular-user behavior to prevent future filter bypass issues."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#944",
       "title": "Fix(aichat2): preserve pending_consent_request on resume so the resolved consent card renders in Platform Service 🐛",
       "tags": [
