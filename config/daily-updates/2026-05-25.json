@@ -3,6 +3,23 @@
   "date": "2026-05-25",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#942",
+      "title": "Strengthens anti-hallucination guardrails for connector tool discovery in Platform Service 🛡️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "hallucination",
+        "prompting",
+        "connectors",
+        "regression-test",
+        "mcp",
+        "guardrails"
+      ],
+      "public": false,
+      "summary": "This update hardens RULE 9 to prevent models from inventing connector tool lists when users use prompts such as \"without calling anything,\" \"just tell me,\" or similar bypass framing. The connector instructions now explicitly state that tool catalogs exist only on the live server and require a loader call before enumeration. Test coverage was expanded with a new F-08 regression case, bringing the suite to 394 passing tests and reinforcing load-first behavior against fabricated responses."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#366",
       "title": "Streamlined Authorization UI and Methods in Frontend Web 🚀",
       "tags": [
