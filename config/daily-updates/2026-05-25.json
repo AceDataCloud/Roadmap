@@ -3,6 +3,70 @@
   "date": "2026-05-25",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#549",
+      "title": "Fix credential holder assignment for superusers in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "security",
+        "audit",
+        "tests",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where superusers inadvertently became the holders of credentials when acting on behalf of others. The changes include a new audit field to track the actual creator of the credential and adjustments to the view logic to ensure the correct application owner is assigned as the holder. Additionally, regression tests have been added to cover various scenarios and ensure the integrity of the fix."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#369",
+      "title": "Enhanced Dialog Padding for Better UI in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "frontend",
+        "design",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update increases the horizontal padding of feature-flag dialogs to 48px, addressing cramped appearances on real screens. The dialog widths have also been adjusted: create/edit dialogs from 680px to 760px, scorecard from 860px to 920px, and evaluate from 520px to 560px. These changes improve the overall user experience without altering TypeScript functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#946",
+      "title": "Enhance audio accessibility for mainland China users in Platform Service 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "audio",
+        "cdn",
+        "accessibility",
+        "fix",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces a new helper function to mirror audio files from the upstream service to our COS CDN, ensuring users in mainland China can reliably access generated audio. The `transferFishAudioToCos` function downloads audio from the upstream URL and uploads it to our CDN, providing a stable link for users. This change does not affect request shapes, billing, or error handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#368",
+      "title": "Enhance Feature Flags and Scorecard Design in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "feature-flag",
+        "scorecard",
+        "i18n",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update introduces a default enabled state for feature flags, improving admin usability. The dialog has been visually polished for better spacing and readability, while the scorecard has been redesigned to include significant statistical metrics, enhancing data interpretation for users. Additionally, internationalization support has been expanded with new keys and translations."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#945",
       "title": "Kept Async Tool Polling Alive with Smarter Deduping in Platform Service ⚙️",
       "tags": [
