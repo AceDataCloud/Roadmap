@@ -3,6 +3,39 @@
   "date": "2026-05-25",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#39",
+      "title": "Black-screen QR capture fallback fixed in Wisdom 🖥️",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "automation",
+        "windows",
+        "rdp",
+        "screenshots",
+        "testing",
+        "wechat"
+      ],
+      "public": false,
+      "summary": "The automation capture pipeline now detects silent all-black screenshots from ImageGrab in headless or non-interactive RDP sessions and automatically falls back to the more reliable PrintWindow path. The update adds coarse-grid blank image detection, debug logging for fallback events, and expanded tests covering black frames, valid captures, and QR-like patterns. This resolves production login failures where QR codes rendered as black PNGs on freshly provisioned cloud VMs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#943",
+      "title": "Enhance anti-narration rules for tool calls in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "rules",
+        "testing",
+        "aichat2",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces explicit anti-narration clauses to RULE 3 and RULE 9, preventing the model from narrating tool calls instead of executing them. Key changes include forbidding specific phrases that delay consent and loader calls, ensuring a more direct interaction with users. The implementation has been validated with new tests, achieving a perfect pass rate."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#942",
       "title": "Strengthens anti-hallucination guardrails for connector tool discovery in Platform Service 🛡️",
       "tags": [
