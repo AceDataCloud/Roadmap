@@ -1,0 +1,55 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-05-26",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#811",
+      "title": "Update OpenAI Image Labels for Clarity in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "localization",
+        "openai",
+        "ui",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/811",
+      "summary": "This update removes misleading tier labels from the size dropdown in the OpenAI Image module. The changes affect all 18 locales, ensuring that users see accurate descriptions without references to the outdated 1.5× billing rate. The actual billing remains unchanged at a flat rate of 0.11 credits per image, enhancing user understanding and experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#551",
+      "title": "Align gpt-image-2 Billing Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "billing",
+        "documentation",
+        "backend",
+        "gpt-image-2",
+        "openapi"
+      ],
+      "public": false,
+      "summary": "This update resolves inconsistencies in the billing documentation for the gpt-image-2 feature, ensuring that it accurately reflects a flat rate of 0.11 credits per image. Key changes include the removal of outdated tiered billing references in cost rules, OpenAPI specifications, and Chinese documentation. These adjustments enhance clarity for users and align the backend with the correct billing practices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#370",
+      "title": "Enhance Custom Branding Functionality in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "branding",
+        "frontend",
+        "updates",
+        "localization",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update introduces a shared branding utility that allows for dynamic site branding, replacing hardcoded brand text across various components. Key changes include updates to the homepage, footer, and structured data fields to reflect site-specific branding. Additionally, the API playground now showcases the active brand name, enhancing user experience and consistency."
+    }
+  ]
+}
