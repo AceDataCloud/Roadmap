@@ -3,6 +3,68 @@
   "date": "2026-05-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#553",
+      "title": "Cleanup of Deprecated GLM Models in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cleanup",
+        "backend",
+        "models",
+        "api",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update removes the deprecated GLM models: glm-4-flash, glm-4-air, glm-4.5-air, and glm-4-plus from the platform. Key changes include modifications to pricing rules, API visible models, service display pricing, OpenAPI enums, and documentation to reflect this cleanup. The remaining models continue to provide robust service without disruption."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#952",
+      "title": "Clean Up Deprecated GLM Models in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cleanup",
+        "glms",
+        "deprecation",
+        "platform",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update removes several deprecated GLM models that have been returning errors from the production provider. The models `glm-4-flash`, `glm-4-air`, `glm-4.5-air`, and `glm-4-plus` have been fully eliminated from the system. The cleanup enhances the efficiency of the checker and worker components by preventing requests to unreachable models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#379",
+      "title": "Update markdown-it to 14.2.0 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "update",
+        "markdown"
+      ],
+      "public": false,
+      "summary": "This update bumps the markdown-it library from version 14.1.1 to 14.2.0, introducing several improvements and fixes. Key changes include enhanced performance for smartquotes, better handling of HTML comment blocks, and improved recognition of unicode characters. These updates will enhance the overall functionality and performance of the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#951",
+      "title": "Enhanced gpt-image-2 provider deployments in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "deployment",
+        "scaling",
+        "stability",
+        "gpt-image-2"
+      ],
+      "public": false,
+      "summary": "This update increases the replicas for gpt-image-2 provider deployments from 2 to 8, enhancing burst capacity. Additionally, the liveness and readiness failure thresholds have been raised to 10, while maintaining a success threshold of 1. These changes aim to improve stability during transient upstream or network issues."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#371",
       "title": "Homepage Cleanup Removes Founding Team Section in Frontend Web 🧹",
       "tags": [
