@@ -3,6 +3,23 @@
   "date": "2026-05-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#371",
+      "title": "Homepage Cleanup Removes Founding Team Section in Frontend Web 🧹",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "homepage",
+        "cleanup",
+        "i18n",
+        "vue",
+        "scss"
+      ],
+      "public": false,
+      "summary": "The homepage was simplified by fully removing the Founding Team section, including its template markup, styling, social links, and contribution graph content. All related i18n entries were deleted across 12 locales, eliminating 192 unused translation keys and comments. Verification confirmed no remaining founder-related references in the frontend source, and all locale JSON files were validated successfully."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#947",
       "title": "Fixed upstream billing failures surfacing as retryable server errors in Platform Service 🚨",
       "tags": [
