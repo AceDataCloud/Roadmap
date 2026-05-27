@@ -1,0 +1,23 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-05-27",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#947",
+      "title": "Fixed upstream billing failures surfacing as retryable server errors in Platform Service 🚨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "mountsea",
+        "billing",
+        "api",
+        "alerts",
+        "reliability"
+      ],
+      "public": false,
+      "summary": "Updated Mountsea error handling to detect upstream credit exhaustion responses and map them from HTTP 400 to ApiError(500). The new shared billing-error detector now covers all major request and task failure paths, including nested object-form error payloads and multilingual balance messages. This ensures clients receive retryable server errors, restores 5xx alerting and pager visibility, and prevents upstream billing outages from appearing as user-side bad requests."
+    }
+  ]
+}
