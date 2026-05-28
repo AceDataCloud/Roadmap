@@ -3,6 +3,37 @@
   "date": "2026-05-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#953",
+      "title": "Enhance Gemini Flash Models with Pricing and Fallbacks in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "gemini",
+        "pricing",
+        "fallbacks",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update adds pricing and fallback configurations for three new Gemini flash models, addressing previous issues that caused 500 errors in production. The changes ensure that fallback models are now correctly defined and priced, improving the reliability of the service. Validation tests confirm that the new configurations load cleanly and pass all necessary checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#554",
+      "title": "Fix broken documentation links for services in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "fix",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update addresses broken links in the service introductions for the SERP, OpenAI, and Webextrator services. The links previously pointing to non-existent API routes have been replaced with correct documentation links, ensuring users can access the intended resources. A total of 115 substitutions were made across 37 files, enhancing the user experience and documentation accuracy."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#375",
       "title": "Chore(deps-dev): bump sass from 1.99.0 to 1.100.0 in Frontend Web 🔧",
       "tags": [
