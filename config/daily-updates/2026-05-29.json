@@ -3,6 +3,23 @@
   "date": "2026-05-29",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#819",
+      "title": "Streamline CI with Preflight Checks in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "automation",
+        "nexior",
+        "workflow",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/819",
+      "summary": "This update introduces a preflight job in both iOS and Android workflows that checks if the target version is already published on TestFlight or Play Console. If the version is found, the build job is skipped, saving time and avoiding confusion from duplicate errors. This enhancement allows operators to re-trigger workflows without unnecessary delays, improving overall efficiency."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#372",
       "title": "Vue Type Checking Upgrade Lands in Frontend Web ⚡",
       "tags": [
