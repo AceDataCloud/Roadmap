@@ -1,0 +1,23 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-05-29",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#372",
+      "title": "Vue Type Checking Upgrade Lands in Frontend Web ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "vue",
+        "typescript",
+        "tooling",
+        "dependencies",
+        "developer-experience"
+      ],
+      "public": false,
+      "summary": "Updated vue-tsc from 3.2.8 to 3.3.2 across the frontend toolchain dependencies. The upgrade brings improved Vue type inference for inline v-for sources, refined props completion behavior, and multiple fixes for template validation and VS Code integration. This keeps the development environment aligned with the latest Vue language tooling improvements and reduces false-positive editor and type-checking issues."
+    }
+  ]
+}
