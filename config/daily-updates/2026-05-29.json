@@ -3,6 +3,72 @@
   "date": "2026-05-29",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#823",
+      "title": "Fix App Icon Transparency Issue for App Store in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ios",
+        "appicon",
+        "fix",
+        "release"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/823",
+      "summary": "This update resolves the issue with the App Store Connect displaying an empty placeholder for the marketing icon. The AppIcon was previously saved with an alpha channel, which is not accepted by Apple. The icon has been flattened to opaque RGB, ensuring compliance with Apple's requirements and preventing future upload rejections."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#822",
+      "title": "Enhance iOS Sign In with Native Apple Authentication in Nexior 🍏",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ios",
+        "authentication",
+        "user-experience",
+        "native",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/822",
+      "summary": "This update replaces the web fallback for Sign in with Apple in the iOS app with a native authentication experience. By integrating the `@capacitor-community/apple-sign-in` plugin, users can now utilize Face ID or Touch ID for a smoother login process. The backend remains unchanged, ensuring seamless account continuity for existing users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#821",
+      "title": "Catch Up Version Bump to 3.251.0 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "release",
+        "version-bump",
+        "cleanup",
+        "changelog",
+        "npm"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/821",
+      "summary": "This PR updates the version of Nexior to 3.251.0, aligning the Git repository with the latest npm release. It also cleans up 92 stale change files, ensuring a smoother workflow for future releases. The changes include updates to the package files and the generation of a new changelog entry for the version bump."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#820",
+      "title": "Enhance Android Edge-to-Edge Support in Nexior 🌟",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "android",
+        "ui",
+        "bugfix",
+        "release"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/820",
+      "summary": "This update resolves two critical issues flagged by the Play Console for our latest release. We now enable edge-to-edge display by default for Android 15+ and replace deprecated APIs to ensure compatibility with the latest Android standards. These changes improve the app's visual presentation and user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#819",
       "title": "Streamline CI with Preflight Checks in Nexior 🚀",
       "tags": [
