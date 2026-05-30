@@ -3,6 +3,108 @@
   "date": "2026-05-30",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Dify#242",
+      "title": "Update Flux Models and Workflows in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "flux",
+        "update",
+        "models",
+        "workflows",
+        "dify"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/242",
+      "summary": "This update replaces the deprecated `flux-pro-1.1` and `flux-pro-1.1-ultra` models with the new Flux 2 family in the Dify tool plugin. All references in the workflow templates have been updated to ensure a smooth transition for existing users, preventing unexpected price changes. The final model lineup now includes seven options, enhancing the flexibility and capabilities of the tool."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#353",
+      "title": "Updated Flux model support for TTApi migration in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "flux",
+        "ttapi",
+        "models",
+        "documentation",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/353",
+      "summary": "Aligned the Flux model lineup with the TTApi backend by removing legacy flux-pro-1.1 variants and adding the Flux 2 family. Updated the core model type definitions, documentation, and model-selection guidance to reflect the new supported models. This keeps MCP configuration and examples consistent with the available backend offerings and avoids references to deprecated SKUs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#833",
+      "title": "Refresh Flux Model Options for TTApi Migration in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "flux",
+        "ttapi",
+        "model-picker",
+        "frontend",
+        "migration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/833",
+      "summary": "Updated the Flux model selector to align with the TTApi backend by removing the legacy flux-pro-1.1 variants and adding the Flux 2 family: flux-2-flex, flux-2-pro, and flux-2-max. The available lineup now reflects upstream-supported models while keeping flux-dev as the default. This ensures the UI matches current backend capabilities and avoids offering unsupported model options."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#556",
+      "title": "Revamp of Flux Images API with New TTApi Models in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "flux",
+        "api",
+        "backend",
+        "pricing",
+        "docs",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update realigns the public Flux Images API to the new TTApi, introducing a lineup of seven models with updated pricing. The endpoint structure remains unchanged, but the model enum and pricing have been revised to reflect the new offerings. Comprehensive tests have been conducted to ensure functionality and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#954",
+      "title": "Launch TTApi Flux Image Worker and Refresh Model Support in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "flux",
+        "ttapi",
+        "image-generation",
+        "image-editing",
+        "api",
+        "migration"
+      ],
+      "public": false,
+      "summary": "Added a new TTApi-backed /flux/images worker that supports both image generation and editing while preserving the existing response contract for downstream clients. The implementation handles job submission, completion polling, COS uploads, and public URL delivery, and introduces support for seven Flux models including the new Flux 2 lineup. Legacy and unsupported models were removed, and configuration, routing, and settings were updated to enable the new upstream integration. Local validation passed across generate and edit smoke tests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#380",
+      "title": "Enhance WeChat Pay flow with QR screenshot guidance and public link fallback in Frontend Web ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "wechat-pay",
+        "mobile",
+        "qr-code",
+        "i18n",
+        "ux",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update fixes two mobile WeChat Pay issues: missing QR codes on iPhone Safari and order pages showing empty after re-login. It adds a screenshot-and-scan guide for mobile users outside WeChat, updates the copy-link to use a public `/orders/:id` route, and ensures the QR dialog fits properly inside the WeChat in-app browser. Multilingual tips for the new mobile flow were also added to i18n files."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#832",
       "title": "Fix iOS App Store version lookup and soft warnings in Nexior 🚀",
       "tags": [
