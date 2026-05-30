@@ -3,6 +3,41 @@
   "date": "2026-05-30",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#832",
+      "title": "Fix iOS App Store version lookup and soft warnings in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ios",
+        "ci",
+        "appstore",
+        "workflow",
+        "bugfix",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/832",
+      "summary": "This update corrects the iOS App Store version lookup by filtering directly on versionString instead of using an unsupported sort field, preventing 400 errors during submission. It also introduces consistent soft warnings for non-2xx responses and fixes the 409 fallback filter for review submissions. Only the Submit step was modified; other TestFlight processing and distribution steps remain unchanged. YAML validation passed, ensuring pipeline stability for future runs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#830",
+      "title": "Add Subsite Deletion Feature in Nexior 🔥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "localization",
+        "settings",
+        "subsite"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/830",
+      "summary": "This update introduces a new delete action for subsites in the settings menu, allowing users to easily remove subsites directly from the interface. Previously, deletion required backend access, but now users can delete a subsite with a simple click, enhancing usability. The feature includes confirmation prompts and localized messages for a seamless experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#831",
       "title": "Unblock Mobile Release Retries with Dedicated Distribution Jobs in Nexior 🚀",
       "tags": [
