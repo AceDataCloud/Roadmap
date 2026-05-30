@@ -3,6 +3,185 @@
   "date": "2026-05-30",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#558",
+      "title": "Streamlined Claude Code Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "updates",
+        "backend",
+        "claude",
+        "mcp"
+      ],
+      "public": false,
+      "summary": "This update consolidates 11 articles in the Claude Code + MCP series into a unified template, enhancing clarity and reducing redundancy. Key changes include the removal of repetitive sections and the verification of all cross-article links to ensure they point to valid documents. The overall document size has been reduced by 178 lines, improving accessibility for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#839",
+      "title": "Enhance Payment Flows for AliPay and WeChat in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "payment",
+        "aliPay",
+        "weChat",
+        "update",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/839",
+      "summary": "This update introduces two key improvements to the payment flow in Nexior. First, AliPay now correctly passes a 'surface' hint for mobile users, ensuring a seamless experience. Second, WeChat Pay has been enhanced for mobile users outside of WeChat, providing a Native QR code and guidance for payment completion."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#958",
+      "title": "Fix sleep unit confusion across all workers in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "workers",
+        "latency",
+        "audit",
+        "typescript"
+      ],
+      "public": false,
+      "summary": "This update addresses the confusion between seconds and milliseconds in the sleep function used across 12 workers. Key changes include standardizing the sleep function to ensure consistent timing and adding comments to clarify the expected units. This fix reduces latency and prevents future errors related to incorrect time delays."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#957",
+      "title": "Fix millisecond polling in ephone workers in Platform Service ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "ephone",
+        "polling",
+        "performance",
+        "typescript"
+      ],
+      "public": false,
+      "summary": "Corrected the `sleep` calls in `seedance/videos.ts` and `udio/audios.ts` to use milliseconds instead of seconds. This change restores the intended polling intervals to 5 seconds, preventing excessive requests and CPU usage. The update aligns ephone pollers with other handlers and resolves the inadvertent high-frequency polling issue."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#837",
+      "title": "Enhance Console Usage List Experience in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "ui",
+        "api",
+        "export",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/837",
+      "summary": "This update aligns the Console usage list in Nexior with the PlatformFrontend, ensuring a consistent filter, export, and detail experience for API usage records. Key features include a new HTTP status-code filter, an Export CSV button, and additional columns for elapsed time and balance after deduction. The changes also enhance the user interface with a detail dialog for each record, improving overall usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#956",
+      "title": "Fix polling interval and task response handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "flux",
+        "logging",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update corrects the polling interval for flux jobs by changing the unit from milliseconds to seconds, ensuring timely job responses. A placeholder response is now returned during the polling period, improving client feedback and preventing confusion. Additionally, logging enhancements have been added for better traceability of job statuses."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#836",
+      "title": "Enhance Checkout Experience with Anonymous Payment Page in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "payment",
+        "checkout",
+        "anonymous",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/836",
+      "summary": "This update introduces an anonymous order payment page at `/orders/:id`, allowing users to complete transactions without logging in. Key features include support for WeChat, Stripe, and AliPay, with appropriate state alerts for free, paid, failed, and expired orders. The implementation mirrors the existing functionality on PlatformFrontend, ensuring a seamless user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#835",
+      "title": "Align Console Order Detail with PlatformFrontend in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "ui",
+        "frontend",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/835",
+      "summary": "This update enhances the Nexior Console order detail page by aligning its visual presentation with the PlatformFrontend. Key changes include a tag-styled display for payment methods and the addition of a credits amount row, ensuring a consistent user experience across platforms while preserving existing Nexior-specific functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#557",
+      "title": "Streamlined Integration Guides for Claude Code in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "updates",
+        "claude-code",
+        "backend"
+      ],
+      "public": false,
+      "summary": "The Claude Code documentation has been refined to feature only five essential integration guides: VS Code, Cursor, Terminal (CLI), JetBrains, and GitHub Actions. The 5-minute quickstart and Desktop integration articles have been removed to enhance clarity and focus. This update ensures that users have direct access to the most relevant resources for effective integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#955",
+      "title": "Add K8s Deployment and Service for Flux in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "kubernetes",
+        "deployment",
+        "service",
+        "flux",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces a new Kubernetes Deployment and Service for the Flux API, ensuring that the `/flux/images` endpoint is properly routed. The deployment includes two replicas and is configured similarly to existing handlers, providing a stable upstream for Kong. Additionally, the rollout script has been updated to include the new configurations, streamlining the deployment process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#834",
+      "title": "Order list gets summary cards and CSV export in Nexior 📊",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "orders",
+        "dashboard",
+        "csv-export",
+        "filters",
+        "i18n",
+        "parity"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/834",
+      "summary": "The order list page now includes four summary cards for total orders, total spent, finished orders, and pending orders, powered by the new orders summary endpoint. This update also adds state, payment method, and date-range filters with quick-select shortcuts, plus CSV export for downloading filtered results. Supporting OrderService methods, icon registration, and new order-related i18n keys were added across all locales to keep the experience consistent with PlatformFrontend."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Dify#242",
       "title": "Update Flux Models and Workflows in Dify 🚀",
       "tags": [
