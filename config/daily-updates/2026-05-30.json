@@ -3,6 +3,93 @@
   "date": "2026-05-30",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#831",
+      "title": "Unblock Mobile Release Retries with Dedicated Distribution Jobs in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "ios",
+        "android",
+        "testflight",
+        "release",
+        "workflows"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/831",
+      "summary": "The mobile release workflows were updated to separate iOS TestFlight distribution and App Store submission into a standalone job running on Ubuntu, avoiding Python environment issues on macOS runners. Post-upload actions now run even when builds are skipped because an existing binary is already available, enabling reliable retry and replay behavior. Android promotion logic was aligned with the same success-or-skipped flow so production promotion can proceed without requiring a rebuild."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#829",
+      "title": "Revamp open-subsite dialog layout in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "design",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/829",
+      "summary": "The open-subsite dialog has been visually improved for better user experience. Key changes include centering the dialog in the viewport and adjusting button sizes for a more balanced appearance. The layout now features comfortable spacing between buttons, enhancing clarity and usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#828",
+      "title": "Version 3.252.1 Ready for Automated Mobile Release Validation in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "release",
+        "mobile",
+        "versioning",
+        "android",
+        "ios",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/828",
+      "summary": "Updated Nexior to version 3.252.1 with versionCode 55201 across package metadata, Android, iOS, and shared mobile constants. The change synchronizes previously stale native version values and prepares a fresh release candidate for end-to-end testing of the new automated mobile release pipeline. This enables validation of Android promotion workflows and iOS external distribution and review submission paths using a new version identifier."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#827",
+      "title": "Near-fully automated Android and iOS release pipeline in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "android",
+        "ios",
+        "ci-cd",
+        "automation",
+        "release",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/827",
+      "summary": "This update introduces a near-fully automated mobile release process for Nexior. Android releases now default to beta testing with an optional automatic promotion to production, including staged rollouts. iOS builds automatically distribute to external TestFlight groups and submit for App Store review, with fail-safe handling for manual fixes. A new one-click workflow orchestrates both platforms, reducing manual steps while maintaining safety checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#826",
+      "title": "Refresh Studio Social Preview with Real Brand & Model Logos in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "seo",
+        "social-preview",
+        "branding",
+        "og-image",
+        "studio",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/826",
+      "summary": "Updated the Open Graph preview for AceData Studio to replace the old stylized 'Ace' mark with the real brand logo and six visually distinct AI model logos. Removed version numbers to prevent stale cards and applied the brand teal palette for consistency. Added a new HTML artifact to enable future screenshot updates via Playwright. Modified `index.html` and `seo.ts` to point to the new preview image, ensuring immediate updates for X link previews."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#825",
       "title": "Inject Stripe Key for Android Build in Nexior 🚀",
       "tags": [
