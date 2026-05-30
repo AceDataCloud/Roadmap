@@ -1,0 +1,105 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-05-30",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#825",
+      "title": "Inject Stripe Key for Android Build in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "android",
+        "stripe",
+        "build"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/825",
+      "summary": "This update wires the `VITE_STRIPE_PUBLISHABLE_KEY` secret into the Android web build process, ensuring that it is available in production bundles. The change modifies the build workflow to include the necessary environment variable, allowing the Stripe PaymentSheet to initialize correctly without errors. Overall, this is a low-risk CI change that enhances payment functionality on Android."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#134",
+      "title": "Enhance WeChat Login Experience for Mobile Users in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "wechat",
+        "login",
+        "mobile",
+        "frontend",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update introduces a helpful hint for mobile users attempting to log in via WeChat. Users are now prompted to screenshot the QR code and access it through WeChat's album for a seamless login experience. This change improves user guidance without requiring any backend modifications or native code adjustments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#824",
+      "title": "Android Stripe PaymentSheet Lands for In-App Checkout in Nexior 💳",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "android",
+        "stripe",
+        "payments",
+        "capacitor",
+        "checkout",
+        "mobile"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/824",
+      "summary": "Android checkout now uses Stripe’s native PaymentSheet instead of opening a browser PaymentLink, enabling in-app card entry and 3DS flows. The update adds the Capacitor Stripe plugin, routes Android Stripe payments through PaymentIntent client secrets, and preserves existing iOS and web payment behavior. Release documentation was expanded with Android Stripe setup and required publishable key configuration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#555",
+      "title": "Route Android Stripe orders through PaymentIntent for native PaymentSheet in Backend ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "stripe",
+        "android",
+        "payment",
+        "backend",
+        "nexior"
+      ],
+      "public": false,
+      "summary": "This update changes the Stripe payment flow for Android clients to use PaymentIntents instead of PaymentLinks, enabling native in-app checkout with PaymentSheet. The `client_secret` from the new PayBackend endpoint is now stored in `order.metadata.stripe_client_secret`, while other surfaces remain on the existing flow. No database migrations are required, and iOS and web flows remain unchanged. Key helper and view logic were added to support this Android-specific path."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#34",
+      "title": "Added Stripe PaymentSheet Support via PaymentIntent Endpoint in Pay Backend 💳",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "stripe",
+        "payments",
+        "mobile",
+        "paymentintent",
+        "api",
+        "backend"
+      ],
+      "public": false,
+      "summary": "Introduced a new POST /payment/stripe/intent endpoint that creates Stripe PaymentIntents and returns a client_secret for native mobile PaymentSheet integrations. Updated payment status lookup to route by ID prefix, allowing the same GET endpoint to support both PaymentIntent and existing PaymentLink flows. Existing web-based PaymentLink behavior remains unchanged, enabling Android in-app payments without affecting current integrations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#818",
+      "title": "Upgrade lint-staged to 17.0.5 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "upgrade",
+        "linting",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/818",
+      "summary": "This update bumps the lint-staged package from version 16.4.0 to 17.0.5, introducing several important fixes and improvements. Key changes include better handling of long lists of staged files and enhancements to task modifications during commits. This upgrade ensures smoother linting processes and improved compatibility with newer Node.js versions."
+    }
+  ]
+}
