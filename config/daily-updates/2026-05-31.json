@@ -3,6 +3,118 @@
   "date": "2026-05-31",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#580",
+      "title": "Clarified Claude Code MCP Extension Guide in Backend 📚",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "claude-code",
+        "mcp",
+        "documentation",
+        "localization"
+      ],
+      "public": false,
+      "summary": "Updated the Chinese documentation to clearly position the article as a guide for extending Claude Code with MCP tools. Renamed the overview to emphasize MCP tool extensions and added a note directing users without an existing Claude Code setup to the configuration guide. Existing Claude Code configuration and Claude Desktop documentation remain unchanged."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#579",
+      "title": "Enhance VS Code Integration with New Guide in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "vscode",
+        "codex",
+        "integration",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive Chinese-language guide for integrating Codex with VS Code, enhancing accessibility for users. Key changes include the addition of a new document specifically for VS Code integration and updates to existing documentation to include relevant links and installation instructions. The Codex CLI installation command has also been updated to reflect the current official method."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#577",
+      "title": "Published Codex CLI Setup and Terminal Guide in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "codex",
+        "cli",
+        "openai",
+        "developer-experience"
+      ],
+      "public": false,
+      "summary": "Added Chinese-language documentation for integrating Codex CLI through Ace Data Cloud's OpenAI Responses-compatible proxy. The update introduces a landing guide and a comprehensive terminal tutorial covering installation, configuration, authentication cleanup, model selection, request flow, and project trust settings. This improves developer onboarding and provides a clear path for using Codex CLI with supported backend models and infrastructure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#578",
+      "title": "Launch a Cursor BYOK Guide and Retire Legacy Integration Docs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "cursor",
+        "byok",
+        "documentation",
+        "translations",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "Added a new Cursor BYOK documentation guide showing how to connect Cursor to Ace Data Cloud through its OpenAI-compatible endpoint and access multiple model providers from a single setup. The guide includes onboarding, configuration, limitations, and troubleshooting content while reusing the existing token acquisition workflow. The legacy Claude Code for Cursor documentation was removed, and related document records and translations were cleaned up to align the documentation structure with the new Cursor-native approach."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#814",
+      "title": "Update Sass to Latest Version in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "sass",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/814",
+      "summary": "This update bumps the Sass dependency from version 1.99.0 to 1.100.0. Key changes include the deprecation of adjacent compound selectors without whitespace, aligning with CSS standards. This ensures better compatibility and adherence to best practices in styling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#576",
+      "title": "Refreshed Claude Code CLI Guide for Proxy-Based Setup in Backend 📘",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "claude-code",
+        "cli",
+        "localization",
+        "developer-experience"
+      ],
+      "public": false,
+      "summary": "The Chinese-language Claude Code terminal guide was comprehensively rewritten to align with the Ace Data Cloud proxy workflow. Documentation now covers installation, configuration, API token setup, cached login cleanup, session startup, verification steps, and model configuration. The update also aligns the onboarding flow with the VS Code guide, making setup and usage more consistent across development environments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#575",
+      "title": "Refreshed Claude Code VS Code Setup Guide in Backend 📝",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "vscode",
+        "claude-code",
+        "onboarding",
+        "localization"
+      ],
+      "public": false,
+      "summary": "Updated the Chinese Claude Code for VS Code documentation to align with the Ace Data Cloud console onboarding flow. The guide now uses refreshed screenshots, streamlined setup instructions, and revised token acquisition steps. These changes simplify developer onboarding and make the configuration process easier to follow."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#959",
       "title": "Rolled Out Claude Opus 4.8 Support and Fallbacks in Platform Service 🚀",
       "tags": [
