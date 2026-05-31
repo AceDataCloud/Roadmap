@@ -3,6 +3,75 @@
   "date": "2026-05-31",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPs#360",
+      "title": "Enhance Face & Fish Extensions for Streamable HTTP in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "vscode",
+        "http",
+        "extensions",
+        "mcp",
+        "face",
+        "fish"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/360",
+      "summary": "This update integrates the Face and Fish services into the hosted streamable HTTP code generation, completing the transition for 15 out of 17 MCP services. Key changes include the regeneration of VS Code extensions, normalization of README documentation, and the addition of curated entries in the configuration files. The new setup allows for a seamless user experience with password-protected token input, aligning with existing services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#359",
+      "title": "Revamp VS Code Extensions with Real MCP API in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "vscode",
+        "mcp",
+        "extensions",
+        "api",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/359",
+      "summary": "This update replaces the faulty VS Code extension manifests for all 15 MCP marketplace extensions with a functional implementation using the `mcpServerDefinitionProviders` API. Key changes include the addition of a new `extension.js` file for each service, improved README documentation, and a version bump to 0.3.0. These enhancements ensure users can now successfully install and utilize the extensions without issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#358",
+      "title": "Fix marketplace extension IDs for VS Code extensions in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "vscode",
+        "fix",
+        "extensions",
+        "marketplace",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/358",
+      "summary": "This update resolves issues with the VS Code extensions not publishing correctly due to conflicting display names. The `name` field in the affected extensions has been reverted to the original `mcp-<alias>` format, ensuring compatibility with the marketplace. Additionally, the `Service` dataclass now includes an `ext_name` attribute for future flexibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#357",
+      "title": "Enhance JetBrains Plugins with AI Chat Integration in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "jetbrains",
+        "plugins",
+        "ai",
+        "update",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/357",
+      "summary": "This update refines the JetBrains plugins and introduces new AI chat capabilities through the addition of aichat and openai plugins. Key changes include aligning tool counts with actual services, adjusting the minimum build version for compatibility, and implementing a unified OpenAI-compatible LLM gateway. These enhancements aim to improve user experience and functionality across JetBrains IDEs."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPs#356",
       "title": "Revamped MCP Extensions for VS Code in M C Ps 🚀",
       "tags": [
