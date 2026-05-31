@@ -3,6 +3,315 @@
   "date": "2026-05-31",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/OpenClawProvider#7",
+      "title": "Fix dynamic chat model resolution issue in Open Claw Provider 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "OpenClawProvider",
+        "bugfix",
+        "api",
+        "testing",
+        "release"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/OpenClawProvider/pull/7",
+      "summary": "This update resolves a bug where the qualified model ID was incorrectly included in the request payload, leading to failures in model requests. The fix strips the 'acedatacloud/' prefix from the model ID, ensuring compatibility with the upstream API. Additionally, the version has been bumped to 2026.5.33, and new tests have been added to cover the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#590",
+      "title": "Enhance X402 Verification Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "x402",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update refines the X402 verification documentation by removing date-style headings and restructuring result sections for clarity. Key changes include the addition of explorer URLs next to documented chain transactions and explicit caveats regarding Solana. These improvements aim to enhance user understanding and accessibility of the verification outputs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#589",
+      "title": "Enhance X402 Documentation with Verified Results in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "x402",
+        "sdk",
+        "updates",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update adds comprehensive links to the public SDK, X402Client, and Facilitator repositories in the X402 documentation. It includes verified installation outputs, transaction hashes, and results from SDK smoke tests, ensuring users have access to real-world data. Additionally, it documents the caveat regarding Solana paid HTTP success without claiming unconfirmed transaction hashes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#588",
+      "title": "Revamp OAuth Guides for Claude MCP in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "oauth",
+        "documentation",
+        "updates",
+        "backend",
+        "claude"
+      ],
+      "public": false,
+      "summary": "This update reworks the Claude and Claude Desktop MCP documentation to focus on OAuth Connectors, eliminating the need for manual token and configuration setups. Additionally, the Flux guide has been expanded to include the latest tools and workflows, while outdated localized documents have been removed to streamline user experience. These changes enhance clarity and accessibility for users integrating with the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#587",
+      "title": "New Hermes Agent Integration Guide in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "hermes",
+        "integration",
+        "guide",
+        "backend"
+      ],
+      "public": false,
+      "summary": "We've added a comprehensive user guide for integrating the Nous Research Hermes Agent with Ace Data Cloud, now available in Chinese. This documentation covers installation, configuration, and troubleshooting, enabling users to access multiple AI models seamlessly. The guide mirrors existing documentation patterns, ensuring consistency across our resources."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/OpenClawProvider#6",
+      "title": "Added Integration Cookbook and Updated Release Docs in Open Claw Provider 📘",
+      "tags": [
+        "github",
+        "pr",
+        "OpenClawProvider",
+        "docs",
+        "cookbook",
+        "readme",
+        "integration",
+        "openclaw"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/OpenClawProvider/pull/6",
+      "summary": "Added a comprehensive integration cookbook covering installation, authentication options, model selection, configuration, fallback chains, web search setup, monitoring, and troubleshooting for the Ace Data Cloud provider. The README was updated to v2026.5.32, including a cookbook link and validation notes. The changes improve onboarding, configuration guidance, and day-to-day usage documentation for OpenClaw users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#388",
+      "title": "Fix sidebar infinite loop for documents in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "performance",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update resolves an infinite loop issue in the sidebar when accessing certain documents under the application category. The fix involves tracking visited parent IDs and breaking the loop if a parent document is not found in the fetched list. This change ensures that similar tag mismatches won't cause browser hangs in the future."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/OpenClawProvider#5",
+      "title": "Expanded Host Compatibility for Current OpenClaw Releases in Open Claw Provider 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "OpenClawProvider",
+        "compatibility",
+        "openclaw",
+        "plugin-api",
+        "dependencies",
+        "release"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/OpenClawProvider/pull/5",
+      "summary": "Updated compatibility requirements to allow installation against the currently published OpenClaw host version by lowering the minimum supported host and plugin API versions from 2026.5.26 to 2026.4.2. The change aligns peer dependency, install-time, and compatibility checks with the host’s advertised plugin API version, preventing unnecessary installation failures. The package version was bumped to 2026.5.32, and type checks and tests completed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#582",
+      "title": "Revamped Claude Code MCP Guides for Clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "update",
+        "mcp",
+        "claude",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update transforms the `promotion_article_mcp_all_claude_code` into a comprehensive hub for Claude Code MCP, featuring service links and verified connection outputs. All 11 service articles have been refreshed to reflect the latest token acquisition flow and command structures, enhancing user experience and accessibility. Additionally, a data migration has been implemented to standardize the overview navigation title."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#585",
+      "title": "Revamped Claude MCP Overview for Clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "update",
+        "mcp",
+        "claude",
+        "backend"
+      ],
+      "public": false,
+      "summary": "The Claude AI/Desktop MCP article has been rewritten to provide a concise overview, focusing on essential background and explanations. Key updates include a streamlined OAuth Connector setup, enhanced guidance on quotas and usage, and a polished FAQ section. Legacy content has been removed to improve clarity and usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#584",
+      "title": "New OpenClaw Provider Guide Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "openclaw",
+        "guide",
+        "backend",
+        "chinese"
+      ],
+      "public": false,
+      "summary": "We've introduced a comprehensive Chinese-language user guide for the new OpenClaw provider plugin. This guide covers installation, configuration, and usage, ensuring new users have a clear onboarding experience. The documentation will enhance accessibility and support for users integrating with the Ace Data Cloud platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#586",
+      "title": "Refine X402 Integration Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "x402",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update enhances the X402 integration documentation by tightening claims and correcting details regarding payment receipt headers. Key changes include aligning examples with live data, syncing translations, and updating the icon URL. These improvements aim to provide clearer guidance for developers integrating with the X402 protocol."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#583",
+      "title": "Revamped Claude Code GitHub Actions Guide in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "github-actions",
+        "claude",
+        "opus",
+        "backend"
+      ],
+      "public": false,
+      "summary": "The Claude Code GitHub Actions documentation has been completely rewritten to provide a fully runnable end-to-end guide using Claude Opus 4.7 without requiring an Anthropic subscription. Key updates include a new workflow file, real GitHub screenshots, and detailed FAQs addressing common pitfalls encountered during setup."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/OpenClawProvider#4",
+      "title": "First npm Release Pipeline Lands with Publish Automation in Open Claw Provider 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "OpenClawProvider",
+        "npm",
+        "release",
+        "github-actions",
+        "publishing",
+        "calver",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/OpenClawProvider/pull/4",
+      "summary": "The project is now prepared for its first npm release with a new automated workflow that validates, builds, packages, publishes, and generates GitHub releases from version tags. The package version was moved to a CalVer scheme aligned with the OpenClaw host, and documentation was updated to reflect current chat and web search capabilities. The changes establish release infrastructure and improve confidence that published packages will resolve correctly for consumers using the OpenClaw plugin SDK."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/OpenClawProvider#3",
+      "title": "Integrate Ace Data Cloud as Web Search Provider in Open Claw Provider 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "OpenClawProvider",
+        "websearch",
+        "plugin",
+        "api",
+        "integration",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/OpenClawProvider/pull/3",
+      "summary": "This update introduces the `acedatacloud` as a new WebSearchProviderPlugin, enabling users to access Google SERP through the Ace Data Cloud API. Key features include support for various search verticals such as images, news, and videos, along with customizable parameters like count and language. Comprehensive tests have been added to ensure functionality and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#581",
+      "title": "Revamp X402 Integration Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "x402",
+        "backend",
+        "integration",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive series of documentation for the X402 integration, including guides for quickstart, TypeScript, Python, order payment, and troubleshooting. The legacy single guide has been replaced with structured links to the new resources, enhancing accessibility and clarity. Additionally, the production document hierarchy and zh-CN translations have been updated to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/OpenClawProvider#2",
+      "title": "Automated Chat Model Catalog Generation in Open Claw Provider 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "OpenClawProvider",
+        "catalog",
+        "automation",
+        "models",
+        "updates",
+        "improvements"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/OpenClawProvider/pull/2",
+      "summary": "This update replaces the previous hand-curated chat model catalog with an auto-generated version sourced from the canonical billing rule file. The new catalog now includes 62 visible models derived from 82 unique model IDs, ensuring that all models are accurately represented and reducing the risk of missing updates. Additionally, improvements have been made to reasoning detection for better accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/OpenClawProvider#1",
+      "title": "Launch Ace Data Cloud OpenClaw plugin foundation with chat support, testing, and CI in Open Claw Provider 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "OpenClawProvider",
+        "openclaw",
+        "plugin",
+        "chat",
+        "ci",
+        "testing",
+        "typescript"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/OpenClawProvider/pull/1",
+      "summary": "Established the initial Ace Data Cloud provider plugin scaffold for OpenClaw, including plugin registration, API-key onboarding, dynamic model resolution, and a curated chat model catalog. Added build tooling, TypeScript configuration, Vitest coverage, and GitHub Actions workflows for continuous integration and scheduled live API smoke testing. The update provides a functional chat MVP with offline-safe model discovery and a foundation for future image, video, music, and search capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#64",
+      "title": "Introducing the Multi-Modal OpenClawProvider Plugin in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "plugin",
+        "openclaw",
+        "multimodal",
+        "ace-data-cloud",
+        "development"
+      ],
+      "public": false,
+      "summary": "This update introduces the OpenClawProvider, a comprehensive plugin for Ace Data Cloud that enhances OpenClaw's capabilities across chat, image, video, music, and web search. Key features include a curated catalog of ~25 chat models, support for multiple media types, and a robust testing framework. The rollout will occur in phases, starting with SDK availability checks and progressing to upstream integration."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#580",
       "title": "Clarified Claude Code MCP Extension Guide in Backend 📚",
       "tags": [
