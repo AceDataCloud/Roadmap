@@ -3,6 +3,85 @@
   "date": "2026-05-31",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#386",
+      "title": "Fuse Feature Flag Systems for Enhanced UI Control in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "ui",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update merges two independent feature-flag systems into a single function, `isFeatureEnabled`, allowing for more dynamic UI behavior based on backend configurations. The new implementation ensures that flags from both URL cookies and server responses are evaluated, enabling immediate updates to the UI without manual reloads. This change preserves existing behaviors while enhancing the flexibility of feature rollouts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#385",
+      "title": "Fix granted tab access issue in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "applications",
+        "permissions"
+      ],
+      "public": false,
+      "summary": "This update resolves a permissions error when accessing the 'Authorized to me' tab in the applications console. The query parameters have been adjusted to use `user_id` and `affiliation` instead of the obsolete `role`, ensuring that users can retrieve their granted applications correctly. The fix maintains existing UI behavior while aligning with the new backend contract."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#381",
+      "title": "Revamped Token Management for Clarity in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ux",
+        "design",
+        "features",
+        "improvements"
+      ],
+      "public": false,
+      "summary": "This update enhances the Applications page by redesigning the token and top-up interface based on user feedback. Key changes include a full-width General Balance card, prominent action buttons for Keys, Usage, and Top Up, and a new section header for Dedicated Instances. These improvements aim to streamline user experience and make essential features more accessible."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#153",
+      "title": "Defer x402 Settlement Until Real Usage Records Arrive in Gateway ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "billing",
+        "x402",
+        "usage-metering",
+        "settlement",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "Updated the x402 /record flow to detect x-usage-exempt placeholder records and skip settlement until the worker submits the delayed usage report. This preserves settlement context instead of consuming it on a zero-amount placeholder request. The change aligns x402 behavior with the existing non-x402 placeholder handling and restores correct metered billing and on-chain settlement for server-side usage reporting."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#571",
+      "title": "Corrected Sora video resolution labels and verified CLI connections in Backend ⚙️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "sora",
+        "cli",
+        "documentation",
+        "video",
+        "validation",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update removes the incorrect 1080p label from Sora, replacing it with '高清' to match the actual maximum schema resolution of 1792x1024. All tested CLIs (Codex, Gemini, OpenCode) successfully connected using valid tokens, and protocol handshakes and tool manifests across 11 servers were validated. The change ensures that users see accurate resolution options and that tool configurations are fully functional."
+    },
+    {
       "id": "gh:pr:AceDataCloud/FacilitatorX402#45",
       "title": "Fixed Permit2 Witness Type Mismatch to Restore Successful Settlements in x402 ✅",
       "tags": [
