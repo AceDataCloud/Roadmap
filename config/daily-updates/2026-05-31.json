@@ -1,0 +1,187 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-05-31",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#383",
+      "title": "Add Studio Platform link to console sidebar in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "navigation",
+        "i18n",
+        "frontend",
+        "console"
+      ],
+      "public": false,
+      "summary": "Introduces a new external link to Studio Platform below the User Profile in the console sidebar. The menu label has been added across all supported locale files to ensure full i18n coverage. Changes affect navigation and enhance quick access to Studio Platform for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#552",
+      "title": "Enhance balance handling with error isolation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "balance",
+        "error-handling",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the balance processing by implementing direct parsing for each provider and isolating errors to prevent one provider's failure from affecting others. Key changes include removing unnecessary code, fixing the balance retrieval for piapi, and ensuring all providers log their status without crashing the CronJob. The overall reliability of the balance monitoring system is significantly enhanced."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#559",
+      "title": "Corrected MCP Tool References Across Claude Code Guides in Backend 🛠️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "mcp",
+        "claude-code",
+        "tooling",
+        "validation"
+      ],
+      "public": false,
+      "summary": "Updated the Claude Code + MCP documentation series to replace nonexistent or incorrect MCP tool names with verified tool names from live MCP servers. The changes cover Luma, Veo, Midjourney, Seedream, Seedance, Sora, and Serp guides, including missing image-to-video and image-editing tools where applicable. The overview guide also adds MCP scope guidance to prevent configuration mistakes, and all referenced tools were validated against actual connected servers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#25",
+      "title": "Exciting New Upto-Scheme Features in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "python",
+        "cli",
+        "payments",
+        "features",
+        "upto"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/25",
+      "summary": "This update introduces the Python client for the `upto` scheme, allowing users to utilize new payment methods advertised by the PlatformGateway. Key additions include the `sign_evm_upto_payment()` function and a CLI command for `approve-permit2`, enhancing payment flexibility. The implementation ensures seamless integration with existing systems and prepares for future phases of the rollout."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#840",
+      "title": "Application Pickers Show the Right Apps Again in Nexior 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "applications",
+        "picker",
+        "frontend",
+        "api-contract",
+        "permissions",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/840",
+      "summary": "Fixed application picker behavior across Nexior by restoring the GLOBAL scope filter for cross-service listings, preventing service-specific apps from appearing where they do not belong. Application queries were also migrated to the new user_id and affiliation contract, replacing deprecated role-based parameters. All service pickers now explicitly request both owned and granted applications, ensuring shared apps are surfaced consistently while aligning frontend behavior with the updated backend API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#382",
+      "title": "Align application filters with new user_id + affiliation API in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "frontend",
+        "applications",
+        "api",
+        "filters"
+      ],
+      "public": false,
+      "summary": "Updated the application query interface to replace the old `roles` parameter with `user_id` and `affiliation`, supporting multiple users and explicit access scopes. Modified the granted-apps tab to fetch applications using the new filter format. These changes ensure the frontend matches the updated PlatformBackend API, removing implicit server-side logic and making access queries explicit."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#561",
+      "title": "Refactor application filters for clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "refactor",
+        "api",
+        "backend",
+        "filters",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a two-axis filtering system for the applications API, replacing the previous `?roles=` parameter. The new parameters `?user_id` and `?affiliation` allow for clearer and more explicit filtering, enhancing user experience and security. Additionally, comprehensive tests have been added to ensure the functionality works as intended and documentation has been updated accordingly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#151",
+      "title": "Enhance Metered API Support with Upto Scheme in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "gateway",
+        "metered",
+        "billing",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces the `upto` scheme for metered APIs in the gateway, allowing clients to set a ceiling on costs at the authentication stage. Key changes include new environment variables for facilitator addresses, modifications to payment requirement builders, and the addition of a helper function to retrieve maximum credits. This enhancement ensures more accurate billing for variable-cost APIs while maintaining existing functionality for fixed-cost APIs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#560",
+      "title": "Streamline Application Role Filtering in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "refactor",
+        "api",
+        "backend",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update consolidates the overlapping query parameters for application role filtering into a single `roles=` parameter, simplifying the API usage. The previous `role` and `include_granted` parameters have been replaced, enhancing clarity and consistency with existing serialization methods. All related tests have been updated and successfully passed to ensure functionality remains intact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#816",
+      "title": "Update Beachball to 2.65.5 with improved packing defaults in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependency",
+        "beachball",
+        "update",
+        "npm",
+        "package-management",
+        "chore"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/816",
+      "summary": "This PR upgrades the Beachball dependency from version 2.65.4 to 2.65.5. Key changes include setting the default `packStyle` to 'layer', writing `versions.json` for layer-style packing, adding a link to change type help, and supporting fetch with `--no-tags`. These updates streamline package management and improve developer workflow. Package files `package.json` and `package-lock.json` were modified accordingly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#44",
+      "title": "Introducing EVM Upto Scheme Handler for Metered Chat Billing in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "feature",
+        "evm",
+        "billing",
+        "upto",
+        "tests",
+        "x402"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/44",
+      "summary": "This update implements the new `upto` scheme for EVM chains, allowing chat APIs to manage payment ceilings effectively. Key features include the introduction of the `UptoEvmHandler`, which validates payment authorizations and settles actual usage amounts on-chain. The PR also includes new constants, migration for database fields, and comprehensive unit tests to ensure functionality."
+    }
+  ]
+}
