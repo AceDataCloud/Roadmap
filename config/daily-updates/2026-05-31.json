@@ -3,6 +3,151 @@
   "date": "2026-05-31",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#573",
+      "title": "Revamp Studio Overview with Fresh Screenshots in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "update",
+        "branding",
+        "screenshots"
+      ],
+      "public": false,
+      "summary": "The studio-overview document has been updated to reflect the new branding for Ace Data Cloud Studio. Key changes include a new title, updated screenshots showcasing various products, and a streamlined database structure. These enhancements aim to improve user experience and accessibility of information."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#572",
+      "title": "Implement Runtime Kill Switch for Survey Engine in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "survey",
+        "feature-flag",
+        "chore"
+      ],
+      "public": false,
+      "summary": "This update introduces a runtime kill switch for the survey engine, allowing it to be toggled on and off without redeployment. A new feature flag, `survey202605`, has been added to control access to survey endpoints, ensuring that surveys can be disabled seamlessly. The implementation includes modifications to the survey view logic and updates to the feature flag utilities for enhanced control."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#387",
+      "title": "Implement Feature Flag for Survey Popup in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "survey",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update introduces a runtime feature flag for the survey popup, allowing it to be toggled without redeploying the application. The frontend now checks if the survey feature is enabled before making API calls, preventing unnecessary network traffic. This change enhances performance and user experience by ensuring the popup does not flash unexpectedly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#815",
+      "title": "Upgrade Vite to Latest Version in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "upgrade",
+        "vite",
+        "dependencies",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/815",
+      "summary": "This update bumps Vite from version 7.3.2 to 8.0.14, incorporating several bug fixes and new features. Key improvements include better error handling when communicating with the Vite server and enhancements to HTML transformation processes. This upgrade aims to enhance overall performance and stability in the Nexior project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#29",
+      "title": "Documentation Update: Enhanced README and New Walkthrough in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "documentation",
+        "update",
+        "walkthrough",
+        "readme",
+        "upto"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/29",
+      "summary": "This update includes significant enhancements to the root README and the addition of a new walkthrough in UPTO_DEMO.md. The README now clearly distinguishes between 'exact' and 'upto' schemes, providing detailed tables and quick start sections. The UPTO_DEMO.md offers a comprehensive step-by-step guide for using the 'upto' scheme, including a live demo and common Q&A to assist users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#27",
+      "title": "Enhance TypeScript Client with Upto-Scheme Signer in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "typescript",
+        "feature",
+        "testing",
+        "permit2",
+        "x402"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/27",
+      "summary": "This update brings the TypeScript client in line with the Python implementation by adding the `signEVMUptoPayment` and `approvePermit2` functionalities. Key improvements include a new helper for Permit2 approvals, enhanced payment handling options, and comprehensive tests ensuring reliability. The README has also been updated to reflect these changes, providing a clearer quick-start guide for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#28",
+      "title": "Documented live Base mainnet settlements in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "documentation",
+        "python",
+        "base-mainnet",
+        "settlements",
+        "verified"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/28",
+      "summary": "Added a new subsection in the Python README verifying three live Base mainnet settlements for models `claude-sonnet-4-5`, `gpt-5.5`, and `glm-4.7`. Each transaction matches the gateway's database cost rules within ±1 atomic. The update is purely documentation and does not change any code."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#166",
+      "title": "Remove outdated onboarding survey endpoint in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "cleanup",
+        "backend",
+        "survey",
+        "removal"
+      ],
+      "public": false,
+      "summary": "This update removes the v1 onboarding survey endpoint from the AuthBackend, which has been superseded by a more robust v2 system. Key changes include the deletion of the survey serializer and the corresponding action method in the UserViewSet, resulting in a cleaner codebase. The removal is safe as the frontend has already transitioned to the new system, ensuring no disruption for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#135",
+      "title": "Retired Legacy Onboarding Survey Experience in Frontend Web 🧹",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "cleanup",
+        "survey",
+        "onboarding",
+        "i18n",
+        "frontend",
+        "technical-debt"
+      ],
+      "public": false,
+      "summary": "Removed the deprecated v1 onboarding survey flow from the profile page, including banner and dialog components, survey models, operators, and related logic. Deleted survey localization files across all supported locales and removed survey module registrations from exports and i18n loading. This cleanup eliminates the superseded survey implementation, ensuring the frontend no longer references the legacy survey endpoint ahead of backend decommissioning."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#386",
       "title": "Fuse Feature Flag Systems for Enhanced UI Control in Frontend Web 🚀",
       "tags": [
