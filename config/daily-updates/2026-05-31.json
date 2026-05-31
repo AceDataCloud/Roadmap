@@ -3,6 +3,200 @@
   "date": "2026-05-31",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#45",
+      "title": "Fixed Permit2 Witness Type Mismatch to Restore Successful Settlements in x402 ✅",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "permit2",
+        "eip712",
+        "signatures",
+        "settlement",
+        "bugfix",
+        "base"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/45",
+      "summary": "Updated the Permit2 typed-data builder to use the on-chain Witness struct name instead of X402Witness, resolving InvalidSigner() reverts caused by an EIP-712 typehash mismatch. The settle() ABI was also corrected to remove an unsupported bool return value. Validation included passing test coverage, successful mainnet simulation, and a confirmed Base mainnet settlement transaction using the patched signing flow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#26",
+      "title": "Enhance EVM Signer and Fix Permit2 Witness in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "enhancement",
+        "bugfix",
+        "evm",
+        "signing",
+        "permit2"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/26",
+      "summary": "This update introduces an upto-scheme EVM signer and an `approve-permit2` CLI for Base/USDC. A critical fix renames the Permit2 witness struct to ensure on-chain signature acceptance, resolving previous verification issues. The changes have been tested successfully with real on-chain transactions, confirming their effectiveness."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#384",
+      "title": "Restore Authorize Entry for Applications in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "ui",
+        "authorization",
+        "rollback"
+      ],
+      "public": false,
+      "summary": "This update restores the per-row Authorize entry for the new credauth flow that was unintentionally removed in a previous PR. Users can now see the 'Add authorization' button in the applications table, allowing them to mint grants directly from the UI. The feature is gated behind a URL flag for a controlled rollout, ensuring a smooth user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#570",
+      "title": "Fixed Codex MCP Authentication Docs in Backend 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "codex",
+        "mcp",
+        "authentication",
+        "configuration"
+      ],
+      "public": false,
+      "summary": "Updated Codex CLI documentation to use the correct MCP authentication configuration by replacing unsupported header subtables with the official http_headers format. The change affects 12 Codex-specific guides and ensures Authorization headers are actually sent when connecting to remote MCP servers. Other supported client configurations were revalidated against official documentation and required no changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#569",
+      "title": "Enhance Credential Filtering with Granted Parameter in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "credentials",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "This update introduces a new query-string filter `?granted=true|false` on the `/credentials/` endpoint, allowing the Authorize page to request only relevant grants from the server. The implementation mirrors the `CredentialDetailSerializer.granted` logic, improving efficiency by reducing unnecessary data transfer. The change ensures that users can easily filter credentials based on their ownership status without client-side processing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#568",
+      "title": "Update Client Guides with Accurate MCP Tool Names in Backend 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "mcp",
+        "update",
+        "backend",
+        "accuracy"
+      ],
+      "public": false,
+      "summary": "This update corrects fabricated names and capabilities of MCP tools across all client guides, impacting 38 files. The changes ensure that all tool names now accurately reflect the functionalities available, enhancing clarity for users. A thorough cross-check was conducted to validate the information, leading to the removal of inaccuracies and the restoration of essential details."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#564",
+      "title": "Enhance Cost Rules with Per-Model Max Credits in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cost",
+        "backend",
+        "updates",
+        "rules",
+        "efficiency"
+      ],
+      "public": false,
+      "summary": "This update introduces per-model max credits for various token-metered rules, allowing for more precise cost management. A total of 91 rules have been patched to include these new ceilings, enhancing the efficiency of cost calculations across multiple models. The implementation ensures that users will not pay more than their actual consumption, maintaining trust in the system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#510",
+      "title": "Unify COS client for share-images uploads in Backend ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "cos",
+        "refactor",
+        "upload",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This PR extracts the COS client singleton into `app/utils/cos_client.py` and updates `upload_cos.py` and `files.py` to use it. The share-images upload path now inherits accelerate endpoint, connection pooling, timeout, MAZ-compatible storage class, and CDN configuration from the shared client. Legacy hard-coded settings are removed, improving reliability and reducing latency for cross-region uploads. No behavior changes occur for the existing `/api/v1/files/` endpoint."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#563",
+      "title": "Cleaned up MCP docs and fixed capability claims in Backend ⚙️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "mcp",
+        "backend",
+        "verification",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update removes inaccurate capability claims across multiple MCP services after verification with actual server responses. Veo audio features, ShortURL UTM tracking, and Sora resolution claims were corrected or removed. Verified true capabilities, like Seedance audio and Flux 6 models, remain documented. The changes ensure documentation accurately reflects real functionality and improves reliability for developers using PlatformBackend."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#562",
+      "title": "Standardized MCP Article Titles Across 118 Docs in Backend ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "localization",
+        "mcp",
+        "backend",
+        "standardization"
+      ],
+      "public": false,
+      "summary": "This update rewrites the H1 titles in 118 zh-CN MCP integration articles, replacing clickbait phrasing with the standardized format `<Client> 对接 <Service> MCP`. The changes align in-article headings with sidebar titles already stored in the database. Only the H1 lines were modified; no other content was touched. After merging, running the sync script propagates updates to translation tables and 17 other locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#152",
+      "title": "Wire X402 facilitator addresses into production env in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "deployment",
+        "env-vars",
+        "x402",
+        "gateway",
+        "production"
+      ],
+      "public": false,
+      "summary": "This PR updates the production deployment manifest to include X402_BASE_FACILITATOR_ADDRESS and X402_SKALE_FACILITATOR_ADDRESS environment variables. Both values are sourced from the existing x402 secret and marked optional to prevent rollout issues if missing. With these changes, metered endpoints on the upto branch will correctly use facilitator addresses once the secrets are populated. There is no immediate behavior change until the secrets are set and the platform-gateway is restarted."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#63",
+      "title": "Standardize worktree locations and clean up legacy directories in Index ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "git",
+        "worktree",
+        "cleanup",
+        "migration",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update enforces a single canonical location for all Git worktrees under `.worktrees/` at the monorepo root. Legacy sibling worktrees have been migrated or removed, ensuring no top-level `*-wt-*` directories remain. Preflight and cleanup scripts were updated to reflect the new structure, and explicit rules prevent creating worktrees outside the designated folder. The change streamlines repository organization and reduces accidental commits of temporary directories."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#383",
       "title": "Add Studio Platform link to console sidebar in Frontend Web 🚀",
       "tags": [
