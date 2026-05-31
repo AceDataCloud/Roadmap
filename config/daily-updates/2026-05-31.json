@@ -3,6 +3,363 @@
   "date": "2026-05-31",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPs#356",
+      "title": "Revamped MCP Extensions for VS Code in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "vscode",
+        "mcp",
+        "update",
+        "documentation",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/356",
+      "summary": "This update introduces a comprehensive revamp of 15 MCP extensions for VS Code, addressing critical issues such as misleading README documentation and API token prompts. A new code generation tool automates the creation of extension files, ensuring consistency and accuracy across services. Key improvements include updated package.json files, enhanced README content, and a streamlined setup process for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#247",
+      "title": "Update Plugin Icons for Better Branding in Dify 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "icons",
+        "branding",
+        "plugins",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/247",
+      "summary": "This update replaces the generic icons for the `face`, `fish`, and `wan` plugins with their respective brand assets. Each icon has been resized and optimized for better visibility in the Dify marketplace. This change enhances the user experience by ensuring accurate representation of each plugin."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#389",
+      "title": "Enhance API Filter for Better Searchability in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "api",
+        "filter",
+        "bugfix",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update increases the API limit from 100 to 1000 in the filter dropdown on the Usage History page. As a result, users can now search for all available APIs, including popular ones like Suno Audios Generation and Midjourney Imagine APIs, improving overall accessibility and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#598",
+      "title": "Boost MCP Documentation with 55 New Articles in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "mcp",
+        "backend",
+        "updates",
+        "translations"
+      ],
+      "public": false,
+      "summary": "This update introduces 55 new promotion articles for five MCP servers: Kling, Hailuo, Wan, Face Transform, and Fish Audio. The articles cover 11 client targets, enhancing documentation accessibility and usability. Key changes include a new idempotent generator script and migration for translated titles, ensuring seamless integration across platforms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#245",
+      "title": "Exciting New Tool Plugins for Dify in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "plugins",
+        "features",
+        "integration",
+        "api",
+        "dify"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/245",
+      "summary": "This update introduces three new plugins for Dify: face, fish, and wan, enabling seamless integration with the latest AceDataCloud APIs. Users can now perform face transformations, generate audio from text, and create videos from text or images without manual HTTP wiring. These enhancements provide a more robust toolset for Dify users, streamlining workflows and improving productivity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#355",
+      "title": "Updated OAuth Client IDs for Face and Fish in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "oauth",
+        "deployment",
+        "production",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/355",
+      "summary": "This update replaces the placeholder OAuth client IDs in the production deployment manifests for the Face and Fish MCP servers with the newly provisioned IDs. These changes ensure that the new servers can successfully handle OAuth connections, making them fully operational. The update is manifest-only, requiring no code changes or complex migrations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#596",
+      "title": "SKALE x402 Docs Updated and Verified for Metered Payments in Backend ✅",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "x402",
+        "skale",
+        "permit2",
+        "localization",
+        "verification"
+      ],
+      "public": false,
+      "summary": "Updated the Chinese x402 documentation to reflect verified SKALE support for metered `upto` payments and successful end-to-end validation. The docs now document resolved issues around chain ID mismatches, facilitator configuration, and Permit2 allowances, with recorded approval and settlement transactions. Related troubleshooting, network, SDK, and integration guides were synchronized to improve onboarding accuracy and operational guidance for SKALE deployments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#597",
+      "title": "Added Quick Hermes Integration Verification Steps in Backend 🧪",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "hermes",
+        "onboarding",
+        "validation",
+        "troubleshooting"
+      ],
+      "public": false,
+      "summary": "Expanded the Hermes setup guide with a new verification section that provides minimal reproducible commands for confirming a successful Ace Data Cloud integration. The documentation now covers version checks, single-turn chat validation, model-switch testing, and a direct API curl comparison path. It also points users to existing troubleshooting guidance for common authentication and request errors, making setup validation faster and more predictable."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#592",
+      "title": "Revamped OpenCode Integration Docs for Real Runs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "update",
+        "opencode",
+        "backend",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update rewrites the OpenCode integration documentation based on actual installed runs, ensuring accuracy and completeness. Key changes include the introduction of a one-shot seed script, standardization of provider IDs, and detailed troubleshooting steps. The documentation now reflects verified configurations and outputs, enhancing user experience and clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#154",
+      "title": "Enhance SKALE Payment Assertions in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "testing",
+        "payment",
+        "metadata",
+        "gateway",
+        "skale"
+      ],
+      "public": false,
+      "summary": "This update introduces regression assertions for the SKALE `upto` payment requirement metadata. Additionally, it locks the Gateway to specific configurations including `chainId: 1187947933`, the Permit2 address, and the designated facilitator address. These changes aim to improve the reliability of payment processing within the Gateway."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#31",
+      "title": "Enhance Permit2 Approval Defaults in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "typescript",
+        "skale",
+        "approval",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/31",
+      "summary": "This update modifies the TypeScript Permit2 approval helper to utilize the verified SKALE Base RPC. It now allows reading the SKALE_BASE_PRIVATE_KEY when using the skale network, while maintaining existing fallbacks for X402_PRIVATE_KEY and Base payer. These changes improve the flexibility and functionality of the approval process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#595",
+      "title": "Enhance SDK Documentation with Real Examples in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "sdk",
+        "backend",
+        "updates",
+        "examples"
+      ],
+      "public": false,
+      "summary": "This update introduces a dedicated chapter for the Ace Data Cloud SDK under the 应用实践 section, featuring comprehensive guides for TypeScript, Python, and Go SDKs. Each guide includes real-tested examples, ensuring users have access to authentic results and detailed instructions for integration. Additionally, a migration script has been added to register these documents, enhancing the overall documentation structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#30",
+      "title": "Enhance TypeScript E2E Testing for SKALE in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "typescript",
+        "e2e",
+        "testing",
+        "skale",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/30",
+      "summary": "This update parameterizes the TypeScript live `upto` E2E script to support SKALE networks. It introduces the use of `SKALE_BASE_PRIVATE_KEY` for validation and ensures consistency by printing the selected requirement's `chainId` and facilitator address. These changes improve the testing framework's flexibility and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#960",
+      "title": "Enhance Tool Schema Compatibility in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "compatibility",
+        "testing",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces defensive normalization for tool schemas in Claude routes, ensuring compatibility with clients that omit the `required` field. The change addresses issues where certain upstream proxies return HTTP 400 errors for valid requests. New unit tests have been added to verify the functionality and ensure that existing behavior is preserved."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#594",
+      "title": "Enhance X402 Documentation and Fix Plan in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "x402",
+        "typescript",
+        "backend",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update documents the root cause of the SKALE `upto` issue, where the Facilitator chain ID default differed from the Gateway's. A concrete follow-up plan has been added for consistency checks and live validations. Additionally, the TypeScript SDK documentation has been updated to recommend using `preferScheme: 'upto'`, simplifying the implementation for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#168",
+      "title": "Add Face and Fish MCP Servers in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "mcp",
+        "connectors",
+        "backend",
+        "feature",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces two new official MCP server entries for Face and Fish in the connector directory. Both entries follow the existing conventions and will enhance the creative capabilities of the platform. After merging, a sync command will be required to update the database and seed translations for these new connectors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#961",
+      "title": "Boosted OpenAI Server Performance with Multi-Worker Setup in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "performance",
+        "scalability",
+        "openai",
+        "kubernetes",
+        "hpa"
+      ],
+      "public": false,
+      "summary": "This update introduces a multi-worker Tornado server configuration to the OpenAI platform service, significantly enhancing its resilience against out-of-memory errors. Key changes include increased pod replicas, a new Horizontal Pod Autoscaler, and optimized memory usage settings, which collectively aim to reduce HTTP 502 errors and improve overall service stability. The adjustments ensure that the service can handle traffic spikes more effectively while maintaining performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#593",
+      "title": "Update Claude Opus Default in Tutorials in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "update",
+        "tutorials",
+        "claude",
+        "backend"
+      ],
+      "public": false,
+      "summary": "The default model for tutorials has been updated to Claude Opus 4.8, reflecting the latest version now live on api.acedata.cloud. Key documents, including development guides and integration articles, have been modified to ensure new users are directed to the current flagship model. This change enhances the onboarding experience for users across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#841",
+      "title": "Upgrade to Claude Opus 4.8 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "upgrade",
+        "chat",
+        "claude",
+        "i18n",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/841",
+      "summary": "The chat model has been updated to Claude Opus 4.8, which is now available on the API with unchanged pricing and capabilities. Key changes include renaming constants and updating internationalization keys across multiple languages to reflect the new model version. This ensures users have access to the latest features and improvements without any billing changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#46",
+      "title": "Align SKALE Chain ID for Gateway Compatibility in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "bugfix",
+        "enhancement",
+        "testing",
+        "deployment"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/46",
+      "summary": "This update aligns the SKALE `upto` default chain ID with the Gateway payment requirement by setting `X402_SKALE_CHAIN_ID=1187947933` in production. Additionally, it includes the `chainId` in the `/supported` `upto.extra` for better client diagnostics and adds regression tests for the SKALE `upto` configuration and invalid-signature handling. These changes enhance the reliability and compatibility of the system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#354",
+      "title": "Exciting New Face Transform MCP and Fish Audio Updates in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "face",
+        "fish",
+        "mcp",
+        "release",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/354",
+      "summary": "This update introduces the new Face Transform MCP, featuring eight tools for face analysis and transformation, along with two prompts. Additionally, it completes the publishing scaffolding for the Fish Audio MCP, ensuring both can be automatically released across multiple platforms. Key enhancements include improved deployment configurations and updated documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#591",
+      "title": "Enhance X402 Documentation with Known Issues in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "x402",
+        "backend",
+        "skale",
+        "solana"
+      ],
+      "public": false,
+      "summary": "This update introduces a centralized section for X402 testing issues, detailing specific failures such as the SKALE `upto` not being verified and the observed `invalid_upto_evm_payload_invalid_signature`. Additionally, it outlines follow-up work needed for SKALE `upto`, Solana transaction confirmations, and TypeScript selections. The documentation has been modified across multiple files to ensure clarity and completeness."
+    },
+    {
       "id": "gh:pr:AceDataCloud/OpenClawProvider#7",
       "title": "Fix dynamic chat model resolution issue in Open Claw Provider 🚀",
       "tags": [
