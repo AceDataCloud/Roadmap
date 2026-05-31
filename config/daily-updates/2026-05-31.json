@@ -3,6 +3,39 @@
   "date": "2026-05-31",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#959",
+      "title": "Rolled Out Claude Opus 4.8 Support and Fallbacks in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "claude",
+        "model-routing",
+        "fallbacks",
+        "configuration",
+        "pricing"
+      ],
+      "public": false,
+      "summary": "Added Claude Opus 4.8 across multiple checker capability configurations and exposed it in the worker-visible model list. Updated pricing metadata and introduced a dedicated fallback chain to ensure reliable model routing and continuity. Configuration and runtime fallback behavior were validated with existing checker and worker test suites."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#574",
+      "title": "Claude Opus 4.8 lands in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "claude",
+        "opus",
+        "billing",
+        "openapi",
+        "docs",
+        "tests"
+      ],
+      "public": false,
+      "summary": "Added Claude Opus 4.8 across visible model configs, billing rules, service pricing, and OpenAPI enums/examples. Updated zh-CN Claude documentation to feature the new model and added a regression test covering cache-token billing behavior."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#573",
       "title": "Revamp Studio Overview with Fresh Screenshots in Backend 🚀",
       "tags": [
