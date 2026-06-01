@@ -668,6 +668,10 @@
       { label: "Principles", id: "guiding-principles" },
       { label: data?.revenue ? "Revenue" : null, id: "revenue" },
       {
+        label: data?.revenue_trend ? "Revenue Trend" : null,
+        id: "revenue-trend",
+      },
+      {
         label: data?.recent_orders ? "Recent Orders" : null,
         id: "recent-orders",
       },
@@ -1269,6 +1273,224 @@
     }
 
     wrap.appendChild(grid);
+    if (asOf) {
+      wrap.appendChild(
+        el(
+          "div",
+          { class: "mt-6 text-xs text-slate-600 dark:text-white/80" },
+          `As of: ${asOf}`,
+        ),
+      );
+    }
+    return wrap;
+  }
+
+  function renderRevenueTrend(data) {
+    if (!data?.revenue_trend) return null;
+
+    const snapshot = data.revenue_trend.snapshot;
+    const loadFailed = !!data.revenue_trend.load_failed;
+    const currency = safeText(
+      snapshot?.currency || data.revenue_trend.currency || "USD",
+    );
+    const asOf = formatLocalTime(snapshot?.as_of);
+
+    const months = Array.isArray(snapshot?.months) ? snapshot.months : [];
+
+    const wrap = sectionShell(
+      data.revenue_trend.title,
+      data.revenue_trend.subtitle,
+      "revenue-trend",
+    );
+
+    if (loadFailed || !snapshot || months.length === 0) {
+      wrap.appendChild(
+        el("div", { class: CARD_CLASS }, [
+          el(
+            "div",
+            {
+              class:
+                "rounded-2xl bg-slate-900/5 px-4 py-4 text-sm text-slate-700 shadow-ring dark:bg-white/5 dark:text-white/90",
+            },
+            "Revenue trend unavailable right now.",
+          ),
+        ]),
+      );
+      return wrap;
+    }
+
+    const formatMoney = (value) => {
+      const num = Number(value);
+      if (!Number.isFinite(num)) return "—";
+      try {
+        return new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency,
+          maximumFractionDigits: 0,
+        }).format(num);
+      } catch (_err) {
+        return `${num.toFixed(0)} ${currency}`;
+      }
+    };
+
+    const formatCompactMoney = (value) => {
+      const num = Number(value);
+      if (!Number.isFinite(num)) return "—";
+      const sym = currency === "USD" ? "$" : "";
+      const suffix = currency === "USD" ? "" : ` ${currency}`;
+      const abs = Math.abs(num);
+      if (abs >= 1_000_000)
+        return `${sym}${(num / 1_000_000).toFixed(2)}M${suffix}`;
+      if (abs >= 1_000) return `${sym}${(num / 1_000).toFixed(1)}K${suffix}`;
+      return `${sym}${num.toFixed(0)}${suffix}`;
+    };
+
+    const formatMonthLabel = (ym) => {
+      const m = String(ym || "").match(/^(\d{4})-(\d{2})$/);
+      if (!m) return String(ym || "");
+      const year = Number(m[1]);
+      const month = Number(m[2]);
+      try {
+        const d = new Date(Date.UTC(year, month - 1, 1));
+        return d.toLocaleString(undefined, {
+          month: "short",
+          timeZone: "UTC",
+        });
+      } catch (_e) {
+        return `${year}-${m[2]}`;
+      }
+    };
+
+    // SVG bar chart sizing (viewBox; rendered responsively via width=100%).
+    const VB_W = 800;
+    const VB_H = 320;
+    const PAD_L = 56;
+    const PAD_R = 24;
+    const PAD_T = 36;
+    const PAD_B = 56;
+    const chartW = VB_W - PAD_L - PAD_R;
+    const chartH = VB_H - PAD_T - PAD_B;
+
+    const values = months.map((m) => Math.max(0, Number(m.revenue) || 0));
+    const rawMax = Math.max(...values, 0);
+
+    const niceCeil = (n) => {
+      if (n <= 0) return 1;
+      const exp = Math.floor(Math.log10(n));
+      const base = Math.pow(10, exp);
+      const norm = n / base;
+      let nice;
+      if (norm <= 1) nice = 1;
+      else if (norm <= 2) nice = 2;
+      else if (norm <= 2.5) nice = 2.5;
+      else if (norm <= 5) nice = 5;
+      else nice = 10;
+      return nice * base;
+    };
+    const yMax = niceCeil(rawMax || 1);
+
+    const gridSteps = 4;
+    const xmlEscape = (s) =>
+      String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+    const barGap = 12;
+    const slotW = chartW / Math.max(1, months.length);
+    const barW = Math.max(8, Math.min(64, slotW - barGap));
+    const barXOffset = (slotW - barW) / 2;
+
+    let svgInner = "";
+
+    // Y axis grid lines + labels
+    for (let i = 0; i <= gridSteps; i++) {
+      const ratio = i / gridSteps;
+      const y = PAD_T + chartH - chartH * ratio;
+      const v = yMax * ratio;
+      svgInner += `<line x1="${PAD_L}" y1="${y.toFixed(2)}" x2="${(PAD_L + chartW).toFixed(2)}" y2="${y.toFixed(2)}" class="revenue-trend-grid" />`;
+      svgInner += `<text x="${(PAD_L - 8).toFixed(2)}" y="${(y + 4).toFixed(2)}" class="revenue-trend-yLabel" text-anchor="end">${xmlEscape(formatCompactMoney(v))}</text>`;
+    }
+
+    // Bars + labels
+    months.forEach((m, i) => {
+      const v = Math.max(0, Number(m.revenue) || 0);
+      const h = yMax > 0 ? (v / yMax) * chartH : 0;
+      const x = PAD_L + i * slotW + barXOffset;
+      const y = PAD_T + chartH - h;
+      const cx = x + barW / 2;
+      const label = formatMonthLabel(m.month);
+      const valueLabel = formatCompactMoney(v);
+      const tooltip = `${m.month} · ${formatMoney(v)}${
+        m.orders != null ? ` · ${Number(m.orders).toLocaleString()} orders` : ""
+      }`;
+
+      svgInner += `<g class="revenue-trend-barGroup">`;
+      svgInner += `<rect x="${x.toFixed(2)}" y="${y.toFixed(2)}" width="${barW.toFixed(2)}" height="${Math.max(0, h).toFixed(2)}" rx="6" ry="6" class="revenue-trend-bar"><title>${xmlEscape(tooltip)}</title></rect>`;
+      if (h > 0) {
+        svgInner += `<text x="${cx.toFixed(2)}" y="${(y - 8).toFixed(2)}" class="revenue-trend-valueLabel" text-anchor="middle">${xmlEscape(valueLabel)}</text>`;
+      }
+      svgInner += `<text x="${cx.toFixed(2)}" y="${(PAD_T + chartH + 20).toFixed(2)}" class="revenue-trend-xLabel" text-anchor="middle">${xmlEscape(label)}</text>`;
+      svgInner += `</g>`;
+    });
+
+    // Year baseline / start label
+    if (months.length > 0) {
+      const startYear = String(months[0].month || "").slice(0, 4);
+      const endYear = String(months[months.length - 1].month || "").slice(0, 4);
+      const yearLabel = startYear === endYear ? startYear : `${startYear}–${endYear}`;
+      svgInner += `<text x="${(PAD_L + chartW).toFixed(2)}" y="${(PAD_T + chartH + 44).toFixed(2)}" class="revenue-trend-yearLabel" text-anchor="end">${xmlEscape(yearLabel)}</text>`;
+    }
+
+    const card = el("div", { class: CARD_CLASS });
+    const chartWrap = el("div", { class: "revenue-trend-chartWrap" });
+    chartWrap.innerHTML = `<svg viewBox="0 0 ${VB_W} ${VB_H}" preserveAspectRatio="xMidYMid meet" class="revenue-trend-svg" role="img" aria-label="Monthly revenue bar chart">${svgInner}</svg>`;
+    card.appendChild(chartWrap);
+
+    const total = values.reduce((a, b) => a + b, 0);
+    const ordersTotal = months.reduce(
+      (a, m) => a + (Number(m.orders) || 0),
+      0,
+    );
+    const months_with_data = months.filter((m) => Number(m.revenue) > 0).length;
+    const avg = months_with_data > 0 ? total / months_with_data : 0;
+
+    const summary = el(
+      "div",
+      {
+        class:
+          "mt-4 flex flex-wrap items-center gap-6 text-xs text-slate-600 dark:text-white/80",
+      },
+      [
+        el("span", {}, [
+          el(
+            "span",
+            { class: "font-semibold text-slate-900 dark:text-white/95" },
+            `${formatMoney(total)} `,
+          ),
+          "total since ",
+          months[0]?.month || "",
+        ]),
+        el("span", {}, [
+          el(
+            "span",
+            { class: "font-semibold text-slate-900 dark:text-white/95" },
+            `${formatMoney(avg)} `,
+          ),
+          "avg / month",
+        ]),
+        ordersTotal > 0
+          ? el("span", {}, [
+              el(
+                "span",
+                { class: "font-semibold text-slate-900 dark:text-white/95" },
+                `${ordersTotal.toLocaleString()} `,
+              ),
+              "completed orders",
+            ])
+          : null,
+      ],
+    );
+    card.appendChild(summary);
+    wrap.appendChild(card);
+
     if (asOf) {
       wrap.appendChild(
         el(
@@ -3532,6 +3754,26 @@
       data.revenue.load_failed = revenueLoadFailed;
     }
 
+    // Load monthly revenue trend snapshot
+    let revenueTrendSnapshot;
+    let revenueTrendLoadFailed = false;
+    try {
+      if (data?.revenue_trend?.source) {
+        const rtr = await fetch(String(data.revenue_trend.source), {
+          cache: "no-store",
+        });
+        if (rtr.ok) revenueTrendSnapshot = await rtr.json();
+        else revenueTrendLoadFailed = true;
+      }
+    } catch (_err) {
+      revenueTrendLoadFailed = true;
+      revenueTrendSnapshot = undefined;
+    }
+    if (data?.revenue_trend) {
+      data.revenue_trend.snapshot = revenueTrendSnapshot;
+      data.revenue_trend.load_failed = revenueTrendLoadFailed;
+    }
+
     // Load recent orders snapshot
     let recentOrdersSnapshot;
     let recentOrdersLoadFailed = false;
@@ -3653,6 +3895,8 @@
     app.appendChild(renderPrinciples(data));
     const revenue = renderRevenue(data);
     if (revenue) app.appendChild(revenue);
+    const revenueTrend = renderRevenueTrend(data);
+    if (revenueTrend) app.appendChild(revenueTrend);
     const recentOrders = renderRecentOrders(data);
     if (recentOrders) app.appendChild(recentOrders);
     const creatorFees = renderCreatorFees(data);

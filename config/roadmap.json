@@ -142,6 +142,12 @@
     "source": "./config/revenue.json",
     "currency": "USD"
   },
+  "revenue_trend": {
+    "title": "Monthly Revenue",
+    "subtitle": "Completed-order revenue per fully completed calendar month since 2026-01. The current (in-progress) month is excluded. Updated periodically by a scheduled job.",
+    "source": "./config/revenue_trend.json",
+    "currency": "USD"
+  },
   "creator_fees": {
     "title": "Creator Fees Snapshot",
     "subtitle": "Creator Fees earned on pump.fun. Updated periodically by a scheduled job.",
