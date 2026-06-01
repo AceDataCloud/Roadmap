@@ -3,6 +3,86 @@
   "date": "2026-06-01",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#390",
+      "title": "Enhance Revenue Analysis with Granularity Selector in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "ui",
+        "i18n",
+        "admin"
+      ],
+      "public": false,
+      "summary": "This update introduces a Granularity dropdown to the Revenue Analysis chart, allowing users to select between Daily, Weekly, and Monthly views. The new feature improves data visibility over extended date ranges by adjusting the granularity of the displayed revenue trend. Additionally, internationalization support has been added for multiple languages, ensuring a broader accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#54",
+      "title": "New Monthly Revenue Bar Chart Added in Roadmap 📊",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "feature",
+        "roadmap",
+        "revenue",
+        "chart",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/54",
+      "summary": "This update introduces a new monthly revenue bar chart to the public Roadmap page, displaying revenue data from January 2026 onwards. The chart features an inline SVG design with tooltips and summary statistics, enhancing the visibility of revenue trends. A new script has been added to generate the revenue data, ensuring it aligns with existing data pipelines."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#600",
+      "title": "Enhance Revenue Trend Analysis with Flexible Granularity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "api",
+        "revenue",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `granularity` query parameter to the revenue trend API, allowing users to view revenue data aggregated by day, week, or month. The change enhances readability for longer time spans while maintaining backward compatibility. The frontend will also be updated to include a dropdown for selecting the granularity option."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#53",
+      "title": "Updated Buyback Transactions in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "buyback",
+        "transactions",
+        "update",
+        "json",
+        "roadmap"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/53",
+      "summary": "This update adds five new on-chain buyback transactions to the buyback history, enhancing transparency and verifiability. The revenue split has been adjusted from 5% to 10%, with a notable increase in the buyback allocation. All transactions are validated against the existing schema to ensure data integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#771",
+      "title": "Update vue-i18n to 11.4.4 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "security",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/771",
+      "summary": "This update bumps the vue-i18n library from version 11.4.0 to 11.4.4. Key improvements include enhanced security measures for JavaScript URL sanitization and the dropping of Node.js 20 support. These changes aim to improve the overall stability and security of the application."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#775",
       "title": "Upgrade ESLint to Version 10.4.1 in Nexior 🚀",
       "tags": [
