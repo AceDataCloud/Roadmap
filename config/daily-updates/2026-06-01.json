@@ -3,6 +3,70 @@
   "date": "2026-06-01",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#741",
+      "title": "Update FontAwesome to Latest Version in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "update",
+        "fontawesome"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/741",
+      "summary": "This PR updates the @fortawesome/fontawesome-svg-core package from version 6.7.2 to 7.2.0. The new version includes various improvements and changes, enhancing the overall icon library experience. Key modifications in the release notes include simplifications in icon request titles and templates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#49",
+      "title": "Remove SKALE from Discovery Resources in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "fix",
+        "discovery",
+        "x402",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/49",
+      "summary": "This update removes the 'skale' entry from the `/discovery/resources` endpoint to prevent resource sync failures. The change ensures that only valid network tokens are emitted, allowing for smoother integration with x402scan. SKALE support remains intact in other areas of the platform, ensuring continued functionality for SKALE payments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#65",
+      "title": "Enhance MongoDB Archiving with New Scripts in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "archive",
+        "mongodb",
+        "suno",
+        "ops",
+        "scripts"
+      ],
+      "public": false,
+      "summary": "This update introduces a new directory for MongoDB archiving scripts, making them portable and easier to use across different workstations. Key additions include a day-by-day export script, a resilient launcher for handling errors, and improved environment variable management. These changes enhance the reliability and usability of the archiving process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#48",
+      "title": "New Discovery Endpoint for x402 Crawlers in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "feature",
+        "api",
+        "discovery",
+        "x402",
+        "deployment"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/48",
+      "summary": "This update introduces a new endpoint, `GET /discovery/resources`, which allows x402scan crawlers to automatically enumerate AceDataCloud's paid APIs. The implementation includes a 308 redirect from `/list` and ensures that resource URLs are pulled from the PlatformBackend, maintaining it as the single source of truth. Additionally, new environment variables for payment addresses have been added to the deployment configuration."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#390",
       "title": "Enhance Revenue Analysis with Granularity Selector in Frontend Web 🎨",
       "tags": [
