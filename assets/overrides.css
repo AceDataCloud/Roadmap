@@ -1813,3 +1813,79 @@ html:not(.dark) .api-usage-tab--active {
     bottom: calc(1.25rem + env(safe-area-inset-bottom));
   }
 }
+
+/* ── Revenue Trend (monthly bar chart) ──────────────────────────── */
+
+.revenue-trend-chartWrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.revenue-trend-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  min-width: 320px;
+}
+
+.revenue-trend-grid {
+  stroke: rgba(255, 255, 255, 0.08);
+  stroke-width: 1;
+  stroke-dasharray: 3 4;
+}
+
+html:not(.dark) .revenue-trend-grid {
+  stroke: rgba(15, 23, 42, 0.1);
+}
+
+.revenue-trend-yLabel,
+.revenue-trend-xLabel {
+  font-size: 11px;
+  fill: rgba(226, 232, 240, 0.72);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+html:not(.dark) .revenue-trend-yLabel,
+html:not(.dark) .revenue-trend-xLabel {
+  fill: rgba(15, 23, 42, 0.65);
+}
+
+.revenue-trend-valueLabel {
+  font-size: 11px;
+  font-weight: 600;
+  fill: rgba(226, 232, 240, 0.92);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+html:not(.dark) .revenue-trend-valueLabel {
+  fill: rgba(15, 23, 42, 0.88);
+}
+
+.revenue-trend-yearLabel {
+  font-size: 10.5px;
+  fill: rgba(226, 232, 240, 0.5);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+html:not(.dark) .revenue-trend-yearLabel {
+  fill: rgba(15, 23, 42, 0.45);
+}
+
+.revenue-trend-bar {
+  fill: rgba(99, 102, 241, 0.85);
+  transition: fill 140ms ease, transform 140ms ease;
+}
+
+html:not(.dark) .revenue-trend-bar {
+  fill: rgba(79, 70, 229, 0.85);
+}
+
+.revenue-trend-barGroup:hover .revenue-trend-bar {
+  fill: rgba(129, 140, 248, 1);
+}
+
+html:not(.dark) .revenue-trend-barGroup:hover .revenue-trend-bar {
+  fill: rgba(67, 56, 202, 1);
+}

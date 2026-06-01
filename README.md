@@ -114,3 +114,21 @@ export PGSQL_PASSWORD="..."
 export PGSQL_DATABASE="acedatacloud_platform"
 python3 scripts/generate_revenue_snapshot.py
 ```
+
+## Monthly Revenue Trend (Automation)
+
+The Roadmap site also displays a monthly revenue bar chart (one bar per calendar month since `--start-month`, default `2026-01`) by reading `config/revenue_trend.json`.
+
+- Script: `scripts/generate_revenue_trend.py`
+- Output: `config/revenue_trend.json`
+- Dependencies: `pip install Django psycopg2-binary`
+- Same Postgres env vars as the Revenue Snapshot above.
+- Optional env: `REVENUE_TREND_START_MONTH` (defaults to `2026-01`).
+
+Example:
+
+```bash
+source .env
+python3 scripts/generate_revenue_trend.py                  # default: from 2026-01
+python3 scripts/generate_revenue_trend.py --start-month 2026-01
+```
