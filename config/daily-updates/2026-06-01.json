@@ -1,0 +1,37 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-06-01",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#813",
+      "title": "Update dayjs to latest version in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "update",
+        "dayjs",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/813",
+      "summary": "This update bumps the dayjs library from version 1.11.20 to 1.11.21. Key improvements include bug fixes that preserve unsupported year tokens in formatting, enhancing the library's reliability. The changes are reflected in both package.json and package-lock.json files."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#167",
+      "title": "Dependency Updates for Python Packages in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "dependencies",
+        "python",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update bumps the `tencentcloud-sdk-python` from version 3.1.92 to 3.1.105 and upgrades `python-frontmatter` from 1.1.0 to 1.2.0. Notably, the new version of `python-frontmatter` drops support for Python 3.9 and addresses type issues, enhancing compatibility with newer Python versions."
+    }
+  ]
+}
