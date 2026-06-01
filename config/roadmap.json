@@ -144,7 +144,7 @@
   },
   "revenue_trend": {
     "title": "Monthly Revenue",
-    "subtitle": "Completed-order revenue per calendar month since 2026-01. The current month is partial. Updated periodically by a scheduled job.",
+    "subtitle": "Completed-order revenue per fully completed calendar month since 2026-01. The current (in-progress) month is excluded. Updated periodically by a scheduled job.",
     "source": "./config/revenue_trend.json",
     "currency": "USD"
   },

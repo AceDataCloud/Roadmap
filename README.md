@@ -117,7 +117,7 @@ python3 scripts/generate_revenue_snapshot.py
 
 ## Monthly Revenue Trend (Automation)
 
-The Roadmap site also displays a monthly revenue bar chart (one bar per calendar month since `--start-month`, default `2026-01`) by reading `config/revenue_trend.json`.
+The Roadmap site also displays a monthly revenue bar chart (one bar per fully completed calendar month since `--start-month`, default `2026-01`) by reading `config/revenue_trend.json`. The in-progress current month is intentionally excluded.
 
 - Script: `scripts/generate_revenue_trend.py`
 - Output: `config/revenue_trend.json`

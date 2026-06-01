@@ -2,8 +2,8 @@
 """Generate a monthly revenue trend snapshot for the Roadmap dashboard.
 
 Aggregates finished orders by calendar month (UTC) starting from
-``--start-month`` (default ``2026-01``) up to and including the
-current month.
+``--start-month`` (default ``2026-01``). The in-progress current month is
+intentionally omitted so the chart only shows fully completed months.
 
 Usage:
     # With env vars from .env
@@ -152,11 +152,13 @@ def _django_query(
             "orders": int(row["orders"] or 0),
         }
 
-    # Fill missing months with zeros so the chart shows a continuous timeline.
+    # Stop strictly before the current calendar month so the chart only
+    # contains fully completed months (a partial bar for the in-progress
+    # month would look misleadingly small next to full months).
     months: list[dict] = []
     cursor = start_month
     end_marker = now.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
-    while cursor <= end_marker:
+    while cursor < end_marker:
         key = f"{cursor.year:04d}-{cursor.month:02d}"
         months.append(by_month.get(key, {"month": key, "revenue": 0.0, "orders": 0}))
         cursor = _next_month(cursor)
