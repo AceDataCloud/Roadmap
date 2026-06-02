@@ -3,6 +3,37 @@
   "date": "2026-06-02",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#601",
+      "title": "Disable x402b Cronjobs for Good in Backend 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cronjobs",
+        "cleanup",
+        "deployment",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update permanently disables the synthetic x402b cronjobs to prevent unwanted payment traffic from being generated in future deployments. Key changes include the removal of cronjob application steps from the deployment script and the addition of explicit cleanup commands to ensure these jobs cannot be accidentally recreated. Unused manifests related to these cronjobs have also been removed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#963",
+      "title": "Add retries for transient upstream errors and map 413/moderation correctly in Platform Service ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "retry",
+        "error-handling",
+        "gpt-image",
+        "moderation",
+        "payload-too-large"
+      ],
+      "public": false,
+      "summary": "This update introduces a retry mechanism for transient 5xx errors and network failures in both Bananarouter and OpenAIHK workers. It also adds a dedicated `PayloadTooLargeError` for 413 responses and strengthens moderation error handling by mapping flagged messages to `ForbiddenError`. All changes preserve existing API behavior and include logging for retries to monitor impact."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#739",
       "title": "Update @vue/tsconfig to v0.9.1 with TypeScript 6 support in Nexior 🚀",
       "tags": [
