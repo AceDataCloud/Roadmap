@@ -1,0 +1,23 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-06-02",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#739",
+      "title": "Update @vue/tsconfig to v0.9.1 with TypeScript 6 support in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "typescript",
+        "vue",
+        "upgrade",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/739",
+      "summary": "This PR upgrades @vue/tsconfig from version 0.7.0 to 0.9.1, aligning the TypeScript peer dependency to >=5.8 and including support for TypeScript 6. It also updates the library target to ES2022 and moves noUncheckedIndexedAccess from the base to the lib config for more flexible type checking. These changes improve compatibility with modern TypeScript features and streamline future upgrades. Package files were updated accordingly."
+    }
+  ]
+}
