@@ -1,0 +1,40 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-06-03",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#391",
+      "title": "Upgrade Node from 25 to 26 in Frontend Web ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "node",
+        "docker",
+        "dependency",
+        "upgrade",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update bumps the Node.js version from 25 to 26 in the Docker build stage. The Dockerfile was modified to reference the new Node version, ensuring the environment uses the latest features and fixes. This change is expected to improve compatibility and maintain alignment with current Node.js releases."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#845",
+      "title": "Upgrade artifact uploads to v7 for smoother builds in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "github-actions",
+        "artifact",
+        "build",
+        "nexior",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/845",
+      "summary": "This update bumps the GitHub Actions `upload-artifact` dependency from v4 to v7 across all CI workflows. It adds support for direct single-file uploads, upgrades the module to ESM, and ensures Node.js 24 compatibility. Android, iOS, and OTA workflows now use the latest artifact handling, improving reliability and future-proofing CI processes."
+    }
+  ]
+}
