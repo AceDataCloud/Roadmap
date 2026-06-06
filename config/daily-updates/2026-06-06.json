@@ -3,6 +3,85 @@
   "date": "2026-06-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#609",
+      "title": "Automate API Usage Cleanup in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cleanup",
+        "cronjob",
+        "database",
+        "automation",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new CronJob that prunes old `app_apiusage` records daily, ensuring the usage log remains manageable. The job deletes entries older than 90 days in small batches, preventing the database from filling up and improving overall performance. Key files added include a cleanup script and the CronJob configuration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#608",
+      "title": "Enhance Auto Recharge Functionality in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "auto-recharge",
+        "backend",
+        "stripe",
+        "cronjob",
+        "payment"
+      ],
+      "public": false,
+      "summary": "This update introduces an automatic recharge orchestration system that monitors application balances and triggers top-ups when necessary. Key features include a robust eligibility check, a new CronJob for regular execution, and safeguards against double charges and dead cards. The implementation ensures seamless integration with Stripe for off-session payments, enhancing the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#157",
+      "title": "Trimmed DEBUG Logs for Cleaner Gateway Performance in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "logging",
+        "performance",
+        "security",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update removes non-essential DEBUG log lines from the gateway's utility files, significantly reducing log volume by approximately 36%. Key changes include the removal of redundant QuerySet representations and sensitive data exposure, which enhances performance and security. The overall impact leads to lower storage and indexing costs while maintaining essential logging for troubleshooting."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#607",
+      "title": "Introducing AutoRechargeConfig Model and Management API in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "api",
+        "stripe",
+        "backend",
+        "management"
+      ],
+      "public": false,
+      "summary": "This update introduces the AutoRechargeConfig model along with a user-facing management API for the Stripe auto top-up feature. Key changes include the ability to manage recharge configurations, set thresholds, and handle saved card references securely. The new API endpoints allow users to create, retrieve, update, and disable their auto-recharge settings efficiently."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#37",
+      "title": "Enhance Stripe Integration with Off-Session Top-Up Features in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "stripe",
+        "payments",
+        "feature",
+        "backend",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces new endpoints for off-session card setup and charging, enabling users to save a card for automatic top-ups without being present. Key additions include the creation of SetupIntents and the ability to charge saved cards, enhancing the payment experience. The implementation ensures idempotency and proper error handling for declined transactions."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#985",
       "title": "Streamline Uploads to Hong Kong Bucket in Platform Service 🚀",
       "tags": [
