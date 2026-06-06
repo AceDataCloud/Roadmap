@@ -3,6 +3,169 @@
   "date": "2026-06-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#169",
+      "title": "Enhance Python 3.8 Compatibility in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "python",
+        "backend",
+        "compatibility"
+      ],
+      "public": false,
+      "summary": "This update introduces a fallback mechanism for parsing skill frontmatter in the AuthBackend, ensuring compatibility with Python 3.8. A safe try/except block wraps the frontmatter import, and a new fallback parser using PyYAML has been added. This change prevents crashlooping issues during initialization without altering existing API contracts or skill schemas."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#159",
+      "title": "Align Python SDK OpenAI Compatibility Mocks in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "python",
+        "sdk",
+        "tests",
+        "mocking",
+        "ci"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/159",
+      "summary": "This update fixes the Python SDK tests to ensure that the mock endpoints align with the actual OpenAI compatibility paths used by the SDK. The changes specifically update the test mocks in 'test_sdk.py' to replace outdated endpoint URLs, addressing recent CI failures caused by mismatched signatures. No runtime SDK code was altered, focusing solely on the test environment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#158",
+      "title": "Enhance image generation with new parameters in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "sdk",
+        "images",
+        "openapi",
+        "update",
+        "typescript",
+        "python"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/158",
+      "summary": "This update syncs the SDK with the latest `nano-banana.json` OpenAPI spec by adding four crucial parameters to the `Images.generate()` method. The new parameters include `action`, `image_urls`, `aspect_ratio`, and `resolution`, enhancing the flexibility and functionality of image generation. Additionally, the documentation for `ace-token` and `claude-code` was removed as no SDK changes were necessary."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#974",
+      "title": "Enhance GitHub Proxy Model Mapping in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "openai",
+        "platform",
+        "proxy",
+        "models"
+      ],
+      "public": false,
+      "summary": "This update maps GitHub proxy Claude model aliases to Copilot-native dot model IDs, ensuring compatibility with the upstream system. The changes maintain stability for public model names while correcting the underlying model references. Key models like Gemini, GPT, and embedding capabilities remain unchanged."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#355",
+      "title": "Sync Async Task Polling Docs with Latest OpenAPI in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "documentation",
+        "update",
+        "skills",
+        "api",
+        "openapi"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/355",
+      "summary": "This update aligns the Skills documentation with the latest OpenAPI task-polling schema. Key changes include the replacement of `task_id` payloads with `id`/`ids` for both single and batch polling methods. Additionally, several skill-level endpoints have been updated to reflect these changes, ensuring consistency across the documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#369",
+      "title": "Docs alignment verified for nano-banana in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docs",
+        "sync",
+        "verification",
+        "nano-banana"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/369",
+      "summary": "This update confirms the alignment of documentation for the `nano-banana` service with no code changes required. The endpoint and request shape parity checks were successful, ensuring that the service operates as specified. Other services, `ace-token` and `claude-code`, remain outside the scope of this sync."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#64",
+      "title": "Enhance Documentation Coverage in Docs 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "documentation",
+        "updates",
+        "cleanup",
+        "navigation",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/64",
+      "summary": "This update improves navigation coverage for the Claude Code, WebExtractor, and zh-Hans Publisher guide pages. It also consolidates NanoBanana MCP documentation by removing outdated files and ensuring the correct naming convention is maintained. Additionally, hidden guide pages that are no longer generated have been removed, streamlining the documentation for better accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#973",
+      "title": "Enhance GitHub Copilot Integration in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "openai",
+        "kubernetes",
+        "docker"
+      ],
+      "public": false,
+      "summary": "This update introduces a Dockerized GitHub Copilot proxy service, enhancing the Platform Service's capabilities. Key changes include the addition of Kubernetes deployment configurations, a new checker configuration for OpenAI models, and automatic MongoDB account record updates. The integration aims to streamline interactions with GitHub Copilot, improving overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#402",
+      "title": "Update to Official Logo Slices in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "logo",
+        "branding",
+        "frontend",
+        "css",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update replaces the hand-drawn default logo with official transparent logo slices for improved branding. The A mark is rendered as a PNG crop, while the `ceData` wordmark uses an alpha mask, adapting to light and dark modes seamlessly. Tenant-provided logos remain unaffected, ensuring a consistent user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#63",
+      "title": "Sync Private Services and Regenerate OpenAPI in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "docs",
+        "openapi",
+        "sync",
+        "private-services"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/63",
+      "summary": "This update ensures that private services documented in the navigation or OpenAPI files are included when syncing from PlatformBackend. Additionally, the OpenAPI files for drawai, qrart, sora, tiktok, and tw have been regenerated to eliminate stale data. The excluded-service list remains unchanged, maintaining the integrity of the documentation."
+    },
+    {
       "id": "gh:pr:AceDataCloud/SDK#153",
       "title": "Sync: align Fish audio + model enums with latest Docs OpenAPI in S D K 📝",
       "tags": [
