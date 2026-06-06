@@ -3,6 +3,248 @@
   "date": "2026-06-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#985",
+      "title": "Streamline Uploads to Hong Kong Bucket in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cost-saving",
+        "infrastructure",
+        "migration",
+        "uploads",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update migrates uploads from the Beijing COS bucket to a new Hong Kong bucket, significantly reducing costs associated with cross-border data transfer. The change affects 14 workers and ensures that uploads are processed locally, eliminating the need for global acceleration. All existing URLs remain functional, and the environment variable for acceleration is retained for emergency use."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#603",
+      "title": "Enhance Documentation with 8 New OpenAI Client Guides in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "openai",
+        "guides",
+        "integration",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces eight detailed integration guides for OpenAI-compatible clients, including Cherry Studio, ChatBox, and LobeChat. Each guide provides comprehensive instructions on setup, API token acquisition, and unique features, enhancing user experience and accessibility. The addition of these resources aims to streamline the integration process for developers using AceDataCloud."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#370",
+      "title": "Scaled Down MCP Sora Replicas to Zero in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "deployment",
+        "scaling",
+        "sora",
+        "production"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/370",
+      "summary": "The production deployment for MCP Sora has been updated to set the replicas from 1 to 0. This change reflects the decision to fully offline Sora workloads, effectively scaling down the service. The modification was made in the deployment configuration file."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#984",
+      "title": "Scaled down all Sora deployments to zero in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "deployment",
+        "sora",
+        "production",
+        "scaling",
+        "platformservice"
+      ],
+      "public": false,
+      "summary": "All production Sora deployments in the PlatformService have been scaled down to zero replicas. This change affects the openaihk, mountsea, cqtai, wcnb, and ttapi deployments, effectively stopping all Sora workloads. The adjustment is part of the effort to fully offline the Sora instances."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#983",
+      "title": "Optimized Production Requests for Mountsea-Sora in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "optimization",
+        "deployment",
+        "resource-management"
+      ],
+      "public": false,
+      "summary": "This update reduces the CPU and memory requests for the platform-service-mountsea-sora deployment, adjusting CPU from 50m to 40m and memory from 300Mi to 240Mi. These changes reflect observed usage patterns, allowing for more efficient resource allocation while maintaining performance limits."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#981",
+      "title": "Optimized Production Requests in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "optimization",
+        "deployment",
+        "resources",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update fine-tunes the production requests for the openaihk-sora service by reducing CPU from 50m to 40m and memory from 300Mi to 240Mi. The adjustments are based on observed usage, allowing for a more efficient allocation of resources while maintaining current operational limits."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#980",
+      "title": "Optimized Production Requests for OpenAIHK Nanobanana in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "optimization",
+        "deployment",
+        "resource-management"
+      ],
+      "public": false,
+      "summary": "This update reduces the CPU and memory requests for the OpenAIHK Nanobanana deployment, adjusting CPU from 50m to 40m and memory from 300Mi to 240Mi. These changes are based on observed usage, allowing for more efficient resource allocation while maintaining performance limits."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#979",
+      "title": "Optimized Production Resource Requests in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "optimization",
+        "deployment",
+        "resource-management"
+      ],
+      "public": false,
+      "summary": "This update fine-tunes the production resource requests for the platform-service-openaihk-hailuo. The CPU request has been reduced from 50m to 40m and memory from 300Mi to 240Mi, reflecting observed usage patterns. These changes help to lower reserved capacity while maintaining current operational limits."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#978",
+      "title": "Optimize Production Resource Requests in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "optimization",
+        "resource-management",
+        "deployment",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update fine-tunes the production requests for the openaihk-flux service by reducing CPU from 50m to 40m and memory from 300Mi to 240Mi. The adjustments are based on observed usage patterns, allowing for better resource allocation without changing the limits. This change aims to reclaim reserved capacity effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#977",
+      "title": "Reduce CPU and memory requests for Suno production in Platform Service ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "deployment",
+        "resources",
+        "optimization",
+        "openaihk",
+        "suno"
+      ],
+      "public": false,
+      "summary": "Adjusted the CPU and memory requests for the OpenAIHK Suno production deployment. CPU requests were lowered from 200m to 160m and memory from 400Mi to 320Mi. This change reclaims unused capacity while keeping current limits intact. No functional changes to the service were made."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#976",
+      "title": "Optimize Memory Requests for OpenAI Deployment in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "optimization",
+        "deployment",
+        "resource-management"
+      ],
+      "public": false,
+      "summary": "This update reduces the memory request for the openaihk-openai production deployment from 400Mi to 320Mi, while keeping the CPU request unchanged at 20m. The adjustment is based on observed memory usage, allowing for better resource management without affecting performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Guard#24",
+      "title": "Reduce web pod resource requests in X402 Guard ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "X402Guard",
+        "deployment",
+        "performance",
+        "resources",
+        "optimization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Guard/pull/24",
+      "summary": "Adjusted x402guard-web production pod requests to better match observed usage. CPU requests were lowered from 50m to 40m, and memory requests from 64Mi to 48Mi. Limits remain unchanged, allowing the cluster to reclaim some reserved capacity without impacting performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WebExtrator#15",
+      "title": "Optimized API Resource Requests in Web Extrator 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WebExtrator",
+        "optimization",
+        "deployment",
+        "api",
+        "resources"
+      ],
+      "public": false,
+      "summary": "This update reduces the production resource requests for the webextrator-api, lowering CPU from 50m to 40m and memory from 256Mi to 192Mi. The adjustments reflect current usage patterns, ensuring efficient resource allocation while maintaining performance limits."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#504",
+      "title": "Optimize Production Resource Requests in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "optimization",
+        "deployment",
+        "resources",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update reduces the production resource requests for the platform-publisher, lowering CPU from 200m to 150m and memory from 1Gi to 768Mi. These adjustments are made to better align with actual usage, which has been significantly lower, while maintaining existing limits for burst capacity. This change aims to reclaim reserved resources efficiently."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#156",
+      "title": "Boost production resource requests for platform-gateway in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "deployment",
+        "performance",
+        "gateway",
+        "resources"
+      ],
+      "public": false,
+      "summary": "This update increases the production resource requests for the platform-gateway, raising CPU from 200m to 300m and memory from 200Mi to 320Mi. These adjustments are made in response to observed high CPU and memory usage on existing gateway pods, helping to alleviate throttling and scheduling pressures without changing the limits. Overall, this change aims to enhance the performance and reliability of the gateway service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#975",
+      "title": "Disable GitHub proxy embeddings in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "embeddings",
+        "config",
+        "platform service",
+        "mongo"
+      ],
+      "public": false,
+      "summary": "Removed `text-embedding-3-small` and `text-embedding-ada-002` from the GitHub proxy checker configuration. The checker now prevents these embeddings from being re-added or re-enabled automatically. The live Mongo account was updated to immediately mark GitHub proxy embedding capabilities as disabled. This ensures embedding checks remain consistent with the updated configuration."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthBackend#169",
       "title": "Enhance Python 3.8 Compatibility in Backend 🚀",
       "tags": [
