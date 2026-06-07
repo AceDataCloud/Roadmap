@@ -1,0 +1,55 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-06-07",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#403",
+      "title": "Introducing Stripe Auto Top-Up Configuration Page in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "stripe",
+        "frontend",
+        "auto-recharge",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update adds a new feature-flagged console page for Stripe auto top-up configuration, allowing users to bind applications and saved cards for automatic recharges. Key changes include a new router route, menu item, and operator for managing auto-recharge configurations, along with support for multiple languages. The implementation ensures a seamless user experience while maintaining compliance with Stripe's requirements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#170",
+      "title": "Empower Users with Self-Service Account Deletion in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "user-management",
+        "security",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update introduces a new backend endpoint allowing authenticated users to delete their own accounts via a DELETE request to `/api/v1/users/me`, addressing Apple App Store requirements. The permission model has been adjusted to ensure that only the account owner can perform this action, while superusers retain the ability to delete any account. Comprehensive tests have been added to validate the functionality and security of this feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#857",
+      "title": "Resolve iOS App Store Rejection Issues in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ios",
+        "app-store",
+        "bug-fix",
+        "user-experience",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/857",
+      "summary": "This update addresses critical issues that led to the rejection of the iOS app submission. Key changes include gating unresponsive 'Top Up' buttons on iOS, enhancing error messaging for Apple Sign In failures, and adding an in-app account deletion feature. These improvements ensure compliance with App Store guidelines and enhance user experience."
+    }
+  ]
+}
