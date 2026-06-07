@@ -3,6 +3,54 @@
   "date": "2026-06-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Index#70",
+      "title": "New Automated Corporate Bank Transfer Implementation in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "bank-transfer",
+        "automation",
+        "implementation",
+        "Nexior"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive implementation plan for automated detection and recharge of corporate bank transfers, consisting of 11 documents and approximately 1.7k lines. The goal is to enable enterprise clients to automatically match pending orders and complete balance recharges without manual intervention after transferring funds to the platform's corporate account."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#69",
+      "title": "Enterprise P0 Technical Design for Governance and Billing in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "design",
+        "governance",
+        "billing",
+        "audit"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive technical design document for the enterprise-level governance, audit, and invoicing features. Key components include enhancements to budget governance, the creation of a unified audit log, and the implementation of billing and credit limit functionalities. The document outlines specific changes to the Django models and API contracts, ensuring a robust framework for B2B transactions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#407",
+      "title": "Enhance Auto-Recharge Confirmation Flow in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "auto-recharge",
+        "stripe",
+        "frontend",
+        "bugfix",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update fixes the auto-recharge saved-card confirmation process by ensuring the confirmed `setup_intent_id` is passed correctly after a successful Stripe SetupIntent. It also cleans up unconfirmed pending configurations to prevent stale states that could block retries. Key changes include updates to the request body and improvements in user experience during card setup."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#610",
       "title": "Enhance auto-recharge config handling in Backend 🚀",
       "tags": [
