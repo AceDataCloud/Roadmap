@@ -3,6 +3,100 @@
   "date": "2026-06-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#614",
+      "title": "Enhance auto-recharge deployment in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cronjob",
+        "deployment",
+        "backend",
+        "auto-recharge",
+        "payment"
+      ],
+      "public": false,
+      "summary": "This update ensures the production auto-recharge CronJob is created during PlatformBackend deployments by applying the necessary manifest. The CronJob now correctly points to the AceDataCloud PayBackend, enabling successful payment processing. Manual verification confirmed that the updated configuration works as intended, improving the reliability of the auto-recharge feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#174",
+      "title": "Enhance Account Deletion Process in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "user",
+        "deletion",
+        "backend",
+        "privacy",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update modifies the account deletion process to preserve user data while disabling future logins. Key identifiers are anonymized but historical data remains intact, ensuring compliance with privacy guidelines. The changes include updates to the user model and associated tests to validate the new behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#173",
+      "title": "Enhance user skills parsing for Python 3.8 compatibility in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "python",
+        "testing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical crash in the AuthBackend production rollout by ensuring that user skill frontmatter parsing is compatible with Python 3.8. Key changes include modifying the `user_skills.py` file to implement a fallback for the `frontmatter` import and adding a new unit test to validate the parsing functionality. These improvements enhance stability and maintain functionality across different Python versions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#38",
+      "title": "Enhance saved card retrieval for Setup Intents in Pay Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "stripe",
+        "setupintents",
+        "carddetails",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update improves the retrieval of saved card details when accessing Stripe SetupIntents. By expanding the payment method during the retrieval process, the system now returns essential card metadata including card brand and last four digits, enhancing the user interface experience after a successful setup."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#172",
+      "title": "Enhance Account Deletion Process in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "account",
+        "deletion",
+        "security",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update improves the account deletion flow by implementing soft deletion and PII anonymization for users. The changes ensure that authenticated users can safely delete their accounts while retaining necessary audit information. Additionally, the AuthBackend now rejects tokens from inactive or deleted users, enhancing security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#408",
+      "title": "Enhance Auto-Recharge Clarity in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "enhancement",
+        "auto-recharge"
+      ],
+      "public": false,
+      "summary": "This update improves the auto-recharge feature by clarifying the display of pending card configurations. Key changes include better labeling for application columns, distinct indicators for missing cards, and actionable prompts for users to add a card when necessary. These enhancements aim to streamline user experience and reduce confusion."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#70",
       "title": "New Automated Corporate Bank Transfer Implementation in Index 🚀",
       "tags": [
