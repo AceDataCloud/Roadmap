@@ -3,6 +3,53 @@
   "date": "2026-06-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#410",
+      "title": "Enhance Auto Recharge Access in Frontend Web ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "feature",
+        "ui",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces an Auto Recharge button to the General Application quick-access card on the applications page. The button is gated by the production FeatureFlag `auto-recharge` and utilizes the existing auto-recharge route, ensuring a seamless user experience without duplicating settings. This change enhances visibility and access to the auto-recharge feature for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#859",
+      "title": "Set OpenAI Image Default Size to Empty in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "openai",
+        "image",
+        "ui",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/859",
+      "summary": "This update changes the default size for OpenAI Image requests to be empty instead of 1024x1024. An explicit Auto option has been added to the size selector, and empty sizes will be omitted from generate/edit request payloads to allow backend defaults to apply. These changes enhance the flexibility of image generation and editing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#409",
+      "title": "Enhance Order Details with Payment Icons in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "payment",
+        "order",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces payment method icons next to the selected payment method on the order detail page, enhancing user experience. It utilizes existing CSS for icons of WeChat Pay, Alipay, Stripe, X402, and PayPal, while Reward orders are displayed without an icon. The changes improve visual clarity and maintain consistency across payment options."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#614",
       "title": "Enhance auto-recharge deployment in Backend 🚀",
       "tags": [
