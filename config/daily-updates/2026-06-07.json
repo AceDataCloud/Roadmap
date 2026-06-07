@@ -3,6 +3,100 @@
   "date": "2026-06-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#610",
+      "title": "Enhance auto-recharge config handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "payment",
+        "stripe",
+        "auto-recharge",
+        "config"
+      ],
+      "public": false,
+      "summary": "This update ensures that newly-created auto-recharge configurations remain inactive until the Stripe card setup is confirmed. It also replaces stale unconfirmed configurations instead of blocking retries, improving the user experience during payment setup. Key modifications were made in the auto_recharge_config.py file to implement these changes effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#858",
+      "title": "Enhance iOS Account Deletion with Typed Confirmation in Nexior 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ios",
+        "security",
+        "internationalization",
+        "user-experience",
+        "profile"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/858",
+      "summary": "This update strengthens the account deletion process for iOS users by introducing a strict typed confirmation requirement. The 'Delete account' option is now exclusive to iOS, featuring a detailed warning and a requirement for users to type their username before proceeding. Additionally, internationalization support has been added for 17 languages, ensuring a consistent user experience across different locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#137",
+      "title": "New Account Deletion Flow in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "frontend",
+        "i18n",
+        "user-experience",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces a new account deletion feature on the user profile page, ensuring compliance with App Store guidelines. Users can now delete their accounts with a strict confirmation process that requires typing their username, preventing accidental deletions. The feature also includes internationalization support for 17 languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#406",
+      "title": "Fix consent checkbox text overflow in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "bugfix",
+        "consent"
+      ],
+      "public": false,
+      "summary": "This update addresses the issue of the auto-recharge consent checkbox text overflowing outside the create dialog. A new class has been added to allow the checkbox label to wrap properly within the dialog's width, enhancing the user experience. Additionally, text sizing and line-height have been scoped for better styling control."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#405",
+      "title": "Enhance Auto-Recharge App Selection with Search and Grouping in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ux",
+        "frontend",
+        "localization",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces three key UX improvements to the application select on the auto-recharge console. Users can now filter applications by name, while global-scope applications are prioritized at the top with a clear 'General Balance' label. Additionally, localized group labels have been added across multiple languages to enhance usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#404",
+      "title": "Fix auto-recharge issues and enhance Stripe integration in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "stripe",
+        "frontend",
+        "auto-recharge"
+      ],
+      "public": false,
+      "summary": "This update resolves multiple issues on the auto-recharge page, including fixing the application dropdown and package selection. It also addresses the Stripe card input problem by adding a fallback for the publishable key. These changes improve user experience and ensure proper functionality in production."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#403",
       "title": "Introducing Stripe Auto Top-Up Configuration Page in Frontend Web 🚀",
       "tags": [
