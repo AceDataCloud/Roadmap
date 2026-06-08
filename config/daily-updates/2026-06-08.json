@@ -3,6 +3,22 @@
   "date": "2026-06-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#2",
+      "title": "Automate PyPI Publishing for Coding Bridge Agent in Coding Bridge Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "ci",
+        "pypi",
+        "automation",
+        "release"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/2",
+      "summary": "This update introduces a new GitHub Actions workflow that automatically publishes the `coding-bridge-agent` package to PyPI on every push to the main branch. The versioning follows a date-based CalVer format, ensuring unique builds without collisions. This enhancement streamlines the release process and makes the package readily available for users."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#860",
       "title": "Introducing Coding Bridge Remote Control in Nexior 🚀",
       "tags": [
