@@ -3,6 +3,54 @@
   "date": "2026-06-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#987",
+      "title": "Introducing coding-bridge: A New WebSocket Relay in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "websocket",
+        "relay",
+        "security",
+        "fastapi",
+        "mongodb",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces **coding-bridge**, a stateful WebSocket relay service that allows authenticated browsers to control Claude Code and Codex sessions on users' local machines. Key features include secure Ace JWT verification, a robust MongoDB persistence layer, and a device-flow pairing mechanism. This service enhances user experience by maintaining tool execution on remote nodes while ensuring ownership isolation and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#71",
+      "title": "Introducing Coding Bridge Design in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "design",
+        "coding-bridge",
+        "security",
+        "architecture"
+      ],
+      "public": false,
+      "summary": "This update adds a comprehensive design document for the Coding Bridge, a system enabling remote control of Claude Code/Codex from web and mobile devices. Key features include a secure architecture leveraging Ace JWT and MongoDB, a QR device-flow for pairing, and a phased implementation plan. The project builds on the VibeBridge framework, ensuring robust permission management and multi-session capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#411",
+      "title": "Enable Auto Recharge by Default in Frontend Web ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "auto-recharge",
+        "ui",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "The Auto Recharge feature is now displayed by default in the console sidebar, allowing direct access without feature flag restrictions. Additionally, the Auto Recharge button is visible on application quick access cards, enhancing user experience. Menu comments in both English and Chinese have been updated to reflect these changes."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#986",
       "title": "Enhance OpenAI Image Edit Size Inference in Platform Service 🎨",
       "tags": [
