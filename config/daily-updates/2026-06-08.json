@@ -3,6 +3,168 @@
   "date": "2026-06-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#865",
+      "title": "Fix Conversation History Actions for Better Functionality in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "vuex",
+        "coding-bridge",
+        "conversation-history"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/865",
+      "summary": "This update resolves issues with the Conversation History panel on the coding bridge. The actions `getHistory` and `getHistoryDetail` were missing from the default export, preventing Vuex from registering them. With this fix, the panel will now display correctly, and the refresh functionality will work as intended."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#5",
+      "title": "Enhance transcript accuracy by filtering out noise in Coding Bridge Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "bugfix",
+        "transcripts",
+        "security",
+        "testing",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/5",
+      "summary": "This update improves the history reader by stripping tool-injected context from real transcripts, significantly reducing junk titles from 104 to just 5. Key changes include unwrapping Codex context messages and scanning for real text blocks in Claude messages, ensuring sensitive information is no longer leaked. The implementation is backed by 5 new regression tests, confirming the effectiveness of these enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#864",
+      "title": "Enhance Shared App Visibility and Balance Display in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "ui",
+        "bugfix",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/864",
+      "summary": "This update introduces a 'Shared' badge for applications granted to users, enhancing clarity on ownership. Additionally, it fixes the display of the effective balance by ensuring that grantees see a valid number instead of a blank value. These changes improve user experience by providing better visibility into shared applications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#618",
+      "title": "Enhance Grantee Balance Visibility in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "backend",
+        "grantee",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update fixes the issue where grantees received a null value for their remaining balance. Now, the effective remaining amount is calculated based on the grantee's credentials, ensuring they see their available quota accurately. New tests have been added to validate these changes, enhancing the overall reliability of the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#990",
+      "title": "Streamline Grok Models by Removing Dead Families in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "grok",
+        "cleanup",
+        "models",
+        "platform",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update removes non-functional grok model families that were causing HTTP 500 errors due to lack of valid upstream accounts. Key changes include the deletion of dead models from configuration files and the maintenance of price-safety invariants for the remaining models. The update ensures that only active models are retained, improving overall system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#617",
+      "title": "Streamlined Grok Model Families in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "grok",
+        "backend",
+        "api",
+        "documentation",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update removes several non-functional Grok model families that were previously advertised and billed, addressing the issue of HTTP 500 errors. Key changes include the removal of dead entries from the OpenAPI enums, cost rules, and model registry, along with updates to documentation across multiple languages. The grok API and associated tests have been adjusted accordingly, ensuring a smoother experience for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#616",
+      "title": "Streamline OpenAI Responses Probe for GPT Models in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "e2e",
+        "openai",
+        "probe",
+        "backend",
+        "stability"
+      ],
+      "public": false,
+      "summary": "This update refines the continuous E2E probe for the OpenAI Responses API by restricting it to only GPT text models. The previous implementation included various non-text and slow models, leading to instability. With this change, the probe now reliably samples from 27 stable GPT models, ensuring consistent performance without affecting production routing or billing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#989",
+      "title": "Scope Conversations to End-User, Not App Owner in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "conversations",
+        "authorization",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where conversation lists returned different results for the same end-user due to the credential-as-authorization model. By introducing a new variable to correctly scope conversation history to the actual end-user, the fix ensures that users see their own chat history rather than that of the app owner. The changes have been tested and confirmed to work as intended."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#4",
+      "title": "Enhance Local Coding History Replay in Coding Bridge Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "feature",
+        "history",
+        "coding",
+        "transcripts",
+        "Claude",
+        "Codex"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/4",
+      "summary": "This update introduces the ability to read and replay local coding history from Claude Code and Codex, ensuring that refreshing the studio page retains the conversation context. A new reader module normalizes transcripts into consistent event shapes for seamless integration with the existing browser viewer. Additionally, the replay functionality allows users to resume Claude sessions, enhancing the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#863",
+      "title": "Enhance History Sync & Replay in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "coding-bridge",
+        "history",
+        "sync",
+        "replay"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/863",
+      "summary": "This update introduces a new history sync and replay feature for the Coding Bridge studio page, allowing users to access past sessions from Claude Code and Codex without losing context during refreshes. A history drawer lists previous sessions, and users can replay or resume sessions seamlessly. The implementation ensures that only minimal data is cached, enhancing performance and user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/CodingBridgeAgent#3",
       "title": "Update pairing claim URL to current Studio route in Coding Bridge Agent 🚀",
       "tags": [
