@@ -3,6 +3,86 @@
   "date": "2026-06-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#615",
+      "title": "Disable Midjourney by Default in Backend 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "update",
+        "midjourney"
+      ],
+      "public": false,
+      "summary": "This update disables the Midjourney feature for newly initialized sites by setting `DEFAULT_FEATURES_MIDJOURNEY.enabled` to `false`. Key changes include updating the public API to ensure Midjourney is no longer listed among available services and documents. Existing tenant sites remain unaffected, maintaining their current configurations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#1",
+      "title": "Launch of Node Daemon for Remote Claude Code in Coding Bridge Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "feature",
+        "security",
+        "local-execution",
+        "daemon",
+        "coding-bridge",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/1",
+      "summary": "The new node daemon for the Coding Bridge Agent allows users to run Claude Code locally while controlling it through the AceDataCloud web app or mobile devices. Key features include local execution, outbound-only connections, and a secure pairing process that ensures user permissions are respected. This implementation is designed to enhance user privacy and security by keeping all code execution and file access local to the user's machine."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#73",
+      "title": "Revamped coding-bridge Implementation in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "licensing",
+        "architecture",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update clarifies that coding-bridge and Nexior are newly developed under the MIT license, with only the Node daemon adapting GPL code from VibeBridge. Key changes include reframing the project as a reference architecture and ensuring that coding-bridge is not mischaracterized as a GPL derivative. The licensing and reuse tables have also been updated to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#72",
+      "title": "Enhance Mongo Archive Deployment with Resilience in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "deployment",
+        "mongo",
+        "tke",
+        "archive",
+        "resilience"
+      ],
+      "public": false,
+      "summary": "This update introduces a continuous TKE Deployment for the Suno Mongo archive job, ensuring persistent runner progress is saved to COS. Key additions include management helpers for one-shot and deployment operations, utilizing internal Mongo and COS endpoints in Hong Kong. The deployment is currently active with a durable checkpoint system for improved reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#68",
+      "title": "Introducing Auto Top-up Technical Plan in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "feature",
+        "payment",
+        "auto-recharge",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update adds a comprehensive technical plan for the Auto Top-up feature, detailed down to the function level in the new `.plans/AUTO-RECHARGE.md` file. The system will automatically recharge user balances using authorized payment methods when they fall below a set threshold, enhancing user experience by eliminating manual payment processes. Key components include a new data model, backend endpoints, and risk control measures."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#987",
       "title": "Introducing coding-bridge: A New WebSocket Relay in Platform Service 🚀",
       "tags": [
