@@ -1,0 +1,22 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-06-08",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#986",
+      "title": "Enhance OpenAI Image Edit Size Inference in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "image-processing",
+        "openai",
+        "platform-service",
+        "updates",
+        "enhancements"
+      ],
+      "public": false,
+      "summary": "This update improves the inference of image edit sizes for OpenAI by deriving dimensions from the first reference image. It ensures that the inferred sizes are valid multiples of 16, adhering to gpt-image-2 limits, and forwards these sizes in edit requests. Key files have been modified and new tests added to validate the functionality."
+    }
+  ]
+}
