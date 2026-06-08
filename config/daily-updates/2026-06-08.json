@@ -3,6 +3,70 @@
   "date": "2026-06-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#3",
+      "title": "Update pairing claim URL to current Studio route in Coding Bridge Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "fix",
+        "url",
+        "update",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/3",
+      "summary": "This update fixes the pairing claim link that was previously pointing to an obsolete route. The default claim URL template has been updated in the configuration files to reflect the new Studio route, ensuring users can successfully access the pairing link. Changes were made in the config file, environment example, and README documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#988",
+      "title": "Enhance CORS Support for Studio in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cors",
+        "update",
+        "documentation",
+        "deployment",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update adds studio and hub hosts to the CORS allowlist for the coding bridge, ensuring that requests from https://studio.acedata.cloud are no longer blocked. The deployment environment's ALLOWED_ORIGINS has been aligned with runtime defaults, and the README documentation has been updated accordingly. This change improves accessibility for users interacting with the API from the studio environment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#862",
+      "title": "Streamline Navigation by Removing Profile Page in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "cleanup",
+        "navigation",
+        "removal",
+        "frontend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/862",
+      "summary": "This update completely removes the unused /profile page and its associated route from the Nexior application. Key changes include the deletion of the profile navigation entry, the profile route registration, and the profile component files. As a result, any direct access to /profile will now redirect to the not-found route."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#861",
+      "title": "Enhance Account Management with Delete Option in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ios",
+        "user-experience",
+        "feature",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/861",
+      "summary": "This update introduces a new **Delete Account** option directly in the avatar dropdown for iOS users, improving discoverability. The delete flow has been modularized into a reusable component, ensuring a consistent experience across the app. This change addresses user feedback and complies with Apple’s guidelines for account management."
+    },
+    {
       "id": "gh:pr:AceDataCloud/CodingBridgeAgent#2",
       "title": "Automate PyPI Publishing for Coding Bridge Agent in Coding Bridge Agent 🚀",
       "tags": [
