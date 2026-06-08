@@ -3,6 +3,306 @@
   "date": "2026-06-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#876",
+      "title": "Dynamic Composer Options Powered by Node Capabilities in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "coding-bridge",
+        "ui",
+        "dynamic",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/876",
+      "summary": "This update enhances the Coding Bridge composer by rendering dropdown options for provider, model, reasoning effort, and permission mode directly from the node's capabilities instead of hard-coding them. This change allows for seamless updates to the UI without redeploying the web app whenever new models or effort tiers are introduced. The implementation includes a new capabilities map and ensures that the UI remains flexible and responsive to backend changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#991",
+      "title": "Increase WebSocket Max Size for Image Payloads in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "docker",
+        "kubernetes",
+        "websocket",
+        "images"
+      ],
+      "public": false,
+      "summary": "This update raises the WebSocket maximum size to 32 MiB in the relay's uvicorn server, addressing issues with image payloads exceeding the previous limit. The change ensures that images up to 12 MB can be processed without connection drops, enhancing the reliability of the CodingBridge composer. Both Docker and Kubernetes deployments are affected by this single modification."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#877",
+      "title": "Enhance CodingBridge with Image Attachments in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "codingbridge",
+        "images",
+        "localization",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/877",
+      "summary": "This update introduces the ability to paste and attach images directly in CodingBridge sessions, aligning with VibeBridge's features. Users can now share visual prompts by attaching images up to 12 MB, with a maximum of 8 images per turn. The changes include updates to the composer, store actions, and transcript display, along with new internationalization keys for better localization support."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#9",
+      "title": "Dynamic Provider Management in Coding Bridge Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "features",
+        "capabilities",
+        "ui",
+        "dynamic",
+        "node"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/9",
+      "summary": "This update introduces a new capabilities system that allows the node to dynamically advertise available providers, models, and effort tiers to the UI. By eliminating hard-coded values, the web app can now reflect changes instantly without requiring redeployments. The new structure enhances flexibility and ensures that the browser always displays the most current options available from the node."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#874",
+      "title": "Enhance Directory Selection with File Browser in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "i18n",
+        "coding-bridge",
+        "directory"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/874",
+      "summary": "This update introduces a new working-directory file browser, allowing users to easily select folders without typing absolute paths. The feature includes a `DirectoryDialog` that lists directories and files, supports parent navigation, and handles permission errors gracefully. Additionally, it enhances internationalization with new keys for 18 locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#875",
+      "title": "Streamline Download Page with Header-less Layout in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "layout",
+        "improvement",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/875",
+      "summary": "The download page now features a new header-less layout, enhancing the visual appeal by removing the top navigation header. A dedicated hero section is now more prominent, while the shared layout remains unchanged for other pages. Additionally, the minimum height of the page has been adjusted for a better user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#873",
+      "title": "Enhance Backend Switching and Reasoning Effort in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "backend",
+        "features",
+        "i18n",
+        "ui",
+        "coding-bridge"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/873",
+      "summary": "This update introduces a backend selector allowing users to switch between Claude and Codex, along with a reasoning-effort selector for both backends. The session header now displays the active backend, and the model dropdown adjusts based on the selected backend. Additionally, 9 new internationalization keys have been added to support 18 locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#8",
+      "title": "Enhance I/O with Remote Directory Browser & Image Input in Coding Bridge Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "feature",
+        "io",
+        "images",
+        "directory",
+        "coding-bridge-agent"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/8",
+      "summary": "This update introduces two essential I/O features for the Coding Bridge Agent: a remote directory browser and image input support. The new `fs.list` action allows users to browse directories and select working paths, while the `session.start` and `session.send` methods now accept images in various formats. These enhancements improve user experience and functionality, ensuring better integration with existing providers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#871",
+      "title": "New Coding Bridge Sidebar Entry Added in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "navigation",
+        "admin",
+        "i18n",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/871",
+      "summary": "This update introduces a new 'Coding Bridge' entry in the sidebar navigation, allowing users to access the `/coding-bridge` page directly from the UI. The feature is gated by a site feature flag and can be enabled or disabled by site admins through the settings. Additionally, internationalization support has been added for all 18 locales, ensuring consistent user experience across different languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#619",
+      "title": "Add codingBridge default feature in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "nexior",
+        "codingbridge",
+        "defaults"
+      ],
+      "public": false,
+      "summary": "This update registers a new `codingBridge` entry in the site feature defaults, allowing the Nexior sidebar toggle to function with a clear platform default. The feature is disabled by default, enabling site admins to opt in via the Settings toggle. Legacy sites will automatically adopt this new feature without disrupting existing admin settings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#872",
+      "title": "Fix shared application task loading issues in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "tasks",
+        "shared-apps",
+        "nexior",
+        "credential"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/872",
+      "summary": "This update resolves the issue where selecting a shared application in task-based services resulted in a 404 error and prevented task loading. The fix ensures that grantees use their own credentials instead of attempting to create new ones, which were causing the failures. As a result, all 15 factory-based services can now successfully load tasks for shared applications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#869",
+      "title": "Revamped Mobile Download Page for a Fresh AceData Look in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "ux",
+        "design",
+        "i18n",
+        "mobile"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/869",
+      "summary": "The mobile download page has been completely redesigned to align with the AceData brand identity, featuring a clean layout with teal accents and the AceData logo. It now supports dark mode and includes a clearer structure with updated content in multiple languages. Additionally, new icons and improved accessibility features enhance the user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#867",
+      "title": "Enhance Composer UX with IME-Safe Features in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ux",
+        "frontend",
+        "i18n",
+        "features",
+        "coding-bridge"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/867",
+      "summary": "This update introduces significant improvements to the Coding Bridge composer, including a larger IME-safe send box that accommodates multi-line prompts. The model dropdown has been revamped to allow easy selection and custom input, while a new permission-mode selector enhances session control. Additionally, internationalization has been updated with new keys across 18 locales, ensuring a broader reach."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#7",
+      "title": "Exciting New Codex Provider and Features in Coding Bridge Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "feature",
+        "codex",
+        "claude",
+        "testing",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/7",
+      "summary": "This update introduces a live Codex provider alongside the existing Claude Code, enabling a seamless provider switch and enhanced reasoning effort control. Key changes include the addition of a new Codex provider that drives the `codex exec --json` CLI, improved session handling, and comprehensive testing to ensure functionality. The integration enhances the agent's capabilities while maintaining a focus on local execution and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#870",
+      "title": "Enhance Coding Bridge Assistant Text with Markdown in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "markdown",
+        "vue",
+        "ui",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/870",
+      "summary": "This update transforms the assistant text events in the Coding Bridge transcript to render as markdown instead of plain text. By utilizing the existing VueMarkdown component, the assistant's output now supports headings, lists, and syntax-highlighted code blocks, improving readability and user experience. Additionally, styling adjustments ensure the text inherits the transcript's color scheme while maintaining a clean layout."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#6",
+      "title": "Updated License to AGPL-3.0 for Better Compliance in Coding Bridge Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "license",
+        "agpl",
+        "compliance",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/6",
+      "summary": "This update changes the project's license from GPL-3.0-or-later to AGPL-3.0-or-later. Key files such as LICENSE, NOTICE, README.md, and pyproject.toml have been modified to reflect this new licensing, ensuring that anyone offering the service must also provide the source code. This change enhances compliance for network-facing functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#866",
+      "title": "Enhance Shared Badge Visibility in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "visual",
+        "enhancement",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/866",
+      "summary": "The grantee 'Shared' badge on the application balance card has been updated from a subtle gray text to a solid amber warning pill. This change improves visibility, ensuring users can easily identify when a key has been shared with them. The update is purely visual and does not affect any existing internationalization keys."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#868",
+      "title": "Enhance Transcript Tool Rendering in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "improvement",
+        "transcript",
+        "coding-bridge",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/868",
+      "summary": "This update improves the readability of the Coding Bridge transcript tool by implementing terminal-style rendering for shell commands and limiting the output display for tool results. Key changes include a new layout for tool use events, a muted inline subtitle for descriptions, and the addition of per-tool icons. These enhancements streamline the user experience and make the transcript more visually appealing."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#865",
       "title": "Fix Conversation History Actions for Better Functionality in Nexior 🚀",
       "tags": [
