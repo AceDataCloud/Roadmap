@@ -3,6 +3,219 @@
   "date": "2026-06-09",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#506",
+      "title": "Enhance task claiming to prevent duplicates in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "scheduler",
+        "task",
+        "postgresql",
+        "scaling",
+        "safety"
+      ],
+      "public": false,
+      "summary": "This update modifies the `fetch_next_pending_task()` function to use `select_for_update(skip_locked=True)`, ensuring that only one worker can claim a task at a time. This change addresses a race condition that could lead to duplicate publishes when multiple workers are active. The implementation is safe for the current single replica setup and lays the groundwork for future horizontal scaling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#887",
+      "title": "Enhance Slash-Command Experience in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "i18n",
+        "codingBridge",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/887",
+      "summary": "This update introduces a slash-command autocomplete feature in the Coding Bridge session view, allowing users to easily access runnable commands. Additionally, it implements notice rendering for commands that cannot be executed in headless mode, enhancing user feedback. The changes include updates to multiple components, models, and internationalization support across 18 locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#74",
+      "title": "Establishing a Path to Production-Ready PlatformPublisher in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "roadmap",
+        "production",
+        "reliability",
+        "platformpublisher"
+      ],
+      "public": false,
+      "summary": "This update introduces a detailed roadmap for making PlatformPublisher production-ready, addressing current reliability issues. Key changes include the addition of a verified plan outlining 10 sequenced PRs aimed at improving success rates and channel health. Immediate implementation begins with enhancing health probes and worker heartbeat functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#505",
+      "title": "Enhance reliability with health probes and heartbeat in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "enhancement",
+        "reliability",
+        "health-probes",
+        "heartbeat",
+        "production"
+      ],
+      "public": false,
+      "summary": "This update introduces health probes and a worker heartbeat mechanism to improve the reliability of the PlatformPublisher. Key changes include the implementation of liveness and readiness probes for the API and a heartbeat file for the worker, ensuring that wedged processes can be restarted effectively. These enhancements are part of the production-readiness plan, aiming to prevent downtime and improve overall system stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#886",
+      "title": "Enhance Model Selection Experience in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "user-experience",
+        "session-management",
+        "model-selection"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/886",
+      "summary": "This update improves the model selection process by allowing users to see the model list on the first click, eliminating confusion. Additionally, users can now switch models mid-session, enhancing flexibility without needing to restart. The changes streamline the user experience and ensure that the model pill reflects the active session accurately."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#993",
+      "title": "Optimize GPT Image Generation Timeout in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "timeout",
+        "optimization",
+        "gpt-image",
+        "retry-logic",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update modifies the retry logic for the gpt-image-2 generation process, capping the total timeout to 30 minutes shared across all attempts. Previously, each retry could lead to excessive wait times of up to 90 minutes, which has now been streamlined to enhance user experience. Fast transient errors will still allow for retries, while hung connections will fail after the budget is exhausted, improving overall responsiveness."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#12",
+      "title": "Enhance Headless Slash Command Support in Coding Bridge Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "feature",
+        "enhancement",
+        "testing",
+        "capabilities",
+        "commands"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/12",
+      "summary": "This update introduces support for headless slash commands in the Coding Bridge Agent, allowing users to discover and execute commands that are compatible with remote sessions. Key changes include the addition of a capabilities descriptor that lists runnable commands for each provider, enhancing user experience by preventing unsupported commands from being attempted. New tests have been added to ensure the functionality works as intended, with 111 tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#620",
+      "title": "Updated GPT-4o-Image Samples for Clarity in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "update",
+        "api",
+        "gpt-4o-image",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update refreshes the `gpt-4o-image` integration guide with accurate sample responses reflecting the current API format. Key changes include corrected response structures, updated image delivery methods, and adjustments to example payloads. These enhancements ensure that documentation aligns with live API behavior, improving user experience and reducing confusion."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#55",
+      "title": "Added 2026-06-09 ACE Buyback Transaction in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "buyback",
+        "roadmap",
+        "update",
+        "transaction",
+        "solana"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/55",
+      "summary": "This update incorporates the ACE buyback transaction from June 9, 2026, into the Roadmap's buyback history. The transaction details include a swap of 1.735858032 WSOL for 300,434.785048 ACE, processed through the Jupiter Aggregator v6. The buyback wallet has been updated to reflect this new entry, ensuring transparency and verifiability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#885",
+      "title": "Enhance working-directory button integration in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "accessibility",
+        "enhancement",
+        "design"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/885",
+      "summary": "This update refines the Coding Bridge composer's working-directory popover by integrating the folder-browse trigger directly into the input as a suffix icon. This change eliminates the visual separation between the input and button, enhancing the user experience while maintaining full keyboard accessibility. The input wrapper has also been rounded to align with the overall design aesthetic."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#13",
+      "title": "Enhance mid-session model switching capabilities in Coding Bridge Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "feature",
+        "session",
+        "model",
+        "update",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/13",
+      "summary": "This update introduces the ability to switch models during an active session without needing to start a new one. Key modifications include updates to the `Provider.send()` method to accept new parameters for model, effort, and permission mode, along with corresponding changes in the Claude and Codex providers. Comprehensive tests confirm that the new settings are correctly applied and remembered across session turns."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#884",
+      "title": "Enhance Backend Picker with Brand Icons in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "branding",
+        "coding-bridge"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/884",
+      "summary": "This update introduces distinct brand marks for Claude Code and OpenAI in the backend picker of the Coding Bridge session composer. The icons will enhance user recognition by replacing the generic code glyph with the official brand logos. Changes include the addition of SVG assets and modifications to the SessionView component for rendering these icons."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#882",
+      "title": "Enhance User Interaction with AskUserQuestion Card in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "coding-bridge",
+        "interaction",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/882",
+      "summary": "This update introduces an interactive AskUserQuestion card for the Coding Bridge tool, replacing the previous raw JSON display. Users can now respond directly within the session transcript, improving the overall experience and reducing confusion. The changes include new components for rendering questions and handling responses, while maintaining existing localization support."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#883",
       "title": "Feat(coding-bridge): disable a backend whose CLI is not installed on the node in Nexior ✨",
       "tags": [
