@@ -3,6 +3,1940 @@
   "date": "2026-06-09",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#159",
+      "title": "Enhance Gemini API to Bypass Auth Checks in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "api",
+        "gemini",
+        "polling",
+        "auth",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update adds the `/gemini/tasks` API ID to the `SKIP_AUTH_API_IDS`, allowing the Gemini video-job polling endpoint to bypass balance checks and avoid being recorded as a billable call. This change aligns with existing endpoints like `/seedance/tasks` and ensures that polling remains free, enhancing user experience. It complements updates in PlatformBackend and PlatformService for seamless integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#623",
+      "title": "Exciting New Gemini Video APIs Registered in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "gemini",
+        "backend",
+        "migrations",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update introduces two new API endpoints for Gemini: `/gemini/videos` and `/gemini/tasks`, enhancing the platform's capabilities for video generation and task management. The migrations create necessary database rows and link them to the existing Gemini service, ensuring proper billing and usage logging. Additionally, corresponding documentation has been established to support these new features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#996",
+      "title": "Introducing a Dedicated Gemini Worker Deployment in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "deployment",
+        "gemini",
+        "ttapi",
+        "service",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update adds a dedicated `platform-service-ttapi-gemini` Deployment and Service to handle Gemini video generation. It ensures that gemini jobs are processed in isolation, preventing interference with other ttapi providers' databases. The deployment includes a new service configuration and updates to the deployment script for seamless integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#23",
+      "title": "Upgrade k8s-set-context to v5 for enhanced features in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "upgrade",
+        "dependencies",
+        "k8s",
+        "azure",
+        "paybackend"
+      ],
+      "public": false,
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 4 to 5, introducing several enhancements including migration to ESM and updates to the Node version from 20 to 24. Additionally, various dependabot updates have been integrated to improve overall stability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#133",
+      "title": "Upgrade Azure/k8s-set-context to v5 in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "dependencies",
+        "upgrade",
+        "gateway",
+        "azure",
+        "k8s"
+      ],
+      "public": false,
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 1 to 5, introducing significant improvements such as migration to ESM and updates to the Node.js version from 20 to 24. Additionally, various dependabot updates have been included to enhance the overall functionality and security of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WanMCP#2",
+      "title": "Upgrade Azure/k8s-set-context to v5 in Wan M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WanMCP",
+        "upgrade",
+        "dependencies",
+        "azure",
+        "k8s",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/WanMCP/pull/2",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 4 to 5, introducing significant improvements such as migration to ESM with esbuild and vitest, as well as updating the Node version from 20 to 24. Additionally, various dependabot updates have been included to enhance the overall functionality and security of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/VeoMCP#53",
+      "title": "Upgrade Azure/k8s-set-context to v5 in Veo M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "VeoMCP",
+        "dependencies",
+        "upgrade",
+        "azure",
+        "k8s",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/VeoMCP/pull/53",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 4 to 5, introducing several enhancements including migration to ESM with esbuild and vitest. Additionally, it updates the Node version from 20 to 24 and includes multiple dependabot updates for improved security and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SoraMCP#52",
+      "title": "Upgrade Azure/k8s-set-context to v5 in Sora M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SoraMCP",
+        "dependencies",
+        "update",
+        "azure",
+        "k8s",
+        "sora"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SoraMCP/pull/52",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 4 to 5, introducing several enhancements including migration to ESM and updates to the Node version. Additionally, various dependabot updates have been incorporated to ensure compatibility and security. This change will improve the overall performance and maintainability of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/ShortURLMCP#38",
+      "title": "Upgrade to Azure/k8s-set-context v5 in Short U R L M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "ShortURLMCP",
+        "dependencies",
+        "upgrade",
+        "k8s",
+        "azure",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/ShortURLMCP/pull/38",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 4 to 5, introducing several enhancements including migration to ESM with esbuild and vitest. Additionally, it updates the Node version from 20 to 24 and includes various Dependabot updates for improved security and performance. These changes will enhance the deployment workflows and overall stability of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SerpMCP#53",
+      "title": "Upgrade Azure/k8s-set-context to v5 in Serp M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SerpMCP",
+        "dependencies",
+        "upgrade",
+        "azure",
+        "k8s",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SerpMCP/pull/53",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 4 to 5, introducing several enhancements including migration to ESM and an update to Node version 24. Additionally, various dependabot updates have been applied to improve the overall stability and performance of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedreamMCP#49",
+      "title": "Upgrade Azure/k8s-set-context to v5 in Seedream M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedreamMCP",
+        "dependencies",
+        "update",
+        "azure",
+        "k8s",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedreamMCP/pull/49",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 4 to 5, introducing several enhancements including migration to ESM and updates to the Node version from 20 to 24. Additionally, various dependabot updates have been applied to improve overall functionality and security. The changes will enhance deployment workflows and maintain compatibility with the latest standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedanceMCP#46",
+      "title": "Upgrade Azure/k8s-set-context to v5 in Seedance M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedanceMCP",
+        "dependencies",
+        "upgrade",
+        "azure",
+        "k8s",
+        "actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedanceMCP/pull/46",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 4 to 5, introducing several enhancements including migration to ESM and updates to the Node version. Additionally, various dependabot updates have been applied to improve the overall functionality and security of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/ProducerMCP#1",
+      "title": "Upgrade Azure/k8s-set-context to v5 in Producer M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "ProducerMCP",
+        "dependencies",
+        "upgrade",
+        "azure",
+        "k8s",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/ProducerMCP/pull/1",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 4 to 5, introducing several enhancements including migration to ESM and updates to the Node version from 20 to 24. Additionally, various dependabot updates have been integrated to improve overall functionality and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/NanoBananaMCP#58",
+      "title": "Upgrade Azure/k8s-set-context to v5 in Nano Banana M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "NanoBananaMCP",
+        "dependencies",
+        "update",
+        "azure",
+        "k8s",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/NanoBananaMCP/pull/58",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 4 to 5, introducing several enhancements including migration to ESM and updates to the Node version from 20 to 24. Additionally, various dependabot updates have been integrated to improve overall stability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MidjourneyMCP#57",
+      "title": "Upgrade Azure/k8s-set-context to v5 in Midjourney M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MidjourneyMCP",
+        "dependencies",
+        "update",
+        "azure",
+        "k8s",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MidjourneyMCP/pull/57",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 4 to 5, introducing several enhancements including migration to ESM and an updated Node version from 20 to 24. Additionally, various dependabot updates have been included to improve overall stability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/LumaMCP#55",
+      "title": "Upgrade Azure/k8s-set-context to v5 for enhanced features in Luma M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "LumaMCP",
+        "dependencies",
+        "upgrade",
+        "azure",
+        "k8s",
+        "luma"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/LumaMCP/pull/55",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 4 to 5, introducing significant enhancements including migration to ESM with esbuild and vitest. Additionally, the Node version has been updated from 20 to 24, ensuring better compatibility and performance. The changes also include various Dependabot updates for improved security and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/KlingMCP#4",
+      "title": "Upgrade Azure/k8s-set-context to v5 for enhanced features in Kling M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "KlingMCP",
+        "dependencies",
+        "upgrade",
+        "k8s",
+        "azure",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/KlingMCP/pull/4",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 4 to 5, introducing several enhancements including migration to ESM and updates to the Node version from 20 to 24. Additionally, various dependabot updates have been integrated to improve overall functionality and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/HailuoMCP#4",
+      "title": "Upgrade Azure/k8s-set-context to v5 for Enhanced Features in Hailuo M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "HailuoMCP",
+        "dependencies",
+        "upgrade",
+        "k8s",
+        "azure",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/HailuoMCP/pull/4",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 4 to 5, introducing significant enhancements such as migration to ESM and updates to the Node version. Additionally, various dependabot updates have been included to ensure compatibility and improved performance. This change is expected to streamline deployment processes and enhance overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FluxMCP#47",
+      "title": "Upgrade Azure/k8s-set-context to v5 in Flux M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FluxMCP",
+        "upgrade",
+        "dependencies",
+        "azure",
+        "k8s",
+        "flux"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FluxMCP/pull/47",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 4 to 5, introducing several enhancements including migration to ESM with esbuild and vitest. Additionally, the Node version has been updated from 20 to 24, ensuring better compatibility and performance. Various dependabot updates have also been included to keep the project dependencies up to date."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FishMCP#4",
+      "title": "Upgrade to Azure/k8s-set-context v5 for Enhanced Features in Fish M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FishMCP",
+        "dependencies",
+        "upgrade",
+        "k8s",
+        "azure",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FishMCP/pull/4",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 4 to 5, introducing significant enhancements including migration to ESM with esbuild and vitest, as well as updating the Node version from 20 to 24. Additionally, various dependabot updates have been integrated to ensure compatibility and improved performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FaceTransformMCP#1",
+      "title": "Upgrade Azure/k8s-set-context to v5 for enhanced features in Face Transform M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FaceTransformMCP",
+        "dependencies",
+        "upgrade",
+        "k8s",
+        "azure",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FaceTransformMCP/pull/1",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 4 to 5, introducing several enhancements including migration to ESM with esbuild and vitest. Additionally, it updates the Node version from 20 to 24 and includes various Dependabot updates for improved security and performance. These changes will enhance the deployment workflows and overall functionality of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SunoMCP#70",
+      "title": "Upgrade Azure/k8s-set-context to v5 in Suno M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SunoMCP",
+        "dependencies",
+        "upgrade",
+        "azure",
+        "k8s",
+        "suno"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SunoMCP/pull/70",
+      "summary": "This update bumps the Azure/k8s-set-context dependency from version 4 to 5. Key changes include migration to ESM, an updated Node version from 20 to 24, and several Dependabot updates for improved security and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#5",
+      "title": "Upgrade Python Setup Action to Version 6 in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "upgrade",
+        "python",
+        "actions",
+        "ci",
+        "dependencies"
+      ],
+      "public": false,
+      "summary": "This update bumps the actions/setup-python from version 5 to 6, ensuring compatibility with Node 24 and enhancing functionality. Key improvements include support for pip-version and better handling of .python-version files. Additionally, various bug fixes and dependency upgrades have been implemented to enhance stability and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#68",
+      "title": "Upgrade Checkout Action to Version 6 in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "upgrade",
+        "actions",
+        "checkout",
+        "ci",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update bumps the actions/checkout from version 4 to version 6 across multiple workflow files. Key improvements include enhanced credential management and support for Node.js 24. This change ensures better compatibility and performance for CI/CD processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#6",
+      "title": "Upgrade Buildx Action to Version 4 in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "docker",
+        "buildx",
+        "upgrade",
+        "ci",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update bumps the Docker Buildx Action from version 1 to version 4 across the CI and deployment workflows. Key improvements include the adoption of Node 24 as the default runtime and the removal of deprecated inputs and outputs, enhancing overall performance and compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#67",
+      "title": "Upgrade Docker Login Action to Version 4 in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "docker",
+        "upgrade",
+        "workflow",
+        "security",
+        "dependencies"
+      ],
+      "public": false,
+      "summary": "This update bumps the Docker Login Action from version 2 to version 4, enhancing the workflow with the latest features and improvements. Key changes include switching to Node 24 as the default runtime and updates to several dependencies, ensuring better performance and security. The deployment workflow has been modified accordingly to reflect this upgrade."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/HailuoMCP#1",
+      "title": "Upgrade Docker Build-Push Action to Version 7 in Hailuo M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "HailuoMCP",
+        "docker",
+        "build",
+        "update",
+        "action",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/HailuoMCP/pull/1",
+      "summary": "This update bumps the Docker Build-Push Action from version 6 to 7, introducing several enhancements including Node 24 as the default runtime and the removal of deprecated environment variables. Key dependencies have also been updated, ensuring improved performance and compatibility with the latest features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SunoMCP#71",
+      "title": "Upgrade Docker Build-Push Action to v7 in Suno M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SunoMCP",
+        "dependencies",
+        "docker",
+        "build",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SunoMCP/pull/71",
+      "summary": "This update bumps the Docker Build-Push Action from version 6 to 7, introducing several enhancements including Node 24 as the default runtime and the removal of deprecated environment variables. The changes improve compatibility and streamline the build process, ensuring a more efficient workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedreamMCP#47",
+      "title": "Upgrade Docker Build-Push Action to v7 in Seedream M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedreamMCP",
+        "docker",
+        "build",
+        "update",
+        "action",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedreamMCP/pull/47",
+      "summary": "This update bumps the Docker Build-Push Action from version 6 to 7, introducing several key improvements. Notably, it sets Node 24 as the default runtime and removes deprecated environment variables. These changes enhance compatibility and streamline the build process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/VeoMCP#51",
+      "title": "Upgrade Docker Buildx Action to Version 4 in Veo M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "VeoMCP",
+        "docker",
+        "buildx",
+        "upgrade",
+        "workflow",
+        "actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/VeoMCP/pull/51",
+      "summary": "This update bumps the Docker Buildx Action from version 3 to 4, enhancing the workflow's capabilities. Key changes include setting Node 24 as the default runtime and removing deprecated inputs and outputs. These improvements will streamline the build process and ensure compatibility with the latest features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/KlingMCP#1",
+      "title": "Upgrade build-push-action to version 7 in Kling M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "KlingMCP",
+        "docker",
+        "build",
+        "upgrade",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/KlingMCP/pull/1",
+      "summary": "This update bumps the docker/build-push-action from version 6 to 7, introducing several enhancements including Node 24 as the default runtime and the removal of deprecated environment variables. Additionally, it updates dependencies and improves configuration for better performance and compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/LumaMCP#56",
+      "title": "Upgrade Docker Login Action to Version 4 in Luma M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "LumaMCP",
+        "docker",
+        "dependencies",
+        "upgrade",
+        "ci",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/LumaMCP/pull/56",
+      "summary": "This update bumps the Docker Login Action from version 3 to version 4, enhancing the workflow's capabilities. Key improvements include support for Node 24 as the default runtime and various dependency updates, ensuring better performance and security. The change is expected to streamline Docker Hub logins in our CI/CD processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FluxMCP#44",
+      "title": "Upgrade Docker Login Action to Version 4 in Flux M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FluxMCP",
+        "docker",
+        "upgrade",
+        "dependencies",
+        "ci-cd"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FluxMCP/pull/44",
+      "summary": "This update bumps the Docker Login Action from version 3 to version 4, enhancing the workflow's capabilities. Key changes include switching to ESM, updating dependencies, and ensuring compatibility with Node 24. This upgrade will improve the overall performance and security of the CI/CD pipeline."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SerpMCP#51",
+      "title": "Upgrade build-push-action to version 7 in Serp M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SerpMCP",
+        "dependencies",
+        "update",
+        "docker",
+        "build",
+        "actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SerpMCP/pull/51",
+      "summary": "This update bumps the docker/build-push-action from version 6 to 7, introducing several improvements including Node 24 as the default runtime and the removal of deprecated environment variables. Additionally, it enhances the action's configuration and test wiring, ensuring better performance and compatibility with the latest GitHub Actions runner."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SoraMCP#50",
+      "title": "Upgrade Docker Login Action to Version 4 in Sora M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SoraMCP",
+        "docker",
+        "upgrade",
+        "dependencies",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SoraMCP/pull/50",
+      "summary": "This update bumps the Docker Login Action from version 3 to 4, enhancing the workflow with the latest features and improvements. Key changes include switching to ESM, updating dependencies, and ensuring compatibility with Node 24. This upgrade is expected to improve the overall performance and security of the Docker login process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/ShortURLMCP#36",
+      "title": "Upgrade Docker Login Action to Version 4 in Short U R L M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "ShortURLMCP",
+        "docker",
+        "dependencies",
+        "update",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/ShortURLMCP/pull/36",
+      "summary": "This update bumps the Docker Login Action from version 3 to 4, enhancing the workflow's capabilities. Key changes include switching to ESM, updating dependencies, and introducing Node 24 as the default runtime. These improvements will streamline authentication processes and ensure better compatibility with the latest features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WanMCP#1",
+      "title": "Upgrade Docker Buildx Action to v4 in Wan M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WanMCP",
+        "docker",
+        "buildx",
+        "upgrade",
+        "dependencies",
+        "actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/WanMCP/pull/1",
+      "summary": "This update bumps the Docker Buildx Action from version 3 to 4, introducing Node 24 as the default runtime and removing deprecated inputs and outputs. The change enhances compatibility and performance, ensuring a smoother build process. Additionally, various dependencies have been updated to their latest versions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedanceMCP#44",
+      "title": "Upgrade Docker Buildx Action to v4 in Seedance M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedanceMCP",
+        "docker",
+        "buildx",
+        "upgrade",
+        "actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedanceMCP/pull/44",
+      "summary": "This update bumps the Docker Buildx Action from version 3 to 4, introducing Node 24 as the default runtime and removing deprecated inputs and outputs. The change enhances compatibility and performance while ensuring the latest features are available for our workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/ProducerMCP#2",
+      "title": "Upgrade Docker Login Action to v4 in Producer M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "ProducerMCP",
+        "docker",
+        "upgrade",
+        "dependencies",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/ProducerMCP/pull/2",
+      "summary": "This update bumps the Docker login action from version 3 to version 4 in the workflow configuration. Key changes include the switch to ESM, updates to dependencies, and the requirement for Node 24 as the default runtime. This upgrade enhances security and functionality for Docker Hub logins."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/NanoBananaMCP#55",
+      "title": "Update Docker Build-Push Action to v7 in Nano Banana M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "NanoBananaMCP",
+        "docker",
+        "dependencies",
+        "update",
+        "build"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/NanoBananaMCP/pull/55",
+      "summary": "This update bumps the Docker Build-Push Action from version 6 to 7, introducing several improvements including Node 24 as the default runtime and the removal of deprecated environment variables. Additionally, it enhances the configuration and testing setup by switching to ESM. These changes will streamline the build process and improve compatibility with newer features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MidjourneyMCP#55",
+      "title": "Update Docker Build-Push Action to v7 in Midjourney M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MidjourneyMCP",
+        "docker",
+        "dependencies",
+        "update",
+        "build"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MidjourneyMCP/pull/55",
+      "summary": "This update bumps the Docker Build-Push Action from version 6 to 7, introducing several enhancements including Node 24 as the default runtime and the removal of deprecated environment variables. Additionally, it switches to ESM and updates various dependencies, ensuring improved performance and compatibility. These changes will enhance the build process and streamline workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FishMCP#1",
+      "title": "Upgrade Docker Login Action to Version 4 in Fish M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FishMCP",
+        "docker",
+        "actions",
+        "upgrade",
+        "dependencies",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FishMCP/pull/1",
+      "summary": "This update bumps the Docker Login Action from version 3 to version 4, enhancing the workflow's capabilities. Key changes include the switch to ESM, updates to dependencies like @actions/core and AWS SDK clients, and the introduction of Node 24 as the default runtime. These improvements aim to streamline authentication processes and ensure better compatibility with the latest features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FaceTransformMCP#3",
+      "title": "Upgrade Docker Login Action to Version 4 in Face Transform M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FaceTransformMCP",
+        "docker",
+        "actions",
+        "upgrade",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FaceTransformMCP/pull/3",
+      "summary": "This update bumps the Docker Login Action from version 3 to version 4, enhancing the workflow's capabilities. Key changes include the switch to ESM, updates to AWS SDK dependencies, and the introduction of Node 24 as the default runtime. These improvements will streamline the authentication process and ensure better compatibility with the latest features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#72",
+      "title": "Upgrade build-number to version 3 in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "dependency",
+        "update",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update bumps the einaregilsson/build-number dependency from version 2 to 3. The change involves using a new method for setting environment variables, ensuring compatibility with the latest standards while maintaining existing functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#11",
+      "title": "Upgrade build-number to version 3 in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "dependency",
+        "update",
+        "workflow",
+        "build"
+      ],
+      "public": false,
+      "summary": "This update bumps the einaregilsson/build-number dependency from version 2 to 3. The change involves using a new method for setting environment variables, eliminating deprecated practices without altering functionality. This ensures better compatibility and future-proofing of the deployment workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/HailuoMCP#2",
+      "title": "Upgrade Docker Login Action to Version 4 in Hailuo M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "HailuoMCP",
+        "docker",
+        "upgrade",
+        "dependencies",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/HailuoMCP/pull/2",
+      "summary": "This update bumps the Docker Login Action from version 3 to version 4, enhancing the workflow's capabilities. Key changes include switching to ESM, updating dependencies, and setting Node 24 as the default runtime. These improvements will ensure better performance and compatibility moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SunoMCP#72",
+      "title": "Upgrade Docker Buildx Action to Version 4 in Suno M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SunoMCP",
+        "docker",
+        "buildx",
+        "upgrade",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SunoMCP/pull/72",
+      "summary": "This update bumps the Docker Buildx Action from version 3 to version 4, enhancing the workflow with new features and improvements. Key changes include setting Node 24 as the default runtime and removing deprecated inputs and outputs. This upgrade ensures better performance and compatibility moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedreamMCP#48",
+      "title": "Upgrade Docker Login Action to Version 4 in Seedream M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedreamMCP",
+        "docker",
+        "dependencies",
+        "update",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedreamMCP/pull/48",
+      "summary": "This update bumps the Docker Login Action from version 3 to version 4, enhancing the workflow's capabilities. Key changes include switching to ESM, updating dependencies, and requiring Node 24 as the default runtime. These improvements will ensure better performance and compatibility moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/VeoMCP#52",
+      "title": "Upgrade Docker Login Action to Version 4 in Veo M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "VeoMCP",
+        "dependencies",
+        "docker",
+        "upgrade",
+        "actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/VeoMCP/pull/52",
+      "summary": "This update bumps the docker/login-action from version 3 to 4, enhancing the action with new features and improvements. Key changes include switching to ESM, updating dependencies, and setting Node 24 as the default runtime. This upgrade ensures better performance and compatibility with the latest standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/KlingMCP#2",
+      "title": "Upgrade Docker Login Action to Version 4 in Kling M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "KlingMCP",
+        "docker",
+        "upgrade",
+        "dependencies",
+        "actions",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/KlingMCP/pull/2",
+      "summary": "This update bumps the Docker Login Action from version 3 to 4, enhancing the workflow with improved features and support. Key changes include switching to ESM, updating dependencies, and ensuring compatibility with Node 24. This upgrade is expected to streamline authentication processes and improve overall performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#889",
+      "title": "Stream Assistant Replies Token-by-Token in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "streaming",
+        "frontend",
+        "updates",
+        "features",
+        "coding-bridge"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/889",
+      "summary": "This update introduces token-level text streaming for Coding Bridge assistant replies, enhancing user experience by rendering responses incrementally. Key changes include the addition of a new `session.text_delta` event and modifications to various components to support this feature, including a blinking caret during streaming. Comprehensive tests have been added to ensure functionality and stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/LumaMCP#57",
+      "title": "Upgrade Docker Buildx Action to Latest Version in Luma M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "LumaMCP",
+        "docker",
+        "buildx",
+        "upgrade",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/LumaMCP/pull/57",
+      "summary": "This update bumps the Docker Buildx Action from version 3 to 4, enhancing the workflow with the latest features and improvements. Key changes include setting Node 24 as the default runtime and removing deprecated inputs and outputs. This upgrade ensures better performance and compatibility with recent updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FluxMCP#45",
+      "title": "Upgrade Docker Build-Push Action to v7 in Flux M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FluxMCP",
+        "docker",
+        "build",
+        "update",
+        "actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FluxMCP/pull/45",
+      "summary": "This update bumps the Docker Build-Push Action from version 6 to 7, introducing several enhancements including Node 24 as the default runtime and the removal of deprecated environment variables. The changes aim to improve build performance and streamline the configuration process, ensuring better compatibility with the latest GitHub Actions runner."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SerpMCP#52",
+      "title": "Update Docker Login Action to Version 4 in Serp M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SerpMCP",
+        "docker",
+        "dependencies",
+        "update",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SerpMCP/pull/52",
+      "summary": "This update bumps the Docker Login Action from version 3 to version 4, enhancing the workflow's capabilities. Key changes include switching to ESM, updating dependencies, and setting Node 24 as the default runtime. This upgrade ensures better performance and compatibility with the latest features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SoraMCP#51",
+      "title": "Upgrade Docker Buildx Action to Version 4 in Sora M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SoraMCP",
+        "docker",
+        "buildx",
+        "dependencies",
+        "upgrade"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SoraMCP/pull/51",
+      "summary": "This update bumps the Docker Buildx Action from version 3 to version 4, introducing Node 24 as the default runtime and removing deprecated inputs and outputs. The change enhances compatibility and performance, ensuring a smoother build process. Additionally, several dependencies have been updated to their latest versions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/ShortURLMCP#37",
+      "title": "Upgrade Docker Buildx Action to v4 in Short U R L M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "ShortURLMCP",
+        "docker",
+        "buildx",
+        "upgrade",
+        "workflow",
+        "actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/ShortURLMCP/pull/37",
+      "summary": "This update bumps the Docker Buildx Action from version 3 to version 4, enhancing the workflow's capabilities. Key changes include setting Node 24 as the default runtime, removing deprecated inputs/outputs, and switching to ESM. These improvements will streamline the build process and ensure better compatibility with future updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WanMCP#3",
+      "title": "Upgrade build-push-action to v7 in Wan M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WanMCP",
+        "upgrade",
+        "docker",
+        "build",
+        "action",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/WanMCP/pull/3",
+      "summary": "This update bumps the docker/build-push-action from version 6 to 7, introducing several enhancements. Key changes include the switch to Node 24 as the default runtime, removal of deprecated environment variables, and updates to dependencies. This upgrade ensures better performance and compatibility with the latest features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedanceMCP#45",
+      "title": "Upgrade build-push-action to v7 in Seedance M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedanceMCP",
+        "docker",
+        "build",
+        "update",
+        "actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedanceMCP/pull/45",
+      "summary": "This update bumps the docker/build-push-action from version 6 to 7, introducing several enhancements including Node 24 as the default runtime and the removal of deprecated environment variables. The changes improve build performance and streamline the action's configuration, ensuring better compatibility with the latest GitHub Actions runner."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/ProducerMCP#3",
+      "title": "Upgrade Docker Build-Push Action to v7 in Producer M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "ProducerMCP",
+        "docker",
+        "build",
+        "update",
+        "action"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/ProducerMCP/pull/3",
+      "summary": "This update bumps the Docker Build-Push Action from version 6 to 7, introducing Node 24 as the default runtime and removing deprecated environment variables. Key improvements include switching to ESM and updating dependencies, which enhances performance and compatibility with the latest GitHub Actions features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/NanoBananaMCP#56",
+      "title": "Update Docker Login Action to Version 4 in Nano Banana M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "NanoBananaMCP",
+        "docker",
+        "dependencies",
+        "update",
+        "ci-cd"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/NanoBananaMCP/pull/56",
+      "summary": "This update bumps the docker/login-action from version 3 to 4, enhancing the workflow's functionality. Key changes include switching to ESM, updating dependencies, and introducing new features like the 'scope' input for authentication tokens. This upgrade ensures better compatibility and improved performance in CI/CD processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MidjourneyMCP#56",
+      "title": "Upgrade Docker Login Action to Version 4 in Midjourney M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MidjourneyMCP",
+        "dependencies",
+        "docker",
+        "workflow",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MidjourneyMCP/pull/56",
+      "summary": "This update bumps the Docker Login Action from version 3 to 4, enhancing the workflow's capabilities. Key changes include switching to ESM, updating dependencies, and adopting Node 24 as the default runtime. These improvements will ensure better performance and compatibility moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FishMCP#2",
+      "title": "Upgrade Docker Buildx Action to v4 in Fish M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FishMCP",
+        "docker",
+        "build",
+        "upgrade",
+        "action",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FishMCP/pull/2",
+      "summary": "This update bumps the Docker Buildx Action from version 3 to 4, enhancing the build process with the latest features and improvements. Key changes include the removal of deprecated inputs, a switch to ESM, and updates to various dependencies. This upgrade ensures better performance and compatibility moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FaceTransformMCP#2",
+      "title": "Upgrade Docker Buildx Action to Version 4 in Face Transform M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FaceTransformMCP",
+        "docker",
+        "buildx",
+        "upgrade",
+        "dependencies",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FaceTransformMCP/pull/2",
+      "summary": "This update bumps the Docker Buildx Action from version 3 to version 4, enhancing the workflow with the latest features and improvements. Key changes include the removal of deprecated inputs, a switch to ESM, and updates to several dependencies. This upgrade ensures better performance and compatibility with the latest Node.js runtime."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#12",
+      "title": "Upgrade build-push-action to v7 in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "docker",
+        "build",
+        "update",
+        "ci",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update bumps the docker/build-push-action from version 6 to 7, introducing several enhancements including Node 24 as the default runtime and the removal of deprecated environment variables. The CI workflow has been updated accordingly to reflect this change, ensuring smoother builds and improved performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/HailuoMCP#3",
+      "title": "Upgrade Docker Buildx Action to v4 in Hailuo M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "HailuoMCP",
+        "docker",
+        "buildx",
+        "upgrade",
+        "dependencies",
+        "actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/HailuoMCP/pull/3",
+      "summary": "This update bumps the Docker Buildx Action from version 3 to 4, introducing Node 24 as the default runtime and removing deprecated inputs and outputs. Additionally, it enhances the configuration by switching to ESM and updating dependencies, ensuring improved performance and compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SunoMCP#73",
+      "title": "Upgrade Docker Login Action to Version 4 in Suno M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SunoMCP",
+        "docker",
+        "upgrade",
+        "dependencies",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SunoMCP/pull/73",
+      "summary": "This update bumps the Docker Login Action from version 3 to version 4, enhancing the workflow's capabilities. Key changes include switching to ESM, updating dependencies, and setting Node 24 as the default runtime. This upgrade ensures better performance and compatibility with the latest features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedreamMCP#50",
+      "title": "Upgrade Docker Buildx Action to Version 4 in Seedream M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedreamMCP",
+        "docker",
+        "buildx",
+        "upgrade",
+        "workflow",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedreamMCP/pull/50",
+      "summary": "This update bumps the Docker Buildx Action from version 3 to version 4, enhancing the workflow's capabilities. Key changes include setting Node 24 as the default runtime, removing deprecated inputs/outputs, and switching to ESM. These improvements will streamline the build process and ensure better compatibility with future updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/VeoMCP#54",
+      "title": "Upgrade build-push-action to version 7 in Veo M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "VeoMCP",
+        "dependencies",
+        "update",
+        "docker",
+        "build-push-action"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/VeoMCP/pull/54",
+      "summary": "This update bumps the docker/build-push-action from version 6 to 7, introducing several enhancements. Key changes include the switch to Node 24 as the default runtime and the removal of deprecated environment variables. These updates improve the action's performance and compatibility with newer GitHub Actions runners."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/KlingMCP#3",
+      "title": "Upgrade Docker Buildx Action to v4 in Kling M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "KlingMCP",
+        "docker",
+        "buildx",
+        "upgrade",
+        "actions",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/KlingMCP/pull/3",
+      "summary": "This update bumps the Docker Buildx Action from version 3 to 4, introducing Node 24 as the default runtime and removing deprecated inputs and outputs. The change enhances compatibility and performance, ensuring the workflow remains up-to-date with the latest features and improvements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/LumaMCP#58",
+      "title": "Upgrade build-push-action to v7 in Luma M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "LumaMCP",
+        "dependencies",
+        "update",
+        "docker",
+        "build",
+        "action"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/LumaMCP/pull/58",
+      "summary": "This update bumps the docker/build-push-action from version 6 to 7, introducing several enhancements including Node 24 as the default runtime. Deprecated environment variables have been removed, and the action has transitioned to ESM. These changes will improve build performance and maintainability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FluxMCP#46",
+      "title": "Upgrade Docker Buildx Action to v4 in Flux M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FluxMCP",
+        "docker",
+        "buildx",
+        "actions",
+        "upgrade"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FluxMCP/pull/46",
+      "summary": "This update bumps the Docker Buildx Action from version 3 to version 4, enhancing the workflow with the latest features and improvements. Key changes include setting Node 24 as the default runtime and removing deprecated inputs and outputs. This upgrade ensures better performance and compatibility with the latest GitHub Actions runner."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SerpMCP#54",
+      "title": "Upgrade Docker Buildx Action to v4 in Serp M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SerpMCP",
+        "docker",
+        "buildx",
+        "upgrade",
+        "actions",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SerpMCP/pull/54",
+      "summary": "This update bumps the Docker Buildx Action from version 3 to 4, enhancing the workflow with new features and improvements. Key changes include setting Node 24 as the default runtime and removing deprecated inputs and outputs. This upgrade ensures better performance and compatibility with the latest GitHub Actions environment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SoraMCP#53",
+      "title": "Upgrade Docker Build-Push Action to v7 in Sora M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SoraMCP",
+        "docker",
+        "dependencies",
+        "update",
+        "build",
+        "action"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SoraMCP/pull/53",
+      "summary": "This update bumps the Docker Build-Push Action from version 6 to 7, introducing several enhancements including Node 24 as the default runtime and the removal of deprecated environment variables. The change improves compatibility with the latest Actions Runner and streamlines the build process. Additionally, it updates various dependencies to their latest versions, ensuring better performance and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/ShortURLMCP#39",
+      "title": "Upgrade Docker Build-Push Action to Version 7 in Short U R L M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "ShortURLMCP",
+        "docker",
+        "build",
+        "update",
+        "ci",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/ShortURLMCP/pull/39",
+      "summary": "This update bumps the Docker Build-Push Action from version 6 to 7, introducing several enhancements including Node 24 as the default runtime and the removal of deprecated environment variables. Additionally, it switches to ESM and updates dependencies, ensuring improved performance and compatibility. These changes will streamline the build process and enhance the overall functionality of the CI/CD pipeline."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#622",
+      "title": "Exciting New Gemini Video API Specs and Pricing in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "gemini",
+        "backend",
+        "pricing",
+        "documentation",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update introduces the Gemini Video generation API specifications, including endpoints for creating videos and polling tasks. Key pricing details have been established, ensuring accurate billing for video requests. Comprehensive documentation and tests have been added to support integration and validation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WanMCP#4",
+      "title": "Upgrade Docker Login Action to Version 4 in Wan M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WanMCP",
+        "docker",
+        "upgrade",
+        "dependencies",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/WanMCP/pull/4",
+      "summary": "This update bumps the Docker Login Action from version 3 to version 4, enhancing the workflow's capabilities. Key changes include support for Node 24 as the default runtime and a switch to ESM, along with several dependency updates that improve performance and security. This upgrade ensures compatibility with the latest features and optimizations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedanceMCP#47",
+      "title": "Upgrade Docker Login Action to v4 in Seedance M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedanceMCP",
+        "docker",
+        "upgrade",
+        "dependencies",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedanceMCP/pull/47",
+      "summary": "This update bumps the Docker Login Action from version 3 to version 4, enhancing the workflow's capabilities. Key changes include support for Node 24 as the default runtime and various dependency updates to improve performance and security. The modifications ensure a smoother integration with Docker Hub and other services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/ProducerMCP#4",
+      "title": "Upgrade Docker Buildx Action to Version 4 in Producer M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "ProducerMCP",
+        "docker",
+        "buildx",
+        "dependencies",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/ProducerMCP/pull/4",
+      "summary": "This update bumps the Docker Buildx Action from version 3 to 4, introducing Node 24 as the default runtime and removing deprecated inputs and outputs. The change enhances compatibility and performance, ensuring a smoother build process. Additionally, various dependencies have been updated for improved functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/NanoBananaMCP#57",
+      "title": "Upgrade Docker Buildx Action to v4 in Nano Banana M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "NanoBananaMCP",
+        "docker",
+        "buildx",
+        "upgrade",
+        "actions",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/NanoBananaMCP/pull/57",
+      "summary": "This update bumps the Docker Buildx Action from version 3 to version 4, introducing several enhancements. Key changes include setting Node 24 as the default runtime, removing deprecated inputs/outputs, and switching to ESM. These improvements will enhance build performance and maintainability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MidjourneyMCP#58",
+      "title": "Upgrade Docker Buildx Action to v4 in Midjourney M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MidjourneyMCP",
+        "docker",
+        "buildx",
+        "upgrade",
+        "workflow",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MidjourneyMCP/pull/58",
+      "summary": "This update bumps the Docker Buildx Action from version 3 to version 4, enhancing the workflow's capabilities. Key improvements include setting Node 24 as the default runtime and removing deprecated inputs and outputs. These changes aim to streamline the build process and improve compatibility with the latest features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#134",
+      "title": "Update Tencent Cloud SDK to Latest Version in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "dependencies",
+        "update",
+        "python",
+        "sdk"
+      ],
+      "public": false,
+      "summary": "This update bumps the Tencent Cloud SDK for Python from version 3.1.89 to 3.1.111. The change is reflected in the poetry.lock file, ensuring that the latest features and fixes are available for use. Note that Python v3.9 is no longer supported, and users are encouraged to upgrade to a newer version."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FishMCP#3",
+      "title": "Upgrade build-push-action to version 7 in Fish M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FishMCP",
+        "docker",
+        "build",
+        "update",
+        "action"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FishMCP/pull/3",
+      "summary": "This update bumps the docker/build-push-action from version 6 to 7, introducing several enhancements including Node 24 as the default runtime. Deprecated environment variables have been removed, and the action has transitioned to ESM. These changes aim to improve performance and maintainability in our workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FaceTransformMCP#4",
+      "title": "Upgrade build-push-action to version 7 in Face Transform M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FaceTransformMCP",
+        "docker",
+        "build",
+        "update",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FaceTransformMCP/pull/4",
+      "summary": "This update bumps the docker/build-push-action from version 6 to 7, introducing several enhancements including Node 24 as the default runtime and the removal of deprecated environment variables. The upgrade also improves compatibility with the latest Actions Runner and updates dependencies for better performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#171",
+      "title": "Update Tencent Cloud SDK to Latest Version in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "dependencies",
+        "update",
+        "backend",
+        "python"
+      ],
+      "public": false,
+      "summary": "This update bumps the Tencent Cloud SDK for Python from version 3.1.105 to 3.1.110. The change ensures compatibility with the latest features and improvements, enhancing the overall functionality of the AuthBackend. Additionally, it addresses the upcoming deprecation of Python v3.9 support, encouraging users to upgrade their Python versions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#135",
+      "title": "Update Django to Latest Version in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "dependencies",
+        "security",
+        "update",
+        "django"
+      ],
+      "public": false,
+      "summary": "This update bumps Django from version 4.2.29 to 4.2.30, incorporating several important security fixes. Key vulnerabilities addressed include issues related to memory size enforcement and potential denial of service in the MultiPartParser. The changes enhance the overall security and stability of the PlatformGateway."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#35",
+      "title": "Update Python Dependencies for Enhanced Performance in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "python",
+        "dependencies",
+        "update",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update bumps the Python dependencies in the project, specifically upgrading `alipay-sdk-python` from version 3.7.1098 to 3.7.1160 and `tencentcloud-sdk-python` from 3.1.80 to 3.1.110. These updates ensure compatibility with newer Python versions and improve overall functionality. The changes are reflected in the `poetry.lock` file."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SunoCli#16",
+      "title": "Update hatchling version requirements in Suno Cli 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SunoCli",
+        "dependencies",
+        "update",
+        "hatchling",
+        "suno-cli"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SunoCli/pull/16",
+      "summary": "This update modifies the hatchling requirement in the pyproject.toml file to allow versions from 1.21.0 up to, but not including, 1.31.0. This change ensures compatibility with the latest features and fixes provided by hatchling, enhancing the overall functionality of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/HailuoMCP#5",
+      "title": "Update hatchling dependency for better compatibility in Hailuo M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "HailuoMCP",
+        "dependencies",
+        "update",
+        "hatchling",
+        "compatibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/HailuoMCP/pull/5",
+      "summary": "This update modifies the hatchling requirement in the project to allow for the latest version, enhancing compatibility and stability. The change updates the version constraint from '<1.30.0' to '<1.31.0', ensuring access to new features and fixes. This is expected to improve the overall development experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SunoMCP#75",
+      "title": "Update hatchling dependency for better compatibility in Suno M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SunoMCP",
+        "dependencies",
+        "update",
+        "hatchling",
+        "suno"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SunoMCP/pull/75",
+      "summary": "This update modifies the hatchling requirement in the project to allow for the latest version, enhancing compatibility and access to new features. The change updates the version constraint from `<1.30.0` to `<1.31.0`, ensuring that the project can leverage improvements from recent releases. This is a straightforward dependency update aimed at maintaining project stability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FaceTransformMCP#5",
+      "title": "Update hatchling version requirement in Face Transform M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FaceTransformMCP",
+        "dependencies",
+        "update",
+        "hatchling",
+        "build"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FaceTransformMCP/pull/5",
+      "summary": "This update modifies the hatchling version requirement in the pyproject.toml file, allowing for the latest version up to 1.31.0. The change ensures compatibility with recent updates while maintaining stability in the build process. This will help streamline future development and dependency management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedreamMCP#52",
+      "title": "Update hatchling dependency for better compatibility in Seedream M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedreamMCP",
+        "dependencies",
+        "update",
+        "hatchling",
+        "maintenance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedreamMCP/pull/52",
+      "summary": "This update modifies the hatchling requirement in the project to allow for versions up to 1.31.0, enhancing compatibility with the latest features and fixes. The change ensures that the project can leverage improvements from the recent hatchling releases while maintaining stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/VeoMCP#56",
+      "title": "Update hatchling dependency for better compatibility in Veo M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "VeoMCP",
+        "dependencies",
+        "update",
+        "hatchling",
+        "chore"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/VeoMCP/pull/56",
+      "summary": "This update modifies the hatchling requirement in the project to allow for versions up to 1.31.0. This change ensures compatibility with the latest features and fixes provided in the recent hatchling releases, enhancing the overall stability and performance of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/KlingMCP#6",
+      "title": "Update hatchling dependency range in Kling M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "KlingMCP",
+        "dependencies",
+        "update",
+        "hatchling",
+        "maintenance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/KlingMCP/pull/6",
+      "summary": "This update modifies the hatchling requirement in the project to allow for the latest version, specifically setting the range to >=1.21.0 and <1.31.0. This change ensures compatibility with newer features and fixes provided in the latest hatchling releases. The adjustment is crucial for maintaining up-to-date dependencies and improving overall project stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/LumaMCP#59",
+      "title": "Update hatchling dependency for better compatibility in Luma M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "LumaMCP",
+        "dependencies",
+        "update",
+        "hatchling",
+        "chore"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/LumaMCP/pull/59",
+      "summary": "This update modifies the hatchling requirement in the project configuration to allow for the latest version, improving compatibility and access to new features. The change ensures that the project can utilize enhancements and fixes from hatchling v1.30.1 while maintaining stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FluxMCP#48",
+      "title": "Update hatchling dependency for better compatibility in Flux M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FluxMCP",
+        "dependencies",
+        "update",
+        "hatchling",
+        "fluxmcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FluxMCP/pull/48",
+      "summary": "This update modifies the hatchling requirement in the project to allow for the latest version, enhancing compatibility and functionality. The change ensures that the project can utilize improvements and fixes from the most recent hatchling releases, specifically allowing versions up to 1.31.0. This is a crucial step in maintaining up-to-date dependencies for optimal performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FishMCP#5",
+      "title": "Update hatchling dependency for better compatibility in Fish M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FishMCP",
+        "dependencies",
+        "update",
+        "hatchling",
+        "compatibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FishMCP/pull/5",
+      "summary": "This update modifies the hatchling requirement in the project to allow for the latest version, enhancing compatibility and access to new features. The change updates the version constraint from `<1.30.0` to `<1.31.0`, ensuring that the project can leverage improvements from recent releases. This is a crucial step for maintaining up-to-date dependencies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SerpMCP#55",
+      "title": "Update hatchling dependency for better compatibility in Serp M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SerpMCP",
+        "dependencies",
+        "update",
+        "hatchling",
+        "chore"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SerpMCP/pull/55",
+      "summary": "This update modifies the hatchling requirement in the pyproject.toml file to allow versions from 1.21.0 up to, but not including, 1.31.0. This change ensures compatibility with the latest features and fixes provided by hatchling, enhancing the overall development experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SoraMCP#54",
+      "title": "Update hatchling dependency for better compatibility in Sora M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SoraMCP",
+        "dependencies",
+        "update",
+        "hatchling",
+        "sora-mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SoraMCP/pull/54",
+      "summary": "This update modifies the hatchling dependency in the project to allow versions from 1.21.0 up to but not including 1.31.0. This change ensures compatibility with the latest features and fixes provided in the recent hatchling releases, enhancing the overall functionality of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/ShortURLMCP#41",
+      "title": "Update hatchling dependency for better compatibility in Short U R L M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "ShortURLMCP",
+        "dependencies",
+        "update",
+        "hatchling",
+        "compatibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/ShortURLMCP/pull/41",
+      "summary": "This update modifies the hatchling requirement in the project to allow for the latest version, enhancing compatibility and functionality. The change ensures that the project can leverage improvements and fixes from newer hatchling releases while maintaining stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WanMCP#5",
+      "title": "Update hatchling version requirements in Wan M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WanMCP",
+        "dependencies",
+        "update",
+        "hatchling",
+        "build"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/WanMCP/pull/5",
+      "summary": "This update modifies the hatchling version requirements in the pyproject.toml file to allow for the latest version, enhancing compatibility. The new range now includes versions up to but not including 1.31.0, ensuring access to recent features and fixes. This change is expected to improve the overall build process and maintain up-to-date dependencies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SeedanceMCP#48",
+      "title": "Update hatchling dependency range in Seedance M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SeedanceMCP",
+        "dependency",
+        "update",
+        "hatchling",
+        "build"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SeedanceMCP/pull/48",
+      "summary": "This update modifies the hatchling dependency requirement in the project to allow for the latest version up to 1.31.0. The change ensures compatibility with recent updates and fixes in hatchling, enhancing the overall build process. This adjustment is crucial for maintaining up-to-date development practices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/ProducerMCP#6",
+      "title": "Update hatchling dependency version in Producer M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "ProducerMCP",
+        "dependencies",
+        "update",
+        "hatchling",
+        "build"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/ProducerMCP/pull/6",
+      "summary": "This update modifies the hatchling requirement in the project to allow for the latest version, specifically from >=1.21.0,<1.31.0. This change ensures compatibility with recent improvements and fixes in hatchling, enhancing the build process. The update is expected to streamline development and maintain up-to-date dependencies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#994",
+      "title": "Introducing Gemini Video Generation Handler in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "ttapi",
+        "video",
+        "gemini",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update adds a new endpoint, `POST /gemini/videos`, to the ttapi worker, enabling video generation using the TTAPI Gemini Video API with the `omni-flash` model. The implementation mirrors the existing Sora video handler's workflow, ensuring no additional infrastructure is needed. While the feature is ready, it will remain dormant until upstream issues are resolved."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/NanoBananaMCP#59",
+      "title": "Update hatchling dependency for better compatibility in Nano Banana M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "NanoBananaMCP",
+        "dependencies",
+        "update",
+        "hatchling",
+        "chore"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/NanoBananaMCP/pull/59",
+      "summary": "This update modifies the hatchling requirement in the project configuration to allow for the latest version, enhancing compatibility and functionality. The change updates the version constraints from `<1.30.0,>=1.21.0` to `>=1.21.0,<1.31.0`, ensuring access to newer features and fixes. This adjustment is crucial for maintaining up-to-date dependencies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MidjourneyMCP#60",
+      "title": "Update hatchling dependency for better compatibility in Midjourney M C P 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MidjourneyMCP",
+        "dependencies",
+        "update",
+        "hatchling",
+        "build"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MidjourneyMCP/pull/60",
+      "summary": "This update modifies the hatchling requirement in the pyproject.toml file to allow for the latest version up to 1.31.0. This change ensures better compatibility and access to the latest features and fixes provided by hatchling. Overall, it enhances the build process for the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#888",
+      "title": "Enhance AskUserQuestion with Freeform Input in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "bugfix",
+        "ui",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/888",
+      "summary": "This update allows the AskUserQuestion card to accept freeform input when no options are provided by the tool payload. Key changes include modifications to the handling of questions without options, enabling users to submit their responses directly through a textarea. The existing functionality for questions with options remains unchanged, ensuring a seamless user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#621",
+      "title": "Polished X402 Documentation for SKALE Verification in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "x402",
+        "skale",
+        "verification",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update enhances the documentation for the X402 payment protocol, specifically focusing on SKALE's 'upto' verification. Key changes include improved wording for clarity and consistency across multiple documents, ensuring users have a better understanding of the verification process. No code changes were made, making this a purely documentation-focused update."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#15",
+      "title": "Enhanced Logging and Traceability in Coding Bridge Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "logging",
+        "traceability",
+        "debugging",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/15",
+      "summary": "This update introduces structured logging and end-to-end trace IDs for the node agent, enhancing its debuggability on end-user machines. Key changes include the addition of a new logging configuration, the ability to forward logs without handling sensitive credentials, and the integration of trace IDs into event payloads for better correlation with browser interactions. Overall, these improvements aim to streamline debugging and monitoring processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#995",
+      "title": "Enhance CLS Observability with Structured Logs in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "observability",
+        "logging",
+        "tencent",
+        "debugging",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces structured logging to the Coding Bridge, enabling end-to-end traceability across the browser, relay, and node layers. Key changes include the addition of a new observability module that ships logs to Tencent CLS, correlated by trace IDs, and updates to existing routing points to emit structured events. This enhancement improves debugging capabilities and ensures that issues can be traced through the entire process flow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#509",
+      "title": "Optimize Production Resource Requests in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "deployment",
+        "optimization",
+        "resources",
+        "production"
+      ],
+      "public": false,
+      "summary": "This update fine-tunes the resource requests for the platform-publisher in production. The configuration changes include adjustments to CPU and memory requests, while the limits remain unchanged. These modifications aim to enhance resource efficiency without impacting performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#175",
+      "title": "Enhance frontmatter compatibility for Python 3.8 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "python",
+        "backend",
+        "compatibility"
+      ],
+      "public": false,
+      "summary": "This update improves the optional `frontmatter` import by making it tolerant on Python 3.8. When the library is unavailable or incompatible, it now falls back to a local YAML frontmatter extractor, ensuring smoother functionality in the app/services/skills.py module."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#982",
+      "title": "Optimized Production Requests for Mountsea Nanobanana in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "optimization",
+        "deployment",
+        "resource-management"
+      ],
+      "public": false,
+      "summary": "This update reduces the CPU and memory requests for the platform-service-mountsea-nanobanana deployment. The CPU request has been lowered from 50m to 40m and memory from 300Mi to 240Mi, aligning resource allocation with observed usage. This change helps to optimize resource utilization while maintaining current operational limits."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/StatusPage#9",
+      "title": "Hide DeepSeek from public view in Status Page 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "StatusPage",
+        "status",
+        "update",
+        "filter",
+        "public",
+        "display"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/StatusPage/pull/9",
+      "summary": "This update modifies the public status page to hide the DeepSeek service from display. The change involves filtering out DeepSeek in the app's JavaScript, ensuring it remains monitored but not visible to users. This enhances the clarity of the status page by focusing on relevant services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#362",
+      "title": "Updated marketing copy by removing DeepSeek in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "documentation",
+        "cleanup",
+        "skills",
+        "marketing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/362",
+      "summary": "This update removes all mentions of DeepSeek from the skills marketing documentation, including AGENTS.md, README.md, and various SKILL.md files. The changes streamline the content and ensure that only relevant models are highlighted, enhancing clarity for users. Overall, this improves the presentation of available AI capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#158",
+      "title": "Boosting Production Resource Requests for Stability in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "deployment",
+        "performance",
+        "gateway",
+        "production"
+      ],
+      "public": false,
+      "summary": "This update raises the production resource requests for the PlatformGateway, increasing CPU from 200m to 300m and memory from 200Mi to 320Mi. These changes are aimed at providing additional headroom on the billing path while keeping the limits unchanged. The modifications are configuration-only, ensuring a smooth transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#75",
+      "title": "Enterprise P0 Risk Register & Execution Playbook in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "risk-management",
+        "enterprise",
+        "playbook",
+        "index"
+      ],
+      "public": false,
+      "summary": "This update introduces the Enterprise P0 Risk Register and Execution Playbook, providing a comprehensive guide to managing risks associated with the project. Key elements include a detailed risk register, execution steps, and a clear sequence for implementation across multiple product areas. The document ensures that all changes are incremental and verified against the current source code, minimizing disruption to existing designs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#14",
+      "title": "Enhance Token-Level Streaming for Assistant Replies in Coding Bridge Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "streaming",
+        "enhancement",
+        "claude",
+        "codex",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/14",
+      "summary": "This update introduces incremental token-level text streaming for assistant replies in the Coding Bridge Agent, enhancing user experience by rendering responses as they are produced. Key changes include the addition of a new event for text deltas and compatibility improvements for both Claude and Codex providers. The implementation ensures backward compatibility while providing a more dynamic interaction model."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#508",
+      "title": "Enhance AuthError Handling for Config Invalidation in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "feature",
+        "auth",
+        "config",
+        "scheduler",
+        "publisher"
+      ],
+      "public": false,
+      "summary": "This update introduces a check for typed AuthError exceptions to invalidate PublishConfig when credential failures occur. By adding `isinstance(e, AuthError)` to the invalidation condition, any typed auth failure will now mark the config as invalid until the user refreshes their credentials. This change ensures that the most common credential issues are effectively managed while maintaining existing functionality for other error types."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#507",
+      "title": "Enhance Task Management with Auth Expiry Handling in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "enhancement",
+        "scheduler",
+        "auth",
+        "task-management",
+        "metrics"
+      ],
+      "public": false,
+      "summary": "This update introduces crucial improvements to the task lifecycle by invalidating configurations upon authentication expiry failures, preventing the generation of new tasks with expired credentials. Additionally, it implements timestamps for task start and finish, enhancing the ability to measure publish latency and detect stuck tasks. These changes lay the groundwork for future metrics and alerts enhancements."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformPublisher#506",
       "title": "Enhance task claiming to prevent duplicates in Publisher 🚀",
       "tags": [
