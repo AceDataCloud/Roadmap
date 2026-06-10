@@ -3,6 +3,21 @@
   "date": "2026-06-10",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1002",
+      "title": "Optimize base64 handling to reduce Mongo bloat in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "mongodb",
+        "performance",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "This update introduces a new helper function to truncate base64-encoded input media before persisting to MongoDB, addressing significant document size issues. The change prevents excessive data storage by capping string lengths across all payload levels, ensuring efficient handling of media inputs. Historical data will be cleaned up separately, while new bloat is effectively mitigated."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1001",
       "title": "Improve error handling for upstream-busy responses in Platform Service 🚀",
       "tags": [
