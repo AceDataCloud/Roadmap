@@ -3,6 +3,22 @@
   "date": "2026-06-10",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1004",
+      "title": "Enhance Input Handling for Workers in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "workers",
+        "mongodb",
+        "performance",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update implements a crucial fix across multiple workers to truncate base64 input media before persisting to MongoDB. By adding a recursive `truncateLargeFields` helper, we ensure that any string field exceeding 1000 characters is truncated, preventing memory pressure incidents. This change enhances the stability of the Platform Service while maintaining the integrity of the output responses."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1002",
       "title": "Optimize base64 handling to reduce Mongo bloat in Platform Service 🚀",
       "tags": [
