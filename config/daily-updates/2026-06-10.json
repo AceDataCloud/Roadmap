@@ -3,6 +3,37 @@
   "date": "2026-06-10",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#625",
+      "title": "Enhance Grok Video Documentation with Landing Page and Promotion in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "grok-video",
+        "backend",
+        "enhancement",
+        "landing-page"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive introduction landing page and a promotional short for the Grok Video service, addressing a significant documentation gap. Key changes include the addition of a full HTML landing page and a marketing blurb, both designed to enhance user understanding and engagement. The migration script ensures that the service introduction is properly linked, facilitating seamless content updates across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1000",
+      "title": "Improve error handling for image-to-video requests in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "ttapi",
+        "platform-service",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update enhances the error reporting for image-to-video requests by extracting nested error messages from the TTAPI response. Instead of returning a generic 500 error, callers will now receive specific status codes like 400 for invalid image URLs, providing clearer feedback on the issue. The changes have been validated through live testing, ensuring that the system behaves as expected with both valid and invalid inputs."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#999",
       "title": "New Grok Worker Deployment in Platform Service 🚀",
       "tags": [
