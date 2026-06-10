@@ -1,0 +1,133 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-06-10",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#999",
+      "title": "New Grok Worker Deployment in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "deployment",
+        "kubernetes",
+        "grok",
+        "ttapi",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update introduces a dedicated Kubernetes deployment for the Grok Imagine video worker, aligning with the existing per-family split for Gemini. Key files added include `grok-deployment.yaml` and `grok-service.yaml`, which set up the deployment and service with health checks and two replicas. The deployment script has also been modified to ensure the Grok service is applied during each release."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#892",
+      "title": "Cleanup accidental symlink in Nexior 🧹",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "cleanup",
+        "git",
+        "ignore",
+        "fix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/892",
+      "summary": "This update removes an accidentally committed symlink named `node_modules`, which contained an absolute local path. The `.gitignore` file has been updated to prevent similar issues in the future by including `node_modules` in addition to `node_modules/`. This change ensures that no local artifacts will leak into PRs moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#624",
+      "title": "Launch Grok Imagine Video Service in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "grok",
+        "video",
+        "api",
+        "billing",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update introduces the Grok Imagine video service to PlatformBackend, featuring two new API endpoints for video generation and task retrieval. Key changes include the implementation of billing rules for video generation based on model and resolution, along with comprehensive documentation in both English and Chinese. The service is now ready for integration and usage, enhancing our AI video capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#998",
+      "title": "Exciting New Grok Imagine Video Generation Routes in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "video",
+        "grok",
+        "api",
+        "ttapi",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces new video generation endpoints for the Grok Imagine service within the ttapi worker. Key additions include routes for text-to-video and image-to-video generation, along with task retrieval capabilities. The changes enhance the functionality of the PlatformBackend, enabling seamless video creation and management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#891",
+      "title": "Enhance Slash Command Menu to Show All Options in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "navigation",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/891",
+      "summary": "This update fixes the slash command autocomplete menu in the Coding Bridge composer, allowing all matching commands to be displayed instead of just the first eight. The hard limit has been removed, enabling a scrollable menu that enhances user navigation. Additionally, keyboard navigation has been improved to ensure the active command is always visible."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#997",
+      "title": "Enhance CLS Topic ID for Observability in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "observability",
+        "logging",
+        "deployment",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update sets the `CODING_BRIDGE_CLS_TOPIC_ID` to the provisioned CLS topic, enabling effective shipping of logs for observability. The change ensures that the relay observability layer no longer skips CLS shipping when the topic ID is empty, while maintaining the current request routing behavior. A minor modification was made to the deployment configuration file."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#890",
+      "title": "Enhance Coding Bridge with End-to-End Trace IDs in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "debugging",
+        "ui",
+        "logging",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/890",
+      "summary": "This update introduces end-to-end trace IDs for the Coding Bridge, allowing for better debugging across browser, relay, and node processes. Key changes include the addition of trace IDs in session and event models, a new copyable diagnostic strip in the UI, and enhanced logging capabilities. This improvement will streamline issue reporting and log lookups for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#76",
+      "title": "Update gitignore to exclude CodingBridgeAgent in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "gitignore",
+        "workspace",
+        "standalone",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update modifies the workspace gitignore file to include `CodingBridgeAgent/`, ensuring it is not tracked by the Index superproject. This change aligns with the existing exclusions for other standalone repositories, enhancing workspace management."
+    }
+  ]
+}
