@@ -3,6 +3,21 @@
   "date": "2026-06-10",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1001",
+      "title": "Improve error handling for upstream-busy responses in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "bananarouter",
+        "platform-service",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update modifies the error handling in the bananarouter worker to return a 500 status code instead of a 429 for upstream-busy errors. This change ensures that the error reflects a server-side issue, making it visible to alarms and improving monitoring accuracy. The upstream message remains intact for callers, while retry logic stays unchanged."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#625",
       "title": "Enhance Grok Video Documentation with Landing Page and Promotion in Backend 🚀",
       "tags": [
