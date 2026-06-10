@@ -3,6 +3,37 @@
   "date": "2026-06-10",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#418",
+      "title": "Update vue-tsc to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "vue",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps the vue-tsc package from version 3.3.2 to 3.3.4. Key fixes include improvements in handling inherited attributes, camelizing slot props, and detecting duplicate event listeners. These changes enhance the overall stability and functionality of the frontend codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#902",
+      "title": "Update Capacitor Updater to Latest Version in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "update",
+        "bugfix",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/902",
+      "summary": "This update bumps the @capgo/capacitor-updater package from version 8.47.6 to 8.49.1. Key improvements include fixes for pinch-to-zoom gestures in preview mode and enhancements for managing local preview sessions directly within the application. These changes aim to enhance user experience and stability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1004",
       "title": "Enhance Input Handling for Workers in Platform Service 🚀",
       "tags": [
