@@ -1,0 +1,37 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-06-11",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#900",
+      "title": "Update Vue to Latest Version in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "vue",
+        "update",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/900",
+      "summary": "This update bumps Vue from version 3.5.33 to 3.5.35, incorporating several bug fixes and performance improvements. Key enhancements include optimizations in the runtime and reactivity systems, which should lead to a smoother user experience. The changes are expected to enhance the overall stability and efficiency of the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#416",
+      "title": "Update Node Types to 25.9.2 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "frontend",
+        "typescript"
+      ],
+      "public": false,
+      "summary": "This update bumps the @types/node package from version 25.9.1 to 25.9.2. The changes include modifications in both package-lock.json and package.json files, ensuring compatibility with the latest type definitions. This enhancement helps maintain the stability and performance of the project."
+    }
+  ]
+}
