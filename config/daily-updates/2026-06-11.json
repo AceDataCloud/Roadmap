@@ -3,6 +3,38 @@
   "date": "2026-06-11",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#899",
+      "title": "Update Capacitor Core to Latest Version in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "update",
+        "capacitor",
+        "bugfix",
+        "cli"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/899",
+      "summary": "This update bumps the @capacitor/core dependency from version 8.3.4 to 8.4.0. Key improvements include bug fixes for Android system bars and enhancements to the CLI, such as capturing telemetry data and adding new experimental options. This upgrade ensures better stability and performance for the Nexior project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#415",
+      "title": "Update TypeScript ESLint Parser to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "typescript",
+        "eslint",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update bumps the @typescript-eslint/parser from version 8.60.1 to 8.61.0, aligning it with other projects. Key improvements include tighter type specifications for various AST nodes and a fix for ECMAScript line terminators. This change enhances type-checking capabilities and overall code quality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#900",
       "title": "Update Vue to Latest Version in Nexior 🚀",
       "tags": [
