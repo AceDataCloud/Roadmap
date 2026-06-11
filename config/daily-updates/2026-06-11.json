@@ -3,6 +3,52 @@
   "date": "2026-06-11",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#897",
+      "title": "Update vue-router to 5.1.0 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "update",
+        "vue-router",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/897",
+      "summary": "This update bumps the vue-router dependency from version 5.0.7 to 5.1.0, introducing several new features and bug fixes. Key improvements include typed parameters for definePage, support for raw param parsers, and enhanced error handling for query parameters. This update aims to enhance the overall routing experience in the Nexior application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#898",
+      "title": "Update query-string to version 9.4.0 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "dependencies",
+        "update",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/898",
+      "summary": "This update bumps the query-string library from version 9.3.1 to 9.4.0, enhancing performance. The changes include modifications in both package-lock.json and package.json to reflect the new version. This upgrade ensures better efficiency in handling query strings within the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#414",
+      "title": "Update Stripe.js to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "stripe",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps the @stripe/stripe-js library from version 4.10.0 to 9.8.0, introducing several new features and improvements. Key changes include the addition of CurrencySelector element definitions and new appearance API variable types, enhancing the payment experience. This upgrade ensures better compatibility and access to the latest features provided by Stripe."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#899",
       "title": "Update Capacitor Core to Latest Version in Nexior 🚀",
       "tags": [
