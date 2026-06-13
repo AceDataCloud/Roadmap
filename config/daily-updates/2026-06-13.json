@@ -3,6 +3,317 @@
   "date": "2026-06-13",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#917",
+      "title": "Enhance Markdown Rendering with Links and Syntax Highlighting in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "markdown",
+        "highlighting",
+        "coding-bridge",
+        "ui",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/917",
+      "summary": "This update improves the rendering of markdown links and syntax highlighting in the coding-bridge transcript. Key changes include enabling linkification for bare URLs and integrating highlight.js for reliable syntax highlighting directly in the rendered HTML. These enhancements ensure that links are clickable and code blocks are visually appealing, enhancing the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#427",
+      "title": "Fix MCP Channel Card Token Key for Better Deployment Flow in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "fix",
+        "deployment",
+        "frontend",
+        "api",
+        "token"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue with the MCP Channel card on the deployment management page, ensuring it correctly reads the API token after migration. The token is now fetched data-driven from deployment metadata, with fallbacks for legacy instances. This change enhances the user experience by restoring the intended functionality for both new and old instances."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#916",
+      "title": "Automate Mobile Testing Releases in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "automation",
+        "mobile",
+        "testing",
+        "release"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/916",
+      "summary": "This update introduces an automated workflow for releasing mobile versions to testing tracks upon merging to the main branch. Android builds will go to Open Testing while iOS versions will be uploaded to TestFlight without submitting for App Store review. The process ensures that production releases remain manual, preventing any unintended promotions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#915",
+      "title": "Enhance mobile usability of AskUserQuestion card in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "mobile",
+        "usability",
+        "bugfix",
+        "coding-bridge",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/915",
+      "summary": "This update resolves a critical issue where the AskUserQuestion card was unusable on mobile devices due to clipping of the question text and buttons. By introducing a 'bounded' prop, the card now adapts its height appropriately within the transcript's scroll container, ensuring all options and the Submit button are accessible. Testing confirms that the chat functionality remains unchanged while improving the mobile experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#637",
+      "title": "Streamlined Document Links and Cleanup in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "cleanup",
+        "normalization",
+        "backend",
+        "links"
+      ],
+      "public": false,
+      "summary": "This update implements UUID to alias link normalization across all 18 locales, ensuring all document links are now canonical. Additionally, 92 junk documents have been removed, including deprecated stubs and unpublished duplicates, enhancing the overall quality and accessibility of the documentation. The changes improve link consistency and reduce clutter in the documentation repository."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#331",
+      "title": "Updated API Guides with Latest Model Changes in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "api",
+        "documentation",
+        "updates",
+        "models"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/331",
+      "summary": "This update aligns the aichat, glm, and flux API guides with the latest model specifications. Key changes include the removal of outdated models like `glm-4.5-air` and `flux-pro-1.1`, and the addition of `deepseek-v4-flash` and `flux-2-pro`. These adjustments ensure that the documentation reflects the current capabilities and options available to users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#336",
+      "title": "Update aichat models with deepseek-v4-flash in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "sync",
+        "aichat",
+        "models",
+        "lint",
+        "ci"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/336",
+      "summary": "This update adds the `deepseek-v4-flash` model to the aichat models, addressing a sync issue that has persisted since June 2026. Additionally, lint fixes were applied to ensure that the aichat CI pipeline runs smoothly again. All tests have passed successfully, confirming the integrity of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#392",
+      "title": "Sync aichat and glm model enums with Docs updates in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "sync",
+        "update",
+        "models",
+        "documentation",
+        "aichat",
+        "glm"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/392",
+      "summary": "This update manually reconciles the aichat and glm model enums with the latest OpenAPI documentation, addressing a sync failure that has persisted since June 2026. Key changes include the addition of new models and the removal of outdated ones from both aichat and glm. The PR also refreshes related documentation to reflect these updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#636",
+      "title": "Enhance x402 Discovery to Filter Payable Products in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "x402",
+        "discovery",
+        "backend",
+        "filtering",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces a new utility for filtering the x402 discovery document to ensure only payable products are advertised. Key changes include the addition of a pure function for path filtering and updates to the view to implement these rules, resulting in a reduction of discoverable endpoints from 72 to approximately 46. The changes improve the quality of the indexed services by excluding free and internal endpoints."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#914",
+      "title": "Enhance first turn experience with persistent thinking indicator in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "user-experience",
+        "session",
+        "indicator",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/914",
+      "summary": "This update fixes the issue where the 'thinking' animation disappears too quickly during the first turn of a session, making it appear frozen. By keeping the session status as 'running' on the 'session.started' event, the indicator remains visible until the turn is complete, improving user experience. Additionally, this change restores the interrupt button functionality during the first turn."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#634",
+      "title": "Enhance Video Product Billing Rules in Backend 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "billing",
+        "tests",
+        "api",
+        "backend",
+        "video"
+      ],
+      "public": false,
+      "summary": "This update introduces new billing rules for the PlatformStudio video product, detailing costs for FFmpeg and Remotion engines. It includes 6 cost tests to ensure accuracy, which will run in CI and during Docker builds, thus securing the deployment process. The API billing rules and tests are now fully integrated, enhancing the overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#32",
+      "title": "Enhance Agent Frameworks with X402 Payment Integration in X402 Client 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "x402",
+        "integration",
+        "agent",
+        "payment",
+        "examples",
+        "docs"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/32",
+      "summary": "This update introduces several examples demonstrating how to integrate AceData Cloud APIs with agent frameworks using the x402 payment protocol. Key additions include tools for LangChain, OpenAI Agents, CrewAI, and an MCP server, all allowing agents to pay per call in USDC without needing API keys. The examples are designed for testing and showcase a streamlined approach to agent payments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#81",
+      "title": "Fix broken link in directory submission docs in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "fix",
+        "link",
+        "update"
+      ],
+      "public": false,
+      "summary": "Updated the documentation for directory submission by replacing a dead link with the correct one. The previous link to the quickstart guide was returning a 404 error, and it has now been verified to return a 200 status. This change enhances the accessibility of the documentation for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#426",
+      "title": "Fix broken links and enhance resources in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "documentation",
+        "navigation",
+        "resources",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update addresses a broken documentation link by redirecting it to the correct resource. Additionally, a new Resources section has been added, featuring eight verified links to essential tools and guides. The top navigation has also been updated to include an 'x402' menu item, improving accessibility across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#635",
+      "title": "Link Cleanup and Normalization Across All Locales in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "cleanup",
+        "localization",
+        "links",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update includes a comprehensive audit and correction of all links in the documentation for the platform, eliminating 37 distinct fake links across 18 locales. Key changes involve fixing URL typos, updating UUIDs to aliases, and ensuring all links point to valid resources, enhancing the overall user experience and accessibility of the documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#22",
+      "title": "Enhance single-instance locking to prevent daemon conflicts in Coding Bridge Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "feature",
+        "locking",
+        "reliability",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/22",
+      "summary": "This update introduces a single-instance lock mechanism to prevent multiple daemons from running simultaneously and conflicting over a node token. The new implementation ensures that if a second instance is attempted to be started, it fails fast with a clear error message, enhancing reliability. Comprehensive tests have been added to validate the locking functionality, ensuring smooth operation under various scenarios."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformStudio#13",
+      "title": "Launch Checklist for PlatformStudio in Platform Studio 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformStudio",
+        "deployment",
+        "documentation",
+        "runbook",
+        "platformstudio",
+        "go-live"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive deploy and go-live runbook for PlatformStudio. It includes essential steps such as setting up secrets, registering services, and performing an initial smoke test to ensure everything is functioning correctly. This checklist aims to streamline the deployment process and enhance operational efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformStudio#12",
+      "title": "Enhance Worker Path with Django Adapter and Publishing Features in Platform Studio 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformStudio",
+        "feature",
+        "django",
+        "persistence",
+        "scheduler",
+        "publishing"
+      ],
+      "public": false,
+      "summary": "This update completes the worker's production path, facilitating the Studio to Publisher data handoff. Key additions include the `DjangoPersistence` adapter, which implements the worker's persistence protocol, and new models for `PublishChannel`, `PublishDocument`, and `PublishTask`. The scheduler now effectively polls for pending video projects, ensuring a seamless workflow from production to publishing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformStudio#11",
+      "title": "Fix Docker Build for Poetry Install in Platform Studio 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformStudio",
+        "docker",
+        "poetry",
+        "build",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update addresses a failure in the Deploy workflow's Docker build due to Debian bookworm's handling of the system interpreter as externally-managed (PEP 668). By setting `PIP_BREAK_SYSTEM_PACKAGES=1`, poetry can now pip-install dependencies directly into the system interpreter. This change ensures smoother dependency management and builds."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformStudio#10",
       "title": "Feat(automation+ci): trend selection + Docker→GHCR build + cron in Platform Studio ✨",
       "tags": [
