@@ -3,6 +3,316 @@
   "date": "2026-06-13",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#431",
+      "title": "Enhance SEO with Canonical Redirects for Document Slugs in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "seo",
+        "redirect",
+        "frontend",
+        "canonical",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update implements a canonical redirect for old document slugs to their new aliases, addressing SEO concerns related to duplicate content. The changes ensure that when users access old URLs, they are seamlessly redirected to the canonical alias, improving search engine indexing. Additionally, the canonical link now correctly points to the alias instead of the UUID, further consolidating URL authority."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/OpenClawProvider#9",
+      "title": "Fix onboarding key alignment for seamless integration in Open Claw Provider 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "OpenClawProvider",
+        "bugfix",
+        "onboarding",
+        "api",
+        "testing",
+        "release"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/OpenClawProvider/pull/9",
+      "summary": "This update resolves a critical mismatch between the onboarding option key and the CLI flag for non-interactive onboarding. The `optionKey` has been corrected to `acedataApiKey`, ensuring that user-provided API keys are properly stored and utilized. Additionally, a regression test has been added to prevent future discrepancies, and the version has been bumped to 2026.5.34."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#642",
+      "title": "Revamp MCP Documentation with New Naming Conventions in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "backend",
+        "updates",
+        "mcp",
+        "naming"
+      ],
+      "public": false,
+      "summary": "This update introduces a significant overhaul of 90 MCP documentation articles, renaming them to a cleaner format while ensuring old URLs remain functional through redirects. Additionally, 9 redundant articles have been removed, streamlining the documentation for better accessibility and clarity. The changes enhance user experience across all locales by updating 4242 inbound links."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WisdomChannel#4",
+      "title": "Streamlined PyPI Publishing with Org Token in Wisdom Channel 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WisdomChannel",
+        "ci",
+        "pypi",
+        "workflow",
+        "automation",
+        "release"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/WisdomChannel/pull/4",
+      "summary": "This update transitions the publishing process to utilize the organization-level `PYPI_TOKEN`, allowing for seamless publishing to PyPI upon merging to the main branch. The versioning follows a date-based format with a daily build number, ensuring that repeated merges do not conflict. Additionally, the workflow supports manual triggers and includes a safeguard for re-runs with the `--skip-existing` option."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#178",
+      "title": "Enhance Publisher Connectors with OAuth Support in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "connectors",
+        "oauth",
+        "backend",
+        "features",
+        "publishing"
+      ],
+      "public": false,
+      "summary": "This update transforms PlatformPublisher's manual credential handling into robust connectors for various platforms. Batch 1 introduces Dev.to and Blogger with BYOC and OAuth capabilities, while Batch 2 adds new OAuth2 adapters for Reddit and LinkedIn. Users can now seamlessly publish content from Studio chat, enhancing the overall publishing experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#380",
+      "title": "Exciting New Publisher Connectors for Skills in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "features",
+        "connectors",
+        "skills",
+        "api",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/380",
+      "summary": "This update introduces new publisher connectors for platforms including Dev.to, Blogger, Reddit, and LinkedIn. Each connector allows users to publish and manage content seamlessly using their respective APIs. Additionally, a comprehensive guide has been added to assist users in setting up these connectors effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#430",
+      "title": "Enhance Claude Integration and WeChat Login Experience in Frontend Web 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "enhancement",
+        "integration",
+        "localization",
+        "frontend",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces a streamlined Claude integration flow directly within the console, providing users with a copy-paste code snippet for easy setup. Additionally, it highlights the need for re-scanning the WeChat QR code after instance termination or redeployment. The changes include internationalization support across 12 locales, ensuring a broader accessibility for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WisdomChannel#3",
+      "title": "Enhance PyPI Publishing Workflow in Wisdom Channel 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WisdomChannel",
+        "ci",
+        "pypi",
+        "workflow",
+        "automation",
+        "release"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/WisdomChannel/pull/3",
+      "summary": "This update modifies the CI workflow to trigger automatic publishing to PyPI upon merging to the main branch, addressing previous issues with manual dispatch and tag-based triggers. Key changes include a unique CalVer timestamp versioning system and concurrency management to ensure safe re-runs. A one-time setup for PyPI's pending publisher is required for trusted publishing, streamlining future releases."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#429",
+      "title": "Rearrange x402 Navigation Entry in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "navigation",
+        "frontend",
+        "ui",
+        "update"
+      ],
+      "public": false,
+      "summary": "The x402 navigation entry has been successfully moved to the last position in the top navigation bar, following the ACE Token link. This change involved only the repositioning of a single menu item, with no internationalization modifications required. All relevant checks for eslint, prettier, and i18n have passed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#641",
+      "title": "Upgrade WeChat Bot Image to Verified Snapshot in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "wechat-bot",
+        "deployment",
+        "backend",
+        "migration",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update migrates the WeChat Bot deployment image from `img-eyraq5nz` to the verified `img-7fdrlev9`, ensuring enhanced reliability. The change applies to both the public `wechat-bot` service and the legacy `wisdom` service, with no impact on existing deployments. The migration is idempotent and reversible, allowing for a seamless transition to the new image."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WisdomChannel#2",
+      "title": "Publish-Ready WisdomChannel with PyPI & CLI Enhancements in Wisdom Channel 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WisdomChannel",
+        "pypi",
+        "cli",
+        "documentation",
+        "testing",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/WisdomChannel/pull/2",
+      "summary": "This update makes WisdomChannel installable directly from PyPI and corrects the integration documentation. Key changes include a single version source derived from package metadata, improved CLI commands, and the addition of smoke tests to ensure functionality. The README now emphasizes the need for a persistent interactive TTY session for optimal operation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#919",
+      "title": "Enforce Beachball Change File Check in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "beachball",
+        "automation",
+        "release",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/919",
+      "summary": "This update introduces a critical change to the CI workflow by enforcing a beachball change file check for PRs. If a PR modifies publishable files without a corresponding change file, the CI will fail, preventing merges that would skip version bumps and mobile auto-releases. Additionally, a patch change file is included to ensure the full release process is triggered upon merging this PR."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#640",
+      "title": "Updated WeChat Bot Architecture Details in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "wechat-bot",
+        "architecture",
+        "update"
+      ],
+      "public": false,
+      "summary": "The WeChat bot documentation has been corrected to accurately reflect the architecture, replacing the previous erroneous details with the correct Tencent CVM Windows host setup. Key updates include the introduction of the Wisdom API on port 8000, QR code login, and a revised cURL command for message sending. This change enhances clarity for users and aligns the documentation with the actual implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#177",
+      "title": "Introducing YouTube Connector for Self-Serve Integration in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "youtube",
+        "oauth",
+        "integration",
+        "video",
+        "publishing"
+      ],
+      "public": false,
+      "summary": "This update adds a YouTube connector to the platform, allowing users to easily connect their YouTube accounts with a single click. The integration utilizes OAuth for authentication, storing refresh tokens securely, and supports both uploading and reading from YouTube. Users can now automate video uploads generated from the platform, enhancing their content publishing capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#379",
+      "title": "Empower YouTube Interactions with New Skill in Skills 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "youtube",
+        "skills",
+        "api",
+        "feature",
+        "integration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/379",
+      "summary": "This update introduces a new YouTube skill that enables users to search YouTube, access their channel and uploaded videos, and upload new content through the YouTube Data API v3. The skill is automatically linked to the Google YouTube connector, enhancing user experience by allowing seamless interactions with their YouTube account. Key functionalities include video stats retrieval, comments access, and resumable uploads with user confirmation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#639",
+      "title": "Enhance Document Aliases for Seamless URL Renaming in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "seo",
+        "backend",
+        "documents",
+        "url"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature allowing documents to be renamed without breaking existing URLs. The `redirect_from` field now holds old slugs, ensuring that both new and old URLs resolve to the same document. This change enhances SEO by preventing 404 errors and maintaining inbound link integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#428",
+      "title": "Enhance WeChat QR-login Experience in Frontend Web 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "wechat",
+        "login",
+        "i18n",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces a WeChat QR-login card and a dispatcher alias for the `wechat-bot` service, enhancing the user experience in the console. Users can now log in seamlessly without RDP, as the QR code opens in a new tab for easy scanning. Additionally, internationalization support has been added for multiple languages, ensuring accessibility for a broader audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#638",
+      "title": "Unify WeChat Bot Service Identities in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "migration",
+        "service",
+        "weChat"
+      ],
+      "public": false,
+      "summary": "This update merges the two WeChat Bot service identities into a single public deployable service. The migration copies deployment metadata, cost, and packages from the private 'wisdom' identity to the public 'wechat-bot', ensuring users can access the deploy wizard seamlessly. Additionally, it adds a JSON file for consistent pricing across services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#918",
+      "title": "Enhance Mobile Experience with AskUserQuestion Fix in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "mobile",
+        "usability",
+        "fix",
+        "coding-bridge",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/918",
+      "summary": "This update addresses mobile usability issues with the AskUserQuestion card in the coding bridge. Key changes include docking the question card above the composer to ensure the action bar remains visible and implementing Enter-to-advance functionality for radio selections. These improvements enhance user interaction and accessibility on mobile devices."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#917",
       "title": "Enhance Markdown Rendering with Links and Syntax Highlighting in Nexior 🚀",
       "tags": [
