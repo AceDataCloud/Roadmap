@@ -3,6 +3,282 @@
   "date": "2026-06-13",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Dify#256",
+      "title": "Introducing Grok Imagine Video Tool Plugin in Dify 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "plugins",
+        "video",
+        "grok",
+        "dify",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/256",
+      "summary": "This update adds the Grok Imagine Videos plugin to Dify, enabling users to generate videos from text prompts and images. Key features include tools for video generation and task retrieval, enhancing the platform's multimedia capabilities. The plugin mirrors existing video tools, ensuring a consistent user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1011",
+      "title": "Fix video storage path for Grok in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "video",
+        "cdn",
+        "grok",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update corrects the storage path for Grok Imagine videos, ensuring they are saved under the `/grok` CDN path instead of the previously hardcoded `/sora`. Key changes include modifying the `transferVideos` and `uploadSoraVideosToCos` functions to utilize the new `DEFAULT_GROK_VIDEO_CDN_PATH`. The default behavior remains unchanged for other video types, maintaining consistency across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#387",
+      "title": "Introducing GrokMCP Server for AI Video Generation in M C Ps 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "grok",
+        "video",
+        "AI",
+        "MCP",
+        "features",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/387",
+      "summary": "This update introduces the GrokMCP server, enabling AI video generation through the Grok Imagine service. Key features include tools for text-to-video and image-to-video generation, along with task tracking capabilities. The implementation is designed to enhance the existing MCP layer, providing a robust solution for video generation tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#19",
+      "title": "Enhance Event Delivery Design and Protocol v2 in Coding Bridge Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "event-delivery",
+        "protocol",
+        "design",
+        "reliability",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/19",
+      "summary": "This PR introduces a comprehensive design document and protocol v2 specification aimed at improving event delivery reliability across three repositories. Key features include a per-session event-sourced log, a node-side outbox for buffering, and cursor-based resume capabilities. These enhancements are designed to ensure that in-flight events are not lost during disconnections, significantly improving the user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#40",
+      "title": "Enhance WeChat Plugin Type Checking in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "typecheck",
+        "plugin",
+        "openclaw",
+        "development",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update resolves type checking issues for the OpenClaw WeChat channel plugin by remapping imports to the new public API structure of the `openclaw` SDK. Additionally, it introduces essential build tooling, including a `tsconfig.json` and a type checking script, which previously did not exist. The changes ensure that the plugin is now compatible with `openclaw@2026.6.6`, significantly reducing type errors and improving development workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#910",
+      "title": "Revamp Prompt Editing to Rewind Conversations in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "editing",
+        "user-experience",
+        "backend",
+        "session-management"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/910",
+      "summary": "This update replaces the previous append behavior for prompt editing with a rewind/fork mechanism, ensuring that the conversation truncates correctly at the edited prompt. Key changes include the introduction of a new `session.edit` action and enhancements to the user interface, allowing users to edit prompts while maintaining session integrity. The implementation is paired with backend support for seamless session management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#18",
+      "title": "Enhance Prompt Editing with Conversation Forking in Coding Bridge Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "feature",
+        "editing",
+        "claude",
+        "forking",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/18",
+      "summary": "This update introduces the ability to edit past prompts by forking the conversation, aligning with Claude's rewind functionality. Key changes include the implementation of a new `session.edit` action, support for editing capabilities in the Claude provider, and the addition of comprehensive unit tests. The changes enhance user experience by allowing more precise control over conversation history."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#424",
+      "title": "Enhance Try-the-API with Service Favicons in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "enhancement",
+        "vue",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces service favicons to the **Try the API** dropdown, enhancing the user interface. The `ApiKeyQuickAccess.vue` component now includes an `icon_url` for each service, while `ApiCodeDialog.vue` renders these icons alongside service names. This improvement follows previous updates to the applications list and leverages backend data already in place."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#77",
+      "title": "Remove SolRadar from Index tracking in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "submodule",
+        "cleanup",
+        "repository",
+        "git"
+      ],
+      "public": false,
+      "summary": "The `SolRadar` submodule has been deregistered from the Index superproject, aligning it with other standalone workspace repositories. This change ensures that SolRadar remains a self-contained repo while no longer being tracked as a submodule. All working files are untouched, and its history and remote connection are preserved."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#423",
+      "title": "Fix favicon rendering issue by registering ElImage in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "fix",
+        "frontend",
+        "icons",
+        "el-image"
+      ],
+      "public": false,
+      "summary": "This update resolves the issue where the favicon `<el-image>` was not rendering due to the component not being registered. The `ElImage` component has now been imported and registered in the List.vue file, ensuring that the icons will display correctly. With backend data already in place, this change allows the icons for 42 API services to be visible."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#909",
+      "title": "Add animated thinking indicator for agent activity in Nexior 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "user-experience",
+        "coding-bridge"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/909",
+      "summary": "This update introduces a new thinking indicator in the coding-bridge session view, enhancing user experience by providing visual feedback while the agent processes prompts. The indicator features a Braille spinner and playful gerunds, along with a live elapsed timer. This ensures users are aware that the agent is actively working, reducing confusion during wait times."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#422",
+      "title": "Update PR Workflow to Align with Backend in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ci",
+        "workflow",
+        "frontend",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "The PR workflow for the frontend has been renamed from 'CI' to 'check-pr' to match the backend's naming convention. This change ensures that the required checks are accurately reported, preventing issues with force-merging PRs. A companion ruleset update will further align the frontend checks with the backend's requirements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#17",
+      "title": "Fix replay issue for resumed transcripts in Coding Bridge Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "bugfix",
+        "transcripts",
+        "replay",
+        "testing",
+        "coding-bridge"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/17",
+      "summary": "This update addresses a critical issue where new queries appeared mid-transcript after resuming a conversation. The fix involves guarding against replayed messages by filtering out old IDs, ensuring that only genuine new outputs are processed. Comprehensive tests confirm the solution's effectiveness and prevent regressions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#421",
+      "title": "Exciting New Codex Slide Added to Homepage Carousel in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "homepage",
+        "carousel",
+        "codex",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new Codex hero slide to the homepage carousel, positioned right after the Claude Code slide. Key changes include the addition of a `slide--codex` item in the `Index.vue` file and updates to multiple language service files to support the new content. This enhancement aims to promote the new Codex Agent service effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#628",
+      "title": "Introducing Codex Agent Service in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "codex",
+        "backend",
+        "documentation",
+        "openai"
+      ],
+      "public": false,
+      "summary": "This update adds the Codex Agent service to the platform, mirroring the existing Claude Code service. It features a bilingual landing page and integrates seamlessly with the existing OpenAI Responses-compatible proxy. No new API or billing is required, enhancing accessibility for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#907",
+      "title": "Edit and Resend Prompts in Nexior ✏️",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "coding-bridge",
+        "ui",
+        "internationalization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/907",
+      "summary": "Users can now click on sent prompts in the Coding Bridge session view to edit and resend them. This feature allows for model switching and tweaking of text and attachments before resending, enhancing user interaction. The changes include updates to the session and transcript components, as well as internationalization support for multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#908",
+      "title": "Enhance ID Visibility on Coding Bridge in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "ui",
+        "accessibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/908",
+      "summary": "This update improves the display of diagnostic identifiers on the Coding Bridge page by replacing the truncation style with a wrapping style. Users can now view and copy the full Device/Node ID, Session ID, and Trace ID without any cutoff. The tooltip and copy-to-clipboard functionality remain intact for user convenience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#627",
       "title": "Add favicon support for API services in Backend 🎨",
       "tags": [
