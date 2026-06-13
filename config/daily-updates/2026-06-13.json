@@ -3,6 +3,232 @@
   "date": "2026-06-13",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#929",
+      "title": "Boost Gradle Heap to Fix OOM in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "android",
+        "gradle",
+        "fix",
+        "build",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/929",
+      "summary": "This update increases the Gradle heap size from 1536m to 4096m to resolve OutOfMemoryError issues during the lintVitalRelease task. The change addresses failures in the Android build caused by the addition of new dependencies, ensuring smoother builds moving forward. The updated settings will be monitored in the next auto-triggered build."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#643",
+      "title": "Optimize face-swap probe interval for efficiency in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "optimization",
+        "e2e",
+        "backend",
+        "testing"
+      ],
+      "public": false,
+      "summary": "The continuous face-swap probe interval has been increased from 180 seconds to 600 seconds. This change reduces the call volume to the face-swap service by approximately two-thirds, while still ensuring timely detection of outages. The adjustment is made in the e2e test script without requiring any additional scheduling changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#513",
+      "title": "Reverting cookie keep-alive to AuthBackend in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "revert",
+        "auth",
+        "cookies",
+        "architecture",
+        "publisher"
+      ],
+      "public": false,
+      "summary": "This update reverts the cookie keep-alive functionality back to the AuthBackend as per architectural decisions. The changes include the removal of related code from the Publisher, ensuring that the keep-alive process is handled by a dedicated cronjob instead. The publish-time cookie read functionality remains intact, maintaining overall system integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#928",
+      "title": "Enable Push Notifications for iOS in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ios",
+        "push-notifications",
+        "feature",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/928",
+      "summary": "This update adds the necessary entitlement for push notifications in the iOS app by declaring the `aps-environment` as production. The existing App ID already supports push notifications, ensuring a seamless integration without any changes to the signing process. Users can now receive Coding Bridge consent prompts via APNs after installing the app from TestFlight."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#512",
+      "title": "Enhance Connector Cookie Management in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "feature",
+        "cookies",
+        "auth",
+        "testing",
+        "refresh"
+      ],
+      "public": false,
+      "summary": "This update introduces a keep-alive mechanism for connector cookies, ensuring users remain logged in without needing to reconnect during session rotations. Key modifications include enhancements to the connections and scheduler modules, as well as the addition of eight new client tests to ensure functionality. The changes are designed to run seamlessly alongside existing refresh processes, improving overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1014",
+      "title": "Enhance iOS Push Notifications with Direct APNs Support in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "ios",
+        "apns",
+        "push-notifications",
+        "feature",
+        "coding-bridge"
+      ],
+      "public": false,
+      "summary": "This update introduces direct APNs transport for iOS consent push notifications, allowing the system to send notifications directly via Apple's APNs HTTP/2 instead of relying on FCM. Key changes include new methods in notifier.py for APNs handling, updated configuration options, and modifications to the main API to support the new push kind. The implementation is fully tested, ensuring reliable delivery of notifications to iOS devices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#926",
+      "title": "Enhance iOS Push Notification Support in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ios",
+        "push-notifications",
+        "apns",
+        "fcm",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/926",
+      "summary": "This update introduces support for registering native push notifications on iOS using APNs, while maintaining FCM for Android. Key changes include the addition of a new transport for APNs and updates to the subscription handling to differentiate between iOS and Android. The implementation is currently a no-op until the necessary iOS entitlements and configurations are completed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#927",
+      "title": "Enhance Notification Bell Loading State in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "notification",
+        "improvement",
+        "font-awesome"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/927",
+      "summary": "This update improves the loading state of the notification bell by replacing the cramped built-in spinner with a visually consistent Font Awesome spinner icon. The button is now disabled while busy, ensuring a cleaner user experience. Additionally, the Font Awesome spinner has been registered in the central plugin for better integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#925",
+      "title": "Enable Firebase Push Notifications for Android in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "android",
+        "firebase",
+        "push-notifications",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/925",
+      "summary": "This update integrates Firebase Cloud Messaging (FCM) into the Android app for Coding Bridge consent prompts. It adds the necessary `google-services.json` file, enabling push notifications when the app is backgrounded or closed. The server-side relay is already live, ensuring that consent prompts can be pushed effectively to users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#922",
+      "title": "Revamp Empty-State Button for New Tasks in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "mobile",
+        "ux",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/922",
+      "summary": "The empty-state magic wand has been transformed into a clickable button that opens the new task drawer, enhancing user experience. The previous floating magic button is now hidden during the empty state, providing a clearer interface. This change streamlines task creation on mobile devices, ensuring users have a single, intuitive option to start new tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#924",
+      "title": "Stop iOS Auto-Zoom in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ios",
+        "mobile",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/924",
+      "summary": "This update resolves the issue of iOS auto-zooming the page when focusing on the coding-bridge composer. By increasing the font size of the textarea to 16px on mobile devices, we ensure a smoother user experience without affecting the desktop layout. The fix mirrors a previous solution applied to the chat composer."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#180",
+      "title": "Enhance cookie connectors with new platforms in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "connectors",
+        "cookies",
+        "backend",
+        "china",
+        "authentication"
+      ],
+      "public": false,
+      "summary": "This update expands the cookie-connector pilot by adding support for four additional Chinese platforms: CSDN, Juejin, Toutiao, and Xiaohongshu. Each connector is designed with a `credential_schema` for cookies, allowing users to securely capture and store login states via the ACE extension. Future phases will focus on publisher integration and cookie keep-alive functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#511",
+      "title": "Enhance cookie handling from AuthBackend in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "feature",
+        "cookies",
+        "authbackend",
+        "testing",
+        "scheduler"
+      ],
+      "public": false,
+      "summary": "This update integrates cookie connectors from the ACE extension into the Publisher, allowing for seamless access to cookies stored in AuthBackend's encrypted vault during the publishing process. Key changes include the addition of a new function to fetch connector cookies and modifications to the scheduler to prioritize these cookies over legacy credentials. The implementation is supported by new unit tests to ensure reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#923",
+      "title": "Secure Admin Tabs for Mobile Users in Nexior 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "security",
+        "frontend",
+        "bugfix",
+        "mobile"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/923",
+      "summary": "This update addresses a critical issue where non-admin users could access admin-only settings on mobile devices. By rendering only visible navigation items, we ensure that sensitive tabs are not included in the DOM, effectively preventing unauthorized access. Additionally, a missing guard for the Site Settings tab has been added to enhance security."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1013",
       "title": "Enhance Consent Notifications for Coding Bridge in Platform Service 🚀",
       "tags": [
