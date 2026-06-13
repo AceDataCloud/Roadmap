@@ -1,0 +1,179 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-06-13",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#627",
+      "title": "Add favicon support for API services in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "favicon",
+        "service",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `icon_url` field to the Service model, allowing each API service to display a favicon alongside its name in the console. A backfill script has been implemented to populate this field for existing services using their corresponding Document icons. The migration and backfill processes are set up to ensure a smooth rollout without external fetching."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#420",
+      "title": "Enhance Application List with Service Favicons in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "feature",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces service favicons to the Dedicated Applications list, enhancing visual identification. The `IService` model now includes an optional `icon_url`, and the application list displays these icons next to service names when available. This feature improves the overall user experience by aligning the console with the document page design."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#905",
+      "title": "Enhance Composer Experience by Remembering Last Setup in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "coding-bridge",
+        "user-experience",
+        "persistence"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/905",
+      "summary": "This update introduces a feature that remembers the last composer setup used per device in the Coding Bridge. Key settings such as working directory, provider, model, reasoning effort, and permission mode are now persisted, allowing for a smoother user experience during new sessions. The implementation ensures that existing sessions remain unaffected while enhancing usability across devices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1008",
+      "title": "Fix default action for task retrieval in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "tasks",
+        "workers",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses a bug where missing action parameters in `/tasks` queries resulted in empty responses. The default action is now set to 'retrieve', ensuring that clients can successfully poll tasks by ID without specifying the action. This change impacts multiple workers, enhancing the overall reliability of task retrieval across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#16",
+      "title": "Enhance Error Handling and Resilience in Coding Bridge Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "error-handling",
+        "resilience",
+        "logging",
+        "retry",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/16",
+      "summary": "This update introduces structured error handling and self-healing capabilities to the Coding Bridge Agent. Key changes include improved logging for better observability, a reset mechanism for dead subprocesses, and a bounded retry feature for transient errors. These enhancements aim to provide a more robust and user-friendly experience during sessions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#906",
+      "title": "Enhance Coding Bridge with Retry Button in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "bugfix",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/906",
+      "summary": "This update introduces a **Retry** button in the Coding Bridge session view, allowing users to easily re-run the last prompt after an error occurs. The feature addresses transient crashes by enabling a quick retry without the need to retype the prompt. Additionally, internationalization support has been added for multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#626",
+      "title": "Fix default action for tasks in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "openapi",
+        "backend",
+        "fix",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update corrects the default action for the `/<provider>/tasks` OpenAPI specifications, setting it to `retrieve` across all relevant specs. It also removes the requirement for the `action` parameter where a default is provided, streamlining the API usage. These changes enhance the clarity and functionality of the API documentation and SDK code generation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1009",
+      "title": "Update ttapi Base URL for Improved TLS Support in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "tls",
+        "update",
+        "ttapi",
+        "bugfix",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update migrates the ttapi worker's base URL from `https://api.ttapi.org` to `https://api.ttapi.io` to resolve TLS verification issues. The previous URL caused significant 5xx errors due to an incomplete certificate chain, impacting user traffic. The new URL ensures a complete and valid TLS chain, enhancing reliability for ttapi-backed services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#419",
+      "title": "Set Default Balance to General in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "api",
+        "feature",
+        "user-feedback"
+      ],
+      "public": false,
+      "summary": "The default selection for the balance card on the API docs page has been changed from 'Instance Balance' to 'General Balance'. This adjustment reflects user feedback, as the General Balance is the shared pool most API calls utilize. The implementation involved modifying the `selectedScope` in the `Remain.vue` component to default to 'global'."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#904",
+      "title": "Prettier formatting applied to multiple components in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "style",
+        "cleanup",
+        "prettier",
+        "components"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/904",
+      "summary": "This update implements Prettier formatting across six files, ensuring consistent code style without any behavioral changes. Key adjustments include wrapping long lines, collapsing attributes, and standardizing multi-line types. The reformatting aligns these components with the project's Prettier configuration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#903",
+      "title": "Enhance Mobile Experience with Scrollable Options in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "mobile",
+        "ui",
+        "usability",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/903",
+      "summary": "This update improves the mobile user experience in the AskUserQuestion feature by ensuring that the Submit button remains visible and accessible. The option list now scrolls internally within a height-bounded card, preventing content clipping and ensuring all options are reachable. This change enhances usability without affecting the desktop view."
+    }
+  ]
+}
