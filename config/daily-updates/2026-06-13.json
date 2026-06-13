@@ -3,6 +3,71 @@
   "date": "2026-06-13",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1013",
+      "title": "Enhance Consent Notifications for Coding Bridge in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "notifications",
+        "coding-bridge",
+        "web-push",
+        "fcm",
+        "consent"
+      ],
+      "public": false,
+      "summary": "This update introduces out-of-band consent notifications for Coding Bridge when no browser tab is visible. It implements optional Web Push and FCM transports to ensure users receive prompts even when they are not actively engaged. Key changes include a new presence tracking system and a dedicated Mongo collection for push subscriptions, enhancing user experience and engagement."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#921",
+      "title": "User Notifications for Session Approval in Nexior 🔔",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "notifications",
+        "user-experience",
+        "coding-bridge",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/921",
+      "summary": "This update introduces a notification system for user session approvals in Coding Bridge. Users will now receive alerts via background tabs, closed tabs, and mobile devices, ensuring they never miss important prompts. The implementation includes a new notification toggle and support for multiple notification types, enhancing user experience and engagement."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#23",
+      "title": "Enhance Permission Handling for Consistent Notifications in Coding Bridge Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "permissions",
+        "notifications",
+        "feature",
+        "backend",
+        "coding-bridge"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/23",
+      "summary": "This update introduces a robust system for managing pending permission requests, ensuring they persist even when users are temporarily disconnected. Key changes include the implementation of a `PermissionBroker` that retains request descriptors and a new protocol for re-fetching outstanding prompts. This foundational work sets the stage for future enhancements in remote consent notifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#179",
+      "title": "Enhance Cookie Connectors for Chinese Platforms in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "features",
+        "connectors",
+        "cookies",
+        "backend",
+        "auth"
+      ],
+      "public": false,
+      "summary": "This update introduces cookie-only connectors for Chinese platforms, enabling seamless integration without the need for OAuth or API publishing. Key changes include the addition of a new `cookies` field type in the `validate_byoc_payload` function, allowing for the secure handling of browser cookie jars. The implementation also includes initial seeds for platforms like Zhihu, Weibo, and Bilibili, setting the stage for future expansions."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#431",
       "title": "Enhance SEO with Canonical Redirects for Document Slugs in Frontend Web 🚀",
       "tags": [
