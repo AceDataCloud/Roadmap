@@ -3,6 +3,192 @@
   "date": "2026-06-14",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#654",
+      "title": "Enhance API Translations with Dynamic Descriptions in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "localization",
+        "api",
+        "translations",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces translatable API field descriptions in the OpenAPI specification, allowing for dynamic localization. By integrating the existing translation pipeline, descriptions are now referenced via `$t()` keys, streamlining the process for multiple languages. The initial implementation focuses on the glm-chat-completions service, ensuring accurate translations are served based on user locale."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1015",
+      "title": "Optimize Checker for Efficiency in Platform Service 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "optimization",
+        "efficiency",
+        "cost-saving",
+        "checker",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update reduces the Checker CronJob's probe interval from every 2 minutes to every 10 minutes, significantly lowering the number of probes. Additionally, the prompt for checking liveness has been simplified to a one-word response, drastically cutting token usage and costs associated with upstream services. These changes enhance performance while maintaining acceptable detection lag."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#143",
+      "title": "Improve BYOC Credential Error Handling in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "bugfix",
+        "frontend",
+        "error-handling",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update enhances the error handling for BYOC credentials by implementing a new function, `formatErrorDetail()`, which flattens nested error objects into a readable string. Previously, errors were not displayed, leading to confusion for users. Now, both extension and form submission errors will be clearly communicated, improving user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#191",
+      "title": "Enhance cookie handling in Backend 🍪",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "backend",
+        "cookies",
+        "fix",
+        "serialization"
+      ],
+      "public": false,
+      "summary": "This update modifies the `ConnectorCredentialsSerializer` to accept list values for cookies in the BYOC credential payload. By changing the `payload` field to a `DictField`, both list-shaped and string-shaped payloads are now supported, ensuring proper validation and functionality for cookie-based connectors. This fix resolves the 400 error encountered during connection attempts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#442",
+      "title": "Automatic i18n Updates from zh-CN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces auto-generated internationalization (i18n) translation updates based on changes from the zh-CN source. Key modifications were made across multiple language files, enhancing the application's accessibility for users in various regions. The changes include new confirmation messages and error handling prompts in several languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#441",
+      "title": "Enhance Deployment Deletion with Force Option in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "deployment",
+        "ui",
+        "error-handling",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces a force delete option for deployment-type applications when normal deletion fails. Users will now see a confirmation prompt asking if they want to force delete the application record, ensuring that stuck records can be removed. Key changes include modifications to the application operator and UI components to handle this new functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#653",
+      "title": "Enhance deployment teardown with force option in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "deployment",
+        "api",
+        "backend",
+        "feature",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a `?force=true` parameter to the deployment teardown API, allowing the deletion of application records even when the underlying cloud resource fails to tear down. This feature provides operators with a solution for handling orphaned applications with corrupted metadata or unreachable resources. The change ensures that applications can be removed without leaving undeletable records in the system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#436",
+      "title": "Revamped Landing Page with Enhanced Features in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "improvements",
+        "documentation",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update introduces significant improvements to the landing page, including a new installation step guide for SDKs, enhanced code blocks using a unified `CodeSnippet` component, and visually appealing API category cards with icons. Additionally, the tab night mode has been fixed for better visibility, and all code snippets have been verified for accuracy against existing packages. The overall user experience is now more engaging and informative."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#440",
+      "title": "Boosted AI Models Count on Homepage in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "i18n",
+        "update",
+        "localization",
+        "ui"
+      ],
+      "public": false,
+      "summary": "The homepage of UnifiedHub has been updated to reflect an increase in AI models from 200+ to 300+. This change involved modifications to the UnifiedHub component and localization files for both English and Chinese. The update ensures that users have the most accurate information regarding the current catalog size."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#437",
+      "title": "Add gear icon for Manage Keys button in Frontend Web ⚙️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "icons",
+        "fix",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update registers the `faGear` icon for the **管理密钥** (Manage Keys) button on the `/console/applications` page. Previously, this button rendered without an icon, while other buttons displayed theirs. The fix involved importing and adding the `faGear` icon to the central Font Awesome plugin, ensuring consistent iconography across the interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#438",
+      "title": "Enlarge Application ID Font Size for Better Readability in Frontend Web ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "accessibility",
+        "style"
+      ],
+      "public": false,
+      "summary": "This update increases the font size of the application ID displayed on the global balance card in the console from 11px to 13px. The change ensures consistency with surrounding text, enhancing overall readability for users. The modification was made in the ApiKeyQuickAccess component."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#190",
+      "title": "Removed cookie keep-alive feature in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "chore",
+        "backend",
+        "cleanup",
+        "docker"
+      ],
+      "public": false,
+      "summary": "The cookie keep-alive feature has been removed due to build issues with the Playwright image. This change eliminates several components including the Dockerfile, cronjob, and associated services, while ensuring that cookie connectors remain functional. The update streamlines the deployment process and maintains existing cookie READ functionality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#936",
       "title": "Enhance session settings restoration and editability in Nexior 🚀",
       "tags": [
