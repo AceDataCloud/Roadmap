@@ -3,6 +3,435 @@
   "date": "2026-06-14",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#444",
+      "title": "Enhanced Connector Status in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "connector",
+        "ui",
+        "enhancement",
+        "status"
+      ],
+      "public": false,
+      "summary": "The publishing console now displays connection statuses for various platforms, enhancing user experience by linking connection actions to the connector system. Key updates include the integration of a connector operator for status reading and improved UI elements for managing connections. This update sets the stage for future enhancements, including a live feed and task board."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#162",
+      "title": "Enhance Free Access for Dreamina Tasks in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "dreamina",
+        "api",
+        "authentication",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update adds the `/dreamina/tasks` endpoint to the `SKIP_AUTH_API_IDS`, allowing free access without authentication or billing. This change aligns the Dreamina service with other task endpoints, streamlining user experience. Key modifications were made in the settings file to implement this feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#658",
+      "title": "Introducing Dreamina: AI Talking-Photo Video Service in Backend 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "api",
+        "documentation",
+        "video",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update integrates the Dreamina digital-human video service, enabling audio-driven talking photos using ByteDance's OmniHuman 1.5 technology. Key features include a cost-effective API for generating lip-synced videos from a portrait image and audio, along with comprehensive documentation in both English and Chinese. The implementation includes new endpoints, pricing structures, and successful test cases to ensure functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1016",
+      "title": "Exciting New Video Service for OmniHuman in Platform Service 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "video",
+        "omnihuman",
+        "feature",
+        "api",
+        "volcengine"
+      ],
+      "public": false,
+      "summary": "This update introduces the 即梦 (Jimeng) video service to the volcengine worker, enabling the generation of lip-synced videos from portrait images and audio. Key changes include the implementation of V4 HMAC-SHA256 signing and the addition of a new API endpoint for video processing. The feature has been end-to-end proven with successful output, enhancing the capabilities of the Platform Service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#517",
+      "title": "Enhance Task Processing with Optional Config in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "feature",
+        "task",
+        "connector",
+        "publish",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update allows connector tasks to proceed without a mandatory PublishConfig, enhancing flexibility in task processing. The `process_task` function now handles cases where `task.config` is None, allowing for faster failure with clear guidance if no credentials are resolved. A total of 523 tests have passed, ensuring stability and reliability in the changes made."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#659",
+      "title": "Enhance Connector Publishing by Making Config ID Optional in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "feature",
+        "connector",
+        "publish"
+      ],
+      "public": false,
+      "summary": "This update removes the requirement for a `config_id` in connector-backed publish tasks, facilitating a smoother transition to connector-driven publishing. The `PublishTaskCreateSerializer` has been modified to allow `config_id` to be optional, enabling tasks to be created without a `PublishConfig`. Additionally, internal document links are now rewritten using the task's `user_id` when no config is provided."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#145",
+      "title": "Enhance Autofill Sync for Registration and Reset Forms in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "bugfix",
+        "frontend",
+        "auth",
+        "forms",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update addresses a latent bug affecting the registration and reset-password forms where autofilled values were not triggering the necessary input events. The `syncAutofilledValues()` function has been applied to the email and phone fields in both forms, ensuring that the correct values are submitted on the first click. All relevant files have been updated and the codebase is clean with no linting errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#144",
+      "title": "Fix login autofill issue for smoother access in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "bugfix",
+        "login",
+        "frontend",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update addresses a user-reported issue where the first click on the login button is ignored when credentials are autofilled. By adding references to the input fields, the values are now synchronized with the form before validation, ensuring that the login request is sent on the first click. This fix applies to both email and username login components."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#516",
+      "title": "Enhance OAuth Credential Handling for Publishers in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "oauth",
+        "publish",
+        "connector",
+        "updates",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update introduces OAuth support for the `linkedin` and `blogger` connectors, allowing them to fetch fresh bearer tokens from the AuthBackend. The changes include new functions for resolving OAuth tokens and adjustments to cookie handling, ensuring seamless integration with existing publisher workflows. A total of 20 connector tests were added, and all tests passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#84",
+      "title": "Integrate PlatformStudio Submodule and Complete Phase-0 Spike in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "integration",
+        "submodule",
+        "video",
+        "development",
+        "platformstudio"
+      ],
+      "public": false,
+      "summary": "This update successfully integrates the PlatformStudio as a submodule, enhancing the article-to-video factory project. The Phase-0 spike has been moved to PlatformStudio, enabling it to drive the production renderer with real media, complete with burned-in captions. The plans directory now focuses on design and tracking, reflecting the latest developments in the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformStudio#14",
+      "title": "Burned-in Captions and Phase-0 Validation in Platform Studio 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformStudio",
+        "feature",
+        "rendering",
+        "captions",
+        "validation",
+        "ffmpeg"
+      ],
+      "public": false,
+      "summary": "This update integrates the Phase-0 spike into the rendering service, validating the renderer with real assets. Key changes include the addition of a burned-in caption renderer and enhancements to the FFmpeg build plan, allowing for seamless integration of captions in video outputs. The results demonstrate successful rendering of a 9:16 video with captions and voiceover, showcasing the capabilities of the updated pipeline."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#941",
+      "title": "Shrink empty-state magic-wand button for better UI in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "style",
+        "ui",
+        "button",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/941",
+      "summary": "This update reduces the size of the empty-state magic-wand button from 48px to 40px, enhancing the overall user interface. The icon size has also been adjusted accordingly, while the button's functionality remains unchanged, still allowing users to open the config drawer on mobile. These changes aim to improve the visual appeal and usability of the component."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#193",
+      "title": "Improve WeChat Login Error Handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "auth",
+        "wechat",
+        "error-handling",
+        "backend",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where an invalid WeChat code exchange resulted in a 500 error instead of a proper 401 response. The code now checks for the presence of 'access_token' and 'openid' in the response, logging any errors and raising a LoginFailed exception when they are absent. This change enhances the stability of the WeChat login process by providing clearer error messaging to clients."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#657",
+      "title": "Enhanced API Descriptions with Translations in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "translations",
+        "backend",
+        "localization",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update introduces translatable field descriptions for all 144 API services, converting hardcoded OpenAPI descriptions into dynamic references. The zh-cn source text is now embedded in each file's translations block, ensuring consistency and accuracy across languages. Additionally, 171 description corrections have been made to enhance clarity and correctness in API documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#192",
+      "title": "Streamline Login Error Logging in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "auth",
+        "logging",
+        "backend",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update modifies the login error handling in the AuthBackend to prevent expected login failures from being logged as ERROR tracebacks. By re-raising API exceptions without logging them, we reduce noise in the logs and ensure that only genuine server errors are flagged. This change maintains the same client response behavior while improving log clarity and reducing alert fatigue."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#940",
+      "title": "Update Android Build Settings in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "android",
+        "workflow",
+        "release",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/940",
+      "summary": "The default behavior for the `build-android` workflow has been updated to prevent automatic promotion to Production. Now, manual dispatches will default to the test track only, requiring explicit action to promote to Production. This change enhances control over release management for Android builds."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#439",
+      "title": "Revamp Service Detail Page with Global-First Hero and API Playground in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "api",
+        "ui",
+        "refactor",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update transforms the service detail page into a global-first hero, featuring a primary recharge button that ensures users have a universal application. Additionally, an inline API playground has been introduced, allowing users to interact with API snippets directly on the page. Key components have been reused to enhance maintainability and reduce duplication across the codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#939",
+      "title": "Update iOS Build Process to Manual Review in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "build",
+        "ios",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/939",
+      "summary": "The default behavior for the `build-ios` dispatch has been changed to no longer auto-submit to Apple App Review. Now, it defaults to TestFlight-only unless explicitly set to auto-submit. This adjustment enhances control over the review process while keeping other distribution settings unchanged."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#656",
+      "title": "Optimize OpenAI Probes for Stability in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "e2e",
+        "openai",
+        "health-probe",
+        "optimization",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update enhances the E2E health probes for OpenAI chat and responses by implementing a curated model filter. The changes reduce false 500 errors and decrease probe traffic by five times, while maintaining customer-facing functionality. Key modifications include adjusting the probe model selection and increasing the test interval for better performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#515",
+      "title": "Streamline Credential Management by Removing Redundant Refresher in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "refactor",
+        "cleanup",
+        "enhancement",
+        "publisher"
+      ],
+      "public": false,
+      "summary": "This update removes the Publisher's cookie-refresh subsystem, streamlining credential management as the AuthBackend now handles the credential lifecycle. Key files related to the refresher have been deleted, including multiple Python scripts and configuration files. The change enhances system reliability by providing clearer error messages for expired cookies, improving user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#514",
+      "title": "Enhance Credential Management with Connector Vault in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "feature",
+        "credentials",
+        "deployment",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update implements Phase 1 of the connector vault integration, prioritizing connector vault cookies over legacy configurations for improved credential management. Key changes include adjustments in `publish.py` to utilize the new `resolve_cookies` function and updates to the deployment configuration to include necessary environment variables. All tests have passed successfully, ensuring a smooth transition to this new system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#938",
+      "title": "Unify Session Identity for Seamless Resuming in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "coding-bridge",
+        "session-management",
+        "bugfix",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/938",
+      "summary": "This update consolidates the session identity in the Coding Bridge, adopting the provider's real session ID for a unified experience. Key changes include improved session restoration, ensuring live sessions retain their state and functionality, such as the Stop button and typewriter effect. The redundant session fields have been collapsed into a single canonical ID, enhancing clarity and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#83",
+      "title": "Streamlining Publisher with Connector Integration in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "integration",
+        "development",
+        "planning",
+        "publisher"
+      ],
+      "public": false,
+      "summary": "This update outlines a staged development plan to transition PlatformPublisher's credential sourcing from its own configuration to the AuthBackend connector vault. Key phases include wiring in connector cookies, removing the existing cookie-refresh subsystem, and implementing end-to-end testing with real accounts. Documentation for each phase is provided to guide future implementation efforts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#27",
+      "title": "Unify Session Identity for Seamless Resuming in Coding Bridge Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "session",
+        "identity",
+        "bugfix",
+        "enhancement",
+        "coding"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/27",
+      "summary": "This update resolves the issue of dual identities in coding sessions by adopting a single canonical identity based on the provider's real ID. The changes ensure that live sessions can now reattach to their historical counterparts without spawning duplicate clients. Key modifications include re-keying sessions and marking live transcripts, enhancing user experience and session continuity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#937",
+      "title": "Enhance History Drawer with Brand Icons in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "enhancement",
+        "icons",
+        "coding-bridge"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/937",
+      "summary": "This update replaces the colored provider text tags in the coding-bridge history drawer with the actual brand logos for Claude and Codex. The change improves readability and aligns with the existing design patterns by using SVG assets. Key modifications include the introduction of a new `providerIcon()` helper and updated styles for a more compact display."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#443",
+      "title": "Enhance API Dialog with Service Favicon in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "enhancement",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update improves the **Try the API** dialog by displaying the selected service's favicon alongside its name in the dropdown. Utilizing Element Plus's `el-select` component, a new computed property retrieves the icon URL for the chosen service. This change enhances the user experience by providing a visual representation of the selected service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#655",
+      "title": "Refine AI Chat Status Probe for Stability in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "e2e",
+        "monitoring",
+        "stability",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update modifies the AI Chat status probe to focus on a curated list of 11 stable production models, significantly reducing false outage signals. The probe's frequency has also been decreased from every 60 seconds to every 300 seconds, enhancing system performance. These changes aim to provide a more accurate representation of service availability and reduce unnecessary alerts."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#654",
       "title": "Enhance API Translations with Dynamic Descriptions in Backend 🚀",
       "tags": [
