@@ -3,6 +3,100 @@
   "date": "2026-06-14",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#945",
+      "title": "Fix logo and translations for Grok Video in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "localization",
+        "branding",
+        "grokvideo"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/945",
+      "summary": "This update corrects the logo icon for Grok Video, replacing the incorrect Google logo with the official Grok mark. Additionally, it regenerates locale translations for 16 languages, ensuring non-English UIs display the correct text instead of English placeholders. These changes enhance the branding and usability of the Grok Video studio."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#456",
+      "title": "Enhance $ACE Wallet Binding Reliability in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "wallet",
+        "frontend",
+        "telemetry",
+        "solana"
+      ],
+      "public": false,
+      "summary": "This update addresses critical issues with the $ACE wallet binding on the coin page. Key changes include implementing a retry mechanism for wallet connections, adding null-safety checks, and improving error reporting to telemetry. These enhancements ensure a smoother user experience and prevent silent failures."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#455",
+      "title": "Enhance API Test Experience with Auto-Fill Features in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "api",
+        "frontend",
+        "usability",
+        "features"
+      ],
+      "public": false,
+      "summary": "The API test panel now automatically fills in example values and selects the API key, streamlining the testing process for users. This update ensures that only empty fields are populated, preserving any user input while making it easier to run tests directly from the documentation. The changes enhance usability and efficiency in the API testing workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#88",
+      "title": "New Slack Marketplace Submission Plan for AceDataCloud AI Assistant in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "slack",
+        "ai",
+        "marketplace",
+        "submission"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive plan for submitting the AceDataCloud Slack AI assistant app to the Slack Marketplace. Key findings from a live audit revealed that the app is currently installed on only one active workspace, which does not meet the Marketplace's requirement of five. Additionally, the app's OAuth scopes are overly broad, and the listing lacks essential information such as descriptions and screenshots."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#677",
+      "title": "Enhance API Documentation with Expandable Response Schemas in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "api",
+        "backend",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update improves the API documentation by expanding the 200-response data schemas, allowing users to drill into specific fields. Key changes include defining the `data` field as an array or object with detailed properties, and adding previously missing envelope fields like `task_id` and `trace_id`. This enhancement ensures better clarity and usability for developers interacting with the API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#943",
+      "title": "Complete native push integration for Coding-Bridge notifications in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ios",
+        "push-notifications",
+        "integration",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/943",
+      "summary": "This update finalizes the native push notification integration for iOS, ensuring that Coding-Bridge notifications are properly received. Key changes include modifying the build process to use `cap sync`, adding necessary APNs handlers in `AppDelegate.swift`, and improving error logging in `codingBridgeNotify.ts`. These enhancements will allow users to receive timely notifications on their devices."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#944",
       "title": "Enhance Directory Picker for Drive Navigation in Nexior 🚀",
       "tags": [
