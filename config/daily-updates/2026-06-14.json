@@ -3,6 +3,534 @@
   "date": "2026-06-14",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#672",
+      "title": "Enhance Long-Form Channel Edits in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "features",
+        "improvements",
+        "editing",
+        "images"
+      ],
+      "public": false,
+      "summary": "This update introduces a light-editing approach for long-form channels, ensuring that the original body, structure, and all images are preserved while only the title is rewritten. The `max_tokens` limit has been adjusted to prevent truncation of content, and the image-regression retry mechanism has been improved to maintain all source images. These changes will enhance the quality and consistency of generated materials."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#358",
+      "title": "Enhance CLI with --async Flag for Direct Commands in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "feature",
+        "cli",
+        "async",
+        "enhancement",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/358",
+      "summary": "This update introduces a new `--async` flag to eight direct CLIs, allowing users to submit tasks asynchronously and receive a task ID for polling results. The change impacts commands like hailuo, kling, and luma, enhancing user experience by eliminating the need for a webhook callback. Additionally, the `--async` option is now included in the help documentation for better visibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1022",
+      "title": "Enhance Kling Lip-Sync with Voice Speed Control in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "kling",
+        "lip-sync",
+        "text2video",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces the `voice_speed` parameter for the /kling/lip-sync text2video mode, allowing users to adjust the speed between 0.8 and 2.0. This addition completes the parameter set for comprehensive documentation, enhancing the flexibility and usability of the lip-sync feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#259",
+      "title": "Enhance Dify Plugins with Async Support in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "async",
+        "plugins",
+        "enhancement",
+        "API"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/259",
+      "summary": "This update introduces an `async` parameter to all 16 async-capable Dify plugins, aligning with the new API-level `async: true` flag. Key modifications include updates to YAML configurations, tool scripts, and client handling to ensure consistent async behavior across the board. This enhancement is part of a broader rollout aimed at improving asynchronous processing capabilities within the Dify ecosystem."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#670",
+      "title": "Revamped Kling Lip Sync Guide and OpenAPI Enhancements in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "openapi",
+        "kling",
+        "backend",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update features a comprehensive rewrite of the Kling Lip Sync integration guide, now including detailed parameters, examples, and a complete talking-photo pipeline. Additionally, the OpenAPI specification has been enhanced with new parameters such as audio_file, voice_speed, and voice_language enums, improving the overall functionality and usability of the API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#669",
+      "title": "Fix pricing and routing issues for Kling Motion Control in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "pricing",
+        "routing",
+        "backend",
+        "kling"
+      ],
+      "public": false,
+      "summary": "This update resolves two critical issues with the Kling Motion Control service. The routing error has been fixed, allowing access to the endpoint, and the pricing model has been updated to reflect per-second billing, aligning with official rates. These changes ensure accurate billing and improved service accessibility for customers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#668",
+      "title": "Launch OpenAI-Compatible TTS Service in Backend 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "tts",
+        "openai",
+        "api",
+        "backend",
+        "service",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "We've successfully registered an OpenAI-compatible Text-to-Speech service, enabling the `POST /v1/audio/speech` endpoint for seamless audio synthesis. Key updates include new billing structures, comprehensive documentation in both English and Chinese, and a robust testing suite with 787 tests passed. This service offers competitive pricing, approximately 15% lower than OpenAI's rates, enhancing accessibility for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#667",
+      "title": "Enhance Dreamina with Translatable Descriptions in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "localization",
+        "backend",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update converts 15 hardcoded description fields in the Dreamina videos API to translatable references using the `$t()` function. It includes a new translations block for zh-cn, aligning with the all-services rollout strategy. These changes improve localization support and enhance the user experience for non-English speakers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1021",
+      "title": "Introducing OpenAI-Compatible TTS Endpoint in Platform Service 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "tts",
+        "openai",
+        "ephone",
+        "platform"
+      ],
+      "public": false,
+      "summary": "We've added a new OpenAI-compatible text-to-speech endpoint at `/v1/audio/speech`, powered by the ephone worker. This feature allows for synchronous audio streaming with billing based on request size, enhancing our platform's capabilities. Key changes include the addition of the `OpenAISpeechHandler` and updates to the server routing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#666",
+      "title": "Enhance Kling Lip Sync with Cost Tests and Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "kling",
+        "api",
+        "cost",
+        "docs",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces cost tests for the Kling Lip Sync API, ensuring accurate billing at a flat rate of 2.45 Credits per call. Additionally, comprehensive integration guides have been added in both English and Chinese, along with updates to the service display pricing and API mapping. These enhancements improve usability and clarity for developers integrating with the Kling service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#665",
+      "title": "Clean up async schema in Backend 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cleanup",
+        "backend",
+        "openapi",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update removes incorrect `async` schema blocks from the response examples in the `/qrart/tasks` and `/midjourney/tasks` endpoints. Although harmless, these blocks were unnecessary and have been verified to be the only changes made. All actual request-body parameters remain unaffected and correct."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#664",
+      "title": "Enhance Async Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "backend",
+        "async",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update enriches the service guides by adding the `async` parameter to 29 `development_*.md` files, clarifying its usage in relation to `callback_url`. Key changes include the addition of an `async` bullet in 24 standard guides and notes in 4 veo guides. This enhancement improves the clarity of asynchronous operations for users, ensuring they understand how to retrieve task IDs effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#451",
+      "title": "Enhance Publish Console with New Connector Channels in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "publish",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces four new channels—Medium, 百家号, X, and Facebook—into the `CHANNEL_CONNECTOR_IDENTIFIER`, allowing the publish console to render them as connector channels. The changes ensure that the status indicators and deep links are consistent with the AuthBackend and PlatformPublisher updates. No new internationalization keys were added."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#518",
+      "title": "Enhance Connector Credentials for Medium and Facebook in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "enhancement",
+        "connector",
+        "credentials",
+        "publisher",
+        "medium",
+        "facebook"
+      ],
+      "public": false,
+      "summary": "This update introduces four new connectors for credential resolution in the Publisher. The Medium and Baijiahao channels now utilize a cookie connector path, while X and Facebook have been integrated with a new form-based credential fetching method. With 528 tests passing and code quality improvements, this enhancement streamlines the authentication process for these platforms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#194",
+      "title": "Enhance publishing capabilities with new connectors in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "connectors",
+        "publishing",
+        "medium",
+        "facebook",
+        "x",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces additional publishing connectors for Medium, 百家号, X (formerly Twitter), and Facebook, expanding the connector catalog. Each connector utilizes a 'bring your own cookie' or API key method for authentication, allowing seamless integration with these platforms. The changes ensure that users can easily publish content across more channels, enhancing the overall functionality of the publish console."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#663",
+      "title": "New Lip Sync API for Kling Integration in Backend 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "feature",
+        "kling",
+        "backend",
+        "integration"
+      ],
+      "public": false,
+      "summary": "We've added a new public endpoint, **POST /kling/lip-sync**, which allows users to create synchronized audio or text-driven lip syncs for Kling-generated videos. This feature complements the existing `/kling/videos` endpoint, enabling a complete talking-photo pipeline. The API is set to cost 2.45 credits per call and includes comprehensive OpenAPI documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1020",
+      "title": "Enhance Kling with Lip-Sync Endpoint in Platform Service 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "kling",
+        "api",
+        "lip-sync",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces the new **POST /kling/lip-sync** endpoint to the ephone worker, enabling audio/text-driven lip-sync functionality via the official Kling API. It completes the talking-photo pipeline by allowing users to drive existing videos with audio or text, enhancing the overall multimedia experience. The implementation includes a new handler and updates to the server routing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#661",
+      "title": "Enhance API Playground with Request Body Examples in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "openapi",
+        "backend",
+        "enhancement",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update adds top-level `requestBody.example` fields to 68 OpenAPI specs, ensuring that required fields are included in the API playground. Key endpoints like AI Chat and media services now have valid, runnable examples, improving user experience and reducing errors. The changes will take effect on the live site after a sync command is executed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#349",
+      "title": "Streamline Async Submission for CLIs in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "refactor",
+        "cli",
+        "async",
+        "improvement",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/349",
+      "summary": "This update refactors the `adc`, `flux`, and `midjourney` CLIs to utilize the new `async: true` flag instead of a dummy health callback URL. The change eliminates unnecessary POST requests to the health endpoint, enhancing efficiency. Additionally, tests have been updated to reflect this new behavior, ensuring all assertions pass successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#395",
+      "title": "Streamline Async Handling for Media MCPs in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "refactor",
+        "async",
+        "mcp",
+        "improvement",
+        "efficiency"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/395",
+      "summary": "This update refactors the async handling for all 15 media MCP servers by replacing the dummy health callback with an explicit `async: true` flag. This change eliminates unnecessary POST requests to the health endpoint, improving efficiency. The codebase has been updated across multiple files, and all tests have been verified to pass successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#192",
+      "title": "Enhance SDKs with Async Parameter in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "async",
+        "sdk",
+        "python",
+        "typescript",
+        "go",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/192",
+      "summary": "This update introduces an `async` request parameter across Python, TypeScript, and Go SDKs, aligning with the new API-level `async: true` flag. The change allows methods to return a task ID immediately without needing a callback URL, enhancing the user experience for asynchronous operations. Modifications were made in multiple files, ensuring compatibility and successful builds across all languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#450",
+      "title": "Enhance Connector Dialog Deep-Linking in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "navigation",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update introduces deep-linking functionality for the Connect, Reconnect, and Manage buttons in the publish console. Users will now be directed to the specific connector's dialog instead of the general connections homepage, improving navigation and user experience. The changes include updates to the connector service and the Channels component, ensuring a seamless integration with the AuthFrontend."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#146",
+      "title": "Enhance Connector Experience with Deep-Linking in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "frontend",
+        "user-experience",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces a deep-link feature that allows users to directly access a specific connector via the URL parameter `?connect=<connector_identifier>`. When this parameter is present, the corresponding connector's dialog will automatically open, streamlining the user experience by eliminating unnecessary navigation. The implementation includes type checking and linting for improved code quality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#449",
+      "title": "Fix Publish Button Functionality in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "vue",
+        "typescript"
+      ],
+      "public": false,
+      "summary": "The Publish button on the document console was non-functional due to a reference to an outdated computed property. This update replaces `recommendedConfigs` with the correct `recommendedTargets`, ensuring the button operates as intended. Type checking and linting have also been addressed for cleaner code."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#662",
+      "title": "Enhance Async Support for OpenAPI Specs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "openapi",
+        "async",
+        "backend",
+        "api",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces an `async` parameter to all 43 OpenAPI specifications that support asynchronous task mode. Clients can now receive a `task_id` immediately without needing a `callback_url`, allowing them to poll for results via the service's tasks endpoint. The changes ensure that every relevant API now has a matching async parameter, enhancing the overall functionality and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1019",
+      "title": "Enhanced Async Support for Workers in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "async",
+        "workers",
+        "enhancement",
+        "platform",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces `async: true` support for 13 additional upstream workers, enhancing the request handling capabilities. The changes ensure that tasks can be processed asynchronously, allowing for immediate task IDs and improved client polling for results. Key modifications were made across multiple files to accommodate this feature while maintaining existing synchronous paths."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#448",
+      "title": "Automated i18n Updates from zh-CN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update introduces auto-generated internationalization (i18n) translation updates from the zh-CN source. Key changes include modifications to multiple language files, ensuring consistent translations across Arabic, German, Spanish, French, Italian, Japanese, Korean, Portuguese, Russian, and Traditional Chinese. This enhancement improves accessibility and user experience for a broader audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#447",
+      "title": "Enhance Publishing Experience with Connector and Live Task Board in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "publishing",
+        "ui",
+        "i18n",
+        "taskboard"
+      ],
+      "public": false,
+      "summary": "This update introduces a channel-centric publish modal, allowing users to select connected channels without needing a config ID. The task board now features state filters and live auto-refresh, enhancing user interaction with ongoing tasks. Additionally, the update includes internationalization support for both English and Chinese, ensuring a broader accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#446",
+      "title": "Enhance API Playground with Required Fields in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "api",
+        "frontend",
+        "bugfix",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the API playground by ensuring that required fields are synthesized even when they lack examples. The `schemaToExample()` function now generates valid request bodies, preventing errors during API calls. This change enhances the user experience by providing a reliable structure for requests, while optional fields remain unchanged for lean snippets."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#28",
+      "title": "Fix session status display for active sessions in Coding Bridge Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "bugfix",
+        "testing",
+        "history",
+        "sessions",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/28",
+      "summary": "This update resolves a bug where finished sessions were incorrectly flagged as 'Running' in the history drawer. The fix ensures that only sessions with a status of 'running' are marked as active, preventing idle sessions from being displayed as live. Comprehensive tests confirm that the display now accurately reflects session activity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#660",
+      "title": "Enhance Seedream API with Async Parameter in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "api",
+        "documentation",
+        "async"
+      ],
+      "public": false,
+      "summary": "This update introduces an `async` boolean parameter to the Seedream Images API, allowing clients to receive a `task_id` immediately without needing a public `callback_url`. Users can now poll the `/seedream/tasks` endpoint to retrieve results, providing greater flexibility for those unable to host webhooks. The change is documented in both the OpenAPI definition and the Chinese documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1017",
+      "title": "Enhance Async Mode Support in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "async",
+        "feature",
+        "update",
+        "platform",
+        "volcengine"
+      ],
+      "public": false,
+      "summary": "This update introduces an `async: true` flag for requests, allowing asynchronous task execution without needing a `callback_url`. Customers can now receive a `task_id` immediately and poll for results, improving flexibility for those without webhook endpoints. The change is part of a broader rollout across async-capable services, ensuring consistent behavior across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#445",
+      "title": "Automated i18n Updates from zh-CN in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update introduces auto-generated internationalization (i18n) translation updates from the zh-CN source. Key changes include modifications to multiple language files, enhancing the platform's multilingual support. The changes ensure that users across different languages receive consistent and accurate translations."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#444",
       "title": "Enhanced Connector Status in Frontend Web 🚀",
       "tags": [
