@@ -3,6 +3,21 @@
   "date": "2026-06-14",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#671",
+      "title": "Enhance Kling Lip-Sync Descriptions in Backend 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "localization",
+        "api",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update converts 15 hardcoded description fields in the Kling lip-sync API to translatable references using the `$t()` function. The changes improve localization support by adding a Chinese translation block. Overall, this enhances the API's usability for a broader audience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#672",
       "title": "Enhance Long-Form Channel Edits in Backend 🚀",
       "tags": [
