@@ -3,6 +3,54 @@
   "date": "2026-06-14",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#944",
+      "title": "Enhance Directory Picker for Drive Navigation in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "enhancement",
+        "localization",
+        "codingBridge",
+        "navigation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/944",
+      "summary": "This update transforms the directory picker in the Coding Bridge, allowing users to jump to any drive by entering an absolute path. The read-only path bar is now an editable input, enabling seamless navigation across different drives. Additionally, localization updates have been made to support this new functionality across 19 languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#454",
+      "title": "Streamline API Key Creation for New Users in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "api",
+        "frontend",
+        "user-experience",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update ensures that new users can automatically create a universal balance and API key without navigating through dead-end pages. Key surfaces like the homepage and service pages now trigger the creation of the global application and the first credential inline, enhancing user experience. All changes are idempotent and maintain existing patterns for authenticated users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#452",
+      "title": "Enhance Playground with Async API Features in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "api",
+        "frontend",
+        "async",
+        "polling"
+      ],
+      "public": false,
+      "summary": "This update introduces the `async: true` flag for long-running APIs in the service-page API playground, enabling real-time result polling. Users can now see async task results as they are processed, enhancing the interactive experience. Additionally, a new usage record link has been added for better tracking of API calls."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Skills#404",
       "title": "Enhance Kling API Documentation in Skills 🎉",
       "tags": [
