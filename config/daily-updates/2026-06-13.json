@@ -3,6 +3,392 @@
   "date": "2026-06-13",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#934",
+      "title": "Fix App/Universal Link Routing Issues in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "routing",
+        "static-files",
+        "api",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/934",
+      "summary": "This update resolves critical issues with App/Universal Link files and the routing of `/i/` endpoints. Key changes include serving verification files as static assets to prevent HTTP 423 errors and modifying the routing to ensure proper access to the Django API. These improvements will enhance the reliability of link handling in the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#647",
+      "title": "Enhance Invite Landing Accessibility in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "api",
+        "fix",
+        "attribution",
+        "nginx"
+      ],
+      "public": false,
+      "summary": "This update exposes the invite landing at a new API endpoint, allowing it to be accessed via `/api/v1/attribution/landing/<id>`. The change ensures that the landing page is reachable in production by routing correctly through the Django backend. Additionally, the responses are configured with `Cache-Control: no-store` to prevent caching of per-click redirects, enhancing user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#935",
+      "title": "Reduce Icon Size for Empty State in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "design",
+        "fix",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/935",
+      "summary": "The central icon for the 'No historical tasks' empty state has been resized for better visual consistency across multiple service pages. The changes include reducing the icon size and adjusting the vertical padding in the shared NoTasks component. This update will enhance the user experience by providing a more balanced layout across approximately 20 service panels."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#933",
+      "title": "Fix event handling to prevent errors in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "event-handling",
+        "nexior",
+        "stability",
+        "typescript"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/933",
+      "summary": "This update addresses a critical issue where `event.stopPropagation()` was called on potentially undefined events, leading to errors in various components. By implementing optional chaining, the code now safely handles missing events without throwing exceptions. This change enhances stability across multiple pages including veo, chatgpt conversations, and more."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#434",
+      "title": "Enhance auto-reload for stale chunks in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "bugfix",
+        "performance",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update implements a robust auto-reload mechanism for handling stale dynamic-import failures after deployments. By porting the chunk load error handler from other frontends, users will now experience a seamless reload when encountering errors related to outdated chunk hashes. The changes ensure improved user experience and stability across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#142",
+      "title": "Enhance auto-reload for stale chunks in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "bugfix",
+        "frontend",
+        "performance",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update implements a robust auto-reload mechanism for handling stale dynamic imports in the AuthFrontend application. By integrating a new chunk load error handler, the app will now automatically reload when it detects chunk-load errors, ensuring a smoother user experience post-deployment. The solution has been tested and is expected to significantly reduce errors related to outdated chunk references."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#187",
+      "title": "Enhance Docker Push Reliability in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "docker",
+        "deploy",
+        "backend",
+        "reliability"
+      ],
+      "public": false,
+      "summary": "This update improves the reliability of the Docker image push process by implementing a retry mechanism. If a ReadTimeoutError occurs, the system will retry the push up to five times with a 20-second backoff, preventing transient issues from blocking successful deployments. This change addresses failures seen in previous deploys."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WisdomChannel#6",
+      "title": "Enhance Access Control with WeChat ID Matching in Wisdom Channel 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WisdomChannel",
+        "access",
+        "feature",
+        "security",
+        "update",
+        "wisdom_channel"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/WisdomChannel/pull/6",
+      "summary": "This update introduces a new feature allowing access control to match users by either their WeChat ID or display name. The `is_allowed` and `get_trust_level` functions now accept a list of identifiers, enhancing flexibility while maintaining backward compatibility. Additionally, the `_handle` function has been updated to log both identifiers, ensuring better tracking and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#645",
+      "title": "Enhance Production Attribution Environment Setup in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "chore",
+        "attribution",
+        "production",
+        "deployment",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update adds the necessary `ATTRIBUTION_*` environment variables to the production deployment configuration. Key values for Apple and Android attribution have been specified, ensuring proper setup for the attribution endpoints. The changes will facilitate smoother operations and integration for the production environment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#141",
+      "title": "Enhance Cookie Connector UX with Proactive Detection in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "ux",
+        "frontend",
+        "i18n",
+        "enhancement",
+        "ace-extension"
+      ],
+      "public": false,
+      "summary": "This update improves the cookie-connector connect dialog by adding proactive detection for the ACE extension and an install guide. Users will now see a banner prompting them to install the ACE extension if it's not detected, along with a link to the setup documentation and a re-check button. Additionally, internationalization support has been expanded with new keys for multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#186",
+      "title": "Decouple Cookie Image for Smooth Deployments in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "deployment",
+        "docker",
+        "backend",
+        "fix",
+        "python"
+      ],
+      "public": false,
+      "summary": "This update resolves deployment issues by decoupling the cookie keep-alive image from the main Docker build process. The Dockerfile now uses a standard Python 3.10 base, ensuring compatibility with necessary dependencies, while the cookie image is built as a non-blocking step in the deployment workflow. This change guarantees that app, connector, and icon deployments can proceed without interruption."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#932",
+      "title": "Enhance Deferred Deep Linking for iOS/Android in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "attribution",
+        "deep-linking",
+        "ios",
+        "android",
+        "nexior",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/932",
+      "summary": "This update introduces deferred deep linking for new installs on iOS and Android, ensuring that invite links correctly attribute referrals even when the app is freshly installed. Key changes include the implementation of an InstallReferrer plugin for Android and clipboard token handling for iOS, along with necessary adjustments to the app's manifest and entitlements. This enhancement improves user acquisition tracking and referral reward accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#644",
+      "title": "Enhance Deferred Deep Linking for Referrals in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "attribution",
+        "referrals",
+        "deep-linking",
+        "nexior"
+      ],
+      "public": false,
+      "summary": "This update introduces a backend solution for deferred deep linking, allowing new app installs on iOS and Android to capture referral data. Key features include the `AttributionClick` model for tracking clicks, new API endpoints for resolving invites, and improved handling of click data across platforms. This implementation aims to eliminate reliance on third-party services, enhancing user acquisition strategies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#82",
+      "title": "Introducing RUM Telemetry Search Tool in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "telemetry",
+        "frontend",
+        "debugging",
+        "tooling",
+        "Nexior"
+      ],
+      "public": false,
+      "summary": "This update adds a client-side telemetry query tool for Tencent RUM, complementing the existing server-side logs. The new tool allows querying of frontend errors reported by Nexior, AuthFrontend, and PlatformFrontend, making it easier to debug issues like JS errors and API failures. Key files include a Python script for querying and documentation for usage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#139",
+      "title": "Enhance Cookie Connectors with ACE Extension in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "frontend",
+        "cookies",
+        "i18n",
+        "extension"
+      ],
+      "public": false,
+      "summary": "This update introduces the ability for cookie connectors to be directly connectable through the ACE browser extension, eliminating the need for manual cookie pasting. Users can now log in and capture their session seamlessly, with enhanced internationalization support across multiple languages. The changes also include a timeout feature for detecting the extension's presence and improved payload handling for cookie data."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#185",
+      "title": "Updated Connector Icons for Clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "icons",
+        "backend",
+        "update",
+        "connectors",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update replaces the placeholder icons for new connectors with verified logos from their respective sites, ensuring all icons return a valid HTTP 200 status. The Google Drive icon remains unchanged. This enhancement improves the visual consistency and user experience within the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#184",
+      "title": "Fix cookie-refresh image build issue in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "fix",
+        "deploy",
+        "docker",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update addresses a missing build toolchain in the `Dockerfile.cookie-refresh`, which caused the cookie-refresh image to fail during deployment. By adding the necessary packages for building C extensions, the cronjob image can now be successfully built and applied after deployment. This ensures that the connector sync continues to function smoothly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#433",
+      "title": "Enhanced Telemetry Integration in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "telemetry",
+        "frontend",
+        "performance",
+        "monitoring"
+      ],
+      "public": false,
+      "summary": "This update introduces Tencent RUM (Aegis) to the PlatformFrontend, completing the telemetry coverage across our frontend applications. Key changes include the addition of a new telemetry plugin that captures JS errors, API failures, and page performance metrics, ensuring better observability. The integration is designed to be non-blocking and resilient, enhancing the overall reliability of the developer portal."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#182",
+      "title": "Enhance Cookie Keep-Alive Functionality in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "cronjob",
+        "docker",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a dedicated cronjob for cookie keep-alive functionality within the AuthBackend, ensuring that connector sessions remain active. Key additions include a new Dockerfile for a browser-enabled image, management commands for refreshing cookie connections, and comprehensive testing for the new logic. This enhancement complements existing OAuth-token refresh mechanisms, improving overall connection management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#183",
+      "title": "Fix catalog sync command for live connectors in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "fix",
+        "deploy",
+        "backend",
+        "cronjob"
+      ],
+      "public": false,
+      "summary": "The `sync_connector_catalog` command was renamed to `sync_connectors`, causing the catalog sync CronJob to fail and preventing new connectors from being synced to production. This update modifies the CronJob to use the correct command, ensuring that all seeded connectors are properly upserted on the next deployment. This fix will restore the live directory to include all recent connector additions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#930",
+      "title": "Resolve App Store Rejection Issues in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ios",
+        "appstore",
+        "bugfix",
+        "compliance",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/930",
+      "summary": "This update addresses two critical issues that led to the rejection of Nexior by the App Store. It adds necessary camera and photo library usage descriptions to the Info.plist to prevent crashes when using the 'Take Photo' feature, and it ensures that the entire paid catalog is hidden on iOS to comply with Apple's guidelines. These changes enhance app stability and compliance with App Store requirements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WisdomChannel#5",
+      "title": "Enhance Security with Code-Enforced Trust in Wisdom Channel 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WisdomChannel",
+        "security",
+        "refactor",
+        "access-control",
+        "trust",
+        "wisdom-channel"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/WisdomChannel/pull/5",
+      "summary": "This update refactors the security model by enforcing trust levels directly in the code, eliminating reliance on prompts. Key changes include the removal of a hardcoded vendor denylist and the introduction of a more robust access control mechanism. The bridge now differentiates between admin and normal users, ensuring that only authorized users can access tools, enhancing overall system security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#140",
+      "title": "Enhance Apple Login with Tencent RUM in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "telemetry",
+        "apple-login",
+        "aegis",
+        "frontend",
+        "auth"
+      ],
+      "public": false,
+      "summary": "This update integrates Tencent RUM (Aegis) into the AuthFrontend, addressing the lack of telemetry for the Apple Sign-In process. Key changes include the addition of a new telemetry plugin, capturing Apple login events, and enhancing error handling across the authentication flow. This ensures that failures are now observable, improving overall user experience and debugging capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#931",
+      "title": "Enhance Apple Login with Timeout and Telemetry in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "auth",
+        "apple",
+        "telemetry",
+        "timeout",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/931",
+      "summary": "This update addresses silent hangs during Apple Sign-In by implementing a 20-second timeout for login requests. Key changes include adding timeouts to the HTTP client and the AuthPanel component, ensuring that stalled logins fail visibly and are tracked in telemetry. This improvement enhances user experience by preventing indefinite loading states."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#929",
       "title": "Boost Gradle Heap to Fix OOM in Nexior 🚀",
       "tags": [

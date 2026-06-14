@@ -1,0 +1,138 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-06-14",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#936",
+      "title": "Enhance session settings restoration and editability in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "coding-bridge",
+        "session",
+        "editability",
+        "restore"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/936",
+      "summary": "This update restores session settings such as model, working directory, reasoning effort, and edit mode when reloading a Coding Bridge conversation. Users can now edit these settings on every turn, ensuring a more flexible and consistent experience. The changes are complemented by server-side updates to persist these settings effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#26",
+      "title": "Enhance Session Management in Coding Bridge Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "feature",
+        "session",
+        "metadata",
+        "improvement",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/26",
+      "summary": "This update introduces a new session metadata management system that persists and restores per-session settings, including working directory, permission mode, and reasoning effort. Key files modified include `session_meta.py`, which now saves session data to a JSON file, and updates to `session.py` and `connection.py` to integrate this functionality. Overall, this enhancement improves the user experience by ensuring that sessions can resume with the correct context after a reload."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#189",
+      "title": "Enhance cookie image for seamless playwright installs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "docker",
+        "playwright",
+        "deployment",
+        "backend",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update modifies the Dockerfile for the cookie keep-alive image to ensure that the apt lists are retained during the playwright installation process. By moving the cleanup step after the installation, it prevents errors related to missing package lists, thereby enhancing the build process without impacting app deployment. This change is part of ongoing improvements to the deployment workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#188",
+      "title": "Update connector icons for global accessibility in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "connectors",
+        "cdn",
+        "icons",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update re-hosts all connector icons on the CDN to ensure they load properly across different regions. Previously, some icons were blocked or failed to render due to cross-origin restrictions. Now, all 11 icons are accessible regardless of the user's location, enhancing the user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#25",
+      "title": "Enhance AskUserQuestion Feedback in Coding Bridge Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "feature",
+        "fix",
+        "testing",
+        "cli",
+        "permissions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/25",
+      "summary": "This update improves the handling of user responses in the AskUserQuestion feature. It ensures that structured answers are correctly passed through the system, allowing the CLI to acknowledge user input instead of indicating that no response was given. New tests have been added to verify this functionality, enhancing overall reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#435",
+      "title": "Enhance Cookie-Capture Extension with Auth Match in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "extension",
+        "update",
+        "typescript",
+        "frontend",
+        "cookie-capture"
+      ],
+      "public": false,
+      "summary": "This update introduces the `auth.acedata.cloud` content-script match for the cookie-capture extension, allowing it to inject on the connectors page. The version is bumped to v0.3, and TypeScript build issues have been resolved, ensuring a clean repackage. The installation documentation has also been updated to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#646",
+      "title": "Update acedataext Install Docs for v0.3 Package in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "update",
+        "acedataext",
+        "v0.3",
+        "backend"
+      ],
+      "public": false,
+      "summary": "The installation documentation for the acedataext browser extension has been updated to point to the new v0.3 package. This change affects all 18 locales, ensuring users download the correct file that includes the necessary content-script match for auth.acedata.cloud. The live documentation will reflect this update after the merge."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridgeAgent#24",
+      "title": "Fix AskUserQuestion Answer Handling in Coding Bridge Agent 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridgeAgent",
+        "bugfix",
+        "testing",
+        "permissions",
+        "cli",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridgeAgent/pull/24",
+      "summary": "This update resolves an issue where answers to AskUserQuestion prompts were not being processed correctly, leading to misleading messages. Key changes include plumbing the answer through the system and updating the PermissionBroker to handle answers appropriately. New tests have been added to ensure functionality and verify that the CLI now correctly echoes user responses."
+    }
+  ]
+}
