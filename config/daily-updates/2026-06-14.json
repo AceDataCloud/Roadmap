@@ -3,6 +3,215 @@
   "date": "2026-06-14",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Skills#404",
+      "title": "Enhance Kling API Documentation in Skills 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "documentation",
+        "kling",
+        "api",
+        "skills",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/404",
+      "summary": "This update improves the documentation for the Kling lip-sync API, specifically the `/kling/lip-sync` endpoint. Key changes include a detailed description of lip-sync capabilities, request parameters, and an illustrative example for users. The modifications ensure that the skill guidance is aligned with the latest OpenAPI specifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#406",
+      "title": "Fix voiceover endpoint and references in Skills 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "bugfix",
+        "update",
+        "skills",
+        "voiceover"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/406",
+      "summary": "This update corrects the voiceover endpoint for the marketing-video-factory skill, changing it to the accurate OpenAI-compatible route `/v1/audio/speech`. Additionally, references to non-existent files have been updated to point to the correct scripts and materials. These changes enhance the functionality and reliability of the promo video generation process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#87",
+      "title": "New Offline Digital Human Deployment Plans in Index 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "deployment",
+        "research",
+        "digital-human",
+        "windows"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive research and deployment plan for an offline digital human solution, allowing users to create videos by uploading photos, voice samples, and scripts. Key documents include a detailed research solution guide, Windows deployment instructions for RTX 3090, and an automated deployment script. The project aims to establish a self-hosted version of HeyGen, optimizing for local processing without reliance on online APIs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1018",
+      "title": "Enhance Dreamina Worker with AK/SK Environment Variables in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "security",
+        "deployment",
+        "environment-variables"
+      ],
+      "public": false,
+      "summary": "This update introduces the `VOLCENGINE_ACCESS_KEY` and `VOLCENGINE_SECRET_KEY` environment variables to the seedance and seedream worker deployments. These keys are sourced from the `volcengine` secret and are essential for signing the Visual `cv` API, ensuring a secure connection distinct from the Ark Bearer `API_KEY`. This change has already been applied live and will persist across future deployments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#86",
+      "title": "Revamped Video Factory Plan for Fish TTS in Index 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "video",
+        "tts",
+        "architecture",
+        "update",
+        "fish"
+      ],
+      "public": false,
+      "summary": "This update corrects the architecture for the article-to-video factory to utilize the existing Fish TTS endpoint for voiceovers. Key changes include the removal of outdated assumptions regarding TTSMCP and the establishment of scene-level reliability measures. The focus is now on enhancing health monitoring and retry behavior rather than creating a duplicate API, streamlining the implementation process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformStudio#17",
+      "title": "Automated Video Marketing Material Factory in Platform Studio 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformStudio",
+        "video",
+        "marketing",
+        "automation",
+        "TTS",
+        "platform",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces an evidence-driven automated video marketing design that enhances material collection, creative compilation, and distribution processes. Key changes include the integration of a new TTS provider, Fish, and the addition of a comprehensive material catalog sourced from various documentation and real API outputs. The deployment guidance has also been updated to ensure a health check for the TTS service before publishing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#942",
+      "title": "Introducing the Talking Photo Tab for Kling in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "kling",
+        "ui",
+        "api",
+        "video"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/942",
+      "summary": "This update adds a new Talking Photo tab to the Kling app, allowing users to create talking videos from a portrait and audio with a single click. The feature is powered by a new API endpoint and includes enhancements to the frontend, such as a dedicated panel for uploads and internationalization support for both English and Chinese. Overall, this addition significantly enhances user experience by simplifying the video creation process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#453",
+      "title": "Boost default max_tokens for reasoning models in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "api",
+        "playground",
+        "fix",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update raises the default `max_tokens` from 200 to 2048 in the API Playground, addressing issues with reasoning models like `gemini-3.0-pro` that require more tokens for internal processing. The change ensures that users can see complete responses without empty outputs, while still providing a clear teaching example. Non-reasoning models remain unaffected by this adjustment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#674",
+      "title": "boost output budget for thinking models in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "e2e",
+        "fix",
+        "backend",
+        "gemini",
+        "probe"
+      ],
+      "public": false,
+      "summary": "This update raises the output budget for the E2E probe from 64 to 1024 tokens for thinking models like `gemini-3.0-pro`. The previous limit caused probes to report empty results due to internal reasoning consuming all tokens. By increasing the budget, we ensure that visible answers can be emitted while maintaining harmless checks for non-reasoning models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#673",
+      "title": "Exciting New Talking Photo Feature in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "api",
+        "backend",
+        "testing"
+      ],
+      "public": false,
+      "summary": "We've introduced a public POST endpoint for the Kling Talking Photo API, allowing users to create talking videos from an image and audio. This feature integrates image2video and lip-sync technology, with bundle pricing based on duration. Additionally, cost tests have been implemented to ensure accuracy in pricing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1023",
+      "title": "Introducing One-Shot Talking Photo Feature in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "api",
+        "video",
+        "lip-sync",
+        "talking-photo"
+      ],
+      "public": false,
+      "summary": "We've added a new one-shot talking photo feature that allows users to generate a talking video from a single image and audio URL using the `/kling/talking-photo` endpoint. This feature simplifies the process by chaining image-to-video and lip-sync functionalities into one call, enhancing the Nexior 'talking photo' experience. It supports various parameters for customization and can be used as a standalone API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformStudio#15",
+      "title": "Enhance Video Production with Material Library & Playbook in Platform Studio 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformStudio",
+        "video",
+        "documentation",
+        "assets",
+        "best-practices",
+        "production"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive material library and a video production playbook to streamline our video creation process. The material library includes real product screenshots, generated brand stills, and finished sample videos, all indexed for easy access. The playbook outlines best practices and provides a reusable scene template for creating impactful one-minute feature promos."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1024",
+      "title": "Enhance TTS Billing Accuracy and Deploy Updates in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "tts",
+        "deployment",
+        "service",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update fixes the billing issue for the TTS service by ensuring that the `x-billing-byte_count` header reflects the input size, allowing costs to scale appropriately. Additionally, it re-establishes the deployment and service configurations for the audio-speech functionality, ensuring they are reproducible for future deployments. The endpoint is now live and verified to bill correctly based on input size."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Skills#405",
       "title": "Launch of Marketing Video Factory Skill in Skills 🎥",
       "tags": [
