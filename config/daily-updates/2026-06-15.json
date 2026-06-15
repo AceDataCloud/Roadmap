@@ -3,6 +3,53 @@
   "date": "2026-06-15",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#492",
+      "title": "Fix nginx log format collision in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "nginx",
+        "frontend",
+        "bugfix",
+        "configuration"
+      ],
+      "public": false,
+      "summary": "This update resolves a naming conflict in the nginx configuration by renaming the log format from 'main' to 'acedata_main'. The previous name caused crashes in new frontend pods due to a duplicate definition with the base nginx image. The configuration has been validated against the real nginx:stable-alpine image to ensure stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#491",
+      "title": "Final SSG Migration: Prerender Removed in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ssg",
+        "nginx",
+        "seo",
+        "frontend",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This PR completes the SSG migration by removing the headless-Chrome prerender and ensuring all public routes are now statically server-rendered. Key changes include nginx configuration updates to serve SSG HTML to crawlers and the deletion of all related prerender files and services. The transition has been verified with zero SEO regression, maintaining the integrity of previously prerendered routes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#490",
+      "title": "Enhance Server-Side Rendering for Key Pages in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ssg",
+        "seo",
+        "frontend",
+        "vue",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update implements server-side generation for critical routes including models, pricing, and earnings pages, ensuring improved SEO and performance. Key changes include the addition of the applySeoIsomorphic helper and modifications across multiple Vue components to support build-time rendering. The full build has been verified locally, confirming no regressions."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#488",
       "title": "Enhanced Top-Up Clarity and Model Pages in Frontend Web 🚀",
       "tags": [
