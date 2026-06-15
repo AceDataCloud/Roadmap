@@ -68,6 +68,17 @@ _SQL_USERS = "* | SELECT count(DISTINCT user_id) as users"
 # SQL for distinct API count
 _SQL_ACTIVE_APIS = "* | SELECT count(DISTINCT api_name) as active_apis"
 
+# Synthetic monitoring probe accounts — excluded from SLA so internal health
+# checks never count as customer-facing downtime.
+SYNTHETIC_PROBE_USER_IDS = (
+    "b87f67c1-b04f-4332-99a1-7a5e651331c6",  # test-aichat probe (acedatacloud-api key)
+)
+
+
+def _probe_exclusion() -> str:
+    return "".join(f' NOT user_id:"{uid}"' for uid in SYNTHETIC_PROBE_USER_IDS)
+
+
 def _cls_query(client, query: str, from_ms: int, to_ms: int) -> dict:
     """Run a CLS SearchLog request and return the parsed response."""
     from tencentcloud.cls.v20201016 import models
@@ -119,6 +130,27 @@ def _query_active_apis(client, from_ms: int, to_ms: int) -> int:
     if rows:
         return rows[0].get("active_apis", 0)
     return 0
+
+
+def _query_sla(client, from_ms: int, to_ms: int) -> dict:
+    """Request-weighted uptime = 1 - 5xx/total over a window.
+
+    4xx (auth/balance/client errors) are NOT counted as downtime; synthetic
+    monitoring probes are excluded so they never look like a customer outage.
+    """
+    excl = _probe_exclusion()
+    total_rows = _parse_analysis_records(
+        _cls_query(client, f"*{excl} | SELECT count(*) as total", from_ms, to_ms)
+    )
+    err_rows = _parse_analysis_records(
+        _cls_query(
+            client, f"status_code:>=500{excl} | SELECT count(*) as errors", from_ms, to_ms
+        )
+    )
+    total = total_rows[0].get("total", 0) if total_rows else 0
+    errors = err_rows[0].get("errors", 0) if err_rows else 0
+    uptime = round((1 - errors / total) * 100, 3) if total else None
+    return {"uptime": uptime, "total": total, "errors": errors}
 
 
 # ── Auth DB query (new signups) ─────────────────────────────────────────────
@@ -261,6 +293,25 @@ def main() -> int:
 
         payload[window_name] = window_data
 
+    # SLA windows (uptime = 1 - 5xx/total, excluding synthetic probes)
+    sla_windows = [
+        ("last_6h", timedelta(hours=6)),
+        ("last_24h", timedelta(hours=24)),
+    ]
+    sla: dict = {}
+    for sla_name, delta in sla_windows:
+        start_ms = int((now - delta).timestamp() * 1000)
+        print(f"[api_usage_snapshot] Querying SLA {sla_name} ...", file=sys.stderr)
+        try:
+            sla[sla_name] = _query_sla(client, start_ms, now_ms)
+        except Exception as exc:
+            print(
+                f"[api_usage_snapshot] WARN: SLA query failed for {sla_name}: {exc}",
+                file=sys.stderr,
+            )
+    if sla:
+        payload["sla"] = sla
+
     _atomic_write_json(Path(args.output), payload)
     print(f"[api_usage_snapshot] Wrote {args.output}", file=sys.stderr)
 
@@ -273,6 +324,12 @@ def main() -> int:
             f"{data['active_apis']} APIs",
             file=sys.stderr,
         )
+    for sn, s in sla.items():
+        if s.get("uptime") is not None:
+            print(
+                f"  {sn}: {s['uptime']}% uptime ({s['errors']:,} 5xx / {s['total']:,})",
+                file=sys.stderr,
+            )
 
     return 0
 

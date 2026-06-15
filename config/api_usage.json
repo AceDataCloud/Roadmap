@@ -1,13 +1,25 @@
 {
-  "as_of": "2026-06-15T05:49:19.462938+00:00",
+  "as_of": "2026-06-15T06:38:34.092823+00:00",
   "last_7d": {
-    "total_calls": 16932871,
-    "unique_users": 1382,
+    "total_calls": 16931344,
+    "unique_users": 1379,
     "active_apis": 105
   },
   "last_30d": {
-    "total_calls": 83069485,
-    "unique_users": 5270,
+    "total_calls": 83048526,
+    "unique_users": 5276,
     "active_apis": 117
+  },
+  "sla": {
+    "last_6h": {
+      "uptime": 99.666,
+      "total": 558930,
+      "errors": 1869
+    },
+    "last_24h": {
+      "uptime": 99.844,
+      "total": 2337970,
+      "errors": 3643
+    }
   }
 }
