@@ -3,6 +3,149 @@
   "date": "2026-06-15",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#685",
+      "title": "Enhance Catalog with Real Logos and Pricing in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "catalog",
+        "pricing",
+        "features",
+        "logos"
+      ],
+      "public": false,
+      "summary": "This update introduces real brand logos and raw credit costs for items in the catalog, allowing for dynamic pricing based on a full 8-tier credit to USD ladder. The changes ensure that the UI can display accurate pricing at any recharge amount, enhancing user experience. Additionally, tests have been updated to reflect these new features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#147",
+      "title": "Enhance Slack Integration with Meta Tag in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "seo",
+        "frontend",
+        "slack",
+        "meta"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `<meta>` tag for the Slack App ID in the site's header, enabling Slack to suggest our app when links are shared. The addition is part of the Slack Marketplace distribution setup and does not alter existing functionality. The App ID is public and enhances our app's visibility in Slack workspaces."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#150",
+      "title": "Refactor telemetry and fingerprint integration in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "refactor",
+        "telemetry",
+        "fingerprint",
+        "frontend",
+        "core"
+      ],
+      "public": false,
+      "summary": "This update enhances the AuthFrontend by integrating telemetry and fingerprint functionalities from the @acedatacloud/core package. Key changes include the introduction of `createTelemetry` for telemetry tracking and `createFingerprintResolver` for fingerprint resolution, both maintaining existing function names. The implementation passes all build checks and linting, ensuring a smooth transition to the new core functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#149",
+      "title": "Refactor to Use Core Modules in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "refactor",
+        "core",
+        "frontend",
+        "typescript",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update integrates the `@acedatacloud/core` package into AuthFrontend, marking its first consumer. Key changes include the refactoring of chunk load error handling and locale retrieval functions, while maintaining existing functionality. The build process has been verified to pass without issues, ensuring a smooth transition to the new module structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#471",
+      "title": "Enhance Media Pricing Display in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "media",
+        "pricing",
+        "ui",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a new pricing display for media cards, showcasing a min-max range instead of a single price point. The changes leverage the catalog's new min/max fields, improving clarity for users selecting tiers. Additionally, linting and build processes have been successfully validated."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#684",
+      "title": "Enhance Media Pricing Display in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "pricing",
+        "catalog",
+        "tests",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update improves the media pricing display by replacing the misleading 'from cheapest op' with a comprehensive min-max credit range for each media service. The catalog now accurately reflects the full pricing spectrum at both tiers, ensuring users have a clearer understanding of costs. Tests have been updated to validate these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#470",
+      "title": "Launch SSG Runtime Features for Home and /x402 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ssg",
+        "frontend",
+        "nginx",
+        "docker",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update completes Phase 1 of the SSG plan by implementing a runtime flag for SSG, allowing for dynamic toggling without redeploying. Key changes include modifications to the Dockerfile, nginx configuration, and the addition of a new script for generating SPA shells. This approach enhances user experience by enabling gradual feature rollout and easy rollback options."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#469",
+      "title": "Launch Phase 1 of SSG for Home and /x402 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ssg",
+        "frontend",
+        "docker",
+        "vite",
+        "development"
+      ],
+      "public": false,
+      "summary": "This update completes Phase 1 of the static site generation (SSG) initiative, enabling server-rendered first paint for the home and /x402 pages. The feature is controlled by a build flag, ensuring that production remains unaffected until the flag is enabled. Key changes include modifications to the Dockerfile, docker-compose.yaml, and vite.config.ts to support this new functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#468",
+      "title": "Introducing SSG Capabilities for Enhanced Performance in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ssg",
+        "vite",
+        "frontend",
+        "performance",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces the foundation for Static Site Generation (SSG) using vite-ssg, allowing for build-time rendering without affecting the current production setup. Key changes include the addition of a new build command for SSG, modifications to the router for SSR compatibility, and adjustments to ensure that the production environment remains unchanged. Future increments will expand SSG capabilities and prepare for a full production cutover."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#96",
       "title": "Enhance A1 SSG Plan for Instant First Paint in Index 🚀",
       "tags": [
