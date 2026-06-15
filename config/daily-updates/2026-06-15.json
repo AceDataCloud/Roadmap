@@ -3,6 +3,168 @@
   "date": "2026-06-15",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Index#94",
+      "title": "Revamped Slack Marketplace Tracker in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "slack",
+        "tracker",
+        "updates"
+      ],
+      "public": false,
+      "summary": "The Slack Marketplace plan documentation has been refreshed to serve as a live follow-up tracker, eliminating the outdated duplicate. Key updates include a redefined app status, trimmed OAuth scopes, and completion of all submission steps, although a blocker remains due to the requirement of at least five active workspaces for app review submission."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#95",
+      "title": "Enhance Crawlable Models & Pricing Directory in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "features",
+        "seo",
+        "pricing",
+        "crawlable"
+      ],
+      "public": false,
+      "summary": "This update introduces a detailed plan for a crawlable `/models` and `/pricing` directory, enhancing discoverability as outlined in the INFLUENCE-AND-DISCOVERABILITY strategy. It leverages the existing public API and integrates per-model pricing, ensuring a single source of truth. The new features will be deployed behind a feature flag, allowing for controlled rollout and verification across multiple build PRs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#461",
+      "title": "Transition to Self-Hosted Prerender for Enhanced Crawler Visibility in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "prerender",
+        "deployment",
+        "performance",
+        "cost-saving"
+      ],
+      "public": false,
+      "summary": "This update successfully migrates the frontend to a self-hosted prerender solution, replacing the previous reliance on prerender.io. Key changes include the update of the PRERENDER_URL to point to the in-cluster service and the removal of the unused PRERENDER_TOKEN. This transition ensures that bots receive fully-rendered HTML, improving visibility and performance without incurring additional costs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#950",
+      "title": "Final Core Adoption for HTTP Client in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "http-client",
+        "core",
+        "nexior",
+        "adoption"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/950",
+      "summary": "This update finalizes the integration of the core HTTP client for Nexior, replacing the previous axios instance with `createHttpClient` from `@acedatacloud/core`. Key features such as request headers and error handling remain consistent, ensuring seamless functionality. The change includes extensive testing coverage and has been validated with linting and build checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#148",
+      "title": "Clean up ACE extension link in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "cleanup",
+        "frontend",
+        "documentation",
+        "cosmetic"
+      ],
+      "public": false,
+      "summary": "This update removes the redundant `?category=development` from the ACE extension guide link in the BYOC credentials dialog. The link now directly points to the document, leveraging tag-derivation for the sidebar category. This change is cosmetic, as the old links remain functional."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#948",
+      "title": "Enhance Slack Integration with New Meta Tag in Nexior 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "seo",
+        "slack",
+        "meta",
+        "integration",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/948",
+      "summary": "This update introduces a new meta tag for Slack App Suggestions by adding `<meta name=\"slack-app-id\" content=\"A0B0VU3KBQX\" />` to the site's `<head>`. This change will help surface our Slack app as a suggestion when links from this domain are shared in Slack workspaces. The addition does not alter existing behavior and the App ID is public."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#947",
+      "title": "Streamline chunk-load recovery with @acedatacloud/core in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "chunk-load",
+        "core",
+        "nexior",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/947",
+      "summary": "This update refactors the chunk-load error handling in Nexior by integrating the createChunkLoadErrorHandler from the @acedatacloud/core package. The existing functionality remains unchanged, ensuring seamless operation while reducing the codebase by 90 lines. This marks the first implementation of the shared core package within Nexior, with successful builds confirmed using vue-tsc and vite."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#949",
+      "title": "Streamline Telemetry and Fingerprint Integration in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "telemetry",
+        "fingerprint",
+        "performance",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/949",
+      "summary": "This update refactors the telemetry and fingerprint functionalities in Nexior by integrating two core modules from @acedatacloud/core. The telemetry now utilizes `createTelemetry`, significantly reducing code size, while the fingerprinting process leverages `createFingerprintResolver` with lazy loading to optimize performance. Additionally, the dependency on @acedatacloud/core has been updated to version 0.2.0."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#462",
+      "title": "Streamline Document URLs and Sidebar Categories in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "urls",
+        "documentation",
+        "user-experience",
+        "refactor"
+      ],
+      "public": false,
+      "summary": "This update enhances the documentation page by deriving sidebar categories directly from document tags, eliminating the need for `?category=` in URLs. A new utility has been introduced to manage category mapping, ensuring clean and shareable links while maintaining existing functionality for legacy URLs. The implementation also improves user experience by preventing sidebar flashes on cold loads."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#4",
+      "title": "Enhance Type Checking with typesVersions in Common Frontend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "typescript",
+        "frontend",
+        "core",
+        "update",
+        "nexior"
+      ],
+      "public": false,
+      "summary": "This update introduces a `typesVersions` map for various subpaths in the core package, addressing type-checking issues for apps using `moduleResolution: \"node\"`. The version has been bumped from 0.1.0 to 0.2.0, ensuring compatibility with TypeScript 5.8. All changes have been verified, and the runtime remains stable with Vite."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#93",
       "title": "Pricing & Margin Audit Insights in Index 🚀",
       "tags": [
