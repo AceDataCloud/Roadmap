@@ -1,0 +1,257 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-06-15",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Index#93",
+      "title": "Pricing & Margin Audit Insights in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "pricing",
+        "audit",
+        "remediation",
+        "strategy",
+        "cost"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive pricing and margin audit for 34 services and 254 SKUs, revealing that while we are cheaper than competitors on approximately 120 SKUs, nearly 48% of our offerings are priced below upstream costs. Key issues identified include credit-value de-anchoring and placeholder pricing strategies. The report outlines a remediation roadmap aimed at addressing these challenges and optimizing our pricing strategy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#460",
+      "title": "Introducing a Self-Hosted Prerender Service in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "prerender",
+        "frontend",
+        "docker",
+        "deployment",
+        "self-hosted"
+      ],
+      "public": false,
+      "summary": "This update implements a self-hosted headless-Chromium prerender service to replace the paid prerender.io, which was returning 503 errors. The new service is additive and does not alter the existing PRERENDER_URL, ensuring current functionality remains intact. Future updates will switch the URL to the new service after successful deployment verification."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#92",
+      "title": "Updated Plan Statuses and Archived Shipped Plans in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "security",
+        "updates",
+        "archive",
+        "plans"
+      ],
+      "public": false,
+      "summary": "This update corrects the statuses of active plans by verifying them against merged PRs and live data, resulting in the archiving of 8 plans that have already been shipped. The README has been rewritten to reflect these changes and now includes new plans from parallel work. Additionally, a critical security issue has been identified that requires immediate attention."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#3",
+      "title": "Package renamed to @acedatacloud/core in Common Frontend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "chore",
+        "refactor",
+        "release"
+      ],
+      "public": false,
+      "summary": "This update renames the package from `@acedatacloud/common-frontend` to `@acedatacloud/core`, streamlining the scope name. Key files such as package.json, README, and the release workflow have been updated accordingly. There are no behavioral changes, and all tests are passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#459",
+      "title": "Enhance Homepage Stats and Prerender Timeout in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "homepage",
+        "seo",
+        "prerender",
+        "frontend",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update removes hardcoded fabricated statistics from the homepage, ensuring that metrics are only displayed when backed by real data. Additionally, the prerender timeout for bot user agents has been increased from 10 seconds to 30 seconds, improving the crawlability of heavy pages. These changes aim to enhance trust and discoverability for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#91",
+      "title": "Enhance Influence & Discoverability Strategy in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "growth",
+        "strategy",
+        "seo",
+        "community"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive analysis and phased execution plan aimed at addressing the influence and discoverability challenges faced by AceDataCloud. Key changes include the addition of a new document detailing the current gaps and a structured plan to enhance crawlability, content visibility, and community trust. Immediate actions focus on fixing broken elements and eliminating misleading statistics to improve overall platform reach."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#2",
+      "title": "Transform CommonFrontend into NPM Package in Common Frontend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "npm",
+        "typescript",
+        "ci",
+        "telemetry",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update pivots CommonFrontend to a published NPM package, `@acedatacloud/common-frontend`, consolidating shared infrastructure across multiple applications. Key features include a config-driven architecture for HTTP clients, telemetry, fingerprinting, and locale management, all built with TypeScript and designed for optimal tree-shaking. The CI/CD workflows are set up for automated testing and publishing, enhancing the development process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#90",
+      "title": "Streamlined Planning Docs in Index 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "organization",
+        "cleanup",
+        "planning",
+        "legal"
+      ],
+      "public": false,
+      "summary": "This update consolidates all planning documents into a single, organized `plans/` directory, enhancing navigability and clarity. Key changes include the deletion of 5 outdated documents, archiving of 8 reference docs, and the grouping of approximately 20 active plans into themed folders. Legal artifacts have also been moved to a dedicated `_legal/` folder, ensuring better compliance tracking."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#679",
+      "title": "Unifying Claude.ai MCP Guides for Flux and Sora in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "mcp",
+        "flux",
+        "sora",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update consolidates the documentation for the Flux and Sora MCP guides under the correct naming convention, ensuring they are properly nested within the Claude.ai/Desktop MCP series. Key changes include renaming files, updating cross-links across 93 files, and correcting titles to match the series. This enhances the organization and accessibility of the documentation for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#458",
+      "title": "Enhance Slack Integration with New Meta Tag in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "seo",
+        "frontend",
+        "slack",
+        "meta"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `<meta>` tag for the Slack app ID in the site's `<head>`, enabling Slack to suggest our app when links are shared. The addition of this tag does not alter existing behaviors but enhances visibility in the Slack Marketplace. The app ID is public and serves as a key component of our distribution setup."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#409",
+      "title": "Streamline Skill Management by Moving Marketing Video Factory in Skills 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "refactor",
+        "skills",
+        "orchestration",
+        "platformstudio"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/409",
+      "summary": "The marketing-video-factory skill has been successfully removed from the customer Skills package and relocated to PlatformStudio. This change aligns the orchestration playbook with its implementation, reducing drift and enhancing clarity. The single-service skills it orchestrates remain unchanged in the customer package."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformStudio#18",
+      "title": "Streamline Marketing Video Production in Platform Studio 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformStudio",
+        "feature",
+        "documentation",
+        "update",
+        "platformstudio"
+      ],
+      "public": false,
+      "summary": "This update moves the marketing-video-factory orchestration skill into PlatformStudio, ensuring it is closely aligned with its implementation. Key additions include a comprehensive playbook and shared documentation for authentication and async tasks, enhancing usability and self-containment. The single-service skills remain unchanged in the customer Skills package, maintaining a clear separation of concerns."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#89",
+      "title": "Streamlined Slack Scopes and Connector Insights in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "slack",
+        "connector",
+        "update",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update documents the successful trimming of Slack app scopes, reducing bot scopes from 72 to 15 and user scopes to zero. Key findings reveal that the app functions as a data connector rather than a traditional in-Slack bot, necessitating a reinstall for the new scopes to take effect. Additional details about privacy and terms have also been included in the documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#457",
+      "title": "Enhance TTS Pricing Display in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "pricing",
+        "tts",
+        "bugfix",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update improves the rendering of TTS pricing on the service pricing page by replacing the raw JSON display with a user-friendly format. The changes include unwrapping the minimum charge guard and displaying rates per 1M bytes instead of per byte. Additionally, it addresses similar issues for the Fish TTS API, ensuring consistency across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#678",
+      "title": "Retire openai-audio service and merge TTS pricing in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "chore",
+        "api",
+        "pricing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "The standalone openai-audio service has been retired and its API has been successfully integrated into the openai service. Key changes include the deletion of the openai-audio service and the addition of TTS pricing rules to the openai service's display pricing. This streamlines our services and ensures that TTS pricing is now clearly listed under the openai service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#946",
+      "title": "Revamp Talking Photo i18n and Model Requirements in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "i18n",
+        "ui",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/946",
+      "summary": "This update fixes several issues with the Talking Photo feature, including translation errors, model requirements, and layout inconsistencies. Key changes include the proper wrapping of i18n keys, ensuring the model is always sent during generation, and adding model and mode selectors for improved user experience. These enhancements ensure a smoother and more reliable functionality for users."
+    }
+  ]
+}
