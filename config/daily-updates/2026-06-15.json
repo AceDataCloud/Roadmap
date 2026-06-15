@@ -3,6 +3,151 @@
   "date": "2026-06-15",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformStudio#19",
+      "title": "Exciting Updates to the Video Factory in Platform Studio 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformStudio",
+        "video",
+        "marketing",
+        "updates",
+        "factory",
+        "materials"
+      ],
+      "public": false,
+      "summary": "This update introduces a fully functional brand-short video factory, complete with a material library and three product videos. Key enhancements include a brief-driven production pipeline, integration of real provider logos, and the addition of various marketing materials. The expanded skill documentation now provides comprehensive guidance on utilizing the new features effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#478",
+      "title": "Revamped UI for Models with New Features in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "design",
+        "frontend",
+        "features",
+        "improvements"
+      ],
+      "public": false,
+      "summary": "This update introduces a fresh design for the models section, incorporating a dark gradient banner, interactive recharge tabs, and enhanced modality icons using Font Awesome. Additionally, real logos are now displayed on each card, and hover effects have been improved for better user interaction. The changes aim to enhance the overall user experience and streamline model selection."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#686",
+      "title": "Enhanced multimodal catalog with private exclusions and unit fixes in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "catalog",
+        "models",
+        "pricing"
+      ],
+      "public": false,
+      "summary": "This update introduces a per-model multimodal catalog, expanding non-private services into approximately 125 distinct models. Private services have been excluded to streamline the catalog, and unit corrections have been implemented for accurate pricing representation. The changes enhance scalability and prepare the frontend for a redesign with improved visuals and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#6",
+      "title": "Enhance i18n Support with New Factories in Common Frontend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "i18n",
+        "localization",
+        "vue",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces new i18n factories, including `makeFlatLoader` and `makeNestedLoader`, to streamline localization processes. Additionally, the `createSetI18nLanguage` function has been added to manage locale settings effectively. The changes also include the addition of optional peer dependencies for Vue and vue-i18n, along with a new `/i18n` subpath and comprehensive testing, ensuring robust functionality across applications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#151",
+      "title": "Modernize AuthFrontend Build and SSR Features in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "ssg",
+        "vite",
+        "vue",
+        "frontend",
+        "upgrade"
+      ],
+      "public": false,
+      "summary": "This update transitions AuthFrontend to use vite-ssg with server-side rendering (SSR) capabilities, enhancing the login page experience. Key changes include upgrading to Vite 7 and Vue 3.5, implementing a runtime flag for SSR, and ensuring compatibility with existing dependencies. The build process has been streamlined, and the application now supports pre-rendered pages based on user preferences without requiring a rebuild."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#951",
+      "title": "SSR-safe foundation and login page enhancements in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ssr",
+        "vite",
+        "nginx",
+        "docker",
+        "frontend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/951",
+      "summary": "This update establishes an SSR-safe foundation for Nexior by integrating ViteSSG with a runtime `features=ssr` flag. Key changes include the pre-rendering of the login page, modifications to the router and store, and updates to the Dockerfile and nginx configuration for serving the appropriate content based on the flag. This sets the stage for future enhancements to interactive app pages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#475",
+      "title": "Enhance Legal Pages with SSR Support in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ssg",
+        "vue",
+        "nginx",
+        "frontend",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update extends the SSR capabilities to the legal pages, including /terms, /privacy, and /support. Key modifications include fixes to the VueMarkdown component to prevent crashes during SSG builds and updates to the nginx configuration and vite settings to accommodate the new routes. The legal pages will now fetch their body client-side while the frame is rendered server-side, improving performance and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#473",
+      "title": "Streamline HTTP Client with Core Integration in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "http",
+        "integration",
+        "frontend",
+        "core"
+      ],
+      "public": false,
+      "summary": "This update completes the core adoption of the HTTP interceptor in PlatformFrontend by replacing the custom axios instance with the `createHttpClient` from @acedatacloud/core. Key features include maintaining exact parity with previous behavior while enhancing the handling of authorization and error tracking. The changes are validated with CI checks and unit tests, ensuring a smooth transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#474",
+      "title": "Revamped UI with Real Logos and Package Selector in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "design",
+        "frontend",
+        "update",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces a redesigned directory that aligns with the overall site aesthetic, utilizing native Element Plus components for a consistent user experience. Key enhancements include the integration of actual provider logos, a new recharge-amount selector for credit packages, and adherence to updated design tokens for improved visual appeal. All changes have been successfully linted and built without issues."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#685",
       "title": "Enhance Catalog with Real Logos and Pricing in Backend 🚀",
       "tags": [
