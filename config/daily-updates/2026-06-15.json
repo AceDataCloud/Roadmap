@@ -3,6 +3,200 @@
   "date": "2026-06-15",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Index#96",
+      "title": "Enhance A1 SSG Plan for Instant First Paint in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "ssg",
+        "feature-flag",
+        "implementation",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update introduces a detailed implementation plan for the A1 workstream, focusing on server-side generation (SSG) for public pages. Key changes include a feature-flag safety model, allowing for controlled rollouts, and a phased approach to implementation. The plan aims to provide users with an instant, content-rich first paint while maintaining interactivity, significantly improving user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#466",
+      "title": "Enhance homepage with real SLA uptime card in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "uptime",
+        "data",
+        "homepage",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update reintroduces the homepage uptime stat card, now powered by actual data from the `api_usage.json` snapshot instead of a static value. The card will only display when real uptime data is available, ensuring users see accurate information. The current uptime value is approximately 99.7% over the last 6 hours."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#56",
+      "title": "Enhanced SLA Metrics for API Usage in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "sla",
+        "api",
+        "metrics",
+        "update",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/56",
+      "summary": "This update introduces a real, request-weighted SLA for the API usage snapshot, adding `sla.last_6h` and `sla.last_24h` metrics. These metrics provide accurate uptime calculations by excluding synthetic probe data and only counting 5xx errors as downtime. The changes ensure that the homepage will eventually reflect these real-time SLA values, enhancing transparency and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#467",
+      "title": "Revamped Multi-Modal Directory and Pricing in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "design",
+        "features",
+        "pricing",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update introduces a multi-modal directory featuring various modalities including chat, image, video, music, and search, expanding the model count from 55 to 78. It also implements package-aware tier pricing, allowing for dynamic pricing based on usage tiers. The redesign enhances the user interface with a professional card-grid gallery and improved accessibility features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#683",
+      "title": "Enhance Multi-Modal Model Catalog with Tiered Pricing in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "pricing",
+        "catalog",
+        "backend",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive multi-modal model catalog, featuring 78 items across five modalities, each with entry and best tier pricing. The new API endpoint allows users to filter models by modality and ensures accurate pricing based on real package tiers. Additionally, tests have been added to verify the multi-modality and tiered pricing functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#465",
+      "title": "Refactor to Integrate @acedatacloud/core in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "frontend",
+        "integration",
+        "core",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces the first implementation of the shared @acedatacloud/core in the PlatformFrontend, aligning with the Nexior rollout. Key changes include the renaming of utility functions and the introduction of behavior-preserving shims, resulting in a reduction of 200 lines of code. The integration enhances functionality while maintaining existing interfaces, ensuring a smooth transition for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#464",
+      "title": "New Models and Pricing Directory Launch in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "seo",
+        "i18n",
+        "models",
+        "pricing"
+      ],
+      "public": false,
+      "summary": "We've introduced a new, SEO-friendly directory for models and pricing, accessible via the `/models` and `/pricing` endpoints. This feature includes a searchable directory with real-time pricing comparisons and savings badges, enhancing user experience and transparency. The implementation is flag-gated, ensuring a safe rollout while supporting multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#5",
+      "title": "Enhance chunk-load guard for entry signatures in Common Frontend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "chunk-load",
+        "regex",
+        "frontend",
+        "update",
+        "compatibility"
+      ],
+      "public": false,
+      "summary": "This update broadens the chunk-load entry-signature regex to accommodate both `index-<hash>.js` and `index.<hash>.js` formats. This change ensures that the stale-chunk reload guard functions correctly for the PlatformFrontend's dotted entry. The update is backward-compatible with Nexior on versions `^0.2.0`, and includes 22 new tests that have all passed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#682",
+      "title": "Launch Public Pricing API and Sitemap for Models in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "pricing",
+        "sitemap",
+        "backend",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces a public per-model pricing API, allowing users to access pricing details for each model via the new endpoint `/api/v1/models/?with_pricing=1`. The pricing is dynamically calculated based on a single source of truth, ensuring accuracy and consistency with billing. Additionally, a sitemap and robots.txt have been added to enhance discoverability for the `/models` and `/pricing` directories."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#463",
+      "title": "Fix prerender for HTTPS URLs to enhance bot rendering in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "prerender",
+        "nginx",
+        "https",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This hotfix addresses an issue where bots received an empty HTML response due to incorrect URL handling in the prerender setup. The rewrite rule has been updated to ensure that HTTPS URLs are always used, allowing bots to receive the correct rendered content. Verification shows that the changes successfully render the expected JSON-LD output without affecting human users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#680",
+      "title": "Pricing adjustments for video services in Backend 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "video",
+        "backend",
+        "updates",
+        "grok-video",
+        "midjourney"
+      ],
+      "public": false,
+      "summary": "This update implements significant price reductions for grok-video and midjourney-video services based on a recent profitability audit. Key changes include lowering prices to align more closely with competitor rates while maintaining healthy margins. The adjustments are expected to enhance competitiveness and attract more users to these services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#681",
+      "title": "Deprecate Sora APIs as Service Goes Offline in Backend 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "deprecation",
+        "api",
+        "backend",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update marks the Sora APIs as deprecated following the service being taken offline due to consistent failures. The two API routes, `/sora/videos` and `/sora/tasks`, have been removed from the documentation and will now return a 404 error. The changes are reversible, allowing for potential restoration in the future."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#94",
       "title": "Revamped Slack Marketplace Tracker in Index 🚀",
       "tags": [
