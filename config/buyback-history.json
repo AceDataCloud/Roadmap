@@ -4,6 +4,20 @@
   "subtitle": "On-chain buyback transactions — transparent, verifiable, and linked to Solscan.",
   "transactions": [
     {
+      "tx_hash": "3JS7vwHHWu8GeopjSpgX227CiMiNvetB65MHuQPfZygqeceasesDGzA75RH6j4SMjTS87Y5ubMQ76xTvWHZQ2XWj",
+      "occurred_at": "2026-06-15T15:55:36Z",
+      "amount_usd": 74.37,
+      "ace_bought": 160800.674544,
+      "pair": "USDC → ACE",
+      "venue": "DFlow Aggregator v4",
+      "source": "Creator Fees",
+      "source_percentage": 5,
+      "period": "2026-06-15",
+      "from_label": "Buyback Wallet",
+      "from_address": "6hVavSsYRaNk86UbNZa6V4JfSwqkRGk9HgYZqKNsdU1w",
+      "note": "Creator fee buyback — routed 74.373841 USDC → 0.990997957 WSOL (BisonFi) → 160,800.674544 ACE (Pump.fun AMM) via DFlow Aggregator v4, plus a 0.637597 USDC router fee (75.011438 USDC total out)."
+    },
+    {
       "tx_hash": "2mhRZRVKZ6kRY1ksbDVUcSDds9gd5Xizm3FN3ci18qkM9QgwcCZn2tf8egbUPzHrvEkZZ3APshBtQ95P9XUNLbW6",
       "occurred_at": "2026-06-09T16:14:58Z",
       "amount_usd": 111.05,
