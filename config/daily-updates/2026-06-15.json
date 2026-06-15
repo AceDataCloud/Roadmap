@@ -3,6 +3,492 @@
   "date": "2026-06-15",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#488",
+      "title": "Enhanced Top-Up Clarity and Model Pages in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "i18n",
+        "models",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update improves the user experience in the models directory by clarifying top-up options with detailed pricing information. Each tier button now displays the credit amount alongside its dollar cost, and every modality has its own dedicated model page. Additionally, internationalization keys have been added for better localization support."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#689",
+      "title": "Boosted Catalog with 21 New Chat Models in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "catalog",
+        "models",
+        "backend",
+        "embedding",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces 21 new public chat models to the catalog, enhancing the existing offerings significantly. The addition includes models from GLM, GPT-5.x, Gemini, and Claude, while also implementing a new embedding modality for improved functionality. The logo fallback has been removed, ensuring all logos are sourced directly from the database, streamlining the user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#483",
+      "title": "Enhance Document Pages with SSR and Build Resilience in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ssg",
+        "seo",
+        "frontend",
+        "performance",
+        "error-handling"
+      ],
+      "public": false,
+      "summary": "This update implements server-side rendering for all 469 non-private document pages, enhancing SEO and performance. Key changes include improved error handling during static site generation, ensuring that a single error won't block the entire deploy. The build process has been optimized to handle 544 routes efficiently, significantly reducing build time."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#482",
+      "title": "Refactor Pricing Logic for Enhanced Efficiency in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "pricing",
+        "frontend",
+        "core",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update refactors the pricing logic by creating a thin wrapper around `@acedatacloud/core/pricing`. Key functions like `getConsumption` and `formatConsumption` are now utilized directly from the core, while the currency-aware formatters are built from the store's exchange and currency. The changes streamline the pricing process and maintain exported names and types for consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#486",
+      "title": "Streamline Operator Code with BaseOperator in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "frontend",
+        "operators",
+        "code-cleanup",
+        "dependencies"
+      ],
+      "public": false,
+      "summary": "This update refactors the API, service, proxy, and application operators to extend the shared BaseOperator from @acedatacloud/core, reducing code duplication. Key methods like getAll, get, create, and update are now inherited, resulting in a cleaner codebase with a net reduction of 77 lines of code. The dependency on @acedatacloud/core has been updated to version 0.7.0, ensuring compatibility with the latest features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#956",
+      "title": "Refactor X402 Helpers for Cleaner Code in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "x402",
+        "dependencies",
+        "code-cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/956",
+      "summary": "The `solana.ts` utility file has been refactored to import pure, unit-tested X402 helpers from `@acedatacloud/core/x402`, reducing the codebase by 39 lines without changing any functionality. This update enhances maintainability while ensuring that all critical signing and submission logic remains intact and local. The dependency on `@acedatacloud/core` has been updated to version 0.8.0."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#487",
+      "title": "Refactor to Use Core X402 Helpers in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "frontend",
+        "x402",
+        "dependencies",
+        "solana"
+      ],
+      "public": false,
+      "summary": "The `solana.ts` utility file has been refactored to import pure, unit-tested X402 helpers from `@acedatacloud/core/x402`, reducing code complexity by 35 lines. Key functions like `uint8ArrayToBase64` and `resolveRpcUrl` are now utilized, while critical payment functions remain untouched. This update also bumps the core dependency version to 0.8.0, ensuring compatibility with the latest features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#955",
+      "title": "Streamline Operators with BaseOperator in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "operators",
+        "baseoperator",
+        "dependency",
+        "cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/955",
+      "summary": "This update refactors the API, Application, and Service operators to extend the shared BaseOperator from @acedatacloud/core, reducing code duplication. Key CRUD methods are now inherited, resulting in a cleaner codebase with a net reduction of 50 lines of code. The update also bumps the core dependency to version 0.7.0, ensuring compatibility and improved functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#954",
+      "title": "Refactor API Code Dialog for Core Integration in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "api",
+        "core",
+        "vue",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/954",
+      "summary": "This update refactors the ApiCodeDialog component to eliminate local template imports and leverage the core's VARIANTS and renderApiCode functionalities. The dialog's UI and language icons remain unchanged, ensuring that generated snippets are byte-identical. All builds and lint checks have successfully passed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#481",
+      "title": "Enhance Service Pages with SSR and JSON-LD in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ssg",
+        "seo",
+        "frontend",
+        "performance",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update transitions 69 non-private service pages to server-rendered content, eliminating the need for headless-Chrome prerendering. Key improvements include robust error handling during API calls, enhanced SEO with structured data, and a streamlined process for generating meta descriptions. These changes ensure faster load times and better crawlability for search engines."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformStudio#23",
+      "title": "Revamped Semantic Storyboard and Unified Style in Platform Studio 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformStudio",
+        "semantic",
+        "storyboard",
+        "unified",
+        "style",
+        "models",
+        "diversity"
+      ],
+      "public": false,
+      "summary": "The latest update introduces a semantic storyboard that aligns each narration line with its corresponding visual, ensuring content and visuals match perfectly. A unified art direction has been established across all frames, alongside the integration of the latest model versions, enhancing the overall quality and diversity of outputs. Additionally, refreshed videos and improved briefs have been added to support these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#489",
+      "title": "Increase COMPOSE_HTTP_TIMEOUT for smoother deployments in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ci",
+        "deploy",
+        "timeout",
+        "docker",
+        "workflow"
+      ],
+      "public": false,
+      "summary": "This update raises the `COMPOSE_HTTP_TIMEOUT` to 600 seconds to address deployment failures caused by the default 60-second timeout during large image pushes to GHCR. The change is made in the deploy workflow configuration, ensuring more reliable deployments without interruptions. This adjustment aims to enhance the overall stability of the deployment process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#953",
+      "title": "Refactor Pricing Logic in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "pricing",
+        "core",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/953",
+      "summary": "This update refactors the pricing logic by consuming the latest version of `@acedatacloud/core/pricing`. Key functions like `getConsumption`, `getPrice`, and `getPriceString` are now streamlined, improving maintainability while preserving existing signatures. The build passes successfully with vue-tsc and vite."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#479",
+      "title": "Enhance SEO with JSON-LD Integration in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "seo",
+        "frontend",
+        "json-ld",
+        "ssg",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces build-time JSON-LD for Organization and FAQPage directly into prerendered HTML, improving SEO visibility for crawlers. Key changes include the addition of a new script for JSON-LD generation and modifications to existing scripts to ensure structured data is included in both the static output and the shell. The implementation has been verified, setting the stage for future enhancements in data handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#10",
+      "title": "Introducing shared X402 payment primitives in Common Frontend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "x402",
+        "payments",
+        "refactor",
+        "shared",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces `@acedatacloud/core/x402`, a set of pure, deterministic payment helpers and constants that were previously duplicated in Nexior and PlatformFrontend. Key functions like `createTransferCheckedData` and constants such as `SOLANA_MAINNET_RPC` are now centralized, ensuring consistency and reducing code duplication. The update includes 13 unit tests to verify the accuracy of these functions, paving the way for smoother integration in both applications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#9",
+      "title": "Streamline CRUD Operations with BaseOperator in Common Frontend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "feature",
+        "crud",
+        "axios",
+        "nexior",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces the `BaseOperator<TModel, TListResponse, TDetailResponse>`, a reusable REST CRUD boilerplate for domain operators. It simplifies the implementation of common operations like `getAll`, `create`, and `update`, allowing apps to inject their own axios instance and customize methods as needed. The new structure enhances code maintainability and reduces redundancy across the Nexior and PlatformFrontend applications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformStudio#22",
+      "title": "Exciting Updates with Zero Hand-Stitched Frames in Platform Studio 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformStudio",
+        "gpt-image-2",
+        "video",
+        "branding",
+        "updates",
+        "design"
+      ],
+      "public": false,
+      "summary": "The latest version introduces zero hand-stitched frames, utilizing gpt-image-2 to wrap real API results into beautifully designed scenes. Key enhancements include a long AceData logo for intros and outros, along with a 1:1 narration mapping to distinct visuals. Additionally, three refreshed videos have been added to the materials, showcasing the new capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#688",
+      "title": "Add brand-logo fallback for providers without a Service icon in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "testing",
+        "icons"
+      ],
+      "public": false,
+      "summary": "This update introduces a fallback logo for providers lacking a Service icon, specifically addressing the deepseek service. A curated logo from the Nexior CDN will now be used when no real icon is available, ensuring a consistent user experience. Additionally, a new test has been added to verify this functionality, with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#8",
+      "title": "Exciting New API Code Generator in Common Frontend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "feature",
+        "api",
+        "code-generation",
+        "mustache",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces the `@acedatacloud/core/code-snippet` module, featuring Mustache templates and a comprehensive language/library variants matrix. The new `renderApiCode()` function streamlines API code generation by deduplicating logic previously found in multiple applications. The release also includes 36 tests and publishes version 0.6.0 upon merging."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#57",
+      "title": "Updated Buyback History with Latest Transaction in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "buyback",
+        "update",
+        "json",
+        "transactions",
+        "ace"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/57",
+      "summary": "The latest ACE buyback transaction has been added to the buyback history, reflecting a spend of 74.37 USDC for 160,800 ACE. This transaction occurred on June 15, 2026, and has been verified on-chain. The JSON structure has been updated to ensure clarity and compliance with the schema."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#7",
+      "title": "Enhance Pricing Logic with JsonLogic and Currency Formatter in Common Frontend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "pricing",
+        "jsonlogic",
+        "currency",
+        "utilities",
+        "testing",
+        "release"
+      ],
+      "public": false,
+      "summary": "This update introduces new pricing utilities in the Common Frontend, including `getConsumption` for evaluating JsonLogic cost rules and `formatConsumption` for formatting consumption values. Additionally, a currency-aware price formatter is added, allowing for flexible price string generation without store dependencies. The changes are backed by 31 tests and will publish version 0.5.0 upon merge."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#480",
+      "title": "Revamp Model Detail Page with New Features in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "enhancement",
+        "models",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update enhances the public model detail page by implementing a dark gradient hero banner, improved loading indicators, and a more visually appealing playground. Additionally, recharge tier tabs and explanatory hints for top-ups have been added, ensuring a smoother user experience. All changes are dynamic and utilize backend data, keeping the frontend clean and efficient."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformStudio#21",
+      "title": "Exciting v10 Updates: No Fake Logos & Auto Theme Colors in Platform Studio 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformStudio",
+        "v10",
+        "updates",
+        "branding",
+        "modular",
+        "galleries",
+        "api"
+      ],
+      "public": false,
+      "summary": "Version 10 introduces significant enhancements, including the removal of fake logos, now featuring the authentic AceData mark. The auto theme color feature utilizes GPT vision for dynamic branding, while API results are now presented in visually appealing galleries. Additionally, each capability is modularized into individual scripts, improving flexibility and usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#687",
+      "title": "Enhance API Model Extraction with OpenAI Support in Backend 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "openai",
+        "models",
+        "backend",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces per-API model extraction for all non-private media APIs, significantly enhancing the catalog by surfacing previously missing OpenAI models like dall-e-2/3 and tts-1. The changes include deduplication by model ID and improved logo attribution, resulting in around 130 models being cataloged. Tests have been updated to ensure the accuracy of the new model listings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#154",
+      "title": "Upgrade Element Plus for Better Component Sharing in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "upgrade",
+        "frontend",
+        "element-plus",
+        "performance",
+        "components"
+      ],
+      "public": false,
+      "summary": "This update upgrades Element Plus from version 2.2 to 2.14, aligning it with PlatformFrontend and enabling shared components like Pagination. Key changes include renaming event handlers and type adjustments in Pagination and OAuthApps components. The vendor chunk size has increased significantly, raising potential performance concerns for the login page."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#152",
+      "title": "Refactor i18n Integration for Enhanced Localization in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "refactor",
+        "i18n",
+        "localization",
+        "frontend",
+        "core"
+      ],
+      "public": false,
+      "summary": "This update integrates the latest i18n factories from core 0.4.0 into AuthFrontend, replacing the previous inline loader and language setting methods with more efficient alternatives. The core functionality for loading locale messages and setting the language remains intact, ensuring a seamless transition. This change finalizes the i18n extraction across all three applications, improving localization support."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#476",
+      "title": "Refactor i18n Loaders for Enhanced Localization in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "i18n",
+        "localization",
+        "frontend",
+        "core"
+      ],
+      "public": false,
+      "summary": "This update refactors the i18n implementation by adopting the latest core 0.4.0 factories. It replaces the previous inline nested loader and `setI18nLanguage` with new methods, streamlining the localization process while preserving existing function signatures. The changes result in a cleaner codebase with a reduction of 58 lines of code, ensuring continued functionality and improved maintainability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#952",
+      "title": "Refactor i18n Loaders for Enhanced Localization in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "i18n",
+        "localization",
+        "nexior",
+        "core"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/952",
+      "summary": "This update refactors the i18n implementation by adopting the latest core factories from @acedatacloud/core. The inline flat-key loader and setI18nLanguage have been replaced with more efficient methods, while maintaining existing functionality for locale loading and language setting. Overall, this change reduces code complexity and improves maintainability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#477",
+      "title": "Enhance Chrome Health Checks for Self-Healing Pods in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "kubernetes",
+        "prerender",
+        "healthcheck",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update improves the health check mechanism for Chrome in prerender pods by implementing a probe that checks Chrome's DevTools endpoint. This change ensures that if Chrome dies, Kubernetes will automatically restart the pod, preventing persistent 504 errors for crawlers. Additionally, the server-side logic has been refined to maintain structured data while stripping unnecessary scripts from the rendered HTML."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#153",
+      "title": "Upgrade Axios and Adopt Core HTTP Client in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "axios",
+        "upgrade",
+        "http",
+        "frontend",
+        "core"
+      ],
+      "public": false,
+      "summary": "This update upgrades Axios from version 0.21 to 1.x, aligning it with Nexior and PlatformFrontend. It also adopts the `createHttpClient` from @acedatacloud/core, ensuring consistent HTTP handling across all applications. The changes are low-risk, with no breaking dependencies, and have been verified through successful builds and tests."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformStudio#19",
       "title": "Exciting Updates to the Video Factory in Platform Studio 🎥",
       "tags": [
