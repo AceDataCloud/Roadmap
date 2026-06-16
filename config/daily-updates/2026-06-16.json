@@ -3,6 +3,22 @@
   "date": "2026-06-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#505",
+      "title": "Enhance SSR with Code-Split CSS Injection in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ssr",
+        "css",
+        "frontend",
+        "performance",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update resolves the issue of unstyled content during server-side rendering by injecting route-specific code-split CSS directly into the HTML. Key changes include modifications to `server.mjs` and `entry-server.ts` to utilize the SSR manifest, ensuring that all necessary stylesheets are loaded before the first paint. As a result, users will experience a smoother and more visually consistent loading process."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#503",
       "title": "Fix empty tooltips in Stage badges for smoother hydration in Frontend Web 🎉",
       "tags": [
