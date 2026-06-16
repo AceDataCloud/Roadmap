@@ -3,6 +3,54 @@
   "date": "2026-06-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#502",
+      "title": "Fix FontAwesome SSR Rendering Issues in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ssr",
+        "fontawesome",
+        "frontend",
+        "bugfix",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update introduces a server-side rendering (SSR) shim for FontAwesome icons, resolving hydration mismatches that caused icons to render incorrectly. The shim ensures that string and array icons are properly converted to their SVG definitions on the server, eliminating hydration warnings and improving SEO for crawlers. All affected components now import the FontAwesomeIcon from the new shim, maintaining client-side integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#501",
+      "title": "Enhance SSR Data Transfer for Seamless Hydration in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ssr",
+        "frontend",
+        "performance",
+        "hydration",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update implements a per-request data transfer mechanism for server-side rendered (SSR) pages, eliminating the need for clients to refetch data on mount. Key changes include the introduction of new utility functions for SSR data management and modifications to multiple page components to ensure they utilize this data effectively. The result is a smoother user experience with reduced hydration mismatches and improved performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#500",
+      "title": "Revamp SSR Strategy: Say Goodbye to SSG in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "ssr",
+        "nginx",
+        "docker",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update completely removes the build-time SSG, ensuring that users receive a dynamic SPA experience by default, while crawlers benefit from live SSR. Key changes include modifications to the Dockerfile and nginx configuration, streamlining the build process and enhancing routing for both human users and bots. The removal of dead SSG code simplifies the codebase and improves performance."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformStudio#27",
       "title": "Enhance Branding with Richer Content and Transitions in Platform Studio 🚀",
       "tags": [
