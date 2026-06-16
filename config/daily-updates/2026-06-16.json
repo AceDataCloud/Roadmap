@@ -3,6 +3,70 @@
   "date": "2026-06-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformStudio#27",
+      "title": "Enhance Branding with Richer Content and Transitions in Platform Studio 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformStudio",
+        "branding",
+        "content",
+        "transitions",
+        "logo",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces a vibrant colored AceData logo without a chip, addressing previous feedback for a more visually appealing design. Key enhancements include varied transitions for smoother animations, single-logo de-duplication, and richer content with real endpoint and pricing cards. Additionally, results are now captioned with the actual prompts that generated them, improving clarity and engagement."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#499",
+      "title": "Dynamic Currency Formatting for Model Prices in Frontend Web 💰",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "currency",
+        "frontend",
+        "models",
+        "update",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update replaces hardcoded USD pricing on the models list and detail pages with dynamic currency formatting based on user selection. The `getPrice()` function now handles conversions, ensuring that users see prices in their chosen currency with the correct symbols and precision. All related components have been updated accordingly, and the build is green."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#498",
+      "title": "Streamlined SSR Proxy Configuration in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ssr",
+        "nginx",
+        "deployment",
+        "frontend",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update enhances the SSR proxy configuration by replacing the hardcoded DNS resolver with a literal proxy_pass to the service FQDN. This change eliminates reliance on a specific IP address, improving stability and reducing fragility. The deployment scripts have been updated to ensure the SSR service is applied before the frontend, allowing for seamless resolution at startup."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformStudio#26",
+      "title": "Enhance AceData Branding with Real Logo and Captions in Platform Studio 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformStudio",
+        "branding",
+        "updates",
+        "features",
+        "design",
+        "captions"
+      ],
+      "public": false,
+      "summary": "This update introduces the genuine AceData logo on every frame, ensuring brand consistency across all visuals. Additionally, a frosted-glass caption pill has been implemented to enhance the clarity and uniformity of captions, replacing the previous gpt-rendered versions. These changes improve the overall quality and professionalism of the marketing shorts produced."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#497",
       "title": "Enhance SSR Proxy Functionality in Frontend Web 🚀",
       "tags": [
