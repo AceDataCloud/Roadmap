@@ -3,6 +3,90 @@
   "date": "2026-06-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1027",
+      "title": "Fix iOS APNs Push Dispatch and Update Documentation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "documentation",
+        "ios",
+        "apns",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical bug that prevented iOS push notifications from being sent when only APNs was configured. Additionally, the documentation has been updated to reflect the current architecture, clarifying that iOS now connects directly to APNs rather than through FCM. New tests have been added to ensure the push notification gate functions correctly across various transport configurations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1026",
+      "title": "Enhance CORS for Native Apps in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cors",
+        "native",
+        "ios",
+        "android",
+        "bugfix",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update resolves CORS issues affecting iOS and Android native applications by adding their respective origins to the allowlist. Previously, REST calls were blocked, leading to network errors and notification issues. Key changes include modifications to configuration files and the addition of regression tests to ensure the native origins are properly handled."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#97",
+      "title": "Introducing Offline Talking-Head Skill in Index 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "digital-human",
+        "offline",
+        "NVIDIA",
+        "lip-sync",
+        "voice-clone",
+        "avatar"
+      ],
+      "public": false,
+      "summary": "This update adds a new `digital-human` skill for creating fully offline talking-head videos using a local NVIDIA GPU, eliminating the need for cloud APIs. The skill includes a detailed pipeline for voice cloning and lip-syncing, verified on RTX 3090 hardware. Full deployment scripts and configurations are provided to ensure optimal performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#959",
+      "title": "Enhance CI to Submit iOS Builds for Beta Review in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "ios",
+        "beta",
+        "testflight",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/959",
+      "summary": "This update introduces a crucial step in the CI pipeline to submit iOS builds for Beta App Review, ensuring that external TestFlight testers receive the latest updates. The new step includes setting export compliance and required localization details before submission. This fix addresses the issue where testers were stuck with outdated builds, enhancing the testing experience significantly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#957",
+      "title": "Enhance Mobile Drawer Insets for Better Visibility in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "mobile",
+        "ui",
+        "bugfix",
+        "scss",
+        "layout"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/957",
+      "summary": "This update addresses an issue where service config drawers on mobile devices were rendered beneath the iOS Dynamic Island and Android status bar, affecting usability. A global padding rule has been implemented for mobile drawers to ensure they respect safe area insets, improving the layout across various components. Additionally, the floating menu button in Webextrator has been aligned for consistency."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#505",
       "title": "Enhance SSR with Code-Split CSS Injection in Frontend Web 🎨",
       "tags": [
