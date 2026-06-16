@@ -3,6 +3,22 @@
   "date": "2026-06-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#503",
+      "title": "Fix empty tooltips in Stage badges for smoother hydration in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "vue",
+        "ssr",
+        "tooltip"
+      ],
+      "public": false,
+      "summary": "This update resolves the issue of empty tooltips causing hydration mismatches in the Stage badges. By moving the conditional rendering to the `<el-tooltip>` component, we ensure that tooltips only render when their corresponding buttons are present. This change eliminates the `ElOnlyChild` warnings while maintaining the visual output for production APIs."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#502",
       "title": "Fix FontAwesome SSR Rendering Issues in Frontend Web 🚀",
       "tags": [
