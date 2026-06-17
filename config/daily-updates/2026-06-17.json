@@ -1,0 +1,22 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-06-17",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#506",
+      "title": "Fix auth-state hydration mismatch in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "ssr",
+        "frontend",
+        "ui",
+        "header"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where the top header bar rendered too tall due to an auth-state hydration mismatch. By consolidating the rendering of both logged-in and logged-out states into a single container, the header height is now consistently maintained at 60px, eliminating the previous inflation issue. The fix ensures a clean hydration process, improving the overall user experience."
+    }
+  ]
+}
