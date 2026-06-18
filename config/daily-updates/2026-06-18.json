@@ -3,6 +3,87 @@
   "date": "2026-06-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#512",
+      "title": "Update element-plus to version 2.14.2 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "update",
+        "element-plus"
+      ],
+      "public": false,
+      "summary": "This update bumps the element-plus library from version 2.14.1 to 2.14.2. Key changes include new features like the getHalfSelectionRows method for the table component and several bug fixes across various components, enhancing overall stability and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#696",
+      "title": "Enhance Apple IAP Support for Per-Service Packages in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "iap",
+        "backend",
+        "features",
+        "apple",
+        "payments"
+      ],
+      "public": false,
+      "summary": "This update introduces the ability for per-service applications to utilize Apple In-App Purchases (IAP) on iOS, expanding beyond the global wallet. Key changes include the mapping of credit packages to existing Apple products, ensuring correct matching of verified products against orders. Tiers above $999.99 will remain web-only, maintaining compliance with Apple's guidelines."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#976",
+      "title": "Fix IAP Purchase Flow with Global CdvPurchase in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "iap",
+        "bugfix",
+        "cordova",
+        "applepay",
+        "storekit"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/976",
+      "summary": "This update resolves the purchase-failure issue caused by incorrect import of the Cordova plugin in the IAP module. The code now waits for the global `window.CdvPurchase` to be available before proceeding with the StoreKit flow. Additionally, specific failure reasons are now displayed in the ApplePay component, enhancing user diagnostics, and the List component shows per-service purchase options on iOS."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#975",
+      "title": "Align Sidebar Tab Icons Perfectly in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "css",
+        "frontend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/975",
+      "summary": "This update fixes the alignment issue of sidebar tab icons on console pages, ensuring they are vertically centered with their text labels. The root cause was the icons inheriting a tall line-height, which pushed them down. The CSS has been adjusted to use flexbox for proper alignment, enhancing the user experience on both mobile and desktop views."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#973",
+      "title": "Revamp Mobile Application List with Cards in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "mobile",
+        "ui",
+        "fix",
+        "nexior",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/973",
+      "summary": "The console application list on mobile devices has been transformed from a wide table to a user-friendly card layout. This change enhances readability by displaying service names, application IDs, and action buttons in a stacked format, making them easily accessible. The desktop view remains unchanged, ensuring a seamless experience across devices."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#974",
       "title": "Fix(iap): iOS top-up entry visibility + wallet-widget navigation in Nexior 🐛",
       "tags": [
