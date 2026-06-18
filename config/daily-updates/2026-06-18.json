@@ -3,6 +3,69 @@
   "date": "2026-06-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#676",
+      "title": "Enhance Talking Photo API with Comprehensive Docs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "api",
+        "kling",
+        "backend",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update completes the documentation for the Kling Talking Photo API, including detailed guides in both English and Chinese. Key changes include the addition of service pricing, inline translations, and a mapping export. The modifications aim to improve developer experience and provide clearer integration paths."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#690",
+      "title": "Streamline Global Balance Recharge Options in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "chore",
+        "backend",
+        "balance",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update removes the $1.4/10-credit tier from the global balance recharge options, simplifying the choices available to users. The change is implemented by modifying the hardcoded UUID list in the settings file, ensuring that historical orders remain valid while the tier is no longer offered. This enhances the user experience by eliminating less desirable options."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#42",
+      "title": "Enhance Apple In-App Purchase Verification in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "apple",
+        "iap",
+        "backend",
+        "verification",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces backend verification for Apple In-App Purchases through a new endpoint, allowing for secure transaction validation. Key changes include the implementation of the App Store Server API and the addition of necessary settings for authentication. The deployment configuration has also been updated to accommodate these changes, ensuring a smooth integration process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#694",
+      "title": "Enhance Apple In-App Purchase Support in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "apple",
+        "iap",
+        "payment",
+        "backend",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces a new payment method for Apple In-App Purchases (IAP) in the backend, addressing App Store guidelines. A new endpoint for verifying transactions has been added, ensuring secure server-to-server validation. Additionally, a migration has been implemented to map global credit packages to Apple product IDs, allowing for seamless integration with the iOS app."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#693",
       "title": "Fix pricing for character-billed TTS models in Backend 🎉",
       "tags": [
