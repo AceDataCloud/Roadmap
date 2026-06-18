@@ -3,6 +3,150 @@
   "date": "2026-06-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#693",
+      "title": "Fix pricing for character-billed TTS models in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "pricing",
+        "tts",
+        "backend",
+        "models"
+      ],
+      "public": false,
+      "summary": "This update corrects the pricing for three audio models in the public model directory, ensuring they are now accurately billed per character. The models `tts-1`, `tts-1-hd`, and `fish` have been updated to reflect their true costs, with all 78 media and embedding catalog models now displaying proper pricing. Additionally, new tests have been added to verify these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#99",
+      "title": "Enhance digital-human with LatentSync and seam reduction in Index 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "enhancement",
+        "lip-sync",
+        "patch",
+        "documentation",
+        "digital-human"
+      ],
+      "public": false,
+      "summary": "This update introduces the LatentSync lip-sync layer to the digital-human skill, significantly improving lip-sync accuracy. Additionally, a patch has been implemented to reduce the visibility of the mouth seam, enhancing overall visual quality. Key documentation and deployment instructions have also been added to facilitate smooth integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#260",
+      "title": "Enhance Suno Plugin with Inspo Action in Dify 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "enhancement",
+        "suno",
+        "plugins",
+        "music",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/260",
+      "summary": "This update introduces support for the `inspo` action in the Suno plugin, allowing users to generate new music inspired by 1–4 public audio URLs. The implementation reuses the existing audio tool, streamlining the process while ensuring validation for the input URLs. This enhancement broadens the creative possibilities for users leveraging the Dify platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#513",
+      "title": "Update appkit to latest version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "frontend",
+        "appkit"
+      ],
+      "public": false,
+      "summary": "This update bumps the @reown/appkit package from version 1.8.19 to 1.8.21, introducing new options for fetching wallets. The changes enhance the wallet selection process by allowing users to include wallets that support WalletConnect Pay but are not v2-compatible. Additionally, several dependencies have been updated to their latest versions, ensuring improved functionality and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1033",
+      "title": "Optimize Image Edits Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "optimization",
+        "memory",
+        "image-processing",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update enhances the handling of URL image edits by forwarding them as JSON to the Bananarouter, eliminating the need for large memory buffers. The change significantly reduces memory usage during processing, preventing out-of-memory errors. Binary uploads remain unchanged, ensuring no regression in functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#692",
+      "title": "Exciting New Inspo Action for Suno Audios API in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "api",
+        "suno",
+        "backend",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "We've added backend support for the new 'inspo' action in the Suno audios API, allowing users to generate music based on 1 to 4 reference audio URLs. Key updates include modifications to the OpenAPI specifications, cost rules, and the addition of a new documentation section in Chinese. Comprehensive tests have been implemented to ensure functionality and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1032",
+      "title": "Exciting new inspo action for Suno audios worker in Platform Service 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "suno",
+        "audio",
+        "update",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `inspo` action to the `/suno/audios` endpoint, allowing users to generate music inspired by 1-4 reference audio tracks. The implementation is live-probed and successfully produces finished songs across both Suno upstream workers. Key changes include the addition of a new request field `audio_urls` and adjustments to the existing handlers for both ttapi and openai-hk."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#396",
+      "title": "Introducing the suno_generate_inspo Tool for Music Creation in M C Ps 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "feature",
+        "music",
+        "suno",
+        "tool",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/396",
+      "summary": "This update introduces the `suno_generate_inspo` tool to the Suno MCP server, enabling users to generate new music inspired by provided audio URLs. The tool utilizes the `/suno/audios` endpoint with specific parameters and includes mocked unit tests to ensure functionality. This enhancement is designed to enrich the creative capabilities of the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#691",
+      "title": "Fix pricing for media models in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "pricing",
+        "media",
+        "backend",
+        "jsonlogic"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where 21 media models displayed blank prices due to incorrect handling of JsonLogic consumption expressions. The fix allows for the evaluation of these expressions, resulting in 19 models now showing accurate pricing ranges. Additionally, tests have been added to ensure that the pricing functionality works as intended."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#514",
       "title": "Update Node Types to Latest Version in Frontend Web 🚀",
       "tags": [
