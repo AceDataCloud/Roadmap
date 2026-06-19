@@ -3,6 +3,101 @@
   "date": "2026-06-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformDirector#43",
+      "title": "Add COS SDK for Seamless Uploads in Platform Director 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformDirector",
+        "dependencies",
+        "upload",
+        "cdn",
+        "video",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces the `cos-python-sdk-v5` as a dependency to enable successful uploads of rendered videos to the CDN. Previously, the upload process failed due to a missing module, halting the workflow after rendering. With this addition, the output stage can now complete without issues, ensuring a smooth video hosting experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1055",
+      "title": "Enhance Local Model Support for Flux-2-Klein in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "flux",
+        "local",
+        "backend",
+        "update",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces the `flux-2-klein` model to the local FLUX.2 backend, allowing it to be served from a local runner instead of the external API. Key changes include modifications to the settings and handler logic to support the new model while maintaining existing functionality for other models. The local runner now adheres to the same contract for generating and fetching data, ensuring a seamless integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformDirector#42",
+      "title": "Ensure Scene Visuals Use Verified Providers in Platform Director 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformDirector",
+        "bugfix",
+        "testing",
+        "production",
+        "rendering"
+      ],
+      "public": false,
+      "summary": "This update remaps scene visuals to verified providers, ensuring that only `seedance` for clips and `seedream` for images are used during production renders. This change prevents failures caused by unverified providers, such as the recent issue with `veo`. Additionally, three worker tests have been updated to confirm the new remapping functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1054",
+      "title": "Enhance Log Security by Redacting Sensitive Data in Platform Service 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "security",
+        "logging",
+        "redaction",
+        "openai",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces a new log redaction utility that masks sensitive credentials and user content in debug logs for the OpenAI worker. Key changes include the addition of functions to redact API keys and summarize request/response bodies, ensuring that sensitive information does not leak into production logs. The implementation is designed to maintain functionality while enhancing security measures."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformDirector#41",
+      "title": "Enhance Director Deployments with ImagePullSecrets in Platform Director 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformDirector",
+        "deploy",
+        "kubernetes",
+        "imagepullsecret",
+        "api",
+        "worker"
+      ],
+      "public": false,
+      "summary": "This update adds the `ghcr-cred` imagePullSecret to the Director's API and worker deployments, ensuring that pods can pull the private image from GHCR without encountering 401 errors. A fallback to `docker-registry` is also included for added reliability. This change aligns the deployment configuration with the live environment, facilitating a smooth rollout with `kubectl apply`."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformDirector#40",
+      "title": "Deployable Standalone Director with Shared DB in Platform Director 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformDirector",
+        "deploy",
+        "docker",
+        "ingress",
+        "database",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update enables the Director to be deployed as a standalone application at director.acedata.cloud. Key changes include the addition of a Dockerfile for building the Vue SPA, configuration of ingress for routing, and integration with a shared Postgres database. The deployment documentation has also been updated to reflect the new standalone flow."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformDirector#39",
       "title": "Secure Team Access Gate for Director in Platform Director 🔒",
       "tags": [
