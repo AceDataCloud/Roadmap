@@ -3,6 +3,228 @@
   "date": "2026-06-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1049",
+      "title": "Add lightweight access logging in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "logging",
+        "access",
+        "platform",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a per-request access log that captures the request method and path while omitting the query string to enhance privacy. The implementation ensures that the logs reflect the current running image, aligning the repository with live routing. This change aims to improve monitoring and debugging capabilities within the Platform Service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformDirector#35",
+      "title": "Enhance API with DB-backed Store and New Endpoints in Platform Director 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformDirector",
+        "api",
+        "enhancement",
+        "db",
+        "endpoints",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a DB-backed store for the API, replacing the previous in-memory implementation, which allows submitted jobs to be visible to workers. New console endpoints have been added for listing videos, retrieving scenes, and retrying jobs, enhancing the overall functionality. The changes are supported by comprehensive tests, ensuring reliability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformDirector#34",
+      "title": "Product Rename: PlatformStudio to Director in Platform Director 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformDirector",
+        "rename",
+        "api",
+        "ci",
+        "docs",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update implements a product rename from PlatformStudio to Director to resolve naming conflicts with Nexior. Key changes include updated API routes, CI/CD configurations, and documentation adjustments to reflect the new name. All functionality remains unchanged, with successful validation of non-API tests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#709",
+      "title": "Enhance Sitemap with New Landing Pages in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "sitemap",
+        "seo",
+        "backend",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update adds three essential public landing pages to the `sitemap.xml`: `/services`, `/x402`, and `/support`. The `/services` page now includes its own SEO-friendly title and description, improving visibility for search engines. With these additions, the live sitemap now features a total of 625 URLs, ensuring comprehensive coverage for crawlers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#522",
+      "title": "Enhance Access Request with Service UUID in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "access",
+        "frontend",
+        "fix",
+        "uuid",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update modifies the access request functionality to send the resolved service UUID instead of the route parameter alias. The change ensures that the backend can directly resolve the service, improving the reliability of access requests. This is a companion fix to the backend adjustments made previously."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#707",
+      "title": "Revamp WeChat Bot Intro Page in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "wechat",
+        "backend",
+        "documentation",
+        "localization",
+        "update"
+      ],
+      "public": false,
+      "summary": "The WeChat bot's introduction page has been completely rewritten to better reflect the product's features, including a clear 4-step onboarding process. The English version has been crafted as the default, with updates made across 16 other locales. Additionally, the translation script has been modified to prevent machine translation of HTML landing pages, ensuring a cleaner presentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#521",
+      "title": "Fix FontAwesome CSS to Eliminate Giant Icons in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "css",
+        "ssr",
+        "fontawesome",
+        "frontend",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update addresses the issue of oversized unstyled FontAwesome icons appearing on SSR pages under slow network conditions. By bundling the necessary CSS into the render-blocking resources and disabling automatic CSS injection, icons are now correctly sized on the first paint, enhancing the user experience. The client behavior remains unchanged, ensuring consistency across the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#706",
+      "title": "Enhance access request handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "access",
+        "backend",
+        "serializer",
+        "api",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "The AccessRequestCreateSerializer has been updated to accept service and policy identifiers as either UUIDs or aliases, improving flexibility for users. Additionally, the grandfather endpoint has been fortified to handle these identifiers similarly, reducing the likelihood of errors during access requests. This change addresses the 400 error encountered on POST requests to /api/v1/access-requests/."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1047",
+      "title": "Fix OAuth Refresh Endpoint for Claude Proxy in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "oauth",
+        "proxy",
+        "platform",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update corrects the OAuth refresh endpoint from a non-functional URL to the correct one at platform.claude.com. The previous endpoint caused 502 errors when access tokens expired, hindering the proxy's ability to self-heal. The changes have been verified live, ensuring smooth functionality for refresh and chat operations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformDirector#33",
+      "title": "Enhance Worker with Burned Captions and Crossfades in Platform Director 🎬",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformDirector",
+        "enhancement",
+        "worker",
+        "rendering",
+        "captions",
+        "crossfade"
+      ],
+      "public": false,
+      "summary": "This update integrates burned captions and crossfade transitions into the production rendering process. The worker now utilizes a shared caption rendering function, ensuring consistency with the fast-lane orchestrator. With 77 tests passing and no code quality issues, this enhancement improves the output quality of video renders significantly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformDirector#32",
+      "title": "Streamline LLM Integration through AceData Proxy in Platform Director 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformDirector",
+        "feature",
+        "integration",
+        "llm",
+        "proxy",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update routes the script and translation LLM through the platform's OpenAI-compatible proxy, eliminating the need for the `anthropic` SDK and the non-existent `ANTHROPIC_API_KEY`. Key changes include the introduction of `make_llm_call` and `make_translator` factories, ensuring a smoother integration and true dogfooding. The update successfully passes 76 tests and cleans up the deployment requirements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1041",
+      "title": "Integrate Claude Code Proxy for Enhanced Model Access in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "openai",
+        "proxy",
+        "security",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update registers the US-hosted claude-code-proxy as a high-priority upstream for the OpenAI platform service, ensuring it is preferred for Claude models. Key changes include the addition of a new configuration file and the wiring of the API key from a Kubernetes secret, enhancing security and functionality. The proxy has been verified to work seamlessly from the Hong Kong cluster, providing reliable access to Claude models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#518",
+      "title": "Boosting SEO and Concurrent Renders for Human Traffic in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "seo",
+        "performance",
+        "ssr",
+        "frontend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update enhances server-side rendering (SSR) to support concurrent renders, significantly improving performance for human traffic. It also adds SEO optimizations for the `/services` page, including a new title, description, and structured data. These changes ensure a better experience for users while maintaining robust functionality for crawlers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1039",
+      "title": "Introducing OAuth Proxy for Claude Code in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "oauth",
+        "proxy",
+        "authentication",
+        "api",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces the `platform-service-claude-code-proxy`, an OAuth token-injecting proxy for seamless integration with `api.anthropic.com`. It allows downstream clients to make requests without needing to handle tokens directly, ensuring a more secure and auditable authentication process. Key features include automatic token refresh, identity backfill, and enhanced error handling for improved reliability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#104",
       "title": "Digital Human API to Local Machine is LIVE in Index 🚀",
       "tags": [
