@@ -3,6 +3,195 @@
   "date": "2026-06-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformStudio#31",
+      "title": "Enhance Scene Transitions with Crossfades in Platform Studio 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformStudio",
+        "feature",
+        "video",
+        "audio",
+        "rendering",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update introduces crossfade transitions for video and audio, allowing for smoother scene changes in rendered outputs. The `run_fastlane` function now supports a `transition` parameter, enabling users to specify the duration of crossfades, ensuring that audio remains in sync with the video. Additionally, tests have been added to verify the functionality and maintain code quality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#103",
+      "title": "Digital Human Service Live in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "deployment",
+        "production",
+        "digital-human",
+        "service",
+        "api"
+      ],
+      "public": false,
+      "summary": "The digital human service has been successfully deployed to the production database, making it live on the platform. Key features include Service/Api/Document/Translation/Package with billing capabilities and whitelisted tasks in the gateway. The only remaining task is to establish a stable public tunnel and finalize the Kong binding."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#165",
+      "title": "Enhance API Access for Digital Human Tasks in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "api",
+        "authentication",
+        "gateway",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update adds the `/digital-human/tasks` API UUID to the `SKIP_AUTH_API_IDS`, allowing the free poll endpoint to bypass authentication and billing. This change aligns it with other `/tasks` endpoints, improving accessibility for users. The modification ensures a smoother experience when accessing task data."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#705",
+      "title": "Exciting New Digital Human Service Registered in Backend 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "api",
+        "backend",
+        "digitalhuman",
+        "openapi"
+      ],
+      "public": false,
+      "summary": "We've successfully registered the new digital human service, enabling offline talking-head video generation. This update includes cost files for various tasks and comprehensive OpenAPI specifications for three key endpoints. The service is now synced with the database, enhancing our platform's capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#102",
+      "title": "Deployment Status & Handoff for Digital Human in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "deployment",
+        "documentation",
+        "production",
+        "status",
+        "digital-human"
+      ],
+      "public": false,
+      "summary": "This update documents the successful productionization run for the Digital Human project, including the local worker build and end-to-end verification with real videos. Key components are now blocked on operator infrastructure and credentials, with detailed next steps provided. The deployment status has been thoroughly recorded to ensure a smooth handoff."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1043",
+      "title": "Deploy Runbook and OpenAPI Specs for Digital Human in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "deployment",
+        "openapi",
+        "digitalhuman",
+        "api",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update introduces a deploy runbook for the Digital Human service, including a one-command script to start the tunnel. Additionally, it adds OpenAPI specifications for videos, voices, and tasks, enhancing the create-service flow. These changes streamline the deployment process and improve API documentation for better integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformStudio#30",
+      "title": "Enhance Video Experience with Ken Burns and Captions in Platform Studio 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformStudio",
+        "video",
+        "enhancement",
+        "captions",
+        "audio",
+        "ken-burns"
+      ],
+      "public": false,
+      "summary": "This update introduces Ken Burns effects for still images, allowing for a slow zoom that enhances visual storytelling. Additionally, burned-in captions are now rendered for each scene, catering to the 85% of social media viewers who watch videos on mute. A working music bed has also been implemented, ensuring that audio tracks are correctly fetched and integrated into the video output."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1042",
+      "title": "Introducing Offline Talking-Head API in Platform Service 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "api",
+        "gpu",
+        "voice-cloning",
+        "lip-sync"
+      ],
+      "public": false,
+      "summary": "We've launched a new digitalhuman service that enables an offline talking-head API worker. This service orchestrates the local HeyGem (voice cloning and TTS) and LatentSync (lip-sync) containers on a single GPU, providing endpoints for voice cloning, video creation, and task polling. The implementation is designed for efficiency, allowing one GPU job at a time and ensuring high-quality output."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#704",
+      "title": "Fix media pricing regression in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "pricing",
+        "tests",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update addresses a pricing regression in the public models and pricing directory caused by the recent grok-video and grok merge. The fix ensures that the video model's credit range is correctly scoped to its own rules, preventing chat pricing from affecting video pricing. New tests have been added to verify the changes, and all existing tests have passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformStudio#29",
+      "title": "Enhance Asset Engine with Async Video Support in Platform Studio 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformStudio",
+        "enhancement",
+        "async",
+        "video",
+        "testing",
+        "platform-studio"
+      ],
+      "public": false,
+      "summary": "This update introduces a robust asset engine in AceClient, enabling per-provider parameters and asynchronous video clip polling. Key changes include the implementation of `generate_media()` for handling both synchronous image and asynchronous video submissions, along with comprehensive unit tests for new helper functions. The functionality has been live-verified with seedance clips and seedream stills, ensuring a seamless integration into the production environment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#520",
+      "title": "Enhance User Lookup with Account Type and Verification Date in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "admin",
+        "user-lookup",
+        "i18n",
+        "frontend",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "The admin user-query panel now displays the account type (personal or enterprise) and the verification timestamp, enhancing the user lookup experience. This update integrates data from the AuthBackend without requiring backend changes, ensuring seamless functionality. Additionally, internationalization support has been added for 12 locales, ensuring broad accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#197",
+      "title": "Clean up legacy verification columns in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "migration",
+        "cleanup",
+        "backend",
+        "database"
+      ],
+      "public": false,
+      "summary": "This update removes the obsolete is_company_verified and company_verified_at columns from the app_user model, following the completion of the verification unification phase. Migration 0039 executes a DB-only command to drop these columns, ensuring a cleaner database structure. The changes have been verified with successful checks on migrations and code formatting."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#101",
       "title": "Align Digital-Human API with Platform Contracts in Index 🤖",
       "tags": [
