@@ -3,6 +3,210 @@
   "date": "2026-06-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#155",
+      "title": "Enhance Mobile Profile Usability in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "mobile",
+        "usability",
+        "frontend",
+        "navigation",
+        "avatar"
+      ],
+      "public": false,
+      "summary": "This update addresses critical usability issues on the mobile profile page. Key changes include making edit icons always visible for touch devices, implementing a mobile drawer navigation to improve layout, and centering the avatar to prevent clipping. These enhancements ensure a smoother user experience for mobile users accessing their profiles."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#196",
+      "title": "Streamline Verification Process with Unified Flags in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "verification",
+        "refactor",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This update consolidates the verification flags into a single `is_verified` attribute, along with an `account_type` field to distinguish between personal and enterprise accounts. The changes simplify the verification logic and ensure consistent behavior across the application. Additionally, a new migration has been added to handle data transitions smoothly while maintaining backward compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformStudio#28",
+      "title": "Pin Scene-JSON Schema for Reliable Outputs in Platform Studio 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformStudio",
+        "bugfix",
+        "schema",
+        "testing",
+        "platformstudio"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where the real Claude script stage failed due to mismatched field names in the Scene-JSON schema. The schema is now explicitly defined in the SYSTEM_PROMPT, ensuring that the correct field names are used, which allows the fast lane to run successfully. Additionally, a regression test has been added to verify the schema's integrity against future changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#983",
+      "title": "Enhance Coding Bridge UI with Syntax Highlighting and Mobile Improvements in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "ux",
+        "mobile",
+        "enhancement",
+        "coding-bridge"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/983",
+      "summary": "This update introduces several key UI/UX enhancements for the Coding Bridge feature in Nexior. Syntax highlighting has been added to tool command blocks, and a new copy button functionality has been implemented for easier code sharing. Additionally, the mobile interface has been improved by relocating the device entry point to the header, and a loading skeleton has been restored for better user experience during data fetching."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#980",
+      "title": "Improve StoreKit Product Polling in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "iap",
+        "storekit",
+        "fix",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/980",
+      "summary": "This update enhances the product loading process by implementing a polling mechanism for StoreKit products before failing. Instead of failing immediately with a 'product_not_found' error, the code now waits up to 15 seconds to check for the offer, addressing issues related to asynchronous loading and sandbox propagation. This change aims to improve user experience during product purchases."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#981",
+      "title": "Fix mobile app-list Top Up and global card overflow in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "mobile",
+        "ui",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/981",
+      "summary": "This update resolves issues with the mobile layout of the applications list, specifically ensuring the Buy More button functions correctly by referencing the appropriate method. Additionally, it addresses text overflow in the global-balance card by applying a minimum width to allow proper wrapping. These changes enhance the user experience on mobile devices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#982",
+      "title": "Enhance Count Unit Translations in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "translations",
+        "localization",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/982",
+      "summary": "This update adds missing translations for the `Count` service unit across 18 locales, ensuring that users see the correct terms instead of raw keys. Key additions include translations for both singular and plural forms, enhancing the user experience for services like the WeChat Bot. All changes have passed coverage checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1038",
+      "title": "Updated Company Address in Platform Service 📍",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "update",
+        "address",
+        "platform",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "The company address has been updated across the static introduction page footers for the captcha, luma, and suno applications. The new address is now Suite 305, 131 Continental Dr, Newark, DE 19713, USA, replacing the previous location in Middletown, Delaware. This change ensures that all references to the company address are current and accurate."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#698",
+      "title": "Updated Company Address in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "update",
+        "localization"
+      ],
+      "public": false,
+      "summary": "The company address has been updated in the privacy policy and support pages for the zh-CN locale. The new address is now 131 Continental Dr, Suite 305, Newark, DE 19713, USA, replacing the previous address in Middletown, Delaware. This change will automatically reflect across other locales through the existing documentation pipeline."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#58",
+      "title": "Updated Company Address to Newark, DE in Roadmap 📍",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "update",
+        "documentation",
+        "address",
+        "readme"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/58",
+      "summary": "The company address has been updated in the README file. The old address in Middletown, Delaware has been replaced with the new address located at 131 Continental Dr, Suite 305, Newark, DE 19713, USA. This change ensures that all communications reflect the current location."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#979",
+      "title": "Updated Company Address to Newark, DE in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "update",
+        "address",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/979",
+      "summary": "This update modifies the company address in the footer across all locale files, changing it from Middletown to Newark, DE. The new address is now reflected in 18 different language files, ensuring that the street, suite, city, and ZIP code are accurately localized. All JSON files have been verified for validity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#517",
+      "title": "Updated Company Address in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "update",
+        "frontend",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update modifies the company address in the footer across all locale files for the PlatformFrontend. The address has been changed from '651/201 North Broad St, Suite 201, Middletown, DE, USA' to '131 Continental Dr, Suite 305, Newark, DE 19713, USA'. All 12 language files have been updated to reflect this change while maintaining localized country and state names."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#697",
+      "title": "Update Fish TTS Naming for Clarity in Backend 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "localization",
+        "backend",
+        "fish",
+        "tts"
+      ],
+      "public": false,
+      "summary": "This update corrects the naming of the Fish voice and TTS service, ensuring it is accurately represented in the documentation. Key changes include fixing references from 'music' to 'voice' in the zh-CN integration docs and updating display titles in the Translation DB for immediate correctness. These adjustments enhance clarity for users and maintain consistency across languages."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#511",
       "title": "Upgrade axios to version 1.18.0 in Frontend Web 🚀",
       "tags": [
