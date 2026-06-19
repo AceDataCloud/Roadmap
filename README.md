@@ -60,7 +60,7 @@ We value your feedback and are happy to help you resolve any inquiries. For ques
 - X: `https://x.com/acedatacloud`
 - CA: `GEuuznWpn6iuQAJxLKQDVGXPtrqXHNWTk3gZqqvJpump`
 - Email: `office@acedata.cloud`, `office@germey.tech`
-- Address: `651 N Broad St, Suite 201, Middletown, Delaware, USA`
+- Address: `131 Continental Dr, Suite 305, Newark, DE 19713, USA`
 - WeChat: (contact us by email to connect)
 
 ### Additional Information
