@@ -3,6 +3,22 @@
   "date": "2026-06-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformDirector#44",
+      "title": "Enhance CJK Support and Article Ingestion in Platform Director 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformDirector",
+        "bugfix",
+        "i18n",
+        "llm",
+        "testing",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update addresses critical issues found during live job testing, including the rendering of CJK captions, which now utilize appropriate fonts for Chinese, Japanese, and Korean characters. Additionally, the article ingestion process has been improved to accept text from both `source_ref` and `article_body`, enhancing flexibility. Lastly, the LLM call functionality has been fortified with retry logic to handle empty responses more gracefully."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformDirector#43",
       "title": "Add COS SDK for Seamless Uploads in Platform Director 🚀",
       "tags": [
