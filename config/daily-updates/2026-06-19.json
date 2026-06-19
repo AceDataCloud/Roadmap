@@ -3,6 +3,131 @@
   "date": "2026-06-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformDirector#39",
+      "title": "Secure Team Access Gate for Director in Platform Director 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformDirector",
+        "auth",
+        "security",
+        "feature",
+        "api",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces a shared-access gate for the Director API, requiring a team password for authentication. The implementation includes a lightweight login system that issues an HMAC-signed session cookie for secure access to model-touching routes. Key routes remain public for SPA functionality, ensuring a seamless experience during development and testing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformDirector#38",
+      "title": "Complete Console Features for Enhanced User Experience in Platform Director 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformDirector",
+        "feature",
+        "ui",
+        "console",
+        "settings",
+        "editor"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive standalone console with all five screens fully integrated. Key features include per-language variant players, a storyboard editor for scene adjustments, and user-specific settings for defaults. The console now supports actions like retrying, canceling, and publishing jobs, enhancing overall functionality and user engagement."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformDirector#37",
+      "title": "Enhance API with Video Management Features in Platform Director 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformDirector",
+        "api",
+        "video",
+        "features",
+        "enhancement",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update completes the Director API, enabling full video management capabilities in the standalone console. Key features include the ability to cancel ongoing jobs, publish videos, and edit storyboards with real-time validation. Additionally, new endpoints now expose video variants and metadata, enhancing the user experience for video playback and downloads."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1052",
+      "title": "Enhance OpenAI Checker Endpoint Probes in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "openai",
+        "checker",
+        "health-monitoring",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `check_endpoints` feature for the OpenAI checker, allowing for more precise health monitoring by probing only the `/messages` endpoint for the `claude-code-proxy`. This change ensures that the checker remains functional despite issues with the `chat/completions` endpoint caused by cross-region CLB configurations. The update is fully backward-compatible and maintains real health monitoring capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformDirector#36",
+      "title": "Launch of Standalone Director with API and Vue SPA in Platform Director 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformDirector",
+        "feature",
+        "vue",
+        "api",
+        "backend",
+        "frontend",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces a fully independent Director, combining both backend and frontend in a single repository. The backend now serves the REST API under `/api/*` and the Vue SPA from the same origin, enhancing user experience and simplifying deployment. Key features include a new video submission form, a live-polling jobs list, and detailed job progress tracking."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#523",
+      "title": "Complete SSR Cutover for Public Routes in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ssr",
+        "frontend",
+        "deployment",
+        "routing",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update implements a full server-side rendering (SSR) cutover for all public routes, ensuring that every visitor receives server-rendered content. The deployment has increased SSR replicas from 2 to 4 and adjusted the horizontal pod autoscaler settings to accommodate the expected traffic spike. Key routing changes have been verified, maintaining SPA behavior for authenticated routes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#105",
+      "title": "Updated Deployment Status for FRP Relay in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "deployment",
+        "update",
+        "acedatacloud"
+      ],
+      "public": false,
+      "summary": "The deployment-status documentation has been updated to reflect the relocation of the FRP relay to the `platform-service-frps` within the shared `acedatacloud` namespace. This change enhances the routing capabilities while maintaining existing infrastructure, ensuring seamless operation. The updates have been live-verified end-to-end."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1051",
+      "title": "Align frps relay to platform naming convention in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "chore",
+        "deployment",
+        "infrastructure"
+      ],
+      "public": false,
+      "summary": "This update moves the frps relay to the shared `acedatacloud` namespace, renaming it to `platform-service-frps`. Additional services such as `-ws` and `-proxy` have been included, along with an Ingress configuration. The changes have been verified, ensuring that API requests reach the local worker successfully."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1049",
       "title": "Add lightweight access logging in Platform Service 🚀",
       "tags": [
