@@ -3,6 +3,54 @@
   "date": "2026-06-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Index#104",
+      "title": "Digital Human API to Local Machine is LIVE in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "deployment",
+        "api",
+        "gpu",
+        "cdn",
+        "digital-human"
+      ],
+      "public": false,
+      "summary": "The end-to-end process for the Digital Human feature is now fully operational. A real video was successfully generated via the public API and routed to the local GPU box, confirming the functionality of the entire chain. The deployment status document has been updated to reflect this achievement and address all previously encountered issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1045",
+      "title": "Seamless Online API to Local Worker Integration in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "deployment",
+        "digitalhuman",
+        "api",
+        "worker"
+      ],
+      "public": false,
+      "summary": "This update successfully establishes an end-to-end online routing system for the digital human service, utilizing Kong, frps-proxy, and WebSocket tunnels to connect to a local GPU worker. Key modifications include enhancements to the worker's subprocess handling and the deployment manifest for the frp relay, ensuring reliable communication and performance. The deployment documentation has also been updated to reflect these changes and provide clearer instructions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1044",
+      "title": "Enhance Local GPU Access with FRP Relay in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "frp",
+        "k8s",
+        "docker",
+        "gpu",
+        "kong"
+      ],
+      "public": false,
+      "summary": "This update introduces a reproducible relay setup allowing Kong to access local GPU workers via frp. Key additions include Dockerized frpc with wss transport and configuration files for TKE deployment. Operators should note the necessary production network changes for NodePort access."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformStudio#31",
       "title": "Enhance Scene Transitions with Crossfades in Platform Studio 🎥",
       "tags": [
