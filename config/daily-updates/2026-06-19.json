@@ -3,6 +3,295 @@
   "date": "2026-06-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Index#101",
+      "title": "Align Digital-Human API with Platform Contracts in Index 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "api",
+        "documentation",
+        "refactor",
+        "digital-human",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update rewrites the digital-human API section to align with existing platform service contracts, ensuring consistency across endpoints. Key changes include the restructuring of `POST /digital-human/videos`, `POST /digital-human/voices`, and `POST /digital-human/tasks` to match the input/output formats of related services. The new design incorporates standard response envelopes and error handling, enhancing the overall robustness of the API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#519",
+      "title": "Enhance Service Access Management in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "ui",
+        "admin",
+        "i18n",
+        "access"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive UI for managing service access requests, allowing customers to apply for access and admins to review and approve requests. Key features include a new access widget on service detail pages, an admin console for managing access policies and requests, and support for 12 locales in the i18n configuration. The changes ensure a seamless experience for both users and administrators in handling service access."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#164",
+      "title": "Implement Layer-2 Whitelist Enforcement in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "access-control",
+        "security",
+        "performance",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update introduces a runtime gate for service access in the authentication process, complementing the existing provisioning controls. Key changes include the addition of `AccessPolicy` and `AccessGrant` models, along with caching mechanisms to enhance performance for both gated and non-gated services. The implementation ensures that only users with the appropriate grants can access restricted services, improving overall security without impacting the user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#703",
+      "title": "Enhance Access Control with Whitelist Feature in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "access-control",
+        "whitelist",
+        "backend",
+        "security",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces a general service whitelist feature, allowing services to restrict access based on defined policies. Key components include new models for AccessPolicy, AccessGrant, and AccessRequest, which facilitate user membership management and service gating. The implementation ensures that only users with active grants can access restricted services, enhancing overall security and control."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#379",
+      "title": "Exciting New CLI Packages for Dreamina and Grok in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "dreamina",
+        "grok",
+        "ai",
+        "video",
+        "generation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/379",
+      "summary": "This update introduces two new CLI packages: Dreamina and Grok. The Dreamina CLI allows users to generate AI talking-head videos and manage tasks, while the Grok CLI facilitates chat and video generation functionalities. Both packages adhere to existing monorepo conventions and include comprehensive documentation and tests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#984",
+      "title": "Update service ID to merged grok service in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "grok",
+        "service",
+        "update",
+        "migration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/984",
+      "summary": "This update repoints the `GROKVIDEO_SERVICE_ID` from the deprecated `grok-video` service to the newly merged `grok` service. The API paths remain unchanged, ensuring that the video page in Studio continues to function correctly without disruption. This change is crucial for maintaining service integrity following the backend migration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#380",
+      "title": "Enhance CI to Prevent PR Cannibalization in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "ci",
+        "workflow",
+        "fix",
+        "clis",
+        "concurrency"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/380",
+      "summary": "This update introduces a concurrency group in the CI workflow to prevent overlapping runs from interfering with each other. By setting `cancel-in-progress: false`, new dispatches will queue behind ongoing runs, ensuring that each run can complete its tasks without being prematurely terminated. This change addresses issues observed in previous runs, leading to more reliable PR merges."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#158",
+      "title": "Polished Profile Page Layout and Badges in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "ui",
+        "frontend",
+        "design",
+        "improvements"
+      ],
+      "public": false,
+      "summary": "This update enhances the profile page by fixing label wrapping issues, optimizing layout, and reducing banner size. Labels now fit on a single line, and the connected badges for third-party accounts are visually emphasized with a green checkmark. These changes improve the overall user experience and maintain consistent spacing throughout the interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WebExtrator#16",
+      "title": "Enhance WebExtrator's Stability and Accuracy in Web Extrator 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WebExtrator",
+        "stability",
+        "accuracy",
+        "improvements",
+        "observability",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update significantly improves the stability and accuracy of the WebExtrator service. Key changes include a shift from `networkidle` to `load` for rendering, enhanced error handling, and improved extraction methods for markdown and Amazon products. Additionally, new observability features and tests have been added to ensure ongoing reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#701",
+      "title": "Enhance Dreamina Tasks API Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "api",
+        "backend",
+        "enhancement",
+        "dreamina"
+      ],
+      "public": false,
+      "summary": "This update completes the Dreamina Tasks API documentation, adding a new OpenAPI spec and comprehensive guides in both English and Chinese. Key changes include a detailed introduction, enriched API usage instructions, and improved service visuals. The enhancements ensure users have a clear understanding of the API's capabilities and how to integrate it effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#702",
+      "title": "Streamline Grok Service by Merging Video Features in Backend 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "refactor",
+        "grok",
+        "video",
+        "api",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update merges the standalone `grok-video` service into the existing `grok` service, simplifying the user experience by consolidating chat and video functionalities. Key changes include reassigning API paths, updating documentation, and removing redundant service entries while ensuring existing API callers remain unaffected. The integration enhances clarity and maintains consistent pricing structures across services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#100",
+      "title": "Production Plan for Talking-Head API Service in Index 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "api",
+        "design",
+        "production",
+        "documentation",
+        "async"
+      ],
+      "public": false,
+      "summary": "This update outlines the production design for the talking-head API service, transforming the validated PoC into a sellable async API on platform.acedata.cloud. Key features include a GPU worker pipeline, async API endpoints, and built-in quality guardrails. The design document has been added, detailing the architecture, billing, and licensing considerations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#375",
+      "title": "Revitalize CLI Sync Pipelines in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "ci",
+        "fix",
+        "sync",
+        "pipeline",
+        "clis"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/375",
+      "summary": "This update fixes two critical issues in the CLI sync processes. The first issue involved a failure to detect completion signals from Copilot, leading to unmerged PRs. The second issue was due to an expired token that caused all mirrors to freeze. Both problems have been addressed to ensure smooth operation and timely updates across the CLI repositories."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#157",
+      "title": "Streamline Verification with Tabs in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "ui",
+        "verification",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update merges the personal and enterprise verification processes into a single tabbed interface within `Verify.vue`. Users can now easily switch between personal and enterprise verification, with the backend model updated to support this unified approach. The changes enhance user experience by simplifying navigation and reducing redundancy in the verification flow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#156",
+      "title": "Enhance Social Signup Experience in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "auth",
+        "signup",
+        "usability"
+      ],
+      "public": false,
+      "summary": "This update promotes one-click social signup options, placing GitHub, Google, and Apple at the forefront of the registration process. Additionally, 'Sign in with Apple' has been added to the registration page, ensuring parity with the login experience. These changes aim to reduce onboarding friction and improve user experience for iOS users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#700",
+      "title": "Introducing glm-5.2 to the chat-completion stack in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "glm",
+        "chat",
+        "pricing",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update adds the glm-5.2 model to the chat-completion stack, enhancing the capabilities of our service. Key changes include updated billing rules and pricing mirroring glm-5.1, ensuring consistency. The model has been verified live on multiple platforms, confirming its functionality and readiness for use."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1040",
+      "title": "Exciting Update: Added glm-5.2 to Upstream Routing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "openai",
+        "glm",
+        "routing",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces glm-5.2 to the GLM upstream routing for the OpenAI service, enhancing model availability across several configurations. The new model is enabled and actively checked for ephone and xiaojingai, while openaihk and wcnb will mirror glm-5.1 until upstream issues are resolved. The checker cronjob will automatically sync these capabilities into MongoDB after the merge."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#699",
+      "title": "Enhance User Account Type Propagation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "auth",
+        "user",
+        "backend",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces the `account_type` attribute to the `User` model, allowing differentiation between personal and enterprise accounts. The `account_type` is now propagated from the AuthBackend, ensuring that future code can utilize this distinction. Key changes include modifications to the JWT and Token authentication processes to accommodate the new attribute without requiring database migrations."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthFrontend#155",
       "title": "Enhance Mobile Profile Usability in Frontend Web 🚀",
       "tags": [
