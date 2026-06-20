@@ -3,6 +3,359 @@
   "date": "2026-06-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#382",
+      "title": "Sync Updates for Codex Service in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "sync",
+        "codex",
+        "docs",
+        "no-op",
+        "cli"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/382",
+      "summary": "This update reflects a no-op sync for the codex service, primarily addressing modifications to a guide file without any changes to the OpenAPI specification. The investigation confirmed that there are no relevant files or entries requiring updates in the CLI. As codex is a guide-only service, no CLI changes are necessary."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#715",
+      "title": "New AceKit Application Practices Article in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "acekit",
+        "backend",
+        "chinese"
+      ],
+      "public": false,
+      "summary": "We've added a new article in the 'Application Practices' series, focusing on the AceKit developer toolkit. This document provides a comprehensive guide on how to utilize AceKit for seamless integration of AI capabilities into coding agents, complete with real-world examples and usage scenarios. The content is available in Chinese and has been synchronized with online documentation and translation efforts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#119",
+      "title": "Refined Enterprise P0 Design for Clarity in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "design",
+        "enterprise",
+        "review",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update revises the enterprise P0 design documentation after thorough review against the current codebase. Key changes include the removal of the IP whitelist from P0, rephrasing budget constraints, and adjustments to backend authorization processes. The scope has been narrowed to focus on essential components, ensuring a more accurate and actionable plan moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#716",
+      "title": "Enhance Distribution Analytics Endpoint in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "api",
+        "analytics",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces a new endpoint `GET /api/v1/distribution-histories/trend/` to support the distribution analytics chart in PlatformFrontend. It allows users to retrieve time-series data on rewards, prices, and invitee counts, with parameters for time range and granularity. The endpoint enforces strict authentication and user permissions, ensuring data security and integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1068",
+      "title": "Enhance Agent Reliability with Runtime Improvements in Platform Service 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "reliability",
+        "agent",
+        "production",
+        "maestro"
+      ],
+      "public": false,
+      "summary": "This update strengthens the agent-native maestro by implementing features like resume-on-hiccup and stale-task reclaim. Key changes include redirecting verbose command outputs to log files, capturing session IDs for seamless recovery, and enhancing task management to prevent job theft. These improvements ensure a more reliable production environment for the agent."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#714",
+      "title": "Fix Documentation Issues in Backend 🛠️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "fixes",
+        "tutorials",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update addresses multiple inaccuracies in the tool-integration tutorials, ensuring all commands are functional and model IDs are correctly aligned. Key fixes include adjustments to OpenClaw, Gemini CLI MCP, and Codex CLI documentation, enhancing user experience and reliability. The changes were verified against live runs, confirming the integrity of the documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#114",
+      "title": "Launch Plan for Realtime Voice API in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "api",
+        "design",
+        "billing",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update transforms the PoC for realtime voice into a concrete design document, detailing the rollout strategy and development design. Key changes include a clear API path aligned with official standards, a focus on independent deployment for reliability, and a structured approach to billing and usage tracking. The plan aims to ensure a seamless integration with Nexior for enhanced voice communication."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#990",
+      "title": "Enhance Free-key CTA with Growth Attribution in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "docs",
+        "readme",
+        "growth",
+        "attribution"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/990",
+      "summary": "This update modifies the README to include growth attribution parameters for the 'Free API key' call-to-action. The changes ensure that registrations driven by content can be tracked effectively. The brand and support links remain unchanged."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#117",
+      "title": "Growth Execution Roadmap and Dashboard MVP in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "growth",
+        "marketing",
+        "dashboard",
+        "documentation",
+        "mvp"
+      ],
+      "public": false,
+      "summary": "This update introduces the execution layer for our growth marketing strategy, detailing three key workstreams and a centralized launch plan. Key additions include a new growth dashboard MVP for tracking metrics and an updated README to index growth marketing resources. No service code changes were made, ensuring a focused enhancement of documentation and tools."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#116",
+      "title": "New Feasibility Study for Compute Marketplace in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "research",
+        "feasibility",
+        "compute-marketplace"
+      ],
+      "public": false,
+      "summary": "This PR introduces a comprehensive feasibility study document for the proposed compute marketplace, focusing solely on research without any implementation or code changes. Key insights include cost and profit estimations for two potential routes: serverless inference endpoints and bare-metal GPU reselling, along with risk assessments and recommendations for pilot testing. The document aims to guide future decision-making regarding the project's viability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#115",
+      "title": "Streamline Submodules and Ignore Untracked Repos in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "git",
+        "submodules",
+        "cleanup",
+        "index",
+        "ignore"
+      ],
+      "public": false,
+      "summary": "This update removes the last tracked submodule, OOBEIntegration, from the main branch and adds it along with PlatformStudio to the .gitignore file. These changes ensure that neither OOBEIntegration nor PlatformStudio appears in local git status, aligning them with other standalone repositories. No code or logic changes were made; only the .gitignore and .gitmodules files were modified."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#112",
+      "title": "Documenting AI-Driven Monetization Experiment in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "monetization",
+        "ai",
+        "experiments",
+        "digital-product"
+      ],
+      "public": false,
+      "summary": "This update archives a comprehensive experiment where an AI agent successfully created and listed a $4 digital product in under an hour. Key findings highlight challenges with KYC requirements, payout thresholds, and distribution bottlenecks, emphasizing that while production was efficient, generating demand remains a hurdle. The documentation includes a new section on monetization experiments and a comparison of payout platforms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#508",
+      "title": "Update Sass to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "sass",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps the Sass dependency from version 1.100.0 to 1.101.0. Key changes include a potentially breaking bug fix that improves the Node package importer's handling of import-only Sass files. This enhancement ensures better compatibility and functionality for projects relying on these imports."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#989",
+      "title": "Updated Community Links and Contact Info in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "docs",
+        "readme",
+        "community",
+        "support"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/989",
+      "summary": "This update enhances the README by adding a link to the Discord community and correcting the contact email to office@acedata.cloud. The changes improve accessibility for users seeking support and community engagement. Overall, this is a README-only modification with no impact on code functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1067",
+      "title": "Transforming Maestro into an Agent-Native Video Service in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "maestro",
+        "video",
+        "agent-native",
+        "hyperframes",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update completely rewrites Maestro, transitioning from a rigid Python pipeline to a fully agent-native service. The new architecture utilizes a headless Claude as the creative director, enabling dynamic video generation with HyperFrames as the sole renderer. Key improvements include enhanced asset generation, streamlined persistence, and a cleaner API for video creation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#41",
+      "title": "Enhance message handling with quoted replies and mentions in Wisdom 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "feature",
+        "messages",
+        "wechat",
+        "mentions",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of WeChat messages by capturing quoted replies and persisting mentions and context. Key changes include parsing type-49 appmsg XML for quoted replies, enhancing mention extraction to handle special characters, and ensuring that relevant data is stored in the database. These enhancements will provide a more robust messaging experience for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WisdomChannel#7",
+      "title": "Enhance Claude's Context Awareness in Wisdom Channel 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "WisdomChannel",
+        "enhancement",
+        "security",
+        "context",
+        "bot",
+        "weixin",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/WisdomChannel/pull/7",
+      "summary": "This update introduces significant improvements to the `wisdom-channel bridge` by providing Claude with essential conversation context, including sender details and group information. It enhances the bot's ability to respond accurately by injecting recent messages into prompts, thereby maintaining the flow of conversation. Additionally, security measures have been tightened to ensure that admin access is restricted in group chats."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#111",
+      "title": "Consolidate Multi-Cluster Deploy Plans in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "consolidation",
+        "documentation",
+        "planning",
+        "deployment",
+        "index"
+      ],
+      "public": false,
+      "summary": "This update merges the previously scattered multi-cluster deployment plans into a single directory under `plans/`. Key changes include the addition of three design documents and the establishment of a clear convention for future planning documents. This consolidation enhances organization and accessibility for ongoing and future deployment strategies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#113",
+      "title": "Retire PlatformDirector Submodule and Capture Lessons in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "chore",
+        "retirement",
+        "documentation",
+        "marketing",
+        "video"
+      ],
+      "public": false,
+      "summary": "This update removes the PlatformDirector submodule as the customer article-to-video product has transitioned to PlatformService/maestro. Additionally, a new retrospective document has been added to preserve valuable lessons learned from the now-retired brand-short marketing-video factory. These changes ensure that knowledge is retained while streamlining the repository."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#988",
+      "title": "Revamped README for Nexior's All-in-One AI App in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "docs",
+        "readme",
+        "update",
+        "nexior",
+        "ai"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/988",
+      "summary": "The README for Nexior has been completely restructured to position it as an open-source, self-hostable all-in-one AI app. Key changes include a shift in narrative focus, enhanced engineering elements, and the removal of outdated links. This update aims to streamline user engagement and improve the overall presentation of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1066",
+      "title": "Relocate FLUX.2 klein-4B Runner in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "refactor",
+        "fastapi",
+        "comfyui",
+        "local-runner"
+      ],
+      "public": false,
+      "summary": "This update moves the local FLUX.2 klein-4B runner to the `PlatformService/winloc/flux/` directory, aligning it with existing patterns in the repository. The new FastAPI service implements the TTAPI upstream contract and is designed to work with a local ComfyUI instance. Key changes include a revised README and the addition of configuration files, while the core code remains unchanged."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#109",
+      "title": "Automate Adversarial Review Process in Index 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "automation",
+        "review",
+        "documentation",
+        "index"
+      ],
+      "public": false,
+      "summary": "This update introduces an automatic adversarial review loop for risky PRs and plans, enhancing the review process without requiring user commands. An independent reviewer will now automatically check for defects, allowing authors to address each identified risk through a structured debate. Key files updated include the new review protocol and an updated section in the agents documentation."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#98",
       "title": "Real-time Voice PoC Prototype in Index 🎤",
       "tags": [
