@@ -3,6 +3,332 @@
   "date": "2026-06-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1080",
+      "title": "Comprehensive Architecture Overview for Maestro in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "documentation",
+        "architecture",
+        "maestro",
+        "platform-service",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces a detailed architecture overview for the Maestro system, encapsulated in the newly added `maestro/ARCHITECTURE.md`. Key features include the agent-native design, the integration of HyperFrames as the rendering engine, and the use of pluggable ACE APIs. This documentation enhances understanding of the system's capabilities, including intent routing and scenario coverage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1003",
+      "title": "Fix first event drop issue after session re-key in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "codex",
+        "session",
+        "ui",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1003",
+      "summary": "This update resolves a bug where the first reply from a fresh codex session was not appearing in the UI after a session re-key. The root cause was identified as the incorrect handling of sequence numbers during the transition to the real session ID. The fix ensures that the sequence cursor resets appropriately, allowing the first reply to be displayed correctly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1079",
+      "title": "Introducing flux-2-klein local runner and deploy setup in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "deployment",
+        "fastapi",
+        "flux",
+        "model"
+      ],
+      "public": false,
+      "summary": "This update integrates the `flux-2-klein` model into the PlatformService, featuring a local runner and the necessary deployment configuration. Key changes include the addition of a FastAPI service for model interaction and updates to deployment files to route requests correctly. The local runner has been verified end-to-end, ensuring smooth operation within the service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#31",
+      "title": "Package Renaming: coding-bridge-agent to coding-bridge in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "renaming",
+        "update",
+        "cli",
+        "documentation",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/31",
+      "summary": "This update renames the package from `coding-bridge-agent` to the more concise `coding-bridge`, streamlining installation and usage. Key changes include updates to the CLI commands, import paths, and documentation to reflect the new package name. All tests have been run successfully, ensuring that the functionality remains intact post-renaming."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#124",
+      "title": "Updated .gitignore for CodingBridge in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "gitignore",
+        "update",
+        "rename",
+        "configuration"
+      ],
+      "public": false,
+      "summary": "The .gitignore file has been updated to reflect the recent renaming of the CodingBridgeAgent repository to CodingBridge. This change ensures that the workspace configuration aligns with the new directory name, enhancing clarity and consistency in the project structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1002",
+      "title": "Renamed agent CLI to coding-bridge in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "rename",
+        "cli",
+        "update",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1002",
+      "summary": "The `coding-bridge-agent` package has been renamed to `coding-bridge`, aligning the install and run commands in the pairing dialog. Users will now see updated commands: `pip install coding-bridge` and `coding-bridge up`. This change enhances clarity and consistency for users interacting with the CLI."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1001",
+      "title": "Enhance User Feedback for Anti-Bot Pages in Nexior 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "user-feedback",
+        "internationalization",
+        "webextrator",
+        "anti-bot"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1001",
+      "summary": "This update introduces a friendly message for users when a target page is blocked by anti-bot measures, returning an HTTP 422 status. The new message informs users that they were not charged for the attempt, enhancing clarity and user experience. Internationalization support has been added for all 17 locales to ensure consistent messaging across different languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#721",
+      "title": "Enhance Realtime API Integration for Aichat Service in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "realtime",
+        "aichat",
+        "api",
+        "backend",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update migrates the Realtime API under the Aichat service, allowing Nexior users to utilize their existing Aichat credentials and universal balance for voice calls. The changes ensure that both the OpenAI and Aichat APIs share identical billing structures, streamlining user experience. Additionally, new tests have been added to verify the pricing consistency between the two services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1073",
+      "title": "Revamped Skills-Only Approach with Enhanced Video Factory in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "video-factory",
+        "skills",
+        "docker",
+        "pipeline"
+      ],
+      "public": false,
+      "summary": "This update introduces a skills-only architecture by removing the MCP dependency, streamlining the agent's interaction with AceData skills. The video factory has been completely rewritten as an artifact-driven pipeline, enhancing the production process with word-level timing for better synchronization of captions and animations. Additionally, a new uploader script has been added to facilitate seamless output delivery."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WebExtrator#20",
+      "title": "WebExtrator migrated to PlatformService in Web Extrator 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WebExtrator",
+        "migration",
+        "deprecation",
+        "ci",
+        "workflow",
+        "platformservice"
+      ],
+      "public": false,
+      "summary": "The WebExtrator repository has been deprecated and migrated to the PlatformService monorepo. Key changes include the removal of standalone CI and deployment workflows to prevent conflicts, along with an updated README that informs users of the migration and deprecation. This transition centralizes the deployment process and maintains the same image name for continuity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#123",
+      "title": "Clean Up: Remove WebExtrator Submodule in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "cleanup",
+        "migration",
+        "platformservice",
+        "submodule"
+      ],
+      "public": false,
+      "summary": "The WebExtrator submodule has been successfully removed as it has been migrated into the PlatformService monorepo. This change eliminates redundancy and streamlines deployment through the central pipeline, ensuring a more efficient integration with other services. The image name remains unchanged for continuity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#999",
+      "title": "Enhance full-history search functionality in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "search",
+        "ux",
+        "suno",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/999",
+      "summary": "This update finalizes the Phase-2 enhancements for the Suno UX by enabling full-history search capabilities. Users can now search and filter through all task history, including older entries, ensuring no results are missed. The implementation includes a loading spinner and improved user feedback during searches, enhancing overall usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1077",
+      "title": "Fix shared nginx-router ingress for stability in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "nginx",
+        "ingress",
+        "dns",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update resolves the 404 error for claude-proxy.acedata.cloud by migrating to a shared nginx-router controller, ensuring that the DNS points to the correct CLB. The changes include modifications to the ingress configuration, which have already been live-migrated and verified for health checks. This enhancement will prevent future occurrences of similar issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1078",
+      "title": "Re-sync WebExtrator Worker for P1–P4 Optimizations in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "webextrator",
+        "optimizations",
+        "billing",
+        "service",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update re-syncs the WebExtrator worker with the latest optimizations from WebExtrator main, specifically addressing the P1 to P4 enhancements. Key changes include improved handling of anti-bot interstitials, browser recycling, and adjustments to timeout settings. These updates enhance billing protection and overall service reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#997",
+      "title": "Enhance Player Navigation and Feedback in Nexior 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "player",
+        "ui",
+        "feedback",
+        "navigation",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/997",
+      "summary": "This update introduces significant improvements to the player experience, including a new visible seek bar, enhanced prev/next track navigation based on the visible queue, and a quick extend icon for easier access to common actions. Additionally, songs now pulse their cover art during loading for better user feedback. These changes aim to streamline the user interface and improve overall interaction with the player."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#995",
+      "title": "Enhance Suno Music Page with Visual Coherence in Nexior 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "ui",
+        "user-experience",
+        "responsive",
+        "cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/995",
+      "summary": "This update brings significant interaction polish to the Suno music page, focusing on visual coherence and user experience. Key changes include a redesigned search toolbar, always-visible play/pause controls, and improved variation badges to enhance clarity. The update also addresses user feedback by streamlining the interface and ensuring responsiveness across devices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#996",
+      "title": "Fix UI Bugs for Codex History and Session Management in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "codex",
+        "coding-bridge",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/996",
+      "summary": "This update addresses four critical UI bugs in the Coding Bridge, enhancing the user experience for Codex history management. Key improvements include enabling resumable Codex conversations, displaying loading indicators when switching sessions, ensuring complete transcript loading, and updating session IDs in the URL for better navigation. These changes streamline interactions and improve overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#30",
+      "title": "Fix Codex Resume and Improve History Handling in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "bugfix",
+        "performance",
+        "codex",
+        "history",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/30",
+      "summary": "This update resolves issues with the Codex sessions, specifically fixing the resume functionality by removing the unsupported '-s' argument. Additionally, it enhances the history handling by returning the most recent events for large transcripts and speeding up session listings through parallel processing. These changes improve user experience and performance significantly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1075",
+      "title": "Enhance openai-proxy with shared nginx-router ingress in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "nginx",
+        "proxy",
+        "ingress",
+        "update",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update switches the openai-proxy to utilize the shared nginx-router controller, ensuring that the CLB remains active during ingress recreation. It addresses a previous issue that caused downtime for the public URL of the claude-code-proxy. Additionally, long proxy timeouts have been implemented to maintain real-time WebSocket connections beyond 60 seconds."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1076",
+      "title": "WebExtrator Migrated to PlatformService in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "migration",
+        "webextrator",
+        "platformservice",
+        "deployment",
+        "kubernetes"
+      ],
+      "public": false,
+      "summary": "The WebExtrator service has been successfully integrated into the PlatformService, consolidating it with other upstream services. This migration ensures a seamless deployment with no downtime, as the existing image and deployment configurations remain unchanged. Key components, including API, Redis, and worker deployments, have been added to enhance functionality and scalability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1074",
       "title": "New US WebSocket Proxy for OpenAI Realtime in Platform Service 🚀",
       "tags": [
