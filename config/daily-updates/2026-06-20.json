@@ -3,6 +3,104 @@
   "date": "2026-06-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1074",
+      "title": "New US WebSocket Proxy for OpenAI Realtime in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "openai",
+        "proxy",
+        "websocket",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces a US-side WebSocket proxy for the OpenAI Realtime API, addressing geo-blocking issues for the Hong Kong cluster. The proxy forwards WebSocket requests from a supported region, ensuring secure key management and seamless integration. Full end-to-end functionality has been verified, with successful audio and transcript handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WebExtrator#19",
+      "title": "Enhance Rendering Efficiency and Cost Management in Web Extrator 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WebExtrator",
+        "performance",
+        "optimizations",
+        "cost-management",
+        "stability",
+        "stealth"
+      ],
+      "public": false,
+      "summary": "This update introduces significant optimizations for rendering quality and cost management. Key changes include preventing billing for failed anti-bot extractions, recycling the browser to manage memory usage, and implementing new proxy-ready stealth features. These enhancements aim to improve stability and reduce unnecessary costs for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#425",
+      "title": "Enhance Audio and Image Skills in Skills 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "audio",
+        "image",
+        "upload",
+        "enhancement",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/425",
+      "summary": "This update fixes the fish-audio skill by correcting the voice synthesis parameters, improving agent performance. Additionally, two new skills are introduced: gpt-image-2 for generating and editing images, and cos-upload for uploading files to the AceData Cloud CDN. These enhancements expand the capabilities of the Skills area, enabling more robust multimedia processing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#122",
+      "title": "Enhancing User Experience for Nexior Suno in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "ux",
+        "design",
+        "nexior",
+        "improvements",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update focuses on improving the interaction and visual coherence of Nexior Suno following the feature-parity pass. Key changes include a complete redesign of the search interface, enhanced play functionality, and a more intuitive action menu. These adjustments aim to address user complaints and create a more cohesive and enjoyable experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#121",
+      "title": "WebExtrator Stealth Engine Launch Results in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "webextrator",
+        "stealth-engine",
+        "launch",
+        "cloudflare",
+        "proxy"
+      ],
+      "public": false,
+      "summary": "The WebExtrator stealth engine has been successfully launched, replacing the previous patchright with CloakBrowser. While the engine is operational and has passed E2E testing, there are ongoing issues with Cloudflare bypass that require residential proxies for resolution. The decision has been made to ship the current version as-is while awaiting further infrastructure improvements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#994",
+      "title": "Real-time Voice Call Feature in Nexior 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "voice",
+        "chatgpt",
+        "realtime",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/994",
+      "summary": "This update introduces a real-time voice call feature within the ChatGPT interface, allowing users to initiate calls directly from the toolbar. The implementation includes a mic button that connects to a WebSocket relay, capturing audio at 24kHz PCM16 and enabling seamless playback with barge-in capabilities. Additionally, the feature supports multiple languages and includes necessary permissions for both iOS and Android platforms."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1072",
       "title": "Fix sandboxing for Claude CLI in Platform Service 🚀",
       "tags": [
