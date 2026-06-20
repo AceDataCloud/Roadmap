@@ -3,6 +3,184 @@
   "date": "2026-06-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1009",
+      "title": "Enhance Maestro and Grok Video Features in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "i18n",
+        "admin",
+        "grokvideo",
+        "maestro"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1009",
+      "summary": "This update adds the Maestro feature toggle to the admin settings, allowing it to be enabled for use in Nexior. Additionally, it resolves missing internationalization (i18n) keys for Grok Video, ensuring proper labels and descriptions are displayed across all 18 locales. These changes enhance the user experience and functionality of the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#126",
+      "title": "Deprecate seam patch to eliminate flicker in Index 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "digital-human",
+        "deprecation",
+        "video-quality"
+      ],
+      "public": false,
+      "summary": "The LatentSync seam-reduction patch has been marked as deprecated due to causing severe temporal flicker, described as 'violent shaking'. Users are advised to utilize the stock restore_img instead. This change aims to enhance video quality by preventing distracting visual artifacts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1085",
+      "title": "Fix severe flicker and enhance local startup in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "enhancement",
+        "localdev",
+        "latentsync"
+      ],
+      "public": false,
+      "summary": "This update reverts the mouth seam-reduction patch in LatentSync's `restore_img`, addressing the severe temporal flicker issue caused by frame-to-frame inconsistencies. Additionally, a new one-click startup script, `start-local.ps1`, has been added to streamline local deployment after a reboot, ensuring a smoother setup process for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1008",
+      "title": "Fix voice-call control icons rendering in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "realtime",
+        "icons",
+        "vue"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1008",
+      "summary": "This update addresses the issue of missing voice-call control icons in the RealtimeCall component. The problem was due to the FontAwesomeIcon not being registered in this component, which has now been corrected to ensure all icons render properly. The fix has been validated against all .vue files, confirming it was the only oversight."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#390",
+      "title": "No-op sync check for gemini docs in Clis 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "sync",
+        "docs",
+        "no-op",
+        "clis"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/390",
+      "summary": "This update confirms that the `gemini` documentation changes do not require any code updates in the Clis monorepo. A repo-level sync check revealed that there is no `gemini` package or entry in the sync mapping, resulting in a no-op sync. The repository files remain unchanged as a result."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#388",
+      "title": "Confirmed No Sync Updates Needed for Gemini in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "sync",
+        "documentation",
+        "gemini",
+        "clis",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/388",
+      "summary": "This update verifies that the recent changes to the Gemini OpenAPI documentation do not require any sync updates for the Clis monorepo. The assessment confirmed that there are no mappings for Gemini in the sync configuration, ensuring no command or model drift is necessary. Overall, no repository files were modified as a result of this documentation update."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#725",
+      "title": "Fix invalid percent-encoded refs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "openapi",
+        "backend",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update resolves issues with invalid percent-encoded JSON pointers in the Gemini OpenAPI specification. The changes ensure that the `$ref`s in the `streamGenerateContent` operation correctly point to the intended schemas, preventing build failures on the documentation site. With this fix, both the API definition and the generated documentation are now valid and functional."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#66",
+      "title": "Unblock Mintlify Build with Inline Schemas in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "docs",
+        "mintlify",
+        "openapi",
+        "fix",
+        "deployment"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/66",
+      "summary": "This update resolves a critical issue that has frozen the documentation site for weeks due to a Mintlify deployment failure. By inlining the referenced schemas in the OpenAPI specification, the build process is now Mintlify-valid, ensuring that future updates will not encounter the same issue. Additionally, a new function has been added to automatically inline any future cross-operation references, preventing similar disruptions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1083",
+      "title": "Exciting Maestro v5 Enhancements in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "maestro",
+        "workflow",
+        "video",
+        "provider",
+        "enhancement",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update introduces significant improvements in Maestro v5, including a new workflow routing system, a streamlined provider menu, and a skill whitelist for enhanced security. Key fixes address the Fish-override bug and improve memory allocation for HyperFrames rendering. Overall, these changes optimize performance and usability for video production workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#724",
+      "title": "Revamp Maestro Billing and Docs for v4 API in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "billing",
+        "api",
+        "docs",
+        "v4",
+        "maestro"
+      ],
+      "public": false,
+      "summary": "This update migrates the Maestro billing rules, OpenAPI specifications, and documentation to align with the new v4 agent-native API. Key changes include the introduction of a new surcharge calculation based on the number of languages and the removal of outdated fields from the API. Comprehensive tests have been added to ensure functionality, and all documentation has been updated accordingly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1007",
+      "title": "Revamped Maestro Consumer Module for v4 API in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "maestro",
+        "v4",
+        "api",
+        "upgrade"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1007",
+      "summary": "The Maestro consumer module has been successfully migrated to the v4 agent-native contract, resolving previous issues with the v3 API. Key updates include new file upload capabilities, enhanced language support, and a revamped user interface for prompts and media references. This upgrade ensures a smoother user experience and full compatibility with the latest API features."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#386",
       "title": "No-op Confirmation for OAuth Docs Sync in Clis 🚫",
       "tags": [
