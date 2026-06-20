@@ -1,0 +1,151 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-06-20",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#525",
+      "title": "Streamline API Code Preview with Shared Engine in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "frontend",
+        "api",
+        "code",
+        "templates"
+      ],
+      "public": false,
+      "summary": "This update refactors the API code preview in the console by removing duplicate code and utilizing the shared engine from @acedatacloud/core/code-snippet. Key changes include the deletion of 15 Mustache template files and the integration of core functionalities, ensuring consistent output across languages. The Java snippet has been corrected to use the valid lowercase `.post(body)` method, enhancing accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#985",
+      "title": "Enhance API Code Dialog with Run Button and Tabs in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "api",
+        "ui",
+        "update",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/985",
+      "summary": "This update introduces a new Run button and Request/Response tabs in the API code dialog, allowing users to execute API requests directly from the studio. The feature enables live execution of requests using the user's API key, displaying the JSON response in real-time. Additionally, the core library has been updated to fix method casing issues in the Java snippet."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1058",
+      "title": "Fix gzip handling for Claude requests in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "http",
+        "proxy",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where requests to the Claude Code proxy were returning 502 errors due to gzip encoding. By forcing the `Accept-Encoding` header to `identity`, the proxy can now correctly handle responses from Anthropic without encountering parsing errors. This change ensures that all chat/completions traffic is processed smoothly, improving the reliability of the service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1057",
+      "title": "Exciting New Maestro Microservice for Article to Video Conversion in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "microservice",
+        "video",
+        "api",
+        "mongodb",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces the Maestro microservice, which transforms articles into videos as part of the PlatformService. Key features include a streamlined API for video submission and task polling, along with a robust worker process that handles task management using MongoDB. The deployment is designed for scalability and integrates seamlessly with existing infrastructure, setting the stage for future enhancements in video processing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#11",
+      "title": "Fix OkHttp builder method to use lowercase verbs in Common Frontend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "bugfix",
+        "java",
+        "okhttp",
+        "testing",
+        "templates"
+      ],
+      "public": false,
+      "summary": "This update corrects the Java/OkHttp code snippet generation by ensuring that HTTP verbs are rendered in lowercase, aligning with OkHttp's API requirements. The change involves exposing a new `methodLower` variable in the Mustache render context and updating the relevant template. Additionally, regression tests have been added to verify the correct output for both OkHttp and HttpClient methods."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#524",
+      "title": "Fix static file serving issue in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "ssr",
+        "nginx",
+        "frontend",
+        "staticfiles"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where root-level static files like favicon.ico and manifest.json were returning 404 errors due to SSR routing misconfigurations. A new mapping was added to ensure these files are served directly from disk, improving user experience by restoring the favicon and manifest functionality. The changes maintain existing SSR behaviors for other routes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#107",
+      "title": "Introducing Maestro: Your New Article-to-Video Microservice in Index 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "microservice",
+        "Nexior",
+        "PlatformService",
+        "Maestro",
+        "API",
+        "MongoDB"
+      ],
+      "public": false,
+      "summary": "The article-to-video product has been successfully transitioned to a new microservice called Maestro, now part of the AceDataCloud PlatformService. This service is accessible via the API at api.acedata.cloud/maestro/videos and integrates with MongoDB for storage. The previous standalone PlatformDirector app has been retired, ensuring a streamlined experience for developers and consumers using Nexior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#509",
+      "title": "Update appkit-universal-connector to latest version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "frontend",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update bumps the @reown/appkit-universal-connector from version 1.8.19 to 1.8.21. Key improvements include the addition of 'includePayOnly' and 'sort' options to the fetchWallets function, enhancing wallet selection capabilities. The update also includes various dependency updates and bug fixes, ensuring a more stable and efficient application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1056",
+      "title": "Enhance Talking-Head Videos with Image-Only Input in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "video",
+        "image",
+        "animation",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces support for image-only face input, allowing a single still photo to animate into a talking-head video. The `prep_face` function now detects image URLs and creates a 20-second clip, truncating any excess to match audio length. This feature has been verified with successful end-to-end testing, showcasing its effectiveness."
+    }
+  ]
+}
