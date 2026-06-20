@@ -3,6 +3,120 @@
   "date": "2026-06-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Index#98",
+      "title": "Real-time Voice PoC Prototype in Index 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "feature",
+        "prototype",
+        "realtime",
+        "voice",
+        "poc"
+      ],
+      "public": false,
+      "summary": "This update introduces a proof-of-concept for a real-time voice communication system that connects a browser to a local Node relay and OpenAI's Realtime service. Key features include microphone capture, low-latency playback, and bidirectional transcription. The implementation is designed for feasibility testing and does not integrate with the main project or billing systems."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#110",
+      "title": "Documenting Shared Nginx Router Ingress Convention in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "nginx",
+        "ingress",
+        "tke",
+        "cloud"
+      ],
+      "public": false,
+      "summary": "This update introduces a new documentation section outlining the convention for TKE clusters to utilize a single shared Nginx Ingress Controller CLB. Key changes include updates to the AGENTS.md file and cross-references in the create-service documentation, ensuring clarity on the deployment strategy across clusters. No code or infrastructure changes were made; this is purely a documentation enhancement."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#108",
+      "title": "Boosting Growth Strategies for AceDataCloud in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "growth",
+        "marketing",
+        "documentation",
+        "strategy",
+        "self-promotion"
+      ],
+      "public": false,
+      "summary": "This PR introduces two comprehensive growth strategy documents aimed at enhancing AceDataCloud's marketing approach. The first document outlines a 90-day growth plan, focusing on establishing a hero product to funnel traffic to paid APIs. The second document details specifications for transforming the PlatformPublisher into a self-marketing engine, ensuring effective content distribution across multiple platforms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#420",
+      "title": "Introducing onepage-pdf for Seamless HTML to PDF Conversion in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "pdf",
+        "html",
+        "skills",
+        "onepage-pdf",
+        "offline"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/420",
+      "summary": "This update integrates the onepage-pdf skill, allowing users to convert HTML pages into a single continuous PDF without pagination breaks. The skill operates offline, requiring only Python 3.10+, PyMuPDF, and a local Chrome or Edge browser. Key files have been added and modified to support this functionality, enhancing the catalog of skills available."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#986",
+      "title": "Enhance API Experience with Async and Documentation Links in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "api",
+        "async",
+        "documentation",
+        "user-experience",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/986",
+      "summary": "This update introduces a revamped 'Run again' button that now requires a credit confirmation before executing, enhancing user awareness of potential charges. Additionally, a new footer button provides direct links to service-specific API documentation, improving accessibility. The transition to asynchronous processing across all services optimizes performance, allowing for quicker task handling without blocking the UI."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1064",
+      "title": "Scale claude-code-proxy to 2 replicas for better performance in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "scaling",
+        "high-availability",
+        "deployment",
+        "performance"
+      ],
+      "public": false,
+      "summary": "The claude-code-proxy deployment has been updated to use 2 replicas, enhancing high availability and load distribution. This change is safe due to the long-lived nature of the current setup-token, which mitigates the risk of token clobbering. Future improvements are planned to implement a shared token store for better coordination across pods."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#987",
+      "title": "Introducing the Consumer Module for Article-to-Video Service in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "maestro",
+        "ui",
+        "i18n",
+        "video"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/987",
+      "summary": "This update adds the Nexior consumer surface for the Maestro article-to-video service, enhancing the user experience with a new UI and backend support. Key features include a ConfigPanel for source selection, a RecentPanel for task tracking, and multi-language support across 18 locales. The integration is designed to streamline the process of converting articles into videos, making it more accessible and user-friendly."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1065",
       "title": "Fix kubeconfig user quoting issue in Platform Service 🚀",
       "tags": [
