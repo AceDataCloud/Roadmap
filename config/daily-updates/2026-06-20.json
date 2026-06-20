@@ -3,6 +3,358 @@
   "date": "2026-06-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1072",
+      "title": "Fix sandboxing for Claude CLI in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "docker",
+        "environment",
+        "worker",
+        "claude"
+      ],
+      "public": false,
+      "summary": "This update sets the environment variable `IS_SANDBOX=1` in the worker container, allowing the Claude CLI to run with root permissions. Changes were made to both the Dockerfile and the runner script to ensure that the worker can bypass permission restrictions. This fix addresses issues encountered in production jobs while maintaining local functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1071",
+      "title": "Revamped Agent Layer for Native Claude CLI in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "native",
+        "claude",
+        "skills",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces a significant refactor of the agent layer, making it skill-driven and native by eliminating the previous SDK control plane. Key changes include the introduction of a native `claude -p` subprocess, a new video-factory skill, and a streamlined delivery process that relies on file conventions rather than RPC. Several outdated components have been removed, enhancing performance and reducing complexity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#719",
+      "title": "Enhance OpenAI Realtime API Billing Rules in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "billing",
+        "api",
+        "openai",
+        "backend",
+        "cost"
+      ],
+      "public": false,
+      "summary": "This update introduces billing rules for the OpenAI Realtime API, enabling per-turn billing based on audio and text token usage. Key changes include the addition of new migration scripts, cost models, and API specifications, ensuring accurate pricing aligned with OpenAI's rates. Comprehensive tests have been implemented to validate the functionality, achieving a full pass rate."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#167",
+      "title": "Enhance record endpoint with charged bucket details in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "api",
+        "billing",
+        "realtime",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "The `/record` endpoint now returns the charged application's post-deduction `remaining_amount`, along with `charged_application_id` and `scope`. This enhancement ensures that the OpenAI Realtime relay can effectively manage its balance kill-switch using authoritative values, preventing over-spending during concurrent sessions. The change is additive and maintains existing deduction logic, with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#720",
+      "title": "Fix flaky Docker push timeout in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "ci",
+        "docker",
+        "timeout",
+        "backend",
+        "deploy"
+      ],
+      "public": false,
+      "summary": "This update addresses the issue of failed deployments in PlatformBackend due to ReadTimeoutError during Docker image pushes. By increasing the HTTP timeout to 600 seconds and implementing a retry mechanism for push attempts, we enhance the reliability of the CI process. This change is crucial for ensuring smooth deployments, especially with large image layers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WebExtrator#18",
+      "title": "Enhance Proxy Support for Stealth Browser in Web Extrator 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WebExtrator",
+        "proxy",
+        "stealth",
+        "cloudflare",
+        "deployment",
+        "web-extractor"
+      ],
+      "public": false,
+      "summary": "This update introduces support for residential proxies in the stealth browser, enabling successful Cloudflare bypass from datacenter IPs. Key changes include the addition of the `BROWSER_PROXY_URL` configuration, allowing for optional proxy integration via a Kubernetes secret. This enhancement ensures that while direct egress remains unchanged, users can now effectively navigate Cloudflare challenges with the right proxy setup."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#993",
+      "title": "Shortened Invite Link Text for Clarity in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "docs",
+        "readme",
+        "update",
+        "community"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/993",
+      "summary": "Updated the README to enhance the community section by replacing the long invite URL with a concise markdown link. The displayed text now reads 'platform.acedata.cloud', while the full URL remains intact in the hyperlink. This change improves readability and maintains functionality for users accessing the API key and documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#159",
+      "title": "Enhance Registration with UTM Source Tracking in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "registration",
+        "utm",
+        "cookies",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update finalizes the implementation of growth attribution v2 by capturing UTM source and campaign data during user registration. The initializer now persists these values in cookies, allowing them to be included in registration requests for both Email and Phone methods. Additionally, the IUser type has been extended to accommodate the new metadata fields."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#527",
+      "title": "Capture UTM Cookies and Channel Analytics in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "analytics",
+        "utm",
+        "i18n",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces UTM source and campaign tracking by storing them in cookies for cross-platform registration. A new 'By Channel' table has been added to the analytics dashboard, displaying metrics such as invite counts and rewards, leveraging backend data. The implementation includes internationalization support across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#718",
+      "title": "Enhance Distribution Analysis by UTM Channels in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "utm",
+        "distribution",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature for growth attribution by splitting distribution analysis based on UTM channels. The `UserAuth` model now includes a `metadata` JSONField, allowing the API to aggregate distribution history by invitee and map it to the corresponding UTM source. Additionally, safeguards have been implemented to prevent excessive data range queries and ensure data integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#198",
+      "title": "Capture UTM Source in User Metadata for Enhanced Growth Tracking in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "analytics",
+        "registration",
+        "metadata",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces the ability to capture `utm_source` and `utm_campaign` during user registration, storing them in the existing `User.metadata` JSON without requiring a migration. Both email and SMS registration paths are covered, while OAuth registration will handle UTM parameters in a future update. This change will enhance downstream analytics by allowing for channel-based aggregation of user signups."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WebExtrator#17",
+      "title": "Revamped stealth engine for enhanced Cloudflare bypass in Web Extrator 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WebExtrator",
+        "enhancement",
+        "cloudflare",
+        "stealth",
+        "bypass",
+        "web-extraction"
+      ],
+      "public": false,
+      "summary": "This update replaces the previous render engine with CloakBrowser, enabling WebExtrator to extract content from Cloudflare Turnstile and other antibot-protected pages. Key improvements include automatic identity management for the browser and a challenge-aware recovery mechanism that enhances reliability. The changes ensure more accurate user agent reporting and improved performance during anti-bot challenges."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#384",
+      "title": "Sync Flux CLI with New Model `flux-2-klein` in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "flux",
+        "cli",
+        "update",
+        "models",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/384",
+      "summary": "This update adds the new `flux-2-klein` model to the Flux CLI, ensuring alignment with the latest OpenAPI specifications. The models output table has been updated to reflect this addition, and tests have been adjusted to verify the presence of the new model in CLI outputs. Overall, the command behavior and architecture remain unchanged."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#120",
+      "title": "Enhance Growth Dashboard with Inviter ID in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "growth",
+        "dashboard",
+        "enhancement",
+        "tracking"
+      ],
+      "public": false,
+      "summary": "This update integrates the dedicated growth inviter ID into the growth dashboard, ensuring accurate tracking of signups attributed to specific content. Additionally, it documents the server-side funnel queries for better clarity on signups by inviter and channel splits. These changes are aimed at improving the dashboard's functionality and alignment with the Roadmap/CLS."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#992",
+      "title": "Updated Preview Images and Video in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "docs",
+        "update",
+        "readme",
+        "media"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/992",
+      "summary": "The README has been updated to feature new preview content. The image has been replaced with a high-quality 3D rendering from NanoBanana, and the video now showcases a clean b-roll from Seedance. These changes enhance the visual appeal and provide a better representation of the product."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1069",
+      "title": "Launch of GA Realtime WebSocket Relay in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "realtime",
+        "websocket",
+        "billing",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "We've introduced the M2 relay for the realtime-voice feature, enabling a GA OpenAI Realtime WebSocket relay that operates independently from the HTTP workers. This enhancement ensures long-lived voice calls remain stable during deployments, with per-turn billing integrated into the existing system. Key features include self-authentication, billing management, and safety mechanisms to handle session limits and graceful shutdowns."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#708",
+      "title": "Enhance access request handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "access",
+        "backend",
+        "fix",
+        "api",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update resolves a 400 error on the apply UI by allowing service and policy references to be accepted by either alias or UUID. Key modifications include updates to the serializers and views to support this functionality, enhancing the overall user experience without requiring any migrations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#710",
+      "title": "Exciting New flux-2-klein Model Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "flux",
+        "backend",
+        "api",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces the `flux-2-klein` model to the public `/flux/images` API, enhancing our offerings with a locally-run FLUX.2 klein-4B backend. Key changes include updates to the OpenAPI specifications, cost calculations, and the addition of comprehensive billing tests, all of which have passed successfully. This integration ensures a consistent request/response contract with existing flux models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#717",
+      "title": "Revamped AceKit Guide to Step-by-Step Tutorial in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "tutorial",
+        "updates",
+        "acekit"
+      ],
+      "public": false,
+      "summary": "The AceKit documentation has been transformed into a comprehensive step-by-step developer tutorial based on initial feedback. Key updates include detailed instructions for obtaining tokens, installation, and optional usage with AceData Token, along with three real-world demonstrations. Additionally, title corrections have been made to enhance clarity and consistency across the documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#526",
+      "title": "New Distribution Analytics Page in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "analytics",
+        "frontend",
+        "i18n",
+        "growth"
+      ],
+      "public": false,
+      "summary": "This update introduces a brand new Distribution Analytics page, providing insights for each distributor and our growth attribution view. Key features include summary cards and trend line charts for rewards, prices, and invitee counts, with filtering options for user IDs and time ranges. The page is designed for super admins and integrates with the backend's trend endpoint."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#991",
+      "title": "Updated Service Lineup: Sora Retired, Welcome Kimi, Wan, Grok Video, Fish, and Producer in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "docs",
+        "update",
+        "readme",
+        "services",
+        "screenshot"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/991",
+      "summary": "The README has been refreshed to reflect the latest service offerings. Sora has been removed, and new services including Kimi, Wan, Grok Video, Producer, and Fish/TTS have been added. Additionally, new screenshots showcasing the dark UI have been uploaded, and the preview grid has been updated for a consistent style."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#118",
+      "title": "Upgrade WebExtrator with CloakBrowser for Enhanced Stealth in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "webextrator",
+        "cloakbrowser",
+        "stealth",
+        "upgrade",
+        "licensing"
+      ],
+      "public": false,
+      "summary": "This update introduces the CloakBrowser as a stealth rendering engine for WebExtrator, demonstrating its ability to bypass Cloudflare and antibot challenges effectively. Key changes include a fallback mode proposal to utilize CloakBrowser only when current methods fail, ensuring cost efficiency. The decision on OEM licensing and third-party binary acceptance is pending confirmation from the founders."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#382",
       "title": "Sync Updates for Codex Service in Clis 🚀",
       "tags": [
