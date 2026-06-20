@@ -3,6 +3,21 @@
   "date": "2026-06-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1084",
+      "title": "Fix worker rollout issues for better resource management in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "deployment",
+        "kubernetes",
+        "resource-management"
+      ],
+      "public": false,
+      "summary": "This update addresses the unschedulable worker rollout by adjusting memory requests from 6Gi back to 4Gi while maintaining a 16Gi limit. The rollout strategy has been modified to replace pods in-place, allowing for smoother deployments without requiring additional capacity. These changes have already been applied live to unblock the v5 rollout."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1009",
       "title": "Enhance Maestro and Grok Video Features in Nexior 🚀",
       "tags": [
