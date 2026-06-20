@@ -3,6 +3,134 @@
   "date": "2026-06-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1065",
+      "title": "Fix kubeconfig user quoting issue in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "ci",
+        "kubeconfig",
+        "fix",
+        "deploy"
+      ],
+      "public": false,
+      "summary": "This update addresses a failure in the multi-cluster kubeconfig assembly due to unquoted numeric user and name fields. By quoting these values before they are processed by kubectl, we ensure compatibility and prevent parsing errors. The fix has been verified locally with kubectl v1.32.2, ensuring smooth deployments moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1062",
+      "title": "Enhance CI for Multi-Cluster Deployments in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "ci",
+        "kubernetes",
+        "deployment",
+        "automation",
+        "multi-cluster"
+      ],
+      "public": false,
+      "summary": "This update introduces a new CI configuration that allows the PlatformService to deploy to both Hong Kong and US clusters based on service requirements. Key changes include merging kubeconfig for both clusters, implementing a shared script for context switching, and ensuring safe deployments by defaulting to the Hong Kong cluster. The `claude-code-proxy` service is now set to automatically deploy to the US cluster, addressing geo-blocking issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1063",
+      "title": "Enhance Task History Retrieval and TTS Chunking in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "api",
+        "tts",
+        "user-experience",
+        "privacy"
+      ],
+      "public": false,
+      "summary": "This update introduces the `retrieve_batch` feature to the task management API, allowing users to list their job history in a user-scoped manner. Additionally, it implements chunking for long text-to-speech inputs to prevent errors when text exceeds character limits. These enhancements improve usability and maintain data privacy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1061",
+      "title": "Boost CI Reliability with Extended Timeout in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "ci",
+        "docker",
+        "timeout",
+        "reliability",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update raises the `COMPOSE_HTTP_TIMEOUT` to 600 seconds in the CI configuration to prevent timeouts during the push of large Docker images. The change addresses issues encountered during the deployment process without modifying any service code, ensuring smoother builds and pushes. Overall, this enhances the reliability of our CI pipeline."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1060",
+      "title": "Fix billing and caption upload issues in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "maestro",
+        "billing",
+        "captions",
+        "platformservice"
+      ],
+      "public": false,
+      "summary": "This update addresses two critical issues in the Maestro article-to-video response process. First, it ensures that failed renders are not billed by correctly reporting the response status. Second, it resolves a 404 error for the captions URL by implementing a proper upload mechanism for the .srt sidecar file. These changes enhance the reliability and accuracy of the service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1059",
+      "title": "Fix CFR Issues for Maestro Rendering in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "maestro",
+        "rendering",
+        "ffmpeg",
+        "production"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue with the Maestro article-to-video rendering process that was failing in production due to non-constant frame rate inputs. The fix ensures that each trimmed segment reasserts the frame rate, allowing for successful rendering with ffmpeg 7.x. Additionally, error handling has been improved to surface ffmpeg diagnostics, making failures clearer."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#713",
+      "title": "Exciting New Video Service Integration in Backend 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "maestro",
+        "video",
+        "api",
+        "docs",
+        "backend"
+      ],
+      "public": false,
+      "summary": "We've successfully integrated a new article-to-video service within Maestro, complete with OpenAPI specifications and comprehensive documentation in Chinese. This feature allows users to generate short videos from articles, with pricing based on video duration and additional language support. The service is now live and ready for use at api.acedata.cloud/maestro."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#166",
+      "title": "Enable Free Polling for Maestro Tasks in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "api",
+        "gateway",
+        "maestro",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update allows users with a zero balance to poll their Maestro video jobs via the `/maestro/tasks` API. The UUID `553a0038…` has been whitelisted, aligning it with the existing functionality of other async services' `/tasks` endpoints. This change enhances user experience by providing access to previously paid tasks."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#525",
       "title": "Streamline API Code Preview with Shared Engine in Frontend Web 🚀",
       "tags": [
