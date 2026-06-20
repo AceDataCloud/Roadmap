@@ -3,6 +3,267 @@
   "date": "2026-06-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#386",
+      "title": "No-op Confirmation for OAuth Docs Sync in Clis 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "docs",
+        "no-op",
+        "verification",
+        "oauth",
+        "clis"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/386",
+      "summary": "This PR verifies that the OAuth documentation changes do not require any code updates in the Clis monorepo. A thorough scope check confirmed that there is no mapped OAuth service or related CLI implementation. The result is a clean slate with no repository files needing updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#162",
+      "title": "Fix OAuth secret rotation path in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "bugfix",
+        "oauth",
+        "frontend",
+        "auth"
+      ],
+      "public": false,
+      "summary": "This update corrects the OAuth app operator's POST request path from `rotate_secret/` to `rotate-secret/` to align with the AuthBackend route. This fix resolves the 404 error encountered when using the 'Reset Secret' button on the app detail page. The change has been verified to ensure proper functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#65",
+      "title": "Add OAuth integration guide in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "docs",
+        "oauth",
+        "integration",
+        "zh-hans",
+        "guide"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/65",
+      "summary": "This update introduces the OAuth 2.0 'Sign in with Ace Data Cloud' developer guide to the Mintlify docs site. Key changes include the addition of a new guide in Chinese (zh-Hans) and updates to the syncing scripts to ensure the guide is properly generated and included in the documentation structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#161",
+      "title": "Enhance OAuth Experience with Quick Start Card in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "oauth",
+        "frontend",
+        "enhancement",
+        "i18n",
+        "developer-experience"
+      ],
+      "public": false,
+      "summary": "This update introduces a 'Quick Start' card on the OAuth app detail page, designed to bridge the gap from app registration to first authorization. It provides a prefilled authorize URL and a token-exchange curl command, making it easier for developers to integrate. Additionally, the card includes links to the full integration guide and supports multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1082",
+      "title": "Enhance Maestro Logging and Progress Tracking in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "logging",
+        "progress",
+        "maestro",
+        "enhancement",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces structured logging for the maestro worker, allowing logs to be captured and queried with trace_id and task_id for better tracking. Additionally, a new pollable progress feature has been implemented, providing a top-level progress object that includes percent, stage, and message, enhancing user experience during task execution. These changes improve operational visibility and ensure that sensitive information is properly redacted in logs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1005",
+      "title": "Revamped 404 Page for a Sleek User Experience in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "ux",
+        "design",
+        "404",
+        "responsive"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1005",
+      "summary": "The 404 Page Not Found has been completely redesigned to offer a modern, minimalistic look. The new layout eliminates the header and footer, focusing on a clean, full-screen display with a prominent '404' message and easy navigation buttons. This update enhances user experience by providing a responsive design that adapts seamlessly to both desktop and mobile views."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#125",
+      "title": "Enhance OAuth Open Platform Documentation in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "oauth",
+        "documentation",
+        "developer",
+        "roadmap",
+        "index"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive plan for the self-service OAuth2 'Sign in with Ace Data Cloud' platform, including a new documentation page and an index entry. Key findings reveal that while the OAuth provider is actively used by first-party clients, external developer adoption is currently at zero due to a lack of documentation. The roadmap outlines steps to improve developer integration and visibility, aiming to boost external usage significantly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#160",
+      "title": "New Usage Card for OAuth Apps in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "oauth",
+        "frontend",
+        "ui",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update introduces a new 'Usage' card on the OAuth app detail page, providing app owners with insights into their app's usage. Key metrics include total authorizations, distinct users, and recent activity over the last 30 days. The feature enhances user feedback and integrates seamlessly with the backend API for real-time data retrieval."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#199",
+      "title": "Enhance OAuth App Usage Insights in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "backend",
+        "feature",
+        "documentation",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a new endpoint, `GET /api/v1/oauth2/applications/<id>/usage/`, allowing OAuth app owners to view their app's authorization activity, including total authorizations and distinct users. Additionally, the documentation has been updated to align with the code, correcting the maximum apps per user from 10 to 20. A new test ensures the integrity of the usage metrics, distinguishing between total events and distinct users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1006",
+      "title": "Revamped Voice Call UI for a Sleek Experience in Nexior 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "design",
+        "voice",
+        "features",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1006",
+      "summary": "The voice call interface has been completely redesigned to align with the ChatGPT Voice aesthetic. Key features include a reactive audio orb, dark captions mode, and streamlined controls for a more engaging user experience. Additionally, internationalization updates have been made across 18 locales to enhance accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1000",
+      "title": "Voice Call Button Moved to Composer for Better Access in Nexior 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "feature",
+        "accessibility",
+        "composer",
+        "voice"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1000",
+      "summary": "The voice-call button has been relocated from the top toolbar to the Composer tools row, making it more accessible for users. This change simplifies the interface by removing the redundant toolbar entry while maintaining functionality to open the call screen. Users will now find the voice button right next to the send button, enhancing the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1081",
+      "title": "Enhance WebSocket Auth with Direct Host in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "websocket",
+        "authentication",
+        "real-time",
+        "platform-service",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a direct host for browser WebSocket connections at realtime.acedata.cloud, bypassing Kong's limitations on the Authorization header. The relay now self-authenticates using the actual request path, allowing for seamless integration with both the OpenAI and Aichat services. Additionally, a new route for Aichat has been added, ensuring robust functionality for real-time applications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#723",
+      "title": "New OAuth 2.0 Developer Guide for Ace Data Cloud in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "oauth",
+        "documentation",
+        "developer",
+        "backend",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive OAuth 2.0 integration guide for external developers, enabling them to implement 'Sign in with Ace Data Cloud'. The documentation covers everything from app registration to token exchange and API calls, ensuring developers have the necessary resources to successfully integrate with our platform. This is a crucial step in enhancing developer experience and increasing third-party app registrations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#32",
+      "title": "Revamp Codex Model Picker to Read Live from Host in Coding Bridge 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "feature",
+        "codex",
+        "models",
+        "capabilities",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/32",
+      "summary": "This update enhances the Codex model picker by allowing it to read the model catalog live from the host's `models_cache.json`, replacing the previous hardcoded list. Key changes include improved model visibility and support for reasoning levels, ensuring that the picker reflects the actual models available on the host. The implementation also includes a fallback mechanism for offline scenarios, maintaining functionality even without a live connection."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#722",
+      "title": "Enhance Credit Monitoring for Our Platform App in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "monitoring",
+        "backend",
+        "credits",
+        "alerting"
+      ],
+      "public": false,
+      "summary": "This update introduces a new function, `get_balance_acedatacloud()`, to monitor the remaining credits of our own platform application. The balance is now reported by the existing CronJob, ensuring we receive alerts when credits drop below a specified threshold. This enhancement helps maintain operational efficiency by preventing unexpected credit shortages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1004",
+      "title": "Default Permission Mode Set to Bypass in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "coding-bridge",
+        "permissions",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1004",
+      "summary": "The Coding Bridge now defaults the permission mode to 'bypassPermissions', allowing users to operate without per-tool approval prompts on their own paired machines. Key changes include updates to the composer initial value, session resets, and wire fallbacks, ensuring that stricter modes can still be applied and persist per device. This update enhances user experience while maintaining security options."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1080",
       "title": "Comprehensive Architecture Overview for Maestro in Platform Service 🚀",
       "tags": [
