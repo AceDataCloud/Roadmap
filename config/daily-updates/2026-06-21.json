@@ -3,6 +3,214 @@
   "date": "2026-06-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1095",
+      "title": "Refactor billing to server-side for efficiency in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "billing",
+        "server",
+        "worker",
+        "digitalhuman",
+        "maestro"
+      ],
+      "public": false,
+      "summary": "This update moves the billing process from the worker pod to a dedicated server-side monitor, enhancing efficiency and eliminating the need for a gateway in the worker pod. Key changes include modifications to server.py and main.py, ensuring that the worker only interacts with MongoDB. The billing semantics remain unchanged, ensuring a smooth transition without impacting existing consumer contracts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1015",
+      "title": "Fix voice connection and UI issues in Nexior 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "voice",
+        "realtime"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1015",
+      "summary": "This update addresses critical issues with voice calls in the Nexior application. The voice picker has been relocated to avoid interference with the wallet display, and a new WebSocket query parameter for voice has been implemented to resolve call errors. Additionally, mid-call voice changes are now handled more safely to prevent disruptions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1094",
+      "title": "Fix voice parameter handling for realtime calls in Platform Service 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "realtime",
+        "voice",
+        "session",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where realtime voice calls failed due to a missing 'session.type' parameter. The fix includes validating the voice parameter from the query string and ensuring it is correctly nested in the session update. Additionally, the session sanitizer now injects the 'session.type' to maintain compatibility with the GA structure, ensuring all updates are valid."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1093",
+      "title": "Fix tool-continuation issues in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "aichat2",
+        "deepseek",
+        "tool-continuation",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update addresses multiple causes of 400 errors in aichat2 conversations, specifically related to assistant message prefill and DeepSeek reasoning content. Key fixes include ensuring that trailing prose is correctly folded into assistant messages and persisting reasoning content for DeepSeek models. These changes enhance the reliability of tool-continuation interactions and improve overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#131",
+      "title": "Desktop Client Implementation Status and Next Steps in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "desktop",
+        "implementation",
+        "updates",
+        "nexior"
+      ],
+      "public": false,
+      "summary": "The README for the Nexior desktop client has been updated to reflect the completed implementation and merged changes. Key updates include a detailed implementation status table and a list of remaining tasks such as CI certs, beta rehearsals, and design verifications. This progress enhances the overall functionality and readiness of the desktop application for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#163",
+      "title": "Enhance Native Redirect Flow for Desktop in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "auth",
+        "frontend",
+        "security",
+        "nexior",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update introduces a centralized native deep-link flow for the Nexior desktop client, ensuring secure OAuth callbacks by echoing the `state` parameter. Key changes include the addition of a new utility for managing deep links and updates to several Vue components to utilize this functionality. The implementation maintains backward compatibility for mobile users while enhancing security against potential phishing attacks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1014",
+      "title": "Fix voice call issues and enhance wallet selection in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "realtime",
+        "ui",
+        "wallet",
+        "voice"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1014",
+      "summary": "This update addresses four key bugs in the Realtime voice-call screen, including fixing the orb clipping issue in Safari, resolving a stale cancel error, and improving the wallet app selection process. A new voice picker has also been added, allowing users to select their preferred voice during calls. These changes enhance the overall user experience and functionality of the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#130",
+      "title": "Enhance Automatic Adversarial Review for All Changes in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "review",
+        "automation",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update makes the automatic adversarial review unconditional, ensuring it runs before every PR and plan finalization without exceptions. Key documentation files have been updated to reflect this change, enhancing clarity and usability for authors. The new process is efficient, allowing trivial changes to self-converge quickly, thus minimizing overhead."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#51",
+      "title": "Upgrade actions/checkout to v7 in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "dependencies",
+        "upgrade",
+        "ci",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/51",
+      "summary": "This update bumps the actions/checkout dependency from version 4 to version 7 across multiple workflow files. Key changes include improved handling for fork PRs and various dependency updates, enhancing overall functionality and security. This upgrade ensures better compatibility and performance for CI/CD processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1092",
+      "title": "Revamping Digital Human to Pull Mode in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "digitalhuman",
+        "pull-mode",
+        "fastapi",
+        "mongodb",
+        "gpu"
+      ],
+      "public": false,
+      "summary": "This update refactors the digital-human system from a push model to a pull model, integrating it with the maestro on a unified GPU queue. Key additions include a new MongoDB-backed task store, a FastAPI cloud server, and a dedicated pull worker for GPU tasks. The changes are additive and dormant, ensuring no disruption to existing production behavior while enhancing future scalability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#129",
+      "title": "Transform CLAUDE.md into a Real File for Better Compatibility in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "cross-platform",
+        "fix",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update replaces the symlink of `CLAUDE.md` with a regular file that imports `@AGENTS.md`, ensuring cross-platform compatibility. The change eliminates issues with Windows checkouts where symlinks are not supported, preserving the single source of truth in `AGENTS.md`. This adjustment enhances accessibility and maintains the integrity of project documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1091",
+      "title": "Improve Error Classification for Task Creation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "logging",
+        "refactor",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update refines the error handling for the `createTask` function in the cqtai module. It now correctly classifies upstream errors, reducing false 5xx alerts by mapping specific error codes to appropriate HTTP responses. The changes enhance clarity for clients and improve logging for better traceability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1090",
+      "title": "Enhance Maestro with GPU Lock and Watchdog in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "gpu",
+        "maestro",
+        "watchdog",
+        "deployment",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update integrates GPU-lock functionality for the maestro worker, ensuring exclusive access to a shared GPU box while preventing double occupancy. A standalone watchdog has been added to manage stuck jobs, and deployment configurations have been updated for seamless operation. The changes maintain existing cloud behavior while enabling enhanced GPU capabilities on local setups."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1089",
       "title": "Enhance Maestro with Owner-Fence and Billing Improvements in Platform Service 🚀",
       "tags": [
