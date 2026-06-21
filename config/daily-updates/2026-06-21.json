@@ -1,0 +1,37 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-06-21",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1086",
+      "title": "Boost AGENT_TIMEOUT to 90min for heavy workflows in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "timeout",
+        "workflow",
+        "update",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update raises the `MAESTRO_AGENT_TIMEOUT` from 40 to 90 minutes to accommodate heavy workflows that were timing out during final assembly. Additionally, the `STALE_CLAIM_SECONDS` now derives from the `AGENT_TIMEOUT`, ensuring that stale claims exceed the timeout duration. This change is crucial for preventing finish-line timeouts while further throughput improvements are planned."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1087",
+      "title": "Enhance glow reduction for digital humans in Platform Service ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "digitalhuman",
+        "glow-reduction",
+        "stability",
+        "patch"
+      ],
+      "public": false,
+      "summary": "This update introduces a stable glow reduction technique for digital humans, eliminating flicker during video processing. The new patch adjusts the per-channel mean within the face mask to match the original image, ensuring temporal stability. Additionally, the guidance scale has been lowered from 2.0 to 1.5, which helps maintain the mouth's appearance closer to the source while reducing the glow effect."
+    }
+  ]
+}
