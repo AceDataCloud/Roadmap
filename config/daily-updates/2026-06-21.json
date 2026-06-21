@@ -3,6 +3,138 @@
   "date": "2026-06-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1089",
+      "title": "Enhance Maestro with Owner-Fence and Billing Improvements in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "concurrency",
+        "testing",
+        "safety",
+        "improvements"
+      ],
+      "public": false,
+      "summary": "This update integrates owner-fence concurrency control and a poison budget mechanism into the live maestro worker, ensuring that stale workers do not execute late writes. Additionally, it implements owner-guarded billing to prevent double charges, enhancing the reliability of the billing process. Comprehensive tests have been added to validate these changes, ensuring a safer rollout."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1013",
+      "title": "Streamlined Desktop Release Pipeline in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "desktop",
+        "release",
+        "e2e",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1013",
+      "summary": "This PR finalizes the desktop release pipeline for Nexior, incorporating build, sign, notarize, and publish processes for both Windows and macOS. Key updates include the addition of E2E smoke tests, automated artifact uploads to Tencent Cloud COS, and enhanced documentation for release procedures. The workflow now requires admin approval before any release, ensuring a robust deployment process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1012",
+      "title": "Exciting Electron Shell Features Added in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "electron",
+        "desktop",
+        "features",
+        "security",
+        "updater"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1012",
+      "summary": "This PR introduces significant enhancements to the Nexior desktop client, focusing on the Electron main process. Key updates include a custom protocol for serving the SPA, OAuth deep-link handling, and an in-memory state nonce store for secure authentication. Additionally, the auto-updater has been integrated, ensuring seamless updates for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1088",
+      "title": "Launch of GPU-queue Foundation Library in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "gpu",
+        "library",
+        "ci",
+        "tests",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces the foundational GPU-queue library under `maestro/worker/app/queue/`, featuring a schema-agnostic Mongo queue, GPU mutual exclusion, and a watchdog for stuck processes. Comprehensive unit tests have been added to ensure reliability, and CI has been updated to include Python testing for the new components. The changes are additive, ensuring no disruption to existing functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1011",
+      "title": "Enhance Desktop Client Authentication Flow in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "desktop",
+        "authentication",
+        "SSO",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1011",
+      "summary": "This update implements a surface-aware authentication flow for the Nexior desktop client, ensuring that login functionality works seamlessly without affecting web or native behaviors. Key changes include the extraction of SSO code exchange logic, updates to the authentication panel, and the addition of localized error messages for login link expiration across 18 languages. The changes have been verified with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1010",
+      "title": "Kickstarting the Electron Desktop Client in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "desktop",
+        "electron",
+        "features",
+        "utils",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1010",
+      "summary": "This PR lays the groundwork for the Nexior desktop client by introducing a dedicated surface for desktop functionality. Key additions include constants for desktop, updated utility functions to recognize the desktop environment, and a new bridge for Electron integration. All changes are additive, ensuring no impact on existing web, Android, or iOS functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#127",
+      "title": "Unifying GPU-Queue Architecture for Enhanced Efficiency in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "gpu",
+        "architecture",
+        "scalability",
+        "mongo",
+        "digital-human",
+        "maestro"
+      ],
+      "public": false,
+      "summary": "This update introduces a unified GPU-queue architecture that consolidates multiple projects, including maestro and digital-human, onto a single GPU. Key changes include the implementation of per-project Mongo queues, a robust kernel flock for GPU locking, and a streamlined server/worker model to maximize GPU utilization while preventing out-of-memory errors. The new design aims to enhance scalability and maintain independent project deployments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#128",
+      "title": "Exciting Plans for Nexior Desktop Clients in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "desktop",
+        "electron",
+        "nexior",
+        "development",
+        "plans"
+      ],
+      "public": false,
+      "summary": "This update outlines the plan for developing Windows and macOS desktop clients for Nexior using Electron. Key decisions include a full signed and notarized release with auto-update capabilities, and adjustments to the existing web build to accommodate desktop-specific features. The effort is estimated to take approximately two weeks for a complete release, focusing on ensuring a smooth authentication flow and compliance with platform requirements."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1086",
       "title": "Boost AGENT_TIMEOUT to 90min for heavy workflows in Platform Service 🚀",
       "tags": [
