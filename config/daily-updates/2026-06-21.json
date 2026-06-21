@@ -3,6 +3,248 @@
   "date": "2026-06-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Skills#439",
+      "title": "Refactor skill name from cn-blog to zhihu in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "refactor",
+        "skills",
+        "zhihu",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/439",
+      "summary": "The `cn-blog` skill has been renamed to `zhihu` to better reflect its functionality, which is exclusively for the Zhihu platform. This change involved updating the skill's metadata and documentation, ensuring no references to the old name remain in the repository. The transition will automatically update the skill catalog in the AuthBackend, enhancing clarity and consistency across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#210",
+      "title": "Eliminate Duplicate BYOC Connectors for Sentry and Cloudflare in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "backend",
+        "fix",
+        "connectors",
+        "oauth",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update removes duplicate BYOC entries for Sentry and Cloudflare in the connectors configuration, ensuring that only the official MCP connectors are used. The fix prevents overwriting issues in the production database while maintaining a better user experience with OAuth integration. Additionally, the companion Skills PR has been updated to remove any orphaned skills related to these connectors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#438",
+      "title": "Streamline Skills by Removing Orphaned Connectors in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "skills",
+        "cleanup",
+        "oauth",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/438",
+      "summary": "This update removes the Cloudflare and Sentry skills as they are now superseded by official oauth_dcr MCP connectors. The removal is straightforward and ensures that only relevant skills remain, enhancing the overall efficiency of the Skills area. Vercel remains as a new BYOC skill."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#209",
+      "title": "Exciting New Connectors and OAuth Adapters in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "connectors",
+        "backend",
+        "features",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces 13 new connectors to the AuthBackend, including Figma and TikTok OAuth adapters. Key changes include the implementation of dedicated adapters for these platforms, enhancing the authentication process with new token exchange methods. Additionally, extensive tests have been added to ensure functionality and reliability across the new integrations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1112",
+      "title": "Enhance aichat2 with OAuth Connector Tokens in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "oauth",
+        "google",
+        "aichat2",
+        "platform",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update introduces environment variable mappings for new OAuth connectors in the aichat2-worker, allowing seamless integration of tokens for services like Google, Microsoft, Figma, and TikTok. Additionally, it implements a mechanism for injecting a Google Ads developer token, ensuring that the skill remains hidden until the token is approved. Comprehensive tests confirm the stability of these enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#437",
+      "title": "Exciting New Connector Skills Added in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "features",
+        "skills",
+        "integration",
+        "google",
+        "microsoft",
+        "tiktok"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/437",
+      "summary": "This update introduces 13 new connector skills, enhancing integration with platforms like Google Workspace, Microsoft 365, Figma, TikTok, and more. Each skill includes detailed documentation and is programmatically verified for accuracy, ensuring seamless functionality. The addition of these skills significantly expands the capabilities of the Skills module, allowing users to interact with various APIs effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1022",
+      "title": "Show Enabled Connector Icons in Nexior 💬",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "chat",
+        "ui",
+        "connector"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1022",
+      "summary": "This update introduces a new feature that displays a compact strip of enabled connector icons above the chat composer input. The icons serve as a visual cue for users, showing which connectors are active, and clicking on them opens the connections manager. The implementation includes a self-contained component that can be placed flexibly within the chat interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1102",
+      "title": "Embed per-call cost in chat usage response in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "billing",
+        "api",
+        "testing",
+        "openai"
+      ],
+      "public": false,
+      "summary": "This update introduces the embedding of per-call costs into the chat API response's usage object. The OpenAI chat worker now retrieves the cost from the gateway's `/price` endpoint and includes it in the response, ensuring accurate billing for partner settlement ledgers. Additionally, new tests have been added to validate this functionality and ensure that failures in cost retrieval do not disrupt the API response."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1111",
+      "title": "Retire Push System for Pull-Only Mode in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "digitalhuman",
+        "pull-mode",
+        "cleanup",
+        "infrastructure"
+      ],
+      "public": false,
+      "summary": "This update removes the deprecated push system from the digitalhuman service, transitioning to a pull-only architecture. Key files such as `app.py` have been deleted, and GPU pipeline helpers have been extracted to `pipeline.py`. The infrastructure has been verified with successful tests, ensuring that the cloud server and worker operate seamlessly with the new setup."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#168",
+      "title": "New Read-Only Price Endpoint and Cost Resolution in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "gateway",
+        "cost",
+        "api",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a read-only `POST /price` endpoint that provides the per-call cost for workers, ensuring accurate cost recording in partner settlement ledgers. A new shared `resolve_cost` function has been implemented to calculate costs without any deductions or database writes, maintaining consistency with the existing `/record` endpoint. Additionally, 18 new tests have been added to ensure the reliability of these features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1110",
+      "title": "Containerized GPU-Box Worker for Enhanced Stability in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "docker",
+        "gpu",
+        "containerization",
+        "platform-service",
+        "stability"
+      ],
+      "public": false,
+      "summary": "This update introduces a containerized version of the DH GPU-box worker using Docker Compose, ensuring it remains operational through crashes, OOM events, and reboots. Key changes include the addition of a Dockerfile and a docker-compose.yml file, which facilitate seamless task handling and rendering via the host's LatentSync and HeyGem. The implementation has been verified on a 3090 GPU, confirming its functionality and restart capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#135",
+      "title": "New Store Distribution Plans for Nexior Desktop Client in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "plans",
+        "nexior",
+        "distribution",
+        "store"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive plan for distributing the Nexior desktop client via the Mac App Store and Microsoft Store. Key changes include the need for separate distribution channels, the disabling of electron-updater for store updates, and the implementation of mandatory App Sandbox for Mac. The Microsoft Store offers a simpler path with minimal rework, while the Mac App Store presents more challenges due to its policies and requirements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1109",
+      "title": "Live Pull-Mode Cutover Successfully Implemented in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "documentation",
+        "digitalhuman",
+        "live",
+        "cutover",
+        "api"
+      ],
+      "public": false,
+      "summary": "The digital human pull architecture is now live, with Kong routing `/digital-human/*` to the new `platform-service-digitalhuman`. This change has been verified through the public API, ensuring successful video processing and CDN delivery. The old push relay remains in place for rollback purposes, and documentation has been updated accordingly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1025",
+      "title": "Separate macOS DMGs for x64 and arm64 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "macos",
+        "build",
+        "update",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1025",
+      "summary": "This update introduces two distinct DMGs for macOS: one for Intel x64 and another for Apple Silicon arm64. The change eliminates the previous universal build that encountered issues during the lipo-merge process. This ensures a more reliable installation experience, as the electron-updater will automatically route users to the appropriate version based on their machine architecture."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#134",
+      "title": "Expand Connector Directory with New Integrations in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "connectors",
+        "integration",
+        "architecture",
+        "Nexior"
+      ],
+      "public": false,
+      "summary": "This update introduces detailed documentation for 13 new third-party connectors in the connector directory, enhancing integrations with platforms like Google Workspace, Microsoft 365, TikTok, and Figma. Each connector is designed as an independent entry, allowing for streamlined implementation without code changes. Key architecture findings ensure seamless coexistence of multiple connectors under shared providers, optimizing user experience and functionality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1023",
       "title": "Launch universal macOS DMG for all Macs in Nexior 🚀",
       "tags": [
