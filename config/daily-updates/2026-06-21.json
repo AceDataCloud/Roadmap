@@ -3,6 +3,119 @@
   "date": "2026-06-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#211",
+      "title": "Update Zhihu Connector to Use Renamed Skill in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "fix",
+        "connectors",
+        "zhihu",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update modifies the Zhihu BYOC connector to reference the newly renamed skill from `acedatacloud/cn-blog` to `acedatacloud/zhihu`. The change ensures that when the Zhihu connector is installed, it automatically includes the correct skill. All references to the old skill have been removed, and the YAML has been validated for accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#213",
+      "title": "Enhance BYOC Connectors with Required Skills in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "backend",
+        "connectors",
+        "skills",
+        "integration",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update wires five new BYOC cookie connectors—CSDN, Juejin, Bilibili, Medium, and Weibo—to their respective required skills. Each connector now automatically installs the matching read/publish skill upon connection, streamlining the user experience. The YAML configuration has been validated, ensuring seamless integration with the existing connector catalog."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#440",
+      "title": "Exciting New BYOC Skills for Multiple Platforms in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "byoc",
+        "skills",
+        "cookies",
+        "apis",
+        "security"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/440",
+      "summary": "We've introduced five new cookie-jar BYOC skills for platforms including CSDN, Juejin, Bilibili, Medium, and Weibo. Each skill allows users to interact with their real accounts via web APIs, utilizing the login cookies captured by the ACE extension. Key features include safety-gated publishing and comprehensive read/write capabilities, ensuring a secure and seamless user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1114",
+      "title": "Enhanced Local Rendering with Maestro and Digital Human in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "local",
+        "rendering",
+        "docker",
+        "maestro",
+        "digitalhuman",
+        "upload"
+      ],
+      "public": false,
+      "summary": "This update integrates both the Maestro and Digital Human workers to run on a local GPU box as formal containers. Key improvements include the ability for Maestro to operate without COS credentials, utilizing a fallback for file uploads, and renaming the Digital Human worker for consistency. The changes enhance local rendering capabilities while maintaining robust error handling for larger video uploads."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#212",
+      "title": "Update Microsoft Product Icons for Connectors in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "icons",
+        "microsoft",
+        "connectors",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update replaces the outdated generic Office logo with the official product icons for Microsoft To Do, Excel, and Teams. The new icons are sourced from Wikimedia Commons and hosted on our CDN, ensuring accurate representation in the directory. The publisher logo remains the Microsoft corporate logo, maintaining brand consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1106",
+      "title": "Embed Per-Call Cost in Final Task Result in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "ttapi",
+        "cost",
+        "enhancement",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update integrates a new cost object into the final task results for ttapi async tasks, allowing accurate billing based on the actual cost incurred. The `fetchPrice` function now ensures that the cost is included in the response while maintaining compatibility with existing usage-exempt requests. This enhancement improves the accuracy of partner ledgers by providing real-time cost data without affecting task settlement."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1104",
+      "title": "Embed Per-Call Cost in Search Response in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "serp",
+        "cost",
+        "cleanup",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a read-only `/price` endpoint in the SERP worker, allowing it to embed a `cost` object in the search response. This change ensures that partner settlement ledgers accurately record the real cost of calls instead of a default value. Additionally, the `PRICE_SERVER_URL` has been cleaned up for both the SERP and OpenAI workers, enhancing environment configuration and maintaining behavior consistency."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Skills#439",
       "title": "Refactor skill name from cn-blog to zhihu in Skills 🚀",
       "tags": [
