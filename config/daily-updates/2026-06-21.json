@@ -3,6 +3,262 @@
   "date": "2026-06-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#204",
+      "title": "Enhance Discord Connector Functionality in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "discord",
+        "connectors",
+        "backend",
+        "features",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update integrates the Discord connector with the required skills for the acedatacloud/discord skill. It ensures that the aichat connectorsBlock correctly routes to the Discord skill, preventing errors related to missing MCP servers. Additionally, connecting Discord will now automatically install the necessary skill, streamlining the user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1103",
+      "title": "Inject Discord OAuth Token for Enhanced Skill Functionality in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "oauth",
+        "discord",
+        "aichat2",
+        "security",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update maps the Discord provider to the DISCORD_TOKEN in the PROVIDER_ENV_VAR, allowing the aichat2 worker to authenticate user requests effectively. The change ensures that the connected user's Discord bearer token is utilized, enabling secure skill interactions without token leakage. This is part of a coordinated effort across multiple repositories to enhance skill capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#433",
+      "title": "Enhance Discord Integration with New Skill in Skills 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "discord",
+        "skills",
+        "integration",
+        "api",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/433",
+      "summary": "This update introduces the `acedatacloud/discord` skill, enabling users to access their Discord identity and list of guilds through the aichat interface. The skill utilizes the Discord API securely, ensuring that only authorized endpoints are accessed. This addition is part of a coordinated effort to enhance user interactions with Discord within the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1101",
+      "title": "Proven GPU Acceleration for WSL2 Chromium in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "gpu",
+        "wsl2",
+        "benchmark",
+        "documentation",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update documents the successful benchmarking of the WSL2 Chromium-GPU path using a native WSL2 Ubuntu setup on an RTX 3090. Key findings show a significant performance improvement, achieving approximately 63× faster rendering for shader-heavy WebGL compared to software rendering. The requirements for enabling GPU access in the worker container are now clearly outlined, correcting previous assumptions and ensuring accurate implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#203",
+      "title": "Introducing Telegram BYOC Connector for Seamless Messaging in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "telegram",
+        "connector",
+        "backend",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update adds the Telegram BYOC connector, enabling users to connect their personal Telegram accounts using `api_id`, `api_hash`, and `session_string`, securely stored with AES-256-GCM encryption. The connector allows for various messaging operations, enhancing the capabilities of the aichat2 sandbox with verified environment variable injections. This integration pairs with the Telegram skill and PlatformService for a robust messaging experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1100",
+      "title": "Enhance Telegram Skill with Telethon Preinstallation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "telegram",
+        "telethon",
+        "sandbox",
+        "skills",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update preinstalls `telethon==1.42.0` in the skill sandbox image, enabling the `telegram` skill to operate using MTProto. The decision to preinstall is due to the non-root nature of the sandbox, ensuring reliable functionality without runtime pip-install. This change supports the ongoing development of the Telegram connector."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1016",
+      "title": "Enhance Captions and Voice Chip Functionality in Nexior 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "ui",
+        "voice",
+        "captions",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1016",
+      "summary": "This update addresses two key issues in the voice-call screen. Captions are now readable in both light and dark themes by ensuring a dark background for the caption text. Additionally, the voice picker chip will always display a voice name, even if the selected voice is falsy, improving user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#432",
+      "title": "Introducing Telegram Skill for Personal Messaging in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "telegram",
+        "skills",
+        "feature",
+        "update",
+        "e2e"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/432",
+      "summary": "This update adds a new `telegram` skill that allows users to interact with their personal Telegram accounts via MTProto using the Telethon library. Key commands include `whoami`, `list-chats`, `get-messages`, `search`, and `send`, all of which have been end-to-end verified against a live account. Improvements include runtime gating for sending messages and ensuring session-local file handling to prevent race conditions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#202",
+      "title": "Integrate Discord OAuth Credentials into Auth Backend in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "discord",
+        "backend",
+        "deployment",
+        "k8s"
+      ],
+      "public": false,
+      "summary": "This update wires the Discord OAuth client ID and secret into the auth-backend deployment, enabling the Discord OAuth connector to function properly. Key changes include modifications to the deployment YAML and the creation script for the new K8s secret. This ensures that the necessary environment variables are set, allowing for seamless integration with Discord's OAuth service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#201",
+      "title": "Enhance Skill Connection Validation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "validation",
+        "backend",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update fixes two critical issues in the `validate_skill_provider_refs` command. It now accurately validates connection references against both OAuth providers and catalog connector identifiers, eliminating false positives. Additionally, it corrects a model reference error that caused crashes, ensuring the command functions smoothly and reliably."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#166",
+      "title": "Enhance OAuth Error Messaging in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "oauth",
+        "frontend",
+        "error-handling",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update improves the OAuth callback page by providing specific error messages from the provider, allowing users to understand the exact reason for connection failures. It distinguishes between provider-rejected requests and missing parameters, enhancing user experience. Additionally, a button has been added to redirect users back to the connections page."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#165",
+      "title": "Enhance Connector Add Button with Tooltip in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "tooltip",
+        "user-experience",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the user experience by adding a tooltip to the Add button for connectors that are not installable. When a connector is disabled, users will now see a 'Coming Soon' message, clarifying its status. The implementation maintains the existing layout and reuses the translated string across all locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#164",
+      "title": "Enhance BYOC Credential Flow in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "improvement",
+        "user-experience",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update improves the deep-link installation process for BYOC connectors by rendering the credential form directly on the install page. Users can now enter their credentials inline instead of being redirected, enhancing the experience for connectors like Tencent Cloud and WeChat. The changes ensure that the existing OAuth and error handling paths remain unaffected, maintaining system stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1099",
+      "title": "Enhanced GPU Box Functionality in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "gpu",
+        "documentation",
+        "platform-service",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update verifies the end-to-end functionality of the GPU box on a 3090, confirming successful task execution and CDN uploads. Key improvements include GPU compute capabilities and a build-local fallback option. Documentation has been updated to reflect these changes and clarify GPU usage under Docker Desktop."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#200",
+      "title": "Add Discord OAuth2 Connector for User Identity and Guilds in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "discord",
+        "authentication",
+        "backend",
+        "connector"
+      ],
+      "public": false,
+      "summary": "This update introduces a new Discord OAuth2 connector, allowing users to authenticate and retrieve their Discord identity, email, and list of guilds. Key files modified include the addition of the `DiscordAdapter`, updates to the registry, and new tests to ensure functionality. The integration supports seamless user experience while maintaining security and privacy standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#133",
+      "title": "Introducing the Telegram Connector Design in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "telegram",
+        "connector",
+        "design",
+        "byoc",
+        "mtproto",
+        "adversarial-review"
+      ],
+      "public": false,
+      "summary": "We've added a comprehensive design for a new Telegram connector, benchmarked against the Google connector. This document outlines key features such as session management, skill integration, and a phased implementation approach. The design has undergone an adversarial review, ensuring all claims are verified and adjustments made for a robust solution."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1098",
       "title": "Prevent Double Billing on Historical Tasks in Platform Service 🚫",
       "tags": [
