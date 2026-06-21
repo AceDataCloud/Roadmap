@@ -3,6 +3,317 @@
   "date": "2026-06-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1023",
+      "title": "Launch universal macOS DMG for all Macs in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "macos",
+        "dmg",
+        "universal",
+        "electron",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1023",
+      "summary": "This update introduces a universal macOS DMG that supports both Intel and Apple Silicon Macs, allowing for a seamless installation experience. The DMG is built to include both x64 and arm64 architectures, ensuring compatibility across different hardware. Key modifications were made to the electron-builder configuration to facilitate this change."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#208",
+      "title": "Enhance Zhihu Connector with Required Skills in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "connector",
+        "zhihu",
+        "backend",
+        "skills"
+      ],
+      "public": false,
+      "summary": "This update adds the `required_skills: [acedatacloud/cn-blog]` to the Zhihu connector, enabling it to route correctly within the aichat2 worker. Additionally, the description has been updated to clarify that users can now read their article lists and interaction data. The changes ensure better functionality and integration with the new skill."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1108",
+      "title": "Enhance BYOC Credential Handling for Cookie Skills in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "enhancement",
+        "cookies",
+        "BYOC",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of BYOC credentials by enabling cookie jars to be injected as JSON, allowing skills to access complete cookie data. The change ensures that existing string-based credentials remain unaffected while broadening the type definition for credentials to accommodate non-string values. Additionally, domain-specific cookie handling has been refined to enhance security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#436",
+      "title": "Empower Your Zhihu Experience with BYOC Skill in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "feature",
+        "zhihu",
+        "cookies",
+        "automation",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/436",
+      "summary": "Introducing the new 'cn-blog' skill that allows users to read and publish content on Zhihu using their own login cookies. This feature fills a gap by enabling users to retrieve their published articles along with engagement stats, a first for our automation tools. The skill operates solely with standard libraries, ensuring compatibility without requiring sandbox modifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1107",
+      "title": "Introducing Cloud Pull-Mode Server for Digital Human in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "digitalhuman",
+        "cloud",
+        "deployment",
+        "docker"
+      ],
+      "public": false,
+      "summary": "This update introduces the first CI-deployable artifacts for the digital-human pull architecture, featuring a lightweight FastAPI cloud server. The server accepts requests at `/digital-human/*`, enqueues tasks to a shared Mongo queue, and runs a billing monitor, while remaining dormant and not affecting live traffic. Key files added include deployment and service configurations, a Dockerfile, and a docker-compose setup."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1021",
+      "title": "Fix electron-builder channel configuration in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "fix",
+        "electron-builder",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1021",
+      "summary": "This update corrects the `publish.channel` configuration for electron-builder, ensuring it is properly nested under `publish` instead of the root. The build steps have all succeeded, resolving the previous misplacement of the CLI override. This change enhances the reliability of the auto-build process for desktop applications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1020",
+      "title": "Automated Installer Builds on Every Merge in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "automation",
+        "build",
+        "nexior",
+        "release"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1020",
+      "summary": "This update introduces an automated build process for Windows `.exe` and macOS `.dmg` installers on every merge to the main branch. The workflow is restructured to ensure that builds occur without the need for approval, while the publish step remains gated for admin review. This change enhances the development workflow by providing immediate access to beta artifacts after each merge."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1019",
+      "title": "Enhance Desktop OS Detection for Windows and macOS in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "desktop",
+        "windows",
+        "macos",
+        "runtime",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1019",
+      "summary": "This update introduces runtime detection for Windows and macOS in the Nexior desktop application. Key changes include the addition of `getDesktopOS()`, `isWindows()`, and `isMacOS()` functions, allowing for independent version upgrades and tailored user experiences. The backend has been updated to support per-OS versioning, ensuring a seamless upgrade process for users on different platforms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#732",
+      "title": "Enhance OS-specific version gating for Nexior in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "nexior",
+        "backend",
+        "windows",
+        "mac"
+      ],
+      "public": false,
+      "summary": "This update introduces OS-specific version gating for the Nexior desktop client, allowing independent force-upgrades for Windows and macOS. The version gate is inert by default, ensuring a fail-safe mechanism until explicitly set. Key files modified include `app_version.py` and `settings.py`, enhancing the overall configuration for desktop clients."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#731",
+      "title": "Enhanced version control for Nexior desktop client in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "desktop",
+        "nexior",
+        "backend",
+        "versioning"
+      ],
+      "public": false,
+      "summary": "This update introduces support for the Nexior desktop platform by adding a new entry to the app version gate. The desktop version is inert by default, ensuring it won't block until an operational decision is made to raise the minimum supported version. Additionally, the store URL for the desktop client has been configured, and documentation has been updated accordingly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1105",
+      "title": "Updated GPU Performance Insights in Platform Service 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "gpu",
+        "performance",
+        "documentation",
+        "ws2",
+        "rendering"
+      ],
+      "public": false,
+      "summary": "This update refines the GPU performance story for the native-WSL2 stack, revealing that real rendering speeds are capture-bound rather than shader-bound. Key findings include a maximum speedup of 1.3× for certain workloads, emphasizing the importance of CPU worker capacity and NVENC over GPU shading advantages. The documentation has been updated to reflect these insights and supersedes previous framing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#435",
+      "title": "Expanded Telegram Skill with 18 Commands in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "telegram",
+        "skills",
+        "enhancement",
+        "features",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/435",
+      "summary": "The Telegram skill has been significantly enhanced, expanding from 5 to 18 commands, including new features like search-global, contacts, and chat-info. All commands have been end-to-end verified against a real account, ensuring robust functionality for reading and writing messages. Key improvements also include better error handling and command parsing adjustments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1018",
+      "title": "Fix desktop build for Electron in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "desktop",
+        "build",
+        "electron"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1018",
+      "summary": "This update resolves a critical issue where the `build:electron` command was not correctly applying the `VITE_SURFACE=desktop` environment variable to the `vite build` process. As a result, the output was incorrectly directed to `dist/` instead of `dist-electron/`, and the bundle was built in web mode, rendering the desktop surface inactive. The fix ensures that both commands in the build process utilize the correct environment variable, restoring functionality for the desktop surface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#206",
+      "title": "Enhance Discord Bot Integration with BYOC Connector in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "discord",
+        "byoc",
+        "integration",
+        "backend",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces a new BYOC connector for Discord bots, allowing users to send and read messages using their bot token. The connector is designed to comply with Discord's terms of service by ensuring that personal accounts are not automated. Key features include a hyphen-free namespace and seamless integration with existing skills, enhancing the overall functionality of the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#434",
+      "title": "Enhance Discord Bot Capabilities in Skills 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "discord",
+        "skills",
+        "bot",
+        "api",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/434",
+      "summary": "This update introduces the `acedatacloud/discordbot` skill, enabling a connected Discord Bot to send and read messages via the Discord REST API. Key features include listing guild channels, reading recent messages, and sending replies, all while ensuring compliance with Discord's permissions and intents. The implementation has been thoroughly reviewed and confirmed to be secure and functional."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1017",
+      "title": "Streamlined Desktop CI with Unsigned Beta and Notarization in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "desktop",
+        "notarization",
+        "beta",
+        "release"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1017",
+      "summary": "This update enhances the desktop CI pipeline by allowing unsigned beta builds when signing certificates are absent, facilitating immediate testing. Additionally, macOS notarization has been revamped to utilize the App Store Connect API key, eliminating the need for Apple ID credentials. The changes streamline the release process while maintaining security and efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#167",
+      "title": "Enhance desktop login flow with postMessage in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "auth",
+        "desktop",
+        "login",
+        "nexior",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update improves the email/password login process for the Nexior desktop client by utilizing postMessage instead of deep linking, which was previously blocked in the app's iframe. The changes ensure that the token is passed directly to the parent without requiring a deep link or state, while mobile functionality remains unchanged. The code has been verified with no new TypeScript errors and a clean ESLint output."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#205",
+      "title": "Hide Dead Reddit & LinkedIn Connectors in Backend 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "connectors",
+        "oauth",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update hides the Reddit and LinkedIn connectors from the catalog due to the absence of production OAuth credentials. The changes include modifying the sync_connectors script to support a hidden flag and updating the connectors.yaml file to mark these entries as hidden. This ensures users only see functional connectors, improving the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#132",
+      "title": "Enhance API with Per-Call Cost Reporting in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "api",
+        "billing",
+        "design",
+        "enhancement",
+        "partners"
+      ],
+      "public": false,
+      "summary": "This update introduces a new design for including per-call cost in API responses, addressing requests from three partners: Covenant, Hatcher, and Xona. A read-only `/price` endpoint is added to ensure accurate billing without altering existing deduction logic. This change allows partners to record real costs in their settlement ledgers, enhancing transparency and accuracy in billing."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthBackend#204",
       "title": "Enhance Discord Connector Functionality in Backend 🚀",
       "tags": [
