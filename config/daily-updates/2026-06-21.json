@@ -3,6 +3,53 @@
   "date": "2026-06-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1098",
+      "title": "Prevent Double Billing on Historical Tasks in Platform Service 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "monitor",
+        "fix",
+        "platform",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a safeguard to the billing monitor, ensuring it only bills tasks completed after a designated cutover time. By implementing a `BILLING_CUTOVER` guard, tasks finished before this time will be skipped, preventing any double billing of historical tasks. The changes affect several files, including persister and task store, and include necessary tests to verify the new behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1096",
+      "title": "Enhance DeepSeek Tool Calls with Reasoning Content in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "deepseek",
+        "tool-calls",
+        "testing",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update ensures that every tool-calling assistant message in DeepSeek carries non-empty `reasoning_content`, addressing the previous issue of flaky 400 errors during multi-tool calls. The fix involves adding a placeholder for cases without captured reasoning, ensuring consistent responses across all tool interactions. Comprehensive testing confirms that all scenarios now return successful results."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1097",
+      "title": "Improve error messaging for video failures in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "cqtai",
+        "video",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update enhances the error messaging for failed video tasks in the cqtai module. It now includes the upstream error message in the response, allowing users to understand the specific reason for the failure instead of receiving a generic 'unknown error' message. This change applies to both Veo and Sora2 tasks, improving clarity and reducing the need for manual log investigations."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1095",
       "title": "Refactor billing to server-side for efficiency in Platform Service 🚀",
       "tags": [
