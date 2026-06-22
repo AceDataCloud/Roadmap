@@ -3,6 +3,38 @@
   "date": "2026-06-22",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#217",
+      "title": "Align Figma OAuth Scopes for Project Metadata in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "figma",
+        "oauth",
+        "backend",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update corrects the OAuth scope for the Figma app by replacing the invalid `projects:read` with the correct `project_metadata:read`. The changes ensure that the connector permissions and adapter default scopes are aligned with the officially registered scopes, improving the authorization process. All Figma adapter tests have successfully passed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1026",
+      "title": "Enhance mobile Safari stability and clean URL handling in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "performance",
+        "ui",
+        "mobile",
+        "cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1026",
+      "summary": "This update addresses a critical issue causing the coding-bridge page to crash on mobile Safari by throttling the streaming markdown rendering. Additionally, it removes the session ID from the URL, ensuring a cleaner and more user-friendly experience. These changes improve performance and maintain session integrity during refreshes."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1115",
       "title": "Streamlined Box Uploads to COS in Platform Service 🚀",
       "tags": [
