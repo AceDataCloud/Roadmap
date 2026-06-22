@@ -3,6 +3,180 @@
   "date": "2026-06-22",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Index#138",
+      "title": "Finalize Chat Scheduling Plan in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "design",
+        "scheduling",
+        "planning",
+        "review"
+      ],
+      "public": false,
+      "summary": "This update finalizes the design for the Nexior chat scheduling feature, confirming key decisions and outlining the architecture for the independent `platform-scheduler` service. The plan includes push notifications and conversation integration, with a target implementation date set for June 23, 2026. A thorough review identified and addressed eight risks, ensuring a robust foundation for future development."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#445",
+      "title": "Fix Markdown Rendering for CSDN and Bilibili in Skills ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "markdown",
+        "html",
+        "fix",
+        "skills",
+        "codenew",
+        "bilibili"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/445",
+      "summary": "This update introduces a minimal Markdown to HTML converter for the CSDN and Bilibili platforms, ensuring that published articles display correctly without raw Markdown syntax. Key changes include the addition of a new `md_to_html()` function and improved handling of HTML content to prevent double-escaping. The fix enhances the readability of articles and addresses previously reported issues with formatting."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#222",
+      "title": "Fix connector name translations for brand consistency in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "localization",
+        "connectors",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update addresses issues with machine-translated connector names, ensuring that brand identifiers are displayed consistently across all locales. The `name` field is no longer localized, and stale translation rows have been pruned to prevent incorrect displays. The changes will enhance the user experience by maintaining brand integrity in the connector directory."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#137",
+      "title": "Launch of AceData Docs MCP for Seamless Access in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "mcp",
+        "api",
+        "design",
+        "public",
+        "index"
+      ],
+      "public": false,
+      "summary": "This PR introduces the design for a public, zero-install remote MCP that consolidates the entire AceData Cloud documentation and API directory. Key features include tools for document search, API access, and pricing information, all without authentication. The implementation aims to enhance developer experience by providing easy access to structured data, positioning it competitively against existing solutions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1029",
+      "title": "Fix(chat): give connector icon strip vertical breathing room in Nexior 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1029"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#221",
+      "title": "Fix Teams Authorization for Work Accounts in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "fix",
+        "teams",
+        "microsoft",
+        "authorization",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update addresses the issue where Teams chat authorization was failing for personal Microsoft accounts. By implementing a per-connector metadata flag, the authorization endpoint is now correctly set to reject personal accounts, ensuring a smoother user experience. Additionally, relevant tests have been added to validate this functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#220",
+      "title": "Enhance UserSkill Updates for Seamless Experience in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "user-skill",
+        "catalog",
+        "update",
+        "backend",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update ensures that catalog changes to skills are automatically propagated to existing UserSkill instances, allowing users to receive updates without manual intervention. Key improvements include precise matching for updates, skipping unnecessary operations, and preserving user-specific settings. The changes enhance the overall user experience by ensuring that skill updates are reflected in real-time during the next catalog sync."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1120",
+      "title": "Enhance Billing Accuracy with Async Worker in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "async",
+        "serp",
+        "revenue",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces an asynchronous billing mechanism for the SERP worker to ensure accurate revenue capture even when clients disconnect (HTTP 499). By implementing a placeholder billing strategy and using a background thread to post records, the system guarantees that charges are applied correctly without increasing response times. This change aims to prevent revenue loss while maintaining performance integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#444",
+      "title": "Improve Microsoft Teams Error Messaging in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "microsoft-teams",
+        "error-handling",
+        "user-experience",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/444",
+      "summary": "This update enhances the error messaging for Microsoft Teams when a personal account is used. Instead of vague error messages, users will now receive clear instructions to reconnect with a work or school account. This change aims to improve user experience by reducing confusion around authorization issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#168",
+      "title": "Unify User Page Styles for Consistency in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "refactor",
+        "frontend",
+        "ui",
+        "design",
+        "components"
+      ],
+      "public": false,
+      "summary": "This update refactors the `/user/*` pages by introducing shared components for padding, headings, and card radius. Key changes include the addition of `PageShell` and `PageHeading` components, which standardize layout and typography across various user pages. The result is a more cohesive visual experience without altering any business logic."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1028",
+      "title": "Enhance Chat Layout with Menu Alignment and Connector Strip in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "chat",
+        "mobile",
+        "layout",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1028",
+      "summary": "This update improves the chat page layout by aligning the mobile hamburger menu button and relocating the composer connector strip. The menu button is now centered within the toolbar, while the connector icons are positioned above the input field, with a disclaimer neatly centered below. These changes enhance usability and visual coherence across devices."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Skills#443",
       "title": "Enhance Image Handling on Publish in Skills 🚀",
       "tags": [
