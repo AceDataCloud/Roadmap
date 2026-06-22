@@ -3,6 +3,84 @@
   "date": "2026-06-22",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1115",
+      "title": "Streamlined Box Uploads to COS in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "upload",
+        "cos",
+        "maestro",
+        "digital-human"
+      ],
+      "public": false,
+      "summary": "This update refactors the upload process for both the maestro and digital-human services, allowing them to upload finished MP4 files directly to COS without size limitations. The previous files-API has been removed, ensuring a more efficient and standardized approach across services. Key environment variables have been updated to support this new configuration, enhancing overall performance and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#216",
+      "title": "Launch Figma OAuth App in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "figma",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "The Figma OAuth app has been successfully registered, and the `oauth-figma` secret is now created in-cluster. This update will restart the auth-backend to load the new FIGMA_OAUTH_CLIENT_ID and SECRET, making the Figma connector visible in the catalog. Other connectors like TikTok and Google remain hidden for now."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#214",
+      "title": "Refresh icons for Microsoft and Google connectors in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "icons",
+        "update",
+        "design",
+        "connectors",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a complete refresh of icons for nine connectors, aligning with the recent redesigns from Microsoft and Google. The Microsoft Fluent icons have been updated for Excel and Teams, while Google Workspace connectors now feature the new gradient icons. These changes enhance visual consistency and modernize the user interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1116",
+      "title": "Fix namespaced skill slug handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "aichat2",
+        "skills",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical bug affecting namespaced skill slugs by ensuring that the asset bundle and sandbox SKILL_DIR paths align correctly. A new function, `sandboxSkillSlug`, strips slashes from skill slugs to prevent path mismatches, which previously led to script resolution failures. Comprehensive tests confirm that the fix is effective without impacting single-segment slugs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#215",
+      "title": "Set up Figma and TikTok OAuth secrets in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "deployment",
+        "oauth",
+        "backend",
+        "infrastructure"
+      ],
+      "public": false,
+      "summary": "This update pre-wires the production deployment for Figma and TikTok OAuth connectors, allowing for easier integration once the OAuth apps are registered. The changes include modifications to the create-secrets.sh script and the deployment.yaml file, ensuring that the necessary Kubernetes secrets can be created seamlessly. Pods will remain healthy until the secrets are available, keeping the connectors hidden in the meantime."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1113",
       "title": "Enhance Per-Call Cost Reporting in Platform Service 🚀",
       "tags": [
