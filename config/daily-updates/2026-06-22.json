@@ -3,6 +3,153 @@
   "date": "2026-06-22",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Skills#443",
+      "title": "Enhance Image Handling on Publish in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "image-upload",
+        "cdn",
+        "publish",
+        "enhancement",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/443",
+      "summary": "This update introduces automatic re-hosting of external images for CSDN, Medium, and Bilibili during the publishing process. Each platform's images are now uploaded to their respective CDNs, ensuring articles are not rejected due to hotlinking issues. The implementation includes graceful degradation for image upload failures, enhancing the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#442",
+      "title": "Enhance Bilibili Draft Management & Medium Auto-Retry in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "bilibili",
+        "medium",
+        "drafts",
+        "auto-retry",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/442",
+      "summary": "This update introduces new commands for managing Bilibili drafts, allowing users to list and delete drafts to avoid hitting the 999 draft limit. Additionally, it implements an auto-retry mechanism for Medium's transient 403 errors, ensuring smoother operations when fetching drafts. These enhancements improve user experience and reliability in the Skills area."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1119",
+      "title": "Fix token mapping for LinkedIn and Reddit in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "tokens",
+        "linkedin",
+        "reddit",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update resolves the issue where the LinkedIn and Reddit tokens were not correctly mapped in the worker's environment variable configuration. The missing mappings led to empty access tokens and subsequent API errors. With these fixes, both services are now properly authenticated and operational, ensuring seamless integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#219",
+      "title": "Fix OAuth Scope Fallback for Connectors in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "oauth",
+        "testing",
+        "connectors",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where Microsoft Teams was not receiving the correct Chat scopes during reconnections. The fix ensures that when no explicit scopes are provided, the system defaults to the connector's declared permissions instead of the adapter's base scopes. Additionally, two new tests have been added to verify the fallback behavior and scope narrowing functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1027",
+      "title": "Optimize Memory Usage for Mobile Safari in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "memory",
+        "optimization",
+        "safari",
+        "transcript",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1027",
+      "summary": "This update implements critical memory optimizations to prevent out-of-memory crashes in mobile Safari when rendering large transcripts. Key changes include limiting the number of rendered events and truncating oversized content, ensuring smoother performance during extensive sessions. These adjustments aim to enhance user experience by maintaining stability across devices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1118",
+      "title": "Fix HTTP Port Binding for Serp Worker in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "deployment",
+        "kubernetes",
+        "serp",
+        "environment"
+      ],
+      "public": false,
+      "summary": "This update explicitly sets the `HTTP_PORT` environment variable to `8000` in both production and test deployments. This change ensures that newly built Serp images bind to the correct port, preventing crash loops and allowing for successful health checks. As a result, the `/serp/google` endpoint now returns the expected cost data, enabling the full functionality of the service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#441",
+      "title": "Streamlined Curl Auth for Skills in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "curl",
+        "auth",
+        "skills",
+        "bugfix",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/441",
+      "summary": "This update replaces Bash arrays with a more portable syntax for curl authentication headers across 11 skills, ensuring compatibility with sh/dash environments. The changes enhance reliability in executing API calls without syntax errors, improving overall functionality. No frontmatter or scope changes were made."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#218",
+      "title": "Launch LinkedIn OAuth Integration in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "linkedin",
+        "backend",
+        "authentication",
+        "integration"
+      ],
+      "public": false,
+      "summary": "The LinkedIn OAuth app has been successfully registered, and the necessary secrets have been created in the cluster. Key changes include updates to the deployment configuration and the creation of a script to manage the LinkedIn OAuth secrets. This integration allows users to authenticate via LinkedIn, enhancing the authentication options available in the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1117",
+      "title": "Refactor deploy directory names for clarity in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "deploy",
+        "docker",
+        "clarity"
+      ],
+      "public": false,
+      "summary": "The box-deploy directories have been renamed to reflect the actual service names, enhancing clarity and reducing confusion. The changes include renaming `gpu-box` directories to `platform-service-maestro-worker` and `platform-service-digitalhuman-worker`. All relevant Docker compose files and documentation have been updated accordingly, ensuring that the services validate and run smoothly under their new names."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthBackend#217",
       "title": "Align Figma OAuth Scopes for Project Metadata in Backend 🚀",
       "tags": [
