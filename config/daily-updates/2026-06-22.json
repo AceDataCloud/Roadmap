@@ -1,0 +1,22 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-06-22",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1113",
+      "title": "Enhance Per-Call Cost Reporting in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "api",
+        "features",
+        "workers",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update extends the per-call cost feature to all remaining billed generation providers across 13 task workers, ensuring a consistent API response for partner settlement ledgers. Key changes include the introduction of a read-only fetchPrice method and embedding cost information into the success results of each worker. The implementation follows a proven pattern, enhancing billing accuracy without impacting response times."
+    }
+  ]
+}
