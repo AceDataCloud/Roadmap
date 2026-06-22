@@ -3,6 +3,199 @@
   "date": "2026-06-22",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1123",
+      "title": "Urgent fixes for health endpoint and image pull in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "platform-service",
+        "kubernetes",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update addresses two critical issues in the platform-scheduler. The `/health` endpoint is now exempt from internal token authentication, preventing Kubernetes liveness probe failures. Additionally, the image pull secret has been corrected to use the existing `docker-registry`, ensuring smooth future deployments without `ImagePullBackOff` errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#392",
+      "title": "Enhance CLI with glm-5.2 model in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "update",
+        "cli",
+        "aichat",
+        "models"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/392",
+      "summary": "This update adds the `glm-5.2` model to the CLI's `MODELS` list, ensuring it aligns with the latest upstream changes in the `aichat` API. The modification was made in the `output.py` file, where `glm-5.2` was inserted before `glm-5.1`. This enhancement improves the model selection available for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#735",
+      "title": "Enhance Scheduled Tasks Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "aichat2",
+        "backend",
+        "nexior"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive developer guide for the `/aichat2/scheduled-tasks` API in Chinese. It covers feature overviews, a Nexior UI walkthrough, and detailed API references for all six actions, along with scheduling types and template variables. This addition aims to improve accessibility and understanding for developers utilizing scheduled tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1030",
+      "title": "Enhance Chat with Scheduled Tasks Management in Nexior 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "chat",
+        "ui",
+        "i18n",
+        "tasks"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1030",
+      "summary": "This update introduces a new scheduled tasks management page within the chat interface, allowing users to create, monitor, and manage AI-powered scheduled tasks. Key features include a task list with detailed status, a creation dialog for various scheduling options, and a run history drawer for tracking task performance. The implementation also includes extensive internationalization support across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#398",
+      "title": "Enhance Catalog Model Source & Service Resolution in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "bugfix",
+        "documentation",
+        "services",
+        "models",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/398",
+      "summary": "This update addresses two critical bugs found during post-deploy testing of the live documentation for the MCPs. The `list_services` function now accommodates pagination, ensuring all services are correctly resolved, while the model listing functions have been updated to source from the full catalog, enhancing accessibility to all modalities. All changes have been verified across 11 tools, ensuring robust functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1122",
+      "title": "Introducing a New Webhook Scheduler Microservice in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "webhooks",
+        "microservice",
+        "scheduler",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "We've launched the `platform-scheduler`, a versatile webhook scheduler that triggers signed HMAC webhooks based on various scheduling options. This microservice is designed to enhance the functionality of aichat2 and will also support future features like Reminders. Key components include a Fastify API server and a Poll worker, ensuring robust performance and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1121",
+      "title": "Seamless Real-Person Asset Enrollment in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "seedance",
+        "ephone",
+        "backend",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces a hidden backend logic for transparent real-person asset enrollment in Seedance, allowing images to be registered as assets without changing the external request/response format. The feature is disabled by default, ensuring no impact on current operations, while providing a safer and more efficient way to handle image URLs. New environment variables have been added to manage this functionality effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#397",
+      "title": "Launch of Public Zero-Install MCP for AceData Docs in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docs",
+        "mcp",
+        "public",
+        "zero-install",
+        "release"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/397",
+      "summary": "The new public zero-install Model Context Protocol (MCP) for AceData Docs is now live at https://docs.mcp.acedata.cloud/mcp. This MCP encapsulates the entire AceData Cloud catalog, including documentation, API specs, models, pricing, and code examples, all accessible without an API token. Key tools have been introduced to enhance user interaction with the documentation and services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#170",
+      "title": "Skip Billing for Scheduled Tasks Management in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "billing",
+        "scheduled-tasks",
+        "api",
+        "management",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces a billing-skip entry for the `/aichat2/scheduled-tasks` management endpoints in `can_skip_check.py`. The changes ensure that create, read, update, and delete operations for scheduled tasks are not billed, as the actual LLM costs are recorded separately. This mirrors existing patterns for other endpoints, enhancing consistency across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#734",
+      "title": "Enhance scheduled-tasks with aichat2 API rows in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "api",
+        "scheduled-tasks",
+        "backend",
+        "aichat"
+      ],
+      "public": false,
+      "summary": "This update introduces two new API rows for the scheduled-tasks feature, enhancing the aichat service. The user-facing CRUD management endpoint and a virtual internal row are now registered, ensuring consistent billing and access policies. This change improves the functionality of scheduled tasks, allowing for better tracking and management of API usage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#733",
+      "title": "Introducing a Public Document Search Endpoint in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "api",
+        "search",
+        "backend",
+        "docs"
+      ],
+      "public": false,
+      "summary": "This update adds a new public scoped document search endpoint to the AceData Docs MCP, allowing users to perform searches on public documents without compromising privacy. Key features include strict input validation, a limit on results, and enhanced API filtering options. The implementation ensures that only relevant translation content is matched, significantly improving the search functionality while maintaining security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#59",
+      "title": "Weekly Creator Fee Buyback Update in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "buyback",
+        "transactions",
+        "updates",
+        "transparency"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/59",
+      "summary": "This update introduces a new weekly creator fee buyback transaction for June 23, 2026. A total of approximately $29.75 was swapped for 57,116 ACE through the Jupiter Aggregator v6, enhancing our buyback history. The transaction details are now recorded on-chain for transparency and verification."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#138",
       "title": "Finalize Chat Scheduling Plan in Index 🚀",
       "tags": [
