@@ -3,6 +3,168 @@
   "date": "2026-06-23",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Index#139",
+      "title": "Introducing Universal Upstream Failover Design in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "failover",
+        "router",
+        "design",
+        "documentation",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive design for a universal upstream failover router, allowing automatic retries on alternative channels without altering the external route. Key changes include a robust architecture that maintains billing integrity and ensures high performance through a Go-based reverse proxy. The documentation covers the implementation details, including service code, gateway modifications, and deployment strategies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1032",
+      "title": "Enhance Scheduled Tasks UI and Fix API Hang in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "backend",
+        "fix",
+        "improvement",
+        "chat"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1032",
+      "summary": "This update improves the Scheduled Tasks user interface by increasing input sizes and prioritizing the Prompt field. Additionally, the model dropdown now dynamically lists all enabled chat services, enhancing usability. A critical backend fix was applied to resolve an API hang issue caused by a misconfigured service, ensuring faster response times."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1128",
+      "title": "Enhance Task Retrieval for Digital Humans in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "api",
+        "nexior",
+        "update",
+        "digitalhuman"
+      ],
+      "public": false,
+      "summary": "This update introduces new functionalities to the `/digital-human/tasks` endpoint, allowing for richer task retrieval options. Users can now access their digital-human history through `retrieve` and `retrieve_batch` actions, enhancing the consumer experience in Nexior. The changes include improved task listing capabilities and robust filtering options, ensuring user data privacy and integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1033",
+      "title": "Introducing Digital Human Talking-Head Feature in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "digitalhuman",
+        "video",
+        "ui",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1033",
+      "summary": "This update adds a new talking-head scenario to the Digital Human service, allowing users to create lip-synced videos from a face and voice input. Key features include a configurable panel for face and voice sources, a voice cloning option, and a recent history panel. The implementation ensures a seamless user experience with robust error handling and internationalization support across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#223",
+      "title": "Enhance Skill Backfill Process in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "backend",
+        "skills",
+        "cronjob",
+        "automation",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update integrates the `backfill_connector_skills` command into the skill-catalog-sync CronJob, ensuring that newly published skills are automatically installed for users who connected before the skill was available. This change addresses a systemic issue where users were left without access to essential skills, improving the overall user experience. The implementation guarantees that the backfill process runs sequentially after skill synchronization, eliminating race conditions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1034",
+      "title": "Revamped Maestro Logo for a Sleek Look in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "logo",
+        "design",
+        "update",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1034",
+      "summary": "The Maestro logo has been redesigned to feature a polished conducting-waves icon, replacing the old flat design. The new logo incorporates a white play triangle with radiating arcs on a vibrant gradient, aligning with the overall style of Nexior's video scenarios. This change is reflected in the `MAESTRO_LOGO` constant, ensuring a seamless update without backend modifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1130",
+      "title": "Revert high-res image routing for gpt-image-2 in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "revert",
+        "image-processing",
+        "gpt",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update reverts the high-resolution variant routing and size inference for the `gpt-image-2` model, consolidating all traffic to the base variant. Key files related to the 4K variant and size inference have been removed, ensuring a more stable upstream connection. The alias rewrite for `gpt-image-2` remains intact, maintaining functionality for image generations and edits."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1129",
+      "title": "Enhance Nano Banana Support in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "bananarouter",
+        "api",
+        "integration",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update integrates the BananaRouter worker to serve Nano Banana image models through the native Gemini API. A new `POST /nano-banana` endpoint has been added, allowing seamless traffic redirection from the existing mountsea service without requiring client changes. The implementation ensures that the request and response structures remain consistent, facilitating a smooth transition for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#737",
+      "title": "Enable Maestro as a Default Feature in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "maestro",
+        "backend",
+        "integration",
+        "default"
+      ],
+      "public": false,
+      "summary": "This update registers Maestro as a default feature in the platform, ensuring it is enabled across all sites. The integration allows users to access Maestro seamlessly, mirroring the functionality of other video scenarios. Existing sites will automatically gain access upon their next visit, while new sites will have it available immediately."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1031",
+      "title": "Fix chat rendering issue with Element Plus components in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "chat",
+        "element-plus",
+        "fontawesome",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1031",
+      "summary": "This update resolves a rendering issue on the Scheduled Tasks page by registering the necessary Element Plus and FontAwesome components. The fix includes the addition of 15 `el-*` components and the `FontAwesomeIcon`, ensuring that the page displays correctly instead of showing a blank area. All components have been verified for proper registration and functionality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1126",
       "title": "Boost SERP Production to 6 Replicas and Enhanced Resources in Platform Service 🚀",
       "tags": [
