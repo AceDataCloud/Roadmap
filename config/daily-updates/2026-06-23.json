@@ -3,6 +3,22 @@
   "date": "2026-06-23",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1126",
+      "title": "Boost SERP Production to 6 Replicas and Enhanced Resources in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "serp",
+        "deployment",
+        "resources",
+        "production",
+        "scaling"
+      ],
+      "public": false,
+      "summary": "This update increases the SERP production pods from 2 to 6 replicas and raises the CPU and memory resources to match the currently running configuration. This change prevents the manifest from reverting to a smaller, less efficient setup, which could lead to upstream stalls and errors. The new settings are based on proven performance, ensuring stability and reliability in production."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1125",
       "title": "Updated GPT-Image-2 Provider Rankings in Platform Service 🚀",
       "tags": [
