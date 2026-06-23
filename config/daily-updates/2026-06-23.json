@@ -1,0 +1,54 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-06-23",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1125",
+      "title": "Updated GPT-Image-2 Provider Rankings in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "config",
+        "update",
+        "gpt-image-2",
+        "provider",
+        "ranking"
+      ],
+      "public": false,
+      "summary": "This update reprioritizes the GPT-Image-2 provider selection, placing OpenAIHK at the top to enhance reliability and reduce outages. The rank adjustments include moderate changes to avoid traffic concentration while maintaining a fallback option with Xiaojingai. All related configuration files have been successfully modified and validated."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#736",
+      "title": "Renamed documentation for AceDataCloud tools in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "rename",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "The documentation for the AceDataCloud MCP has been updated, including a rename from `acedata-docs-mcp` to `acedatacloud-docs-mcp`. Key changes include updates to the source file and the search module's docstring, ensuring consistency across tool names and product references. Additionally, database entries have been adjusted to maintain old URLs during the transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#399",
+      "title": "Enhance Brand Consistency by Renaming Tools in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "refactor",
+        "branding",
+        "docs",
+        "tools",
+        "breaking-change"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/399",
+      "summary": "This update implements a comprehensive renaming of all `acedata_*` tools to `acedatacloud_*` for improved brand consistency. Key changes include updates to tool names, MCP prompts, and product names, while maintaining existing URLs and environment variables. Clients using the previous tool names will need to update their references accordingly."
+    }
+  ]
+}
