@@ -1,0 +1,70 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-06-24",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1131",
+      "title": "Enhance Claude Routing Reliability in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "routing",
+        "reliability",
+        "testing",
+        "openai",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the routing for Maestro/Claude by preventing the checker from relying on the unreliable `openaihk` fallback. A new rolling failure score mechanism has been implemented to demote flaky upstreams, ensuring better performance and reliability. Additionally, unit tests have been added to cover the new demotion and recovery thresholds."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1133",
+      "title": "Disable Internal Retries for Bananarouter in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "bananarouter",
+        "failover",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update disables the internal retry mechanism for the bananarouter when it operates behind the failover-router, preventing potential stacking of retries. The change is gated by an environment variable and will not affect current behavior until deployed. Future plans include applying the same flag for cortex and ephone once onboarded."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#171",
+      "title": "Enhance failover-router support in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "enhancement",
+        "gateway",
+        "failover",
+        "routing",
+        "attribution"
+      ],
+      "public": false,
+      "summary": "This update introduces support for the failover-router, allowing the `/test/failover` path to be included in the `PUBLIC_PATHS`. Additionally, the `get_deducted_amount` function now utilizes the `x-served-channel` response header for channel attribution when the worker payload lacks channel information. These changes enhance routing capabilities and improve channel tracking without altering existing deduction paths."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1132",
+      "title": "Introducing a Config-Driven Failover Router in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "failover",
+        "router",
+        "streaming",
+        "api",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update implements a new failover-router that acts as a config-driven, streaming reverse proxy, enhancing the resilience of the AceDataCloud API gateway. It automatically retries upstream channels on connection-level errors, ensuring seamless service continuity without manual intervention. The router supports hot-reloading of configurations and includes a live demo for validation."
+    }
+  ]
+}
