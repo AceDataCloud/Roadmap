@@ -3,6 +3,417 @@
   "date": "2026-06-25",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#542",
+      "title": "Seamless Google One Tap Sign-In Experience in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "google",
+        "authentication",
+        "frontend",
+        "user-experience",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces the Google One Tap sign-in feature to the platform, allowing users to log in or sign up with a single tap, enhancing user experience significantly. Key changes include the addition of a new utility for lazy-loading Google Identity Services and modifications to the authentication operator to handle Google ID-token JWTs. The implementation ensures smooth functionality even in cases where Google services are unreachable, maintaining account continuity for returning users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1149",
+      "title": "Enhanced Router-Managed Mode for Channel Workers in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "router",
+        "workers",
+        "security",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update extends the router-managed execute-only mode to ten additional channel workers, ensuring they can operate as failover routers. Key changes include the introduction of a new `router_managed.ts` file for verification, modifications to existing handlers and persisters, and the implementation of a shared HMAC secret for enhanced security. All changes maintain backward compatibility and have been verified for uniformity across services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#531",
+      "title": "Update @unhead/vue to 3.1.6 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "update",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update bumps the @unhead/vue package from version 3.1.4 to 3.1.6. Key improvements include performance enhancements and bug fixes, particularly around the bundler and client use head functionality. These changes aim to optimize the overall performance of the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#533",
+      "title": "Update ethers to version 6.17.0 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "frontend",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update bumps the ethers library from version 6.16.0 to 6.17.0, introducing several enhancements including request rate throttling for calls and provider support. Additionally, it disables the AlchemyProvider for tests and updates various API endpoints. These changes aim to improve performance and reliability in the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#541",
+      "title": "Clean up accidental symlink in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "cleanup",
+        "git",
+        "frontend",
+        "docker"
+      ],
+      "public": false,
+      "summary": "This update removes an accidentally committed `node_modules` symlink that pointed to a machine-specific path, which caused issues for fresh clones. The `.gitignore` file has been updated to ensure that such symlinks are ignored in the future. The change enhances the project's reliability without affecting Docker builds or existing functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#743",
+      "title": "Stop Advertising Deprecated APIs in Backend 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "api",
+        "deprecation",
+        "service",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update modifies the ServiceSerializer to exclude Deprecated APIs from the service's API list, aligning with the documented design intent. The change ensures that while Deprecated APIs remain callable and billed, they are no longer advertised, improving the user experience on the pricing page. New tests have been added to confirm the functionality, and existing integrations remain unaffected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#398",
+      "title": "Sync Seedance CLI with Latest Features in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "update",
+        "features",
+        "documentation",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/398",
+      "summary": "This update aligns the Seedance CLI with the latest OpenAPI schema from AceDataCloud/Docs. Key changes include the addition of new models, support for 4k resolution, and enhanced video generation commands with new reference media options. Documentation and tests have also been updated to reflect these changes, ensuring a smoother user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#742",
+      "title": "Enhance Seedance Pricing with New Resolutions in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "video",
+        "backend",
+        "updates",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces new pricing rules for the Seedance video generation service, adding support for 4k and mini resolutions (480p/720p). The changes ensure accurate billing by implementing a first-match-wins ordering system for model resolutions. All modifications have been thoroughly tested, with 820 tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#224",
+      "title": "Streamlined Google One Tap Login Integration in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "google",
+        "authentication",
+        "backend",
+        "security",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces the backend implementation for Google One Tap login, allowing users to authenticate via a single tap using an ID-token. Key changes include the addition of a new verification module and updates to existing authentication flows, ensuring seamless integration with current user accounts. Comprehensive tests have been added to validate the new functionality and ensure security measures are in place."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#142",
+      "title": "Implement Google One Tap Login for Seamless Access in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "google",
+        "login",
+        "authentication",
+        "docs",
+        "ux"
+      ],
+      "public": false,
+      "summary": "This update introduces the Google One Tap login feature to platform.acedata.cloud, allowing users to register or log in with a single click and no redirects. Key changes include the addition of a new documentation plan and backend verification enhancements to ensure a smooth user experience. The implementation aims to lower the registration barrier significantly, leveraging existing Google client IDs for seamless integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#539",
+      "title": "Fix document sidebar and balance loading issue in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "ssr",
+        "frontend",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update resolves issues with the document sidebar and balance display on SSR-rendered document pages. The sidebar was previously stuck in a loading state, and the balance was frozen at zero due to missed client-side effects during the hydration process. The fix ensures that necessary state updates are executed correctly when documents are restored from SSR, improving user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#540",
+      "title": "Rollback SSR for Humans to Restore Functionality in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "rollback",
+        "ssr",
+        "csr",
+        "frontend",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update reverts the recent server-side rendering (SSR) cutover for human users, restoring client-side rendering (CSR) to ensure the functionality of the developer portal's 'Try' forms. The rollback addresses critical issues where dropdowns were unresponsive under SSR, impacting user experience across all frontends. The SSR will remain available for crawlers and users opting in via specific features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#738",
+      "title": "Align Seedance API with Official 2.0 Spec in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "documentation",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update aligns the public `/seedance/videos` OpenAPI with the official Volcengine Seedance 2.0 specification. Key changes include the addition of `audio_url` and `video_url` for multimodal inputs, updates to model enums, and adjustments to duration and resolution limits. All modifications are non-breaking and aim to enhance the API's functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1146",
+      "title": "Enhance Worker Functionality with Router-Managed Mode in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "workers",
+        "router",
+        "billing",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces a router-managed execute-only mode for the worker side of the task-aware failover system, enhancing the functionality of the bananarouter, openaihk, and ttapi workers. Key changes include the addition of a new verification process for HMAC handshakes, ensuring that workers operate without side effects, thus preventing double-billing. The implementation is inert by default, maintaining normal traffic flow while providing a robust framework for future enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#396",
+      "title": "Introducing the Gemini AI CLI Package in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "gemini",
+        "cli",
+        "ai",
+        "feature",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/396",
+      "summary": "This update adds a new standalone Gemini CLI package, enabling users to interact with the Gemini AI service. Key features include commands for chat completions, text-to-video generation, and task management, all following the established monorepo pattern. The package supports various models and options, enhancing the user experience for AI-driven tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1148",
+      "title": "Enhance Ephone Seedance Parameters in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "seedance",
+        "ephone",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update aligns the Ephone Seedance worker's request parameters with the official Volcengine Seedance 2.0 specifications. Key changes include adding a new model, expanding valid resolutions to include 4k, and widening the duration cap from 12 to 15 seconds. These adjustments ensure better compatibility and performance without breaking existing functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1134",
+      "title": "Enhance real-person media enrollment for Ephone in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "seedance",
+        "ephone",
+        "media",
+        "enrollment"
+      ],
+      "public": false,
+      "summary": "This update fixes the enrollment process for real-person media in Seedance 2.0 by switching to the Ephone-authorized Volcengine project 'nbdz'. Key improvements include support for multimodal audio and video inputs, capped media counts, and concurrent enrollment. Additionally, it addresses asset management issues to prevent leaks and ensure efficient processing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1135",
+      "title": "Enhance Suno Prompt Handling in Platform Service 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "suno",
+        "ttapi",
+        "validation",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of Suno cover style prompts by mapping the Suno `style` to TTAPI `gpt_description_prompt` in various modes. It introduces action-specific validations for `cover` and `extend` actions, ensuring required inputs are properly checked and whitespace-only text is treated as missing. These changes enhance the robustness of the prompt validation process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1147",
+      "title": "Boost Suno Worker Memory to Prevent OOM Kills in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "memory",
+        "cpu",
+        "suno",
+        "stability",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update increases the memory and CPU resources for the `platform-service-ttapi-suno` container from 400Mi to 1Gi and from 100m to 1000m, respectively. This change addresses a recent 502 error storm caused by OOMKilled pods, ensuring better stability and performance for the service. The adjustments have already been applied live and confirmed to resolve the issue with no further restarts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#538",
+      "title": "Hide Deprecated Endpoints from Service Page in Frontend Web 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "api",
+        "bugfix",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update filters out deprecated legacy endpoints from the public service detail page, specifically for the Fish service. The change ensures that deprecated APIs do not appear in the APIs list or pricing tabs, preventing empty pricing cards from being displayed. The implementation is type-safe and aligns with existing patterns in the codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1145",
+      "title": "Introducing Task-Aware Async Orchestrator in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "async",
+        "orchestrator",
+        "failover",
+        "mongodb",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces a task-aware async orchestrator to the failover-router, enhancing its ability to manage asynchronous requests. Key changes include the addition of a shared MongoDB tasks collection, improved error handling, and the implementation of a durable task store. These enhancements ensure better reliability and performance for async operations within the Platform Service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#394",
+      "title": "Confirmed no-op for fish docs sync in Clis 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "documentation",
+        "sync",
+        "review",
+        "no-op"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/394",
+      "summary": "This review verified that the monorepo does not require synchronization for the Fish CLI, as it is not mapped in the sync configuration. The findings confirmed the absence of a `fish/` package and related commands, ensuring the repository remains aligned with the current structure. No code changes were necessary, maintaining clarity in documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#740",
+      "title": "Clarify Image Input for Gemini in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "gemini",
+        "api",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update enhances the documentation for the Gemini Chat Completion API by clarifying the image input format. It specifies that images can be provided as either a publicly accessible URL or a base64 data URI, while correcting misconceptions about the `media_type` field. The changes improve user understanding and ensure alignment with OpenAI and Google Gemini standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1144",
+      "title": "Normalize External Image URLs to Data URIs in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "image",
+        "security",
+        "update",
+        "data-uri",
+        "chat-completions"
+      ],
+      "public": false,
+      "summary": "This update introduces a normalization process for external image URLs, converting them into base64 data URIs for chat completion requests. The change enhances compatibility with various models, ensuring consistent behavior regardless of the upstream provider. Additionally, it implements strict security measures to mitigate SSRF risks while maintaining functionality for trusted CDN sources."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#739",
+      "title": "Add X402 Pricing Guide for API Calls in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "x402",
+        "pricing",
+        "api",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new document detailing the pricing structure for X402 API calls, specifically how credits convert to USDC. The guide clarifies that X402 pricing is based on a fixed rate of 0.095215 USDC per credit, ensuring no additional premium for using X402. Links to this new pricing guide have been added to existing integration documentation for better accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#741",
+      "title": "Make Voice-Clone Model Creation Free in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cost",
+        "api",
+        "update",
+        "documentation",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update eliminates the cost for creating voice-clone models, reducing the charge from 5 Credits to 0, aligning with Fish Audio's official API. Users will now only incur costs for actual speech synthesis, making the service more accessible. Documentation has been updated to reflect these changes, ensuring clarity for all users."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#141",
       "title": "Detailed Change List for Task-Aware Router v2 in Index 🚀",
       "tags": [
