@@ -3,6 +3,38 @@
   "date": "2026-06-25",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Index#141",
+      "title": "Detailed Change List for Task-Aware Router v2 in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "router",
+        "go",
+        "updates",
+        "platformgateway"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive change list for the v2 task-aware orchestrator design, detailing specific files and functions that require modification. Key additions include new modules for the failover-router in Go, updates to three channel workers, and adjustments to the PlatformGateway. The documentation is purely informational, with no impact on existing code or production traffic."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#140",
+      "title": "Revamped Async Orchestrator Design in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "async",
+        "orchestrator",
+        "design",
+        "failover",
+        "router"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive design for the task-aware async orchestrator in the failover-router. Key changes include the router managing public task IDs and callbacks, ensuring synchronous attempts for downstream workers, and implementing robust error handling. The design aims to enhance reliability and traceability in async operations, addressing limitations of the previous version."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#534",
       "title": "Update vue-i18n to version 11.4.6 in Frontend Web 🚀",
       "tags": [
