@@ -3,6 +3,134 @@
   "date": "2026-06-25",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1045",
+      "title": "Exciting New Seedance 2.0 Features in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "seedance",
+        "features",
+        "ui",
+        "api",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1045",
+      "summary": "This update introduces support for Seedance 2.0 multimodal controls in Nexior, including new model options, enhanced duration selectors, and reference media controls for images, audio, and video. The API has been updated to accommodate these changes, ensuring a seamless user experience across 18 locales. Validation checks confirm the integrity of the new features and their compliance with backend contracts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1150",
+      "title": "Enhance Image Routing for Failover in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "deployment",
+        "routing",
+        "failover",
+        "security",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update formalizes the deployment of the task-aware image failover-router, enhancing routing capabilities for `/images/edits` and `/images/generations`. Key changes include the addition of new YAML configurations, the introduction of a required internal secret for secure operations, and comprehensive documentation for rollout procedures. The default traffic remains unchanged, ensuring a smooth transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1046",
+      "title": "Enhance GitHub Copilot Integration in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "ui",
+        "seo",
+        "coding-bridge",
+        "github-copilot"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1046",
+      "summary": "This update introduces the GitHub Copilot provider to Nexior's Coding Bridge UI, ensuring it is properly surfaced in provider types and fallback labels. It also preserves Copilot in history replay and deep-link restoration, while avoiding Claude branding for Copilot history rows. Additionally, SEO copy has been updated to reflect the inclusion of GitHub Copilot."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#745",
+      "title": "Localized Maestro Introduction Pages Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "localization",
+        "backend",
+        "html",
+        "maestro",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update introduces the missing HTML landing pages for the Maestro service across all non-zh locales, ensuring consistency with the existing zh-CN page. Key elements such as API identifiers and pricing remain unchanged, while the zh-CN page has been cleaned up for better formatting. Validation confirms that all localized pages are now properly structured and rendered correctly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#545",
+      "title": "Suppress One Tap during Auth Callback in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "auth",
+        "google",
+        "frontend",
+        "fix",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update resolves a regression where Google One Tap would prompt users after they logged in via the auth callback. The changes ensure that One Tap is suppressed on specific auth routes, preventing unnecessary prompts for users who have just authenticated. Public pages remain unaffected, maintaining a smooth user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#33",
+      "title": "Exciting New GitHub Copilot Provider Integration in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "feature",
+        "copilot",
+        "integration",
+        "coding-bridge"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/33",
+      "summary": "This update introduces a GitHub Copilot provider powered by the ACP protocol, enhancing the Coding Bridge capabilities. Key features include live session updates, permission request routing, and improved subprocess management. The integration has been thoroughly validated with all tests passing successfully, ensuring a robust addition to the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#544",
+      "title": "Enhance API Try-It Form for Multi-Modal Input in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "api",
+        "documentation",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update improves the API documentation's Try-It form by allowing users to input multi-modal content as either a string or an array. A new dropdown enables switching between input types, with existing array editing capabilities reused for array inputs. This change enhances user experience and ensures that fields like `content` and `prediction` can now directly construct multi-modal requests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#543",
+      "title": "Streamline Service Detail by Removing Redundant Filter in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "cleanup",
+        "performance",
+        "maintenance"
+      ],
+      "public": false,
+      "summary": "This update removes the client-side Deprecated filter from the Service Detail page, as the backend now handles this exclusion. The change simplifies the code by ensuring that Deprecated-stage APIs are filtered out upstream, enhancing performance and maintainability. A comment has been added to prevent future reintroduction of the filter, ensuring clarity for developers."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#542",
       "title": "Seamless Google One Tap Sign-In Experience in Frontend Web 🚀",
       "tags": [
