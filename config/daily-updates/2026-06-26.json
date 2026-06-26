@@ -1,0 +1,71 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-06-26",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1151",
+      "title": "Enhance Resilience with Agent Retries and Fish TTS Chunking in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "resilience",
+        "agent",
+        "tts",
+        "error-handling",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update improves the resilience of the agent by implementing error classification and exponential backoff for retries, ensuring that transient failures do not lead to hard failures. Additionally, Fish TTS now handles long texts by chunking them into manageable segments, enhancing audio processing efficiency. These changes aim to reduce job failures and improve overall system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#400",
+      "title": "Enhance chat command with new options in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "grok",
+        "cli",
+        "update",
+        "features",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/400",
+      "summary": "The grok CLI's chat command has been updated to include six new parameters, aligning it with the OpenAPI specification. Key additions include options for service tiers, log probabilities, and token limits, enhancing the command's functionality. The README has been updated to reflect these changes, and new tests have been implemented to ensure proper functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#746",
+      "title": "Updated Example URLs for Grok Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "grok",
+        "backend",
+        "fix",
+        "openapi"
+      ],
+      "public": false,
+      "summary": "This update replaces outdated example URLs in the Grok documentation and OpenAPI specifications with verified assets. The changes affect 37 files across multiple languages, ensuring users can access valid resources without encountering 404 errors. A follow-up CI check will be implemented to prevent similar issues in the future."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#143",
+      "title": "Streamline Announcement Management in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "announcement",
+        "management",
+        "api",
+        "automation",
+        "skills"
+      ],
+      "public": false,
+      "summary": "This update introduces a new skill and helper script for managing in-product announcements on the AceData Cloud platform. The script allows users to list, create, translate, publish, and delete announcements via the admin API, enhancing the efficiency of the announcement process. Additionally, it includes a confirm-before-publish workflow to ensure careful management of outward-facing content."
+    }
+  ]
+}
