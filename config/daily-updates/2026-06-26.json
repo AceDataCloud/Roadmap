@@ -3,6 +3,55 @@
   "date": "2026-06-26",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#402",
+      "title": "Enhance Suno CLI with New Persona and Voice Features in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "suno",
+        "api",
+        "features",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/402",
+      "summary": "This update synchronizes the Suno CLI with the latest persona management and voice-cloning APIs, introducing new commands for listing and deleting personas, as well as creating voices from external recordings. The client API has been extended to support non-POST requests, and the CLI output has been improved for better user experience. Additionally, comprehensive tests have been added to ensure the reliability of the new features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#747",
+      "title": "Update Suno API Audio Limits in Backend 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "api",
+        "suno",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update corrects the character limits for the `prompt`, `style`, and `lyric` fields in the Suno audio generation API documentation. The new limits are now accurately reflected as 500 characters for `prompt`, 200 to 1000 for `style`, and 3000 to 5000 for `lyric`, based on verified sources. These changes enhance clarity for developers using the API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1155",
+      "title": "Fix async task_id acknowledgment issue in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "async",
+        "mongodb",
+        "billing",
+        "suno"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where async requests in the Suno service were timing out without returning a task_id, leading to unnecessary billing. The fix makes the MongoDB task upsert non-blocking, ensuring that clients receive their task_id promptly, even during database delays. This change enhances user experience by preventing wasted credits and aligns billing with actual task completion."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#530",
       "title": "Upgrade Node Types for Better Compatibility in Frontend Web 🚀",
       "tags": [
