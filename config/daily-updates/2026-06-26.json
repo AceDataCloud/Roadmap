@@ -3,6 +3,22 @@
   "date": "2026-06-26",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#546",
+      "title": "Increase upload limit for image generation in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "nginx",
+        "upload",
+        "frontend",
+        "images",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update raises the Nginx client_max_body_size from 20MB to 30MB to accommodate larger image uploads for the studio image-generation feature. Previously, uploads between 20-28MB were rejected with a generic error, preventing users from successfully uploading images. Now, users will receive a clearer JSON error message for uploads exceeding the backend limit of 28MB."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1153",
       "title": "Enhance upstream error logging in Platform Service 🚀",
       "tags": [
