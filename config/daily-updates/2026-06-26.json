@@ -3,6 +3,21 @@
   "date": "2026-06-26",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#530",
+      "title": "Upgrade Node Types for Better Compatibility in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "typescript",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps the @types/node package from version 25.9.3 to 26.0.1, ensuring improved type definitions for Node.js. The changes in package-lock.json and package.json reflect this upgrade, which may enhance compatibility with newer Node.js features and libraries."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1154",
       "title": "Fix timestamp serialization for async image requests in Platform Service 🚀",
       "tags": [
