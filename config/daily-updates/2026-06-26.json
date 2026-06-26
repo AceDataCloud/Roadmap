@@ -3,6 +3,22 @@
   "date": "2026-06-26",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1154",
+      "title": "Fix timestamp serialization for async image requests in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "serialization",
+        "async",
+        "testing",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where asynchronous image requests could not retrieve results due to BSON Date serialization errors. The timestamps for tasks are now stored as epoch floats instead of BSON Dates, ensuring compatibility with the worker's JSON serialization. Regression tests have been added to confirm that all timestamps serialize correctly as numeric values."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#546",
       "title": "Increase upload limit for image generation in Frontend Web 🚀",
       "tags": [
