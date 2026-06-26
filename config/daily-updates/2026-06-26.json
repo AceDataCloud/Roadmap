@@ -3,6 +3,68 @@
   "date": "2026-06-26",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1153",
+      "title": "Enhance upstream error logging in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "logging",
+        "error-handling",
+        "debugging",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the logging of upstream error responses by capturing the full response body along with the traceId. Previously, only a truncated message was logged, which made it difficult to trace errors back to the upstream request_id. Now, developers can easily recover detailed error information from the logs, enhancing debugging capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1152",
+      "title": "Retire Generic Failover Deployment in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cleanup",
+        "deployment",
+        "failover",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update removes the generic `/test/failover` deployment, which was solely used for testing and had no production traffic. Key changes include the deletion of related configuration files and updates to the README to reflect the new state. The task-aware image routes remain active for production use, while the test route is preserved in the binary for local verification."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#144",
+      "title": "Documentation Update for Failover Router in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "failover-router",
+        "deployment",
+        "v1",
+        "v2",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This PR updates the documentation for the failover-router to reflect that versions 1 and 2 have been successfully deployed in Hong Kong. Key changes include marking the status as shipped, reconciling discrepancies between the v1 and v2 design documents, and clarifying the failover status rules. These updates ensure that the documentation aligns with the current operational reality and provides clear guidance for future use."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#532",
+      "title": "Update uuid to version 14.0.1 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "uuid",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update bumps the uuid package from version 14.0.0 to 14.0.1, addressing a bug related to the types condition for node exports. The changes are reflected in both package.json and package-lock.json files, ensuring compatibility and improved functionality. This minor version update enhances the overall stability of the project."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1151",
       "title": "Enhance Resilience with Agent Retries and Fish TTS Chunking in Platform Service 🚀",
       "tags": [
