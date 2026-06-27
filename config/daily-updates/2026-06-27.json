@@ -3,6 +3,309 @@
   "date": "2026-06-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1186",
+      "title": "Enhance Image Model Variants for Better Routing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "routing",
+        "openai",
+        "images",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces OpenRouter-style model-name variants for the OpenAI image failover-router, allowing for improved routing and billing. Key changes include the addition of `gpt-image-2:official` and `gpt-image-2:reverse` aliases, which streamline the request handling process across multiple channels. The routing logic has been updated to ensure that these aliases are normalized correctly, enhancing overall system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1056",
+      "title": "Add every-minute frequency for scheduled tasks in Nexior ⏰",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "scheduling",
+        "i18n",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1056",
+      "summary": "This update introduces a new '每分钟' (every-minute) option for scheduled tasks in Nexior, enhancing the existing scheduling capabilities. Users can now easily select this frequency alongside daily, hourly, and weekly options. The change includes internationalization support across 18 locales, ensuring a seamless experience for all users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1185",
+      "title": "Limit Jitter for Interval Tasks in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "scheduler",
+        "jitter",
+        "performance",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update caps the random jitter for interval scheduled tasks to half of the interval duration, addressing issues with bursty task execution. The change ensures that tasks scheduled at short intervals, like every minute, do not trigger multiple times in quick succession. Validation confirms that the new implementation maintains expected timing for longer intervals while improving consistency for shorter ones."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#42",
+      "title": "Enhance WeChat DB Recovery for Smooth Operations in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "enhancement",
+        "testing",
+        "weixin",
+        "db"
+      ],
+      "public": false,
+      "summary": "This update implements lazy recovery for WeChat DB snapshots, ensuring that history endpoints can recover from startup-time initialization failures without returning 503 errors. Key changes include the addition of on-demand DB startup retries and improved error tracking, which collectively enhance the reliability of the service. Comprehensive regression tests have also been added to validate these improvements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1055",
+      "title": "iOS App Store Entry Now Live on Download Page in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ios",
+        "download",
+        "update",
+        "localization",
+        "frontend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1055",
+      "summary": "The iOS App Store download entry is now enabled on the Nexior mobile download page following successful Apple review. Key updates include a live badge, QR code, and a 'Get it on the App Store' CTA, enhancing user experience and accessibility. Additionally, internationalization updates were made to support 18 locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#520",
+      "title": "Clean Up Dead Scripts and Update Exclusions in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "cleanup",
+        "maintenance",
+        "scripts",
+        "ruff",
+        "codebase"
+      ],
+      "public": false,
+      "summary": "This update removes 15 unreferenced root-level scripts from the PlatformPublisher, streamlining the codebase. Additionally, the `.ruff.toml` file has been pruned to eliminate stale exclusions for scripts that no longer exist. The production entrypoints remain intact, ensuring no disruption to current functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#757",
+      "title": "Revamped Revenue Alliance Hub & Commission Facts in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "update",
+        "revenue",
+        "backend",
+        "nexior"
+      ],
+      "public": false,
+      "summary": "The Revenue Alliance documentation has been significantly enhanced with a newly rebuilt landing page that provides a clear, action-oriented hub for users. Additionally, all commission data across 12 articles has been fact-checked and corrected to reflect accurate thresholds and percentages, ensuring users have access to reliable information. This update aims to improve user engagement and trust in the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/.github#11",
+      "title": "Clean Up Org Profile by Removing Midjourney in .github ✨",
+      "tags": [
+        "github",
+        "pr",
+        ".github",
+        "cleanup",
+        "documentation",
+        "maintenance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/.github/pull/11",
+      "summary": "This update removes all references to Midjourney from the public organization profile, ensuring that outdated information is no longer displayed. Key changes include modifications to the README and generator scripts to prevent Midjourney from resurfacing in the future. The service remains accessible via its API, but the GitHub profile is now up-to-date and accurate."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1184",
+      "title": "Enhance Video Rendering Safety with Local Assets in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "video",
+        "rendering",
+        "safety",
+        "local-assets",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update introduces a critical safety net in the video rendering process by rejecting blank renders and enforcing the use of local media assets. The `preflight()` function now checks for color and motion in videos, ensuring that only valid content is processed. Additionally, documentation has been updated to clarify that all media must be local files, preventing issues with remote URLs leading to blank outputs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#557",
+      "title": "Revamped Admin Health Panel for a Sleek Console Experience in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "admin",
+        "localization",
+        "api"
+      ],
+      "public": false,
+      "summary": "The admin backend health panel has been completely redesigned to enhance user experience. Key updates include the integration of new read-only APIs, a shift from a table UI to KPI cards, and improved localization across multiple languages. Additionally, write controls are now visible but disabled until backend APIs are ready, ensuring a smooth transition for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#756",
+      "title": "Enhance Admin APIs with Upstream Summary and Model Health in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "admin",
+        "backend",
+        "features",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces two new read-only APIs: `GET /api/v1/admin/upstreams/<domain>/summary/` and `GET /api/v1/admin/upstreams/<domain>/models-v2/`, enhancing the admin interface with detailed upstream summaries and model health data. Key improvements include tie-aware aggregation and better handling of provider states, ensuring accurate representation of model health. Validation tests have passed successfully, confirming the stability of these new features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1183",
+      "title": "Fix case sensitivity in model account selection in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "openai",
+        "case-insensitivity",
+        "testing",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where uppercase or mixed-case model names resulted in a 500 error due to case-sensitive account selection. The model handling has been modified to normalize case across the selection path, ensuring that requests like 'GPT-5.5' correctly resolve to their lowercase counterparts. Comprehensive tests have been added to verify the case-insensitivity of model lookups and account selection."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1182",
+      "title": "Enhance Currency Exchange Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "currency",
+        "exchange",
+        "fix",
+        "service",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update removes the hardcoded USD/CNY exchange rate fallback, addressing a customer issue with incorrect charges. The system now fetches live rates from two providers, ensuring more accurate pricing while implementing a fail-closed mechanism. Additional improvements include caching strategies and validation checks to enhance reliability and prevent errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1054",
+      "title": "Limit Voice Call Button to ChatGPT Model in Nexior 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "chat",
+        "voicecall",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1054",
+      "summary": "The voice call button in the chat composer is now restricted to the ChatGPT model group. This change introduces a new capability flag, ensuring that the button is hidden for other model groups like Grok and Gemini. The implementation is backward compatible and maintains the integrity of the user interface across different chat models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#755",
+      "title": "Correct FUZZ Model Attribution to Riffusion in Backend 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "catalog",
+        "backend",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update corrects the attribution of the `producer` for FUZZ music models from AceData to Riffusion. A one-line fix in the catalog utility ensures that the live page reflects the correct provider. Additionally, a new test has been added to verify this change, ensuring that no AceData attribution remains for these models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1179",
+      "title": "Enhance nano-banana multi-channel routing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "routing",
+        "openai",
+        "images",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update integrates the nano-banana models into the existing OpenAI images router, enabling efficient routing through cqtai to br and cortex. Key changes include the addition of new handlers for generations and edits, improved routing logic, and enhanced failover configurations. The deployment ensures robust performance and compatibility with existing systems."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1181",
+      "title": "Prevent Lyrics in Instrumental Generations in Platform Service 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "suno",
+        "instrumental",
+        "api",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update ensures that lyrics are not forwarded as prompts when generating instrumental tracks in both ttapi and openaihk services. A guard has been added to stop lyrics from being sent upstream when the instrumental flag is true, aligning with existing OpenAPI documentation. The changes enhance the accuracy of the generation process for instrumental requests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1180",
+      "title": "Enhance Voice Engine for Chinese in Platform Service 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "voice",
+        "audio",
+        "chinese",
+        "update",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update establishes fish-audio as the primary voice engine for Chinese, correcting the previous misclassification of tts-1-hd as the default. Key changes include the addition of curated voice IDs and the ability to select tone-fitting voices through a new API endpoint. The default voice setting is now environment-overridable, ensuring flexibility in voice selection."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#149",
+      "title": "Revamped Admin Backend Console Design in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "design",
+        "backend",
+        "admin",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive redesign of the admin backend console, focusing on improved usability based on live UI feedback. Key enhancements include a shift to an Element Plus control-room layout, detailed backend requirements, and robust validation measures. The documentation has been updated to reflect these changes and ensure clarity for future development."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1053",
       "title": "Streamline Scheduled Run History Design in Nexior 🎨",
       "tags": [
