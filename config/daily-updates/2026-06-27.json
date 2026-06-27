@@ -3,6 +3,22 @@
   "date": "2026-06-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#555",
+      "title": "Enhance Admin Backend Panel with Native Vue Fallback in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "vue",
+        "admin",
+        "bugfix",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update addresses a production regression in the admin backend panel by replacing the Element Plus dependencies with native Vue and HTML rendering. Key changes include the introduction of native tab switch buttons, provider sections, and tables, ensuring core functionality remains intact even if rendering fails. The existing data-fetch and domain logic have been preserved, maintaining the integrity of the application."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#554",
       "title": "Fix admin panel crash with lazy-loaded tables in Frontend Web 🚀",
       "tags": [
