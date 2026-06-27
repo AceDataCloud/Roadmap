@@ -3,6 +3,70 @@
   "date": "2026-06-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1053",
+      "title": "Streamline Scheduled Run History Design in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "design",
+        "ui",
+        "cleanup",
+        "nexior",
+        "frontend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1053",
+      "summary": "This update refines the scheduled run history UI to align with Nexior's design patterns. Key changes include the removal of visual clutter, such as gradient cards and excessive shadows, while enhancing the overall user experience with a more cohesive and minimalist approach. The error messages have also been adjusted for better readability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1178",
+      "title": "Enhance Realism and Voice Quality in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "quality",
+        "voice",
+        "images",
+        "updates",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update addresses critical quality issues identified in recent test videos, ensuring that real subjects are depicted with actual photos sourced from verified image searches. Additionally, the voiceover timing is now content-driven, preventing truncation of narration. Improvements to voice selection and pronunciation guidance have also been implemented for a more natural audio experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1052",
+      "title": "Revamp Scheduled Run History UI in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "enhancement",
+        "nexior",
+        "design"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1052",
+      "summary": "This update enhances the user interface of the scheduled task run history drawer, making it visually clearer and more engaging. Key changes include a refined layout with contextual task cards, improved hover feedback, and a card-style presentation for each run. These adjustments aim to provide a more intuitive experience for users interacting with task histories."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#556",
+      "title": "Stabilize Admin Backend UI for Local Dev in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "frontend",
+        "bugfix",
+        "development"
+      ],
+      "public": false,
+      "summary": "This update resolves a runtime crash by excluding `vue` and `vue-router` from Vite's optimizeDeps. It enhances the admin backend UI by improving styling, removing unnecessary icon usage, and ensuring reliable expand/collapse functionality for provider cards. Validation steps confirm that all features are functioning correctly after the changes."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#148",
       "title": "Enhance Multi-Channel Support for Nano-Banana in Index 🚀",
       "tags": [
