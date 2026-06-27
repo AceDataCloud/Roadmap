@@ -3,6 +3,85 @@
   "date": "2026-06-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Index#148",
+      "title": "Enhance Multi-Channel Support for Nano-Banana in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "routing",
+        "images",
+        "integration",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update introduces the integration of the nano-banana family into the existing OpenAI images router, allowing for enhanced multi-channel support. Key changes include the addition of a new documentation file detailing the routing setup and the removal of the dall-e-2 model. The implementation aims to streamline image generation and editing processes across multiple channels, ensuring better performance and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1051",
+      "title": "Enhance Scheduled Run History with Clickable Conversations in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "i18n",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1051",
+      "summary": "This update makes the scheduled run history rows fully clickable, allowing users to access conversation details directly. It now displays conversation titles and message previews, improving user experience significantly. Additionally, runs without associated conversations will show a clear 'No conversation records' message instead of a blank screen."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1176",
+      "title": "Enhance Scheduled Run History with Conversation Context in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "frontend",
+        "backend",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update enriches the scheduled run history by including conversation titles, summaries, and model groups. The `retrieve_runs` function now returns additional context for each run, allowing the frontend to render clickable entries with meaningful information. The changes improve user experience by providing clearer insights into run details."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1175",
+      "title": "Scale Cloud Worker to 3 Replicas for Enhanced Performance in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "deployment",
+        "scaling",
+        "cloud",
+        "performance",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update scales the `platform-service-maestro-worker` Deployment from 2 to 3 replicas, ensuring that the in-cluster cloud fleet becomes the primary queue consumer. The change addresses idle cloud workers and provides additional capacity for processing tasks, particularly when external resources are offline. The rollout strategy remains unchanged, ensuring a smooth transition without service disruption."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1174",
+      "title": "Enhance Scheduled Task Conversations in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "conversations",
+        "scheduled-tasks",
+        "improvement",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update enables each scheduled task run to be stored as a distinct, viewable conversation, improving user experience by preventing clutter in the main chat history. Key changes include modifications to the scheduled trigger handler and conversation persistence logic, ensuring that conversation IDs are correctly assigned and metadata is utilized for better organization. Additionally, new test cases have been added to validate these enhancements."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#555",
       "title": "Enhance Admin Backend Panel with Native Vue Fallback in Frontend Web 🚀",
       "tags": [
