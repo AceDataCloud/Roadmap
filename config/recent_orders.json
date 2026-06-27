@@ -1,7 +1,14 @@
 {
-  "as_of": "2026-06-27T18:26:34.673700+00:00",
+  "as_of": "2026-06-27T20:25:49.806427+00:00",
   "total": 20,
   "orders": [
+    {
+      "id": "5321a648-3****c48f834bd2",
+      "created_at": "2026-06-27T20:06:34.932729+00:00",
+      "pay_way": "Stripe",
+      "price": 13.0,
+      "description": "Ace Data Cloud General Points Recharge - 100 Credits"
+    },
     {
       "id": "f803f41e-e****6a74bdb9c2",
       "created_at": "2026-06-27T16:03:59.882920+00:00",
@@ -134,13 +141,6 @@
       "pay_way": "WechatPay",
       "price": 13.0,
       "description": "Ace Data Cloud 通用积分充值 - 100 积分"
-    },
-    {
-      "id": "a838d7e4-0****bb4ca8d92c",
-      "created_at": "2026-06-26T09:59:27.183531+00:00",
-      "pay_way": "WechatPay",
-      "price": 63.2,
-      "description": "Пополнение универсальных баллов Ace Data Cloud - 530 Кредиты"
     }
   ]
 }

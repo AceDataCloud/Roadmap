@@ -3,6 +3,329 @@
   "date": "2026-06-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#561",
+      "title": "Revamp Admin Console for Upstream Provider Management in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "admin",
+        "ui",
+        "features",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update transforms the admin backend interface into a more user-friendly operational model for managing upstream providers. Key features include health cards, editable provider management tabs, and improved filtering options, enhancing the overall usability and functionality of the console. Additionally, internationalization keys have been backfilled for better localization support."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1189",
+      "title": "Enhance OpenAI Checker Sync to Preserve Admin Controls in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "openai",
+        "checker",
+        "sync",
+        "admin",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update ensures that admin-edited upstream routing controls remain intact during the OpenAI checker configuration sync. Key fields such as provider name, base URL, and capability settings are now preserved, preventing unintended overwrites from sync operations. The changes have been validated with successful test runs, ensuring stability and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#761",
+      "title": "Enhance Admin Controls for Upstream Providers in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "admin",
+        "backend",
+        "features",
+        "api",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces new admin write capabilities to the upstream provider controls at `/console/admin/backend`. Key changes include the addition of PATCH endpoints for managing provider and capability fields, allowing operators to modify settings that were previously read-only. The implementation ensures compatibility with existing data structures, enhancing the overall functionality of the admin interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#562",
+      "title": "Enhance HTML Rendering for Service Intros in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "html",
+        "markdown",
+        "frontend",
+        "ui",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update improves the rendering of HTML-based service introductions, specifically addressing issues with `<pre>` blocks in markdown. By preserving these blocks during markdown processing, code comments will now display correctly without disrupting the layout. Additionally, the Introduction tab's design has been refined for a cleaner presentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#170",
+      "title": "Align Action Buttons for Better UX in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "css",
+        "ui",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update fixes the vertical alignment of action buttons on the admin 'Continue as' identity selection page. A new scoped CSS rule removes the default left margin applied by Element Plus, ensuring the buttons are properly aligned without affecting their vertical spacing. The change enhances the user experience by providing a cleaner interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#227",
+      "title": "Enhance WeChat Integration with Personal BYOC Connector in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "wechat",
+        "connector",
+        "backend",
+        "feature",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update introduces a Personal WeChat BYOC connector, allowing users to deploy their own Personal WeChat service and connect it seamlessly. Key features include reading contacts, conversations, and sending messages through the new connector. The implementation includes necessary validations and ensures secure handling of user credentials."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#560",
+      "title": "Enhance Markdown Renderer to Prevent Page Crashes in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "markdown",
+        "frontend",
+        "bugfix",
+        "documentation",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update strengthens the markdown renderer by adding a safeguard against stray '%' characters in headings, which previously caused the entire documentation page to render blank. The slugify function now includes a try/catch block to handle potential URI errors gracefully, ensuring that a valid anchor is still produced. This fix enhances the robustness of the documentation rendering process across various user-authored markdown content."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#760",
+      "title": "Fix blank distribution page by adjusting heading in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "documentation",
+        "bug",
+        "frontend",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update resolves the blank page issue on the distribution documentation caused by a malformed URI error from a heading containing a '%' character. The heading has been reworded to maintain clarity while preventing future rendering issues. Additionally, a companion update in the frontend enhances the slugify function to handle stray '%' characters safely."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#468",
+      "title": "Enhance WeChat Integration with Personal Service Skill in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "feature",
+        "wechat",
+        "skills",
+        "integration",
+        "security"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/468",
+      "summary": "This update introduces a new `personal-wechat` Skill, enabling users to operate their personal WeChat accounts through a self-hosted service. Key features include checking login status, managing contacts, and sending messages with explicit user confirmation. The implementation includes a new helper script and comprehensive safety measures to protect user credentials."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#559",
+      "title": "Enhance Google One Tap SSO for Nexior in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "google",
+        "sso",
+        "auth",
+        "frontend",
+        "nexior"
+      ],
+      "public": false,
+      "summary": "This update routes Google One Tap sign-ins through the auth origin, ensuring that users are signed in seamlessly across both the platform and auth origins. Key changes include the addition of a new utility to handle credential redemption via an invisible iframe, which allows for proper session management and silent SSO functionality. The direct login path has been removed as it is no longer necessary."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#519",
+      "title": "Enhance Auto-Publish with Deduplication and Daily Caps in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "enhancement",
+        "autopublish",
+        "deduplication",
+        "dailycap",
+        "scheduler"
+      ],
+      "public": false,
+      "summary": "This update introduces a deduplication feature for auto-publishing, ensuring that the same material is never reposted to the same user and channel. Additionally, a daily cap has been implemented to limit auto-created tasks to one per user and channel, significantly reducing the risk of duplicate content penalties. Key files have been added and modified to support these changes, enhancing the overall reliability of the auto-publishing process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#558",
+      "title": "Enhance Admin Console with Checker Stats in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "admin",
+        "i18n",
+        "stats",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces the display of checker success and latency statistics in the admin backend model cards and provider lanes. It separates model-level aggregate check stats from active-provider check stats and includes internationalization labels for all console locales. These changes improve the visibility of checker health and performance metrics for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#759",
+      "title": "Enhance Admin Health Stats in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "admin",
+        "health",
+        "backend",
+        "stats",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces optional rollups for checker health statistics in the admin interface. Key changes include the addition of `check_stats` to model cards and provider lanes, providing insights into checks, success rates, and average durations. The backend now exposes active capability IDs and provider check stats, ensuring that the frontend can accurately display active stats without inference."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1187",
+      "title": "Enhance Checker History and Health Metrics in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "health",
+        "monitoring",
+        "database",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update introduces persistent checker history events and updates hourly health rollups for capability checks, enhancing data visibility for the admin backend console. Key changes include stable capability IDs to prevent state bleed and improved handling of latency metrics. The implementation ensures accurate historical data for better monitoring and analysis."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#409",
+      "title": "Enhance image model options in Clis 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "update",
+        "openai",
+        "cli",
+        "image",
+        "models"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/409",
+      "summary": "This update adds two new image model variants, `gpt-image-2:reverse` and `gpt-image-2:official`, to the CLI, making them available for use with the image and edit commands. The changes ensure that the CLI remains in sync with the latest OpenAI specifications. Other model lists were already updated previously."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1057",
+      "title": "Enhance Release Process with Multi-Platform Installers in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "release",
+        "installers",
+        "android",
+        "macos",
+        "windows"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1057",
+      "summary": "This update ensures that every Nexior release now includes installers for Android, macOS, and Windows, alongside the existing web distribution. Key changes include the integration of platform-specific installers directly into the GitHub Release page, improving accessibility for users. The desktop installers are currently unsigned, and iOS will provide a link to the App Store instead of a downloadable file due to Apple’s restrictions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#169",
+      "title": "Enhance Google One Tap Login Experience in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "authentication",
+        "sso",
+        "frontend",
+        "google-one-tap"
+      ],
+      "public": false,
+      "summary": "This update introduces a hidden cross-origin login bridge for Google One Tap, allowing seamless authentication on the auth origin. The new route, `auth/one-tap`, utilizes an invisible iframe to mint sessions directly on `auth.acedata.cloud`, ensuring a smooth SSO experience across platforms. Key changes include updates to the login payload and the addition of the One Tap component."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#226",
+      "title": "Enhance 腾讯云 Connector with Required Skills in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "connector",
+        "tencentcloud",
+        "skills",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update wires the 腾讯云 connector to its six required skills, ensuring that they are auto-installed when a user connects. The skills include tencentcloud-cos, tencentcloud-cls, tencentcloud-cls-alarm, tencentcloud-tke, tencentcloud-dns, and tencentcloud-edgeone, making the connector fully functional. The change is data-only and has been validated through existing tests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1188",
+      "title": "Enhance Jitter Control for Scheduler in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "scheduler",
+        "jitter",
+        "fix",
+        "performance",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update tightens the interval jitter cap from `interval/2` to `interval/4`, addressing issues with fire-to-fire gaps that could still allow bursts. The changes ensure that the gap remains within [interval/2, 1.5·interval], verified through extensive testing and simulations. This enhancement improves the reliability of short-cadence tasks, ensuring more consistent execution intervals."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#758",
+      "title": "New Pricing for gpt-image-2 Variants in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "gpt-image-2",
+        "backend",
+        "updates",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update introduces new pricing and documentation for the `gpt-image-2` model-name variants, specifically `gpt-image-2:official` and `gpt-image-2:reverse`. The official variant is priced at 0.22xn, while the reverse variant remains at 0.11xn. Key changes include updates to cost rules, OpenAPI documentation, and the addition of cost tests, ensuring accurate billing for both variants."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1186",
       "title": "Enhance Image Model Variants for Better Routing in Platform Service 🚀",
       "tags": [
