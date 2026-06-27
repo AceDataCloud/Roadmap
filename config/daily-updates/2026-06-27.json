@@ -1,0 +1,215 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-06-27",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Index#147",
+      "title": "Optimizing the Live Models Page for Better Findability in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "optimization",
+        "models",
+        "SEO",
+        "findability",
+        "conversion"
+      ],
+      "public": false,
+      "summary": "This update introduces a planning document outlining post-launch optimization opportunities for the live `/models` page. Key changes include enhancements for findability and conversion, such as sorting options, filtering capabilities, and improved SEO elements. The document details five independent workstreams aimed at refining user experience and increasing traffic conversion."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1162",
+      "title": "Enhanced Debug Logging for Image Failover in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "debug",
+        "logging",
+        "failover",
+        "router",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces structured debug logs for the image failover-router, enhancing production traceability. Key additions include detailed logs for request intake, route selection, and failover decisions, all gated by the `ROUTER_DEBUG_LOGS` environment variable. These improvements aim to facilitate better diagnostics while ensuring sensitive information remains protected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#146",
+      "title": "Streamlining Image Services with Failover Router in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "migration",
+        "failover",
+        "documentation",
+        "image-services",
+        "openai"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive migration plan to transition image models from the monolithic OpenAI service to independent node services for each provider. Key changes include the addition of a detailed document outlining the migration steps, which focuses on enhancing service reliability and preparing for the retirement of the monolithic image forwarding. The plan aims to ensure a smooth transition with minimal disruption to existing services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1048",
+      "title": "Revamp Grok Video Page with New Features in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "grokvideo",
+        "ui",
+        "enhancement",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1048",
+      "summary": "This update introduces a dedicated layout for the Grok Video page, enhancing its visual consistency. It also adds support for multiple reference images, allowing users to upload up to four images for the 'grok-imagine-video' model. Additionally, a live elapsed timer has been implemented to provide users with real-time feedback during processing, improving the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#145",
+      "title": "Revamped LLM Admin Console Design in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "design",
+        "llm",
+        "admin",
+        "management"
+      ],
+      "public": false,
+      "summary": "A new design document has been added for the LLM admin console, aimed at streamlining upstream and model management. This admin-only panel will enhance visibility and control over LLM configurations, addressing current pain points related to scattered settings and lack of health monitoring. Key features include vendor management and model oversight, with a focus on future scalability to other media types."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1161",
+      "title": "Enhance Task Response Security in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "security",
+        "tasks",
+        "serialization",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update hides internal router task metadata from the `/openai/tasks` responses while retaining it in Mongo for recovery purposes. Key fields such as `status`, `channel`, and `attempt` have been removed to ensure that router-owned task responses align more closely with native image task responses. Additionally, new serializer tests have been added to validate these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1160",
+      "title": "Enhance GitHub Proxy Deployment in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "deployment",
+        "security",
+        "ingress",
+        "proxy",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update moves the `github-proxy` deployment from Hong Kong to Silicon Valley, establishing a US-based ingress at `github-proxy.acedata.cloud`. A Node reverse-proxy wrapper has been added to secure the public endpoint with API key authentication, enhancing security and accessibility for users. The changes have been validated with successful health checks and deployment to production."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1159",
+      "title": "Streamline Image Task Retries in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "router",
+        "openai",
+        "image",
+        "retry",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update disables local transient retries for router-managed OpenAI image tasks, ensuring more efficient handling of requests. Key changes include fixing retry sleep units and aligning task types for better compatibility. Additionally, new tests have been added to validate the retry semantics for both bananarouter and openaihk."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1047",
+      "title": "Enhance Grok Video with 1080p and Duration Caps in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "grokvideo",
+        "ui",
+        "localization",
+        "backend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1047",
+      "summary": "This update aligns the Nexior Grok Video UI with backend changes, introducing support for 1080p resolution and adjusting duration limits. Users can now select durations up to 30 seconds for the standard model and 15 seconds for the 1.5-preview model. Additionally, the UI has been updated to reflect these changes in both English and Chinese."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#404",
+      "title": "Enhance video command with 1080p resolution in Clis 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "video",
+        "resolution",
+        "cli",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/404",
+      "summary": "This update adds support for 1080p resolution in the video command of the CLI, aligning it with the upstream specification. The `RESOLUTIONS` constant now includes 1080p alongside the existing 480p and 720p options. Documentation has also been updated to reflect this change."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#400",
+      "title": "Unlock 1080p Video and Extended Duration in M C Ps 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "video",
+        "grok",
+        "feature",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/400",
+      "summary": "This update introduces new Grok video capabilities, allowing for 1080p resolution and extending the maximum duration for video generation from 15 to 30 seconds. Key files have been updated to reflect these changes, ensuring existing clients remain unaffected. The modifications include updates to the README, core types, and various tools, all passing tests successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#750",
+      "title": "Revamped Grok Video Pricing and Specs in Backend 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "grok-video",
+        "backend",
+        "updates",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces a new pricing model for the Grok video API, significantly reducing costs by approximately 50% while adding support for 1080p resolution and extending the maximum duration to 30 seconds. Key documentation and specifications have been updated to reflect these changes, ensuring clarity for users. Comprehensive tests have been conducted, confirming the functionality and reliability of the new pricing structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1158",
+      "title": "Switch Grok Video Service to Non-Official API in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "grok",
+        "ttapi",
+        "video",
+        "cost-saving"
+      ],
+      "public": false,
+      "summary": "This update transitions the Grok video service from TTAPI's official API to its non-official counterpart, significantly reducing costs by 4-7 times. Key changes include modifications to core handling, settings, and validation for video generation requests, while maintaining public contract consistency. The new implementation has been live-tested and verified for functionality."
+    }
+  ]
+}
