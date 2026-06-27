@@ -3,6 +3,502 @@
   "date": "2026-06-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#554",
+      "title": "Fix admin panel crash with lazy-loaded tables in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "vue",
+        "admin-panel"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical bug causing the admin panel to crash with a blank page when accessing the `/console/admin/backend` route. The issue stemmed from rendering `el-table` components inside collapsed items, leading to errors when the tables were not visible. Now, tables will only render when their corresponding sections are expanded, ensuring a smooth user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#465",
+      "title": "Enhance Google Drive Connector Documentation in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "google-drive",
+        "documentation",
+        "skills",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/465",
+      "summary": "This update clarifies the behavior of the Google Drive connector, specifically regarding the temporary `drive.file`-only access. It removes broad discovery features and updates guidance for handling 403/404 errors, ensuring users select or share specific files. The documentation now accurately reflects the limitations and intended usage of the connector."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#225",
+      "title": "Enhance Google Drive Connector Permissions in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "google",
+        "drive",
+        "permissions",
+        "security",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update restricts the Google Drive connector to use only the `drive.file` scope, enhancing security by removing broader permissions. The user-facing documentation and design documents have been updated to reflect this change, ensuring a focus on selected-file workflows. Validation checks confirmed that the new permissions are correctly implemented and that no deprecated scopes remain."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1172",
+      "title": "Removed Midjourney Image Skill to Unblock Deploy in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "deployment",
+        "skills",
+        "maestro"
+      ],
+      "public": false,
+      "summary": "This update removes the 'midjourney-image' skill from the maestro configuration, addressing a build failure caused by its absence in the platform-wide skills. Key files updated include the skills allowlist and provider maps, ensuring that the deployment of related features can proceed without issues. The change streamlines the image provider options while maintaining functionality with existing skills."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#553",
+      "title": "Streamline Model Filters by Removing Capability Control in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "models",
+        "ui",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update removes the capabilities filter from the models directory, addressing user confusion caused by its limited options. The change enhances the user experience by ensuring that all media models remain visible, while modality tabs and other filters continue to provide necessary sorting and searching functionalities. The code adjustments are clean, with no errors reported by the IDE or CI."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#754",
+      "title": "Fix provider casing and clean up catalog entries in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "catalog",
+        "testing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update addresses issues with duplicate provider entries and the inclusion of a CAPTCHA utility in the catalog. By standardizing the casing of provider names and excluding certain APIs from the model directory, the catalog now presents cleaner and more accurate data. Tests have been updated to ensure that the changes are effective and do not introduce new issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1050",
+      "title": "Enhance Maestro with Quality Tier Selector in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "maestro",
+        "ui",
+        "localization",
+        "video"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1050",
+      "summary": "This update introduces a new Quality selector in the Maestro video configuration panel, allowing users to choose between draft, standard, and premium production tiers. The implementation includes updates to the Maestro config interface, constants, and localization files across 17 languages. This feature enhances user experience by providing clearer options for video production settings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#753",
+      "title": "Introducing Tiered Quality Pricing for Maestro in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "maestro",
+        "backend",
+        "features",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update implements tiered pricing for the Maestro quality knob, allowing users to choose between draft, standard, and premium options. The pricing structure is now based on a quality factor, with draft at 0.5x, standard at 1x, and premium at 2x. Documentation has been updated to reflect these changes, ensuring clarity for users and maintaining existing pricing for standard and missing quality parameters."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1170",
+      "title": "Enhance Video Production Tiers in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "video",
+        "production",
+        "quality",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces a new user-facing quality knob for video production, allowing users to select between draft, standard, and premium tiers. Each tier corresponds to specific internal settings that affect model usage, turn limits, and processing time, ensuring flexibility in video output. Existing functionality remains unchanged for standard quality, while draft and premium options provide tailored performance adjustments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#247",
+      "title": "Removed Midjourney SDK Support in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "sdk",
+        "midjourney",
+        "removal",
+        "update",
+        "python",
+        "typescript"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/247",
+      "summary": "This update removes all references to the Midjourney SDK provider across Python, TypeScript, and Go SDKs, including endpoint handling and examples. The changes ensure that the SDK retains its extensibility while no longer supporting Midjourney-specific features. Validation confirms that the removal was clean and did not introduce any issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#464",
+      "title": "Removed Midjourney Agent Skill in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "cleanup",
+        "documentation",
+        "skills",
+        "removal"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/464",
+      "summary": "The Midjourney agent skill has been completely removed from the project. This includes updates to the README, AGENTS index, npm keywords, and relevant documentation. All references to Midjourney have been eliminated, ensuring a cleaner and more focused skill set."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#398",
+      "title": "Clean Up Midjourney API Documentation in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "cleanup",
+        "documentation",
+        "api",
+        "removal"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/398",
+      "summary": "This update removes the Midjourney API documentation, including its source package and all related entries from the README files of various services. Key changes include the deletion of extensive documentation files and updates to the API monorepo README to reflect these removals. This streamlines the documentation and ensures consistency across the API offerings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#401",
+      "title": "Clean Sweep: Midjourney MCP Removal in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "cleanup",
+        "removal",
+        "mcp",
+        "documentation",
+        "maintenance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/401",
+      "summary": "This update removes all references to the Midjourney MCP, including its server source package and associated documentation. Key files such as the README, configuration files, and workflows have been updated or deleted to ensure no remnants remain. The impact is a cleaner codebase and improved clarity for users moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#407",
+      "title": "Clean Up Midjourney CLI from AceDataCloud in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cleanup",
+        "removal",
+        "cli",
+        "midjourney",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/407",
+      "summary": "This update removes the Midjourney CLI surfaces from the AceDataCloud project, including the standalone CLI source package and all related documentation, tests, and service options. The unified `adc` CLI now exclusively supports other services, ensuring a more streamlined user experience. All tests have passed successfully, confirming that the removals do not impact other functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#552",
+      "title": "Fix auto-reload for stale chunks and register star icon in Frontend Web 🌟",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "admin-panel",
+        "font-awesome"
+      ],
+      "public": false,
+      "summary": "This update addresses two key issues in the admin panel. First, it implements an automatic reload feature when a stale chunk fails to load, preventing users from encountering a blank page after a deployment. Second, it registers the `fa-star` icon in the Font Awesome library, ensuring proper rendering in the model details drawer."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1171",
+      "title": "Enhance Failover Router with Model-Aware Channel Selection in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "routing",
+        "failover",
+        "model-selection",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces model-aware channel selection for the failover router, addressing a critical issue where unsupported models would lead to unnecessary failures. Each channel now declares a whitelist of supported models, allowing requests to bypass channels that would return errors. Key files modified include configuration and orchestrator logic, ensuring smoother routing and improved reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1049",
+      "title": "Refresh Credits Balance Pill for All Modules in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "balance",
+        "refresh",
+        "user-experience",
+        "nexior",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1049",
+      "summary": "This update introduces a live-refresh feature for the Credits balance pill across all service modules in Nexior. The balance will now update every 15 seconds and upon tab refocus, ensuring users see the correct amount after credit deductions. This change enhances user experience by eliminating the need for a full page reload to view updated balances."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#550",
+      "title": "Enhance JSON-LD & Media Pricing Presentation in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "json-ld",
+        "seo",
+        "pricing",
+        "frontend",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "This update enriches the `ItemList` JSON-LD by including detailed product information for all models, enhancing SEO depth. Additionally, media pricing now displays a clearer 'from $X' format, improving user understanding of costs. These changes complete the frontend optimization backlog, ensuring a more informative and user-friendly experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1169",
+      "title": "Enhance failover-router with ephone as 4th image channel in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "failover",
+        "routing",
+        "redundancy",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces ephone as the fourth fallback channel in the failover-router configuration, enhancing redundancy for image routing. The max_attempts parameter has been increased from 3 to 4 to ensure ephone is utilized only when all other channels fail. This change aims to improve reliability for the gpt-image-2 traffic while maintaining the integrity of existing workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1166",
+      "title": "Enhance ephone Deployment with ROUTER_INTERNAL_SECRET in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "deployment",
+        "ephone",
+        "router",
+        "secret",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update modifies the ephone image worker's deployment to include the `ROUTER_INTERNAL_SECRET`, a prerequisite for integrating ephone into the failover-router system. By aligning with existing channel workers, this change ensures that requests with `x-router-managed` can be processed correctly, preventing 403 errors and enabling ephone to function as a router channel. The deployment is designed to be safe and dormant until further configuration is applied."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#549",
+      "title": "Enhance Models Page with Hero CTA and Accessibility Features in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "accessibility",
+        "frontend",
+        "ui",
+        "optimization",
+        "conversion"
+      ],
+      "public": false,
+      "summary": "This update introduces a 'Get your API key' button to the models hero section, improving conversion paths on the SEO landing page. Additionally, each model card now includes a copy button for the model ID, enhancing accessibility by implementing the stretched-link pattern. The recommended star icon has also been updated for better screen reader support."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1167",
+      "title": "Fix critical aichat2 task registration and decryption issues in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "aichat2",
+        "scheduler",
+        "encryption",
+        "mongodb"
+      ],
+      "public": false,
+      "summary": "This update resolves a fatal bug in aichat2 that caused scheduled tasks to fail due to improper handling of BSON Binary credentials. The decryption process has been restructured to ensure compatibility with various data types, and task registration now occurs before document persistence to prevent zombie tasks. Comprehensive testing confirms that all functionalities are operating smoothly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#751",
+      "title": "Introducing LLM Control-Plane Read-Only API in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "backend",
+        "llm",
+        "admin",
+        "mongodb",
+        "read-only"
+      ],
+      "public": false,
+      "summary": "This update implements a read-only API for managing LLM upstreams via the admin panel, allowing visibility into the health status of online LLMs for the first time. A new lazy-loading pymongo client has been added to retrieve data from the MongoDB database, ensuring all endpoints are superuser-only and secure. Key features include domain abstraction for future scalability and enhanced error handling to maintain system stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#551",
+      "title": "Enhance Admin Upstream Panel with Read-Only Models Tab in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "admin",
+        "models",
+        "ui",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update introduces a new read-only 'Models' tab to the admin upstream panel, following the previously merged 'Providers' tab. It features lazy loading of model lists, searchable tables, and detailed model views, enhancing user experience by providing comprehensive insights into upstream coverage and model statuses. The implementation also includes internationalization updates across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#548",
+      "title": "Enhanced Model Filters and Sorting for Better Findability in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "optimization",
+        "filters",
+        "performance",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive sorting and filtering system on the models page, allowing users to sort by Featured, Price, and Name. New multi-select filters for providers and capabilities enhance user experience without additional API calls. Performance improvements include precomputed pricing data, ensuring faster load times and a smoother interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#406",
+      "title": "Docs Update Validated for CLI Consistency in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "docs",
+        "cli",
+        "validation",
+        "no-op",
+        "seedance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/406",
+      "summary": "This PR confirms that the recent documentation updates for `seedance` do not require any changes to the CLI implementation. A thorough review showed that the CLI aligns perfectly with the updated API contract, ensuring command coverage and endpoint path consistency. As a result, this PR is a no-op, maintaining synchronization with the upstream documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#547",
+      "title": "New Admin Panel for Upstream Providers in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "admin",
+        "ui",
+        "i18n",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces a read-only admin panel for upstream providers in the LLM console, allowing users to view the health status of upstreams for the first time. Key features include a new route and menu item for managing upstreams, detailed information on provider status, and support for multiple languages. The implementation ensures that only superusers can access this panel, enhancing the overall management capabilities of the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1164",
+      "title": "Enhance Bananarouter with GPT-Image-1.5 Support in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "bananarouter",
+        "gpt-image",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces support for the GPT-Image-1.5 model in the Bananarouter worker, allowing it to serve as a fallback channel for generations. The existing GPT-Image-2 pathways remain unchanged, ensuring stability while expanding capabilities. Key modifications include updates to the routing and edits handlers to accommodate the new model without affecting the edit functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1163",
+      "title": "Expanded Model Allow-list for OpenAI Worker in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "openai",
+        "platform-service",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update broadens the model allow-list for the OpenAI worker to include all models supported by api.openai-hk.com, enhancing the failover-router's capabilities. Key changes include modifications to the routing and edits handlers, allowing for a more flexible and robust image generation and editing process. The existing functionality remains unchanged for current users, ensuring a seamless transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1165",
+      "title": "Switching to Sonnet Brain for Enhanced Performance in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "performance",
+        "deployment",
+        "cost-reduction"
+      ],
+      "public": false,
+      "summary": "This update transitions the Maestro video-worker brain model from `claude-opus-4-8` to `claude-sonnet-4-6`, aiming to improve success rates and reduce costs. Key configuration files have been updated to ensure consistency across deployment environments. The change is expected to enhance performance while maintaining flexibility for future adjustments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#752",
+      "title": "Enhance Seedance 2.0 Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "seedance",
+        "backend",
+        "zh-CN",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update adds comprehensive documentation for Seedance 2.0's face and reference image support in the zh-CN integration guide. Key changes include a new section detailing the use of reference images, an updated model list, and expanded content type descriptions. The guide now accurately reflects the capabilities of the platform, ensuring users have the necessary information for effective implementation."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#147",
       "title": "Optimizing the Live Models Page for Better Findability in Index 🚀",
       "tags": [
