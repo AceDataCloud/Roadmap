@@ -3,6 +3,38 @@
   "date": "2026-06-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#564",
+      "title": "Enhance KPI Clarity in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "kpi",
+        "frontend",
+        "admin",
+        "localization",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update clarifies the KPI semantics on the admin backend console. The first KPI now reflects 'Routable models = serving + degraded', while the second KPI is renamed to 'Needs attention', addressing degraded or fully down models. Additionally, locale keys have been updated across all supported languages for consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#563",
+      "title": "Enhance Admin Console with Element Plus Components in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "element-plus",
+        "admin",
+        "console",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update registers all necessary Element Plus components for the admin backend console, ensuring proper rendering of tabs, collapses, switches, and various input types. The changes address issues identified in production where certain components were not displaying correctly. Comprehensive validation has confirmed that the modifications are error-free and build successfully."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#561",
       "title": "Revamp Admin Console for Upstream Provider Management in Frontend Web 🚀",
       "tags": [
