@@ -1,0 +1,38 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-06-28",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#764",
+      "title": "Enhance Admin Console with Upstream Checker History in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "admin",
+        "api",
+        "backend",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces read-only checker history support for the upstream admin console, allowing operators to access recent raw checker events. Key changes include a new API endpoint for fetching checker events and improved status filtering to include degraded-but-active models. These enhancements will aid in debugging provider/model failures more effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#565",
+      "title": "Enhance Console UI with Compact Cards and Checker History in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "frontend",
+        "admin",
+        "enhancement",
+        "checker"
+      ],
+      "public": false,
+      "summary": "This update improves the production UI for the admin console by making model cards more compact and adding a checker history feature. Key changes include the introduction of compact status dots, clearer status filters, and a new drawer for checker history per provider and model lane. Additionally, local updates for ranking and toggling checks enhance user experience without refreshing the entire model list."
+    }
+  ]
+}
