@@ -3,6 +3,72 @@
   "date": "2026-06-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#776",
+      "title": "Unified MCP Documentation Update in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "mcp",
+        "update",
+        "backend",
+        "consolidation"
+      ],
+      "public": false,
+      "summary": "The documentation for the AceDataCloud MCP has been retargeted to the unified endpoint at mcp.acedata.cloud, consolidating previously separate resources. Key changes include the removal of the old docs endpoint and the addition of comprehensive tool descriptions for both public and token-gated functionalities. This update ensures that users have access to the latest information and tools in one streamlined location."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#232",
+      "title": "Switch AceDataCloud Connector to OAuth in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "backend",
+        "connector",
+        "update",
+        "authentication"
+      ],
+      "public": false,
+      "summary": "The AceDataCloud connector has been updated to use OAuth DCR for authentication, eliminating the need for manual token entry. This change aligns it with other AceDataCloud MCP connectors, enhancing user experience by allowing direct login with their AceDataCloud accounts. The update also includes necessary adjustments to the server configuration for seamless integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#409",
+      "title": "Streamlined OAuth 2.1 DCR Integration for Hosted MCP in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "oauth",
+        "dcr",
+        "integration",
+        "security",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/409",
+      "summary": "This update introduces OAuth 2.1 with Dynamic Client Registration (DCR) for the hosted MCP, allowing users to connect seamlessly using their AceDataCloud accounts without needing a manual platform token. Key changes include the addition of an OAuth provider, updates to server configurations, and the implementation of essential endpoints for authorization and token management. The system has been verified with successful local tests and is set to enhance user experience significantly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#411",
+      "title": "Clean Up: Retired Docs MCP Source Removed in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "cleanup",
+        "documentation",
+        "retirement",
+        "mcp",
+        "codebase"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/411",
+      "summary": "The redundant `MCPs/docs/` source has been completely removed as it is now obsolete. This change reflects the retirement of the standalone Docs MCP, with all relevant documentation and tools now integrated into the unified `mcp.acedata.cloud` server. The deletion includes 32 files, ensuring a cleaner and more efficient codebase."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#412",
       "title": "Added missing mappings for CLI tools in Clis 🚀",
       "tags": [
