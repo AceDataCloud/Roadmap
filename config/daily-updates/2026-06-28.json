@@ -3,6 +3,311 @@
   "date": "2026-06-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Skills#477",
+      "title": "Update hosted endpoint for AceDataCloud in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "docs",
+        "update",
+        "endpoint",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/477",
+      "summary": "This update changes the hosted endpoint for the unified AceDataCloud platform-management MCP to the new subdomain https://mcp.acedata.cloud/mcp. The per-service MCPs retain their prefixes, ensuring continuity for users. Documentation has been updated accordingly in the README and MCP servers table."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#404",
+      "title": "Update hosted endpoint for AceDataCloud MCP in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docs",
+        "update",
+        "mcp",
+        "acedatacloud"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/404",
+      "summary": "The hosted endpoint for the `acedatacloud` MCP server has been updated to the new bare subdomain `https://mcp.acedata.cloud/mcp`, replacing the previous URL. This change is reflected in the documentation, specifically in the `acedatacloud/README.md` file. No code or tests were affected by this update, ensuring a smooth transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#774",
+      "title": "Updated Install Guide for AceDataExt in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "update",
+        "browser-extension",
+        "installation",
+        "fix"
+      ],
+      "public": false,
+      "summary": "The installation guide for the Ace Data Cloud browser extension has been updated to link to the newly verified v0.4.2 package, which resolves previous runtime errors. This change ensures users can successfully download and use the extension without issues. The updated URL has been applied across all 18 language versions of the documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#45",
+      "title": "Streamline UIA Functionality in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "refactor",
+        "ui-automation",
+        "performance",
+        "cleanup",
+        "wisdom"
+      ],
+      "public": false,
+      "summary": "This update significantly refactors the UI Automation (UIA) functionality by consolidating the reading and syncing processes to utilize only the WeChat database and Frida for contact management. Key changes include the removal of redundant UIA methods and scripts, leading to a cleaner codebase with a net change of +91/-5604 across 46 files. The overall impact enhances performance and maintainability while ensuring all essential features remain intact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1210",
+      "title": "Fix timeline key binding to prevent blank renders in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "maestro",
+        "video",
+        "rendering",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update resolves the issue of blank renders in Maestro by ensuring the timeline key is derived from the DOM rather than hardcoded. Key changes include modifying the authoring rules and brand kit components to enforce the requirement of a root element with a `data-composition-id`. This fix enhances the reliability of video rendering by preventing mismatches that lead to empty frames."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1066",
+      "title": "Add AceData Brand Icons for Desktop Apps in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "desktop",
+        "icons",
+        "branding",
+        "macos",
+        "windows"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1066",
+      "summary": "This update introduces the AceData brand icons for both macOS and Windows desktop applications, replacing the default Electron atom icon. The new icons are included in the build directory and configured in the electron-builder settings, ensuring they are used for the DMG and NSIS installers. Additionally, a script has been added to regenerate these icons from the existing iOS brand icon, streamlining future updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#574",
+      "title": "Add missing storage permission for cookie keep-alive in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "fix",
+        "permissions",
+        "manifest",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update fixes a TypeError in the background service worker by adding the missing `storage` permission to the manifest. The version has been bumped to 0.4.2, ensuring that the `browser.storage.local` API can be utilized without errors. The changes have been verified with a rebuilt distribution."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WisdomChannel#8",
+      "title": "Revamped WeChat Trust Policy for Enhanced Access Control in Wisdom Channel 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WisdomChannel",
+        "access",
+        "security",
+        "webrtc",
+        "update",
+        "cli"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/WisdomChannel/pull/8",
+      "summary": "This update introduces a new v3 `access.json` schema, replacing the legacy allowlist with improved role management and permissions. Key features include role-level tool access, enhanced security measures for interactive channels, and a local CLI for policy edits. The changes aim to streamline access control and bolster security for the WeChat channel."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#773",
+      "title": "Updated Installation Guide for ACE Extension in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "update",
+        "ace",
+        "backend"
+      ],
+      "public": false,
+      "summary": "The installation documentation for the ACE extension has been updated across all 18 locales to point to the new icon-fixed v0.4.1 package. This change ensures that users download the correct version, which includes the manifest `icons` field for improved logo rendering in Chrome. The update involved a straightforward URL swap, verified to function correctly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#573",
+      "title": "Fix extension logo rendering and version bump in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "fix",
+        "extension",
+        "manifest",
+        "version-bump",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update resolves the issue of the extension displaying a gray placeholder logo by adding a top-level `icons` field in the manifest. The `action.default_icon` has also been modified to include a sized map for better icon display. Additionally, the version has been bumped from 0.4 to 0.4.1, ensuring users receive the updated package with the correct logo."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1209",
+      "title": "Enhance Short Drama Experience in Platform Service 🎬",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "short-drama",
+        "update",
+        "skills",
+        "architecture"
+      ],
+      "public": false,
+      "summary": "This update introduces version 1.1 of the short-drama skill, allowing for engaging narratives of approximately 2 minutes with multiple characters and scenes. Key improvements include extended shot durations, a structured plot arc, and enhanced character consistency through defined character profiles. The architecture documentation has also been updated to reflect these changes, ensuring clarity in the new capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#772",
+      "title": "Update ACE Extension Install Guide to v0.4 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "update",
+        "extension",
+        "backend"
+      ],
+      "public": false,
+      "summary": "The ACE browser-extension installation documentation has been updated to point to the new v0.4 package. This version introduces periodic cookie keep-alive functionality, ensuring that stored snapshots remain fresh. The update affects all 18 locales, with the new download link verified for correctness."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1208",
+      "title": "Streamline OpenAI Checker with Mongo-Only Config in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "openai",
+        "mongo",
+        "config",
+        "cleanup",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update transitions the OpenAI checker to exclusively use MongoDB for configuration, removing all JSON config files and related functionalities. Key changes include the deletion of multiple config files and the introduction of tests to ensure no config file reads occur. This streamlining enhances data consistency by establishing Mongo as the sole source of truth for provider and capability data."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#231",
+      "title": "Add AceDataCloud BYOC Connector in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "connector",
+        "backend",
+        "acedatacloud"
+      ],
+      "public": false,
+      "summary": "This update introduces a first-party AceDataCloud connector to the connector directory, allowing users to manage their accounts using a Platform Token. The token is securely stored and injected as an environment variable for seamless integration with the `acedatacloud` skill and the MCP server. This addition completes the necessary components for effective account management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#44",
+      "title": "Streamlined Codebase and Removed Redundant Listeners in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "refactor",
+        "cleanup",
+        "listeners",
+        "wisdom",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update consolidates the Wisdom codebase by removing duplicate implementations and redundant listener chains. Key changes include the deletion of unused scripts and endpoints, ensuring that only the most efficient code remains. The impact is a cleaner, more maintainable codebase that enhances performance and reduces complexity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1206",
+      "title": "Clean Up Maestro's Skill Allowlist in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cleanup",
+        "documentation",
+        "maestro",
+        "skills",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update removes the now-deleted `acedatacloud-api` skill from Maestro's skill allowlist and associated documentation. The change streamlines the skill set by eliminating redundancy, as per-service skills already cover their API usage. This cleanup enhances the clarity and functionality of the Maestro system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#402",
+      "title": "Unify Account Management with New MCP Server in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "mcp",
+        "account-management",
+        "integration",
+        "tools",
+        "ace-data-cloud"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/402",
+      "summary": "The new `mcp-acedatacloud` server integrates account management and documentation tools for the AceDataCloud platform. It combines previous public documentation and introduces 29 tools across two access tiers, enhancing user experience. Key features include optional token usage and a consistent naming convention for management tools, ensuring a streamlined interface for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#476",
+      "title": "Streamline Account Management with New AceDataCloud Skill in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "feature",
+        "skills",
+        "cli",
+        "account-management",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/476",
+      "summary": "This update introduces the new `acedatacloud` skill, which consolidates account management functionalities for the AceDataCloud platform. The redundant `acedatacloud-api` skill has been removed, enhancing clarity and usability. Key features include account balance checks, API key management, and access to public services without authentication, all through a streamlined CLI interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1207",
+      "title": "Enhance Subtitle Quality and Text Rendering in Platform Service 🎬",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "subtitle",
+        "quality",
+        "rendering",
+        "video",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update addresses critical quality issues identified during the testing of a short drama. Key changes include the implementation of ASS subtitle standards to prevent oversized captions and text cutoff, as well as new rules prohibiting model-rendered text in frames to avoid rendering issues with Chinese characters. These improvements aim to enhance the overall viewing experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1205",
       "title": "Enhance asset handling for skills in Platform Service 🚀",
       "tags": [
