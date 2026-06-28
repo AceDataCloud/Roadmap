@@ -3,6 +3,185 @@
   "date": "2026-06-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Skills#469",
+      "title": "Enhance Personal WeChat with Unattended Scheduled Confirmation in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "enhancement",
+        "wechat",
+        "scheduled-tasks",
+        "confirmation",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/469",
+      "summary": "This update introduces a new unattended scheduled-task confirmation feature for the Personal WeChat Skill. It adds the `--unattended-confirm` flag to enable unattended sending under specific conditions while maintaining existing chat behaviors. Comprehensive documentation and validation tests have been included to ensure functionality and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1060",
+      "title": "Enhance Scheduled Tasks with Skill Pre-Authorization in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "i18n",
+        "scheduled-tasks",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1060",
+      "summary": "This update introduces a new UI for pre-authorizing selected Skills during unattended background runs of scheduled tasks. Key changes include the addition of `unattended_policy` and `retrieve_authorizable_skills` types, a multi-select feature for Skills in the task dialog, and comprehensive i18n support across all locales. A warning confirmation is now displayed before saving any Skill authorizations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1194",
+      "title": "Enhance Skill Authorization for Scheduled Tasks in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "aichat2",
+        "scheduled-tasks",
+        "authorization",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces a new unattended skill-authorization policy for scheduled tasks in aichat2. Key changes include the ability to store and validate skill authorization, ensuring that only selected skills can be executed during unattended operations. The implementation also enhances the query engine and Bash sandbox environment to support these policies, improving security and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#228",
+      "title": "Introducing TickTick Connector for Seamless Integration in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "connector",
+        "oauth",
+        "productivity",
+        "backend"
+      ],
+      "public": false,
+      "summary": "We've added the 滴答清单 (TickTick) third-party MCP connector to our directory, marking a significant enhancement for productivity integrations. This connector utilizes the official remote MCP server, allowing for a smooth OAuth DCR installation without any code changes. The addition includes a new entry in the connectors.yaml file, complete with a unique identifier and dynamic client registration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1193",
+      "title": "Enhance Async Support for Conversations in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "async",
+        "api",
+        "enhancement",
+        "aichat2"
+      ],
+      "public": false,
+      "summary": "This update introduces `async: true` support for the `POST /aichat2/conversations` endpoint, allowing for faster acknowledgment in webhook scenarios. When this option is enabled, the system queues the conversation immediately and responds with a `202 Accepted` status, while processing continues in the background. This change improves integration with Tencent CLS, enabling quicker responses and later delivery of AI-generated results."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1058",
+      "title": "Revamp Maestro Config Panel for Consistency in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "refactor",
+        "design",
+        "i18n",
+        "ux"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1058",
+      "summary": "This update enhances the Maestro left config panel to align with the design of Kling and Midjourney panels. Key changes include the introduction of shared components like `PromptTextarea` and `InfoIcon` tooltips, which streamline the interface and improve user experience. Additionally, new visual selectors for aspect ratio and a compact layout for duration and quality settings have been implemented, ensuring a cleaner and more cohesive look."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#567",
+      "title": "Enhance API Pricing Table with Localized Remarks in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "api",
+        "pricing",
+        "localization",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update introduces a new optional 'remark' feature for cost rules in the API pricing table, providing localized explanations for model variants. The changes include updates to the Price component and models interface, ensuring that remarks are displayed correctly without compromising existing functionality. This enhancement improves user understanding of pricing parameters by adding contextual information directly in the UI."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#766",
+      "title": "Enhance Cost Rules with Localized Remarks in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "localization",
+        "cost-rules",
+        "backend",
+        "api",
+        "translations"
+      ],
+      "public": false,
+      "summary": "This update introduces an optional localized `remark` field to API and service cost rules, allowing for clearer explanations of model variants on the pricing page. The implementation leverages existing localization pipelines to support translations in 18 languages without affecting billing processes. Additionally, new tests have been added to ensure the functionality works as intended."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1059",
+      "title": "Streamline Action Buttons in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "ux",
+        "maestro",
+        "buttons",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1059",
+      "summary": "The Maestro task result card now features action buttons for download, remix, and view code aligned in a single flex row, enhancing user experience. A new download icon has been added to the button, and adjustments ensure that multi-variant tasks display distinct download buttons. This update improves the visual layout and functionality of the task cards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1190",
+      "title": "Enhance video rendering quality with new guards in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "video",
+        "rendering",
+        "quality",
+        "updates",
+        "skills"
+      ],
+      "public": false,
+      "summary": "This update introduces a preflight guard to reject near-black video renders, ensuring only valid content is processed. Additionally, new skill authoring rules have been established to improve image framing, visibility, and text layout, preventing common rendering issues. The changes enhance the overall quality and reliability of video outputs in the Platform Service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#566",
+      "title": "Enhance model card persistence in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "bugfix",
+        "user-experience",
+        "admin-console"
+      ],
+      "public": false,
+      "summary": "This update ensures that expanded model cards remain visible after refreshing the model list in the admin console. Previously, the active card would collapse unexpectedly, impacting the reliability of the history action. Now, only existing keys are preserved, improving user experience during model interactions."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#764",
       "title": "Enhance Admin Console with Upstream Checker History in Backend 🚀",
       "tags": [
