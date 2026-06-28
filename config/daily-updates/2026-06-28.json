@@ -3,6 +3,168 @@
   "date": "2026-06-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#571",
+      "title": "Enhance Admin Console UI for Better Spacing in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "frontend",
+        "admin",
+        "design",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update improves the UI of the admin backend console by adjusting the spacing of the 'Add provider' button and separating the capability drawer switches from the submit action. These changes prevent overcrowding and ensure a more compact design for the Add Provider drawer. All validations have passed successfully, confirming the stability of the modifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1201",
+      "title": "Revamp Maestro with Fresh Docs and Brand Kit in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "documentation",
+        "refactor",
+        "design",
+        "brand-kit",
+        "maestro",
+        "improvements"
+      ],
+      "public": false,
+      "summary": "This update enhances the Maestro video service by fixing documentation drift, externalizing prompts, and streamlining skill rules. Key changes include a revised README, a new design system with a brand kit, and the separation of prompt texts from Python code for better maintainability. These improvements aim to ensure consistency and clarity in video production workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#150",
+      "title": "Streamlining Wisdom: One Implementation Per Feature in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "refactor",
+        "documentation",
+        "cleanup",
+        "wisdom",
+        "review"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive plan to consolidate the Wisdom service by retaining only the best implementation for each feature, eliminating redundancy across Frida, WeChat DB, and UIA. Key changes include the deletion of outdated code paths and a structured approach to ensure all remaining imports are valid. The plan has undergone three rounds of rigorous peer review to address potential issues and ensure a smooth transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#151",
+      "title": "Introducing the Short-Drama Workflow for Maestro in Index 🎬",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "short-drama",
+        "workflow",
+        "maestro",
+        "research",
+        "video"
+      ],
+      "public": false,
+      "summary": "This update presents a new `short-drama` workflow designed for Maestro, integrating research from seven open-source short-drama tools. Key features include a seven-stage pipeline for script-to-video transformation, ensuring character consistency and effective scene transitions. The implementation leverages existing technologies like seedance 2.0 while addressing narrative structuring and audio synchronization."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#475",
+      "title": "Enhance Image URL Handling in Skills 📸",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "image",
+        "url",
+        "zhihu",
+        "fix",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/475",
+      "summary": "This update improves the handling of Zhihu's image URLs by converting draft-scoped signed URLs into durable public formats. The changes ensure that images stored in articles remain accessible and stable, preventing issues with expired authentication keys. Additionally, the update includes robust checks to avoid mishandling non-Zhihu URLs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1202",
+      "title": "Enhance Image Quality and Layout in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "image-processing",
+        "layout",
+        "quality",
+        "fixes",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces critical fixes to the image handling process, ensuring that watermarked photos are rejected and broken image placeholders are eliminated. The layout now features a cohesive dark gradient scrim applied only behind text, enhancing readability while maintaining the integrity of the images. These changes significantly improve the visual quality and user experience in the Platform Service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#230",
+      "title": "Enhance cookie keep-alive for ACE extension in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "cookies",
+        "refresh",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces new endpoints for the ACE browser extension to periodically refresh cookie credentials for connected BYOC cookie connectors. The changes ensure that the stored cookie snapshot remains current, preventing failures due to session invalidation on the server side. Key safety features have been implemented to protect user data and maintain connection integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#570",
+      "title": "Enhance Cookie Management for ACE Extension in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "cookies",
+        "extension",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a periodic cookie keep-alive mechanism for the ACE browser extension, ensuring that users' connected cookie connectors remain fresh. A new `chrome.alarms` job runs every 30 minutes to refresh cookies, improving the user experience by maintaining live sessions. Key modifications include updates to `background.ts`, `content_script.tsx`, and `manifest.json` to support this functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#771",
+      "title": "Enhance Upstream Traffic Display in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "admin",
+        "backend",
+        "traffic",
+        "kpi",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update explicitly shows zero requests in the upstream dashboard when there is no traffic in the last 24 hours. Additionally, the success rate and p95 metrics will remain blank under these conditions. The changes have been validated with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#411",
+      "title": "Docs Sync Confirmed for aichat CLI in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "docs",
+        "sync",
+        "aichat",
+        "cli"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/411",
+      "summary": "The documentation for the `aichat` CLI has been reviewed to ensure alignment with the latest OpenAPI definitions. No changes were necessary as the existing CLI already matches the updated specifications, confirming that all command surfaces and model enums are in parity with the documentation."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1199",
       "title": "Streamline OpenAI Checker Configs in Platform Service 🚀",
       "tags": [
