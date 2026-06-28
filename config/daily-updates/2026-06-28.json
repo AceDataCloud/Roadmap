@@ -3,6 +3,156 @@
   "date": "2026-06-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#412",
+      "title": "Added missing mappings for CLI tools in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "mappings",
+        "pypi",
+        "standalone",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/412",
+      "summary": "This update introduces essential mappings for six CLI tools that were previously part of a monorepo but lacked standalone repositories. The tools now have their own repos and PyPI packages, ensuring they are visible on the organization homepage. The standalone repos have been bootstrapped and their first PyPI publish has been triggered."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#412",
+      "title": "Boost MCP Visibility with New Publish Workflows in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "mcp",
+        "automation",
+        "pypi",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/412",
+      "summary": "This update introduces self-publishing workflows for four MCP servers: AiChat, Glm, WebExtrator, and OpenAI. Each server now has a dedicated `publish.yml` file to automate releases to PyPI and GitHub, ensuring they are visible on the organization homepage. Additionally, a mapping fix in `sync.yaml` corrects the WebExtrator repository name for consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1212",
+      "title": "Enhance Lip-Sync for Short Drama in Platform Service 🎬",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "lip-sync",
+        "video",
+        "audio",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces version 1.3 of the short-drama skill, significantly improving lip-sync capabilities by utilizing seedance 2.0's reference-to-video feature. The new implementation ensures character voices match their appearances, enhancing emotional delivery and overall viewer experience. Additionally, it establishes a clear strategy for video generation and error handling, ensuring a more reliable output."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1067",
+      "title": "Fix desktop app launch issue by bundling updater in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "desktop",
+        "electron",
+        "dependencies",
+        "release"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1067",
+      "summary": "The desktop app, AceData.app, was crashing on launch due to a missing module, 'electron-updater', which was incorrectly placed in devDependencies. This update moves 'electron-updater' to dependencies, ensuring it is bundled correctly with the app. The fix includes regenerating the package-lock.json and adding a patch change file for a new desktop build."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#408",
+      "title": "Shorten server.json description for MCP Registry success in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "metadata",
+        "registry",
+        "update",
+        "mcp",
+        "json"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/408",
+      "summary": "The description in `acedatacloud/server.json` has been shortened to 95 characters to meet the MCP Registry's length requirement. This change ensures that the Publish to MCP Registry job passes successfully, allowing for seamless publishing to PyPI and deployment to `mcp.acedata.cloud`. No code changes were made, only a metadata adjustment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#478",
+      "title": "Enhance CLI with Catalog and Docs Commands in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "cli",
+        "features",
+        "updates",
+        "documentation",
+        "catalog"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/478",
+      "summary": "This update expands the `acedatacloud` skill CLI by adding 12 new commands related to catalog, documentation, and model functionalities. Users can now access service details, pricing, API endpoints, and perform full-text searches without needing a token. Additionally, referral earnings can be tracked through the new distributions command, significantly improving user experience and accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#407",
+      "title": "Complete the MCP with New Tools in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "enhancement",
+        "tools",
+        "public",
+        "MCP",
+        "catalog",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/407",
+      "summary": "This update enhances the `acedatacloud` MCP by adding essential catalog, documentation, and model tools, making it fully functional. A total of 12 new public tools have been introduced, including service details, pricing, API specifications, and model catalogs, all accessible without a token. Additionally, referral earnings tracking has been integrated into the account tools, improving user experience and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#47",
+      "title": "Clarify Message Reading and Sync APIs in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "documentation",
+        "api",
+        "spec",
+        "sync",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update focuses on enhancing the documentation for message-related APIs, specifically addressing user queries about redundancy and functionality. Key changes include the addition of a new section in the SPEC.md that clarifies the roles of various endpoints, introduces two new sync trigger APIs, and ensures real-time callback support remains intact. Overall, these improvements aim to streamline user understanding and interaction with the messaging features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#775",
+      "title": "Massive Price Drop for Claude-4.x Models in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "backend",
+        "updates",
+        "billing",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update slashes the resale price of the Claude-4.x family to just 20% of Anthropic's official pricing, significantly benefiting customers. Key changes include updated billing rules, display adjustments across multiple service pricing files, and documentation updates to reflect the new pricing structure. All related tests have passed successfully, ensuring a smooth transition to the new pricing model."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1211",
       "title": "Fix layout issues for head-safe images and text stacking in Platform Service 🎨",
       "tags": [
