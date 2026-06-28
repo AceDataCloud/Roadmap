@@ -3,6 +3,365 @@
   "date": "2026-06-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1199",
+      "title": "Streamline OpenAI Checker Configs in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "openai",
+        "config",
+        "cleanup",
+        "platform-service",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update cleans up the OpenAI checker configuration files by removing unnecessary routing control fields, ensuring they only bootstrap missing accounts and carry essential secret/check hints. Key changes include the removal of `enabled`, `rank`, and `skip_check` fields from the JSON files while preserving capability model lists and check metadata. The modifications enhance the integrity of the configuration by preventing overrides of operator-controlled fields."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#569",
+      "title": "Enhance Admin Console UX in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ux",
+        "admin",
+        "frontend",
+        "improvements",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update refines the admin console interface by adjusting filter controls, improving spacing, and clarifying provider health counts. It also updates language for better understanding and adds a provider-level detection history entry, along with displaying traffic statistics when available. These changes aim to enhance user experience and functionality in the admin console."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#769",
+      "title": "Enhance Admin Dashboard with Traffic and History in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "admin",
+        "dashboard",
+        "api",
+        "traffic",
+        "history",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces crucial enhancements to the admin upstream dashboard, including 24-hour LLM traffic sample statistics and a new provider-level checker history endpoint. The changes optimize data retrieval by implementing a bounded recent-row sample, ensuring efficient performance while providing comprehensive insights into API usage. Validation tests confirm the stability and reliability of the new features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#770",
+      "title": "Enhance Async Authorization Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "aichat2",
+        "backend",
+        "authorization",
+        "async"
+      ],
+      "public": false,
+      "summary": "This update documents the async and unattended authorization fields for the `/aichat2/conversations` API, including `async`, `callback_url`, and others. A new section in Chinese has been added to guide users on webhook and background alerting scenarios. These changes enable API callers to pre-authorize Skills and MCP servers for unattended execution, improving usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1200",
+      "title": "Enhance Unattended Authorization for Direct API Calls in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "api",
+        "authorization",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces the ability for direct `/aichat2/conversations` API callers to pass unattended authorization allowlists as top-level request fields. The new fields `allowed_skills` and `allowed_mcp_servers` serve as convenient aliases, enhancing the flexibility of API interactions without the need for scheduled tasks. Additionally, existing nested `unattended_policy` functionality remains intact and merges seamlessly with the new aliases."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#472",
+      "title": "Enhance Image Handling for Zhihu Publishing in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "image-handling",
+        "zhihu",
+        "publishing",
+        "bugfix",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/472",
+      "summary": "This update addresses the issue of missing images when publishing to Zhihu by implementing a robust image re-hosting solution. The new functionality allows for both direct uploads to Zhihu's CDN and fallback options for external images, ensuring that all images are preserved in published articles. Additionally, the changes include improved reporting on image processing during the publishing workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#470",
+      "title": "Refactor Unattended Confirmation Guard in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "refactor",
+        "skills",
+        "unattended",
+        "helper",
+        "code-maintenance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/470",
+      "summary": "This update extracts the unattended scheduled-task confirmation guard into a reusable helper, enhancing code maintainability. The new guard is added in `skills/_shared/unattended.py` and integrated into the existing `personal-wechat` Skill, ensuring it functions correctly in sandbox packaging. Additionally, the `personal_wechat.py` script has been updated to utilize this shared guard, streamlining the codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1065",
+      "title": "Enhance MCP Server Authorization for Scheduled Tasks in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "chat",
+        "authorization",
+        "scheduled-tasks",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1065",
+      "summary": "This update introduces the ability to select authorized MCP servers for unattended scheduled tasks in the Nexior chat interface. Key changes include the addition of a multi-select option for MCP servers alongside existing Skill selectors, and updates to internationalization for various languages. These enhancements aim to streamline the authorization process for scheduled tasks, improving user experience and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1197",
+      "title": "Enhance MCP Server Authorization for Scheduled Tasks in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "security",
+        "scheduled-tasks",
+        "mcp-servers"
+      ],
+      "public": false,
+      "summary": "This update expands the unattended authorization for scheduled tasks to include both Skills and MCP servers. Key changes include the addition of `allowed_mcp_servers` to the unattended policy, ensuring that only pre-authorized MCP servers can be loaded during unattended runs. This enhancement improves security by preventing arbitrary MCP server loads and maintains backward compatibility with existing policies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#471",
+      "title": "Enhance WeChat Helper for Task Management in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "wechat",
+        "api",
+        "update",
+        "skills",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/471",
+      "summary": "This update improves the Personal WeChat helper by enabling it to handle queued search and confirmed send responses effectively. It introduces task polling via the API while ensuring the API token remains secure in the Authorization header. Additionally, documentation clarifies that the helper waits for queued UI operations before displaying final results."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1198",
+      "title": "Enhance Image Quality and Consistency in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "image-processing",
+        "video",
+        "updates",
+        "design",
+        "quality"
+      ],
+      "public": false,
+      "summary": "This update introduces a cohesive image treatment for maestro brand/bio videos, ensuring all photos maintain a uniform look through consistent CSS styling. Additionally, a new 'Image polish' section in the provider map allows for selective enhancements using gpt-image-2, while strictly adhering to subject safety guidelines. These changes aim to elevate the overall quality and professionalism of the visual content."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#43",
+      "title": "Enhance Personal WeChat UI Task Queue in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "ui",
+        "api",
+        "automation",
+        "performance",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a FIFO UI task queue and a new polling API for Personal WeChat UI automation, significantly improving the handling of UI operations. Key operations like sending messages and syncing contacts have been converted to task responses, enhancing performance and reliability. The CLI and web UI have been updated accordingly to reflect these changes, ensuring a smoother user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1063",
+      "title": "Revamp Scheduled Tasks Page for a Sleek Look in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "ux",
+        "design",
+        "pagination",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1063",
+      "summary": "The Scheduled Tasks page has undergone a significant redesign to enhance user experience. Key updates include a new page-tone background, task cards with hover effects, and client-side pagination for both tasks and run history. Additionally, the design features larger card radii and filled status tags for better visibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1196",
+      "title": "Boosted Render Speed with Script Optimization in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "performance",
+        "optimization",
+        "rendering",
+        "maestro",
+        "video"
+      ],
+      "public": false,
+      "summary": "This update significantly improves the rendering speed of Maestro by optimizing the narration script and utilizing all available CPU resources. Key changes include tighter script requirements to fit the requested duration and a new rendering rule that maximizes CPU usage without crashing Chromium. The result is a more efficient rendering process, reducing the time taken for video production."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1195",
+      "title": "Enhance OpenAI Request Logging in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "openai",
+        "storage",
+        "security",
+        "logging",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces the archiving of raw OpenAI request and response data to Tencent COS object storage, ensuring no data truncation. The implementation captures full payloads, including headers and bodies, while masking sensitive information. This change replaces the previous MongoDB approach, improving data integrity and security by requiring a dedicated private bucket for storage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#568",
+      "title": "Enhance Admin Backend Controls in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "admin",
+        "ui",
+        "frontend",
+        "enhancement",
+        "polish"
+      ],
+      "public": false,
+      "summary": "This update brings final polish to the admin backend controls, enhancing the user interface based on production feedback. Key changes include improved alignment of headings, a new icon mini-card style for summary cards, and streamlined provider management functionalities. Additionally, routing issues have been addressed to ensure model cards refresh correctly after edits."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1191",
+      "title": "Enhance OpenAI Checker Configuration in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "openai",
+        "checker",
+        "configuration",
+        "portal",
+        "mongo"
+      ],
+      "public": false,
+      "summary": "This update ensures that the OpenAI checker retains the portal and Mongo provider configuration as the control source. Key changes include preventing the config JSON from overwriting capability membership and preserving existing Mongo capabilities. The admin portal now effectively manages provider enablement and behavior, enhancing overall stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#767",
+      "title": "Empower Admin with Upstream Provider CRUD APIs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "admin",
+        "api",
+        "backend",
+        "crud"
+      ],
+      "public": false,
+      "summary": "This update introduces CRUD APIs for managing upstream providers and their capabilities within the admin portal. Key features include the ability to create and delete provider accounts and capabilities, as well as update the provider's API key directly from the portal. These enhancements streamline provider management, addressing operator requests for comprehensive control over supplier and capability settings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1064",
+      "title": "Revamp nanobanana's aspect-ratio selector for visual consistency in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "ui",
+        "accessibility",
+        "visual",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1064",
+      "summary": "This update transforms the nanobanana aspect-ratio control from a plain text dropdown to a visually appealing preview-chip selector, aligning it with other scenarios. Key enhancements include a grid layout for seven aspect ratios, improved accessibility features, and the addition of an info tooltip. The functionality remains intact, preserving the ability to toggle the aspect ratio off without defaults."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1062",
+      "title": "Fix iOS App Store Link Display in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "release",
+        "ios",
+        "fix",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1062",
+      "summary": "This update resolves an issue where the iOS App Store link on the release download page was displaying placeholder text. The GitHub Actions workflow now correctly derives the iOS URL from either a repo variable or a hardcoded constant, ensuring the link is accurate by default. This change enhances the user experience by providing direct access to the live app on the App Store."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1061",
+      "title": "Refine DigitalHuman Config Panel for Consistency in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "ui",
+        "consistency",
+        "digitalhuman",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1061",
+      "summary": "This update enhances the DigitalHuman config panel to align with the polished standards set by the Maestro and Kling scenarios. Key changes include updated section labels, the addition of InfoIcons for tooltips, and improved spacing for better visual rhythm. The refactor maintains existing functionality and ensures a cleaner, more consistent user experience across scenarios."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#229",
+      "title": "Add Todoist Connector to Public Directory in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "todo",
+        "tasks",
+        "productivity",
+        "gtd",
+        "connector"
+      ],
+      "public": false,
+      "summary": "This update introduces the official Todoist remote MCP server to the public connector directory, allowing users to easily browse and install it from Studio. The integration includes OAuth authentication and supports various productivity features, enhancing the overall functionality for users managing tasks and projects. The connector has been thoroughly validated and is now live with a dedicated icon."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Skills#469",
       "title": "Enhance Personal WeChat with Unattended Scheduled Confirmation in Skills 🚀",
       "tags": [
