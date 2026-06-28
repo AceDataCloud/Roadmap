@@ -3,6 +3,23 @@
   "date": "2026-06-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPs#413",
+      "title": "Scope Account Tools to Caller User ID for Better Performance in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "bugfix",
+        "performance",
+        "oauth",
+        "testing",
+        "user-scope"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/413",
+      "summary": "This update fixes the `acedatacloud` MCP account tools that were returning 502 errors due to memory issues and improper user scoping. Key changes include implementing user ID scoping for account endpoints and increasing memory limits from 256Mi to 512Mi to prevent out-of-memory errors. The fix has been verified with live E2E tests and additional unit tests."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#776",
       "title": "Unified MCP Documentation Update in Backend 🚀",
       "tags": [
