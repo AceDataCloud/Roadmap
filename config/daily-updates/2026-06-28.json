@@ -3,6 +3,71 @@
   "date": "2026-06-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1211",
+      "title": "Fix layout issues for head-safe images and text stacking in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "layout",
+        "css",
+        "flexbox",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update addresses two critical layout bugs affecting the rendering of bios: head cropping and text overlap. Key changes include enforcing a consistent `object-position` to prevent head cropping and restructuring text into a flex column to eliminate overlap. These adjustments enhance the visual integrity of the rendered content, ensuring a better user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#406",
+      "title": "Rename MCP Tools to Match Prefix in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "refactor",
+        "mcp",
+        "acedatacloud",
+        "rename",
+        "tools"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/406",
+      "summary": "This update refactors all client-exposed identifiers in the AceDataCloud MCP, changing the prefix from 'platform_' to 'acedatacloud_'. This is a purely mechanical rename with no changes to functionality, ensuring consistency with the server/package naming. Documentation and tests have been updated accordingly to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#405",
+      "title": "Launch Hosted MCP for AceDataCloud in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "mcp",
+        "deployment",
+        "cloud",
+        "automation",
+        "infrastructure"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/405",
+      "summary": "The platform management MCP is now live at https://mcp.acedata.cloud/mcp, providing a centralized endpoint for the AceDataCloud services. Key updates include the addition of deployment configurations, service definitions, and automated workflows for publishing to PyPI and GitHub. This enhancement improves accessibility and operational efficiency for managing cloud services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#46",
+      "title": "Enhance message events with canonical sender_id in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "feature",
+        "websocket",
+        "database",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update adds the canonical sender_id to the message.new WebSocket payloads and ensures it is persisted through the database bridge. Key files modified include db_bridge.py and wechat_frida_service.py, with successful validation through compileall and targeted pytest. The adversarial review concluded with a clean verdict."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Skills#477",
       "title": "Update hosted endpoint for AceDataCloud in Skills 🚀",
       "tags": [
