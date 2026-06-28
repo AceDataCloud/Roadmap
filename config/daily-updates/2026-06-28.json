@@ -3,6 +3,70 @@
   "date": "2026-06-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1205",
+      "title": "Enhance asset handling for skills in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "sandbox",
+        "skills",
+        "asset-management",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces a content-addressed pull-through mechanism for skill bundles in the sandbox, addressing issues with multi-replica environments. Each pod can now pull asset bundles on demand using their content hash, eliminating reliance on sticky sessions and shared mutable storage. The changes ensure that any pod can serve any session without encountering missing files, significantly improving reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#572",
+      "title": "Enhance Admin Controls for Better UX in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "admin",
+        "frontend",
+        "ui",
+        "bugfix",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the admin interface by preventing the clipping of the 'Skip checks' control and adjusting the layout for better visibility of Chinese labels. It also implements a silent refresh mechanism to maintain immediate row state without a full model-list refresh, enhancing user experience during provider toggles. All validations have passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1204",
+      "title": "Enhance Photo Verification for Identity and Focus in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "photo-verification",
+        "identity",
+        "focus",
+        "fidelity",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the photo verification process by ensuring that the main subject of an image is not only identified correctly but also in clear focus. Changes were made to the verification steps in the SKILL.md and provider-map.md files, enhancing the criteria for confirming identities across various categories, including people, products, and places. This fix aims to reduce instances of incorrect image associations, thereby improving overall fidelity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1203",
+      "title": "Introducing Short-Drama Skill for Maestro in Platform Service 🎬",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "maestro",
+        "short-drama",
+        "video",
+        "workflow"
+      ],
+      "public": false,
+      "summary": "This update adds a new `short-drama` skill to Maestro, enabling agents to create vertical AI short dramas from scripts. The workflow bypasses HyperFrames, utilizing a per-shot image-to-video approach combined with ffmpeg for seamless video assembly. Key changes include new data contracts and a comprehensive director's recipe for producing engaging short stories."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#571",
       "title": "Enhance Admin Console UI for Better Spacing in Frontend Web 🎨",
       "tags": [
