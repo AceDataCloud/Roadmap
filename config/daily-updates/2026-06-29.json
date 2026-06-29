@@ -3,6 +3,200 @@
   "date": "2026-06-29",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#54",
+      "title": "Clean Up Unused Nickname Functionality in Wisdom 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "cleanup",
+        "refactor",
+        "tests",
+        "extraction"
+      ],
+      "public": false,
+      "summary": "This update removes the unused `get_self_nickname` function from the extraction module, as it had no active callers and was redundant with `get_self_info`. The change includes updates to several test files to reflect this removal, ensuring that the codebase remains clean and efficient. Local tests passed successfully, confirming the integrity of the remaining functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1225",
+      "title": "Enhance Seedance Support for 4K and 15s Duration in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "seedance",
+        "video",
+        "validation",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update expands the Seedance video handling capabilities by adding support for 4K resolution and increasing the maximum duration to 15 seconds. The changes include modifications to the validation rules, ensuring compatibility with the seedance-2.0 family. This aligns with recent updates in the PlatformBackend, enhancing overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1224",
+      "title": "Enhance Short Drama Captions in Platform Service 🎬",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "short-drama",
+        "captioning",
+        "audio",
+        "updates",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces version 1.4.1 of the short-drama skill, focusing on two key improvements. Captions now reflect the exact spoken lines from the drama, ensuring a single source of truth, while clips are trimmed to eliminate silent tails, enhancing the viewing experience. These changes aim to improve synchronization and overall quality of the output."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#155",
+      "title": "Documentation updated with merged parity PRs in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "update",
+        "parity",
+        "merge",
+        "api"
+      ],
+      "public": false,
+      "summary": "All four parity PRs have been successfully merged, resulting in a minor documentation update. Key changes include adjustments in the README to reflect the integration of new features and alignments across various APIs and SDKs. This update ensures that the documentation remains accurate and up-to-date with the latest developments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#416",
+      "title": "Exciting New VS Code and JetBrains Plugins Added in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "vscode",
+        "jetbrains",
+        "plugin",
+        "mcp",
+        "acedatacloud"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/416",
+      "summary": "This update introduces a VS Code extension and a JetBrains plugin for the AceDataCloud MCP server, enhancing user accessibility. Key changes include the addition of a generator script, updated README files, and new configuration settings for both platforms. These tools will streamline account management and improve integration with the Ace Data Cloud services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#255",
+      "title": "Exciting New Face and Short URL Features in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "feature",
+        "sdk",
+        "go",
+        "python",
+        "typescript"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/255",
+      "summary": "This update introduces new resources for face transformations and short URL creation across Python, TypeScript, and Go SDKs. The Go SDK has been brought to parity with Python and TypeScript by adding video, audio, and search functionalities. Key improvements enhance the overall service coverage and consistency across platforms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#412",
+      "title": "New API Guides for Producer, Fish, Face, and ShortURL in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "api",
+        "documentation",
+        "guides",
+        "integration",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/412",
+      "summary": "This update introduces comprehensive API guides for the Producer, Fish, Face, and ShortURL services. Each service now has dedicated directories with README files and integration guides, enhancing developer access to essential information. Additionally, the sync.yaml file has been updated to reflect these new services, ensuring seamless integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#153",
+      "title": "Comprehensive Ecosystem Parity Audit Completed in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "audit",
+        "documentation",
+        "ecosystem",
+        "services",
+        "gaps"
+      ],
+      "public": false,
+      "summary": "We conducted a thorough parity audit across all service surfaces, including Skills, CLIs, MCPs, APIs, SDKs, and connectors. Key findings revealed several gaps, such as four hosted MCP endpoints being down and multiple API and CLI directories unpublished. The audit has been verified and is now documented for future reference."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#780",
+      "title": "Enhance Seedream Pricing and Model Support in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "pricing",
+        "models",
+        "tests",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces the doubao-seedream-5.0-lite model with a new official price structure at fx6.8. The consumption calculations have been adjusted, and legacy support for the 3.0/seededit models is maintained. All 844 API cost tests have successfully passed, ensuring stability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1076",
+      "title": "Align Android & iOS Card CTAs for Consistency in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "css",
+        "bugfix",
+        "android",
+        "ios"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1076",
+      "summary": "This update addresses the misalignment of primary call-to-action buttons on the download cards for Android and iOS. By top-aligning footers and equalizing the description min-height, the QR codes and buttons now line up correctly, enhancing the user experience. The changes are implemented using CSS only, ensuring a clean and efficient solution."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1222",
+      "title": "Enhanced Maestro Worker Capacity in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "chore",
+        "maestro",
+        "scaling",
+        "deployment",
+        "performance"
+      ],
+      "public": false,
+      "summary": "The Maestro worker configuration has been updated to increase the number of replicas from 3 to 6. This change enhances throughput and improves restart resilience by ensuring that more jobs can be processed simultaneously without orphaning in-flight tasks. The deployment adjustments are aimed at optimizing resource utilization within the cluster."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1220",
+      "title": "Enhance Image Edits with Base64 Support in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "images",
+        "base64",
+        "edits",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces support for base64 image inputs in the gpt-image-2 edits feature, allowing users to submit images as data URLs. The changes affect three channel workers, enabling them to decode base64 images for multipart uploads while maintaining existing HTTP and multipart paths. New tests have been added to ensure functionality and reliability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1221",
       "title": "Introducing Codex Subscription Proxy for CLI in Platform Service 🚀",
       "tags": [
