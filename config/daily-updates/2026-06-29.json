@@ -3,6 +3,53 @@
   "date": "2026-06-29",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1221",
+      "title": "Introducing Codex Subscription Proxy for CLI in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "codex",
+        "api",
+        "deployment",
+        "ingress"
+      ],
+      "public": false,
+      "summary": "This update introduces the codex-proxy, which wraps the CLIProxyAPI on the Silicon Valley cluster, providing an OpenAI/Codex-compatible API backed by a ChatGPT Codex subscription. Key changes include the addition of deployment configurations, service definitions, and a public ingress for accessing the proxy. This enhancement allows for seamless integration and usage of Codex capabilities within the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#53",
+      "title": "Revamped README for Clarity in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "documentation",
+        "update",
+        "readme",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "The README has been refreshed to reflect the current project structure, including updates to the WeChat services and the merging of repository packages. Stale files such as automation/contacts.py and the Alembic directory have been removed, simplifying the documentation. The focus is now on a single-node SQLite setup, ensuring easier understanding for new contributors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#52",
+      "title": "Refactor repository structure for better organization in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "refactor",
+        "repository",
+        "modularity",
+        "maintenance",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update refactors the repository by splitting the large `repository.py` file into multiple per-entity packages, enhancing modularity and maintainability. Key files such as account, contact, conversation, group, and message repositories have been created, while maintaining backward compatibility through re-exports. All existing repository mock tests have passed successfully."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#51",
       "title": "Clean Up Code and Optimize CDN Uploads in Wisdom 🚀",
       "tags": [
