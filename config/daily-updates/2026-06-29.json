@@ -3,6 +3,104 @@
   "date": "2026-06-29",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1232",
+      "title": "Introducing g4f-proxy for Internal GPT4Free Integration in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "g4f-proxy",
+        "internal",
+        "api",
+        "deployment",
+        "openai",
+        "llm"
+      ],
+      "public": false,
+      "summary": "This update adds the g4f-proxy, an internal upstream that encapsulates the official GPT4Free OpenAI-compatible Interference API. It serves as a free, low-priority fallback provider for the openai worker, ensuring seamless access to community LLMs without public exposure. The deployment includes necessary configurations and safeguards to maintain internal network integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1231",
+      "title": "Enhance mountsea with ROUTER_INTERNAL_SECRET for better failover in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "deployment",
+        "failover",
+        "security",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update adds the `ROUTER_INTERNAL_SECRET` to the mountsea nano worker deployment, ensuring consistency with the cqtai configuration. The change addresses a critical issue where failover to mountsea resulted in verification failures. The environment variable has been set and the deployment updated to maintain alignment with the main codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1079",
+      "title": "Fix local tool execution in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "desktop",
+        "local-tools",
+        "client-execution",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1079",
+      "summary": "This update resolves issues with the desktop app's Local Tools, ensuring they run on the user's machine instead of the server. Key changes include fixing the frontend-worker contract, sanitizing tool names, and implementing deferred execution for client tools. The improvements enhance user experience by allowing seamless local tool interactions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1230",
+      "title": "Fix nano images route prefix for seamless integration in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "routing",
+        "deployment",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update modifies the images route prefix from `/nano-banana/images` to `/nano-banana` to resolve 404 errors caused by path stripping in Kong and worker misconfiguration. The change ensures that requests to `/nano-banana` are correctly routed to the worker, maintaining functionality for longer paths like `/nano-banana/tasks`. The configuration has been validated with successful end-to-end tests, confirming no impact on default traffic."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1078",
+      "title": "Adjust chat rail logo positioning for macOS users in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "macos",
+        "ui",
+        "fix",
+        "scss",
+        "desktop"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1078",
+      "summary": "This update resolves an issue where the chat rail logo was overlapping with the macOS window traffic-light buttons. By implementing a new computed property and adjusting the SCSS, the logo is now properly inset, ensuring a cleaner interface for macOS desktop users. Other platforms remain unaffected by this change."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#782",
+      "title": "Lowered OpenAI GPT Resale Prices to 20% Official in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "openai",
+        "backend",
+        "models",
+        "cost"
+      ],
+      "public": false,
+      "summary": "This update reduces the resale price of OpenAI's GPT models to 20% of the official rates, aligning with recent pricing strategies. The changes affect 17 models, with adjustments made to the per-token consumption coefficients in the cost API. All tests have been successfully passed, ensuring the integrity of the pricing model across various chat surfaces."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1229",
       "title": "Enhance Failover Routing for Nano-Banana in Platform Service 🚀",
       "tags": [
