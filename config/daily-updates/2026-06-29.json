@@ -3,6 +3,148 @@
   "date": "2026-06-29",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1235",
+      "title": "Locking Fish as Reference Audio in Platform Service 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "audio",
+        "short-drama",
+        "r2v",
+        "production",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update for short-drama v1.7 enforces that the fish audio can only serve as a reference for the r2v driver, ensuring that the final voice in productions is always aligned with the lip movements. Key changes include the removal of fallback dubbing options and the introduction of strict audio guidelines to prevent mismatched lip-syncing. The narration is the only exception where fish audio can be included, maintaining the integrity of the production."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#786",
+      "title": "Align OpenAI and Claude Pricing Copy in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "pricing",
+        "update",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update revises the pricing descriptions for OpenAI and Claude services to reflect the new 20% resale cut. Key changes include updating the language on the service introduction pages to accurately represent the discounted rates. The modifications ensure clarity and consistency across the documentation, aligning with previous PRs that established the new pricing structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1081",
+      "title": "Enhance Resume Functionality and Parallel Tool Support in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "enhancement",
+        "desktop",
+        "tools",
+        "resume"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1081",
+      "summary": "This update improves the resume functionality by ensuring that client tools are re-sent during the resume process, addressing a critical issue where tools were lost after the first round. Additionally, it introduces support for executing multiple local tools in parallel, aligning with the new worker contract. The changes enhance user experience by allowing more robust tool interactions and immediate stop functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1234",
+      "title": "Fix desktop client tool suspension issues in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "desktop",
+        "client-tools",
+        "testing",
+        "aichat2"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where the desktop client tools would hang during the second round of execution. Key changes include improved handling of `awaiting_input` blocks to ensure proper suspension and resumption of conversations, preventing permanent stalls. New tests have been added to validate the functionality and ensure robust performance across various scenarios."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#427",
+      "title": "Documentation updates for claude-code in Clis 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "documentation",
+        "updates",
+        "claude-code",
+        "guides"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/427",
+      "summary": "This update includes documentation-only changes for the `claude-code` guides, specifically in the `zh-Hans/guides/claude-code/` directory. There are no code changes necessary as the CLI tools are already aligned with the OpenAPI specifications. The absence of `openapi/claude-code.json` confirms that no further modifications are needed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#785",
+      "title": "Enhance Free GPT Aliases for Cost Efficiency in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "gpt",
+        "cost",
+        "aliases"
+      ],
+      "public": false,
+      "summary": "This update introduces five new mainstream GPT aliases with zero consumption costs: `gpt-5.5:free`, `gpt-5:free`, `gpt-4.1:free`, `gpt-4o:free`, and `gpt-4o-mini:free`. Key changes include modifications to the `_chat_models.json` to ensure accurate billing and the addition of these aliases to various JSON files. All changes have been validated with successful tests confirming zero consumption for the new aliases."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#578",
+      "title": "Revamped Balance Panel for Clarity in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "i18n",
+        "frontend",
+        "feature"
+      ],
+      "public": false,
+      "summary": "The balance panel on the API/document detail page has been restructured to enhance user experience. Key updates include repositioning the Instance and General balance tiles, adding concise explanations for each balance type, and improving the UI with rounded tiles and a bordered explainer card. Additionally, internationalization support has been expanded to cover all 11 locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#783",
+      "title": "Streamlined Public Documentation Links in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "update",
+        "backend",
+        "claude-code"
+      ],
+      "public": false,
+      "summary": "This update refines the documentation for Claude Code by ensuring that only public links are retained in the hub and service introduction pages. Private document links have been removed, enhancing clarity and accessibility for users. Key changes include the removal of JetBrains and desktop application links from the documentation, while maintaining essential public resources."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#425",
+      "title": "Add gpt-oss:free to CHAT_MODELS in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "update",
+        "feature",
+        "openai",
+        "cli"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/425",
+      "summary": "This update introduces the `gpt-oss:free` model to the `CHAT_MODELS` list in `output.py`, aligning with the latest OpenAPI specification. Users can now select this model as a valid option when using the CLI for chat completions. This change enhances the flexibility of model selection for developers."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1233",
       "title": "Enhancements for Short Drama v1.6 in Platform Service 🎬",
       "tags": [
