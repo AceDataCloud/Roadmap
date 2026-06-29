@@ -3,6 +3,381 @@
   "date": "2026-06-29",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#51",
+      "title": "Clean Up Code and Optimize CDN Uploads in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "cleanup",
+        "optimization",
+        "code",
+        "cdn",
+        "refactor"
+      ],
+      "public": false,
+      "summary": "This update removes unused code, including the `message_exists` function and navigation actions for conversations, resulting in a reduction of 633 lines. Additionally, the CDN upload functionality has been streamlined by merging duplicate uploaders into a single utility, enhancing efficiency and maintainability. The changes improve the overall performance of the Wisdom project while ensuring that existing features remain intact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1075",
+      "title": "Enhance macOS Permissions in Nexior 🌟",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "macos",
+        "permissions",
+        "localtools",
+        "update",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1075",
+      "summary": "This update introduces macOS TCC permission tiers in the LocalTools panel, enhancing user control over system permissions. Key changes include new IPC handlers and entitlements for screen, microphone, camera, and automation access. Users can now view permission statuses and jump directly to System Settings for adjustments, improving the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#779",
+      "title": "Revamped Volcengine Pricing for Seedance in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "backend",
+        "updates",
+        "seedance",
+        "volcengine"
+      ],
+      "public": false,
+      "summary": "This update includes a complete rebuild of the cost structure for the Seedance service based on the official Volcengine pricing at fx6.8. Key changes involve the addition of new pricing rules and adjustments to existing ones, resulting in 843 passing API cost tests. The modifications enhance the accuracy of cost calculations for various video resolutions and audio configurations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1219",
+      "title": "Enhance fish catalog parsing for better performance in Platform Service 🎣",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "performance",
+        "catalog",
+        "voice",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update clarifies the fish catalog response structure, ensuring the agent correctly parses the 'items' instead of 'data'. The change restores the catalog-first persona casting, improving the overall functionality of the voice casting feature. The fix enhances the user experience by providing accurate data retrieval."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#50",
+      "title": "Enhance Frida Inbound Persistence & Clean Up Naming in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "cleanup",
+        "tests",
+        "refactor"
+      ],
+      "public": false,
+      "summary": "This update addresses critical issues with Frida's inbound message persistence, ensuring that messages are correctly processed and stored in the database. Key changes include the addition of regression tests, improved naming conventions, and the removal of unnecessary files. Overall, these enhancements improve the reliability and maintainability of the Wisdom application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#154",
+      "title": "Enhance macOS Permissions Design for Nexior in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "macos",
+        "permissions",
+        "design",
+        "nexior",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive design for macOS TCC permission tiers, including folder access and various system permissions. Key files have been modified and a new permissions document has been added, detailing the entitlements and bookmark persistence strategies. These changes aim to improve user experience while ensuring necessary permissions are handled effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1073",
+      "title": "Enhance Local Tools Settings Page in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "settings",
+        "local-tools",
+        "desktop",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1073",
+      "summary": "This update introduces a new settings page for local tools, allowing users to authorize root folders for local execution. Key files added include a dedicated Vue component for the settings interface and necessary routing updates. The changes improve the user experience by enabling local folder management directly within the desktop application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1218",
+      "title": "Enhance Render Accuracy with New Aspect Rules in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "rendering",
+        "aspect-ratio",
+        "quality",
+        "platform-service",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update implements strict aspect ratio enforcement for rendering, ensuring that the agent adheres to specified dimensions. Key changes include making aspect and duration hard directives, rejecting incorrect aspect ratios during preflight checks, and reinforcing authoring rules for layout safety. These improvements aim to eliminate rendering defects and enhance overall visual quality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1074",
+      "title": "Enhance Dock Icon and Fix Launch Issue in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "bugfix",
+        "ui",
+        "macos"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1074",
+      "summary": "This update introduces a refined squircle dock icon for macOS, ensuring it no longer fills the square completely. Additionally, the app now loads from the root URL instead of /index.html, eliminating the 404 flash during startup. These changes enhance the user experience and visual appeal of the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#415",
+      "title": "Deploy Manifests for Webextrator in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "deployment",
+        "webextrator",
+        "ingress",
+        "service",
+        "kubernetes"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/415",
+      "summary": "This update introduces deployment manifests for the Webextrator MCP, including deployment, service, and ingress configurations. Key additions include the setup for hosting on webextrator.mcp.acedata.cloud with NGINX routing and TLS support. These changes enhance the deployment process and ensure better accessibility and security for the service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#411",
+      "title": "Pixverse API Documentation Removed in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "api",
+        "removal",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/411",
+      "summary": "The Pixverse API documentation has been delisted as the service is now marked as private. Key files, including the main README and several integration guides, have been removed to align with the platform's updated status. This change ensures that the documentation reflects the current accessibility of the Pixverse API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#410",
+      "title": "Exciting New Seedream Image Generation API Docs Added in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "api",
+        "seedream",
+        "integration",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/410",
+      "summary": "We've added comprehensive documentation for the Seedream Image Generation API, including a README and two integration guides. Key features include support for multiple models and sizes, along with a streamlined sync.yaml for easier integration. This update enhances accessibility for developers looking to utilize the Seedream service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1072",
+      "title": "Enhance Dock Icon for Dev Runs in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "desktop",
+        "icon",
+        "dev",
+        "macos",
+        "patch"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1072",
+      "summary": "This update fixes the issue where the default Electron icon was displayed in the Dock during development runs. The app now sets the branded dock icon when running in development mode on macOS, ensuring a consistent look with the packaged DMG. Key changes include the addition of a new JSON configuration and modifications to the main Electron file."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#49",
+      "title": "Align Code with SPEC for Enhanced Functionality in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "feature",
+        "update",
+        "enhancement",
+        "api",
+        "db"
+      ],
+      "public": false,
+      "summary": "This update implements the merged SPEC, introducing DB-only contacts and a new media endpoint for messages. Key changes include the removal of history endpoints and updates to the message handling process, which now excludes the sender in certain cases. These modifications aim to streamline data retrieval and improve overall system performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1216",
+      "title": "Enhance Failover Logic for Header Timeouts in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "failover",
+        "timeout",
+        "reliability",
+        "update",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces a new policy to enable failover when response headers are not received within the specified timeout. The header timeout has been reduced from 3600 seconds to 360 seconds, aligning with vendor standards. Tests confirm that failover occurs correctly when the new policy is enabled, ensuring better reliability during upstream outages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1217",
+      "title": "Enhanced Fallback for Official GPT Image in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "fallback",
+        "routing",
+        "gpt-image",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces a reverse fallback mechanism for the `gpt-image-2:official` model, ensuring continuity during cortex outages. A new `br-official` channel has been added to the router configmap, allowing the fallback to serve requests when cortex is unavailable. Key modifications were made to the routing logic and tests to accommodate this change, enhancing reliability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1214",
+      "title": "Enhance Lip-Sync and Voice Casting in Platform Service 🎭",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "lip-sync",
+        "voice-casting",
+        "reliability",
+        "storytelling"
+      ],
+      "public": false,
+      "summary": "This update introduces version 1.4 of the short-drama skill, focusing on improved lip-sync reliability and voice casting. Key changes include a new retry mechanism for r2v, upfront voice casting in voices.json, and enhanced story coherence through structured beat sheets. These enhancements aim to ensure a seamless storytelling experience without silent gaps or dropped lines."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1215",
+      "title": "Enhance Desktop Client Tool Execution in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "aichat2",
+        "desktop",
+        "client-tools",
+        "local-execution"
+      ],
+      "public": false,
+      "summary": "This update introduces the ability for the aichat2 worker to accept and register client tools for local execution on desktop. Key changes include modifications to the conversations handler and orchestrator to support tool execution that pauses for user input, mirroring the ask_user_question functionality. This enhancement allows for a more interactive experience, enabling desktop clients to run tools and resume processing seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1071",
+      "title": "Enhance Local Tool Execution and Config Management in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "desktop",
+        "ipc",
+        "local-execution",
+        "aichat2"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1071",
+      "summary": "This update introduces local tool routing and configuration management for desktop users in Nexior. Key changes include the injection of local tools into aichat2, the ability to run client tools locally, and enhancements to the IPC for configuration handling. These improvements set the stage for a more seamless user experience in local execution workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1213",
+      "title": "Fix GSAP Vendorization and CDN References Across All Skills in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "gsap",
+        "vendor",
+        "cdn",
+        "fix",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update vendors GSAP 3.15.0 and rewrites all CDN references across 87 skills to ensure consistent styling in teaching videos. The changes prevent unstyled frames by eliminating reliance on external CDNs, which are inaccessible in the worker sandbox. Additionally, authoring rules have been updated to enforce local asset usage, enhancing reliability across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#48",
+      "title": "Comprehensive Alignment of Current Architecture in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "docs",
+        "architecture",
+        "asynchronous",
+        "media",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update brings a thorough alignment of the `SPEC.md` document with the current architecture, transitioning from a pure UI Automation model to a hybrid approach. Key changes include the removal of outdated components, the introduction of asynchronous task handling, and a complete media restructuring. These adjustments enhance the overall functionality and maintainability of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1069",
+      "title": "Launch Local Tool Execution Foundation in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "desktop",
+        "local-execution",
+        "electron",
+        "consent"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1069",
+      "summary": "This PR establishes the foundational framework for local tool execution in the Nexior desktop application. Key components include modules for file system access, command execution, and local MCP server integration, all gated by user consent. The implementation is currently inert, awaiting further PRs to activate functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1070",
+      "title": "Enhance Desktop Experience with Frameless Window Chrome in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "desktop",
+        "ui",
+        "enhancement",
+        "macos",
+        "windows"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1070",
+      "summary": "This update introduces a frameless window chrome for desktop users, enhancing the user interface on macOS and Windows/Linux. Key changes include a draggable header and adjusted title bar styles to improve usability. The header now serves as a drag handle, ensuring a seamless experience across platforms."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#418",
       "title": "Align Custom Payload with OpenAPI in Clis 🚀",
       "tags": [
