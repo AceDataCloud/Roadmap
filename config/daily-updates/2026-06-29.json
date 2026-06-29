@@ -3,6 +3,308 @@
   "date": "2026-06-29",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#55",
+      "title": "Enhance Database Management with Alembic Migrations in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "alembic",
+        "migrations",
+        "database",
+        "update",
+        "wisdom"
+      ],
+      "public": false,
+      "summary": "This update introduces Alembic migrations to the Wisdom project, enabling better database schema management. Key files such as `alembic.ini`, `env.py`, and initial migration scripts have been added, allowing for smooth upgrades and version control of the database schema. The changes enhance the project's robustness while maintaining safety with the existing `create_all` method for production."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#423",
+      "title": "Streamline CI Workflow by Removing Duplicate Dispatch in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "ci",
+        "workflow",
+        "cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/423",
+      "summary": "This update cleans up the CI workflow by removing a duplicate workflow dispatch configuration. The changes enhance the clarity and efficiency of the sync-to-repos process, ensuring smoother operations moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#422",
+      "title": "Enhance Sync Workflows in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "ci",
+        "sync",
+        "workflow",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/422",
+      "summary": "This update introduces a new weekly cron job and a workflow dispatch option for syncing sub-repositories. The changes ensure that the sync process can be triggered manually or automatically, improving the efficiency of repository management. The modifications to the workflow file enhance the overall functionality and reliability of the sync operations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#417",
+      "title": "Enhance Sync Workflows in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "ci",
+        "sync",
+        "workflow",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/417",
+      "summary": "This update introduces a new weekly cron job and a workflow dispatch option to the sync-to-repos process. The changes allow for a more efficient seeding and refreshing of subrepositories, ensuring that all directories can be synced as needed. The modifications streamline the workflow and improve overall synchronization reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#159",
+      "title": "Updated WebExtrator API Documentation in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "api",
+        "update",
+        "webextrator"
+      ],
+      "public": false,
+      "summary": "The documentation for the WebExtrator API has been successfully mapped and updated. This change enhances clarity and accessibility for users, ensuring they have the latest information on the API's functionality. The README file has been modified to reflect this update."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#416",
+      "title": "Enhance webextrator mapping to WebExtratorAPI in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "mapping",
+        "update",
+        "sync",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/416",
+      "summary": "This update adds a mapping for webextrator to the WebExtratorAPI, addressing the lack of subrepo mapping. The sync.yaml file has been modified to include this new mapping, ensuring better organization and accessibility of resources. Overall, this change streamlines the integration process for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#576",
+      "title": "Enhance Admin Console with Model Management in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "admin",
+        "frontend",
+        "i18n",
+        "models",
+        "ui"
+      ],
+      "public": false,
+      "summary": "The Admin upstream console now features a collapsible panel for supported models on provider cards, allowing for easy viewing and editing. Key functionalities include inline configuration options for each model and automatic refresh of related data upon edits or deletions, ensuring consistency across tabs. This update also includes internationalization support for all 12 locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1226",
+      "title": "Enhance Error Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "failover",
+        "router",
+        "testing",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update enforces stricter error handling in the failover router by ensuring that only HTTP 5xx responses trigger the breaker mechanism. Client-side errors (HTTP 4xx) are now committed directly, preventing unnecessary failovers. Additionally, improvements were made to the handling of transparent proxy attempts and single-channel responses, enhancing overall reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#158",
+      "title": "Enhance CLI/API Documentation in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "cli",
+        "api",
+        "updates"
+      ],
+      "public": false,
+      "summary": "Merged updates to the CLI and API documentation, improving clarity and accuracy. Key changes include renaming the AdcCli to AceDataCloudCli and adding new entries for HailuoCli, KlingCli, and WebExtratorCli. These enhancements aim to streamline user experience and provide better guidance for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#415",
+      "title": "Sync API Mirrors for Kling, Hailuo, Claude, and Gemini in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "api",
+        "sync",
+        "documentation",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/415",
+      "summary": "This update registers the Kling, Hailuo, Claude, and Gemini API mirror subrepositories in the sync.yaml file. Each directory now correctly maps to its respective API mirror, ensuring all documentation is in sync. The changes are additive and maintain the existing structure, confirming the existence of all target repositories."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#421",
+      "title": "Renamed AdcCli to AceDataCloudCli and Updated Mappings in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "rename",
+        "cli",
+        "documentation",
+        "sync"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/421",
+      "summary": "This update includes the renaming of the AdcCli subrepo to AceDataCloudCli across all relevant files, including sync.yaml and README.md. Additionally, mappings for kling, webextrator, and hailuo CLIs have been confirmed to be in sync. The changes ensure that the package name remains unchanged while enhancing clarity in the documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1077",
+      "title": "Fix resolution handling for nano-banana-2 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "localization",
+        "nexior",
+        "nanobanana"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1077",
+      "summary": "This update addresses an issue where the resolution setting was not honored for the nano-banana-2 model, causing it to silently drop the selected resolution. The fix modifies the Index.vue file to ensure that resolution is only stripped for the base model, while also updating the English and Chinese localization files to reflect that both nano-banana-2 and nano-banana-pro support resolution settings. This enhances user experience and clarity in the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#157",
+      "title": "Documentation update for ecosystem parity in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "update",
+        "ecosystem",
+        "parity"
+      ],
+      "public": false,
+      "summary": "The latest status refresh for the ecosystem parity audit has been completed, with all 7 ecosystem PRs successfully merged. Key modifications include updates to the README file, enhancing clarity on the status of various components. This ensures that users have the most current information at their fingertips."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#420",
+      "title": "OpenAI CLI Sync with Latest Docs Spec in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "sync",
+        "openai",
+        "cli",
+        "documentation",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/420",
+      "summary": "This update verifies that the OpenAI CLI is in sync with the latest documentation specifications. Two new image model variants, `gpt-image-2:reverse` and `gpt-image-2:official`, have been confirmed to be included in the `IMAGE_MODELS` list without requiring any code changes. All endpoints and parameters align perfectly with the current spec, ensuring no discrepancies are present."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#575",
+      "title": "Enhanced Provider Cards with Supported Models in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "admin",
+        "i18n",
+        "ui",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "The provider cards in the admin console now display supported models as rank-sorted tags, complete with health indicators and tooltips for alias, status, rank, and latency. This update also includes internationalization support for the new feature across all 12 locales, enhancing accessibility and user experience. These changes build upon previous UX improvements for the admin backend."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#781",
+      "title": "Enhance Image Editing with Base64 Support in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "images",
+        "base64",
+        "gpt-image-2",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update adds documentation for the new base64 input feature in the gpt-image-2 image editing service. Users can now directly submit images in base64 format, eliminating the need for prior uploads to an image hosting service. The changes ensure seamless integration with existing workflows and enhance the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#156",
+      "title": "Updated documentation for webextrator skill and MCP cron in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "skills",
+        "mcp",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update includes modifications to the README.md file, specifically enhancing the documentation for the webextrator skill and the MCP cron. The changes ensure that the webextrator skill is properly linked and documented, improving clarity for users. Overall, this contributes to a cleaner and more informative resource for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#417",
+      "title": "Enhance CI with Weekly MCP Package Refresh in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "ci",
+        "cron",
+        "calver",
+        "mcp",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/417",
+      "summary": "This update introduces a weekly cron job to the CI workflow, ensuring that all MCP packages are refreshed regularly. The cron job triggers a full re-sync every Monday at 03:00 UTC, allowing for the automatic minting of fresh CalVer versions without requiring code changes. This enhancement helps prevent package stalling and maintains up-to-date versions across all subrepos."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#486",
+      "title": "Introducing the webextrator skill for seamless web rendering in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "feature",
+        "web",
+        "extraction",
+        "skills",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/486",
+      "summary": "This update adds a new `webextrator` skill to AceDataCloud, enabling users to render and extract web page content efficiently. Key features include support for various endpoints like `/extract` and `/render`, along with bearer-token authentication. The skill is designed to work with real headless Chromium, enhancing the extraction of structured data from any URL."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#54",
       "title": "Clean Up Unused Nickname Functionality in Wisdom 🎉",
       "tags": [
