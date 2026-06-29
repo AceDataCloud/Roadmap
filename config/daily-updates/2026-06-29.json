@@ -3,6 +3,53 @@
   "date": "2026-06-29",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1233",
+      "title": "Enhancements for Short Drama v1.6 in Platform Service 🎬",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "audio",
+        "video",
+        "style",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update introduces significant improvements to the short drama feature, including a global style lock to maintain visual consistency and a refined approach to character face representation. Additionally, audio and video synchronization issues have been addressed by implementing precise audio trimming and re-encoding techniques. These changes enhance the overall quality and coherence of the output across various languages and genres."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#784",
+      "title": "Launch of Free GPT Model for Chat in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "api",
+        "testing",
+        "cost"
+      ],
+      "public": false,
+      "summary": "This update introduces the new free chat model `gpt-oss:free`, which incurs zero consumption costs. Key changes include updates to JSON files for cost calculations and API specifications, ensuring the model is accessible and correctly integrated into the existing system. Comprehensive testing has confirmed the model's functionality and compliance with existing rules."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#161",
+      "title": "Revamp of Client-Tool Resume Mechanism in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "client-tool",
+        "suspend-resume",
+        "fix",
+        "nexior",
+        "architecture"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive fix for the suspend/resume mechanism of the Nexior desktop client-tool, addressing critical issues that caused failures during execution. Key changes include elevating the client-tool to a primary suspend/resume primitive, ensuring proper handling of tool execution and state management. The implementation will enhance user experience by preventing previous failures and ensuring smoother operation."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1232",
       "title": "Introducing g4f-proxy for Internal GPT4Free Integration in Platform Service 🚀",
       "tags": [
