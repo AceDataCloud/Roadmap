@@ -3,6 +3,86 @@
   "date": "2026-06-29",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1229",
+      "title": "Enhance Failover Routing for Nano-Banana in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "failover",
+        "routing",
+        "deployment",
+        "service",
+        "config"
+      ],
+      "public": false,
+      "summary": "This update introduces a dedicated failover router for the nano-banana service, addressing timeout issues by implementing a new routing strategy. The configuration includes a deployment of an independent instance that ensures seamless failover between channels cqtai and mountsea, significantly improving service reliability. Key changes involve the addition of configuration files and deployment scripts, all aimed at enhancing task-aware routing capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1227",
+      "title": "Enhance Short Drama Experience in Platform Service 🎬",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "short-drama",
+        "language",
+        "captions",
+        "subtitles",
+        "fixes"
+      ],
+      "public": false,
+      "summary": "This update introduces version 1.5 of the short-drama skill, implementing critical fixes based on real-video feedback. Key changes include ensuring that language follows the drama's original language, enforcing a single caption per scene, and aligning subtitles with the audio for accuracy. These improvements aim to enhance the overall viewing experience by providing a cohesive and immersive narrative flow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1228",
+      "title": "Enhance Lyrics Generation Model Default in Platform Service 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "lyrics",
+        "suno",
+        "platform-service",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update addresses the issue of poor lyrics quality by changing the default model from 'remi' to 'classic' for the Suno lyrics generation. Key modifications were made in both the ttapi and openaihk workers to ensure that the public model parameter is correctly mapped to the appropriate upstream model. As a result, users will now receive higher quality lyrics that align more closely with the Suno site output."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#233",
+      "title": "Normalize Email Case for Login and Registration in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "auth",
+        "email",
+        "backend",
+        "fix",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update ensures that email addresses are treated as case-insensitive during login, registration, and password resets. Key changes include storing emails in lowercase and modifying lookup queries to use case-insensitive matching. This enhancement resolves login issues for users with mixed-case email addresses and improves overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#418",
+      "title": "Launch Hosted AiChat, GLM, and OpenAI MCPs in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "deployment",
+        "Kubernetes",
+        "OAuth",
+        "services"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/418",
+      "summary": "This update introduces the deployment of hosted MCP endpoints for AiChat, GLM, and OpenAI, addressing previous failures in accessing these services. Key changes include the addition of deployment workflows, production configurations for each service, and OAuth client IDs for secure access. The deployment aims to enhance service availability and streamline user interactions with these platforms."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#55",
       "title": "Enhance Database Management with Alembic Migrations in Wisdom 🚀",
       "tags": [
