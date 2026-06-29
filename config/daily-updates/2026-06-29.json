@@ -1,0 +1,270 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-06-29",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Clis#418",
+      "title": "Align Custom Payload with OpenAPI in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "openapi",
+        "cli",
+        "suno",
+        "tests",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/418",
+      "summary": "This update synchronizes the `--negative-style` parameter in the CLI with the OpenAPI specification by mapping it to `style_negative`. The change ensures that the request bodies sent to the Suno API are consistent with the defined schema, enhancing overall reliability. Additionally, regression tests have been added to verify that the correct field is used in the outbound JSON."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1068",
+      "title": "Enhance Desktop Experience with App Menu and Notifications in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "desktop",
+        "features",
+        "notifications",
+        "paypal",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1068",
+      "summary": "This update introduces several key features for the Nexior desktop app, including an app menu that restores clipboard accelerators, a minimum window size to prevent layout issues, and an allowlist for PayPal to enable seamless checkout. Additionally, OS notifications have been implemented to ensure reliable alerts even when the app is minimized. These enhancements aim to improve user interaction and overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#416",
+      "title": "Sync CLI Options with Latest API Docs in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "api",
+        "documentation",
+        "testing",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/416",
+      "summary": "This update aligns the `veo` CLI options with the latest OpenAPI specifications, ensuring command validation is consistent with the backend contract. Key changes include the removal of unsupported model enums, updates to aspect ratios, and the introduction of regression tests to prevent contract drift. Additionally, user-facing documentation has been updated for clarity and accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#748",
+      "title": "Enhance Audio Documentation with Title and Vocal Gender Details in Backend 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "suno",
+        "api",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update improves the audio documentation by adding specific details regarding the title length and vocal gender preferences based on the Suno API specifications. The title can now have a maximum of 80 characters for certain models and 100 for others, while the vocal gender field has been clarified to indicate it as a preference rather than a strict requirement. These changes aim to provide clearer guidance for users integrating with the Suno API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#768",
+      "title": "Update gpt-image-2 cost remark for clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cost",
+        "gpt-image-2",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update corrects the cost-rule remark for the `gpt-image-2` model, clarifying that it defaults to the reverse channel. The previous remark was misleading, and the new text enhances understanding for users. All tests passed successfully, ensuring no impact on logic or billing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#778",
+      "title": "Streamlined OpenAPI Cost Sync for Live Workers in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "openapi",
+        "cost",
+        "backend",
+        "veo",
+        "flux",
+        "seedance"
+      ],
+      "public": false,
+      "summary": "This update synchronizes the OpenAPI cost with live upstream workers for the VEO, FLUX, and Seedance services. Key changes include the removal of the outdated `veo2` model, the addition of `flux-pro-1.1`, and the cleanup of dead models in Seedance. These adjustments ensure accurate pricing and improved functionality across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#152",
+      "title": "New Planning Docs for Nexior Desktop Client in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "nexior",
+        "desktop",
+        "planning",
+        "local-execution",
+        "adaptation"
+      ],
+      "public": false,
+      "summary": "We've introduced two comprehensive planning documents for the Nexior desktop client, focusing on platform adaptation and local execution capabilities. The first document outlines necessary adaptations for Windows and macOS, identifying gaps in the current implementation. The second document proposes a design for executing local commands, enhancing user experience by eliminating the need for a separate daemon."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#405",
+      "title": "Restoring Seedance 1.x Models in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "seedance",
+        "api",
+        "update",
+        "models",
+        "revert"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/405",
+      "summary": "This update reverts the previous decision to drop Seedance 1.x, confirming that the models are still operational via volcengine. Key changes include the addition of multiple 1.x model options in the README and integration guide, ensuring users can access these models for video generation. This restoration enhances the flexibility and options available for developers using the Seedance API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#481",
+      "title": "Restoring Seedance 1.x Functionality in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "seedance",
+        "skills",
+        "update",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/481",
+      "summary": "This update reverts the previous decision to drop Seedance 1.x, confirming that it remains operational via volcengine with live POST responses returning 200. Key modifications include updates to the SKILL.md documentation, which now includes details about the 1.x models alongside the current 2.0 series. This change ensures continued support for users relying on the 1.x models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#777",
+      "title": "Updated formal title for unified MCP documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "update",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update modifies the title of the unified MCP documentation to a more formal H1, aligning it with the existing `Document.name` in production. The change enhances clarity and professionalism in the documentation. Only minor edits were made to the document's header."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#404",
+      "title": "Streamlined Seedance Models for 2.0 in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "update",
+        "documentation",
+        "models",
+        "api",
+        "seedance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/404",
+      "summary": "This update removes outdated Seedance 1.x models from the documentation and model lists, aligning with the new 2.0-only OpenAPI specifications. Key files modified include the README and the integration guide, ensuring users have access to the latest model options. All tests for the bot and 2.0 functionality have passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#480",
+      "title": "Streamline Seedance Models for 2.0 in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "cleanup",
+        "documentation",
+        "models",
+        "skills",
+        "seedance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/480",
+      "summary": "This update removes references to the outdated 1.x models from the SKILL.md documentation, focusing solely on the 2.0 series. The changes enhance clarity by trimming unnecessary information and emphasizing the new multimodal features of the 2.0 models. Overall, this cleanup supports a more efficient user experience for developers and users alike."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#403",
+      "title": "Enhance Seedance Video Generation API Documentation in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "api",
+        "seedance",
+        "integration",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/403",
+      "summary": "This update introduces comprehensive documentation for the Seedance Video Generation API, filling a critical gap in the APIs monorepo. Key additions include detailed integration guides for both video generation and task management, along with a new README for the Seedance service. These enhancements ensure developers have the necessary resources to effectively utilize the Seedance API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#413",
+      "title": "Update default model for Seedance CLI in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "update",
+        "cli",
+        "seedance",
+        "documentation",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/413",
+      "summary": "The default model for the Seedance CLI has been updated to `doubao-seedance-2-0-260128`, ensuring compatibility with the live worker. Key documentation and help strings have also been refreshed to reflect this change. Additionally, tests have been updated to assert the new default model, maintaining the integrity of the CLI functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#410",
+      "title": "Enhance MCP Sync with Seedance 2.0 Features in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "feature",
+        "update",
+        "seedance",
+        "mcp",
+        "video"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/410",
+      "summary": "This update fully synchronizes the MCP server with Seedance 2.0 capabilities, adding support for the mini model, 4k resolution, and enhanced audio/video features. Key changes include updates to model types, configuration defaults, and tools for video generation, ensuring a seamless user experience. The README has also been revised to reflect these new features and pricing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#479",
+      "title": "Sync Seedance Video Skill to 2.0 Capabilities in Skills 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "seedance",
+        "skills",
+        "update",
+        "multimodal",
+        "video"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/479",
+      "summary": "The `seedance-video` skill has been updated to align with the Seedance 2.0 specifications, enhancing its functionality. Key changes include the introduction of new models, support for 4k resolution, and updated multimodal references for audio and video content. Additionally, the duration and frame range have been expanded, ensuring a more versatile user experience."
+    }
+  ]
+}
