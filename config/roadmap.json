@@ -613,15 +613,16 @@
             },
             {
               "title": "Launch standalone API Playground page with multi-language code generation (Python, Node.js, curl)",
-              "status": "planned",
+              "status": "done",
               "target_at": null,
-              "completed_at": null
+              "completed_at": "2026-06-30",
+              "note": "Shipped as an embedded playground on each service page with multi-language code generation (Python, Node.js, curl, Go, and more)."
             },
             {
               "title": "Publish Python and Node.js SDKs with full API coverage on PyPI and npm",
-              "status": "planned",
+              "status": "done",
               "target_at": null,
-              "completed_at": null
+              "completed_at": "2026-06-30"
             }
           ]
         },
@@ -734,9 +735,9 @@
           "items": [
             {
               "title": "Publish per-service quickstart guides with interactive code examples for all major APIs",
-              "status": "planned",
+              "status": "done",
               "target_at": null,
-              "completed_at": null
+              "completed_at": "2026-06-30"
             },
             {
               "title": "Complete MCP ecosystem article series covering all 11 servers across Claude Desktop, VS Code, and Cursor",
@@ -746,9 +747,9 @@
             },
             {
               "title": "Ship X402 protocol integration guide and developer cookbook with end-to-end code examples",
-              "status": "planned",
+              "status": "done",
               "target_at": null,
-              "completed_at": null
+              "completed_at": "2026-06-30"
             }
           ]
         },
@@ -792,9 +793,9 @@
           "items": [
             {
               "title": "Implement advanced routing with automatic fallback and load balancing across model providers",
-              "status": "planned",
+              "status": "done",
               "target_at": null,
-              "completed_at": null
+              "completed_at": "2026-06-27"
             },
             {
               "title": "Add webhook management for async event notifications on job completion and billing events",
@@ -804,9 +805,10 @@
             },
             {
               "title": "Launch real-time status page with per-service uptime and incident tracking",
-              "status": "planned",
+              "status": "done",
               "target_at": null,
-              "completed_at": null
+              "completed_at": "2026-06-30",
+              "note": "Live at status.acedata.cloud with 90-day per-service uptime; incident timeline not yet included."
             }
           ]
         },
@@ -833,9 +835,10 @@
             },
             {
               "title": "Submit Nexior to Google Play Store with Play Store ASO optimization",
-              "status": "planned",
+              "status": "in_progress",
               "target_at": null,
-              "completed_at": null
+              "completed_at": null,
+              "note": "Internal track live (3.35.1); Production submission in Google review."
             }
           ]
         },
@@ -856,9 +859,10 @@
             },
             {
               "title": "Launch OpenClaw chatbot deployment templates with multi-model and multi-channel support",
-              "status": "planned",
+              "status": "done",
               "target_at": null,
-              "completed_at": null
+              "completed_at": "2026-05-31",
+              "note": "Shipped as @acedatacloud/openclaw-provider on npm — multi-model chat (62 models) + web search; image/video/music modalities deferred."
             },
             {
               "title": "Establish co-marketing partnerships with Solana AI ecosystem projects",
@@ -896,15 +900,16 @@
           "items": [
             {
               "title": "Ship multi-language SDK documentation with embedded playground for Python, Node.js, and Go",
-              "status": "planned",
+              "status": "in_progress",
               "target_at": null,
-              "completed_at": null
+              "completed_at": null,
+              "note": "Python/Node.js/Go SDKs shipped and documented (per-language READMEs); embedded interactive playground still pending."
             },
             {
               "title": "Launch SEO-optimized documentation site with sitemap, structured data, and AI-crawler support",
-              "status": "planned",
+              "status": "done",
               "target_at": null,
-              "completed_at": null
+              "completed_at": "2026-06-30"
             },
             {
               "title": "Publish comprehensive error code reference and troubleshooting guides for all APIs",
