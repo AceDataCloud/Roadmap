@@ -1,7 +1,14 @@
 {
-  "as_of": "2026-06-30T00:41:21.829240+00:00",
+  "as_of": "2026-06-30T03:07:06.560174+00:00",
   "total": 20,
   "orders": [
+    {
+      "id": "ae525787-b****0d09be11f4",
+      "created_at": "2026-06-30T02:51:36.517206+00:00",
+      "pay_way": "Stripe",
+      "price": 13.0,
+      "description": "Suno 音乐生成 x 100 积分"
+    },
     {
       "id": "ff87833e-6****89bc6a3857",
       "created_at": "2026-06-29T21:41:30.961635+00:00",
@@ -134,13 +141,6 @@
       "pay_way": "AliPay",
       "price": 13.0,
       "description": "Ace Data Cloud General Points Recharge - 100 Credits"
-    },
-    {
-      "id": "b5c1f66e-5****80a72ddbbc",
-      "created_at": "2026-06-27T21:29:00.569009+00:00",
-      "pay_way": "WechatPay",
-      "price": 13.0,
-      "description": "Ace Data Cloud 通用积分充值 - 100 积分"
     }
   ]
 }
