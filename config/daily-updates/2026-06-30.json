@@ -3,6 +3,197 @@
   "date": "2026-06-30",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Index#164",
+      "title": "Enhance Service Introduction Guidelines in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "guidelines",
+        "updates",
+        "design",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update introduces a new 'Two-File Convention' for service introduction content and design, ensuring consistency across documentation. Key changes include mandatory checks for rendering and formatting, as well as a correction in the file path for service introduction documents. These improvements aim to streamline the documentation process and enhance user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#589",
+      "title": "Document Rendering Pitfalls Addressed in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "documentation",
+        "frontend",
+        "design",
+        "guidelines"
+      ],
+      "public": false,
+      "summary": "This update enhances the `INTRODUCTION_DESIGN.md` by adding a new section on rendering pitfalls, crucial for maintaining document integrity. Key changes include strict guidelines against empty lines, proper usage of HTML elements for FAQs, and recommendations for code examples. These adjustments aim to prevent rendering issues that could disrupt the user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#806",
+      "title": "Fix markdown rendering issues and improve service intros in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "markdown",
+        "fix",
+        "documentation",
+        "backend",
+        "html",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update addresses critical rendering issues in service introduction pages caused by markdown-it, specifically fixing HTML leaks and improving FAQ functionality. Additionally, it enhances the user experience by updating step indicators and cleaning up dead links to ensure all services are accurately represented. The changes impact 80 Chinese introduction pages and streamline the documentation process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1096",
+      "title": "Enhance Consent Management for Computer Tools in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "consent",
+        "usability",
+        "desktop",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1096",
+      "summary": "This update restores persistent 'Always allow' consent for computer-use tools and ensures that 'Allow for session' functions correctly. Users will no longer face repeated prompts during screenshot and action loops, streamlining their experience. The changes include name-scoped grants for better management and a new button for persistent consent, enhancing usability while maintaining safety protocols."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#807",
+      "title": "Streamline Translation Process to Prevent OOM Crashes in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "performance",
+        "backend",
+        "translation"
+      ],
+      "public": false,
+      "summary": "This update addresses the OOM crash loop in the translation CronJob by modifying how stale targets are processed. Instead of loading all target rows into memory, the new implementation streams only the necessary lightweight data, significantly reducing memory usage from ~921 MB to 122 MB. This change ensures that the CronJob can run successfully and start clearing the backlog of translations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#802",
+      "title": "Retire Sora MCP Tutorials and Clean Up Docs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "cleanup",
+        "sora",
+        "mcp",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update removes seven tutorial documents related to the now-decommissioned Sora MCP service, along with associated content from overview pages. Key changes include the deletion of outdated markdown files and the necessary adjustments to ensure no references to Sora remain in the documentation. The Sora API documentation remains untouched as it is already marked private."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#439",
+      "title": "Confirmed no-op for `claude-code` docs sync in Clis 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "docs",
+        "sync",
+        "review",
+        "no-op"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/439",
+      "summary": "The review of the `claude-code` documentation updates confirmed that no CLI sync work is required for commands, parameters, or endpoint coverage. The findings indicate that there are no corresponding CLI packages or OpenAPI specs to sync within the repository, resulting in no changes to code, tests, or documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1242",
+      "title": "Enhance Screenshot Action Loop for Desktop Control in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "aichat2",
+        "screenshot",
+        "desktop",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces Phase 4 of the computer use functionality, implementing a structured action loop that requires a screenshot before any action is taken. It ensures that actions are based on the most recent screen capture, enhancing operational hygiene and user control. Key changes include the addition of a new `<computer_use>` block and updates to the prompt builder and tests to support this functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1095",
+      "title": "Introducing Global Panic-Stop Hotkey for Safety in Nexior 🚨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "safety",
+        "hotkey",
+        "desktop",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1095",
+      "summary": "This update implements a global 'panic stop' hotkey (Cmd/Ctrl + Alt + Shift + P) that instantly disables Computer Use, ensuring user safety during screen capture and automation. Key changes include the addition of a new helper function to manage the hotkey and updates to various components to reflect the state change in real-time. This enhancement reinforces the opt-in nature of Computer Use, keeping it default OFF while providing an immediate escape option."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1094",
+      "title": "Enhance Computer Input Functionality in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "desktop",
+        "input",
+        "optional-dependency"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1094",
+      "summary": "This update introduces Phase 2 of the computer use feature by adding nut.js as an optional dependency, enabling mouse and keyboard input functionality. The implementation ensures that the desktop app can now handle input commands like click, type, and scroll, while maintaining a CI-safe environment. Users can opt-in to this feature, which remains off by default, ensuring a smooth experience across platforms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#805",
+      "title": "Updated Platform Table for Clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "update",
+        "backend",
+        "claude-code"
+      ],
+      "public": false,
+      "summary": "The platform table in the Claude Code documentation has been streamlined to accurately reflect the three published sub-documents: VS Code, Terminal, and GitHub Actions. The entry for Cursor has been removed, ensuring consistency with the actual content. This change only affects the Chinese source file and has been synchronized with the translation table."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#803",
+      "title": "Align MCP Documentation Slug and Title in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "migration",
+        "backend",
+        "translations"
+      ],
+      "public": false,
+      "summary": "This update renames the public documentation slug from `acedata-docs-mcp` to `acedatacloud-mcp`, ensuring consistency with the unified server naming. A new migration script has been added to handle the alias and title changes, while preserving old URLs to avoid 404 errors. Additionally, translations have been updated to reflect the new naming convention without losing existing content."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1093",
       "title": "Enhance Screenshot Functionality in Nexior 📸",
       "tags": [
