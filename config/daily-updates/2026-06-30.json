@@ -3,6 +3,233 @@
   "date": "2026-06-30",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1249",
+      "title": "Enhance Gemini Model Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "gemini",
+        "api",
+        "enhancement",
+        "billing",
+        "tokens"
+      ],
+      "public": false,
+      "summary": "This update introduces clean model aliases for the Gemini API, allowing for a more user-friendly interface. Additionally, a new `GeminiCountTokensHandler` has been added to facilitate free token estimation without incurring charges. The changes ensure that the countTokens endpoint is properly registered and exempt from billing, enhancing the overall functionality of the Platform Service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#809",
+      "title": "Enhance Gemini API with New Models and Billing Fixes in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "gemini",
+        "api",
+        "billing",
+        "openapi",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces two new models to the Gemini API and corrects the billing for image generation. The models `gemini-3.1-flash-lite-preview` and `gemini-3.1-flash-image-preview` are now visible and properly integrated into the billing system, ensuring accurate cost calculations. Additionally, OpenAPI specifications have been synchronized to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#242",
+      "title": "Exciting New DCR MCP Connectors Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "connectors",
+        "oauth",
+        "backend",
+        "mcp",
+        "features"
+      ],
+      "public": false,
+      "summary": "We've introduced nine new `oauth_dcr` remote-MCP connectors to enhance our capabilities. This includes connectors for popular services like Supabase, Prisma, and Netlify, all designed for seamless integration without the need for credentials. Each connector has been thoroughly verified for functionality and compliance, ensuring a smooth user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1103",
+      "title": "Add GitHub Copilot Icon to Coding Bridge in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "icon",
+        "ui",
+        "branding",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1103",
+      "summary": "This update integrates the official GitHub Copilot brand icon into the Coding Bridge composer and history list, replacing the generic fallback icon. The Copilot icon has been added to both the provider brands and icons maps, ensuring it displays correctly in dark mode. Validation checks confirm that the integration is clean and meets existing standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#241",
+      "title": "Introducing Globalping DCR MCP Connector in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "connector",
+        "oauth",
+        "globalping"
+      ],
+      "public": false,
+      "summary": "This update adds the Globalping remote-MCP connector, enabling seamless network measurements such as ping, traceroute, DNS, MTR, and HTTP from a global probe network. The connector is fully integrated with OAuth via Dynamic Client Registration, ensuring a secure and efficient connection. Additionally, the connector's icon has been sourced and uploaded for consistent branding."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#506",
+      "title": "Enhance Zhihu Skill with Answering Capabilities in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "enhancement",
+        "zhihu",
+        "skills",
+        "features",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/506",
+      "summary": "This update expands the Zhihu skill to allow users to read, answer, and edit their answers to questions using their own login cookies. New commands have been added for listing answers, posting new answers, and editing existing ones, all while ensuring secure cookie-only API interactions. The documentation has also been updated to reflect these new features and their usage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1102",
+      "title": "Enhance Guest Experience with Auth Redirects in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "auth",
+        "guest-experience",
+        "ui",
+        "redirects",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1102",
+      "summary": "This update improves the guest experience by redirecting users attempting to access authentication-only routes to the login page. Additionally, a friendly prompt has been added to service task pages, encouraging guests to log in to start tasks and view their creations, replacing the indefinite loading skeleton. These changes ensure a smoother interaction for users without authentication while maintaining functionality for logged-in users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#239",
+      "title": "Enhance E2E Failure Logging with Unique Token in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "logging",
+        "e2e",
+        "alerts",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a globally-unique token, `CONNECTORE2EALARMFAIL`, which is emitted during E2E failures. This change ensures that the CLS log alarm accurately captures only failure events, eliminating false positives caused by ambiguous query operators. The alarm will notify the designated team via WeChat upon deployment of this image."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#240",
+      "title": "Exciting New OAuth DCR Connectors Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "connectors",
+        "backend",
+        "developer",
+        "infrastructure"
+      ],
+      "public": false,
+      "summary": "We've introduced six new OAuth DCR remote-MCP connectors to enhance our developer infrastructure. These connectors include Exa, Firecrawl, Neon, Apify, Postman, and PostHog, each designed to streamline various tasks from web scraping to product analytics. All connectors are verified and ready for use, ensuring a seamless integration experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#238",
+      "title": "Exciting New Connectors for Square, Webflow & Wix in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "connectors",
+        "oauth",
+        "backend",
+        "commerce",
+        "web",
+        "integration"
+      ],
+      "public": false,
+      "summary": "We've added three new `oauth_dcr` remote-MCP connectors for Square, Webflow, and Wix to the connectors-public.yaml file. These connectors enable seamless integration for managing catalogs, orders, and website publishing without the need for credentials. Each connector has been verified for functionality and is ready for use, enhancing our capabilities in commerce and web building."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1248",
+      "title": "Enhance Billing Accuracy by Actual Delivered Length in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "features",
+        "updates",
+        "tests",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update modifies the billing process to charge users based on the actual delivered length of videos instead of the requested duration. Key changes include adjustments in the preflight checks and billing logic to ensure accurate charges, preventing overcharges for under-delivered content. The implementation has been thoroughly tested, ensuring reliability and correctness in billing practices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#237",
+      "title": "Enhance Payment & Support Connectors in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "connectors",
+        "oauth",
+        "backend",
+        "payments",
+        "support"
+      ],
+      "public": false,
+      "summary": "This update introduces two new `oauth_dcr` remote-MCP connectors for PayPal and Intercom in the `connectors-public.yaml`. PayPal enables invoice and payment management, while Intercom facilitates conversation and help-center searches. Both connectors are fully operational and ready for use, enhancing our backend capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1247",
+      "title": "Enhance OpenAIHK as Primary Router Channel in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "routing",
+        "openaihk",
+        "failover",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update integrates the OpenAIHK nano-banana worker as the primary channel in the failover router, enhancing reliability during Google API rate limits. Key changes include modifications to the request handling to accept the public model 'nano-banana-2' and adjustments in the routing configuration to prioritize OpenAIHK. These improvements aim to reduce failure rates and ensure smoother operations for image generation tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#236",
+      "title": "Exciting New OAuth DCR Connectors for Hugging Face & Canva in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "connectors",
+        "backend",
+        "huggingface",
+        "canva"
+      ],
+      "public": false,
+      "summary": "We've added two new OAuth DCR remote-MCP connectors for Hugging Face and Canva, enhancing our integration capabilities. These connectors require no stored credentials and are ready to use immediately, allowing users to search models and create designs seamlessly. Both connectors have been verified for functionality and are strategically aligned with our platform's AI and design focus."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1246",
       "title": "Enhance OpenAIHK as Primary Router Channel in Platform Service 🚀",
       "tags": [
