@@ -3,6 +3,286 @@
   "date": "2026-06-30",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1089",
+      "title": "Optimize macOS Fullscreen Experience in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "macos",
+        "fullscreen",
+        "ui",
+        "improvement",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1089",
+      "summary": "This update removes the unnecessary inset for the chat-rail logo in fullscreen mode on macOS, enhancing the user interface. It tracks the fullscreen state and only applies the inset when not in fullscreen, ensuring a cleaner look. Key files modified include the Electron main and preload scripts, as well as the Navigator component."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1088",
+      "title": "Exciting New Desktop Tools for AI Control in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "desktop",
+        "ai",
+        "tools",
+        "local",
+        "screenshot",
+        "consent"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1088",
+      "summary": "This update introduces a proof-of-concept for desktop 'computer use', allowing the AI to capture screenshots and control the mouse and keyboard on the user's machine. Six new local tools have been added, which are opt-in and default to OFF, ensuring no unnecessary prompts for web or mobile users. The implementation includes robust consent mechanisms and internationalization support across 18 locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#437",
+      "title": "Enhance Kling CLI with New Lip-Sync and Talking-Photo Commands in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "kling",
+        "commands",
+        "update",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/437",
+      "summary": "This update introduces new commands for lip-sync and talking-photo functionalities in the Kling CLI, aligning it with the latest OpenAPI specifications. The new commands support various input modes and parameters, ensuring a seamless user experience while maintaining existing command behaviors. Additionally, validation for command parameters has been implemented to enhance reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#61",
+      "title": "Q2 Roadmap Re-baseline Complete in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "roadmap",
+        "delivery",
+        "reschedule",
+        "Q2",
+        "Q3",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/61",
+      "summary": "The public roadmap has been successfully re-baselined at the end of Q2, confirming 100% delivery of Q2 tasks while rescheduling undelivered work to Q3. Key items delivered include the discount comparison feature and automated invoice generation. The total task count remains unchanged at 79, with adjustments made only to the phases array."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#796",
+      "title": "Remove face-swap probe to optimize resources in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cleanup",
+        "e2e",
+        "optimization",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update removes the `test-face-swap` end-to-end probe, which was consuming a significant amount of piapi quota with a high failure rate. The probe's deployment and execution scripts have been deleted to prevent unnecessary resource usage while maintaining the core face swap service and related tests. This change is expected to enhance overall system efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#435",
+      "title": "Docs sync confirms CLI alignment in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "docs",
+        "sync",
+        "cli",
+        "openapi",
+        "verification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/435",
+      "summary": "This update verifies that the `flux`, `nano-banana`, and `seedream` CLIs are fully aligned with the latest OpenAPI specifications from AceDataCloud/Docs. A thorough comparison revealed no discrepancies in command surfaces, request options, or endpoint bindings, ensuring that no code changes are necessary at this time."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1084",
+      "title": "Fix theme switcher issue in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "theme",
+        "settings",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1084",
+      "summary": "This update resolves an issue where the Settings theme switcher would incorrectly flip the theme upon opening. The fix involves mirroring the currently applied theme from the live HTML class, preventing any unintended changes during the mount phase. Unused methods related to cookie loading have also been removed for cleaner code."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1240",
+      "title": "Enhance WAV File Handling for Faster Responses in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "performance",
+        "backend",
+        "suno",
+        "wav",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "This update optimizes the `/suno/wav` endpoint by making the file storage process non-blocking. Users will now receive the upstream `file_url` immediately, while the background task handles the storage to COS without delaying the response. This change significantly reduces the risk of client timeouts and improves overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1085",
+      "title": "New Desktop Installers for Windows and macOS in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "download",
+        "windows",
+        "macos",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1085",
+      "summary": "This update introduces desktop installer cards for Windows and macOS on the public download page, enhancing accessibility for users. The installers link directly to the corresponding GitHub Release assets, ensuring easy access to the latest versions. Additionally, the update includes localization for 18 languages, making the download experience more user-friendly across different regions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1087",
+      "title": "Enhance Settings Visibility for Web Only in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "settings",
+        "web",
+        "update",
+        "nexior",
+        "visibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1087",
+      "summary": "This update restricts several operator and white-label settings tabs to the web surface, preventing their visibility in native iOS/Android and desktop applications. Key changes include the introduction of a new `isWebSurface` gate for tabs like Site, SEO, and Custom Domain, ensuring they are only accessible on the web. Comprehensive tests have been added to validate these changes and ensure robust functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#585",
+      "title": "Streamline Model ID Display on Cards in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "models",
+        "seo",
+        "ui",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update addresses the duplication of the native model ID on the model cards and detail pages. Now, the ID will only display when it differs from the name, enhancing clarity and improving SEO descriptions. Key files modified include List.vue and Detail.vue, ensuring a cleaner presentation without losing any functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#60",
+      "title": "Q2 Roadmap Re-baseline Complete! 🎉 in Roadmap",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "roadmap",
+        "delivery",
+        "q2",
+        "q3",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/60",
+      "summary": "The public roadmap has been successfully re-baselined at the end of Q2, confirming 100% delivery of Q2 tasks. Key items such as the automated invoice generation and advanced routing have been completed and moved into the Q2 group. Q3 now includes rescheduled tasks without any loss in total task count, ensuring a clear path forward for upcoming deliverables."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#794",
+      "title": "Updated Video API Documentation with Latest Models in Backend 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "api",
+        "updates",
+        "video",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update enhances the video API documentation by replacing outdated model examples with the latest versions for Seedance, Kling, and Veo. All response examples have been updated to reflect real validated outputs, ensuring accuracy and relevance. The changes improve the user experience by providing current and functional examples for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#793",
+      "title": "Updated Chat Model Examples for Clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "chat",
+        "models",
+        "update",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update refreshes the main example models across 10 chat documentation files to the latest versions, ensuring they are live-validated and functional. Key changes include upgrades from older models like `gpt-5.4` to `gpt-5.5`, and similar updates for other models, enhancing the accuracy and usability of the documentation. All changes have been tested and verified on the live API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#792",
+      "title": "Update image models and fix documentation errors in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "api",
+        "images",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update enhances the image API documentation by replacing outdated model references with the latest validated models. Key changes include correcting model strings in the seedream documentation, upgrading the flux model, and incorporating the flagship model for nanobanana images. All modifications have been verified against live API responses to ensure accuracy and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#586",
+      "title": "Renamed 'music' Modality to 'audio' in Frontend Web 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "frontend",
+        "localization",
+        "models",
+        "audio"
+      ],
+      "public": false,
+      "summary": "This update refactors the modality naming in the models directory, changing 'music' to 'audio' for better alignment with the backend catalog. Key files updated include List.vue and Detail.vue, along with localization files across 12 languages. This change enhances clarity for users interacting with audio-related services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#795",
+      "title": "Refactor audio modality naming for clarity in Backend 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "refactor",
+        "backend",
+        "audio",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update renames the 'music' modality to 'audio' in the catalog, aligning it with the correct service category. Changes were made in the catalog utility and test files to reflect this new naming convention. All tests passed successfully, ensuring the integrity of the functionality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#581",
       "title": "Enhance Balance Card Experience in Frontend Web 🎨",
       "tags": [
