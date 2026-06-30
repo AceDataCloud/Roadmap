@@ -3,6 +3,236 @@
   "date": "2026-06-30",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1246",
+      "title": "Enhance OpenAIHK as Primary Router Channel in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "routing",
+        "api",
+        "failover",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update integrates the OpenAIHK nano-banana worker as the primary channel in the failover router, enhancing reliability during Google API outages. Key changes include accepting the public model 'nano-banana-2' and updating the routing configuration to prioritize OpenAIHK, which uses the official API. This ensures improved performance and stability for users relying on the nano-banana service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#234",
+      "title": "Enhance Connector E2E Testing with New CronJob in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "e2e",
+        "cronjob",
+        "connectors",
+        "testing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces an hourly Kubernetes CronJob named `auth-backend-connector-e2e`, which runs a new management command to verify the functionality of connectors through real product paths. Key features include checks for catalog integrity, end-to-end queries, and authenticated connections against official MCP servers. The implementation aims to ensure reliability and alert operators of any failures in the connector system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1101",
+      "title": "Enable Guest Browsing with Deferred Login in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "authentication",
+        "guest-access",
+        "user-experience",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1101",
+      "summary": "This update allows unauthenticated visitors to browse service pages, models, and pricing without being immediately redirected to the login page. Guests will only be prompted to log in when they attempt to perform an operation, enhancing user experience and accessibility. Key changes include modifications to the global authentication flow and updates to multiple operation handlers to support this new behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#504",
+      "title": "Sync Skill Docs with Latest API Updates in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "documentation",
+        "api",
+        "updates",
+        "skills",
+        "sync"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/504",
+      "summary": "This update synchronizes the skill documentation with the latest OpenAPI changes, ensuring that endpoint and model references are current. Key improvements include refreshed AI Chat endpoints, updated Fish Audio API references, and new documentation for Kling and Veo video functionalities. These changes enhance clarity and usability for developers integrating with the AceDataCloud platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#505",
+      "title": "Introducing Feishu Connector Skill in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "feishu",
+        "connector",
+        "skills",
+        "api",
+        "oauth"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/505",
+      "summary": "This update adds the Feishu (飞书) connector skill, enabling users to interact with the Feishu Open Platform REST API. Key functionalities include reading and writing documents, managing sheets, handling calendar events, and sending messages, all within the user's OAuth context. The skill is gated behind the connector going live and requires specific environment variables for token management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1100",
+      "title": "Enhance Mobile CI with Dry-Run and Concurrency Guard in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "mobile",
+        "deployment",
+        "android",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1100",
+      "summary": "This update introduces a dry-run mode for safe testing of the mobile CI pipeline, allowing users to validate gate decisions without triggering actual builds. Additionally, a concurrency guard has been implemented to prevent overlapping releases, ensuring smoother deployments. The Android rollout mechanism has also been corrected for accurate staged releases, enhancing overall deployment reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1099",
+      "title": "Enhanced Duration Input for Maestro in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "maestro",
+        "billing",
+        "ui",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1099",
+      "summary": "The Maestro configuration panel now features a numeric input for duration, allowing users to specify values from 1 to 600 seconds (up to 10 minutes). This change supports the new per-duration billing model and replaces the previous fixed dropdown options. Additionally, the help text in both English and Chinese has been updated to reflect this new input method and billing structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#808",
+      "title": "Revamped Maestro Pricing Model in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "backend",
+        "maestro",
+        "billing",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update introduces a per-duration pricing model for Maestro videos, allowing durations up to 10 minutes. The new formula replaces the previous flat rate structure, ensuring fairer billing based on actual video length. Key changes include updated API rules, documentation across multiple languages, and enhanced testing for billing safety."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1245",
+      "title": "Enhance Feishu Connector Token Mapping in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "aichat2",
+        "feishu",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update introduces the mapping of the Feishu connector token to the environment variable `$FEISHU_TOKEN` in the aichat2 worker. This change ensures that the `acedatacloud/feishu` skill can access the user's Feishu `user_access_token` under a cleaner environment variable name, improving the integration process. The modification is minimal, consisting of a single line change in the codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#235",
+      "title": "Introducing Feishu OAuth Connector in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "connector",
+        "feishu",
+        "backend",
+        "integration"
+      ],
+      "public": false,
+      "summary": "We've added a new Feishu (飞书) OAuth 2.0 connector to our catalog, filling a significant gap for the Chinese enterprise market. This connector integrates seamlessly with our existing `lark-*` tools and is designed to go live once the necessary credentials are set. Comprehensive tests have been implemented to ensure functionality and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1098",
+      "title": "Automated Daily Production Release for Mobile in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "automation",
+        "release",
+        "mobile",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1098",
+      "summary": "This update introduces a fully automated daily production release workflow for both iOS and Android, triggered at 01:00 UTC. The process includes a review-state gate that ensures no submissions occur while apps are under review or if the version is not newer than the live version. Key safety mechanisms have been implemented to prevent issues during the release process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1097",
+      "title": "Streamline Computer Actions with One-Click Pre-approval in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "permissions",
+        "macos",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1097",
+      "summary": "This update introduces a new one-click button to pre-approve all computer actions in the Settings under Local Tools. By enabling this feature, users can grant persistent permissions for all `computer.*` actions, streamlining the AI's ability to control the screen without repeated prompts. Additionally, it ensures that necessary macOS permissions are triggered as part of the process, enhancing user experience and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1244",
+      "title": "Enhance connector catalog resilience in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "enhancement",
+        "testing",
+        "resilience",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update improves the connector catalog fetching mechanism by adding retries for connection-level errors and serving the last-known-good catalog when fetch attempts fail. These changes prevent users from receiving incorrect authorization prompts due to transient backend issues. Comprehensive tests have been added to ensure the reliability of the new behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1243",
+      "title": "Enhance short-drama captions and runtime accuracy in Platform Service 🎬",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "captioning",
+        "runtime",
+        "quality",
+        "short-drama",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces two key improvements to the short-drama skill, enhancing the quality of captions and ensuring runtime accuracy. Captions will now be well-formed, addressing issues with run-together text, while a new runtime floor check ensures that clips meet the target length, preventing undershooting. These changes apply to new tasks following the redeployment of the worker image."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#164",
       "title": "Enhance Service Introduction Guidelines in Index 🚀",
       "tags": [
