@@ -631,21 +631,10 @@
           "items": [
             {
               "title": "Display 'Hold ACE, Pay Less' discount comparison on all service pricing pages across Platform and Nexior",
-              "status": "planned",
+              "status": "done",
               "target_at": null,
-              "completed_at": null
-            },
-            {
-              "title": "Launch wallet binding rewards: 5 Credits on registration, 10 on wallet binding, 20 on first ACE holding",
-              "status": "planned",
-              "target_at": null,
-              "completed_at": null
-            },
-            {
-              "title": "Ship ACE-exclusive features including priority queue, higher rate limits, and exclusive model access for holders",
-              "status": "planned",
-              "target_at": null,
-              "completed_at": null
+              "completed_at": "2026-06-30",
+              "note": "ACE-holder discount comparison live via the staking/coin dashboard and pricing display."
             }
           ]
         },
@@ -688,12 +677,6 @@
               "completed_at": "2026-05-15"
             },
             {
-              "title": "Ship ACE token direct payment for API services with 1.5x credit bonus",
-              "status": "planned",
-              "target_at": null,
-              "completed_at": null
-            },
-            {
               "title": "X402 micropayment support expanded to SKALE chain with zero gas fees",
               "status": "done",
               "target_at": null,
@@ -701,27 +684,16 @@
             },
             {
               "title": "Launch automated invoice generation and billing history export for enterprise users",
-              "status": "planned",
+              "status": "done",
               "target_at": null,
-              "completed_at": null
+              "completed_at": "2026-06-30",
+              "note": "Billing history export (CSV) live via the orders export endpoint."
             }
           ]
         },
         {
           "title": "Mobile App and Consumer Growth",
           "items": [
-            {
-              "title": "Submit Nexior to the iOS App Store with compliance review, screenshots, and ASO optimization",
-              "status": "in_progress",
-              "target_at": null,
-              "completed_at": null
-            },
-            {
-              "title": "Add guided onboarding flow for new users with template recommendations and capability showcase",
-              "status": "planned",
-              "target_at": null,
-              "completed_at": null
-            },
             {
               "title": "Add image and file upload support in the chat interface for multimodal conversations",
               "status": "done",
@@ -740,13 +712,13 @@
               "completed_at": "2026-06-30"
             },
             {
-              "title": "Complete MCP ecosystem article series covering all 11 servers across Claude Desktop, VS Code, and Cursor",
-              "status": "in_progress",
+              "title": "Ship X402 protocol integration guide and developer cookbook with end-to-end code examples",
+              "status": "done",
               "target_at": null,
-              "completed_at": null
+              "completed_at": "2026-06-30"
             },
             {
-              "title": "Ship X402 protocol integration guide and developer cookbook with end-to-end code examples",
+              "title": "Launch SEO-optimized documentation site with sitemap, structured data, and AI-crawler support",
               "status": "done",
               "target_at": null,
               "completed_at": "2026-06-30"
@@ -757,22 +729,35 @@
           "title": "Ecosystem Integrations",
           "items": [
             {
-              "title": "Submit all 13 Dify plugins to the official Dify marketplace for community discovery",
-              "status": "planned",
-              "target_at": null,
-              "completed_at": null
-            },
-            {
               "title": "Publish all 11 MCP servers to PyPI with standardized packaging and demo GIFs",
               "status": "done",
               "target_at": null,
               "completed_at": "2026-04-25"
             },
             {
-              "title": "Ship integration guides and tool packages for LangChain, CrewAI, and Vercel AI SDK",
-              "status": "planned",
+              "title": "Launch OpenClaw chatbot deployment templates with multi-model and multi-channel support",
+              "status": "done",
               "target_at": null,
-              "completed_at": null
+              "completed_at": "2026-05-31",
+              "note": "Shipped as @acedatacloud/openclaw-provider on npm — multi-model chat (62 models) + web search; image/video/music modalities deferred."
+            }
+          ]
+        },
+        {
+          "title": "Platform Scale and Reliability",
+          "items": [
+            {
+              "title": "Implement advanced routing with automatic fallback and load balancing across model providers",
+              "status": "done",
+              "target_at": null,
+              "completed_at": "2026-06-27"
+            },
+            {
+              "title": "Launch real-time status page with per-service uptime and incident tracking",
+              "status": "done",
+              "target_at": null,
+              "completed_at": "2026-06-30",
+              "note": "Live at status.acedata.cloud with 90-day per-service uptime; incident timeline not yet included."
             }
           ]
         }
@@ -792,23 +777,10 @@
           "title": "Platform Scale and Reliability",
           "items": [
             {
-              "title": "Implement advanced routing with automatic fallback and load balancing across model providers",
-              "status": "done",
-              "target_at": null,
-              "completed_at": "2026-06-27"
-            },
-            {
               "title": "Add webhook management for async event notifications on job completion and billing events",
               "status": "planned",
               "target_at": null,
               "completed_at": null
-            },
-            {
-              "title": "Launch real-time status page with per-service uptime and incident tracking",
-              "status": "done",
-              "target_at": null,
-              "completed_at": "2026-06-30",
-              "note": "Live at status.acedata.cloud with 90-day per-service uptime; incident timeline not yet included."
             }
           ]
         },
@@ -839,6 +811,18 @@
               "target_at": null,
               "completed_at": null,
               "note": "Internal track live (3.35.1); Production submission in Google review."
+            },
+            {
+              "title": "Submit Nexior to the iOS App Store with compliance review, screenshots, and ASO optimization",
+              "status": "in_progress",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Add guided onboarding flow for new users with template recommendations and capability showcase",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
             }
           ]
         },
@@ -858,14 +842,19 @@
               "completed_at": null
             },
             {
-              "title": "Launch OpenClaw chatbot deployment templates with multi-model and multi-channel support",
-              "status": "done",
+              "title": "Establish co-marketing partnerships with Solana AI ecosystem projects",
+              "status": "planned",
               "target_at": null,
-              "completed_at": "2026-05-31",
-              "note": "Shipped as @acedatacloud/openclaw-provider on npm — multi-model chat (62 models) + web search; image/video/music modalities deferred."
+              "completed_at": null
             },
             {
-              "title": "Establish co-marketing partnerships with Solana AI ecosystem projects",
+              "title": "Submit all 13 Dify plugins to the official Dify marketplace for community discovery",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Ship integration guides and tool packages for LangChain, CrewAI, and Vercel AI SDK",
               "status": "planned",
               "target_at": null,
               "completed_at": null
@@ -906,14 +895,14 @@
               "note": "Python/Node.js/Go SDKs shipped and documented (per-language READMEs); embedded interactive playground still pending."
             },
             {
-              "title": "Launch SEO-optimized documentation site with sitemap, structured data, and AI-crawler support",
-              "status": "done",
-              "target_at": null,
-              "completed_at": "2026-06-30"
-            },
-            {
               "title": "Publish comprehensive error code reference and troubleshooting guides for all APIs",
               "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Complete MCP ecosystem article series covering all 11 servers across Claude Desktop, VS Code, and Cursor",
+              "status": "in_progress",
               "target_at": null,
               "completed_at": null
             }
@@ -936,6 +925,29 @@
             },
             {
               "title": "Research staking and DeFi integration models with focus on Raydium and Orca LP feasibility",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            }
+          ]
+        },
+        {
+          "title": "ACE Token Holder Benefits",
+          "items": [
+            {
+              "title": "Launch wallet binding rewards: 5 Credits on registration, 10 on wallet binding, 20 on first ACE holding",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Ship ACE-exclusive features including priority queue, higher rate limits, and exclusive model access for holders",
+              "status": "planned",
+              "target_at": null,
+              "completed_at": null
+            },
+            {
+              "title": "Ship ACE token direct payment for API services with 1.5x credit bonus",
               "status": "planned",
               "target_at": null,
               "completed_at": null
