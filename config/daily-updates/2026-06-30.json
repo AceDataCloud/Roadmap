@@ -1,0 +1,328 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-06-30",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#581",
+      "title": "Enhance Balance Card Experience in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "improvement",
+        "ux"
+      ],
+      "public": false,
+      "summary": "This update improves the balance card on the document details page by vertically centering the App ID and restructuring the balance explanations for clarity. The layout has been changed to a vertical arrangement, and unit suffixes have been added to the balance values. Additionally, a visual indicator for the selected balance type has been implemented, enhancing user interaction."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1239",
+      "title": "Boost MongoDB Performance with New Indexes in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "mongodb",
+        "performance",
+        "indexing",
+        "bugfix",
+        "self-healing"
+      ],
+      "public": false,
+      "summary": "This update introduces critical indexes for the MongoDB collections, significantly reducing full-collection scans (COLLSCAN) that were causing high memory usage. The changes ensure that both the failover-router and persona update processes utilize these indexes, leading to a drastic decrease in documents scanned per second and improved cache performance. The implementation is designed to be self-healing, preventing future regressions in database performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#433",
+      "title": "OpenAI CLI Sync Confirmed in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "sync",
+        "openai",
+        "cli",
+        "docs",
+        "confirmation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/433",
+      "summary": "The OpenAI CLI has been reviewed and confirmed to be in sync with the latest upstream Docs OpenAPI updates. Key areas such as endpoint coverage and command exposure were assessed, revealing that no changes are necessary as the CLI already supports all current API paths and model variants. This PR serves as a confirmation of the alignment with the recent documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#582",
+      "title": "Enhance Providers Dropdown with Brand Icons in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "icons",
+        "dropdown",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces brand favicons for each provider in the Providers dropdown of the public AI Model Directory. The implementation includes a new `ICatalogProvider` interface and updates to the `List.vue` component to display icons alongside provider names, improving the visual appeal and user experience. Fallbacks are in place for missing logos, ensuring a seamless display."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#791",
+      "title": "Enhance Provider Directory with Icons in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "catalog",
+        "providers",
+        "icons"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `providers` array to the `/models/catalog/` response, providing a deduplicated list of providers along with their brand icons and model counts. The implementation ensures that the UI can display icons next to each provider seamlessly. Validation tests confirm the functionality and integrity of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#584",
+      "title": "Auto-translate i18n updates in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update introduces auto-generated translation updates for various languages based on changes from the zh-CN source. Key modifications include the addition of new keys and translations across multiple language files, enhancing the internationalization support of the platform. This will improve accessibility for users across different regions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#583",
+      "title": "Revamp Admin Console with Solid Buttons and Enhanced Detection History in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "frontend",
+        "enhancement",
+        "localization",
+        "admin"
+      ],
+      "public": false,
+      "summary": "This update enhances the admin LLM upstream control-plane page by introducing solid action buttons for improved visibility and usability. The footer layout has been adjusted to prevent cutoff issues, while the detection history drawer now features a richer display of event metrics. Additionally, five new internationalization keys have been added for better localization support."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#790",
+      "title": "Fix per-model pricing and model-id names in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "backend",
+        "models",
+        "bugfix",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical pricing issue in the public model directory by implementing per-model pricing, ensuring each model displays its correct cost instead of a uniform service-wide price. Additionally, model identifiers are now displayed as their raw IDs across the platform, enhancing clarity. The changes improve the accuracy of pricing information and streamline the backend processes without requiring frontend modifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#789",
+      "title": "Merged OpenAI Chat Completion Docs for Clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "openai",
+        "backend",
+        "merge",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update consolidates the OpenAI Chat Completion documentation by merging the standalone gpt-4o-image examples into the main guide, enhancing clarity and accuracy. The outdated standalone document has been retired, and its content is now part of the primary documentation, ensuring users have access to the most current information. Additionally, necessary redirects have been implemented to maintain SEO integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1238",
+      "title": "Enhance Tool Selection for Local File Access in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "bugfix",
+        "local-tools",
+        "user-experience",
+        "Nexior"
+      ],
+      "public": false,
+      "summary": "This update improves the tool selection process for accessing local files in the desktop app. The Bash tool's description has been clarified to indicate it does not access the user's machine, while new prompts ensure that local tools are prioritized for user-specific queries. These changes enhance user experience by providing accurate responses regarding local file systems."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#580",
+      "title": "Enhance Model Cards with Official Pricing in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "models",
+        "pricing",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces the official provider price display on the `/models` cards, enhancing clarity on savings. Each card now shows the official price as a struck-through figure, along with a tooltip for the savings percentage. This change ensures users can easily understand the value proposition at a glance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#579",
+      "title": "Enhance Logo Visibility for Dark Mode in Frontend Web 🌙",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "frontend",
+        "darkmode",
+        "logo",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update modifies the logo rendering on the official AceData site to ensure the dark-aware wordmark is displayed in dark mode. The change bypasses the tenant logo for the official site, allowing the built-in wordmark to adapt to the dark theme while preserving custom logos for white-label tenants. Verification confirms that the logo is now visible in dark mode without affecting other configurations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#162",
+      "title": "Updated API Documentation with Live-Validated Examples in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "api",
+        "validation",
+        "updates",
+        "research"
+      ],
+      "public": false,
+      "summary": "This update introduces a new plans research document that audits and refreshes the example models used in the `development_*.md` API documentation. Key findings include the identification of outdated model references and the implementation of real-time API requests to validate the latest models, ensuring accurate and reliable documentation for users. The changes enhance the usability and correctness of the API examples, providing a solid foundation for future updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1237",
+      "title": "Fix task type for nano-banana to ensure studio visibility in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "nano-banana",
+        "router",
+        "studio",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update corrects the task type from 'image' to 'images' in the nano-banana failover-router configuration. This change ensures that tasks submitted to the studio are now properly listed, resolving a visibility issue caused by a label mismatch. The fix has been applied to the live environment and verified to restore functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#431",
+      "title": "Introducing Fish CLI for Audio TTS in Clis 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "fish",
+        "cli",
+        "tts",
+        "update",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/431",
+      "summary": "This update adds a new Fish CLI package that implements all four endpoints from the Fish Audio TTS API. Users can now generate text-to-speech audio, manage voice models, and query task statuses directly from the command line. The architecture aligns with existing CLIs, ensuring a seamless experience for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1083",
+      "title": "Enhance Local Tools Settings with Persistent Consent in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "desktop",
+        "settings",
+        "consent"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1083",
+      "summary": "This update introduces a dedicated 'Local Tools' tab in the Settings dialog for desktop users, improving accessibility to local tool configurations. Additionally, a new 'Always allow' consent option has been implemented, allowing users to grant persistent permissions for specific tools, enhancing user control and experience. These changes streamline the management of local tools and permissions, ensuring a more intuitive interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1236",
+      "title": "Streamlined Audio for Short Dramas in Platform Service 🎬",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "audio",
+        "short-drama",
+        "update",
+        "r2v",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update transitions short dramas to version 1.8 by eliminating any TTS voice, including narration, from the final cut. All dialogue will now be generated from on-screen characters using r2v, ensuring a more authentic audio experience. Key modifications include the removal of the narrator entry from the voices.json and adjustments to subtitle synchronization for accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1082",
+      "title": "Fix local tool input handling and path expansion in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "desktop",
+        "ipc",
+        "path",
+        "vue"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1082",
+      "summary": "This update addresses critical issues in the desktop app where local tool calls were failing due to improper handling of Vue reactive Proxies and unexpanded home directory paths. Key changes include deep-copying the tool input before IPC calls and implementing a new function to expand '~' in file paths, ensuring smoother execution and accurate directory resolution. The fixes have been verified with successful builds and functional tests on macOS."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#787",
+      "title": "Cleanup of Orphaned Docs and Articles in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cleanup",
+        "documentation",
+        "migration",
+        "maintenance"
+      ],
+      "public": false,
+      "summary": "This update removes 26 private and orphaned documents along with 20 orphaned promotional articles from the documentation. The changes include a migration script that deletes outdated content and repoints links in surviving documents to ensure a clean and navigable documentation structure. This cleanup enhances the overall quality and relevance of the documentation for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#788",
+      "title": "Fix Seedream Pricing Display in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "pricing",
+        "seedream",
+        "backend",
+        "studio"
+      ],
+      "public": false,
+      "summary": "This update restores the correct pricing display for Seedream models in Studio by fixing the cost rules to use the appropriate dotted format. Previously, the price panel showed zero for certain models due to a misconfiguration in the cost rules. The changes ensure that the display now accurately reflects the billed amounts, enhancing user experience and clarity."
+    }
+  ]
+}
