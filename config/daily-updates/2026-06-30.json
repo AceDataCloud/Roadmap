@@ -3,6 +3,180 @@
   "date": "2026-06-30",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1093",
+      "title": "Enhance Screenshot Functionality in Nexior 📸",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "desktop",
+        "screenshot",
+        "improvement",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1093",
+      "summary": "This update introduces Phase 1 of the computer use feature, allowing the `computer.screenshot` tool to return a JPEG-encoded image of the screen. Key changes include resizing the image to logical resolution and ensuring coordinate mapping aligns with the model's expectations. Additionally, improvements were made to handle multi-monitor setups and optimize image quality to fit within data limits."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1241",
+      "title": "Enhance Client Tool with Image Support in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "client-tool",
+        "image-support",
+        "validation",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces the ability for desktop client tool results to include images, allowing vision models to process visual inputs effectively. Key changes include the addition of an optional `image` field in tool results and improved validation to ensure only valid image URLs are accepted. This enhancement aims to close the perceive-act loop, improving the overall functionality of the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#797",
+      "title": "Fix provider logos in dropdown for clarity in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "ui",
+        "backend",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update corrects the **Providers** dropdown in the AI Model Directory to display the company logos instead of product logos. A new mapping has been implemented to ensure that each provider's row accurately reflects its company logo, enhancing user experience and clarity. Validation tests have been added to confirm the correct logos are displayed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#798",
+      "title": "Removed Midjourney MCP Tutorials for Compliance in Backend 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "compliance",
+        "removal",
+        "midjourney",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update removes seven Midjourney MCP tutorials due to a legal complaint, ensuring compliance with regulations. All related links have been stripped from various index pages, and the content has been cleared to prevent any access. The changes affect 114 files with a total of 8,440 deletions, maintaining the integrity of the documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1092",
+      "title": "Fix store links and navigation issues in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "desktop",
+        "navigation",
+        "links",
+        "macOS"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1092",
+      "summary": "This update resolves two major issues on the macOS desktop app's /download page. Store links now open externally, allowing users to access Google Play, the App Store, and GitHub without restrictions. Additionally, a Back/Forward navigation menu has been added, ensuring users can easily navigate away from the page without feeling trapped."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#801",
+      "title": "Revamped MCP Documentation for Unified Access in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "mcp",
+        "update",
+        "backend"
+      ],
+      "public": false,
+      "summary": "The documentation for the MCP has been completely rewritten to reflect the new unified account management and directory/documentation MCP under `mcp-acedatacloud`. Key changes include updated URLs, authentication requirements, and tool prefixes. This ensures users have accurate and accessible information for utilizing the platform effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#800",
+      "title": "Revamp AceKit Overview with Real Examples in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "updates",
+        "acekit",
+        "backend"
+      ],
+      "public": false,
+      "summary": "The AceKit overview documentation has been thoroughly rewritten to provide accurate and verified information. Key updates include the removal of hardcoded skill counts, the addition of live examples demonstrating real outputs, and a clarified distinction between MCP, CLI, and SDK offerings. This ensures users have a clear understanding of AceKit's capabilities and avoids previous inaccuracies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1091",
+      "title": "Fix tool popup authorization for file paths in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "desktop",
+        "authorization",
+        "security",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1091",
+      "summary": "This update connects the desktop app's consent popup with the file system's allowlist, ensuring that approving the popup grants access to the specified file paths. Users no longer need to pre-add folders in Settings, as the approved paths are now authorized in-memory. Additionally, the changes include new tests to verify that consented paths are accessible, enhancing overall functionality and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#588",
+      "title": "Improve model card layout for better name visibility in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "layout",
+        "frontend",
+        "ui",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update moves the modality pill from the header to the tags row in the model cards, preventing long model names from being truncated. The layout change ensures that the model name can utilize the full width of the card while consistently displaying the modality. No data or logic changes were made, only a layout adjustment for improved user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1090",
+      "title": "Enhance Local Tools UI with Consistent Status and Solid Buttons in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "desktop",
+        "local-tools",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1090",
+      "summary": "This update improves the Local Tools section in the Nexior desktop user-settings dialog. It standardizes permission status labels to 'Granted' and 'Not granted' and updates action buttons to solid styles for better visibility. Additionally, the 'Open' button label has been simplified by removing the ellipsis, enhancing the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#587",
+      "title": "Enhance Model Cards with Official Price Labels in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "models",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the clarity of the `/models` cards by adding visible labels for the official price and a 'vs official' caption for the discount badge. The changes ensure that users can easily understand the pricing information without needing to hover for tooltips. This aligns the display with the existing detail page, enhancing user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1089",
       "title": "Optimize macOS Fullscreen Experience in Nexior 🎉",
       "tags": [
