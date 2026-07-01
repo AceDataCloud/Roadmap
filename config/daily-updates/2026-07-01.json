@@ -3,6 +3,136 @@
   "date": "2026-07-01",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/.github#14",
+      "title": "Shrink Org Logo for a Sleeker Look in .github 🎨",
+      "tags": [
+        "github",
+        "pr",
+        ".github",
+        "logo",
+        "readme",
+        "design",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/.github/pull/14",
+      "summary": "This update reduces the width of the organization profile logo from 300px to 220px, ensuring a more compact appearance while maintaining high resolution. The change enhances the overall aesthetics of the README without altering any functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/.github#13",
+      "title": "Enhance MCP Servers Table with URL Column in .github 🚀",
+      "tags": [
+        "github",
+        "pr",
+        ".github",
+        "feature",
+        "documentation",
+        "mcp",
+        "readme",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/.github/pull/13",
+      "summary": "This update introduces a new URL column to the MCP Servers table in the organization profile README. Each server's hosted Streamable-HTTP endpoint is now displayed alongside its GitHub repo and PyPI badge, improving accessibility and usability. The changes ensure that all 21 servers have valid URLs, with a scheduled workflow to maintain synchronization in future updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/.github#12",
+      "title": "Optimize org logo size in .github 🎨",
+      "tags": [
+        "github",
+        "pr",
+        ".github",
+        "logo",
+        "update",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/.github/pull/12",
+      "summary": "The logo on the GitHub organization profile has been resized for better display. By switching from a Markdown image to an HTML `<img>` tag with a specified width, the logo remains high-resolution while appearing smaller and more visually appealing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#58",
+      "title": "Fix chat targeting to ensure messages go to the right recipient in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "weixin",
+        "automation",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update resolves the issue where WeChat messages could be sent to the wrong recipient due to stale chat windows. Key changes include implementing strict title matching for opened chats and enhancing the search functionality to retry and clear previous searches. The behavior now requires exact matches, preventing mis-sends and improving overall reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#814",
+      "title": "Reconnect Stale DB Connections for Smooth Sync in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "database",
+        "sync",
+        "django",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new function, `ensure_db_connection()`, to handle stale database connections during long-running sync operations. By pinging the database before processing each file, we prevent silent errors that could lead to dropped records. This change enhances reliability without altering behavior on healthy connections."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#62",
+      "title": "Added July 2026 Creator-Fee Buyback in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "buyback",
+        "creator-fee",
+        "update",
+        "roadmap",
+        "json"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/62",
+      "summary": "This update incorporates the on-chain creator-fee buyback executed on July 1, 2026, into the buyback history. The transaction involved 37.69 USDC, resulting in the purchase of 78,441 ACE through the DFlow Aggregator v4. All data has been verified for accuracy and is now available for transparency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#445",
+      "title": "Update Model Allowlists with New OpenAPI Docs in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "update",
+        "cli",
+        "models",
+        "openapi",
+        "aichat",
+        "glm"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/445",
+      "summary": "This update synchronizes the CLI allowlists for AiChat, GLM, and OpenAI models with the latest OpenAPI documentation. New models such as `gpt-5.4-mini`, `gpt-5.4-nano`, `glm-5`, and `glm-5-turbo` have been added, enhancing command option validation and model listings. The changes ensure that users can access the most current model options seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#813",
+      "title": "Exciting New Models Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "models",
+        "backend",
+        "features",
+        "updates",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update introduces several new chat models to the public /models directory, including Claude Sonnet 5, GPT-5.4-mini, GPT-5.4-nano, GLM-5, and DeepSeek-V4-Flash. The models have been benchmarked and integrated with existing billing rules, ensuring a seamless experience for users. All changes have been verified with 856 passing tests, confirming the integrity of the updates."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#812",
       "title": "Updated Featured Models for Current Flagships in Backend 🚀",
       "tags": [
