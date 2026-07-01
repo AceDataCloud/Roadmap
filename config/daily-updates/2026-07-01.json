@@ -3,6 +3,118 @@
   "date": "2026-07-01",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1120",
+      "title": "Empowering Android with Computer Use Features in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "android",
+        "accessibility",
+        "automation",
+        "features",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1120",
+      "summary": "This update introduces the Computer Use capability to Android, allowing on-device automation through a native AccessibilityService plugin. Key features include gesture control, typing, and screenshot capabilities, all integrated into the chat loop for seamless interaction. The implementation ensures that tools are only advertised when the accessibility service is enabled, maintaining user consent and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#60",
+      "title": "Enhance @-mentions for text sends in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "feature",
+        "notifications",
+        "text-messaging",
+        "wechat",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update introduces real @-mentions in text sends, allowing notifications for specific members and the option to mention all members in a group. The `send_text` function now accepts a list of mentions and a boolean for mentioning all, improving communication efficiency. Testing has confirmed successful functionality in live environments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#167",
+      "title": "New Android Computer Use Plan in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "android",
+        "accessibility",
+        "plugin",
+        "documentation",
+        "nexior"
+      ],
+      "public": false,
+      "summary": "We've introduced a new plan for Android that mirrors the desktop Computer Use functionality. This includes features like screenshot capture and gesture control using AccessibilityService and MediaProjection. The implementation will be phased, starting with a native plugin and progressing through various stages to enhance user experience while adhering to Play policy restrictions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#609",
+      "title": "Center Sidebar Logo for a Sleeker Look in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "css",
+        "frontend",
+        "ui",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update fixes the alignment of the AceData logo in the console sidebar, ensuring it is centered rather than pinned to the left. The changes involve modifying the CSS and template structure to allow for proper flexbox alignment, enhancing the visual consistency across the application. Additionally, the height of the logo container is now properly defined, preventing collapse issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1260",
+      "title": "Enhance Seedance Prompt Control in Platform Service 🎬",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "seedance",
+        "subtitle",
+        "dialogue",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces the official Seedance prompt specification and subtitle mitigation strategies to improve the short-drama dialogue clips. Key changes include the addition of a no-subtitle instruction and a refined prompt structure to ensure accurate dialogue generation. The version has been updated from 1.8.1 to 1.9.0, with modifications made to both SKILL.md and data-contract.md files."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1107",
+      "title": "Streamline Screenshot Handling in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "desktop",
+        "screenshot",
+        "performance",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1107",
+      "summary": "This update modifies the `computer.screenshot` functionality to upload images as hosted URLs instead of inline base64 data URIs. This change reduces storage and bandwidth usage while preventing issues with conversation context eviction. The implementation ensures that screenshots are treated like regular image attachments, enhancing consistency across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#608",
+      "title": "Clean up dead code in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "cleanup",
+        "frontend",
+        "markdown"
+      ],
+      "public": false,
+      "summary": "This update removes the `protectHtmlPreBlocks` and `restoreHtmlPreBlocks` functions from the VueMarkdown component, simplifying the rendering process. With the introduction of a new rendering method that bypasses markdown-it for the service introduction page, this shim is now obsolete. The changes ensure that Markdown documents with embedded `<pre>` tags are rendered correctly without any regressions."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#596",
       "title": "Fix HTML Rendering for Service Intro Pages in Frontend Web 🚀",
       "tags": [
