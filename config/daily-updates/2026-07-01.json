@@ -3,6 +3,170 @@
   "date": "2026-07-01",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#596",
+      "title": "Fix HTML Rendering for Service Intro Pages in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "html",
+        "frontend",
+        "bugfix",
+        "markdown",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update resolves issues with the rendering of service introduction pages by bypassing markdown-it for raw HTML content. A new `detectHtml` switch has been added to the MarkdownRenderer, allowing full HTML documents to be rendered verbatim, eliminating the risk of leaked tags and formatting errors. This change ensures that all service introduction pages are displayed correctly across all languages and future additions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#451",
+      "title": "Enhance OpenAI CLI with API-Backed Models Command in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "openai",
+        "cli",
+        "api",
+        "update",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/451",
+      "summary": "This update aligns the OpenAI CLI with the new API specification by replacing the static model listing with a dynamic call to the `/openai/models` endpoint. The `openai-cli models` command now supports JSON output and includes enhancements to the `OpenAIClient` for better request handling. Additionally, documentation and tests have been updated to reflect these changes, ensuring a smooth user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#821",
+      "title": "Add OpenAPI definition for OpenAI Models API in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "openapi",
+        "api",
+        "backend",
+        "feature",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update introduces the missing OpenAPI 3.0 definition for the OpenAI Models API, resolving an issue where the API card displayed empty badges. The new definition includes a complete `GET` operation with security details, response schemas, and translations, ensuring the API is fully functional and properly documented. This change enhances the user experience by providing accurate endpoint information and improves the overall API consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#515",
+      "title": "Enhance Zhihu Skill with Search Functionality in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "feature",
+        "zhihu",
+        "api",
+        "search",
+        "cli"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/515",
+      "summary": "This update introduces a new search capability to the Zhihu skill by adding a standalone CLI script that utilizes the Zhihu Developer Platform API. Users can now search Zhihu content, explore global web results, and view trending topics without needing login cookies. The implementation ensures a clean, zero-dependency approach, enhancing the overall functionality of the Zhihu skill."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1258",
+      "title": "Streamline Platform Environment Injection in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "auth",
+        "platform",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update refactors the platform environment injection by replacing hardcoded provider checks with a generic call to the new AuthBackend endpoint. Key changes include the addition of a `getPlatformEnv()` method and the removal of specific Google Ads configurations, simplifying the process of adding new platform secrets. This enhancement allows for easier integration of future providers without modifying worker code."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#246",
+      "title": "Add platform-env endpoint for secret injection in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "api",
+        "secrets",
+        "connectors"
+      ],
+      "public": false,
+      "summary": "This update introduces a new internal endpoint, `GET /internal/v1/connectors/platform-env/`, which resolves platform-held environment variables for connectors. It allows the aichat2 worker to inject secrets like `ZHIHU_DEVELOPER_TOKEN` and `GOOGLE_ADS_DEVELOPER_TOKEN` alongside user credentials. Key changes include the addition of a new view and route, as well as updates to the connectors configuration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#449",
+      "title": "Enhance CLI Parameters for Dreamina and WebExtrator in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "openapi",
+        "dreamina",
+        "webextrator",
+        "tests",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/449",
+      "summary": "This update aligns the Dreamina and WebExtrator CLI parameters with the latest OpenAPI documentation. Key changes include making the task ID optional in Dreamina and adding new options for resource blocking and header parsing in WebExtrator. Additionally, focused test updates ensure the new functionalities are thoroughly validated."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#594",
+      "title": "Revamp API Pricing Table for Better Readability in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "design",
+        "pricing",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update centers and compacts the API pricing table for improved visual balance. Key changes include centering all content, constraining the table width, and removing the triple strikethrough for original prices, which significantly reduces row height. The result is a cleaner, more user-friendly pricing display without altering any pricing data."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#820",
+      "title": "Localize API Summaries for Enhanced Clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "localization",
+        "api",
+        "backend",
+        "documentation",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update localizes 18 API operation summaries by replacing hardcoded English text with dynamic translation references. The changes ensure that the API documentation reflects localized descriptions based on user language preferences, enhancing accessibility for diverse users. All modifications have been validated and are already visible in production."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#420",
+      "title": "Enhance OAuth Resilience After Pod Restarts in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "oauth",
+        "resilience",
+        "bugfix",
+        "authentication",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/420",
+      "summary": "This update addresses cascading 401 errors caused by pod restarts that wiped in-memory OAuth state. Key changes include preventing refresh tokens from being issued, synthesizing permissive stubs for unknown client IDs, and allowing graceful handling of unknown refresh tokens. These improvements ensure zero downtime for clients with valid Bearer tokens, enhancing overall system reliability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1106",
       "title": "New per-tool toggles for built-in local tools in Nexior 🚀",
       "tags": [
