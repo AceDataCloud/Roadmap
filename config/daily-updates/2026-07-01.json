@@ -3,6 +3,198 @@
   "date": "2026-07-01",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#812",
+      "title": "Updated Featured Models for Current Flagships in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "models",
+        "update",
+        "backend",
+        "featured",
+        "config"
+      ],
+      "public": false,
+      "summary": "The Featured badge on the models directory has been refreshed to showcase the latest flagship chat models. Key updates include the addition of GPT-5.5, Gemini 3.1 Pro, and Grok 4, ensuring that only one current flagship per major provider is highlighted. This change enhances the user experience by providing up-to-date recommendations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#443",
+      "title": "Sync model names to match OpenAPI spec in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "update",
+        "cli",
+        "openapi",
+        "models",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/443",
+      "summary": "This update aligns the CLI with the latest AceDataCloud OpenAPI spec by removing the `-preview` suffix from two chat model identifiers. Key changes include updates to the `GEMINI_CHAT_MODELS` list, the display table in `output.py`, and the corresponding tests in `test_commands.py`. The README has also been revised to reflect these changes, ensuring consistency across documentation and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1254",
+      "title": "Fix task history retrieval issue in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "mongodb",
+        "tasks",
+        "workers",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update resolves a bug where the `retrieve_batch` function returned a count greater than zero but an empty items array for many services. The root cause was identified as undefined keys being passed to MongoDB queries, which led to incorrect filtering. The fix involves stripping undefined keys before executing the query, ensuring accurate task history retrieval across ten affected workers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#57",
+      "title": "Enhance Group Management Features in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "weixin",
+        "group-management",
+        "api",
+        "enhancement",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update improves the robustness of the WeChat group creation and invitation APIs, addressing issues found during live testing. Key changes include enhanced member selection verification, support for 微信号 input, and a new confirmation dialog for large group invitations. These enhancements ensure a smoother user experience and prevent silent errors during group management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1253",
+      "title": "Transform Gemini Image Model for Compatibility in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "gemini",
+        "transformation",
+        "compatibility",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update implements a transformation for the official Gemini image model name, changing `gemini-3-pro-image` to `gemini-3-pro-image-preview`. This change ensures compatibility with upstream services and prevents mismatches in account matching and URL usage. The implementation has been verified with successful `py_compile` and `ruff` checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#811",
+      "title": "Expose Official Image Model IDs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "api",
+        "billing",
+        "gemini"
+      ],
+      "public": false,
+      "summary": "This update aligns the exposed image model IDs with Google's official Gemini API by removing the '-preview' suffix for external use. Key changes include modifications to the `_chat_models.json` for billing rules and updates to the `visible_models` interface to only show official names. Compatibility with the previous '-preview' naming is maintained internally, ensuring seamless transitions for existing users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#590",
+      "title": "Update favicon for UnifiedHub center node in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "favicon",
+        "frontend",
+        "ui",
+        "update"
+      ],
+      "public": false,
+      "summary": "The center node of the UnifiedHub has been updated to use the compact single-A favicon instead of the full wordmark logo. This change ensures consistency with the surrounding provider icons while maintaining a fallback to the packaged favicon for tenants without a configured one. The update is a simple one-line modification with no impact on logic or billing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1252",
+      "title": "Align ephone 2.0 Default Resolution to Official Standard in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "resolution",
+        "seedance",
+        "ephone",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update corrects the default resolution for the ephone Seedance 2.0 model to 720p, aligning it with the official Volcengine ARK API specifications. Previously, the system defaulted to 1080p for certain models, which has now been fixed to ensure consistent billing and rendering. The change maintains support for explicit resolution requests while ensuring compliance with the official guidelines."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#441",
+      "title": "Exciting Updates: New Chat Models and Options in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "feature",
+        "update",
+        "cli",
+        "gemini",
+        "models"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/441",
+      "summary": "This update introduces five new chat models and two new request parameters to the CLI, enhancing functionality and user experience. The new models include 'gemini-2.5-flash-lite' and 'gemini-3.1-flash-image-preview', among others. Additionally, the CLI now supports updated options for maximum completion tokens and service tier selection, streamlining command usage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1251",
+      "title": "Enhance Gemini Image Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "gemini",
+        "image-processing",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces a new branch in the image processing logic to ensure that `gemini-2.5-flash-image` is correctly passed through without being downgraded to a text model. The change prevents issues with account matching that could lead to incorrect outputs. All relevant tests have passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#810",
+      "title": "Enhance Gemini Image Models and Fix Pricing Drift in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "gemini",
+        "backend",
+        "pricing",
+        "features",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces two new image models, `gemini-2.5-flash-image` and `gemini-3-pro-image-preview`, with respective pricing of $0.14 and $0.35 per image. Additionally, it addresses a pricing drift issue by ensuring accurate cost calculations and updating the service display prices. The changes have been thoroughly tested and are ready for deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#419",
+      "title": "Enhance MCP Tools with Backend Filters in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "enhancement",
+        "filters",
+        "backend",
+        "mcp-tools",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/419",
+      "summary": "This update integrates previously unsupported backend filters into the AceDataCloud MCP tools, allowing for more precise query capabilities. Key enhancements include the addition of filters such as `limit`, `tag`, and `private` across various tools, ensuring alignment with backend functionalities. Notably, the `list_apis` tool now efficiently applies server-side filtering, improving performance and accuracy."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#56",
       "title": "Enhance Group Management with Create and Invite APIs in Wisdom 🚀",
       "tags": [
