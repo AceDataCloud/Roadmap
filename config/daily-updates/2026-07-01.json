@@ -1,0 +1,38 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-01",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#56",
+      "title": "Enhance Group Management with Create and Invite APIs in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "feature",
+        "api",
+        "wechat",
+        "automation",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces two new APIs for managing WeChat groups: creating a group and inviting members. The `POST /api/groups` endpoint allows users to initiate a group chat with at least two contacts, while the `POST /api/groups/invite` endpoint enables adding members to an existing group. Both functionalities have been validated through live testing, ensuring a seamless user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1104",
+      "title": "Enhance Task Cards with Audio/Video Prompts in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "seedance",
+        "media"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1104",
+      "summary": "This update resolves the issue of missing prompts and reference media on Seedance task cards. Key changes include the addition of computed properties for displaying prompts, reference audio, video, and images, ensuring all relevant media is visible. The implementation aligns with existing UI conventions and passes all review checks."
+    }
+  ]
+}
