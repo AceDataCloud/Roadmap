@@ -3,6 +3,71 @@
   "date": "2026-07-01",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1106",
+      "title": "New per-tool toggles for built-in local tools in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "local-tools",
+        "security",
+        "i18n",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1106",
+      "summary": "This update introduces individual 'always allow' toggles for built-in local tools, enhancing user control over permissions. Users can now pre-approve tools like `shell.run_command` and file system operations, streamlining their experience while maintaining security through native confirmation dialogs. The changes also include updates to internationalization across 18 locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#245",
+      "title": "Restore Google Drive Broad Scopes in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "google",
+        "oauth",
+        "drive",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update restores the broad Google Drive OAuth scopes, `drive` and `drive.readonly`, on the `google/drive` connector, reversing a previous restriction. Key documentation and test assertions have been updated accordingly to reflect these changes. This enhancement allows for a full read/write experience with Google Drive, improving user functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1256",
+      "title": "Fix empty redirect_uris issue in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "oauth",
+        "aichat2",
+        "sdk",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue in the aichat2 worker where an empty `redirect_uris` caused confusion during token expiration handling. Key changes include ensuring `clientInformation()` returns a valid stub and providing a proper `redirectUrl` to facilitate user re-authorization. These adjustments enhance error clarity and maintain healthy connection functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#166",
+      "title": "Housekeeping Updates and New Plans in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "housekeeping",
+        "documentation",
+        "gitignore",
+        "cleanup",
+        "plans"
+      ],
+      "public": false,
+      "summary": "This update includes the addition of new plan documents in the `plans/` directory, covering various topics such as Google One Tap SSO and Maestro standalone site. Additionally, the `.gitignore` file has been modified to exclude sensitive Apple keys, and the local MCP configuration file has been removed to streamline the repository. These changes enhance documentation clarity and improve repository hygiene."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#819",
       "title": "Refresh Featured Models and Media Configuration in Backend 🚀",
       "tags": [
