@@ -3,6 +3,211 @@
   "date": "2026-07-01",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#819",
+      "title": "Refresh Featured Models and Media Configuration in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "update",
+        "backend",
+        "config"
+      ],
+      "public": false,
+      "summary": "This update refreshes the featured models on the platform to include the latest flagships from various providers, ensuring users see the most current options. Additionally, media models can now be featured through a new configuration file, allowing for easier updates without code changes. This enhances the flexibility and maintainability of the catalog system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1105",
+      "title": "Empower Computer Use with Individual Toggles in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "security",
+        "localization",
+        "desktop"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1105",
+      "summary": "This update introduces individual always-allow toggles for various computer actions, enhancing user control over AI interactions. Users can now pre-approve specific actions like screenshotting or typing, rather than granting blanket permissions. The feature maintains security by requiring confirmation for each action and allows for easy revocation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#165",
+      "title": "Update i18n Rules for Intro Page Generation in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "i18n",
+        "documentation",
+        "updates",
+        "html",
+        "consistency"
+      ],
+      "public": false,
+      "summary": "This update refines the Two-File Convention by correcting outdated references and introducing new i18n rules. Non-zh-CN versions must now replicate the `<style>` and `<pre>` sections from the zh-CN version verbatim, ensuring consistency across translations. These changes aim to prevent issues with machine translation in future page generations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#593",
+      "title": "Enhance i18n Guidelines for Introduction Page in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "documentation",
+        "i18n",
+        "frontend",
+        "design",
+        "guidelines"
+      ],
+      "public": false,
+      "summary": "This update adds crucial guidelines to the introduction design documentation, specifically addressing the pitfalls of machine translation for multi-language support. It emphasizes that introduction pages must not be fully machine-translated to prevent formatting issues, ensuring that code and styles are preserved accurately across different locales. The changes aim to enhance the quality and consistency of localized content."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#447",
+      "title": "Introducing Claude AI CLI for Enhanced Interaction in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "claude",
+        "ai",
+        "chat",
+        "acedata"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/447",
+      "summary": "This update introduces the new `claude/` package, providing a command-line interface for interacting with Claude AI models via AceDataCloud. Key commands include `claude chat`, `claude messages`, and `claude count-tokens`, allowing users to leverage both OpenAI-compatible and native Claude APIs. The addition of 18 models enhances flexibility and usability for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#592",
+      "title": "Revamp Pricing Table for Clarity in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "design",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "The Pricing tab has been significantly improved for better readability and visual hierarchy. Key changes include removing excessive bold styling, eliminating redundant discount badges, and restructuring the Actual Price cell for a cleaner layout. These adjustments enhance user experience without altering any pricing logic or data."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#816",
+      "title": "Fix MT Code Blocks in Locale Intro Pages in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "i18n",
+        "documentation",
+        "backend",
+        "translation"
+      ],
+      "public": false,
+      "summary": "This update addresses issues with machine-translated code blocks in various language introduction pages. Key changes include restoring code indentation, removing incorrect code fences, and ensuring that the original translations remain intact. A total of 477 files were modified to enhance the readability and functionality of the documentation across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#818",
+      "title": "Fix API Method Badge Display in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "docs",
+        "backend",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the Gemini Generate Content API did not display the correct method badge due to a mismatch in path syntax. The solution involves prioritizing the backfilled `Api.method` field for determining the API method, ensuring that badges are displayed correctly even when using Kong `:param` syntax. New tests have been added to verify the functionality and ensure no regressions occur."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#817",
+      "title": "Enhance Messages API with Extended Thinking in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "openapi",
+        "backend",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces the `thinking` parameter and associated response content blocks to the Claude Messages API OpenAPI specification. The changes ensure alignment with Anthropic's official API, enhancing the API reference and playground capabilities. Additionally, new translations have been added to support various locales, improving accessibility for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#244",
+      "title": "Pause Hourly Connector E2E CronJob in Backend ⏸️",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "cronjob",
+        "backend",
+        "config",
+        "e2e",
+        "suspend"
+      ],
+      "public": false,
+      "summary": "The hourly connector E2E smoke test has been temporarily suspended by setting `spec.suspend: true` in the CronJob manifest. This change ensures that no new runs are scheduled, clarifying the desired state and preventing any unintended reactivation during deployments. To re-enable the test, simply change the value back to `false` or remove the line."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#59",
+      "title": "Enhance message retrieval by using app DB for real-time updates in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "feature",
+        "messages",
+        "database",
+        "real-time"
+      ],
+      "public": false,
+      "summary": "This update resolves the issue of stale message results by prioritizing the app database for retrieving messages in group and contact chats. The new method ensures that live conversations are accurately reflected, falling back to the decrypted WeChat database only when necessary. Additionally, a new function `list_messages_by_conversation_name()` has been introduced to streamline message retrieval based on conversation names."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#815",
+      "title": "Add Claude-Sonnet-5 Pricing to Services in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "backend",
+        "claude",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces the `claude-sonnet-5` model to the pricing pages of five Claude services, ensuring it is billable and callable. Each service's pricing block is a direct clone of the existing `claude-sonnet-4-6` block, maintaining consistent pricing. The changes have been verified with successful tests, confirming the integrity of the pricing structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1255",
+      "title": "Enhance Feature Stripping for Upstream Accounts in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "enhancement",
+        "api",
+        "config",
+        "mongo"
+      ],
+      "public": false,
+      "summary": "This update introduces a configurable approach for stripping unsupported features in the Claude Messages API worker, allowing each upstream account to specify which features to remove. The changes ensure that capable upstreams can now pass through the 'thinking' parameter, enhancing functionality and preventing unnecessary errors. The implementation includes updates to the MongoDB accounts schema and various handler files, ensuring robust handling of unsupported features."
+    },
+    {
       "id": "gh:pr:AceDataCloud/.github#14",
       "title": "Shrink Org Logo for a Sleeker Look in .github 🎨",
       "tags": [
