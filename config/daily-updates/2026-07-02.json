@@ -3,6 +3,102 @@
   "date": "2026-07-02",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1278",
+      "title": "Fix CORS Header Issues for Anthropic Models in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cors",
+        "security",
+        "testing",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update resolves intermittent 401 CORS errors when using Anthropic-backed chat models by stripping unnecessary browser headers before forwarding requests. Key changes include modifications to the header handling logic to prevent the `Origin` and other browser-specific headers from reaching the upstream, which enhances security and reduces latency. New tests have been added to ensure that the filtering logic works correctly and that no critical headers are inadvertently removed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1279",
+      "title": "Enhance failover routing with openaihk as last-resort channel in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "failover",
+        "routing",
+        "update",
+        "resilience",
+        "config"
+      ],
+      "public": false,
+      "summary": "This update introduces `openaihk` as the third and last-resort channel in the nano-banana failover router, ensuring it only activates when both primary channels are down. The maximum attempts for failover have been increased from 2 to 3, allowing for better recovery during outages. This change aligns the live configuration with the intended setup and improves the overall resilience of the service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#453",
+      "title": "Sync Claude CLI Model Enum with Latest Docs in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "sync",
+        "claude",
+        "cli",
+        "update",
+        "docs"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/453",
+      "summary": "This update aligns the Claude CLI model enumeration with the latest OpenAPI specifications. The new model `claude-fable-5` has been added to the CLI commands, enhancing the functionality of `claude chat`, `claude messages`, and `claude count-tokens`. Additionally, the command-output assertions have been updated to ensure the new model is included in the output."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#825",
+      "title": "Exciting Integration of Claude Fable 5 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "integration",
+        "api",
+        "pricing",
+        "testing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "We've successfully integrated Anthropic's new `claude-fable-5` into our Claude API service, offering it at a competitive 0.80x of the official pricing. Key updates include new pricing rules, visibility adjustments in the API, and comprehensive testing to ensure accuracy. This enhancement is set to improve our service offerings significantly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1276",
+      "title": "Streamline Health Checks by Dropping Image Probes in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "health-checks",
+        "performance",
+        "cleanup",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update removes the image health-check probes from the upstream health-checker, significantly reducing runtime and costs associated with these checks. Image models will now auto-pass checks, maintaining their routing without impacting overall performance. The changes include the removal of unused helper functions and adjustments to the test suite to reflect these updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1139",
+      "title": "Restoring the iOS Brand Icon for Desktop in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "desktop",
+        "icons",
+        "branding",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1139",
+      "summary": "This update reverts the iOS brand icon source back to the original full AceData brand mark, correcting the previous change that used a cropped logo. The fix ensures that the icon appears correctly in the Dock and taskbar across macOS and Windows platforms. Key modifications include updates to the icon generation script and the restoration of the proper asset source."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#611",
       "title": "Enhance API Docs with 'Copy for AI' Button in Frontend Web 🚀",
       "tags": [
