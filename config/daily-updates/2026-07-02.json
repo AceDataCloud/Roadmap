@@ -3,6 +3,104 @@
   "date": "2026-07-02",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#66",
+      "title": "Enhance chat title reliability in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "chat",
+        "testing",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the chat title retrieval process by implementing a fallback mechanism to read the chat-pane header when the input Edit title is stale. It addresses issues where newly renamed groups displayed a generic placeholder instead of the correct name, ensuring that chat verification functions correctly. The changes include new unit tests and adjustments to the title retrieval logic for better accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WisdomChannel#11",
+      "title": "Reverted output-side scrub for enhanced confidentiality in Wisdom Channel 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "WisdomChannel",
+        "confidentiality",
+        "revert",
+        "scrub",
+        "update",
+        "wisdom-channel"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/WisdomChannel/pull/11",
+      "summary": "This update reverts the output-side regex scrub to reinforce confidentiality through the system prompt instead. Key changes include the removal of the scrub module and related configurations, while strengthening the existing prompt guardrails to explicitly address sensitive information. The overall impact ensures that confidentiality is maintained without relying on a denylist filter."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#605",
+      "title": "Update Font Awesome Icons to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "frontend",
+        "icons"
+      ],
+      "public": false,
+      "summary": "This update bumps the @fortawesome/free-solid-svg-icons package from version 7.2.0 to 7.3.0. Key changes include improvements and new icons as per the latest release notes, enhancing the iconography available for the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/WisdomChannel#10",
+      "title": "Enhance Outbound Reply Security with Confidentiality Scrub in Wisdom Channel 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "WisdomChannel",
+        "security",
+        "confidentiality",
+        "weChat",
+        "scrubbing",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/WisdomChannel/pull/10",
+      "summary": "This update introduces a robust confidentiality scrub for all outbound WeChat replies, ensuring that sensitive upstream provider aliases and internal identifiers are redacted before messages are sent. The scrubber operates through a denylist stored in code and an optional configuration file, preventing any potential leaks. Key features include customizable redaction modes and comprehensive unit tests to validate functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#36",
+      "title": "Enhance Copilot Chat Continuation for VS Code in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "feature",
+        "copilot",
+        "vscode",
+        "transcript",
+        "session"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/36",
+      "summary": "This update introduces the ability to continue VS Code Copilot Chat sessions on mobile devices by seeding the transcript into a new session. Key changes include the implementation of a method to check if a session is natively resumable and a function to build a compact preamble for the transcript. This enhancement ensures a seamless user experience when transitioning between devices without losing context."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#35",
+      "title": "Enhance Copilot Session Sharing in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "feature",
+        "copilot",
+        "history",
+        "vscode",
+        "integration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/35",
+      "summary": "This update introduces the ability for the agent to read VS Code Copilot Chat transcripts, integrating them into the coding-bridge history seamlessly. Users will see these sessions listed as standard Copilot sessions without any differentiation, enhancing the user experience. Key changes include modifications to session reading logic and the addition of new test cases to ensure functionality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1130",
       "title": "Enhance Android Consent Dialog to Match Desktop Experience in Nexior 🚀",
       "tags": [
