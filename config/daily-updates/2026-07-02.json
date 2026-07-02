@@ -3,6 +3,121 @@
   "date": "2026-07-02",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Roadmap#66",
+      "title": "Updated Revenue Snapshot for June 2026 in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "data-update",
+        "revenue",
+        "roadmap",
+        "json"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/66",
+      "summary": "This update refreshes the revenue data in the `config/revenue_trend.json` file, adding the actual figures for June 2026. The `as_of` date has been updated to July 2, 2026, ensuring that the June revenue column now displays $79.3K instead of being empty. This change will enhance the accuracy of our revenue reporting moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#65",
+      "title": "Dynamic Monthly Revenue Chart Updates in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "frontend",
+        "ci",
+        "revenue",
+        "update",
+        "dynamic"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/65",
+      "summary": "This update enhances the Monthly Revenue chart by dynamically adjusting the displayed months based on the current date. It introduces a new CI workflow step to automatically generate and submit revenue trend snapshots, ensuring the data remains up-to-date. Additionally, the front-end now marks missing months as 'pending refresh' without falsifying revenue data, improving user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1284",
+      "title": "Fix scheduler to recalculate next run on schedule change in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "scheduler",
+        "update",
+        "task",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where scheduled tasks were not executing as expected due to outdated next execution times. The fix involves recalculating the next execution time when the schedule is updated, ensuring that tasks run at the correct intervals. Additionally, safeguards have been implemented to prevent NaN values from being stored in the database."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#830",
+      "title": "Fix CSV Export to Prevent SynchronousOnlyOperation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "csv",
+        "backend",
+        "django"
+      ],
+      "public": false,
+      "summary": "This update resolves the SynchronousOnlyOperation issue caused by the previous streaming export method. The CSV export now uses a synchronous approach with StringIO and HttpResponse, maintaining efficient database query patterns and all existing filters. The changes ensure that the system remains robust while handling large datasets."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#64",
+      "title": "New Revenue Allocation Transactions in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "revenue",
+        "buyback",
+        "liquidity",
+        "transactions",
+        "solana"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/64",
+      "summary": "This update introduces two new on-chain revenue transactions to the buyback history, implementing a 5% revenue allocation split of 90% for liquidity provision and 10% for buyback. The transactions have been verified against on-chain balances, ensuring accuracy and consistency with existing records. Key amounts include approximately $377.36 for buyback and over $4,351.86 for liquidity addition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#455",
+      "title": "Enhance CLI with Thinking Parameter Support in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "enhancement",
+        "api",
+        "features",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/455",
+      "summary": "This update syncs the `claude` CLI with upstream changes, introducing the `thinking` parameter to the Messages API and correcting the model enum order. Key modifications include the addition of `--thinking-type` and `--thinking-budget-tokens` options for enhanced message handling, along with validation requirements for token budgets. The model list is now reordered to prioritize `claude-fable-5`, aligning with the specification."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#63",
+      "title": "Documented On-Chain Buyback Transactions in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "buyback",
+        "transactions",
+        "liquidity",
+        "solana",
+        "roadmap"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/63",
+      "summary": "This update adds three on-chain buyback and liquidity pool transactions to the buyback history. All transactions are verified against on-chain balances and follow existing conventions for reporting. The changes ensure transparency and accuracy in tracking the buyback wallet's activities."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#829",
       "title": "Enhance Claude Model Dropdown with Enum Entries in Backend 🚀",
       "tags": [
