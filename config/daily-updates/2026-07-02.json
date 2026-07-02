@@ -3,6 +3,122 @@
   "date": "2026-07-02",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1136",
+      "title": "Enhance NSIS Installer with Branding and Path Safety in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "installer",
+        "branding",
+        "windows",
+        "nsis",
+        "ui",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1136",
+      "summary": "This update introduces significant improvements to the NSIS installer for Windows, addressing critical issues related to installation paths and user interface branding. The installer now automatically appends 'AceData' to the installation directory if the user attempts to install to a bare drive or folder root, preventing potential data loss. Additionally, the installer features a customized UI with branded icons, headers, and sidebars, enhancing the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1135",
+      "title": "Fix Windows Icon Transparency and Computer Use Runtime in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "desktop",
+        "windows",
+        "icon",
+        "native",
+        "rebuild"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1135",
+      "summary": "This update addresses two key issues in the Windows desktop client: the taskbar icon now displays with a transparent background, and the Computer Use functionality is restored by ensuring native modules are properly loaded. Key changes include a new script for generating the Windows icon and modifications to the build process to include necessary rebuild steps for native dependencies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1134",
+      "title": "Enhance Desktop Experience with Draggable Chrome and Credits Pill Fix in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "desktop",
+        "usability",
+        "enhancement",
+        "fix",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1134",
+      "summary": "This update resolves key usability issues in the Nexior desktop application, specifically for Windows and macOS. A new draggable top bar has been added to allow users to move the window easily, while the credits pill has been repositioned to avoid overlap with native window controls. These enhancements improve the overall user experience and accessibility of the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#170",
+      "title": "Enhance Windows Experience for Nexior in Index 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "windows",
+        "usability",
+        "installer",
+        "icon",
+        "drag"
+      ],
+      "public": false,
+      "summary": "This update addresses six user-reported usability issues with the Nexior desktop application on Windows. Key improvements include adjustments to the window drag functionality, icon transparency, and enhancements to the NSIS installer. These changes aim to provide a smoother user experience and resolve critical visual and functional bugs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1131",
+      "title": "Fix notarization configuration for macOS in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "macos",
+        "electron",
+        "notarization",
+        "configuration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1131",
+      "summary": "This update addresses a configuration issue with the macOS notarization process in electron-builder 26.x. The `mac.notarize` setting has been changed from an object to a boolean, ensuring compliance with the new schema requirements. This fix allows for successful packaging and notarization without further changes to the CI environment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1274",
+      "title": "Enhance image handling by prioritizing inline data in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "image-processing",
+        "platform-service",
+        "reliability"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where the system was incorrectly prioritizing unreachable URLs over available inline base64 data when processing image edits. The code now ensures that inline base64 data is preferred for mirroring, significantly improving reliability. Verification steps confirm that the changes function as intended, enhancing the overall image handling process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#65",
+      "title": "Enhance Group Rename Functionality in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "api",
+        "frontend",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue with the group rename feature that failed when accessed via the background API server. By forcing the foreground state before opening the Chat Info, the inline editing now works seamlessly. Validation on the production server confirms that the rename function operates correctly and persists the new group name."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#64",
       "title": "Enhance Group Management with Rename API in Wisdom 🚀",
       "tags": [
