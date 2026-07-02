@@ -1,7 +1,14 @@
 {
-  "as_of": "2026-07-02T18:32:08.739798+00:00",
+  "as_of": "2026-07-02T20:28:59.517533+00:00",
   "total": 20,
   "orders": [
+    {
+      "id": "02cc47a0-f****024bb6a3b9",
+      "created_at": "2026-07-02T19:57:58.515480+00:00",
+      "pay_way": "Stripe",
+      "price": 15.0,
+      "description": "Ace Data Cloud General Points Recharge - 100 Credits"
+    },
     {
       "id": "c67f6591-a****19de03ac61",
       "created_at": "2026-07-02T16:02:10.265491+00:00",
@@ -134,13 +141,6 @@
       "pay_way": "AliPay",
       "price": 13.0,
       "description": "OpenAI 生成 x 100 积分"
-    },
-    {
-      "id": "535f1465-c****cad3e32b14",
-      "created_at": "2026-07-01T07:50:17.066773+00:00",
-      "pay_way": "AliPay",
-      "price": 13.0,
-      "description": "Ace Data Cloud 通用积分充值 - 100 积分"
     }
   ]
 }
