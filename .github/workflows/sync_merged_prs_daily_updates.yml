@@ -56,6 +56,24 @@ jobs:
           fi
           python3 scripts/generate_revenue_snapshot.py "${args[@]}"
 
+      - name: Generate revenue trend snapshot
+        if: ${{ env.PGSQL_HOST != '' && env.PGSQL_USER != '' && env.PGSQL_PASSWORD != '' }}
+        continue-on-error: true
+        env:
+          PGSQL_PORT: ${{ secrets.PGSQL_PORT != '' && secrets.PGSQL_PORT || '5432' }}
+          PGSQL_DATABASE: ${{ secrets.PGSQL_DATABASE != '' && secrets.PGSQL_DATABASE || 'acedatacloud_platform' }}
+          ORDERS_TABLE: ${{ secrets.ORDERS_TABLE }}
+          REVENUE_TREND_START_MONTH: ${{ secrets.REVENUE_TREND_START_MONTH != '' && secrets.REVENUE_TREND_START_MONTH || '2026-01' }}
+        run: |
+          args=()
+          if [[ -n "${ORDERS_TABLE:-}" ]]; then
+            args+=(--orders-table "$ORDERS_TABLE")
+          fi
+          if [[ -n "${REVENUE_TREND_START_MONTH:-}" ]]; then
+            args+=(--start-month "$REVENUE_TREND_START_MONTH")
+          fi
+          python3 scripts/generate_revenue_trend.py "${args[@]}"
+
       - name: Generate recent orders snapshot
         if: ${{ env.PGSQL_HOST != '' && env.PGSQL_USER != '' && env.PGSQL_PASSWORD != '' }}
         continue-on-error: true
@@ -98,6 +116,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add config/daily-updates config/pr-sync-state.json
           git add config/revenue.json || true
+          git add config/revenue_trend.json || true
           git add config/recent_orders.json || true
           git add config/creator_fees.json || true
           git add config/api_usage.json || true
