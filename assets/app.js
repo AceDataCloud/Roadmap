@@ -1295,7 +1295,55 @@
     );
     const asOf = formatLocalTime(snapshot?.as_of);
 
-    const months = Array.isArray(snapshot?.months) ? snapshot.months : [];
+    const sourceMonths = Array.isArray(snapshot?.months) ? snapshot.months : [];
+
+    const parseYm = (ym) => {
+      const m = String(ym || "").match(/^(\d{4})-(\d{2})$/);
+      if (!m) return null;
+      const year = Number(m[1]);
+      const month = Number(m[2]);
+      if (!Number.isFinite(year) || !Number.isFinite(month)) return null;
+      if (month < 1 || month > 12) return null;
+      return { year, month };
+    };
+
+    const toYmKey = ({ year, month }) =>
+      `${String(year).padStart(4, "0")}-${String(month).padStart(2, "0")}`;
+
+    const nextYm = ({ year, month }) =>
+      month === 12 ? { year: year + 1, month: 1 } : { year, month: month + 1 };
+
+    // Keep the chart window dynamic so July always shows Jan-Jun, etc.
+    // Missing trailing months are marked pending instead of fabricating values.
+    const monthMap = new Map(
+      sourceMonths
+        .filter((m) => parseYm(m?.month))
+        .map((m) => [String(m.month), m]),
+    );
+    const startYm =
+      parseYm(snapshot?.start_month) || parseYm(sourceMonths[0]?.month || "");
+    const now = new Date();
+    const currentMonthUtc = {
+      year: now.getUTCFullYear(),
+      month: now.getUTCMonth() + 1,
+    };
+    let months = sourceMonths;
+    if (startYm) {
+      const normalized = [];
+      let cursor = { ...startYm };
+      while (
+        cursor.year < currentMonthUtc.year ||
+        (cursor.year === currentMonthUtc.year && cursor.month < currentMonthUtc.month)
+      ) {
+        const key = toYmKey(cursor);
+        const existing = monthMap.get(key);
+        normalized.push(
+          existing || { month: key, revenue: 0, orders: 0, pending_refresh: true },
+        );
+        cursor = nextYm(cursor);
+      }
+      if (normalized.length > 0) months = normalized;
+    }
 
     const wrap = sectionShell(
       data.revenue_trend.title,
@@ -1418,9 +1466,11 @@
       const cx = x + barW / 2;
       const label = formatMonthLabel(m.month);
       const valueLabel = formatCompactMoney(v);
-      const tooltip = `${m.month} · ${formatMoney(v)}${
-        m.orders != null ? ` · ${Number(m.orders).toLocaleString()} orders` : ""
-      }`;
+      const tooltip = m.pending_refresh
+        ? `${m.month} · pending snapshot refresh`
+        : `${m.month} · ${formatMoney(v)}${
+            m.orders != null ? ` · ${Number(m.orders).toLocaleString()} orders` : ""
+          }`;
 
       svgInner += `<g class="revenue-trend-barGroup">`;
       svgInner += `<rect x="${x.toFixed(2)}" y="${y.toFixed(2)}" width="${barW.toFixed(2)}" height="${Math.max(0, h).toFixed(2)}" rx="6" ry="6" class="revenue-trend-bar"><title>${xmlEscape(tooltip)}</title></rect>`;
@@ -1489,6 +1539,16 @@
       ],
     );
     card.appendChild(summary);
+    const pendingMonths = months.filter((m) => m.pending_refresh).length;
+    if (pendingMonths > 0) {
+      card.appendChild(
+        el(
+          "div",
+          { class: "mt-2 text-xs text-slate-500 dark:text-white/70" },
+          `${pendingMonths} month${pendingMonths > 1 ? "s" : ""} pending snapshot refresh.`,
+        ),
+      );
+    }
     wrap.appendChild(card);
 
     if (asOf) {
