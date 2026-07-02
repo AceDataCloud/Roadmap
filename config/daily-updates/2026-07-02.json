@@ -3,6 +3,265 @@
   "date": "2026-07-02",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Roadmap#65",
+      "title": "Dynamic Monthly Revenue Chart Update in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "enhancement",
+        "automation",
+        "frontend",
+        "workflow",
+        "data-visualization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/65",
+      "summary": "This update enhances the Monthly Revenue chart by dynamically adjusting the month window to reflect the current date, ensuring accurate data representation. It also introduces an automated workflow to generate revenue trend snapshots, keeping the data up-to-date without manual intervention. The changes improve user experience by clearly indicating pending data refreshes without falsifying revenue figures."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1284",
+      "title": "Fix scheduler to ensure accurate next run timing in Platform Service ⏰",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "scheduler",
+        "update",
+        "task",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where scheduled tasks were not executing as expected due to outdated next execution times. The fix involves recalculating the next execution time when a schedule change occurs, ensuring that tasks run on the correct schedule. Additionally, safeguards have been added to prevent NaN values from being stored in the database."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#830",
+      "title": "Fix CSV Export to Prevent SynchronousOnlyOperation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "csv",
+        "backend",
+        "django",
+        "httpresponse"
+      ],
+      "public": false,
+      "summary": "This update resolves the issue of `SynchronousOnlyOperation` by replacing the previous streaming CSV export with a synchronous approach using `StringIO` and `HttpResponse`. Keyset-paginated batch reads and all existing filters are retained to ensure efficient database querying. The solution has been verified and confirmed to work in production."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#64",
+      "title": "Updated Revenue Allocation Transactions in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "revenue",
+        "buyback",
+        "liquidity",
+        "transactions",
+        "solana"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/64",
+      "summary": "This update adds two new on-chain revenue transactions to the buyback history, implementing a 5% revenue allocation split of 90% for liquidity provision and 10% for buyback. The transactions have been verified against on-chain balances, ensuring accuracy and compliance with existing conventions. All changes are documented in the `config/buyback-history.json` file."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#455",
+      "title": "Enhance Claude CLI with Thinking Parameters in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "claude",
+        "cli",
+        "features",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/455",
+      "summary": "This update syncs the `claude` CLI with upstream changes, introducing the `thinking` parameter to the Messages API. Key modifications include reordering the model list and adding new options for extended thinking in the messages and count-tokens commands. These enhancements improve user control over the model's response behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#63",
+      "title": "Record on-chain buyback transactions in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "buyback",
+        "transactions",
+        "liquidity",
+        "transparency",
+        "solana"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/63",
+      "summary": "This update adds three on-chain transactions to the buyback history, all occurring on July 2, 2026. The transactions involve transfers from the Buyback Wallet into the Pump.fun AMM ACE-WSOL pool, with amounts verified against on-chain balances. Key changes include detailed records of buyback and liquidity pool additions, ensuring transparency and adherence to revenue allocation conventions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#829",
+      "title": "Enhance Claude Model Dropdown in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "openapi",
+        "backend",
+        "enhancement",
+        "ui",
+        "claude"
+      ],
+      "public": false,
+      "summary": "This update restores the model selector on Claude native document pages by adding explicit model enum entries in the OpenAPI schemas for two endpoints. The changes ensure that the dropdown functionality is available, improving the user experience by allowing easy selection of models. Validation checks confirm that the new enums align with the expected visible models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#828",
+      "title": "Enhance CSV Export Stability in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "csv",
+        "backend",
+        "fix",
+        "streaming",
+        "export"
+      ],
+      "public": false,
+      "summary": "This update stabilizes the usage CSV export by addressing intermittent failures caused by the previous streaming implementation. Key changes include replacing the cursor-based iteration with keyset-paginated batch reads and adding error logging to ensure a graceful failure instead of a hard connection reset. The existing filters and streaming behavior remain unchanged, ensuring a seamless experience for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#522",
+      "title": "Enhance AI Chat with Claude Fable 5 in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "ai",
+        "chat",
+        "skills",
+        "documentation",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/522",
+      "summary": "This update aligns the `ai-chat` skill with the latest Claude models by adding `claude-fable-5` and `claude-sonnet-5` to the examples in `SKILL.md`. The changes reflect the recent platform rollout, confirming that `claude-fable-5` is now routable and billed in production. A minor style adjustment was made to the order of the new entries for clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1283",
+      "title": "Streamlined BananaRouter Retry Logic in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "refactor",
+        "testing",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update removes the self-retry mechanism for the BananaRouter nano-banana worker, simplifying the error handling process. Key changes include the elimination of the retry loop and associated helpers, ensuring that only one upstream call is made per channel attempt. A new Jest test confirms that transient 503 errors result in a single call without delays, enhancing the efficiency of the failover routing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1140",
+      "title": "Enhance Video Production with Scenario Selector in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "maestro",
+        "video",
+        "i18n",
+        "config"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1140",
+      "summary": "This update introduces a new Video Type selector in the Maestro configuration, allowing users to specify the production scenario for video requests. Supported scenarios include options like 'drama', 'explainer', and 'product', with 'auto' set as the default. Additionally, the update includes new internationalization keys across 18 locales to support the feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#827",
+      "title": "Enhance Maestro API with Scenario Parameter in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "api",
+        "backend",
+        "openapi",
+        "schema"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `scenario` parameter to the Maestro Videos OpenAPI, allowing for more specific video production types. The addition includes an enum with options such as `drama`, `general`, and `explainer`, while maintaining backward compatibility with the default `auto` setting. This change is a schema-only update, ensuring existing functionality remains unaffected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1282",
+      "title": "Enhance nano-banana failover routing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "failover",
+        "routing",
+        "performance",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update finalizes the channel order for the nano-banana failover router, introducing a new third channel, `bananarouter`, and moving `openaihk` to last-resort status. Key improvements include enabling failover on header timeouts and reducing the response header timeout from 1 hour to 5 minutes, enhancing reliability during outages. The changes have been live-verified and are expected to improve performance and fault tolerance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1281",
+      "title": "Enhance Video Workflow with Scenario Knob and Quality Gates in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "video",
+        "workflow",
+        "quality",
+        "enhancement",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `scenario` knob, allowing users to select specific video workflows, enhancing control over video production. Additionally, it implements audio and imagery gates to ensure that videos are delivered with sound and appropriate visuals, preventing silent or purely text-based outputs. These changes aim to improve the overall quality and user experience in video generation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#826",
+      "title": "Boost CSV Export Performance with Composite Indexes in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "performance",
+        "backend",
+        "database",
+        "optimization",
+        "indexes"
+      ],
+      "public": false,
+      "summary": "This update introduces composite indexes on the `ApiUsage` table to resolve issues with slow and timing out CSV exports. The changes include creating indexes on `(user_id, created_at)` and `(actor_user_id, created_at)`, which significantly enhance query performance. Additionally, the export view has been optimized to load API titles more efficiently, reducing the need for full scans."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1280",
+      "title": "New Dedicated NanoBanana Service for Enhanced Scalability in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "deployment",
+        "service",
+        "scalability",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update introduces a dedicated `platform-service-bananarouter-nanobanana` pod and service, allowing for independent scaling and failure management. The existing `platform-service-bananarouter-openai` remains unchanged, while the new service enhances performance by disabling internal retries when behind the failover router. This change aligns with the naming conventions of other nano providers and improves overall service reliability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1278",
       "title": "Fix CORS Header Issues for Anthropic Models in Platform Service 🚀",
       "tags": [
