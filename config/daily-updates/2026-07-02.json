@@ -3,6 +3,104 @@
   "date": "2026-07-02",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#611",
+      "title": "Enhance API Docs with 'Copy for AI' Button in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "api",
+        "documentation",
+        "frontend",
+        "markdown"
+      ],
+      "public": false,
+      "summary": "We've added a 'Copy for AI' button to the API documentation detail pages, allowing users to easily copy structured API information in Markdown format. This feature extracts key details such as API title, request endpoints, authentication requirements, and more, making it ideal for sharing with AI assistants. Key files modified include the API info component and a new utility for formatting API definitions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#824",
+      "title": "Enhance CSV Export for Full Date Range in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "csv",
+        "export",
+        "backend",
+        "fix",
+        "oauth"
+      ],
+      "public": false,
+      "summary": "This update resolves the issue where CSV exports were limited to the newest 10,000 rows, ensuring users can now retrieve the full selected date range. Key improvements include removing the row cap, implementing streaming for large datasets, and adding a truncation warning if the export exceeds one million rows. Additionally, the export now aligns with the list view's perspective and enforces the necessary OAuth scope for security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1275",
+      "title": "Streamline Failover Router by Removing OpenAIHK in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "failover",
+        "routing",
+        "configmap",
+        "optimization",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "The `openaihk` channel has been removed from both routes of the nano-banana failover-router ConfigMap, optimizing the routing process. This change eliminates unnecessary HTTP 500 errors and wasted attempts, ensuring smoother operation with the remaining channels, `cqtai` and `mountsea`. The update mirrors a live hotfix already applied to the HK cluster, maintaining consistency across deployments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#610",
+      "title": "Display 'Processing' Tag for Async Tasks in Frontend Web ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "async",
+        "localization",
+        "ui",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature that displays a yellow 'Processing' tag in the status code column of the usage list when the status code is empty, indicating that an asynchronous task is still in progress. The change affects the List.vue component and updates multiple localization files to include the new tag in various languages. This enhancement improves user experience by reducing confusion over empty status codes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1138",
+      "title": "Restore macOS Dock Icon Badge in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "macos",
+        "icons",
+        "ui",
+        "bugfix",
+        "desktop"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1138",
+      "summary": "This update restores the white rounded badge behind the glyph for the macOS Dock icon, addressing visibility issues on dark wallpapers. The `build_icns()` function has been modified to composite the glyph onto a white background, while the Windows icon remains unchanged with full transparency. Key files updated include `gen-brand-icons.py` and the Podfile for iOS dependencies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#37",
+      "title": "Restoring Previous State for VS Code Copilot Chat in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "revert",
+        "vscode",
+        "copilot",
+        "stability",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/37",
+      "summary": "This update reverts the recent changes made for VS Code Copilot Chat compatibility, restoring the files to their state prior to the last two PRs. Key files, including `history.py` and `connection.py`, have been reverted to eliminate the non-functional integration. All tests have passed successfully, ensuring stability in the current implementation."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#66",
       "title": "Enhance chat title reliability in Wisdom 🚀",
       "tags": [
