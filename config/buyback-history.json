@@ -4,6 +4,35 @@
   "subtitle": "On-chain buyback transactions — transparent, verifiable, and linked to Solscan.",
   "transactions": [
     {
+      "tx_hash": "bWEm5V7jtpX8T9xBgSbp9bNepbrHjStbYkBF7zgRfHHLL84Kqq785exdJsc1ha2pJgdoknXPqxGxDAubApnGPd3",
+      "occurred_at": "2026-07-02T16:44:31Z",
+      "amount_usd": 377.36,
+      "amount_sol": 4.697616718,
+      "ace_bought": 732699.83703,
+      "pair": "WSOL → ACE",
+      "venue": "DFlow Aggregator v4",
+      "source": "Revenue",
+      "source_percentage": 0.5,
+      "period": "2026-07-02",
+      "from_label": "Buyback Wallet",
+      "from_address": "6hVavSsYRaNk86UbNZa6V4JfSwqkRGk9HgYZqKNsdU1w",
+      "note": "Revenue buyback — 10% of the 5% revenue allocation (≈0.5% of revenue). Swapped 4.697616718 WSOL (~$377.36) → 732,699.83703 ACE via DFlow Aggregator v4 (routed through Pump.fun AMM)."
+    },
+    {
+      "tx_hash": "2mAnNGXg4kd4GMPmZadRU7zqmnvj95j4brsiyBBhcoNU1aErzk7kCKAhcotDkZmPYxnA8pUF3BxRXJmovxaoJU96",
+      "occurred_at": "2026-07-02T16:41:42Z",
+      "amount_usd": 4351.86,
+      "ace_bought": 0,
+      "pair": "ACE + WSOL → LP Token",
+      "venue": "Pump.fun AMM",
+      "source": "Revenue",
+      "source_percentage": 4.5,
+      "period": "2026-07-02",
+      "from_label": "Buyback Wallet",
+      "from_address": "6hVavSsYRaNk86UbNZa6V4JfSwqkRGk9HgYZqKNsdU1w",
+      "note": "Revenue LP add — 90% of the 5% revenue allocation (≈4.5% of revenue). Deposited 4,310,709.151592 ACE (~$2,175.93) + 27.1 WSOL (~$2,175.93) into the Pump.fun AMM ACE-WSOL pool and minted 304.084835233 LP tokens."
+    },
+    {
       "tx_hash": "2CGtMDzD5Tn31ShaFZZ5tsXds3bdJcyuH6oLBtU1mD7P7jGyAQzVwSgRUhuLKXYsJ8zDsMNP7By9FMU1piVsuGic",
       "occurred_at": "2026-07-02T16:19:37Z",
       "amount_usd": 903.8,
