@@ -3,6 +3,283 @@
   "date": "2026-07-02",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#64",
+      "title": "Enhance Group Management with Rename API in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "api",
+        "feature",
+        "wechat",
+        "groups",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update introduces a new API endpoint, **`POST /api/groups/rename`**, allowing users to rename existing WeChat groups seamlessly. The implementation ensures that the correct group is targeted by verifying the chat title before renaming, enhancing user experience and reducing errors. Additionally, the change includes comprehensive tests and validation to ensure reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1273",
+      "title": "Fix image URL mirroring for GPT-Image-2 in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "cdn",
+        "gpt-image-2",
+        "image-processing",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the `gpt-image-2:official` model returned dead image URLs from an unreachable host. By enforcing a `b64_json` response format for the official relay, images are now correctly mirrored to our CDN, ensuring reliable access. Key changes include modifications to the routing and client handling to support this new format without affecting other models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1129",
+      "title": "Enhance Local MCP Server Configuration in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "localization",
+        "mcp",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1129",
+      "summary": "This update introduces a user-friendly UI for configuring local MCP servers directly within Nexior, eliminating the need for manual edits. Users can now add, edit, or remove MCP server configurations, with changes taking effect immediately without restarting the app. Additionally, 15 new localization keys have been added to support multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1127",
+      "title": "Update history drawer to include GitHub Copilot in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "update",
+        "localization",
+        "enhancement",
+        "coding-bridge"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1127",
+      "summary": "This update enhances the Coding Bridge history drawer by including GitHub Copilot in the introductory message across all 18 locales. The change ensures that users are aware of Copilot sessions alongside Claude Code and Codex sessions. No component or logic changes were made, as the necessary icons and functionality were already in place."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1128",
+      "title": "Enhance Android Computer Use with Permission Entry and Consent Dialog in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "android",
+        "permissions",
+        "ui",
+        "consent",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1128",
+      "summary": "This update introduces two significant features for the Android Computer Use functionality. Users can now pre-authorize the Accessibility service directly in Settings, along with an on-demand consent dialog that replaces the previous confirmation method. These enhancements provide users with better control over permissions and actions, improving the overall experience on Android devices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1125",
+      "title": "Enhance Visual Grounding with Set-of-Mark in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "android",
+        "accessibility",
+        "visual-grounding",
+        "update",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1125",
+      "summary": "This update introduces the Set-of-Mark (SoM) visual grounding technique to the Android Computer Use feature. It enables the model to interact with tappable elements by displaying a numbered box on each element, allowing for precise actions based on visual cues. Key improvements include the addition of `observe()` and `tapMark(n)` methods, enhancing the user experience and reliability of interactions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#34",
+      "title": "Enhance Copilot History Support in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "feature",
+        "history",
+        "copilot",
+        "testing",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/34",
+      "summary": "This update introduces a new reader for GitHub Copilot transcripts in Nexior's Coding Bridge, allowing users to load Copilot sessions alongside existing Claude Code and Codex sessions. Key changes include modifications to `history.py` to integrate Copilot session handling and the addition of regression tests to ensure functionality. The implementation has been verified against real local transcripts, ensuring accurate session listing and event parsing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#63",
+      "title": "Enhance Quote Activation for API Server in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "api",
+        "windows",
+        "quote",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the API server could not activate the Quote menu due to Windows foreground restrictions. The fix involves a new method that forces the foreground window, allowing for successful quote replies. Validation tests confirm that the new implementation consistently activates the correct Quote element without relying on potentially risky keyboard navigation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1126",
+      "title": "Update max_turns default for scheduled tasks in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "update",
+        "chat",
+        "scheduled-tasks",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1126",
+      "summary": "This update increases the default value for max_turns in scheduled tasks from 30 to 50, aligning it with the backend changes in AceDataCloud/PlatformService. The input range remains unchanged at 1-50, ensuring that users can still configure their tasks as needed. All relevant locales have been updated to reflect this change."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1272",
+      "title": "Boost Scheduled Task Turn Budget to 50 in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "aichat2",
+        "config",
+        "scheduled-tasks"
+      ],
+      "public": false,
+      "summary": "This update increases the default `DEFAULT_SCHEDULED_MAX_TURNS` for unattended scheduled tasks from 30 to 50, aligning it with the interactive chat default. The change ensures that unattended agents have the same turn budget, preventing issues with truncated multi-step processes. Other configurations remain unchanged, maintaining user control over task limits."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#606",
+      "title": "Update TypeScript ESLint Parser to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "typescript",
+        "eslint",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update bumps the @typescript-eslint/parser from version 8.62.0 to 8.62.1, aligning it with other projects. The new version includes fixes for various ESLint plugins, enhancing the overall linting experience. No code changes were made, ensuring a smooth transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1124",
+      "title": "Enhance Scheduled Tasks with Max Turns Control in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "i18n",
+        "scheduled-tasks",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1124",
+      "summary": "This update introduces a new 'Max turns' field in the scheduled task creation and editing forms, allowing users to set the maximum number of turns for agent tasks between 1 and 50, with a default of 30. This change addresses the previous silent cap of 10 turns, which often left multi-step tasks incomplete. Additionally, internationalization support has been added for various languages to ensure a seamless user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1271",
+      "title": "Enhance Scheduled Tasks with Configurable Max Turns in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "config",
+        "aichat2",
+        "scheduled-tasks",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update raises the default `max_turns` for scheduled aichat2 tasks from 10 to 30, allowing for more extensive task execution without silent truncation. Users can now configure this value up to a maximum of 50, improving the flexibility of multi-step Bash and skill agent runs. Additionally, safeguards have been implemented to preserve existing task configurations during updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#169",
+      "title": "Enhance Engineering Skills with Grilling Techniques in Index 🔥",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "skills",
+        "engineering",
+        "interview",
+        "alignment",
+        "default"
+      ],
+      "public": false,
+      "summary": "This update introduces two new engineering skills, `grill-me` and `grilling`, to improve alignment between users and coding agents. The `grill-me` skill initiates a pre-build interview, while `grilling` serves as the reusable interview loop. Additionally, grilling is now enabled by default for non-trivial work, ensuring better understanding before coding begins."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#168",
+      "title": "New iOS Computer Use Design Document in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "ios",
+        "design",
+        "documentation",
+        "nexior",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive technical design document for iOS computer use, detailing two feasible routes due to sandbox limitations. The document outlines the capabilities, architecture, and phased rollout strategy, while also providing a capability matrix and evidence from various sources. Key changes include the addition of a new iOS plan and modifications to existing Android documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1123",
+      "title": "Enhance live tool progress streaming in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "sse",
+        "streaming",
+        "chat",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1123",
+      "summary": "This update adds the `progress` field to the SSE operator whitelist, allowing the live rendering of tool-call arguments during long executions. Previously, the running block would appear empty while the model processed commands, leading to a poor user experience. A vitest regression test has been included to ensure the `progress` field is correctly handled in future updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1122",
+      "title": "Enhance Android Computer Use with Semantic Targeting and Foreground Session in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "android",
+        "accessibility",
+        "ui",
+        "features",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1122",
+      "summary": "This update introduces semantic node-tree targeting to improve the accuracy of UI interactions, allowing the model to tap elements based on their labels rather than pixel coordinates. Additionally, a new foreground session service ensures that Nexior remains responsive while backgrounded, featuring an authoritative kill switch for user control. These enhancements significantly boost the reliability and user experience of the Android Computer Use feature."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#62",
       "title": "Enhance Quote Activation via PostMessage in Wisdom 🚀",
       "tags": [
