@@ -1,0 +1,38 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-02",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#62",
+      "title": "Enhance Quote Activation via PostMessage in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "fix",
+        "quote",
+        "api",
+        "testing",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update fixes the Quote menu activation issue when using the API server, which previously failed to send quoted replies. The solution involves using PostMessage for clicking the Quote item, ensuring it works independently of the window's foreground status. Tests have been updated accordingly, and all relevant checks have passed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#61",
+      "title": "Add quote-reply feature for messages in Wisdom ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "feature",
+        "wechat",
+        "quote-reply",
+        "automation",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a quote-reply capability for text messages, allowing users to reply to specific on-screen messages in WeChat. The new `quote_text` field enhances context in busy group chats by enabling replies that reference previous messages. Additionally, robust validation and fallback mechanisms ensure reliable functionality even when the target message is not visible."
+    }
+  ]
+}

@@ -3,6 +3,39 @@
   "date": "2026-07-01",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1121",
+      "title": "Enhance Tool Call Streaming for Chat in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "chat",
+        "streaming",
+        "tool-call",
+        "frontend",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1121",
+      "summary": "This update improves the chat experience by ensuring that tool calls are announced immediately and their arguments are streamed live. Key changes include the upsert of `tool_use_start` to prevent duplicate blocks and the addition of a new handler for streaming argument text. This results in a more responsive interface, eliminating the frozen screen issue during long tool calls."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1270",
+      "title": "Enhance Streaming for Tool Calls to Prevent Freezing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "streaming",
+        "aichat2",
+        "user-experience",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update addresses the freezing issue during large tool calls in aichat2 by implementing early streaming of tool call progress. Key changes include emitting `tool_use_start` immediately when a tool call is initiated and streaming `tool_input_delta` as arguments are processed. This enhancement improves user experience by providing real-time feedback instead of a frozen interface during lengthy operations."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1120",
       "title": "Empowering Android with Computer Use Features in Nexior 🚀",
       "tags": [
