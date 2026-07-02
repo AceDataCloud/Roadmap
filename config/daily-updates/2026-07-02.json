@@ -3,6 +3,174 @@
   "date": "2026-07-02",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1130",
+      "title": "Enhance Android Consent Dialog to Match Desktop Experience in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "android",
+        "consent",
+        "ui",
+        "localization",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1130",
+      "summary": "This update introduces a native 3-tier consent dialog for Android's Computer Use feature, aligning it with the desktop version. Users can now choose between 'Allow once', 'Always allow', and 'Deny', enhancing user control and experience. Key changes include the implementation of a new `confirmConsent` method and updates to localization files across 18 languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1132",
+      "title": "Enhance MCP Server Management in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "mcp",
+        "desktop",
+        "features",
+        "bugfix",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1132",
+      "summary": "This update introduces a per-server connection status feature for the MCP, allowing users to see whether each server is connected, failed, or disabled. It also adds an enable toggle and a Test/Reconnect button for easier management. Additionally, cross-platform spawn issues have been addressed, ensuring that GUI-launched applications can properly locate necessary executables on macOS, Linux, and Windows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1133",
+      "title": "Enhance Guest Browsing Experience in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "auth",
+        "guest",
+        "browsing",
+        "update",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1133",
+      "summary": "This update removes the forced login prompt for native and desktop applications, allowing guests to browse without immediate authentication. The login process is now deferred until a user initiates an action, ensuring a smoother experience across all platforms. Key changes include modifications to the App.vue file and the introduction of a new patch for authentication handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#822",
+      "title": "Enhance Fish Service with Introduction Page in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "fish",
+        "backend",
+        "documentation",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive landing page for the Fish Audio TTS service, filling the previously empty primary tab. Key additions include detailed sections on features, pricing, and usage examples, all designed to align with existing service introduction pages. The changes also include a migration script to ensure the new content is properly rendered in the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#424",
+      "title": "Updated VS Code Badges for All Extensions in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "vscode",
+        "badges",
+        "update",
+        "extensions",
+        "maintenance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/424",
+      "summary": "This update replaces the retired shields.io VS Code Marketplace badge across 20 README files for various extensions. The new static badge ensures that users see a valid link instead of a retired message, enhancing the user experience. The changes will take effect once the extensions are republished to the Marketplace."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1137",
+      "title": "Polish Taskbar Icon and Credits Pill Alignment in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "desktop",
+        "ui",
+        "icons",
+        "layout",
+        "fix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1137",
+      "summary": "This update addresses two key issues: the taskbar icon now features a fully transparent background, resolving the previous white square problem, and the credits pill has been realigned to sit directly under the window controls on Windows. Key changes include the introduction of a new script for generating brand icons and adjustments to the layout for better visual consistency across platforms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#423",
+      "title": "Add Gradle Build Scripts for JetBrains Plugin in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "gradle",
+        "jetbrains",
+        "build",
+        "plugin",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/423",
+      "summary": "This update introduces the missing `build.gradle.kts` and `settings.gradle.kts` files for both the Face and Fish JetBrains plugins. These files were copied from a working sibling repository, ensuring that the Gradle builds for `FaceTransformMCP` and `FishMCP` will now succeed. Note that publishing to JetBrains Marketplace will require a separate manual upload due to permission issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#422",
+      "title": "Shorten Face MCP Description for Registry Compliance in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "fix",
+        "mcp",
+        "json",
+        "validation",
+        "description"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/422",
+      "summary": "This update modifies the `server.json` description for the `FaceTransformMCP` to comply with MCP Registry validation, reducing the length from 114 to 89 characters. The new description maintains the full list of capabilities while ensuring successful publishing to the MCP Registry. All other descriptions have been audited and confirmed to meet the required length."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#421",
+      "title": "Enhance README Ownership Comments in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "mcp",
+        "readme",
+        "ownership",
+        "validation",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/421",
+      "summary": "This update adds the required ownership comment to the top of 6 MCP README files, ensuring compliance with the MCP Registry's validation process. The changes affect the `aichat`, `face`, `fish`, `glm`, `grok`, and `webextrator` directories, allowing successful publishing without ownership validation errors. Each comment aligns with the corresponding PyPI package name, streamlining the publishing workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#823",
+      "title": "New WorkBuddy Integration Tutorial in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "tutorial",
+        "integration",
+        "workbuddy",
+        "backend"
+      ],
+      "public": false,
+      "summary": "We've added a comprehensive tutorial for integrating WorkBuddy with Ace Data Cloud, located in the new documentation file. This guide covers all UI field names and advanced configuration options, ensuring users can easily connect various OpenAI-compatible endpoints. The tutorial includes verification of model IDs and provides essential screenshots for clarity."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1136",
       "title": "Enhance NSIS Installer with Branding and Path Safety in Nexior 🚀",
       "tags": [
