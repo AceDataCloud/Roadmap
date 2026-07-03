@@ -3,6 +3,104 @@
   "date": "2026-07-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/APIs#450",
+      "title": "Introducing the Coze Plugin for AceData Cloud in A P Is 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "plugin",
+        "openapi",
+        "music",
+        "coze",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/450",
+      "summary": "We've launched the first Coze plugin for AceData Cloud, enabling seamless integration of our AI music generation capabilities. This plugin utilizes a standard OpenAPI 3.0 schema, allowing Coze users to generate music through a simple API call. The accompanying README provides a comprehensive guide for importing and utilizing the plugin effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1142",
+      "title": "Fix Local Tools Panel Rendering Issue in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "localization",
+        "vue",
+        "testing",
+        "desktop"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1142",
+      "summary": "This update resolves a critical issue where the Local Tools settings panel was rendering blank across all languages due to a bare '@' in the translation string. By escaping the '@' using vue-i18n's literal interpolation, the panel now displays correctly in all 18 locales. Comprehensive tests have been added to ensure the fix is robust and prevents future regressions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#38",
+      "title": "Enhance Channel Adapter and Session Dispatcher in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "enhancement",
+        "channels",
+        "dispatcher",
+        "protocol",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/38",
+      "summary": "This update introduces an additive scaffolding for the channels stack, including a new `ChannelAdapter` protocol and a `SessionDispatcher` that manages message sessions. Key changes include the addition of new value objects and comprehensive tests to ensure protocol conformance and error handling. The implementation maintains existing functionality while laying the groundwork for future enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#612",
+      "title": "Fix SSR Rendering Issues for Dynamic Content in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ssr",
+        "frontend",
+        "bugfix",
+        "seo",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where server-side rendered pages returned an empty shell due to unguarded access to browser globals. Key changes include adding checks for `window` and `navigator` in the utility functions to ensure proper rendering during SSR. As a result, all affected routes now return full HTML content, improving SEO and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#175",
+      "title": "Fix assumptions and add production plan in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "fix",
+        "planning",
+        "documentation",
+        "production"
+      ],
+      "public": false,
+      "summary": "This PR corrects two incorrect assumptions from the previous merge regarding the `WisdomChannel` and DNS configurations. It introduces a new production plan specifically for the `coding-bridge` development tool path, detailing critical dependencies and sequential PRs necessary for implementation. Additionally, updates to the README and existing planning documents ensure clarity and alignment with the latest project scope."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1293",
+      "title": "Final Cleanup of Dead Code and Docs in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cleanup",
+        "documentation",
+        "code-quality",
+        "audit",
+        "webextrator"
+      ],
+      "public": false,
+      "summary": "This PR completes the cleanup process initiated by the WebExtrator hardening audit. It removes unused code, including the `sync-guard.ts` file and the `hits` field from `CacheEnvelope`, which was never utilized. Additionally, the `.env.example` file has been fully synchronized with the current environment variables, ensuring all values are documented and match the schema defaults."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1292",
       "title": "Enhance Reliability and Infrastructure in Platform Service 🚀",
       "tags": [
