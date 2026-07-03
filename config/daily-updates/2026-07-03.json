@@ -3,6 +3,39 @@
   "date": "2026-07-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#600",
+      "title": "Update wrangler to version 4.106.0 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "frontend",
+        "wrangler",
+        "ai-search"
+      ],
+      "public": false,
+      "summary": "This update bumps the wrangler package from version 4.105.0 to 4.106.0, introducing several minor enhancements. Key features include new commands for managing AI Search indexing jobs, support for jurisdiction-specific R2 buckets, and improved OAuth profile management. These changes aim to enhance the developer experience and streamline workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#55",
+      "title": "Revamp of Channels Portal for WeChat and Telegram in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "feature",
+        "portal",
+        "telegram",
+        "wechat",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/55",
+      "summary": "The channels portal has been redesigned to support both WeChat and Telegram, allowing users to manage instances from a unified interface. Key backend updates include the addition of Telegram instance handling and improved serialization for both channels. The frontend now features a channel overview card that enhances user interaction and simplifies the editing process."
+    },
+    {
       "id": "gh:pr:AceDataCloud/CodingBridge#54",
       "title": "Introducing Telegram as a New Chat Channel in Coding Bridge 🚀",
       "tags": [
