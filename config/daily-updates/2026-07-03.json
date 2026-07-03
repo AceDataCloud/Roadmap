@@ -3,6 +3,412 @@
   "date": "2026-07-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Index#176",
+      "title": "Introducing Wisdom Multi-Tenant Production on Azure AKS in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "azure",
+        "deployment",
+        "wisdom",
+        "multi-tenant"
+      ],
+      "public": false,
+      "summary": "This update adds the documentation for the Wisdom multi-tenant production deployment plan on Azure AKS, utilizing a golden-snapshot model. Key changes include the addition of a new plan file and an index row, which streamline tenant provisioning and significantly reduce setup time. The deployment strategy has been proven effective, ensuring a robust and efficient production environment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1310",
+      "title": "Optimize Worker Configuration for Smooth Rollouts in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "deployment",
+        "optimization",
+        "bugfix",
+        "kubernetes"
+      ],
+      "public": false,
+      "summary": "This update right-sizes the worker configuration by reducing replicas from 6 to 4 and adjusting CPU requests from 2 to 1, ensuring successful deployments. Additionally, the deployment script now waits for the rollout to complete, preventing previous issues where outdated images were served. These changes enhance the reliability of the maestro deployment process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1147",
+      "title": "Enhance MCP Boot Resilience in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "mcp",
+        "desktop",
+        "bugfix",
+        "enhancement",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1147",
+      "summary": "This update improves the local MCP boot process by extending the initialization timeout to 60 seconds and implementing a background retry mechanism for failed connections. These changes ensure that slow machines can recover from cold starts without user intervention, significantly enhancing user experience. Additionally, new tests have been added to validate these improvements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#255",
+      "title": "Add Bluesky BYOC Connector in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bluesky",
+        "byoc",
+        "connector",
+        "social",
+        "publishing"
+      ],
+      "public": false,
+      "summary": "This update introduces the `bluesky/bluesky` BYOC connector to the connector catalog, enabling users to publish posts to their Bluesky accounts using their handle and an App Password. The connector mirrors the existing `mastodon` BYOC connector and includes necessary credentials and configurations. This addition enhances the capabilities for developers and tech enthusiasts to engage with the Bluesky platform effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#536",
+      "title": "Introducing Bluesky Skill for Seamless Posting in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "bluesky",
+        "skills",
+        "feature",
+        "update",
+        "at-protocol"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/536",
+      "summary": "This update adds a new Bluesky skill that allows users to publish, delete, and read their own posts via the AT Protocol. The skill includes capabilities for session creation, posting, and retrieving engagement stats, all while ensuring secure handling of user credentials. With this addition, users can now easily manage their Bluesky interactions directly from the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1309",
+      "title": "Fix HappyHorse Deployment in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "deployment",
+        "ci",
+        "fix",
+        "happyhorse",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update adds the missing HappyHorse block to the `ttapi/deploy/run.sh` script, ensuring that the HappyHorse deployment and service are applied automatically during CI deployments. Previously, while the image was built, the deployment was skipped, requiring manual intervention. Now, future deployments will correctly include HappyHorse, streamlining the process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#535",
+      "title": "Enhance Mastodon Integration with New Skill in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "feature",
+        "mastodon",
+        "skills",
+        "api",
+        "integration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/535",
+      "summary": "This update introduces a new Mastodon skill that allows users to post toots, read their own stats, and manage their posts via the Mastodon REST API. Key functionalities include verifying user accounts, posting and deleting toots, and listing recent engagements. The skill is designed to facilitate content distribution on the fediverse, enhancing user interaction with their Mastodon instances."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#254",
+      "title": "Enhance Mastodon Integration with BYOC Connector in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "connector",
+        "mastodon",
+        "byoc",
+        "social",
+        "publishing",
+        "dev"
+      ],
+      "public": false,
+      "summary": "This update introduces a BYOC connector for Mastodon, allowing users to publish and delete toots while accessing their posts and engagement metrics. The connector requires two credentials: the instance URL and an access token, ensuring secure interactions with any Mastodon instance. The integration is designed to enhance content distribution for developers and marketers within the federated social network."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#49",
+      "title": "Enhance WeChat Quickstart with Provider Sign-In in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "documentation",
+        "wechat",
+        "quickstart",
+        "provider",
+        "coding-bridge"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/49",
+      "summary": "This update adds crucial documentation for signing in the provider (Claude Code/Codex) when using the WeChat channels quickstart. It clarifies the use of the `api.acedata.cloud` key and corrects inaccuracies in the README. The changes ensure users can effectively utilize the one-command setup for daily operations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1146",
+      "title": "Display Task ID and Trace ID During Video Production in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "maestro",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1146",
+      "summary": "This update enhances the maestro task interface by displaying the Task ID and Trace ID while a video is still producing, rather than only after completion. The in-progress section now shows these IDs, allowing for easier tracing and support during long production runs. This change aligns the maestro's behavior with other components like veo and seedance, improving user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1306",
+      "title": "Fix worker rollout and ensure live deployments in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "deployment",
+        "bugfix",
+        "kubernetes",
+        "maestro",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses critical issues with the maestro deployment process by resizing worker pods and ensuring that deployments wait for successful rollouts. The worker replicas have been adjusted from 6 to 4 with CPU requests reduced to 1, allowing for better scheduling and preventing deadlocks. Additionally, the deployment script now verifies that the new image is live on all pods before reporting success, enhancing reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#452",
+      "title": "Exciting New Coze Plugin Specs Added in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "coze",
+        "plugins",
+        "image-generation",
+        "video-generation",
+        "api",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/452",
+      "summary": "This update introduces six new Coze plugin specifications, enhancing our capabilities in image and video generation. The new plugins include Seedream, Flux, Sora, Kling, Veo, and Seedance, all designed for synchronous operations. Additionally, the README has been updated to reflect these changes and provide a clearer overview of our offerings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1307",
+      "title": "Fix billing logic for no_content in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "fix",
+        "tests",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses a billing issue identified during large-scale benchmarking, where certain pages were incorrectly billed due to misleading markdown content. The `resolveBlocked()` function now only considers visible text length for determining no_content status, ensuring that pages with excessive markdown do not trigger billing. Additionally, two new regression tests have been added to validate this change."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#534",
+      "title": "Introducing Substack BYOC Skill for Reading & Publishing in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "substack",
+        "skills",
+        "feature",
+        "python",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/534",
+      "summary": "This update adds the new Substack skill, enabling users to read and publish content on Substack using their own login cookies. The implementation leverages internal Substack endpoints, allowing for draft creation, validation, and publishing without an official write API. Key safety features include gated writes and controlled email notifications to subscribers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#533",
+      "title": "Introducing TGStat Skill for Telegram Research in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "feature",
+        "telegram",
+        "marketing",
+        "api",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/533",
+      "summary": "This update adds the TGStat skill for Telegram channel research, enabling users to search channels by various criteria and retrieve audience engagement statistics. The skill integrates with the TGStat Stat API, providing essential data for marketing research in the Russian market. It includes validation checks to ensure compliance and accuracy with the API documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#253",
+      "title": "Enhance Telegram Channel Research with New TGStat Connector in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "telegram",
+        "analytics",
+        "marketing",
+        "research",
+        "russia"
+      ],
+      "public": false,
+      "summary": "This update introduces a new BYOC API-key connector for TGStat, allowing users to search Telegram channels and retrieve audience engagement statistics. It integrates seamlessly with the existing AceDataCloud skills, enhancing marketing research capabilities specifically for the Russian-language market. The connector is designed for secure token usage and complies with relevant regulations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#836",
+      "title": "Enhance HappyHorse Video APIs with Documentation and Pricing in Backend 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "documentation",
+        "pricing",
+        "migration",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces the HappyHorse video integration to the PlatformBackend, including new API endpoints for videos and tasks. Key changes include the addition of OpenAPI specifications, service pricing rules, and comprehensive documentation in Chinese. The migration also ensures proper registration of the new service and its associated assets."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1308",
+      "title": "Exciting New HappyHorse Video Generation API in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "video",
+        "api",
+        "ttapi",
+        "feature",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces the HappyHorse video generation API to the ttapi worker, enabling new functionalities for video creation. A new public endpoint, `POST /happyhorse/videos`, supports various actions such as generating videos from prompts and converting images to videos. Key improvements include enhanced error handling and a dedicated Kubernetes pool for better resource management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#177",
+      "title": "Retire PlatformPublisher and Enhance Marketing Channels in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "marketing",
+        "documentation",
+        "connector",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces batch 06 of the connector directory, which retires the PlatformPublisher in favor of aichat2 and connectors for content distribution. It also expands marketing channel coverage through three waves, targeting platforms like WordPress, Instagram, and 抖音. Documentation has been updated accordingly, ensuring clarity and consistency across the connector directory."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#532",
+      "title": "Empower Your Blog with Self-Hosted WordPress Skill in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "wordpress",
+        "skills",
+        "api",
+        "curl",
+        "jq"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/532",
+      "summary": "This update introduces a new skill for managing self-hosted WordPress sites using the WordPress REST API. Users can publish posts, manage categories, and upload media seamlessly with `curl + jq`. The skill ensures secure authentication and provides user-friendly error guidance, enhancing the blogging experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#252",
+      "title": "Enhance WordPress Connectivity with BYOC Connector in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "wordpress",
+        "backend",
+        "connector",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update introduces a self-hosted WordPress BYOC connector, allowing users to connect their WordPress sites using Application Passwords for authentication. The new connector supports seamless publishing through the aichat2 skill, enhancing the integration capabilities for self-hosted WordPress users. Key validations ensure the connector's functionality and security are intact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#531",
+      "title": "Enhance Hashnode Publishing Skill in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "hashnode",
+        "skills",
+        "graphql",
+        "publishing",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/531",
+      "summary": "This update introduces a new Hashnode publishing skill that allows users to publish, draft, update, and list posts directly from chat using the GraphQL API. The implementation follows the existing devto skill pattern, ensuring consistency in functionality and user experience. Additionally, a companion connector PR has been added to support the new skill."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#251",
+      "title": "Add Hashnode BYOC Connector in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "connector",
+        "hashnode",
+        "byoc",
+        "publishing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces the Hashnode BYOC (bring-your-own-credentials) connector to the project, allowing users to publish articles directly to their Hashnode blogs using a Personal Access Token. The connector is fully integrated with the existing system, featuring a secure credential schema and auto-installs the necessary skills. The YAML configuration has been validated, ensuring no duplicate identifiers and maintaining a unique rank."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#250",
+      "title": "New Substack BYOC Connector Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "substack",
+        "connector",
+        "publishing",
+        "content",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new Substack connector to the AuthBackend, enabling users to connect their Substack accounts and publish articles and newsletters seamlessly. The connector utilizes a cookie-based authentication method due to the absence of an official write API from Substack. Key configurations include the use of a browser extension for cookie capture, ensuring a smooth publishing flow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#601",
+      "title": "Update autoprefixer to version 10.5.2 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps the autoprefixer dependency from version 10.5.1 to 10.5.2. Key changes include the adjustment of the order for the '-webkit-fill-available' and '-moz-available' properties, enhancing compatibility with Firefox. This ensures better adherence to CSS specifications and improves layout rendering across browsers."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1145",
       "title": "Fix UTF-8 BOM Handling in Nexior <emoji>",
       "tags": [
