@@ -1,0 +1,37 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-03",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#602",
+      "title": "Update FontAwesome Vue Package to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "update",
+        "fontawesome"
+      ],
+      "public": false,
+      "summary": "This update bumps the @fortawesome/vue-fontawesome package from version 3.2.0 to 3.3.0. Key enhancements include support for new animation properties introduced in Font Awesome 7.3.0 and improved TypeScript types for icon and mask props, ensuring better performance and usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#832",
+      "title": "Enhance Streaming Export Performance in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "performance",
+        "backend",
+        "django",
+        "streaming",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update resolves timeout issues for large CSV exports by reintroducing `StreamingHttpResponse` and allowing synchronous ORM calls in an async context. The first byte is now sent immediately, preventing client and proxy timeouts, while memory usage remains efficient with 2000 rows per batch. The fix preserves existing filters and the 1M row cap, ensuring a smooth user experience."
+    }
+  ]
+}
