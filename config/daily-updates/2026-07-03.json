@@ -3,6 +3,214 @@
   "date": "2026-07-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1292",
+      "title": "Enhance Reliability and Infrastructure in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "reliability",
+        "infrastructure",
+        "redis",
+        "autoscaling",
+        "shutdown",
+        "webextrator"
+      ],
+      "public": false,
+      "summary": "This update focuses on improving the reliability and infrastructure of the WebExtrator. Key changes include the separation of Redis instances for caching and queue management, implementation of graceful shutdown procedures, and enhancements to Horizontal Pod Autoscaler responsiveness. These adjustments aim to ensure job durability and optimize resource management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1291",
+      "title": "Enhance WebExtrator with Cache Improvements in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cache",
+        "performance",
+        "reliability",
+        "webextrator",
+        "improvements"
+      ],
+      "public": false,
+      "summary": "This update introduces significant enhancements to the WebExtrator, focusing on caching mechanisms. Key changes include implementing in-process single-flight caching to reduce redundant renders, introducing a best-effort job cancellation on sync timeouts, and enforcing a size cap on cached results to optimize memory usage. These improvements aim to enhance performance and reliability in handling concurrent requests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1141",
+      "title": "Sync Settings Nav Highlight with Active Tab in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "desktop",
+        "settings"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1141",
+      "summary": "This update addresses two key issues in the desktop Settings dialog: the left navigation highlight was desynchronized from the displayed content, and a blank content pane appeared under certain conditions. The solution involves creating a computed property to ensure the highlight and content are always in sync, preventing any blank displays. The changes enhance user experience by providing consistent navigation feedback."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1290",
+      "title": "Enhance Billing and Extraction Quality in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "extraction",
+        "quality",
+        "webextrator",
+        "audit"
+      ],
+      "public": false,
+      "summary": "This update addresses three key audit findings in the WebExtrator component of the Platform Service. It introduces a new error classification system, improves billing accuracy by adjusting how blocked statuses are handled, and enhances content type detection to ensure better extraction quality. These changes aim to streamline operations and improve user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1289",
+      "title": "Enhance TTS and Graphics Handling in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "tts",
+        "graphics",
+        "maestro",
+        "video",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses critical issues in the Maestro video task related to TTS and graphics rendering. Key changes include pinning the synthesis call to prevent endpoint guessing and adding a mandatory overlays delivery gate to ensure graphics are correctly rendered. These improvements enhance the reliability of video outputs and streamline the processing workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#174",
+      "title": "Exciting New CodingBridge Channels Plan Launched in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "codingbridge",
+        "poc",
+        "architecture",
+        "integration",
+        "messaging"
+      ],
+      "public": false,
+      "summary": "The new CodingBridge Channels plan introduces an end-to-end proof of concept (POC) and architecture aimed at integrating various messaging channels like WeChat, Telegram, and Discord with CodingBridge. Key updates include the successful execution of the POC, which connects WeChat to the CodingBridge agent, and the consolidation of previous implementations into a streamlined architecture. This plan sets the stage for future enhancements and integrations across multiple platforms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#833",
+      "title": "Fix 24h Traffic KPI Stuck at Sample Cap in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "kpi",
+        "backend",
+        "admin",
+        "traffic"
+      ],
+      "public": false,
+      "summary": "The 24h traffic KPI on the superuser dashboard was previously fixed at 10,000 due to a sampling limit. This update implements an exact database aggregate for request and success counts, ensuring the KPI reflects real traffic over time. The sampling limit has been renamed to clarify its purpose for latency estimation, while the overall functionality remains intact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1288",
+      "title": "Strengthening WebExtrator Security in Platform Service 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "security",
+        "webextrator",
+        "ssrf",
+        "tls",
+        "error-handling"
+      ],
+      "public": false,
+      "summary": "This update enhances the security of WebExtrator by addressing three critical issues: SSRF vulnerabilities, error message sanitization, and enforcing TLS validation for callbacks. Key changes include the introduction of a robust SSRF guard that validates URLs against private and internal addresses, improved error handling to prevent sensitive information leakage, and mandatory TLS certificate verification for callback deliveries. These enhancements significantly bolster the overall security posture of the Platform Service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#68",
+      "title": "Enhance Mock Tests for Python 3.10 Compatibility in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "tests",
+        "python",
+        "mock",
+        "compatibility",
+        "ci"
+      ],
+      "public": false,
+      "summary": "This update improves the portability of mock tests to ensure compatibility with Python 3.10, addressing 15 failing tests. Key changes include using `patch.object` to avoid function/submodule name shadowing and implementing a deterministic fallback for the PrintWindow test across different operating systems. The modifications enhance test reliability without impacting the product runtime."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#176",
+      "title": "Fix typo in insufficient balance error message in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "bugfix",
+        "gateway",
+        "error",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update corrects a typo in the 403 error message related to insufficient balance in the PlatformGateway. The URL was changed from 'https://platfrom.acedata.cloud' to 'https://platform.acedata.cloud', ensuring users receive the correct link to top up their balance. This change does not affect any logic or error codes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#173",
+      "title": "WebExtrator Hardening Audit Completed in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "security",
+        "audit",
+        "remediation",
+        "webextrator",
+        "performance"
+      ],
+      "public": false,
+      "summary": "A comprehensive hardening audit of the WebExtrator service has been conducted, identifying 16 issues through source code review and real-world testing. This PR documents the findings and outlines a remediation plan that includes five subsequent PRs to address the identified vulnerabilities. Key issues include SSRF vulnerabilities, response size limits, and error handling improvements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#67",
+      "title": "Fix header encoding to prevent crashes in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "encoding",
+        "http",
+        "media",
+        "wisdom"
+      ],
+      "public": false,
+      "summary": "This update percent-encodes the `X-Media-Path` response header to handle non-ASCII characters, preventing crashes when serving media files. The change ensures that HTTP headers remain compliant with latin-1 encoding, thus avoiding `UnicodeEncodeError` issues. Testing has confirmed that the media-serving endpoint operates smoothly post-deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1287",
+      "title": "Fix double charging issue by billing on completion in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "fix",
+        "maestro",
+        "testing",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update resolves a double charging issue in the maestro video submission process. By marking the create response with `X-Usage-Exempt`, the system ensures that charges occur only after successful video production, preventing premature deductions. The fix has been tested and verified, maintaining the integrity of the billing monitor as the sole biller."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#602",
       "title": "Update FontAwesome Vue Package to Latest Version in Frontend Web 🚀",
       "tags": [
