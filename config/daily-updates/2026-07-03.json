@@ -3,6 +3,371 @@
   "date": "2026-07-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/CodingBridge#51",
+      "title": "Enhance Group Control with Allowed Groups Policy in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "feature",
+        "weChat",
+        "access-control",
+        "portal",
+        "policy"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/51",
+      "summary": "This update introduces the `allowed_groups` policy, allowing for more granular control over which WeChat group chats the bot can respond to. The portal now features a functional group picker, enabling users to easily select allowed groups. This enhancement improves access control, ensuring the bot only interacts in designated team groups while maintaining existing functionality for private messages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#843",
+      "title": "Fix nano-banana pricing tiers and billing issues in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "billing",
+        "pricing",
+        "backend",
+        "nano-banana"
+      ],
+      "public": false,
+      "summary": "This update resolves critical billing issues for the nano-banana pricing tiers by ensuring distinct 1K, 2K, and 4K options are displayed and billed correctly. The previous implementation had a bug that caused all requests to bill as free due to mismatched resolution literals. Now, the rules have been updated to use lowercase literals, and the pricing page accurately reflects the available tiers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1312",
+      "title": "Enhance SPA Hydration for Better Content Extraction in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "webextrator",
+        "hydration",
+        "content-extraction",
+        "improvement",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update addresses the thin SPA extraction issue identified in the WebExtrator benchmark across 48 sites. It introduces an adaptive hydration retry mechanism that waits for a short duration if the initial visible text is below a specified threshold, ensuring more robust content retrieval without impacting normal long pages. Key configuration options for hydration timing and thresholds have also been documented."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#538",
+      "title": "Enhance nano-banana skill with official model variants in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "update",
+        "documentation",
+        "skills",
+        "models"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/538",
+      "summary": "This update syncs the `nano-banana-image` skill with the latest upstream Docs commit, introducing three new `:official` model variants: `nano-banana:official`, `nano-banana-2:official`, and `nano-banana-pro:official`. The documentation has been updated to reflect these changes, enhancing clarity for users on available models and their parameters."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#539",
+      "title": "New VK Skill for Posting and Managing Content in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "vk",
+        "skills",
+        "api",
+        "content",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/539",
+      "summary": "This update introduces a new VK skill that allows users to publish posts to their VK profile or community wall, as well as retrieve and manage their recent posts using the official VK API. The skill includes functionality for posting, listing, and deleting posts, specifically tailored for the Russian-speaking audience. Validation has confirmed that all methods and parameters align with VK's API specifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#258",
+      "title": "Enhance Russian Market Reach with VK & Habr Connectors in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "connectors",
+        "vk",
+        "habr",
+        "russian",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces two new connectors for the Russian market: VK (ВКонтакте) and Habr. The VK connector utilizes a BYOC access token for posting, while the Habr connector operates as a cookie-BYOC due to the absence of an official write API. These additions significantly enhance content distribution capabilities for Russian-speaking users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#842",
+      "title": "Enhance 创收联盟 Page with New Images in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "images",
+        "update",
+        "marketing"
+      ],
+      "public": false,
+      "summary": "This update adds two AI-generated marketing images to the 创收联盟 long-form article, enhancing visual appeal. A hero banner and a commission-ladder illustration have been incorporated without altering the existing content. The images were verified for safety and are hosted on a stable CDN."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#839",
+      "title": "Introducing the AKS Appliance Workload Provider in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "deployment",
+        "aks",
+        "wechat",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update adds the new `aks_appliance` workload provider, enabling rapid deployment of the Wisdom WeChat-bot service on Azure AKS using a golden snapshot. The provider significantly reduces setup time from ~40 minutes to approximately 7 minutes by utilizing a CoW clone of a pre-built Windows VM. Key enhancements include new deployment utilities and comprehensive testing to ensure reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#841",
+      "title": "Enhance HappyHorse Pricing Display Rules in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "pricing",
+        "api",
+        "tests",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update improves the HappyHorse service pricing display by ensuring only clean public options are shown. The visible options now include `720P` and `1080P`, while a hidden fallback rule is retained for compatibility. Validation tests confirm the expected behavior with all relevant checks passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#179",
+      "title": "Enhance Service Cost Display Rules in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "service",
+        "billing",
+        "api",
+        "index"
+      ],
+      "public": false,
+      "summary": "This update clarifies the rules for service display cost files in the `create-service` workflow. It emphasizes that public pricing should not replicate Gateway billing rules, ensuring a cleaner user experience. Additionally, it introduces focused testing requirements when there are discrepancies between API billing costs and service display costs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#457",
+      "title": "Enhance CLI with Official Model Variants in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "feature",
+        "cli",
+        "models",
+        "tests",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/457",
+      "summary": "This update introduces three new official model variants to the CLI, aligning with the latest OpenAPI spec for `nano-banana`. The changes include updates to the model choices in `core/output.py` and enhancements to the test suite to ensure all models are properly validated. Users can now utilize these official variants when generating images, improving flexibility and options."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#835",
+      "title": "New Official Nano-Banana Models Pricing in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "backend",
+        "api",
+        "documentation",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update introduces pricing for three new `:official` nano-banana models on the `/nano-banana/images` API, ensuring a 40% gross margin. Key changes include updated billing rules, display pricing, and OpenAPI model enum additions. Documentation has been enhanced to reflect these new models, and tests confirm the accuracy of pricing across all tiers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#207",
+      "title": "Upgrade checkout action to version 7 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "dependencies",
+        "update",
+        "actions",
+        "workflow"
+      ],
+      "public": false,
+      "summary": "This update bumps the actions/checkout from version 6 to 7, enhancing the workflow's functionality. Key changes include improved handling of fork pull requests and updates to several dependencies, ensuring better performance and security. The modifications affect CI and other workflows that utilize the checkout action."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#195",
+      "title": "Update Tencent Cloud SDK to Latest Version in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "dependencies",
+        "update",
+        "python",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update bumps the `tencentcloud-sdk-python` package from version 3.1.110 to 3.1.119 in the Python dependencies. The change ensures compatibility with newer Python versions and includes various improvements and fixes. Developers are encouraged to upgrade their Python version as support for `python v3.9` will be discontinued."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#837",
+      "title": "Enhance HappyHorse Service Presentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "happyhorse",
+        "backend",
+        "improvement",
+        "billing",
+        "assets"
+      ],
+      "public": false,
+      "summary": "This update improves the HappyHorse service by backfilling asset URLs and enhancing the service introduction with a full HTML landing page. It replaces low-quality examples with verified CDN assets and addresses a billing edge case for resolution matching. The official pricing has been set to reflect upstream costs while maintaining public billing rates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#838",
+      "title": "Enhance Marketing Material Generation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "enhancement",
+        "backend",
+        "marketing",
+        "quality",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update refines the auto-generation of marketing materials by implementing a stronger model and raising the quality score threshold to 88 across all channels. The 'x' channel has been retired due to consistently low performance, and a mandatory call-to-action has been added to every prompt. These changes aim to ensure only high-quality materials are published, enhancing overall marketing effectiveness."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#425",
+      "title": "Enhance Marketing Material Tools in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "feature",
+        "tools",
+        "marketing",
+        "MCP",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/425",
+      "summary": "This update introduces four new read-only tools to the AceDataCloud MCP server for managing the PublishMaterial marketing-copy catalog. Key features include searching materials by various criteria, picking random materials, listing publish channels, and retrieving detailed material information. These enhancements improve the efficiency of accessing marketing content for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#257",
+      "title": "Restored WordPress Logo in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "ui",
+        "connectors",
+        "wordpress"
+      ],
+      "public": false,
+      "summary": "The broken WordPress connector logo URL has been replaced with a verified SVG asset from the AceDataCloud CDN. Validation confirmed that the new URL returns a successful response, ensuring the logo displays correctly. This update enhances the visual consistency of the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#256",
+      "title": "Update DiDi Logo in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "logo",
+        "update",
+        "backend",
+        "diDi"
+      ],
+      "public": false,
+      "summary": "Replaced the placeholder logo for the DiDi connector with the official logo from the CDN. The same logo is now used for both `icon_url` and `publisher_logo_url`, ensuring consistency. Completed the TODO in the DiDi seed entry, enhancing the clarity of the code."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#173",
+      "title": "Enhance Connector Card Layout in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "layout",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the layout of connector cards by relocating Featured/New/Trending tags to the metadata row and implementing a three-column card header grid. Connector names can now wrap to two lines, enhancing readability. These changes aim to create a more stable and user-friendly interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#50",
+      "title": "Introducing a Local Web UI for Channels Configuration in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "feature",
+        "ui",
+        "web",
+        "security",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/50",
+      "summary": "This update adds the `coding-bridge channels portal`, a local web UI that simplifies editing the `channels.toml` configuration file. Users can now search for contacts, select admins, and manage group settings without manually entering IDs. The portal operates securely on localhost and includes a robust testing suite to ensure reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#178",
+      "title": "Enhance Service Creation Checklist in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "enhancement",
+        "workflow",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update tightens the `create-service` workflow by requiring both `Service.icon_url` and `Service.thumbnail` to ensure high-quality product presentation. It also introduces documentation for asset usage, byte-range CDN URL verification, and mandates HTML landing pages for service introductions. Additionally, it addresses stale dependency graph numbering and outlines potential pitfalls for missing assets."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1311",
+      "title": "Optimize Maestro Worker Resources in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "optimization",
+        "resources",
+        "deployment",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update right-sizes the maestro worker resources to improve scheduling on the cluster. Key changes include reducing the number of replicas from 6 to 4, lowering CPU requests from 2 to 500m, and cutting memory limits from 16Gi to 8Gi. These adjustments are based on live cluster data, ensuring efficient resource usage and preventing over-provisioning."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#176",
       "title": "Introducing Wisdom Multi-Tenant Production on Azure AKS in Index 🚀",
       "tags": [
