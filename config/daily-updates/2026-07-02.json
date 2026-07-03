@@ -3,6 +3,68 @@
   "date": "2026-07-02",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#831",
+      "title": "Streamline Debug Logging for Translation Renderer in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "performance",
+        "logging",
+        "debug"
+      ],
+      "public": false,
+      "summary": "This update removes the oversized debug log from the JSONLocalizationRenderer, which previously printed the entire translation dictionary. This change aims to enhance response times and prevent timeouts in high-concurrency scenarios. Following the implementation, response times for key API endpoints have significantly improved."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1285",
+      "title": "Fix deployment issues for localization worker in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "localization",
+        "deployment",
+        "docker",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update adds the missing `deploy/run.sh` script for the localization worker, enabling proper deployment of the latest changes. Additionally, the Dockerfile has been modified to pin `node-gyp` to version 10, ensuring compatibility with Node 18.8.0. These changes will restore the functionality of the `started_at` and `elapsed` fields in the worker's records."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1286",
+      "title": "Enhance count_tokens with usage recording in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "count_tokens",
+        "usage_recording",
+        "testing",
+        "platform_service"
+      ],
+      "public": false,
+      "summary": "This update implements a new mechanism for the `count_tokens` endpoint to ensure accurate usage recording. After processing, it now posts a `/record` to log the usage with a real status of 200, aligning with existing patterns from chat and embeddings. The changes include new tests to validate the functionality and ensure that the endpoint remains free of charge while maintaining accurate records."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#172",
+      "title": "New Dual-Boot Guide for TencentOS and Windows 11 in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "tencentos",
+        "windows",
+        "dual-boot",
+        "guide"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive step-by-step runbook for installing TencentOS Server 3.1 alongside Windows 11 on home machines. The new document ensures users can successfully dual-boot without losing existing data or GPU drivers, while also meeting the requirements for TKE registered nodes. Key sections include prerequisites, installation steps, and troubleshooting tips."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#604",
       "title": "Update FontAwesome Icons to Latest Version in Frontend Web 🚀",
       "tags": [
