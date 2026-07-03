@@ -3,6 +3,252 @@
   "date": "2026-07-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/CodingBridge#54",
+      "title": "Introducing Telegram as a New Chat Channel in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "telegram",
+        "wechat",
+        "channels",
+        "integration",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/54",
+      "summary": "This update integrates Telegram as a first-class chat channel alongside WeChat, enhancing the channels portal. Key changes include the addition of a Telegram adapter, a new async Bot API client, and comprehensive configuration options, all while ensuring security measures like token protection. The implementation allows for simultaneous operation of both channels, streamlining user interactions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#542",
+      "title": "Enhance Blogger Skill to Publish Live by Default in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "blogger",
+        "skills",
+        "update",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/542",
+      "summary": "This update modifies the Blogger skill to publish articles live by default when users request to publish. Previously, articles were created as drafts, leading to confusion. Key changes include improved error handling for unregistered callers and empty blog lists, ensuring a smoother user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#53",
+      "title": "Introducing Opt-in Live Tool Approvals in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "feature",
+        "approval",
+        "testing",
+        "channels",
+        "portal"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/53",
+      "summary": "This update adds an opt-in feature for live tool approvals via the channels portal. When enabled, any tool requests made by an agent will be held for user approval instead of executing automatically. The implementation includes a file-backed approval store and has been thoroughly tested to ensure no regression for existing setups."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#541",
+      "title": "Enhance Telegram Bot Publishing Skill in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "telegram",
+        "bot",
+        "skills",
+        "publishing",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/541",
+      "summary": "This update introduces a new skill for publishing to Telegram channels and groups via a bot using the official Bot API. Key features include message sending, editing, and deletion, along with verification of bot permissions. The skill is designed to facilitate broadcasting content efficiently while ensuring proper access control."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#260",
+      "title": "Enhance Telegram Bot Connector for Channel Broadcasting in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "telegram",
+        "connector",
+        "backend",
+        "feature",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces the new `telegrambot/telegrambot` BYOC connector, enabling users to broadcast messages to Telegram channels or groups using a bot token from @BotFather. The connector operates over the official Bot API and requires the bot to be an admin in the channel. Key features include secure token handling and compatibility with existing BYOC structures."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1317",
+      "title": "Set fish-tts as the default TTS engine in Platform Service 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "tts",
+        "audio",
+        "docker",
+        "bugfix",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update makes AceData's fish-tts the default text-to-speech engine in the HyperFrames audio engine, ensuring that all maestro videos receive authentic Chinese audio without requiring agent adherence. Key changes include a new build-time script that routes audio requests to fish-tts and a Dockerfile modification to integrate this patch seamlessly. This enhancement addresses previous issues with silent tracks and improves overall audio quality for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#181",
+      "title": "Update live Wisdom D4s_v4 fallback strategy in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "update",
+        "wisdom",
+        "aks",
+        "cost"
+      ],
+      "public": false,
+      "summary": "This update records that the live Wisdom AKS production is utilizing the `Standard_D4s_v4` SKU due to a quota limitation in the eastasia region. It maintains `D4s_v5` as the preferred option while confirming `D4s_v4` as a fallback. Additionally, early cost estimates have been adjusted to reflect a range of $170-180/month for both SKUs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#259",
+      "title": "Enhance Bluesky Connector Instructions for Full Handle Requirement in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bluesky",
+        "connectors",
+        "backend",
+        "documentation",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update clarifies the instructions for the Bluesky connector by explicitly stating that users must enter their full handle, including the domain, to avoid authentication errors. The `description` and `handle` field help text have been revised to prevent confusion that led to login failures. No changes to schema or logic were made, ensuring no impact on other connectors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#540",
+      "title": "Fix Bluesky Handle Normalization in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "bluesky",
+        "authentication",
+        "fix",
+        "skills",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/540",
+      "summary": "This update addresses an issue where Bluesky posts failed due to the use of bare usernames instead of full handles. The connector now normalizes bare usernames to include the domain `.bsky.social` during session creation, ensuring compatibility with Bluesky's requirements. Custom-domain handles and DIDs remain unaffected, improving user experience and reducing authentication errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#52",
+      "title": "Enhance WeChat Onboarding & Speed Up Contact Search in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "feature",
+        "performance",
+        "ui",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/52",
+      "summary": "This update introduces a QR onboarding feature for WeChat, allowing users to log in seamlessly when signed out. Additionally, the contact search functionality has been optimized, reducing initial search times from ~7 seconds to ~1 second through concurrent paging and improved filtering. These enhancements significantly improve user experience and efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1316",
+      "title": "Renamed K8s Service for Consistency in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "k8s",
+        "webextrator",
+        "platform-service",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update renames the WebExtrator API's K8s service from `webextrator-service` to `platform-service-webextrator`, aligning it with the naming convention of other upstream workers. The change includes a port update from 80 to 8000 while maintaining the same pod selectors, ensuring seamless integration with existing services. The migration was executed with zero downtime and has been verified to function correctly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1315",
+      "title": "Fix Google Blogger Token Mapping in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "oauth",
+        "google",
+        "aichat2",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where publishing to Blogger from Studio chat failed due to a missing OAuth token mapping. The explicit mapping for the `google/blogger` connector to `GOOGLE_BLOGGER_TOKEN` has been added, ensuring that the skill can correctly access the required token. Validation tests confirm that the changes are functioning as expected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1148",
+      "title": "Fix Windows Node Path Issues for MCP Servers in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "windows",
+        "mcp",
+        "node",
+        "path",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1148",
+      "summary": "This update resolves a critical issue where Windows GUI-launched applications inherited a stale PATH, causing MCP servers to fail when executing bare `node` or `npx` commands. The `resolveEnhancedPath()` function has been enhanced to append standard Node installation directories derived from stable environment variables, ensuring reliable command resolution. New tests have been added to verify the correctness of the path derivation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1314",
+      "title": "Enhance web tools with internal routing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "internal",
+        "web-tools",
+        "performance",
+        "configuration"
+      ],
+      "public": false,
+      "summary": "This update routes the `web_search` and `web_fetch` tools to internal services, improving performance and eliminating external API dependencies. The `web_search` now correctly handles result counts and geo-location, while `web_fetch` utilizes a dedicated WebExtrator for better data extraction. Configuration changes ensure seamless integration with existing services without requiring deployment environment adjustments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1313",
+      "title": "Enhance extraction retries for thin content in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "extraction",
+        "retry",
+        "performance",
+        "web",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces a fallback mechanism for extraction jobs that encounter thin content after initial extraction. By implementing a retry strategy with a configured hydration delay, the system can improve the visible text length without unnecessarily increasing wait times for all requests. Key changes include the addition of a new function to determine when to retry and ensuring that non-HTML content is not retried."
+    },
+    {
       "id": "gh:pr:AceDataCloud/CodingBridge#51",
       "title": "Enhance Group Control with Allowed Groups Policy in Coding Bridge 🚀",
       "tags": [
