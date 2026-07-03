@@ -3,6 +3,153 @@
   "date": "2026-07-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1145",
+      "title": "Fix UTF-8 BOM Handling in Nexior <emoji>",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "desktop",
+        "localtools",
+        "utf8",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1145",
+      "summary": "This update addresses a critical bug in the desktop Local Tools feature by stripping the UTF-8 BOM from the local-tools.json file during loading. Previously, a BOM could cause JSON parsing to fail, leading to silent data loss of authorized roots and MCP servers. The change ensures that configurations are loaded correctly, even if edited with tools that introduce a BOM, and includes new tests to validate this behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#172",
+      "title": "Enhance Skill Installation Restrictions in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "frontend",
+        "i18n",
+        "skills",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update introduces hard-gate installation for skills based on surface restrictions, ensuring users can only install skills compatible with their platform. For instance, skills restricted to macOS will now display a locked state on incompatible platforms like Windows or Linux, along with informative tooltips. Additionally, internationalization support has been expanded to cover all 18 locales, enhancing user experience across different languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1305",
+      "title": "Exciting New Nano-Banana Models Added in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "deployment",
+        "routing",
+        "models",
+        "bananarouter"
+      ],
+      "public": false,
+      "summary": "This update introduces three new public nano-banana model names to the BananaRouter worker, each served by a dedicated official channel pod. The models include `nano-banana:official`, `nano-banana-2:official`, and `nano-banana-pro:official`, all mapped to their respective native Gemini upstream IDs. Additionally, the deployment and service configurations have been updated to support these new models, enhancing the routing capabilities of the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#48",
+      "title": "Add CHANGELOG for WeChat Channels Release in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "docs",
+        "changelog",
+        "release",
+        "wechat",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/48",
+      "summary": "This update introduces the first `CHANGELOG.md` for the CodingBridge repository, detailing the continuous release scheme and the WeChat chat channels milestone. Key features include an automated versioning system, a new WeChat channel adapter, and comprehensive documentation for various components. The changelog serves as a vital artifact for tracking user-facing changes and enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#47",
+      "title": "Enhance WeChat Chat Channels Documentation in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "docs",
+        "wechat",
+        "features",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/47",
+      "summary": "This update adds comprehensive documentation for the WeChat chat-channels feature in the README. Users can now easily discover and configure the feature, including setup instructions, verification commands, and safety measures. The documentation has been thoroughly reviewed for accuracy and clarity, ensuring a smooth user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#451",
+      "title": "Exciting New Image Plugin for Coze in A P Is 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "image",
+        "plugin",
+        "coze",
+        "api",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/451",
+      "summary": "This update introduces a new image-generation plugin for Coze, supporting GPT Image, Nano Banana, and DALL·E through a single endpoint. The addition of `coze/image.yaml` allows users to generate images from text prompts seamlessly. The README has also been updated to reflect this new functionality and provide a roadmap for future enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1304",
+      "title": "Enhance Imagery Gate for Real Media in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "imagery",
+        "media",
+        "platform",
+        "update",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update implements a deterministic imagery gate to ensure that projects labeled as 'succeeded' contain real sourced media, specifically for product and website scenarios. Key changes include directory pruning to improve accuracy and speed, and a new check that rejects projects lacking required imagery. The tests have been updated and passed successfully, ensuring robust functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#171",
+      "title": "Enhance Skill Directory with Platform Badges in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "features",
+        "i18n",
+        "skills"
+      ],
+      "public": false,
+      "summary": "The skill directory now displays platform-specific badges for skills with defined surfaces, enhancing user experience. For instance, the 'apple-notes' skill shows a badge indicating it's available on macOS desktop. This change is purely client-side, ensuring users can browse skills without installation restrictions while setting clear expectations about platform compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#530",
+      "title": "Enhance apple-notes for macOS Desktop Only in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "feature",
+        "macos",
+        "skills",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/530",
+      "summary": "This update introduces the `surfaces: [mac]` declaration in the apple-notes skill, restricting its use to the macOS desktop environment. This change ensures that the skill is only runnable on the AceDataCloud desktop app, enhancing clarity for users. No backend changes were necessary, maintaining backward compatibility while allowing for future UI enhancements."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1303",
       "title": "Prevent Billing for Empty Extractions in Platform Service 🚫",
       "tags": [
