@@ -3,6 +3,448 @@
   "date": "2026-07-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1303",
+      "title": "Prevent Billing for Empty Extractions in Platform Service 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "webextrator",
+        "platform",
+        "fix",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a new billing rule that prevents charges for genuinely empty extractions classified as 'general'. If the combined length of text and markdown is below a specified threshold, these extractions will now return a non-billable status. This change aims to enhance billing accuracy and ensure users are not charged for content that does not meet the minimum quality criteria."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#46",
+      "title": "Enhance Channel Observability with Structured Events in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "observability",
+        "logging",
+        "privacy",
+        "channels",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/46",
+      "summary": "This update introduces structured, privacy-safe observability for the CodingBridge channels stack, allowing operators to monitor channel traffic health without exposing message content. A new `TurnEvent` dataclass and `log_turn()` function have been added to emit detailed logs per turn, capturing essential metrics while ensuring sensitive information remains secure. The implementation includes robust error handling and comprehensive tests to validate functionality and prevent data leaks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#45",
+      "title": "New Service Deployment Templates for Coding Bridge in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "docs",
+        "deployment",
+        "service",
+        "templates",
+        "coding-bridge"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/45",
+      "summary": "This update introduces comprehensive documentation for deploying the `coding-bridge channels start` command as a background service across various operating systems. Templates for systemd (Linux), Task Scheduler/NSSM (Windows), and launchd (macOS) are now available, ensuring the service remains active through logouts and reboots. Key correctness points have been verified, enhancing the reliability and security of the deployment process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1299",
+      "title": "Align Logging for Task Responses in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "logging",
+        "refactor",
+        "platform-service",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update moves the logging of 'updated task response' into the appropriate guard to ensure it only logs when a database write occurs. This change addresses a logging inconsistency that could mislead during error investigations, although it has no functional impact. The adjustment aligns the logging behavior with similar implementations across other services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#44",
+      "title": "Enhance Provider Validation and Routing in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "validation",
+        "routing",
+        "testing",
+        "cli",
+        "config"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/44",
+      "summary": "This update improves provider selection by ensuring that the `default_provider` is validated against known providers at load time, preventing silent fallbacks to the default provider. Key changes include enhanced error handling in `config.py` and validation in the CLI commands. The tests have been updated to ensure robust coverage for these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#43",
+      "title": "Enhance Channels with E2E Smoke Testing in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "testing",
+        "channels",
+        "integration",
+        "cli",
+        "e2e"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/43",
+      "summary": "This update introduces a comprehensive end-to-end smoke test for the channels feature, ensuring its reliability. Key additions include an offline integration test that verifies the entire message flow and a CLI command for local provider checks. These enhancements will improve the robustness of the channels setup and facilitate smoother deployments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#42",
+      "title": "Launch coding-bridge channels CLI commands in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "cli",
+        "wechat",
+        "channels",
+        "update",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/42",
+      "summary": "This update introduces the `coding-bridge channels` subcommand group, enabling users to initialize, start, and validate WeChat bot configurations. Key commands include `init` for creating a configuration file, `start` for running the bot, and `doctor` for validating tokens without exposing sensitive information. The changes enhance the CLI functionality while ensuring safety and reliability in configuration management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1302",
+      "title": "Enhance Asset-First Routing for Real Subjects in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "maestro",
+        "routing",
+        "quality",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update refines the maestro quality fix by ensuring that real subjects are paired with actual assets in video workflows. Key changes include rewording the scenario directive to prioritize fidelity and introducing new routing rules that prevent the use of invented visuals for real subjects. The README and architecture documents have been updated to reflect these changes, enhancing clarity and guidance for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1301",
+      "title": "Enhance Maestro's Preflight Checks in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "maestro",
+        "preflight",
+        "video",
+        "quality",
+        "audio"
+      ],
+      "public": false,
+      "summary": "This update enforces a hard-fail for silent renders in the maestro worker's preflight checks, ensuring that videos without audio are rejected. The change introduces a new `require_audio` flag, making it mandatory for most scenarios to have sound, while only allowing motion graphics to be silent. This improvement prevents mute videos from being incorrectly marked as successful, enhancing overall video quality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#69",
+      "title": "Transform Wisdom Appliance into a Turnkey Solution in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "turnkey",
+        "docker",
+        "windows",
+        "api",
+        "installation",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update enhances the dockur Windows Wisdom appliance, making it fully turnkey. Key improvements include automatic installation of necessary components on first boot, enabling access to the Wisdom API at port 8000, and ensuring WeChat launches seamlessly. Multiple bugs were addressed, significantly improving the user experience and reliability of the installation process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#41",
+      "title": "Enhance Abuse Controls for WeChat Bot in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "abuse-controls",
+        "wechat",
+        "security",
+        "testing",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/41",
+      "summary": "This update introduces robust abuse-control mechanisms for the WeChat bot, including a trigger prefix, sender allowlist, per-sender rate limits, and message ID deduplication. New tests have been added to ensure the reliability of these features, enhancing the bot's security and performance. Additionally, a helper function for task status retrieval has been implemented to streamline operations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#40",
+      "title": "Enhance WeChat Channel Config with TOML Schema in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "wechat",
+        "toml",
+        "config",
+        "testing",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/40",
+      "summary": "This update introduces a TOML configuration schema for WeChat channel adapters, allowing for flexible and safe configuration management. Key additions include a new `WeChatInstanceConfig` class and a robust error handling mechanism for configuration loading. Additionally, 34 new tests ensure the reliability of the new features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#39",
+      "title": "Introducing WeChat Adapter for Enhanced Messaging in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "wechat",
+        "adapter",
+        "channels",
+        "async",
+        "integration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/39",
+      "summary": "This update adds a fully functional WeChat `ChannelAdapter` that implements the P1 Protocol, allowing for seamless integration with WeChat's messaging system. Key features include an async HTTP client, structured message filtering, and robust error handling with token redaction. The implementation is backed by extensive tests to ensure reliability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1300",
+      "title": "Enhance SSRF Guard for Sub-Frames in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "ssrf",
+        "error-handling",
+        "testing",
+        "web-extractor",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update improves the SSRF guard mechanism by ensuring that failures in sub-frames do not disrupt the main frame rendering process. The main frame now accurately reports DNS errors without misleading messages, enhancing error handling. Additionally, the changes include new tests for reason-code coverage, ensuring robust validation across various scenarios."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#834",
+      "title": "Fix documentation for aspect ratio and resolution in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "fix",
+        "nano-banana",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update corrects the documentation regarding the behavior of aspect ratio and resolution parameters during the edit mode for nano-banana. The previous descriptions inaccurately stated that these parameters only applied during generation, while they actually take effect when provided in edit mode as well. The changes ensure that users have accurate guidance on how to use these parameters effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1298",
+      "title": "Optimize Image Handling for GPT-Image-2 Edits in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "image-processing",
+        "bugfix",
+        "gpt-image-2",
+        "sharp",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "This update addresses the issue of oversized input images causing failures in the async `/images/edits` endpoint for the `gpt-image-2:official` model. The solution involves downscaling images exceeding the 1024x1024 pixel limit while preserving their aspect ratio and maximizing resolution. Additionally, the implementation introduces the `sharp` library for efficient image processing, ensuring a seamless user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#528",
+      "title": "New Apple Notes Skill for macOS in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "feature",
+        "macos",
+        "applescript",
+        "agent-skill",
+        "local"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/528",
+      "summary": "This update introduces a new **apple-notes** Agent Skill, enabling users to manage Apple Notes on macOS through AppleScript. Key functionalities include listing, searching, reading, creating, appending, moving, and deleting notes, all while ensuring local operation without a cloud API. The skill is designed with safety features like GATED writes to prevent accidental data loss."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#247",
+      "title": "Exciting New DiDi BYOC Connector Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "connector",
+        "automation",
+        "backend"
+      ],
+      "public": false,
+      "summary": "We've introduced the DiDi BYOC connector, allowing users to connect their DiDi MCP key seamlessly. This addition enhances automation capabilities and auto-installs the necessary skills for a smooth user experience. Remember to run the sync command post-merge to update the connector manifest!"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#526",
+      "title": "Enhance Ride-Hailing with DiDi Skill in Skills 🚖",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "feature",
+        "didi",
+        "skills",
+        "ride-hailing",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/526",
+      "summary": "This update introduces a new DiDi ride-hailing skill that allows users to book rides, estimate fares, and manage orders through the DiDi MCP server. Key files include detailed skill instructions, a Streamable-HTTP client for communication, and a comprehensive API reference. The implementation ensures safety with write-gating for sensitive operations, enhancing user security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#248",
+      "title": "Introducing Tencent Docs BYOC Connector in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "connector",
+        "tencent",
+        "oauth",
+        "backend"
+      ],
+      "public": false,
+      "summary": "We've added a new BYOC connector for Tencent Docs to our AuthBackend, enhancing our productivity tool offerings. This connector allows users to manage their Tencent Docs directly through our platform, supporting OAuth2 authentication and providing a seamless experience. The integration includes essential credential management and localized suggestions for improved user interaction."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#527",
+      "title": "Introducing Tencent Docs BYOC Connector Skill in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "tencent",
+        "docs",
+        "connector",
+        "skills",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/527",
+      "summary": "We've added a new Tencent Docs BYOC connector skill that allows users to create, read, list, search, and manage their documents, sheets, and more within their Tencent Docs space. This skill integrates seamlessly with the Tencent Docs Open API and follows the same structure as our existing connector skills. Key features include authentication handling and various document management recipes to enhance user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1143",
+      "title": "Revamp MCP Server Fields for Better Layout in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "design",
+        "frontend",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1143",
+      "summary": "The Local Tools MCP server editor has been polished with a new two-column form grid layout, enhancing the alignment and readability of server fields. Key changes include replacing cramped inputs with default-sized fields and improving label visibility. This update ensures a cleaner user interface without altering any existing functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#525",
+      "title": "Enhance Medium Integration with Clickable Links and Tables in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "medium",
+        "skills",
+        "update",
+        "bugfix",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/525",
+      "summary": "This update improves the Medium integration by fixing rendering issues and adding new features. Key changes include the implementation of clickable links, proper table rendering, and inline markup support. Additionally, the xsrf token handling has been enhanced to prevent errors during state-changing operations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#249",
+      "title": "Introducing WeCom BYOC Connector in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "wecom",
+        "connector",
+        "backend",
+        "security",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update adds a WeCom connector to the seed directory, enabling users to authenticate using their own credentials through the BYOC method. The connector supports essential operations like reading contacts, sending messages, and managing schedules within WeCom. Credentials are securely encrypted and injected only during skill execution, ensuring data safety."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#529",
+      "title": "Introducing WeCom Connector Skill for Enhanced Communication in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "wecom",
+        "skills",
+        "connector",
+        "api",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/529",
+      "summary": "This update adds a new WeCom (企业微信) connector skill, enabling agents to interact with WeCom's server-side API through a self-built app. Key features include managing contacts, sending app messages, creating documents, and scheduling meetings. The skill is designed to streamline operations for users leveraging WeCom's functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1297",
+      "title": "Enhance multipart field handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "nexior",
+        "failover-router",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update fixes an issue where multiple uploaded images were not being stored correctly in the task record, leading to only one image being displayed. The `decodeRequestBody()` function now accumulates repeated field names into arrays, ensuring all images are preserved. This change enhances the reliability of multi-image edits in the Nexior chat history."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1295",
+      "title": "Enhance Task Handling to Prevent Intermediate Errors in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "task-handling",
+        "failover",
+        "reliability",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces a safeguard in the task handling process across multiple channels to prevent erroneous writes to the task store during failover scenarios. Specifically, it adds a condition to skip writing failure results when in `routerManaged` mode, ensuring that clients do not see intermediate error states. This change enhances the reliability of the image generation process reported by users."
+    },
+    {
       "id": "gh:pr:AceDataCloud/APIs#450",
       "title": "Introducing the Coze Plugin for AceData Cloud in A P Is 🎶",
       "tags": [
