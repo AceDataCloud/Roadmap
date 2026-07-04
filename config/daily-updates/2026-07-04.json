@@ -3,6 +3,40 @@
   "date": "2026-07-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1164",
+      "title": "Introducing gpt-image-2 Official Model in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "openai",
+        "gpt-image-2",
+        "i18n",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1164",
+      "summary": "This update adds the official variant of the gpt-image-2 model to the Nexior studio, enhancing the existing dropdown options. Users can now select the gpt-image-2:official model, which offers a higher tier service through the official relay channel. The update includes internationalization support across 17 locales, ensuring accessibility for a global audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#431",
+      "title": "Fix OAuth Client ID for WebExtrator in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "oauth",
+        "webextrator",
+        "fix",
+        "deployment",
+        "auth"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/431",
+      "summary": "This update resolves an issue with the OAuth flow for the WebExtrator MCP by registering the missing OAuth application in the AuthBackend and setting the appropriate client ID in the deployment configuration. The fix ensures that the authorization requests are valid, preventing errors during the OAuth process. The changes have been applied live and will persist through future deployments."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#857",
       "title": "Update AKS Golden Image to v12 for Web Console Fix in Backend 🚀",
       "tags": [
