@@ -3,6 +3,243 @@
   "date": "2026-07-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#857",
+      "title": "Update AKS Golden Image to v12 for Web Console Fix in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "deployment",
+        "fix",
+        "backend",
+        "wisdom",
+        "aks"
+      ],
+      "public": false,
+      "summary": "This update bumps the AKS appliance golden image from v11 to v12, addressing a critical issue where the Wisdom package was missing the `index.html` file, resulting in a 500 error for tenants accessing the console. The new golden image has been verified on a live builder, ensuring that the console now returns a 200 status and operates correctly. The migration only modifies the image field while preserving other configurations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1163",
+      "title": "Unify Output to Artifacts & Add Visibility Options in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "features",
+        "localization",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1163",
+      "summary": "This update renames 'Output' to 'Artifacts' for consistency across the UI, addressing user confusion. Additionally, a new toggle for 'Show hidden' artifacts and an 'Unhide' button have been introduced, allowing users to recover previously hidden items. Concurrency protections have also been implemented to ensure data integrity during updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#181",
+      "title": "Enhance Connector Auth Method Selection in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "ui",
+        "auth",
+        "frontend",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update introduces a new method picker for connectors with multiple authentication methods, allowing users to select between options like 'Bring Your Own Credentials' and 'official OAuth'. The picker is now presented as a cleaner tabbed interface using Element Plus, improving user experience. Additionally, internationalization keys have been backfilled across 16 locales to support the new feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1340",
+      "title": "Enhance Fish TTS Guidance in Platform Service 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "tts",
+        "documentation",
+        "maestro",
+        "fish",
+        "update"
+      ],
+      "public": false,
+      "summary": "Updated the Maestro narrated Fish TTS guidance to align with the current `/fish/tts` contract. Key changes include documentation for `reference_id`, the `model: s2-pro` header, mp3 output, request timeouts, and handling sentence-level chunking for longer narrations. This ensures a smoother integration and improved user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#276",
+      "title": "Enhance Instagram Token Help with New Scope in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "instagram",
+        "backend",
+        "update",
+        "help-text"
+      ],
+      "public": false,
+      "summary": "This update adds the `pages_show_list` scope to the Instagram connector's token help text, ensuring users can successfully auto-discover their IG accounts. Previously, the help text only included `instagram_content_publish` and `pages_read_engagement`, which could lead to empty page lists during discovery. Now, users are guided to generate tokens with the correct scopes for better functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#548",
+      "title": "Enhance Instagram User ID Resolution in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "instagram",
+        "skills",
+        "bugfix",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/548",
+      "summary": "This update improves the Instagram skill by enabling it to resolve the IG user ID from both Page and User access tokens. Previously, only the user-token path was utilized, which caused issues for users providing a Page token. Now, the connector first attempts to use the Page-token path, ensuring a smoother experience for all users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1162",
+      "title": "Enable Anonymous Conversation Sharing in Nexior 🤝",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "sharing",
+        "ui",
+        "i18n",
+        "chat"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1162",
+      "summary": "This update introduces a new feature allowing users to generate anonymous read-only links for conversations in Nexior. Users can easily share their chat sessions via a unique `/share/:id` link, enabling non-logged-in visitors to view the conversation without editing capabilities. Key changes include updates to the data model, new UI components for sharing, and enhanced internationalization support."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#622",
+      "title": "Refactor HTML Rendering for Service Introduction in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "html",
+        "frontend",
+        "vue",
+        "css"
+      ],
+      "public": false,
+      "summary": "This update introduces a dedicated `HtmlDocumentRenderer` to handle service introduction HTML, separating it from the `MarkdownRenderer`. This change prevents CSS conflicts that previously shrank related-service cards, ensuring they display correctly. The modifications enhance the rendering process and maintain a clean separation of responsibilities in the codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#71",
+      "title": "Fix packaging to include web assets for console rendering in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "packaging",
+        "fix",
+        "web",
+        "console",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the Wisdom console failed to render at the root URL due to missing web assets. By modifying the package data to include the `web/**/*` files, the necessary `index.html` is now included in the installation, ensuring proper functionality. Future builds will benefit from this fix, although existing tenants will require a rebuild to access the console."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#179",
+      "title": "Enable Anonymous Access to Shared Conversations in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "gateway",
+        "security",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update allows anonymous users to access shared conversation links through the `/aichat2/shared` endpoint without authentication or billing checks. Key changes include the addition of this path to the public paths list and enhancements to the path normalization logic. New tests ensure that only the specified path is accessible anonymously while maintaining security for other endpoints."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1339",
+      "title": "Enable Anonymous Conversation Sharing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "sharing",
+        "privacy",
+        "api",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces the ability for users to share their conversations anonymously via a unique URL, allowing others to view the conversation in a read-only format. Key changes include the addition of a new `shared_conversations` collection to manage shared data, and new API endpoints for sharing and unsharing conversations. The implementation ensures that sensitive information is redacted before sharing, enhancing user privacy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#180",
+      "title": "Revamp Recommended Connectors in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "features",
+        "i18n",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update introduces a curated list of recommended connectors in the left sidebar, replacing the previous 'Available to Connect' section. The new setup features only the connectors marked as 'is_featured', simplifying the selection process for users. Additionally, a 'Browse All Connectors' button has been added for easy access to the full catalog."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#273",
+      "title": "Exciting New Instagram and Threads Connectors Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "connectors",
+        "instagram",
+        "threads",
+        "backend",
+        "byoc"
+      ],
+      "public": false,
+      "summary": "This update introduces two new BYOC publish connectors for Instagram and Threads, enhancing our connector offerings. The connectors are designed to streamline the publishing process using access tokens, following the established pattern for Facebook. Validation checks confirm the integrity and functionality of the new entries, ensuring a smooth integration into the existing system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#274",
+      "title": "Updated PayPal Logo in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "logo",
+        "update",
+        "backend",
+        "paypal"
+      ],
+      "public": false,
+      "summary": "Replaced the PayPal public connector icon with a new white-background SVG asset. Both `icon_url` and `publisher_logo_url` now point to the updated CDN link. This change enhances the visual consistency of the PayPal integration within the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#275",
+      "title": "Updated Square Connector Logo in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "image",
+        "update",
+        "backend",
+        "connector"
+      ],
+      "public": false,
+      "summary": "Replaced the Square connector image with a new white-background SVG. Both `icon_url` and `publisher_logo_url` in the public connector seed have been updated to reflect this change. The previous CSS PR has been closed as this update directly addresses the image source."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Skills#547",
       "title": "Enhance Publishing with Instagram & Threads Skills in Skills 🚀",
       "tags": [
