@@ -3,6 +3,724 @@
   "date": "2026-07-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Skills#547",
+      "title": "Enhance Publishing with Instagram & Threads Skills in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "features",
+        "instagram",
+        "threads",
+        "publishing",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/547",
+      "summary": "This update introduces new publishing skills for Instagram and Threads, utilizing Meta's official APIs. Users can now publish images, videos, and carousels to their Instagram accounts and create text, image, or video posts on Threads, enhancing the connector-directory's capabilities. The implementation includes user confirmation for publishing and robust error handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#430",
+      "title": "Sync Tool Surfaces with API Docs for 8 Providers in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "api",
+        "mcp",
+        "sync",
+        "update",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/430",
+      "summary": "This update addresses discrepancies between the tool surfaces of eight MCP servers and their corresponding API documentation. Key changes include the addition of required parameters, correction of defaults, and the introduction of new optional parameters across various providers. The remaining providers were confirmed to be in sync, ensuring a more robust and accurate API integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1338",
+      "title": "Streamline Maestro Workflows in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "cleanup",
+        "maestro",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update removes the replaced HyperFrames workflow skills and hyperframes-media from the maestro worker allowlist, streamlining the system. Additionally, the obsolete Fish TTS patch for hyperframes-media has been eliminated, ensuring a more efficient build process. These changes enhance the overall performance and maintainability of the Platform Service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#623",
+      "title": "Fix URL issues for access request approvals in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "admin",
+        "urls",
+        "access-requests"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where the approve and reject URLs for access requests were missing trailing slashes, resulting in 404 errors. The changes ensure that the URLs now correctly include the trailing slashes, allowing administrators to approve or reject access requests without encountering errors. This fix enhances the overall functionality and user experience of the admin console."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1334",
+      "title": "Enhance Digital Human Flow with /avatar Feature in Platform Service 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "digital-human",
+        "avatar",
+        "lip-sync",
+        "video"
+      ],
+      "public": false,
+      "summary": "This update introduces the new **/avatar** digital-human flow, enhancing the pipeline for creating talking-head videos. It includes a refined process for lip-syncing using seedance r2v, ensuring the embedded audio track is the final voice. Additionally, the flow now requires a portrait image or a digital human, improving the overall user experience and output quality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#265",
+      "title": "Finalize Legacy Auth Column Removal in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "migrations",
+        "backend",
+        "auth",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This PR implements the second phase of the two-step removal process for legacy auth columns. It physically drops five outdated columns after ensuring that they are no longer referenced by any running pods. The migration is designed to maintain stability during the rollout, allowing for a safe transition without service interruptions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#856",
+      "title": "Resolve migration conflicts to unblock production rollout in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "migration",
+        "backend",
+        "production",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update introduces a new empty merge migration, `0193_merge_0192_leaves`, to resolve conflicts caused by two migrations with the same number. By merging the conflicting migrations, we ensure a smooth migration process without any schema or data changes. This fix is crucial for allowing platform-backend rollouts in production to proceed without issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1333",
+      "title": "Introducing the New Narrated Flow in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "narrated",
+        "video",
+        "platform",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces the new '/narrated' flow skill, designed as an asset-first explainer to replace the previous HyperFrames' faceless-explainer. Key changes include a refined pipeline that integrates real assets, brand-kit styling, and Fish-direct audio for a more engaging user experience. The flow is now fully integrated with the existing video-factory and has passed all tests successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#271",
+      "title": "Polish Vercel Logo for Consistency in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "logo",
+        "update",
+        "backend",
+        "visual",
+        "consistency"
+      ],
+      "public": false,
+      "summary": "Updated the Vercel connector's icon and publisher logo URLs to a new white-background SVG for better visual consistency. This change ensures that both the marketplace and detail views render the logos uniformly. Validation tests have confirmed that the updates are functioning correctly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1337",
+      "title": "Enhance video-factory to utilize style directive in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "video",
+        "style",
+        "documentation",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update enables the video-factory to consume the new [STYLE DIRECTIVE], allowing for improved visual styling through brand-kit preset selection. The changes include modifications to the SKILL.md file, enhancing the documentation on how to apply styles effectively. This will streamline the rendering process and ensure a more consistent look across videos."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#270",
+      "title": "Update GLM Connector Icon in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "icon",
+        "update",
+        "backend",
+        "connector"
+      ],
+      "public": false,
+      "summary": "The GLM connector catalog icon has been updated to a square CDN asset, ensuring a cleaner presentation. The original GLM mark has been cropped to a 720x720 size for better card rendering. Validation confirmed the new icon URL is functional and correctly formatted."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#269",
+      "title": "Update Face Transform Logo in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "logo",
+        "update",
+        "backend",
+        "connector"
+      ],
+      "public": false,
+      "summary": "This update replaces the Face Transform connector catalog icon with a new square CDN-hosted logo while keeping the existing connector metadata intact. The change ensures that the visual representation aligns with current branding standards without affecting functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#268",
+      "title": "Enhance Sentry Connector Logo for Better Visibility in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "logo",
+        "sentry",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update replaces the Sentry connector logo with a light-background SVG asset to improve legibility on dark connector cards. Both the `icon_url` and `publisher_logo_url` have been updated to point to the new asset, ensuring consistency across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#178",
+      "title": "Enhance Connector Search Functionality in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "search",
+        "improvement",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update improves the connector search feature by normalizing search text to ensure better matching for short prefixes. The search now includes a broader range of metadata, such as identifiers and tags, enhancing the user experience. Additionally, it prevents issues with malformed text fields that could disrupt searches."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#187",
+      "title": "Exciting Plan to Host Connector UI in Nexior! 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "nexior",
+        "ui",
+        "oauth",
+        "architecture",
+        "backend",
+        "rollout"
+      ],
+      "public": false,
+      "summary": "This update outlines the plan to host the connector catalog and connections-manager UI within Nexior while maintaining `auth.acedata.cloud` as the OAuth broker. Key documents have been added, detailing the architecture, backend changes, and UI rollout strategy. This approach ensures a seamless user experience across all platforms without requiring major migrations or re-registrations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1331",
+      "title": "Enhance brand-kit with Glass and Retro presets in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "design",
+        "branding",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces two new brand-kit presets: Glass and Retro, enhancing the style parameter functionality. The Glass preset features frosted, translucent aesthetics, while Retro offers a vintage film look. These additions allow for more tailored visual experiences in video production, ensuring users can select styles that best fit their content."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1330",
+      "title": "Revamp Scenario to Flow Mapping with New Styles in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "refactor",
+        "tests",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update introduces a significant redesign of the scenario-to-flow mapping in the maestro system, transitioning from the old `scenario_registry` to a new `flow_registry`. It adds backward-compatible aliases for existing public names and introduces a new orthogonal `style` parameter that allows for diverse visual design options. Comprehensive tests have been implemented to ensure functionality and compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1336",
+      "title": "Enhanced Technical Documentation for WeChat Automation Bot in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "documentation",
+        "wisdom",
+        "wechat",
+        "aks",
+        "automation",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces comprehensive technical documentation for the Wisdom WeChat automation bot, detailing its architecture, deployment pipeline, and operational procedures. Key documents include an overview, architecture specifics, and a runbook for operations, all aimed at providing a single source of truth for this solution. These enhancements will improve clarity and support for developers working with the WeChat appliance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#177",
+      "title": "Enhance OAuth Apps Page with Documentation Links in Frontend Web 📚",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "oauth",
+        "frontend",
+        "documentation",
+        "i18n",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update adds a Documentation button on the OAuth Apps list page, linking users directly to the OAuth integration guide. An additional Documentation link is included in the empty state for first-time users, ensuring immediate access to essential information. The changes also include internationalization updates across 18 locales to maintain consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#267",
+      "title": "Refine OAuth App Access for Superusers in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "security",
+        "backend",
+        "update",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update modifies the OAuth application self-service endpoint to ensure that superusers can only view and manage their own OAuth applications, aligning with the behavior of other user-specific views. The change enhances security by preventing superusers from accessing other users' apps while maintaining oversight through the Django admin. New tests have been added to verify that both regular users and superusers see only their own applications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#855",
+      "title": "Enhance AKS Access URL with Auth Token in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "aks",
+        "authentication",
+        "migration",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces the `url_with_auth` feature for the `aks_appliance` provider, allowing the console to open pre-authenticated. The change mirrors existing functionality in `tencent_cvm`, ensuring a seamless user experience by preventing 401 errors. Additionally, a migration has been added to include the `exposure.auth_param` in the Wisdom / WeChat-bot service metadata."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#60",
+      "title": "Streamline Service Installation for Channels in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "feature",
+        "service",
+        "installation",
+        "testing",
+        "security"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/60",
+      "summary": "This update introduces a new command, `coding-bridge channels install-service`, which simplifies the process of setting up user-level services for running channels at login or boot across different platforms. It generates the necessary service files for Linux, macOS, and Windows without requiring elevated permissions, ensuring a safer installation process. Additionally, comprehensive tests have been added to verify the functionality and security of the new feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#178",
+      "title": "Skip Billing for Memories API in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "billing",
+        "api",
+        "metadata",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update introduces a feature to skip billing for the `/aichat2/memories` endpoint, which handles metadata-only CRUD operations. The change ensures that calls to this endpoint do not trigger billing checks, while still allowing for user identity injection. The implementation was made by modifying the `can_skip_check` utility to recognize the specific API ID."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#854",
+      "title": "Registering Memories API for Aichat2 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "aichat2",
+        "backend",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces the registration of the `/aichat2/memories` API row for long-term memory management in Aichat2. It allows for list, delete, and clear operations while ensuring that billing is skipped for this endpoint. The API is integrated with the existing Aichat service, maintaining consistent access policies across related endpoints."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#621",
+      "title": "Enhance Console UX for AKS Appliance with WeChat QR and Controls in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ux",
+        "aks",
+        "deployment",
+        "wechat"
+      ],
+      "public": false,
+      "summary": "This update improves the single-VM appliance console UX by extending features from the Tencent CVM to the new AKS appliance. Key changes include the introduction of Stop/Start actions, the WeChat QR login card, and MCP channel card, ensuring that AKS tenants have the correct controls displayed. The console now dynamically adjusts based on the workload type, enhancing user experience and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#176",
+      "title": "Enhance UI with Elegant Scrollbars in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "ui",
+        "design",
+        "scss",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces a sleek global scrollbar style to the Auth UI, ensuring consistency with the Nexior product. Key changes include a new SCSS file for the scrollbar and adjustments to the main style file for integration. The scrollbar is designed for desktop use, maintaining a subtle appearance that enhances user experience without being intrusive."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#620",
+      "title": "Enhance Global Scrollbars for a Sleek Look in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "design",
+        "scss",
+        "ui",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a refined global scrollbar style to the developer portal, ensuring consistency with the Nexior product. Key changes include a new SCSS file for a thin, elegant scrollbar that adapts to both light and dark themes, while maintaining usability across desktop devices. The implementation is non-invasive, allowing existing custom scrollbars to retain their unique styles."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#264",
+      "title": "Add Weibo Official OAuth for Dual Authentication in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "weibo",
+        "authentication",
+        "backend",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces the Weibo OAuth adapter, enabling dual authentication with cookie and official OAuth methods. Key changes include the addition of the Weibo adapter, updates to the registry, and modifications to the settings and connectors configuration. Users will need valid Weibo credentials to fully utilize the official method, while the cookie method remains the default."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#266",
+      "title": "Fix connector migration issue for public connectors in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "fix",
+        "migration",
+        "backend",
+        "sync",
+        "connectors"
+      ],
+      "public": false,
+      "summary": "This update addresses a migration oversight by converting the `connectors-public.yaml` into a compatible format for `auth_methods`. The fix ensures that the `connector-catalog-sync` CronJob runs successfully without errors, allowing for seamless catalog synchronization. Validation tests confirm that both `connectors.yaml` and `connectors-public.yaml` were upserted without any CommandErrors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#59",
+      "title": "Enhance Portal with Live Daemon Status and Recent Turns in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "feature",
+        "portal",
+        "daemon",
+        "observability",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/59",
+      "summary": "This update introduces a live daemon status feature to the portal, allowing users to see if the daemon is running and view recent turn metrics without exposing message content. Key changes include the addition of a heartbeat file and a bounded ring of recent turn metrics, enhancing observability and user experience. The implementation is supported by new tests to ensure reliability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#175",
+      "title": "Enhance Connector Authentication Method Selection in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "ui",
+        "authentication",
+        "frontend",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update introduces a new tab selection feature for connectors with multiple authentication methods, allowing users to easily choose their preferred method. A new component, ConnectorMethodPicker, has been added to facilitate this selection process, while existing components have been modified to support the new functionality. The implementation ensures a seamless user experience, maintaining the previous behavior for single-auth connectors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#263",
+      "title": "Streamline Auth Methods for Connectors in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "migration",
+        "auth",
+        "connectors",
+        "backend",
+        "json"
+      ],
+      "public": false,
+      "summary": "This update transitions the authentication structure for connectors from multiple flat fields to a unified JSON array, enhancing data integrity and simplifying future migrations. Key changes include the addition of the `auth_methods` field, removal of legacy fields, and a comprehensive migration process to ensure a smooth transition. The implementation has been validated with extensive tests, confirming that all existing functionality remains intact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1160",
+      "title": "Enhance Scheduled Tasks UX with In-Place Updates in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ux",
+        "bugfix",
+        "vue",
+        "scheduled-tasks"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1160",
+      "summary": "This update improves the Scheduled Tasks page by allowing in-place updates for toggling tasks, deleting, and saving edits, eliminating the disruptive full page refresh. The local tasks array is now mutated directly, providing instant feedback without a loading skeleton. Additionally, the fix addresses a false error toast issue during authorization confirmation cancellations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1329",
+      "title": "Fix scheduler state toggle issues in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "scheduler",
+        "aichat2",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update resolves critical bugs in the scheduler state management for scheduled tasks. It ensures that toggling a task's state correctly updates the scheduler, preventing tasks from becoming permanently failed or incorrectly resumed. Additionally, it validates incoming state values to enhance system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1158",
+      "title": "Global Elegant Scrollbar Implementation in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "style",
+        "ui",
+        "scrollbar",
+        "design",
+        "ux"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1158",
+      "summary": "This update introduces a global elegant thin scrollbar for desktop and mouse users across the Nexior application, enhancing the user interface consistency. The new scrollbar design features a subtle appearance at rest and a more pronounced look on hover, adapting to dark mode using Element Plus tokens. The chat sidebar's previous custom scrollbar has been removed, allowing it to inherit the global styling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#185",
+      "title": "Revamping Maestro's Scenario and Style Parameters in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "design",
+        "workflow",
+        "refactor",
+        "RFC"
+      ],
+      "public": false,
+      "summary": "This PR introduces a comprehensive RFC design document aimed at redefining the scenario and style parameters within the Maestro workflow. Key changes include the reclassification of scenarios into four distinct production flows and the addition of a new style parameter that aligns with existing brand kits. This redesign aims to enhance flexibility and streamline the media generation process while retaining the use of the HyperFrames engine."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#853",
+      "title": "Fix migration conflict to unblock production rollout in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "migration",
+        "backend",
+        "production",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update renumbers the Wisdom AKS migration from 0190 to 0191, resolving a conflict that caused the production rollout to crash. The change repoints the migration's dependency to ensure a single linear migration path. As a result, the production rollout can proceed without any schema or data changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1157",
+      "title": "Enhance Memory Management UI in Nexior 🧠",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "memory",
+        "settings",
+        "feature",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1157",
+      "summary": "This update introduces a new 'Memory' tab in the settings dialog, allowing users to view, delete, or clear their assistant's long-term memory. Key changes include the addition of a dedicated UI component for memory management and backend support for memory operations. The feature enhances user control over stored information, ensuring a more personalized interaction with the assistant."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1159",
+      "title": "Enhance Media Previews with Fallbacks in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "media",
+        "chat",
+        "fallback",
+        "enhancement",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1159",
+      "summary": "This update introduces a fallback mechanism for failed chat rich media previews, reverting to file links when media cannot be displayed. Additionally, it applies the same fallback behavior to tool artifact previews and utilizes native `<video>` elements for non-embed video URLs, ensuring better error handling. These changes improve user experience by preventing blank previews and broken players."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1326",
+      "title": "Enhance Long-Term Memory Management in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "memory",
+        "api",
+        "gdpr",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a new management endpoint for long-term memories with the addition of `POST /memories`. Users can now list, delete, and clear their memories, ensuring compliance with GDPR and privacy requirements. The implementation includes robust testing and follows the same authentication model as existing endpoints."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#429",
+      "title": "Midjourney MCP Restored and Enhanced in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "midjourney",
+        "mcp",
+        "oauth",
+        "sync",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/429",
+      "summary": "The Midjourney MCP server source package has been successfully restored and integrated back into the MCPs monorepo. Key updates include re-enabling downstream sync, updating the OAuth provider, and adding regression coverage. Additionally, a standalone mirror repository has been created, ensuring better accessibility and management of the Midjourney MCP."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#852",
+      "title": "Update WebExtrator Documentation for HTML Fallback in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "webextrator",
+        "backend",
+        "html",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update replaces outdated Markdown files for the WebExtrator service introduction with new HTML sources across multiple locales. The changes ensure that the documentation sync process does not revert to broken Markdown formats, enhancing the user experience for non-Chinese locales. All service introduction translations have been updated to reflect these changes, ensuring consistency and accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#58",
+      "title": "Streamlined Telegram Allowlisting in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "telegram",
+        "allowlist",
+        "frontend",
+        "backend",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/58",
+      "summary": "This update introduces a one-click feature for adding recent Telegram senders to the allowlist, enhancing user experience during setup. The backend now includes a new method to peek at recent messages without affecting the message offset, ensuring no messages are lost. The frontend has been updated with a new button that allows users to easily load and select senders directly from their recent interactions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1328",
+      "title": "Refactor resource names for WebExtrator in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "kubernetes",
+        "deployment",
+        "webextrator",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update renames various Kubernetes resources related to WebExtrator to follow a consistent naming convention, now prefixed with 'platform-service-webextrator-'. Key changes include the creation of new deployments, services, and HPAs, along with the deletion of old resources. The deployment process has been hardened to ensure safe cleanup of old objects only after new ones are fully operational."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1327",
+      "title": "Enhance TTAPI Rollout Speed in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "deployment",
+        "ttapi",
+        "optimization",
+        "kubernetes",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update optimizes the TTAPI rollout process by running production containers from the compiled `dist/server.js` instead of using `tsx`. It introduces a `startupProbe` for all TTAPI production deployments to prevent cold starts from being counted as failures and reduces the `minReadySeconds` from 120 to 30 seconds, allowing for quicker readiness checks. These changes aim to improve deployment efficiency and reduce downtime during updates."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1153",
       "title": "Style(chat): remove sidebar horizontal scroll + elegant thin scrollbar in Nexior 🧹",
       "tags": [
