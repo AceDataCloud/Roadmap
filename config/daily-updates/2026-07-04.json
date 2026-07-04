@@ -3,6 +3,101 @@
   "date": "2026-07-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1343",
+      "title": "Enhance Framing and TTS Contracts in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "framing",
+        "tts",
+        "updates",
+        "maestro",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update locks the `/narrated` framing to ensure alignment with visual assets, preventing cropping of important elements. It also introduces safe containment for foreground framing and supports multi-style variants from a single storyboard. Additionally, the Fish TTS runtime and documentation have been aligned with the updated contract for improved consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#624",
+      "title": "Enhance WeChat Console UX with Key Fixes in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "wechat",
+        "ux",
+        "fixes",
+        "aks",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update improves the WeChat appliance console by addressing three critical issues. Instances now correctly display as green when ready, deployment and container logs are accessible for AKS tenants, and the 'Connect AI Agent' step is now visible. These enhancements streamline user experience and ensure accurate information is presented."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#858",
+      "title": "Enhance AKS Logging and Events Handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "aks",
+        "logging",
+        "events",
+        "backend",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update improves the logging and event handling for AKS tenants by aligning the log structure with TKE, ensuring accurate display of Deployment and Container Logs. The `get_aks_logs` function has been rewritten to match the expected format, and a new `get_aks_events` function has been added to handle events specifically for AKS clients. These changes enhance the reliability of log retrieval and event tracking for AKS deployments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1165",
+      "title": "Add size parameter to Flux config for smoother generation in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "flux",
+        "config",
+        "feature",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1165",
+      "summary": "This update introduces a new `SizeSelector` component in the Flux configuration panel, allowing users to select an aspect ratio, which is now required for model generation. The `IFluxConfig` and `IFluxGenerateRequest` interfaces have been updated to include a `size` parameter, ensuring compatibility across all Flux models. Additionally, constants for aspect ratios and a default size have been established to streamline the configuration process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1342",
+      "title": "Boost duplicate-tool-call ceiling to enhance performance in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "performance",
+        "bugfix",
+        "config",
+        "aichat2"
+      ],
+      "public": false,
+      "summary": "The default limit for `MAX_DUPLICATE_TOOL_CALLS` has been increased from 3 to 30 in the configuration file. This change addresses issues where the model prematurely terminated video rendering due to identical polling outputs, leading to user confusion. The new ceiling allows longer asynchronous renders to complete without interruption, while still maintaining safety measures to prevent runaway processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1341",
+      "title": "Enhance golden rebuild runbook and templates in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "documentation",
+        "kubernetes",
+        "templates",
+        "runbook",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update completes the golden-rebuild runbook by detailing the entire process from code changes to image migration. It introduces two parameterized Kubernetes templates for the builder and snapshot, ensuring a reusable and efficient workflow. The changes have been validated end-to-end during the recent rebuild, enhancing documentation without affecting runtime code."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1164",
       "title": "Introducing gpt-image-2 Official Model in Nexior 🎉",
       "tags": [
