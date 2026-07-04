@@ -3,6 +3,53 @@
   "date": "2026-07-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1346",
+      "title": "Streamline Documentation by Removing Redundant Authoring Rules in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "documentation",
+        "cleanup",
+        "optimizations",
+        "video-factory"
+      ],
+      "public": false,
+      "summary": "This update removes the unnecessary `authoring-rules.md` file from the video factory, consolidating the essential information into the `SKILL.md` file. Additionally, the `optimizations.md` documentation has been updated to reflect these changes, ensuring clarity on shipped artifacts. The build process remains intact, with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1345",
+      "title": "Revamped Workflow Routing for Maestro in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "workflow",
+        "routing",
+        "maestro",
+        "update",
+        "video"
+      ],
+      "public": false,
+      "summary": "This update restores the workflow-first routing for Maestro, ensuring the runner consistently enters `/video-factory` while `scenario` serves as a route hint. Key workflows have been reinstated in `skills.allow`, and the `narrated` skill now prefers `/general-video` without bypassing provider-map binding. Additionally, the `style` has been simplified to a lightweight visual direction that does not alter workflow routing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1344",
+      "title": "Enhance Task Retrieval with Accurate Pagination in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "pagination",
+        "task-retrieval",
+        "regression-test",
+        "maestro",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update improves the task retrieval process by returning the actual total of Maestro tasks for pagination. It scopes the batch task history to the injected identity, ensuring accurate results for both local and development calls. Additionally, a regression test has been added to validate the total-count pagination and prevent user ID spoofing."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1343",
       "title": "Enhance Framing and TTS Contracts in Platform Service 🚀",
       "tags": [
