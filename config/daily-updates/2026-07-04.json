@@ -3,6 +3,283 @@
   "date": "2026-07-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1153",
+      "title": "Style(chat): remove sidebar horizontal scroll + elegant thin scrollbar in Nexior 🧹",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1153"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#845",
+      "title": "Fix(deployment): wire production Wisdom AKS metadata in Backend 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#619",
+      "title": "Fix(console): align usage trend days with client timezone in Frontend Web 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#851",
+      "title": "Fix(usage): group aggregate days by client timezone in Backend 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1156",
+      "title": "Fix(chat): 让用户发送与历史消息也显示复制按钮 in Nexior 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1156"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1324",
+      "title": "Fix(webextrator): gate deploy on ready API endpoints in Platform Service 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1325",
+      "title": "Fix(suno): suppress lyrics for instrumental requests in Platform Service 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#186",
+      "title": "Fix(tse): avoid stale Kubernetes upstream targets in Index 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "Index"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1322",
+      "title": "Feat(aichat2): 长期记忆 P2 — 模型驱动 memory 工具（remember/list/forget） in Platform Service ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1155",
+      "title": "Fix(chat): restore cached conversations with empty summaries in Nexior 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1155"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#850",
+      "title": "Fix(docs): refresh WebExtrator service intro in Backend 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1321",
+      "title": "Feat(aichat2): 长期记忆 P1 — per-user profile 存储 + 后台抽取 + prompt 注入 in Platform Service ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#546",
+      "title": "Docs(skills): 发布后调 publish_artifact 记录产出（17 skills） in Skills 📝",
+      "tags": [
+        "github",
+        "pr",
+        "Skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/546"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1154",
+      "title": "Feat(chat): 产出物汇总页 /chatgpt/artifacts（我的产出） in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1154"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#848",
+      "title": "Feat(api): register /aichat2/artifacts Api row (migration 0190) in Backend ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#177",
+      "title": "Feat(gateway): skip billing for /aichat2/artifacts (metadata-only CRUD) in Gateway ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1320",
+      "title": "Feat(aichat2): artifacts 产出物追踪（publish_artifact + 自动捕获 + /artifacts API） in Platform Service ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#183",
+      "title": "Docs(plans): connector 多认证方式（一卡 N auth，全面迁移） in Index 📝",
+      "tags": [
+        "github",
+        "pr",
+        "Index"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#618",
+      "title": "Fix(console): slim, hover-only scrollbar for left sidebar in Frontend Web 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#57",
+      "title": "Feat(portal): add / remove channel instances from the UI in Coding Bridge ✨",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/57"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1319",
+      "title": "Chore(sandbox): 预装 tweety-ns(X/Twitter skill 依赖) in Platform Service 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1318",
+      "title": "Fix(aichat2): 持久化 tool_display_name，修复刷新后工具名从「Web Page Fetcher」变回「web fetch」 in Platform Service 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#184",
+      "title": "Docs(plans): aichat2 跨会话长期记忆设计（业界调研 + Mongo per-user profile 方案） in Index 📝",
+      "tags": [
+        "github",
+        "pr",
+        "Index"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#617",
+      "title": "Fix(docs): earning 分类默认落地到 distribution 而非 promotion-github in Frontend Web 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#616",
+      "title": "Feat(footer): 页脚新增「下载 App」与「路线图」入口 in Frontend Web ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1152",
+      "title": "Fix(nexior/download): drop hardcoded version labels; Windows/macOS to Releases page in Nexior 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1152"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#70",
+      "title": "Fix(golden): AKS appliance boots turnkey + enforces auth in Wisdom 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom"
+      ],
+      "public": false
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#182",
       "title": "Enhance Artifact Tracking and Summary Design in Index 🚀",
       "tags": [
