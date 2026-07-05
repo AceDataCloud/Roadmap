@@ -3,6 +3,135 @@
   "date": "2026-07-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#872",
+      "title": "Fix language resolution for English users in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "i18n",
+        "bugfix",
+        "backend",
+        "localization",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update corrects the Accept-Language resolution issue that served Chinese content to English users. Key changes include the introduction of two new helper functions to accurately parse and resolve language preferences, ensuring that unsupported requests default to English instead of Chinese. The renderer's default language has been updated, and extensive unit tests have been added to verify the functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#873",
+      "title": "Update Maestro API Documentation and OpenAPI Spec in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "api",
+        "openapi",
+        "maestro",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update aligns the Maestro API documentation and OpenAPI specification with recent changes in the `scenario` route. Key modifications include the update of the `scenario` enum values and the introduction of a new `style` parameter, enhancing clarity for external users. These changes ensure that users can effectively utilize explicit control points for video production."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1367",
+      "title": "Streamlined Logout Process for WeCom in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "logout",
+        "wecom",
+        "api",
+        "automation",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `POST /api/auth/logout` endpoint for WeCom, enabling a deterministic logout process that avoids the unreliable UI. The mechanism ensures that the appliance can switch accounts seamlessly by managing the session file directly, enhancing reliability for production use. Comprehensive tests have been added to validate the functionality and ensure robustness."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1366",
+      "title": "Enhance Photo Quality and Caption Safety in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "photo-quality",
+        "caption-safety",
+        "bug-fix",
+        "platform-service",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update addresses critical quality issues by enforcing a mandatory clarity pass for hero photos, ensuring they are sharp and visually appealing. Additionally, a new safety margin for captions has been implemented to prevent clipping at the frame edges. These changes aim to enhance the overall user experience by delivering high-quality visuals and properly displayed text."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1172",
+      "title": "Enhance Local Tools for Accurate Computer Use Status in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "usability",
+        "accessibility",
+        "localization",
+        "android"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1172",
+      "summary": "This update improves the Local Tools feature by ensuring that the Computer Use toggle accurately reflects the actual usability of the accessibility service. Key changes include real-time status updates, direct navigation to accessibility settings when needed, and internationalization support across 18 locales. These enhancements aim to provide users with a clearer understanding of the feature's availability and improve overall usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1365",
+      "title": "Enhance WeCom Search Functionality in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "wecom",
+        "api",
+        "search",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update introduces a non-destructive contact and group search feature via the WeCom API, allowing users to search without opening conversations or sending messages. The new endpoint, POST /api/search, utilizes OCR to read results and returns matching names, enhancing the user experience for unattended customer-service digital humans. Comprehensive tests have been added to ensure functionality and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1364",
+      "title": "Enhance Client Recovery with New Endpoints in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "client-recovery",
+        "wecom",
+        "automation",
+        "api",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces two new client-recovery operations for the WeCom client: a restart endpoint and a dismiss-dialogs endpoint. These features allow for automated recovery from crashes and the dismissal of blocking popups, enhancing the reliability of unattended appliances. The implementation includes extensive testing to ensure functionality without impacting live clients."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#73",
+      "title": "Enhance WeChat Security Verification for New Devices in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "feature",
+        "wechat",
+        "authentication",
+        "security",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update introduces support for WeChat's new-device login security verification, allowing users to enter a 6-digit code for authentication. Key changes include the addition of new API endpoints for status reporting and code verification, as well as improvements to the UI interaction for entering the security code. The feature has been validated end-to-end, ensuring a smoother login experience for new devices."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1363",
       "title": "Enhance WeCom Search Functionality in Platform Service 🚀",
       "tags": [
