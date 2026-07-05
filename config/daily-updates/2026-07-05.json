@@ -3,6 +3,295 @@
   "date": "2026-07-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1351",
+      "title": "Enhance UI with Deterministic Pipeline Stages in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "ui",
+        "pipeline",
+        "testing",
+        "nexior"
+      ],
+      "public": false,
+      "summary": "This update introduces six canonical, ordered pipeline stages for the Nexior maestro UI, improving the visibility of task progress. The stages are inferred from agent tool calls, ensuring a reliable step-checklist is displayed even when the agent does not provide detailed progress updates. Additionally, new tests have been added to validate the functionality, ensuring a robust implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1166",
+      "title": "Enhance Video Task Progress with Step-Checklist in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "accessibility",
+        "i18n",
+        "progress"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1166",
+      "summary": "This update introduces a friendly step-checklist for in-progress video tasks in the maestro component, replacing the previous opaque progress line. The checklist displays six canonical pipeline stages, providing users with clear visibility into the task's progress. Additionally, it ensures backward compatibility for legacy tasks while enhancing accessibility features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#190",
+      "title": "Automating Xiaohongshu: Feasibility and Cost Analysis in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "automation",
+        "xiaohongshu",
+        "feasibility",
+        "cost",
+        "PoC"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feasibility plan for automating Xiaohongshu, detailing technical viability, cost estimates, and PoC strategies. Key findings indicate that direct UI automation on real devices is necessary for messaging, with domestic cloud phones emerging as the leading candidate for runtime. The document also addresses various risks and adjustments made during the review process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#459",
+      "title": "Sync Check: Claude-Code and Codex Aligned in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "sync",
+        "update",
+        "claude-code",
+        "codex",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/459",
+      "summary": "This update confirms that the `claude-code` and `codex` services are already in sync with the latest documentation. No changes to the CLI are necessary as all relevant endpoints are fully implemented and match the model specifications. The findings indicate that the recent updates were guide-only, with no new API definitions required."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#631",
+      "title": "Streamline WeChat Console with Generic Proxy in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "wechat",
+        "proxy",
+        "frontend",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update refactors the WeChat appliance console to utilize a generic backend proxy, enhancing stability and reusability. The new `applianceRequest` method simplifies interactions, while client-side orchestration of the login QR improves performance and user experience. Minor security risks have been addressed, ensuring a clean and efficient implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#860",
+      "title": "Streamlined Reverse Proxy for WeChat Console in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "security",
+        "proxy",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces a generic, owner-only reverse proxy for the WeChat console, enabling seamless API access for Wisdom/WeChat-bot appliances without browser restrictions. The new endpoint simplifies the architecture by replacing the previous two-endpoint design, allowing for future feature additions without backend changes. Comprehensive security measures are in place to prevent SSRF vulnerabilities, ensuring safe interactions with appliance APIs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#862",
+      "title": "Enhance CC Switch GUI Guides for Claude Code and Codex in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "cc-switch",
+        "tutorials",
+        "backend",
+        "zh-CN"
+      ],
+      "public": false,
+      "summary": "This update introduces two new tutorials in Chinese for using CC Switch with Claude Code and Codex, eliminating the need for manual configuration edits. The guides provide step-by-step instructions and include live registration of the documents in the system. Additionally, existing parent guides have been updated to include links to these new resources, enhancing user accessibility and experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1350",
+      "title": "Optimize First Render by Vendor GSAP in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "performance",
+        "optimization",
+        "rendering",
+        "gsap",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update addresses the wasted first render issue in maestro jobs by ensuring GSAP is correctly placed in the render root before the initial render. A new callout in the SKILL.md contract guides users to copy GSAP into the render directory, preventing the common 404 error that leads to blank scenes. This change significantly reduces render time and enhances overall efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#277",
+      "title": "Enhance Connector Prompts for Clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "connectors",
+        "backend",
+        "improvement",
+        "user-feedback",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update modifies the connector prompts to explicitly name the tool in each 'Try It' suggestion, addressing user feedback about ambiguity. Key changes include the addition of tool names to prompts across various connectors, ensuring users trigger the correct tool. The modifications enhance user experience by providing clearer instructions and maintaining accurate capabilities for each connector."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#626",
+      "title": "Enhance Volume Pricing Visibility in Frontend Web ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "localization",
+        "features",
+        "improvements"
+      ],
+      "public": false,
+      "summary": "This update introduces a vibrant callout for volume pricing on the models and service pricing pages, making discounts more noticeable. The top-up tier selector now auto-rotates, showcasing the best pricing options dynamically. Additionally, localization improvements ensure clarity across all supported languages, enhancing user experience globally."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#628",
+      "title": "Enhance Documentation Search with Command Palette in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "search",
+        "frontend",
+        "ui",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update introduces a site-wide documentation search command palette to PlatformFrontend, utilizing the existing public search API. Key features include keyboard navigation, responsive design, and locale-aware search parameters, enhancing user experience by allowing quick access to documentation from anywhere in the app."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#188",
+      "title": "Expanding Wisdom's Automation Goals in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "automation",
+        "research",
+        "wisdom",
+        "platform-expansion",
+        "messaging"
+      ],
+      "public": false,
+      "summary": "A new plan document has been added to outline the research on expanding the Wisdom platform's automation capabilities across various messaging platforms. Key findings indicate immediate opportunities with WeChat and the establishment of an Android fleet for Douyin and Xiaohongshu. The document also highlights legal considerations and operational costs associated with different platforms, ensuring a strategic approach to automation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#182",
+      "title": "Enhance Connector Details for Unconnected Users in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "enhancement",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update improves the connectors page by providing detailed information for unconnected connectors. Users can now see a full description and a locked 'Try It' section, enhancing clarity on connector capabilities before making a connection. Additionally, a friendly hint is displayed under Tool Permissions, guiding users on how to access tools after connecting."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1349",
+      "title": "Boost frame capture speed with chrome-headless-shell in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "performance",
+        "chrome",
+        "docker",
+        "maestro",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update integrates chrome-headless-shell into the maestro worker image, significantly enhancing frame capture performance. The new capture path reduces frame capture time from 87.3 seconds to just 41.1 seconds, achieving nearly 2x faster rendering. This improvement is applicable across various environments, including those without GPU support."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#630",
+      "title": "Enhance routing for llms-full.txt in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "routing",
+        "nginx",
+        "worker",
+        "frontend",
+        "docs"
+      ],
+      "public": false,
+      "summary": "This update introduces routing for `/llms-full.txt` and `/.well-known/llms-full.txt` through the frontend to PlatformBackend, ensuring that AI crawlers receive the correct documentation instead of HTML. Key modifications include new location blocks in `nginx.conf.template` and an updated entry in `worker/index.mjs` to handle the new paths. These changes mirror the existing structure for `/llms.txt`, maintaining consistency across the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#861",
+      "title": "Enhance LLM Integration with Full Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "llm",
+        "documentation",
+        "backend",
+        "integration",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces `llms-full.txt`, a comprehensive resource that consolidates all public integration guides into a single document, making it easier for AI tools to access the necessary content. Additionally, it resolves a defect in the `robots.txt` file, ensuring proper indexing of the new resource. The changes improve efficiency by allowing a single fetch for all guides instead of multiple crawls."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#627",
+      "title": "Fix chat model playground rendering issue in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "chat",
+        "playground",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update resolves a case-sensitivity bug preventing the live-test playground from rendering on chat model detail pages. By normalizing the lookup key to lowercase, all seven chat providers are now correctly mapped, ensuring the playground is displayed as intended. The fix has been manually verified against live data, confirming the expected functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#629",
+      "title": "Seamless WeChat QR Login and API Playground in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "ui",
+        "api",
+        "weChat",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update enhances the WeChat-bot appliance console by integrating an embedded QR login feature, allowing users to authenticate without leaving the page. Additionally, a new API test playground is introduced for connected users, enabling them to interact with various endpoints directly. Other improvements include token masking, conditional power buttons, and professional code blocks for better user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1348",
       "title": "Enhance Async Task Polling with Backoff in Platform Service 🚀",
       "tags": [
