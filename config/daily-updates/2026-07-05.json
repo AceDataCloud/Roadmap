@@ -3,6 +3,362 @@
   "date": "2026-07-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1358",
+      "title": "Launch of OCR-anchored Visual Send Backend in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "wework",
+        "ocr",
+        "visual",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update introduces the `SEND_BACKEND=visual` feature for the WeWork service, enabling OCR-anchored, injection-free text sending. The implementation utilizes RapidOCR to identify conversation names and send buttons, ensuring a seamless user experience without direct memory access. Additionally, new tests have been added to validate the functionality, maintaining a focus on safety and compliance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#634",
+      "title": "Streamlined CSV Export to Disk for Better Performance in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "csv",
+        "export",
+        "performance",
+        "frontend",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update enhances the CSV export functionality by streaming the file directly to disk instead of buffering it in memory. The new implementation reduces memory usage and improves user experience, especially for large exports. Additionally, error handling has been improved with localized messages for export failures across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1356",
+      "title": "Eliminate Dead-Storage WAV Mirror in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "suno",
+        "cos",
+        "cleanup",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update removes the fire-and-forget dead-storage WAV mirror to COS from the suno workers in openaihk and ttapi. The change prevents unbounded COS growth by discarding unreachable mirrored URLs while maintaining client behavior through the upstream WAV URL. All normal upload and transfer flows remain intact, ensuring seamless functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#633",
+      "title": "Add auto-refresh toggle to usage history table in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "usability",
+        "i18n",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "The usage history table now features an auto-refresh toggle that defaults to ON, allowing users to see new records every 15 seconds without manual refresh. This enhancement respects active filters and pagination, ensuring a seamless experience. The implementation includes internationalization support and optimizations to prevent data race conditions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1357",
+      "title": "Introducing WeCom Automation Service in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "wecom",
+        "automation",
+        "platform",
+        "api",
+        "docker"
+      ],
+      "public": false,
+      "summary": "We've launched a new automation service for WeCom (企业微信) within the PlatformService. This service mirrors the existing Wisdom appliance, providing capabilities like real-time message reading, QR login, and a robust API. Key improvements include a dedicated WeCom automation layer and enhanced security measures for data handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#554",
+      "title": "Enhance self-heal script for medium skill in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "bugfix",
+        "skills",
+        "self-healing",
+        "resolver",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/554",
+      "summary": "This update applies a self-healing resolver to the medium skill, ensuring that the script path correctly resolves even when `$SKILL_DIR` points to another loaded skill. The fix includes a per-block resolver and quoted usages, aligning with the patterns established in other skills. Validation confirms that the changes maintain functionality while improving error handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#553",
+      "title": "Enhance Self-Heal for Skills in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "bugfix",
+        "skills",
+        "self-heal",
+        "environment",
+        "reliability"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/553",
+      "summary": "This update implements a self-healing script path for 16 skills, addressing issues caused by the `$SKILL_DIR` environment variable being clobbered. Each skill now anchors its script path, ensuring that it correctly resolves even when multiple skills are loaded simultaneously. The changes enhance reliability and prevent errors during execution."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#189",
+      "title": "New WeCom Automation Appliance Implementation Plan in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "wecom",
+        "automation",
+        "wisdom",
+        "implementation",
+        "poc"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive implementation plan for the WeCom automation appliance, building on the existing Wisdom framework. Key additions include a detailed how-to guide and several proof-of-concept scripts to analyze and capture WeCom data. The plan addresses the unique challenges of automating WeCom, emphasizing a hybrid approach that combines official APIs and UI automation techniques."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#552",
+      "title": "Introducing Xiaohongshu DM Auto-Reply Skill in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "xhs-dm",
+        "android",
+        "automation",
+        "skills",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/552",
+      "summary": "We've added a new skill for automatic reading and replying to Xiaohongshu private messages, specifically for Android devices using Nexior. This skill integrates seamlessly with the existing Computer Use tools, allowing users to manage their messages with a dry-run confirmation process to ensure safety and compliance. Key features include strict daily limits and a focus on user consent before sending any replies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#180",
+      "title": "Streamlined Debug Logging for Gateway in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "performance",
+        "logging",
+        "gateway",
+        "debug",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update significantly reduces the volume of debug logs generated by the gateway during API requests. Key changes include the removal of detailed logging for billing rule evaluations and task polling, while retaining essential error and warning logs. This enhancement aims to improve performance and reduce noise in log monitoring without compromising the ability to troubleshoot issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#870",
+      "title": "Enhance AKS Teardown to Purge TLS Secrets in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "aks",
+        "teardown",
+        "cert-manager",
+        "backend",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update improves the AKS teardown process by ensuring that cert-manager TLS Secrets and Certificates are properly deleted in the correct order. The previous implementation left orphaned TLS Secrets, which could be resurrected by existing Certificates. The new logic explicitly deletes Certificates before removing the TLS Secrets, preventing any residual artifacts after tenant teardown."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#868",
+      "title": "Streamlined CSV Exports for Heavy Accounts in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "csv",
+        "performance",
+        "backend",
+        "fix",
+        "streaming"
+      ],
+      "public": false,
+      "summary": "This update replaces the manual keyset loop with a server-side cursor for CSV exports, significantly improving performance for large datasets. The new implementation allows for complete streaming of data, reducing export times from minutes to seconds. Additionally, error handling has been enhanced to ensure users receive feedback on any issues during the export process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#632",
+      "title": "Revamped Usage Analytics with Dynamic Views in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "analytics",
+        "ui",
+        "i18n",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces a complete overhaul of the usage analytics page, featuring a new card layout with three dynamic views: Trend, Distribution, and Breakdown. The implementation of a dynamic Top-N feature enhances data visibility by ensuring significant APIs are always displayed, while minor ones are grouped under 'Others'. Additionally, internationalization support has been expanded to include multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#192",
+      "title": "Integrate golden-v13 insights into AKS deployment runbook in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "deployment",
+        "updates",
+        "aks",
+        "wisdom"
+      ],
+      "public": false,
+      "summary": "This update merges key learnings from the golden-v13 launch into the Wisdom AKS deployment runbook. Significant changes include updates to the deployment manual, resource lifecycle management, and fixes for the EVAL-Windows hourly shutdown issue. The documentation now serves as a single source of truth, streamlining processes for new tenants and existing deployments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1352",
+      "title": "Fix deliver stage firing issue for mid-compose uploads in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "pipeline",
+        "testing",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update addresses a bug where the 'deliver' stage was incorrectly triggered during mid-compose asset uploads, causing the pipeline to remain stuck at 93%. The logic in the `_infer_stage` function has been refined to ensure that 'deliver' only fires when a finished video or the result manifest is uploaded. A regression test has been added to confirm that mid-compose uploads do not affect the delivery stage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1355",
+      "title": "Streamline Skill Management with In-Repo Vendoring in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "skills",
+        "docker",
+        "vendoring",
+        "maestro",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update refactors the maestro worker by vendoring all agent skills directly in the repository, eliminating the need for build-time assembly from external sources. Key changes include the addition of 32 new vendored skills, improved reproducibility, and enhanced customizability for workflow skills. The Dockerfile has been simplified to copy the skills directly, ensuring a more stable and maintainable build process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#551",
+      "title": "Fix skill-loader path issue for Zhihu in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "bugfix",
+        "zhihu",
+        "skills",
+        "environment",
+        "scripts"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/551",
+      "summary": "This update resolves a critical bug where the `$SKILL_DIR` environment variable pointed to the last loaded skill, causing failures in script execution for the Zhihu skill. Key changes include modifying the Bash blocks in `SKILL.md` to independently resolve script paths and updating `blog.py` and `search.py` to eliminate reliance on `$SKILL_DIR`. The fix enhances reliability and ensures that the skill functions correctly even when multiple skills are loaded simultaneously."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#278",
+      "title": "Fix CronJob Pod Labeling to Eliminate 502 Errors in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "deployment",
+        "service",
+        "kubernetes",
+        "auth"
+      ],
+      "public": false,
+      "summary": "This update relabels CronJob pods in the AuthBackend service to prevent them from being incorrectly selected by the service, which was causing intermittent 502 Bad Gateway errors. The change ensures that only web pods are included in the service endpoints, eliminating the connection issues without affecting the current deployment. All modifications are safe and will take effect the next time each CronJob runs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1169",
+      "title": "Enhance Scheduled Tasks with Skill Binding Prompts in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "scheduled-tasks",
+        "user-experience",
+        "bug-fix",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1169",
+      "summary": "This update introduces a new flow for handling unbound skills in scheduled tasks. Users will now receive a prompt to bind skills that are not active, along with an option to save the task anyway using a 'force' flag. This change improves user experience by providing clearer guidance and reducing errors during task creation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1354",
+      "title": "Enhance Error Handling with Skill Not Active Code in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "feature",
+        "testing",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `SkillNotActiveError` to provide clearer error messages when a skill is not active for a user. Additionally, a `force` option has been added to allow users to bypass the active check when creating or updating skills, ensuring smoother user experience. The changes include updates to error handling and new tests to validate the functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1168",
+      "title": "Revamp Maestro Step-Checklist UI in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "design",
+        "refactor",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1168",
+      "summary": "This update refines the maestro step-checklist by removing the thick connector line and introducing smaller, consistent icons. The new design features a clean list format with primary-color indicators for completed, active, and pending steps, enhancing the overall user experience. The logic remains unchanged, ensuring seamless integration with existing functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#869",
+      "title": "Enhance Tenant Resource Management in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "documentation",
+        "cleanup",
+        "cert-manager",
+        "tenant-management"
+      ],
+      "public": false,
+      "summary": "This update introduces significant improvements to tenant resource management by ensuring complete teardown of resources, including cert-manager TLS leftovers. It blocks bare DELETE requests that could orphan resources, enforcing a structured removal process. Additionally, the customer documentation has been rewritten to reflect the current Azure architecture and clarify resource lifecycle and billing."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#191",
       "title": "Streamline HyperFrames Skills Integration in Index 🚀",
       "tags": [
