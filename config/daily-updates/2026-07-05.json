@@ -3,6 +3,86 @@
   "date": "2026-07-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1361",
+      "title": "Restore AceData Skills Cloning for Maestro in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "skills",
+        "docker",
+        "maintenance",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update un-vendors 18 AceData provider skills from the maestro worker, ensuring a single source of truth for updates. The Dockerfile now clones the necessary skills and includes a new smoke check for link resolution, preventing dead links in documentation. Overall, this change enhances maintainability and resolves existing documentation issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1170",
+      "title": "Fix share menu icon registration in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "chat",
+        "icon",
+        "font-awesome"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1170",
+      "summary": "This update addresses the missing icon for the 'share' menu item in the chat sidebar by registering the `fa-share-nodes` icon in the centralized Font Awesome plugin. The fix involves adding two lines to the `src/plugins/font-awesome.ts` file to ensure the icon is properly imported and registered. This change enhances the visual consistency of the menu options."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1360",
+      "title": "Enhance WeCom with Media Sending Capabilities in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "wecom",
+        "media",
+        "security",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces the ability to send images, files, and videos through the WeCom service, addressing a major gap in functionality compared to Wisdom. Key changes include modifications to the visual backend for media attachment and updates to the API to handle new media types. Security measures have been implemented to prevent SSRF vulnerabilities, ensuring safe media handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1171",
+      "title": "Enhance Android Skills Installation in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "android",
+        "features",
+        "localization",
+        "skills",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1171",
+      "summary": "This update introduces a new section in the Local Tools settings specifically for Android users, allowing them to install the `xhs-dm` skill with a single tap. This feature enhances user experience by integrating skill installation directly within the Computer Use settings, making it more accessible for Android users. Additionally, the update includes internationalization support for multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1359",
+      "title": "Enhance Audio Sync and Visual Quality in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "audio",
+        "visuals",
+        "quality",
+        "sync",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update addresses key quality issues identified during local renders, including audio desynchronization and visual clarity. The timeline for captions is now accurately pinned to audio durations, ensuring scenes and captions align correctly. Additionally, full-bleed backgrounds are mandated to meet a minimum resolution, enhancing overall visual fidelity."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1358",
       "title": "Launch of OCR-anchored Visual Send Backend in Platform Service 🚀",
       "tags": [
