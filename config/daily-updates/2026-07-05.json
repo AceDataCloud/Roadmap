@@ -3,6 +3,39 @@
   "date": "2026-07-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1363",
+      "title": "Enhance WeCom Search Functionality in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "wecom",
+        "search",
+        "automation",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a powerful **search-and-open** feature for WeCom, allowing users to access any conversation by name, even if it's not visible in the current list. The implementation includes a fallback mechanism that first checks visible conversations before performing a search, ensuring accuracy and preventing mis-sends. Comprehensive tests have been added to verify the functionality and safety of the new feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1362",
+      "title": "Enhance WeCom with Async UI Task Queue in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "wecom",
+        "async",
+        "ui",
+        "tasks",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces an asynchronous UI task queue for the WeCom service, ensuring serialized sends for UI operations like text and media. The implementation utilizes a dedicated thread to prevent race conditions, mirroring Wisdom's functionality. Key API changes include a shift from inline sending to task enqueuing, enhancing overall reliability and performance."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1361",
       "title": "Restore AceData Skills Cloning for Maestro in Platform Service 🚀",
       "tags": [
