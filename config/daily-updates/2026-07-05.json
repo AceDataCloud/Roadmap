@@ -3,6 +3,153 @@
   "date": "2026-07-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1176",
+      "title": "Revamp Scenario Picker to Image Cards in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "accessibility",
+        "design"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1176",
+      "summary": "The scenario picker in the Maestro video configuration panel has been transformed from a dropdown to visually appealing thumbnail cards. Each of the six scenarios now features a cohesive preview image, enhancing user experience and style selection. The implementation maintains existing functionality, including two-way binding and billing previews, while improving accessibility and interaction design."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1175",
+      "title": "Enhance Live Screenshot Display for Client Tools in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "enhancement",
+        "frontend",
+        "client-tools",
+        "screenshot"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1175",
+      "summary": "This update fixes the issue where client-tool screenshots were only visible after a page reload. By ensuring that screenshots are rendered live during streaming, the user experience is significantly improved. Key changes include the addition of validation for image URLs and adjustments to maintain the order of image display, aligning it with server-side behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1368",
+      "title": "Enhance Video Duration Control in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "video",
+        "duration",
+        "optimization",
+        "script",
+        "cost-control"
+      ],
+      "public": false,
+      "summary": "This update strengthens the video duration control by ensuring the output adheres to the requested duration, preventing excessive rendering times. The changes include a firm instruction for the script to fit the specified length without truncating the voiceover. This improvement aims to optimize resource usage and reduce costs associated with video generation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#874",
+      "title": "Enhance Pricing Model with Scenario Multipliers in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "backend",
+        "features",
+        "tests",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces a new pricing model for video scenarios in Maestro, applying specific multipliers for 'drama' (1.35x) and 'avatar' (1.15x) scenarios. The changes ensure that pricing aligns with production costs and value, while maintaining existing prices for other scenarios. Additionally, the update includes new tests to validate the pricing adjustments, ensuring backward compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1174",
+      "title": "Align Video Config UI with New Scenarios and Styles in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "refactor",
+        "i18n",
+        "video"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1174",
+      "summary": "This update aligns the Nexior video configuration panel with the newly refactored scenario parameters from Maestro. Key changes include the introduction of new scenarios and styles, enhancing user options for video creation. The update also ensures compatibility with existing backend structures while improving the overall user interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1370",
+      "title": "Enhance WeWork's db_reader for Binary Safety in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "wework",
+        "db_reader",
+        "json",
+        "protobuf"
+      ],
+      "public": false,
+      "summary": "This update ensures that WeWork's db_reader is now binary-safe, preventing crashes on reading protobuf/BLOB columns. Key changes include a modified text factory to handle non-UTF-8 data and a new method to base64-encode BLOB values, ensuring JSON-serializability. The fix has been verified with real WeCom data, resulting in successful API responses without errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1369",
+      "title": "Fix headless-shell EACCES issue in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "production",
+        "docker",
+        "maestro",
+        "headless"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical production incident where all maestro video renders were failing due to an EACCES error. The root cause was traced to a misconfigured symlink for the headless browser, which was pointing to a directory instead of the binary. The fix involves installing the browser in a separate directory and ensuring the symlink points correctly to the executable, preventing future occurrences of this issue."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#74",
+      "title": "Unlock WeChat 4.0 Database Access in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "database",
+        "encryption",
+        "api",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces a read-only database reader for WeChat 4.0, allowing users to decrypt and read messages and conversations. The implementation is gated to ensure compatibility with only the 4.0.x version, while maintaining existing functionality for 3.x. Key changes include new API endpoints and robust caching mechanisms for efficient data retrieval."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1173",
+      "title": "Streamline Google Play Build by Excluding Computer Use in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "android",
+        "google-play",
+        "build",
+        "feature",
+        "compliance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1173",
+      "summary": "This update introduces a Gradle product flavor split for the Android build, allowing the Google Play version to exclude the Computer Use feature entirely. This change resolves the upload failures caused by Google Play's accessibility policy, ensuring compliance while maintaining full functionality in the sideload version. The implementation includes modifications to the AndroidManifest and build configurations to support this new structure."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#872",
       "title": "Fix language resolution for English users in Backend 🚀",
       "tags": [
