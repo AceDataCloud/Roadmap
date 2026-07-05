@@ -1,0 +1,82 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-05",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1348",
+      "title": "Enhance Async Task Polling with Backoff in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "async",
+        "polling",
+        "backoff",
+        "aichat2",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces a wall-clock backoff mechanism for asynchronous task polling in the aichat2 worker, addressing issues with premature task abandonment. By implementing a delay between consecutive polls based on task repetition, the system can now handle longer rendering times effectively. Key files modified include configuration settings and orchestrator logic to support this new feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#859",
+      "title": "Fix translation keys in llms.txt API titles in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "translations",
+        "api",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update resolves issues with raw translation placeholder keys appearing in the llms.txt file. The fix ensures that both API titles and introductions are processed correctly, preventing any raw `$t()` keys from being exposed. The changes enhance the clarity of the API documentation for crawlers and improve overall consistency in title resolution."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#625",
+      "title": "Fix landing behavior for documents with children in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "navigation",
+        "frontend",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where the landing page incorrectly navigated to a parent document instead of the first child document when children were present. The logic has been refined to ensure that if a root document has children, the navigation will always descend to the first child. This change improves user experience by providing a more intuitive document structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1347",
+      "title": "Fix GSAP Loading for Scene Rendering in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "rendering",
+        "gsap",
+        "docker",
+        "video"
+      ],
+      "public": false,
+      "summary": "This update addresses the issue of blank scenes in rendered videos by changing how GSAP is served. The Dockerfile now rewrites GSAP references to be served from the same origin, ensuring that compositions load correctly. Additionally, the image validation confirms that the fix resolves the rendering issues, leading to successful video outputs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#598",
+      "title": "Update Node Types for Enhanced Compatibility in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "typescript",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update bumps the @types/node package from version 26.0.1 to 26.1.0, ensuring better compatibility and support for TypeScript features. The changes include modifications to both package.json and package-lock.json, reflecting the new version. This will help maintain the stability and performance of the project."
+    }
+  ]
+}
