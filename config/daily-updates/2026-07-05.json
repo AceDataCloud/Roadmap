@@ -3,6 +3,87 @@
   "date": "2026-07-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Index#191",
+      "title": "Streamline HyperFrames Skills Integration in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "vendoring",
+        "hyperframes",
+        "maestro",
+        "skills",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces the vendoring of approximately 12 routed HyperFrames skills into the maestro worker, eliminating the need for the previous Dockerfile git-clone-all method and associated patches. Key changes include retiring outdated mechanisms and addressing version drift between renderer and skills. The approach is legally sound under Apache-2.0, ensuring a more efficient workflow moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1167",
+      "title": "Revamp In-Progress Step-Checklist UI in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "design",
+        "enhancement",
+        "accessibility",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1167",
+      "summary": "This update enhances the in-progress step-checklist UI by introducing a bordered card design, aligning it with the success and failure states for a more professional look. Additionally, the custom flex list has been replaced with a native vertical stepper from Element Plus, providing a clearer visual timeline of progress. These changes improve consistency and accessibility without altering the underlying progress logic."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1353",
+      "title": "Ensure Real Subjects Route Correctly in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "routing",
+        "documentation",
+        "update",
+        "video",
+        "workflow"
+      ],
+      "public": false,
+      "summary": "This update introduces a guardrail to ensure that real, named subjects are routed to the `/general-video` workflow instead of the `faceless-explainer`. This change prevents the loss of real imagery and improves processing speed. The documentation has been updated to clarify routing rules without altering any code paths."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#867",
+      "title": "Upgrade AKS Appliance to golden-v13 and Optimize RAM in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "deployment",
+        "aks",
+        "backend",
+        "optimization",
+        "windows"
+      ],
+      "public": false,
+      "summary": "This update points the AKS appliance services to the newly activated golden-v13 image, resolving the previous hourly shutdown issue caused by evaluation-based images. Additionally, the VM RAM has been trimmed from 3G to 2G to better fit the LTSC and WeChat requirements, while maintaining the Kubernetes memory preset. The changes ensure a smoother operation and improved stability for tenant scenarios."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#72",
+      "title": "Revamp Enterprise Activation & Self-Heal in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "activation",
+        "self-heal",
+        "windows",
+        "enterprise",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update resolves the WeChat-Bot appliance's hourly shutdown issue by replacing the evaluation Windows ISO with a genuine Enterprise LTSC version. Key enhancements include offline permanent activation using Microsoft Activation Scripts and a self-heal mechanism for the SMB share during first login. Additionally, the default RAM allocation for tenants has been optimized to 2GB, ensuring a smoother experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1351",
       "title": "Enhance UI with Deterministic Pipeline Stages in Platform Service 🚀",
       "tags": [
