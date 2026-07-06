@@ -1,0 +1,54 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-06",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1372",
+      "title": "Enhance Maestro with CDN Variants and Image Quality Fixes in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "imagequality",
+        "maestro",
+        "video",
+        "platformservice"
+      ],
+      "public": false,
+      "summary": "This update addresses critical issues in the Maestro system, including a bug that incorrectly marked valid video uploads as failed due to missing local files. Additionally, it introduces improvements to image quality by enforcing aspect ratio rules and refining quality gates to ensure better visual output. These changes enhance the reliability of video processing and improve the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1371",
+      "title": "Enhance @-mention Support and Visual-RPA in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "wecom",
+        "automation",
+        "testing",
+        "visual-rpa"
+      ],
+      "public": false,
+      "summary": "This update introduces robust support for group @-mentions in the WeCom client, allowing users to mention members directly in messages. Key improvements include fixes to the SendInput method for unicode typing, ensuring the @-mention picker functions correctly, and enhancements to message sending reliability. Comprehensive tests have been added to validate these features, ensuring a seamless user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#75",
+      "title": "Enhance WeChat 4.0 Automation Features in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "automation",
+        "ui",
+        "features",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces a new WeChat 4.0 coordinate and clipboard UI driver for enhanced messaging capabilities. Key changes include the addition of a dedicated API for sending messages, improved media handling with security checks, and better HWND discovery for WeChat 4.0 windows. These enhancements aim to streamline user interactions and ensure reliable message dispatching."
+    }
+  ]
+}
