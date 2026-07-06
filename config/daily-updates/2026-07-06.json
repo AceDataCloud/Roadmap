@@ -3,6 +3,38 @@
   "date": "2026-07-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1181",
+      "title": "Enhance Custom Domain Stability in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "dns",
+        "testing",
+        "frontend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1181",
+      "summary": "This update stabilizes custom domain settings by ignoring incomplete rows and ensuring CNAME guidance is always displayed for pending or failed domains. Key changes include improved handling of DNS instructions and added regression tests for better coverage. Overall, these enhancements aim to provide a smoother user experience when managing custom domains."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1180",
+      "title": "Fix chat send button greying out issues in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "chat",
+        "ui",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1180",
+      "summary": "This update addresses two key issues causing the chat send button to become unresponsive. The first fix ensures that the button remains active after uploading `.txt` files by relying on the file's status rather than its upload percentage. The second fix prevents the application selection from being wiped during transient errors, allowing for smoother user experience without unnecessary interruptions."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1385",
       "title": "Chore(maestro): delete 4 redundant workflows + rename video-factory->entrypoint + captions first-class in Platform Service 🧪",
       "tags": [
