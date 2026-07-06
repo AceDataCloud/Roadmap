@@ -3,6 +3,86 @@
   "date": "2026-07-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1178",
+      "title": "Enhance Memory Settings for Better Readability in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "css",
+        "enhancement",
+        "readability"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1178",
+      "summary": "The Memory settings tab has been revamped to improve its visual layout and readability. Key changes include the addition of a bordered card around the list, hairline dividers between entries, and enhanced padding and line height for better spacing. These updates ensure a cleaner, more user-friendly interface while maintaining compatibility with dark mode."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#561",
+      "title": "Enhance X Skill Integration with Updated API in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "x-skill",
+        "twikit",
+        "api",
+        "performance",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/561",
+      "summary": "This update improves the X skill by relying on the preinstalled `twikit` in the sandbox environment, eliminating the need for runtime installations. Key patches include resolving transaction IDs with the new webpack chunk map and updating user/tweet model defaults to prevent stale endpoints. Additionally, the `trends` functionality has been optimized to avoid hanging issues, ensuring smoother performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#198",
+      "title": "Updated Command Guides for PlatformBackend Documentation in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "update",
+        "platformbackend",
+        "guides",
+        "synchronization"
+      ],
+      "public": false,
+      "summary": "This update synchronizes the command guides in the monorepo with the recent changes made to the PlatformBackend documentation structure. The zh-CN directory has been removed, and all references have been updated to point to the new flat documentation layout. This ensures that future document generation processes do not inadvertently recreate the deprecated directory, preventing potential data loss."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#887",
+      "title": "Streamline Documentation Structure in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "refactor",
+        "cleanup",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update flattens the Chinese documentation from `docs/zh-CN/` to the root `docs/` directory, removing 17 outdated language directories. The changes include renaming 501 markdown files and updating the workflow configuration to reflect the new structure. This cleanup enhances the documentation organization and ensures that all translations are directly accessible from the main directory."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1383",
+      "title": "Streamline Sandbox Skill Dependencies in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "dependencies",
+        "sandbox",
+        "skills",
+        "documentation",
+        "build"
+      ],
+      "public": false,
+      "summary": "This update preinstalls essential runtime dependencies for the `x` and `onepage-pdf` skills in the sandbox environment. Notably, `twikit` and `PyMuPDF` are now included, eliminating the need for runtime installations. Additionally, the documentation for sandbox dependencies has been updated, and build-time smoke checks have been extended to ensure all new dependencies are validated."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Skills#560",
       "title": "Clarify X connector transaction-id drift in Skills 🚀",
       "tags": [
