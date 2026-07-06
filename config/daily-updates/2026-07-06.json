@@ -3,6 +3,85 @@
   "date": "2026-07-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1385",
+      "title": "Chore(maestro): delete 4 redundant workflows + rename video-factory->entrypoint + captions first-class in Platform Service 🧪",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#77",
+      "title": "Feat(golden): symmetric WeChat 3.x/4.0 appliances + unified version-free API in Wisdom ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1179",
+      "title": "Feat(nexior): 站点自定义加价（白标 markup）实现 in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1179"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#199",
+      "title": "Streamlined Maestro Workflow Cleanup in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "workflow",
+        "cleanup",
+        "planning",
+        "maestro"
+      ],
+      "public": false,
+      "summary": "This update introduces a planning document for the maestro workflow, detailing the removal of four redundant workflows and renaming 'video-factory' to 'entrypoint'. Key changes include the consolidation of skills to enhance efficiency and clarity, ensuring that the general-video skill covers the necessary functionalities. The document serves as a decision artifact, with code changes to follow in a future PR."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#200",
+      "title": "Enhance Nexior Custom Pricing Feature in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "nexior",
+        "pricing",
+        "markup",
+        "feature",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a site-wide markup feature for Nexior, allowing site owners to set custom pricing ratios. The backend logic for applying these markups during recharge orders is already in place, ensuring that users see the adjusted prices at checkout. Key changes include a new configuration interface for site admins and improved consistency in price display across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#562",
+      "title": "Enhance X Skill with API Updates in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "api",
+        "update",
+        "skills",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/562",
+      "summary": "This update improves the X skill by patching the transaction-id resolver to align with the current X web API structure. Key changes include the addition of default-field shims for user and tweet models, and a more reliable method for user identification using cookies. The update also optimizes tweet detail retrieval and prevents the command from hanging during trends fetching."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1178",
       "title": "Enhance Memory Settings for Better Readability in Nexior ✨",
       "tags": [
