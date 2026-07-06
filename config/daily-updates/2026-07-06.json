@@ -3,6 +3,324 @@
   "date": "2026-07-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1380",
+      "title": "Upgrade HyperFrames and Fix Transcribe Flag in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "upgrade",
+        "hyperframes",
+        "bugfix",
+        "cli",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update upgrades the HyperFrames CLI from version 0.6.115 to 0.7.36, enhancing reliability and enabling new features like motion verification. Additionally, it fixes the renamed language flag in the transcribe command to ensure proper functionality. The changes have been tested with all tests passing, confirming a smooth transition with no breaking changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#878",
+      "title": "Transforming Sync Process into Django Command in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "refactor",
+        "django",
+        "orm",
+        "backend",
+        "workflow"
+      ],
+      "public": false,
+      "summary": "This update refactors the `sync_publish_materials.py` script into a Django management command, enhancing database interactions by utilizing the ORM instead of raw SQL. The command now reads English content directly from the `Translation` table, ensuring that newly translated documents are included in the sync process. Additionally, the workflow has been updated to streamline dependency installation and command execution."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#883",
+      "title": "Enhance HTML Translation Routing in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "html",
+        "localization",
+        "backend",
+        "translation",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update reintroduces the routing of HTML documents to the localization service's new HTML translator, improving the translation of service intro and landing pages. The changes remove previous blocks that skipped HTML docs, ensuring they are translated into all target locales. The implementation is streamlined, with no new environment or custom parsing required, maintaining existing payload size limits."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1378",
+      "title": "Enhance HTML Translation Capabilities in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "localization",
+        "html",
+        "translation",
+        "service",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `HtmlTranslator` to the localization translator service, enabling the machine translation of HTML+CSS pages. Key features include isolating `<style>` and `<script>` tags, chunking visible markup by token budget, and ensuring exact source slices for translation. The changes improve the service's ability to handle HTML documents while maintaining the integrity of non-translatable content."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#885",
+      "title": "Update grok 1.5 pricing to reflect 480p resolution in Backend 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "grok",
+        "backend",
+        "updates",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update modifies the default pricing rule for the `grok-imagine-video-1.5` model to explicitly display 480p resolution. The pricing table no longer shows a fallback row for omitted resolutions, enhancing clarity for users. Additionally, corresponding changes were made in service pricing and tests to ensure consistent behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#884",
+      "title": "Launch WeWork-Bot Service in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "wework",
+        "aks",
+        "service",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces the deployable `wework-bot` Service on the AKS appliance provider, allowing users to create a per-tenant WeCom appliance quickly. The migration ensures consistency with the existing `wechat-bot` service by copying relevant metadata and pricing fields. The implementation is idempotent and reversible, enhancing deployment flexibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1379",
+      "title": "Launch WeCom Automation Appliance in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "wecom",
+        "aks",
+        "automation",
+        "deployment",
+        "ci"
+      ],
+      "public": false,
+      "summary": "This update introduces the WeCom automation appliance on Azure AKS, allowing users to quickly create a dedicated WeCom service on the ACE platform. Key enhancements include a refined golden image, improved deployment scripts, and CI workflows for seamless integration. The changes ensure full functionality and parity with the existing Wisdom model, enhancing user experience and operational efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#196",
+      "title": "Launch WeCom Automation Appliance in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "wecom",
+        "aks",
+        "automation",
+        "index",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update outlines the roadmap for productizing a per-tenant WeCom automation appliance on Azure AKS, mirroring the existing Wisdom model. Key changes include the addition of a new documentation file detailing the deployment process and necessary adjustments for the wework-bot service. The infrastructure is already in place, allowing for quick setup and usability within minutes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#181",
+      "title": "Enhanced Testing for Grok Video Pricing Rules in Gateway 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "testing",
+        "grok",
+        "pricing",
+        "gateway",
+        "regression"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive regression test for the Grok video pricing rules within the PlatformGateway. Key additions include coverage for new public model names, legacy aliases, numeric-string duration coercion, and resolution lowercasing. The production Gateway code remains unchanged, ensuring the existing JsonLogic cost path is verified effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#636",
+      "title": "Enhance Pricing Display with Comparison Tiers in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "pricing",
+        "ui",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces the ability to parse JsonLogic comparison operators in the API pricing table, allowing for clearer display of pricing tiers. The changes ensure that upper-bound rules are presented as readable ranges, enhancing the Grok video fast pricing experience with a new 'Duration' column. Strict and inclusive bounds are preserved for accurate representation without altering the underlying data."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#76",
+      "title": "Enhance WeChat 4.0 with OCR Anchoring for Reliable Sending in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "ocr",
+        "wechat",
+        "automation",
+        "ui",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces OCR anchoring for sending messages in WeChat 4.0, replacing the previous brittle coordinate-based method. Key changes include the addition of a new OCR module for locating UI elements by on-screen text, ensuring functionality even in headless environments. The implementation has been validated with successful message delivery and includes comprehensive unit tests to ensure reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#183",
+      "title": "Clarify ACE Extension Requirement for Connectors in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "user-experience",
+        "localization",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update enhances the user experience by explicitly stating that the ACE browser extension is required for cookie-based connector dialogs. It includes a link to the ACE extension installation guide in the normal capture state and updates the language in both English and Chinese to specify the ACE browser extension instead of a generic plugin. These changes aim to reduce confusion and improve the onboarding process for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#279",
+      "title": "Enhance connector suggestions for better user experience in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "connectors",
+        "enhancement",
+        "backend",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update adds 'Try It' suggestions for 19 connector entries that previously lacked them, enhancing user interaction. The changes are limited to the connectors.yaml file, ensuring that authentication methods and connector capabilities remain unchanged. Validation checks confirm the integrity of the updates with no missing or duplicate entries."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1377",
+      "title": "Enhance WeCom Message Verification and Ambiguity Detection in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "wecom",
+        "verification",
+        "screenshot",
+        "ambiguity",
+        "spec"
+      ],
+      "public": false,
+      "summary": "This update introduces mandatory conversation verification to ensure messages are sent to the correct chat, eliminating the risk of mis-sends. It also adds ambiguity detection and the option to include a screenshot proof of the sent conversation. The new SPEC document outlines the architecture and functionality of these enhancements, significantly improving the reliability of the WeCom messaging service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#463",
+      "title": "No-op for Kimi Docs Update in Clis 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "docs",
+        "no-op",
+        "openapi",
+        "clis",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/463",
+      "summary": "This update confirms that there are no changes required in the AceDataCloud Clis repository regarding the Kimi documentation updates. The service-to-CLI mapping check revealed no corresponding Kimi entries, and the OpenAPI impact assessment showed no mapped packages to update. As a result, this issue results in a no-op with no changes to code, tests, or documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#881",
+      "title": "Enhance Pricing Tiers for Grok Video Duration in Backend 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "backend",
+        "grok",
+        "video",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces `remark.model` labels for the three duration-band pricing rules of the `grok-imagine-video-1.5-fast`. It ensures that these duration tiers are displayed correctly without affecting the JsonLogic conditions, maintaining the integrity of request payloads. Additionally, the labels are mirrored in service display pricing across various catalog surfaces."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1376",
+      "title": "Enhance Kimi K2.6 Fallback Configuration in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "k2.6",
+        "fallback",
+        "openai",
+        "configuration",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces the `kimi-k2.6` model to the OpenAI worker's visible model list and establishes fallback pricing in `model_fallbacks.json`. Additionally, it routes the `kimi-k2.6` fallback to existing Kimi K2.5 and Thinking models, ensuring seamless integration. Validation tests confirmed successful compatibility with EPhone and XiaojingAI."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#879",
+      "title": "Introducing Kimi K2.6 Model Pricing in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "api",
+        "k2.6",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update adds the Kimi K2.6 model to the chat completion visible model list and updates the OpenAPI specifications accordingly. New API billing rules have been established based on the pricing ratio between K2.6 and K2.5, along with service display pricing entries across relevant cost files. A focused API cost test for Kimi K2.6 has also been implemented, ensuring accurate billing calculations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#882",
+      "title": "Reverted HTML Translation Features in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "revert",
+        "backend",
+        "translation",
+        "html",
+        "stability"
+      ],
+      "public": false,
+      "summary": "This update reverts recent changes related to HTML landing-page translation functionality. Key files affected include the removal of translation helpers and adjustments in the main translation script. The rollback aims to stabilize the backend by eliminating potential issues introduced in the previous implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#877",
+      "title": "Enhance HTML Translation Path for Landing Pages in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "html",
+        "translation",
+        "backend",
+        "llm",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update introduces a robust HTML to LLM translation path for landing pages, addressing previous limitations in the translation service. Key changes include the addition of new utility functions for protecting and restoring CSS/JS blocks, chunking HTML content to avoid token truncation, and improved error handling in the translation process. These enhancements ensure that HTML landing pages are accurately translated without compromising their structure."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#461",
       "title": "Update video models to align with OpenAPI spec in Clis 🚀",
       "tags": [
