@@ -3,6 +3,87 @@
   "date": "2026-07-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Skills#560",
+      "title": "Clarify X connector transaction-id drift in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "bugfix",
+        "documentation",
+        "update",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/560",
+      "summary": "This update clarifies the failure mode of the X connector, specifically addressing the `Couldn't get KEY_BYTE indices` error, which is now identified as transaction-id drift rather than a cookie issue. Misleading remediation steps have been removed, emphasizing that reconnecting cookies or upgrading twikit will not resolve this specific error. The documentation and code have been updated to reflect these changes, ensuring users have accurate information for troubleshooting."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#880",
+      "title": "Streamline Translation Sync and Remove Broken Actions in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "sync",
+        "translation",
+        "backend",
+        "cleanup",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update modifies the `sync.py` script to import only the `zh-cn` source directory, preventing overwrites of fresh translations by the CronJob. Additionally, it removes the broken `translate-docs.yml` workflow and the obsolete `translate_docs.py` script, streamlining the translation process. These changes enhance the stability and reliability of the translation synchronization."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#886",
+      "title": "Fix migration issue for wework bot service in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "migration",
+        "backend",
+        "production"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical production-blocking migration issue by correcting the field name from 'name' to 'title' in the wework bot service creation process. The previous error caused the migration to fail, preventing new platform-backend pods from starting. With this fix, the migration can now apply successfully, allowing for smooth deployments moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1382",
+      "title": "Enhance Agent's Self-Fix Loop for Video Quality in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "video",
+        "quality",
+        "agent",
+        "validation",
+        "fix",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update moves the composition-quality enforcement to the agent's SKILL, allowing it to fix defects directly before shipping. A new mandatory gate has been added to ensure that the agent runs native validators and fixes any issues found, looping until all errors are resolved. This change improves video quality by leveraging existing tools and ensuring that only the agent can correct defects."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#559",
+      "title": "Clarify X connector transaction-id drift in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "x-connector",
+        "transaction-id",
+        "publish-artifact",
+        "bug-fix",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/559",
+      "summary": "This update clarifies the failure mode of the X connector, specifically addressing the `Couldn't get KEY_BYTE indices` error, which is linked to transaction-id drift rather than cookie issues. The `publish_artifact` tool has been added to the allowed tools for X's publish-output path, ensuring better usability. Validation steps confirm that the changes do not introduce new errors and maintain functionality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1380",
       "title": "Upgrade HyperFrames and Fix Transcribe Flag in Platform Service 🚀",
       "tags": [
