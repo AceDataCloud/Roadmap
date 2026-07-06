@@ -3,6 +3,119 @@
   "date": "2026-07-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#461",
+      "title": "Update video models to align with OpenAPI spec in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "video",
+        "update",
+        "grok",
+        "tests",
+        "cli"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/461",
+      "summary": "This update refreshes the grok video model identifiers in the CLI to match the latest OpenAPI specification. Key changes include replacing the old model names with new versioned variants and updating the default video model accordingly. Additionally, test cases have been adjusted to reflect these changes, ensuring consistency across the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#195",
+      "title": "Streamline Translation Process and Cleanup in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "translation",
+        "cleanup",
+        "documentation",
+        "efficiency"
+      ],
+      "public": false,
+      "summary": "This update consolidates the translation pipeline for platform documentation by utilizing a single CronJob as the source, eliminating the outdated GitHub Action. The documentation structure has been flattened to enhance accessibility, and all language-specific directories have been removed. These changes aim to resolve long-standing issues with outdated translations and improve the overall efficiency of the documentation process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#876",
+      "title": "Align Grok Video Pricing with TTAPI in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "backend",
+        "grok",
+        "ttapi",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update aligns the billing for the `/grok/videos` endpoint with the TTAPI UnOfficial Grok pricing. Key changes include converting TTAPI quota pricing into platform credits and updating service display pricing to reflect these changes, along with regression tests to ensure accuracy. The catalog regression test has also been updated to prevent confusion with outdated pricing floors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1373",
+      "title": "Enhance TTAPI with Updated Grok Model in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "update",
+        "ttapi",
+        "grok",
+        "video",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update maps public `grok-imagine-video` requests to the new `grok-imagine-video-1.5-fast` upstream model, ensuring compatibility with TTAPI's documentation. Additionally, the max-duration comment has been updated to reflect the new model version. These changes streamline video handling and improve overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1375",
+      "title": "Streamlined Maestro Cleanup in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cleanup",
+        "maestro",
+        "audit",
+        "error-handling",
+        "refactor"
+      ],
+      "public": false,
+      "summary": "This update implements several low-risk cleanups from the maestro audit, enhancing code clarity and alignment. Key changes include aligning documentation with code for duration, centralizing threshold settings, and deduplicating audio override instructions. Additionally, common fatal markers for insufficient funds have been expanded to improve error handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1374",
+      "title": "Enhance WeCom Integration with Enterprise Contacts and Message Decoding in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "wecom",
+        "enhancement",
+        "api",
+        "performance",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update aligns the WeCom read functionality with the Wisdom service, addressing the visibility of enterprise contacts. Key changes include the introduction of a new API endpoint for retrieving internal and external contacts, improved message content decoding, and the implementation of a WAL-aware caching mechanism for optimized performance. Comprehensive testing has confirmed the successful integration and functionality of these enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#194",
+      "title": "Enhance Maestro's Prompt and Skill Enforcement in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "audit",
+        "maestro",
+        "enforcement",
+        "roadmap",
+        "video",
+        "quality"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive audit of the maestro agent's prompt and skill architecture, addressing previously identified flaws in video outputs. Key changes include a narrowed enforcement strategy focusing on high-confidence checks, a revised roadmap for improvements, and a detailed adversarial review confirming the soundness of the approach. The documentation has been updated to reflect these changes, ensuring better adherence to quality standards."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1372",
       "title": "Enhance Maestro with CDN Variants and Image Quality Fixes in Platform Service 🚀",
       "tags": [
