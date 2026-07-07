@@ -3,6 +3,70 @@
   "date": "2026-07-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#81",
+      "title": "Streamline Wisdom Package Overlay on Boot in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "feature",
+        "automation",
+        "deployment",
+        "batch",
+        "wisdom"
+      ],
+      "public": false,
+      "summary": "This update enhances the boot process by overlaying the bundled Wisdom package onto the installed site-packages, ensuring that the image serves as the source of truth for the code. The change eliminates the need for manual GUI hot-patching and pip reinstallations, making deployments smoother and more reliable. The new batch script runs before the API starts, preventing any race conditions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1389",
+      "title": "Enhance Google Image Search with Size Filter in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "google",
+        "images",
+        "api",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces an `image_size` parameter to the Google image search API, allowing users to request high-resolution images. The new mapping for image sizes ensures that downstream processes receive sharper images, addressing previous issues with blurry results. The implementation is backward-compatible, maintaining payload integrity when the parameter is not specified."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1390",
+      "title": "Enhance Image Sourcing and Avatar Guidelines in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "image",
+        "avatar",
+        "quality",
+        "guidelines",
+        "fixes"
+      ],
+      "public": false,
+      "summary": "This update introduces two key fixes to improve agent-guidance based on recent video-QA findings. High-resolution images will now be sourced by specifying `image_size: \"large\"`, ensuring better clarity. Additionally, avatar guidelines have been refined to prevent silent segments and avoid promotional labeling, enhancing the overall quality of the content."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#563",
+      "title": "Enhance Google Search Docs with Image Size Guidance in Skills 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "docs",
+        "google-search",
+        "images",
+        "guidance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/563",
+      "summary": "This update adds the `image_size` parameter to the Google Search skill documentation, providing clear guidance on sourcing high-resolution images. It emphasizes using the largest image dimensions for full-screen displays and advises against using thumbnail URLs as final assets. This change aims to improve the quality of images used in applications."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#80",
       "title": "Enhance WeChat 4.0 Quick-Login with OCR Detection in Wisdom 🚀",
       "tags": [
