@@ -3,6 +3,22 @@
   "date": "2026-07-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#280",
+      "title": "Boost AuthBackend Performance with WSGI gthread in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "performance",
+        "backend",
+        "deployment",
+        "hpa",
+        "gunicorn"
+      ],
+      "public": false,
+      "summary": "This update enhances the AuthBackend by switching from ASGI to WSGI with gthread, allowing for a significant increase in concurrent request handling from 8 to 64 slots. Key changes include modifications to the Dockerfile, deployment configurations, and the introduction of Horizontal Pod Autoscaling (HPA) to manage load effectively. These improvements ensure smoother login experiences and better resource management without altering client interactions."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#890",
       "title": "Optimize Application List Performance in Backend 🚀",
       "tags": [
