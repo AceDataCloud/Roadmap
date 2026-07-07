@@ -3,6 +3,71 @@
   "date": "2026-07-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#84",
+      "title": "Unlock WeChat 4.0 Sessions and Messages via UIA in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "uia",
+        "automation",
+        "api",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a new reader for WeChat 4.0 that allows direct access to chat sessions and messages without needing a WCDB decryption key. Key features include the ability to read session details and open messages, with enhanced error handling and testing. The API now returns real conversation names and statuses, significantly improving user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#892",
+      "title": "Enhance Maestro Videos API with Style Enum in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "backend",
+        "update",
+        "docs",
+        "maestro"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `style` enum to the Maestro Videos API, aligning it with the deterministic style presets from the PlatformService. The enum includes 16 distinct values, each with a detailed description, improving the clarity of the API reference and ensuring typed clients reflect the actual backend capabilities. The change maintains backward compatibility by still accepting free-text strings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1184",
+      "title": "Sync Maestro Style Dropdown with Backend Enum in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "maestro",
+        "i18n",
+        "backend",
+        "dropdown"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1184",
+      "summary": "This update synchronizes the Maestro style dropdown in Nexior with the new backend style enum, enhancing the mapping of dropdown options to actual backend capabilities. The previous options that did not correspond to any backend functionality have been removed, ensuring a more reliable user experience. Additionally, new styles such as 'glass', 'luxury', and 'swiss' have been added, with corresponding labels in multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1391",
+      "title": "Enhance Maestro Style Mapping for Consistency in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "style",
+        "maestro",
+        "visuals",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update transforms the maestro style configuration from vague free-text hints into a structured enum that maps directly to specific visual capabilities. Key changes include the restructuring of the style registry and the introduction of a new directive that ensures reproducible visual identities. Backward compatibility is maintained, allowing for seamless integration with existing styles while enhancing overall clarity and functionality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#83",
       "title": "Enhance File Transfer Safety Checks in Wisdom 🚀",
       "tags": [
