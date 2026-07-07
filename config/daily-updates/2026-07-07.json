@@ -3,6 +3,55 @@
   "date": "2026-07-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#83",
+      "title": "Enhance File Transfer Safety Checks in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "safety",
+        "testing",
+        "wechat4",
+        "file-transfer",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update implements a safety guard for the File Transfer feature, ensuring that the opened title must match '文件传输助手' or 'File Transfer' before sending messages. A new test has been added to verify that sending is aborted if the wrong chat is opened. Overall, 34 tests have passed with no issues detected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#82",
+      "title": "Enhance WeChat 4.0 Message Safety in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "safety",
+        "verification",
+        "automation",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update introduces a fail-closed verification process for sending messages via WeChat 4.0, ensuring that messages are only sent to the correct chat. Key changes include selecting the first search result and verifying the chat title before sending. This enhancement prevents accidental message leaks into incorrect conversations, significantly improving user safety."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1183",
+      "title": "Sync Maestro Scenarios and Thumbnails in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "update",
+        "maestro",
+        "taxonomy",
+        "thumbnails",
+        "captions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1183",
+      "summary": "This update realigns the Maestro scenario picker with the backend taxonomy by removing the outdated 'slideshow' option and introducing 'captions' as a first-class scenario. Additionally, generic thumbnail illustrations have been replaced with real-frame previews from generated videos, enhancing user experience by accurately representing each scenario's output."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#81",
       "title": "Streamline Wisdom Package Overlay on Boot in Wisdom 🚀",
       "tags": [
