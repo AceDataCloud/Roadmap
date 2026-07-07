@@ -3,6 +3,102 @@
   "date": "2026-07-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#80",
+      "title": "Enhance WeChat 4.0 Quick-Login with OCR Detection in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "ocr",
+        "login",
+        "automation",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces an OCR-anchored quick-login feature for WeChat 4.0, allowing the application to automatically detect and click the 'Log In' button for remembered accounts. Key changes include the addition of a new login driver and modifications to existing detection methods, ensuring seamless restoration of dropped sessions without requiring a QR scan. Comprehensive tests have been implemented to validate the functionality and prevent errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1387",
+      "title": "Enhance Imagery Requirements to Prevent False Rejections in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "imagery",
+        "maestro",
+        "platform-service",
+        "update",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a structural change to the imagery requirements in the maestro IMAGERY gate, ensuring that real imagery is sourced before video composition. The new `_fidelity_directive` function enforces rules that require real images for identifiable subjects and mandates that all assets remain within the project directory. These changes aim to reduce terminal rejects during the delivery stage, improving overall workflow efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1182",
+      "title": "Enhance Image Rendering Logic in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "nanobanana",
+        "ui",
+        "image-rendering",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1182",
+      "summary": "This update improves the image rendering logic in the nanobanana component by ensuring that images are displayed whenever valid image data exists, regardless of the success flag. The changes include the introduction of a new `showResult` condition that checks for the presence of an image URL, thus preventing valid images from being hidden due to a missing success flag. This enhancement aims to provide a more reliable user experience in the Nexior application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1386",
+      "title": "Enhance success flag handling for terminal tasks in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "nexior",
+        "testing",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where the success flag was missing in the response from the nano-banana task, causing valid results to be misinterpreted as failures. The fix ensures that the success flag is only added if it is absent, preserving explicit values set by the worker. Additionally, a regression test has been introduced to validate this behavior, alongside a corresponding frontend fix in Nexior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1388",
+      "title": "Optimize nano-banana routing for faster performance in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "performance",
+        "routing",
+        "configuration",
+        "latency",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update demotes `cqtai` to the second position in the nano-banana routing configuration to reduce latency caused by its frequent failures. By prioritizing `mountsea`, which has a better performance record, the majority of requests will now bypass the delays associated with `cqtai`. Additionally, the configuration for the `bananarouter-official` channel has been incorporated into the repository to prevent deployment issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#281",
+      "title": "Boost CPU Requests for Better HPA Stability in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "hpa",
+        "cpu",
+        "backend",
+        "performance",
+        "stability"
+      ],
+      "public": false,
+      "summary": "This update increases the CPU requests for the main container from 50m to 100m, addressing sensitivity issues with the Horizontal Pod Autoscaler (HPA). The change ensures that the HPA only scales up under genuine load, reducing unnecessary pod spikes and maintaining a more stable performance. The limits remain unchanged at 500m, providing ample headroom for resource management."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthBackend#280",
       "title": "Boost AuthBackend Performance with WSGI gthread in Backend 🚀",
       "tags": [
