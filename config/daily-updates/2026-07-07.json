@@ -1,0 +1,85 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-07",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#890",
+      "title": "Optimize Application List Performance in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "performance",
+        "backend",
+        "optimization",
+        "serializer",
+        "queryset"
+      ],
+      "public": false,
+      "summary": "This update significantly improves the performance of the application list endpoint by addressing the N+1 query problem. Key changes include memoizing results in the serializer and optimizing the queryset with `select_related` and `prefetch_related` to reduce database hits. The modifications have been validated with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#889",
+      "title": "Boosted Concurrency and Health Checks in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "performance",
+        "backend",
+        "scalability",
+        "health-check",
+        "hpa"
+      ],
+      "public": false,
+      "summary": "This update enhances the platform's backend by doubling the concurrency of the gunicorn workers from 4 to 8, addressing issues with request delays. A new health check endpoint has been added, along with a relaxed liveness probe to ensure better service stability under load. Additionally, a Horizontal Pod Autoscaler has been implemented to dynamically manage pod replicas based on CPU utilization."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#888",
+      "title": "Scale up platform-backend for better performance in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "deployment",
+        "scaling",
+        "backend",
+        "performance"
+      ],
+      "public": false,
+      "summary": "The deployment configuration for the platform-backend has been updated to increase the number of replicas from 2 to 4. This change enhances throughput and provides additional availability redundancy, ensuring a more robust service. The modification was straightforward and carries no logical risks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#79",
+      "title": "Enhance Live Debugging with Guarded Exec Endpoint in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "feature",
+        "debugging",
+        "api",
+        "safety",
+        "development"
+      ],
+      "public": false,
+      "summary": "This update introduces a guarded `POST /api/debug/exec` endpoint that allows for live introspection of the Wisdom appliance by executing Python code. The feature is designed to enhance development efficiency by enabling programmatic access to the WCDB schema and other data without relying on the GUI. Multiple safety measures are implemented to prevent unauthorized access and ensure stability during execution."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#78",
+      "title": "Achieve WeChat 4.0 Parity for Process and Login Detection in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "automation",
+        "testing",
+        "api",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update aligns the Wisdom API with WeChat 4.0, enhancing process and login detection capabilities. Key changes include improved process detection for both WeChat 3.x and 4.0, a new login detection method for WeChat 4.0, and refined message type mapping. Comprehensive tests have been added to ensure functionality across both versions."
+    }
+  ]
+}
