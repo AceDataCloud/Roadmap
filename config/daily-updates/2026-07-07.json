@@ -3,6 +3,136 @@
   "date": "2026-07-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#85",
+      "title": "Enhance WeChat 4.0 Key Scanning Efficiency in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "wcdb",
+        "memory",
+        "performance",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a robust single-pass memory scanning method for WeChat 4.0's WCDB raw keys, significantly improving the efficiency of key extraction. The new approach utilizes a salt-anchored scan that reduces the number of full memory scans from 17 to just one, ensuring accurate key retrieval while maintaining existing verification processes. Validation tests confirm successful extraction of all database keys in a fraction of the time previously required."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#203",
+      "title": "Introducing Cost Estimation API for Maestro in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "api",
+        "cost-estimation",
+        "maestro",
+        "index",
+        "feature"
+      ],
+      "public": false,
+      "summary": "We've added a new `POST /maestro/estimates` API to provide cost predictions before video production. This feature leverages a planner agent to analyze project briefs and estimate delivery parameters, allowing users to see potential costs based on their specifications. The estimated cost is significantly lower than actual video production, enhancing user decision-making and budgeting."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#201",
+      "title": "Enhance Reseller Wholesale Design for Nexior in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "design",
+        "reseller",
+        "wholesale",
+        "compliance",
+        "Nexior"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive design document for the reseller wholesale model, addressing key client requirements. It includes new architecture, compliance measures, and risk assessments to ensure a seamless integration of the funding pool mechanism. The changes aim to enhance the platform's capabilities while maintaining existing functionalities and compliance standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1186",
+      "title": "Enhance Usage Analytics with Dynamic Views in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "analytics",
+        "i18n",
+        "csv",
+        "auto-refresh"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1186",
+      "summary": "This update introduces a comprehensive three-view card for usage analytics, featuring trend, share, and breakdown visualizations. It also adds an auto-refresh toggle for real-time data updates and streamlines CSV export functionality. Additionally, the update enhances internationalization support across 18 languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#638",
+      "title": "Enhance GA4 Tracking for Key Events in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "analytics",
+        "telemetry",
+        "ga4",
+        "frontend",
+        "tracking"
+      ],
+      "public": false,
+      "summary": "This update introduces GA4 business-event tracking for critical nodes within the application, enhancing our telemetry capabilities. Key events such as API key creation and order creation are now tracked and sent to both RUM and GA4, providing valuable insights for the marketing dashboard. The implementation ensures that sensitive information is not exposed, maintaining user privacy while improving analytics accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1185",
+      "title": "Integrate GA4 Tracking for Enhanced Analytics in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "analytics",
+        "ga4",
+        "tracking",
+        "nexior",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1185",
+      "summary": "This update implements Google Analytics 4 tracking in Nexior by injecting the gtag.js script into the index.html file. The integration uses lazy loading to ensure that analytics requests do not block page rendering, especially in regions with network restrictions. Key changes include the addition of a new JSON change file and modifications to the HTML head section for seamless tracking."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#184",
+      "title": "Integrate GA4 Tracking for Enhanced Analytics in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "analytics",
+        "frontend",
+        "google-analytics",
+        "tracking",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update introduces Google Analytics 4 tracking to the auth.acedata.cloud platform, allowing for improved data collection alongside existing Baidu statistics. The integration employs lazy loading for the GA4 script to ensure that it does not block page rendering or load events, even in cases of slow network conditions. Key changes were made to the index.html file to implement this functionality seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#637",
+      "title": "Integrate GA4 Tracking for Enhanced Analytics in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "analytics",
+        "frontend",
+        "vue",
+        "tracking",
+        "gtag"
+      ],
+      "public": false,
+      "summary": "This update integrates Google Analytics 4 tracking into the platform by injecting the gtag.js snippet into the `index.html` file. This change ensures that analytics data is collected across the entire site without affecting existing scripts. The implementation is designed to be efficient and compliant with the platform's architecture."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#84",
       "title": "Unlock WeChat 4.0 Sessions and Messages via UIA in Wisdom 🚀",
       "tags": [
