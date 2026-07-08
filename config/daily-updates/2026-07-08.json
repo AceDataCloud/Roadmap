@@ -3,6 +3,53 @@
   "date": "2026-07-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#98",
+      "title": "Enhance WeChat 4.0 Message Delivery Reliability in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "bugfix",
+        "automation",
+        "ui",
+        "reliability"
+      ],
+      "public": false,
+      "summary": "This update resolves issues with message delivery in WeChat 4.0, where messages were reported as sent without actually being delivered. Key improvements include a new method to ensure the WeChat window is in the foreground before sending messages, and a verification step to confirm that messages appear in the chat. These changes enhance the reliability of the messaging functionality and prevent false success reports."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#210",
+      "title": "Introducing Platform Collect + Revenue Share Model in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "design",
+        "revenue",
+        "platform",
+        "billing"
+      ],
+      "public": false,
+      "summary": "This update introduces a new design document for the platform collect and revenue share model, complementing the existing reseller-collect approach. Key changes include a zero-cost model for site owners, where earnings are settled based on consumption rather than upfront payments. The document outlines critical adjustments made during the review process to ensure financial viability and compliance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1405",
+      "title": "Streamline Image Handling by Omitting Response Format in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "image",
+        "update",
+        "testing",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update removes the `response_format` parameter for official images, ensuring that the `gpt-image-2:official` model operates smoothly on the official/vip relay path. It introduces local handling for `b64_json` and URL formats, preventing dead links from being returned. Focused tests have been added to validate the new behavior and ensure robust handling of upstream requests."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#471",
       "title": "Update duration field to integer type in Clis 🎉",
       "tags": [
