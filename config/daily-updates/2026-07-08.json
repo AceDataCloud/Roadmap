@@ -3,6 +3,176 @@
   "date": "2026-07-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#471",
+      "title": "Update duration field to integer type in Clis 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "update",
+        "cli",
+        "documentation",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/471",
+      "summary": "This update changes the `duration` field type from float to integer, allowing a minimum value of -1 to indicate 'use server default'. Key modifications include updates to the `--duration` option in `video.py` and corresponding documentation in `README.md`. These changes enhance the clarity and functionality of the command-line interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#465",
+      "title": "Enhance Seedance Documentation in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "seedance",
+        "api",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/465",
+      "summary": "This update clarifies the Seedance guide by specifying official model-specific duration ranges and documenting the use of `duration: -1` for Seedance 1.5 Pro and 2.0 models. Additionally, it addresses the precedence of frames when both `duration` and `frames` are provided, ensuring consistency and accuracy in the documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#903",
+      "title": "Enhance Duration Rules Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "openapi",
+        "backend",
+        "schema",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update modifies the Seedance OpenAPI `duration` schema to use an integer type with a range of `[-1, 15]`. It documents official model-specific duration ranges and clarifies the auto duration support with `-1`. Additionally, the wording for duration and frames has been corrected to align with official precedence, ensuring consistency across the documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1194",
+      "title": "Enhance Seedance Auto Duration Support in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "seedance",
+        "feature",
+        "update",
+        "metadata"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1194",
+      "summary": "This update introduces model capability metadata for the official Seedance auto duration feature. The `Auto (-1)` option is now displayed exclusively for Seedance 1.5 Pro and 2.0 models, with updated duration ranges for each. Additionally, a beachball patch change file has been added to support these modifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1402",
+      "title": "Enhance Seedance Duration Rules in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "seedance",
+        "duration",
+        "validation",
+        "updates",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces support for official model-specific Seedance duration rules within the volcengine worker. It allows `duration: -1` for Seedance 1.5 Pro and 2.0 models while ensuring that duration validation respects the presence of frames. Additionally, strict integer parsing is implemented for inline duration and frames values to enhance reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1406",
+      "title": "Optimize Image Compression for GitHub Proxy in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "image-compression",
+        "github-proxy",
+        "pillow",
+        "testing",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "This update enhances the handling of inline images for GitHub proxy chat-completions by compressing trusted CDN images before inlining. The change ensures that only the GitHub proxy utilizes lossy compression, preserving original URLs for other providers. Additionally, it introduces the Pillow library to manage image processing and includes comprehensive tests to validate the new behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1195",
+      "title": "Enhance Chat Upload Error Messaging in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "chat",
+        "error-handling",
+        "user-experience",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1195",
+      "summary": "This update normalizes oversized upload errors in the chat interface, providing users with clear, actionable messages about compressing images or shortening content. The chat error copy has been updated for better user guidance, and a regression test has been added to ensure proper handling of streaming errors. These changes aim to improve user experience by preventing confusion from raw backend error messages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#469",
+      "title": "Add veo2-fast model to VEO_MODELS in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "veo",
+        "models",
+        "cli",
+        "update",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/469",
+      "summary": "This update introduces the `veo2-fast` model to the `VEO_MODELS` list, ensuring it can now be used with the CLI. The changes include updates to the output file, new tests for the `veo2-fast` model, and adjustments to the model count in the tests. This enhancement aligns the CLI with the latest API documentation and improves user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#893",
+      "title": "Fix custom-domain pricing issue for orders in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "pricing",
+        "backend",
+        "tests",
+        "utility"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical bug where custom-domain tenants were charged the official price instead of the marked-up price during order creation. The fix involves a new utility function for site resolution that ensures consistent behavior between pricing previews and order processing. Comprehensive tests have been added to confirm the correct functionality across various scenarios."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#904",
+      "title": "Docs: refresh OpenAPI examples in Backend 📝",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1403",
+      "title": "Enhance Error Handling for Large Requests in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "aichat2",
+        "http-errors",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of upstream HTTP 413 errors in the Aichat2 worker by preserving the specific error response instead of a generic one. Key changes include the introduction of a new error extraction utility and updates to the query loop to prevent misclassification of errors. This enhancement ensures users receive clearer feedback when their requests exceed size limits, improving overall user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1401",
       "title": "Enhance Fish TTS Provider and Fix Video Delivery Issues in Platform Service 🎉",
       "tags": [
