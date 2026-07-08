@@ -3,6 +3,86 @@
   "date": "2026-07-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1193",
+      "title": "Introducing nano-banana-2-lite option in Nexior 🍌",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "nanobanana",
+        "update",
+        "beachball"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1193",
+      "summary": "This update adds the `nano-banana-2-lite` model option to the Nano Banana model selector, enhancing user choice. Resolution controls are now limited to `nano-banana-2` and `nano-banana-pro`, while stale cached resolutions for 1K-only model requests have been removed. Additionally, Beachball change files have been updated to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#901",
+      "title": "Expose nano-banana-2-lite for Enhanced Image Generation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "documentation",
+        "api",
+        "cost",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces the `nano-banana-2-lite` model to the Nano Banana and OpenAI Images OpenAPI enums, allowing for cost-effective image generation at the 1K-only tier. Documentation has been updated to reflect these changes, including pricing rules and service introductions. Validation tests confirm that the new model integrates smoothly with existing functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1400",
+      "title": "Enhance BananaRouter with Nano-Banana-2-Lite Routing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "routing",
+        "feature",
+        "bananarouter",
+        "validation",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces public aliases for `nano-banana-2-lite` in the BananaRouter, allowing for improved routing capabilities. The validator now enforces a 1K-only behavior and routes lite traffic exclusively to designated channels in the failover-router configurations. Key tests have been updated to validate the new routing functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#900",
+      "title": "Update x402 Tutorials to Use New Endpoint in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "x402",
+        "update",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update modifies the x402 payment-flow tutorials to point to the new dedicated endpoint `x402.acedata.cloud`, replacing the previous `api.acedata.cloud` for tokenless requests. Key documentation files have been updated to reflect this change, ensuring users have accurate information for utilizing the x402 payment flow. The general API documentation remains unchanged, preserving the integrity of token-authenticated references."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#33",
+      "title": "Update SDK Documentation for New Endpoint in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "docs",
+        "sdk",
+        "update",
+        "endpoint",
+        "x402"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/33",
+      "summary": "This update points the X402Client SDK documentation, examples, and test scripts to the new dedicated endpoint `x402.acedata.cloud`, replacing the previous `api.acedata.cloud`. Key changes include modifications to READMEs, demo documentation, and various test scripts to ensure compatibility with the new endpoint while keeping the SDK core unchanged. This transition enhances the security and clarity of x402 payment requests."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#639",
       "title": "Stripe Payments Temporarily Disabled in Frontend Web 🚫",
       "tags": [
