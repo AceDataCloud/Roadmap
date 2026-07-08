@@ -3,6 +3,101 @@
   "date": "2026-07-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#642",
+      "title": "Update model comparisons and hero text in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "feature-flag",
+        "i18n",
+        "compliance"
+      ],
+      "public": false,
+      "summary": "This update removes the misleading 'cheaper than direct' claim from the hero subtitle across all locales and introduces a feature flag for the 'vs official' price comparisons. When the flag is off, only AceData's prices will be displayed, ensuring compliance with Stripe's guidelines. The changes enhance clarity and maintain a clean user experience while allowing internal testing of the comparison feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#643",
+      "title": "Added third-party trademark notice in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "footer",
+        "trademark",
+        "i18n",
+        "compliance",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces a third-party trademark notice in the site footer, ensuring compliance with Stripe regulations. The notice is now available in all 12 locales, clearly stating that third-party product names and logos are used for identification purposes only. This change enhances transparency and aligns with industry standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#641",
+      "title": "Reorder Models and Update Services Label in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "navigation",
+        "i18n",
+        "ui"
+      ],
+      "public": false,
+      "summary": "The top navigation has been updated to place **Models** as the first item, followed by **Services**. Additionally, the zh-CN label for Services has been simplified from 「所有服务」 to 「服务」, while the English label remains unchanged. These changes enhance the visibility of the Models section on the developer portal."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#640",
+      "title": "Removed Dataset Type Tab from Services Directory in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "seo",
+        "compliance",
+        "ui",
+        "services"
+      ],
+      "public": false,
+      "summary": "This update eliminates the Dataset service-type tab from the public services directory, ensuring compliance with Stripe regulations. The change also removes 'dataset' from the SEO keywords, effectively closing the last public access point to Dataset services. All Dataset services remain private at the database level, enhancing intellectual property protection."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#95",
+      "title": "Enhance WeChat 4.0 Group Management with Invite/Remove Features in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "group-management",
+        "ui-automation",
+        "features",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces the ability to invite and remove group members in WeChat 4.0, along with a new rename functionality. The changes include UIA-driven interactions for member management and improved reliability in UI handling. Extensive testing has been conducted to ensure the robustness of these new features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#467",
+      "title": "Exciting Update: Added nano-banana-2-lite Model in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "update",
+        "cli",
+        "models",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/467",
+      "summary": "This update introduces the `nano-banana-2-lite` model to both the nanobanana and OpenAI CLIs, enhancing the model offerings. Key changes include updates to the model lists in the respective CLI output files and adjustments to the test cases to reflect the new model count. This addition aims to improve user experience by providing more options for image generation."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1193",
       "title": "Introducing nano-banana-2-lite option in Nexior 🍌",
       "tags": [
