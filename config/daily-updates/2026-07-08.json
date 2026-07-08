@@ -3,6 +3,100 @@
   "date": "2026-07-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1401",
+      "title": "Enhance Fish TTS Provider and Fix Video Delivery Issues in Platform Service 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "tts",
+        "bugfix",
+        "video",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces critical fixes for the Fish TTS engine provider, ensuring that silent renders are eliminated by prioritizing Fish as the primary provider. Additionally, it addresses the issue of delivered videos being incorrectly marked as failed by allowing URL-only variants to be recognized, enhancing the overall reliability of video processing. Comprehensive tests confirm that these changes are effective and maintain system integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#97",
+      "title": "Enhance Group Rename Functionality in Wisdom 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "wechat",
+        "automation",
+        "testing",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update fixes the group renaming feature in WeChat 4.0.6.33, ensuring that the inline editor opens correctly and the rename action is confirmed through a dialog. Key changes include improved mouse movement handling with SendInput and adjustments to the click coordinates for better accuracy. The implementation has been validated with updated tests, confirming that the rename operation now works as intended."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#647",
+      "title": "Clean Up Navigation by Removing ACE Token in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "navigation",
+        "cleanup",
+        "ui"
+      ],
+      "public": false,
+      "summary": "The hardcoded ACE Token item has been successfully removed from the shared top navigation header. This change simplifies the navigation and enhances user experience by decluttering the interface. Validation checks confirm no errors in the modified component."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#646",
+      "title": "Enhance spacing for discount callout in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "css",
+        "frontend",
+        "ui",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces additional spacing below the volume discount callout on the models page, improving the visual layout before the Top-up selector. The change was made in the CSS of the List.vue component, ensuring a cleaner and more user-friendly interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#96",
+      "title": "Enhance Language and DPI Support in Wisdom 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "enhancement",
+        "dpi",
+        "language",
+        "ui",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update strengthens the confirm button functionality in the group picker by ensuring it is language-proof and adapts to DPI settings. Key changes include a new method for identifying the confirm button that prioritizes text matches and a fallback mechanism to prevent incorrect actions. Additionally, the Y offset for group name positioning now scales with DPI, improving overall robustness."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#902",
+      "title": "Enhance Terms with IP & Trademarks Section in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "terms",
+        "legal",
+        "localization",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces an \"Intellectual Property & Trademarks\" section to the Terms of Service, clarifying the ownership of third-party product names and ensuring compliance with nominative fair use. The change has been localized for all 18 languages and is now live across the platform, enhancing transparency for users regarding brand affiliations."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#642",
       "title": "Update model comparisons and hero text in Frontend Web 🚀",
       "tags": [
