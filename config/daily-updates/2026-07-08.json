@@ -3,6 +3,215 @@
   "date": "2026-07-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#94",
+      "title": "Enhance Group Chat Creation for WeChat 4.0 in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "feature",
+        "wechat",
+        "automation",
+        "testing",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update fixes group chat creation issues in WeChat 4.0 by implementing a deep-walk method to access the UI tree, allowing for proper interaction with the new Quick Actions menu. Key changes include the ability to locate and select contacts using CheckBox states and a more flexible window-relative layout. The implementation has been validated with live tests and comprehensive mock tests, ensuring robust functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#45",
+      "title": "Enhance Docker Push Reliability in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "ci",
+        "docker",
+        "deploy",
+        "timeout",
+        "retries"
+      ],
+      "public": false,
+      "summary": "This update introduces a retry mechanism for the Docker image push process in the deploy workflow, addressing timeout issues that caused previous deployment failures. By setting the `COMPOSE_HTTP_TIMEOUT` and `DOCKER_CLIENT_TIMEOUT` to 600 seconds and implementing a three-attempt retry loop, we aim to ensure smoother deployments and prevent outages related to Docker image pushes. This change mirrors a successful strategy already in use in the PlatformBackend workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#184",
+      "title": "Enhance x402 Payment Challenge Handling in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "enhancement",
+        "gateway",
+        "x402",
+        "security",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces host-gating for x402 payment challenges, ensuring that only allowlisted hosts receive a 402 response for tokenless requests. Other hosts will return a standard 401, preventing exposure of the crypto-payment surface. Key changes include modifications to the Kong custom-auth plugin and the introduction of a new X402_HOSTS setting for better control over payment challenge responses."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#899",
+      "title": "Revamp PayPal Feature Control in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "refactor",
+        "paypal",
+        "featureflag",
+        "backend",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update transitions PayPal from a legacy environment flag to a dynamic FeatureFlag system, enhancing control over its availability. The legacy settings have been removed, and a server-side guard has been implemented to ensure that both the UI and API are synchronized in enabling or disabling PayPal. This change improves security and streamlines feature management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#93",
+      "title": "Clean Up WeChat4 UI Codebase in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "refactor",
+        "cleanup",
+        "wechat4",
+        "ui",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update removes dead code related to the coordinate/OCR send and open driver from the WeChat4 UI module, streamlining the codebase. Key functions and imports that are no longer used have been deleted, and the remaining code is focused solely on the login flow. The changes have been validated with a full mock suite, ensuring no functional impact on existing features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1191",
+      "title": "Enhance Motion Control with Model Version Selector in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "motion-control",
+        "i18n",
+        "ui",
+        "billing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1191",
+      "summary": "This update introduces a model version selector for Kling Motion Control, allowing users to choose between Kling 2.6 and Kling 3.0. The selector updates the per-second pricing display based on the selected model, enhancing the user experience and ensuring accurate billing. Additionally, internationalization support has been added for all 18 locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#898",
+      "title": "Enable PayPal Payment Option in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "payment",
+        "paypal",
+        "backend",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces the PayPal payment option as a backup for Stripe in the production environment by setting the `FEATURES_ENABLE_PAYPAL` flag to true. This change allows the frontend to display the PayPal button and route payments through the PayBackend service, ensuring continuity during Stripe outages. Careful deployment is required to avoid exposing a non-functional PayPal option to users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#44",
+      "title": "Enhance Payment Options with PayPal Integration in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "payment",
+        "paypal",
+        "stripe",
+        "deployment",
+        "k8s"
+      ],
+      "public": false,
+      "summary": "This update mounts PayPal REST credentials as a backup payment option in both production and test environments. The changes ensure that the PayPal integration can be utilized when Stripe encounters issues, enhancing payment reliability. The deployment includes necessary secret configurations to support this functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#92",
+      "title": "Enhance File Sending via UIA in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "feature",
+        "wechat",
+        "uia",
+        "automation",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update completes the migration of file sending functionality to UI Automation (UIA) for WeChat 4.0. Key changes include the introduction of a new method for sending files, which integrates seamlessly with the existing chat input field. The update also ensures robust validation and error handling, enhancing the overall reliability of file transfers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#897",
+      "title": "Enhance Pricing Model for Kling Motion Control in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "billing",
+        "kling",
+        "backend",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces a model version dimension to Kling Motion Control billing, aligning it with official retail pricing and ensuring a ~15% margin on the largest top-up package. Key changes include updated billing rates for different model versions, allowing for more accurate pricing based on the model used. The default model now provides lower costs for callers, while explicit requests for newer models reflect their true pricing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#206",
+      "title": "Revamping Nexior's Cost Estimation Flow in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "nexior",
+        "ux",
+        "design",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a two-step process for cost estimation in Nexior, enhancing user interaction. Users will now receive a confirmation prompt before generating tasks, which will only run after a separate 'start' action. Additionally, outdated static cost displays have been removed to streamline the experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1190",
+      "title": "Enhance Maestro API with Estimation and Cleanup in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "api",
+        "feature",
+        "cleanup",
+        "maestro",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1190",
+      "summary": "This update introduces the `maestroOperator.estimate()` and `start()` APIs, allowing for a two-phase estimation process for tasks. Additionally, the old static cost display in the ConfigPanel has been removed, streamlining the user experience by relying on the new estimation workflow. These changes set the stage for future interactive features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1398",
+      "title": "Implement Two-Phase Estimate Workflow in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "bugfix",
+        "api",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces a two-phase task workflow for estimates in the Platform Service, allowing users to transition from estimate to park before generating. Key changes include the addition of a new endpoint for creating startable tasks and improvements to task handling to prevent premature billing. The implementation also addresses critical bugs and ensures that parked tasks are not reclaimed or billed incorrectly."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#91",
       "title": "Enhance WeChat 4.0 Conversation Handling in Wisdom 🚀",
       "tags": [
