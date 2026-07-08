@@ -3,6 +3,197 @@
   "date": "2026-07-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#91",
+      "title": "Enhance WeChat 4.0 Conversation Handling in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "ui-automation",
+        "enhancement",
+        "bugfix",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update migrates the conversation opening and sending functionality in WeChat 4.0 to a more reliable UI Automation (UIA) method, eliminating the previous coordinate and OCR dependencies. Key changes include the introduction of deterministic methods for opening conversations and sending messages, along with improved error handling for flaky UI reads. The enhancements ensure that messages are sent only when the correct chat is open, significantly improving user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#465",
+      "title": "Enhance Motion Command with New API Features in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "feature",
+        "cli",
+        "api",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/465",
+      "summary": "This update synchronizes the CLI's motion command with the latest OpenAPI specifications, introducing new options for model selection and watermark configuration. Key changes include the addition of `--model-name` and `--watermark-info` options, enhancing user flexibility and functionality. Comprehensive tests have been added to ensure the reliability of these new features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1188",
+      "title": "Update Motion Control Pricing to Per-Second Rates in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "pricing",
+        "motion-control",
+        "ui-update",
+        "i18n",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1188",
+      "summary": "This update modifies the pricing display for the Motion Control feature in Nexior to reflect a per-second billing model instead of a fixed estimate. The changes include updates to the `MotionPanel.vue` and `Consumption.vue` components, ensuring users see accurate pricing based on video duration. Additionally, internationalization support has been added for all 18 locales to communicate this new pricing structure effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#896",
+      "title": "Enhance OpenAPI Spec with Model and Watermark Info in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "openapi",
+        "documentation",
+        "backend",
+        "kling",
+        "translations"
+      ],
+      "public": false,
+      "summary": "This update adds two new parameters, `model_name` and `watermark_info`, to the `/kling/motion` OpenAPI specification, ensuring documentation parity with the upstream Kling API. Additionally, matching zh-CN translation keys have been introduced. These changes enhance the clarity and usability of the API for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1396",
+      "title": "Enhance Kling Motion Control with New Params in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "kling",
+        "api",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces the `model_name` and `watermark_info` parameters to the Kling Motion Control API, ensuring it aligns with the upstream API. The changes allow users to specify the model version and request watermarked results, addressing gaps identified in customer reports. The implementation is safe, with careful exclusion of sensitive parameters to prevent cross-tenant data leaks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1189",
+      "title": "Unblock Android Production Promotion & iOS Review Submission in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "android",
+        "ios",
+        "release",
+        "automation",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1189",
+      "summary": "This update resolves critical issues preventing the automatic release of Android and iOS applications. For Android, the dispatch process has been modified to promote builds from beta to production, ensuring new releases are successfully deployed. On the iOS side, the submission process has been enhanced to handle existing editable versions, allowing for smoother app review submissions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1397",
+      "title": "Enhance OpenAI Checker Recovery Mechanism in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "enhancement",
+        "testing",
+        "openai"
+      ],
+      "public": false,
+      "summary": "This update introduces a new recovery mechanism for the OpenAI checker, allowing it to recover from a demoted state after a specified number of consecutive successful checks, regardless of the current failure score. This change addresses a critical issue where a healthy upstream account was incorrectly marked as invalid due to prolonged outages, ensuring more reliable account validation. The implementation includes additional tests to verify the new functionality and prevent future regressions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#183",
+      "title": "Enable Free Cost Estimates in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "api",
+        "gateway",
+        "estimates",
+        "authentication"
+      ],
+      "public": false,
+      "summary": "The /maestro/estimates API has been added to the SKIP_AUTH_API_IDS, allowing users to access cost estimates without balance checks or billing while retaining user identity for rate limiting. This change ensures that the endpoint is fully operational and verified, returning a successful response with an estimate ID. The integration with Kong routing is also live, enhancing the overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#205",
+      "title": "Enhance PR Guidelines for Follow-Up Commits in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "guidelines",
+        "workflow",
+        "best-practices"
+      ],
+      "public": false,
+      "summary": "This update introduces critical guidelines in the AGENTS.md document regarding follow-up commits on merged or closed PR branches. It emphasizes the importance of checking the PR status before pushing changes to avoid potential issues with the main branch's history. These changes aim to streamline the workflow and prevent errors during the review process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#204",
+      "title": "Documentation Sync for Reseller-Wholesale Changes in Index 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "sync",
+        "reseller",
+        "wholesale",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update synchronizes documentation for the reseller-wholesale implementation, correcting previous misalignments. Key changes include renaming 'authorized_application' to 'sponsor_application' and updating design documents to reflect new binding rules for superusers. The modifications ensure clarity and consistency across the documentation without altering any underlying code logic."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#182",
+      "title": "Enhance Reseller Pool Functionality in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "enhancement",
+        "reseller",
+        "gateway",
+        "transactions",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces significant enhancements to the reseller pool functionality, including the atomic double-ledger mechanism to ensure consistent transactions. Key changes include the addition of new utility functions for settlement modes and improved transaction handling in the application update process. Comprehensive tests have been added to validate these changes, ensuring robust performance and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#894",
+      "title": "Enhance Reseller Authorization Logic in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "security",
+        "migration",
+        "reseller"
+      ],
+      "public": false,
+      "summary": "This update introduces a new reseller authorization pointer within the application model, allowing for a flexible association between user applications and reseller pools. Key changes include the addition of a nullable foreign key for authorized applications, a new settlement mode utility, and enhanced security measures for the authorization endpoint. The migration and serializer updates ensure that normal user behavior remains unchanged while enabling reseller functionalities."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#90",
       "title": "Enhance WeChat 4.0 Search with DB Support in Wisdom 🚀",
       "tags": [
