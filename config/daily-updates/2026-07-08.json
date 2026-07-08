@@ -1,0 +1,183 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-08",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#90",
+      "title": "Enhance WeChat 4.0 Search with DB Support in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "feature",
+        "wechat",
+        "search",
+        "database",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a new DB-backed search functionality for WeChat 4.0, allowing for efficient and deterministic contact and group searches. The implementation includes a case-insensitive search across various contact fields and maintains the existing 3.x search behavior. Comprehensive tests have been added to ensure reliability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#89",
+      "title": "Enhance WeChat 4.0 Sending with UIA Driver in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "uia",
+        "automation",
+        "testing",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a robust UIA send driver for WeChat 4.0, replacing fragile coordinate clicks with reliable input controls. Key features include a fail-closed title gate that ensures messages are only sent to the correct chat, enhancing accuracy and safety. Extensive testing confirms functionality and reliability, paving the way for future enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1187",
+      "title": "Enhance Narration Experience with Voice Selector in Nexior 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "maestro",
+        "audio",
+        "i18n",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1187",
+      "summary": "This update introduces a narration voice selector to the Maestro config panel, featuring a dropdown of nine curated voices along with an audio preview option. Key changes include updates to the Maestro constants, models, and the ConfigPanel component, ensuring a seamless user experience. The addition of internationalization support enhances accessibility across 17 locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#895",
+      "title": "Enhance Maestro OpenAPI with Voice Enum in Backend 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "openapi",
+        "maestro",
+        "backend",
+        "enhancement",
+        "voice"
+      ],
+      "public": false,
+      "summary": "This update introduces an optional **voice** parameter to the Maestro Videos OpenAPI, featuring 9 curated preset keys for narration timbre. It also supports a raw 32-hex Fish reference_id. This change aligns with the recent updates in PlatformService and the Nexior UI, ensuring a more versatile user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1395",
+      "title": "Enhance voice timbre with language-agnostic presets in Platform Service 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "voice",
+        "timbre",
+        "language-agnostic",
+        "update",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update decouples voice timbre from language, allowing the same Fish reference_id to produce audio in multiple languages. New language-agnostic presets have been introduced, including various male and female voice options. The registry has been updated to remove per-voice language specifications, and tests have been adjusted accordingly, ensuring robust functionality across different languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1393",
+      "title": "Introducing Bottom-Up Cost-Estimate API in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "api",
+        "cost-estimate",
+        "maestro",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update adds a new API endpoint, `POST /maestro/estimates`, which provides users with a detailed cost estimate before placing an order. The implementation includes a planner agent that predicts the cost based on actual API usage and a bottom-up pricing mechanism that retrieves real-time service costs from AceData Cloud. This feature enhances user experience by allowing for informed decision-making without incurring charges for estimates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#88",
+      "title": "Enhance WeChat 4.0 Messaging with Sender Info in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "messaging",
+        "features",
+        "updates",
+        "enhancements"
+      ],
+      "public": false,
+      "summary": "This update introduces message direction and sender identity for WeChat 4.0, enhancing user experience by resolving sender names from the decrypted WCDB. Key changes include the addition of `real_sender_id`, `sender_username`, and `sender_name` in message handling, allowing for clearer differentiation between self and friend messages. Comprehensive tests confirm the functionality across various scenarios, ensuring robust performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#87",
+      "title": "Enhance WeChat 4.0 with Real Names and Contacts in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "contacts",
+        "database",
+        "features",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update introduces significant enhancements to WeChat 4.0 by integrating real conversation names and contact information from the decrypted WCDB. The `list_conversations()` and `list_contacts()` functions now return accurate names and types, improving user experience. Additionally, the changes ensure robust validation through extensive testing, confirming the functionality of the new features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#86",
+      "title": "Pin WeChat Version to Prevent Auto-Updates in Wisdom 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "update",
+        "script",
+        "appliance",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update modifies the startup script to block WeChat's auto-update CDN, ensuring that the installed version 4.0.6.33 remains intact. The change is idempotent and self-healing, allowing existing installations to revert to the pinned version on the next boot. Importantly, messaging functionality remains unaffected as only the update hosts are null-routed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1394",
+      "title": "Enhance Blank Render Detection in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "testing",
+        "refactor",
+        "video",
+        "delivery"
+      ],
+      "public": false,
+      "summary": "This update introduces a new threshold for detecting near-black renders in the maestro delivery gate. By adding a mean brightness check, videos that are predominantly black will now be rejected during preflight, preventing them from being delivered as successful outputs. The changes include refactoring existing checks into a unit-testable helper function and implementing regression tests to ensure reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1392",
+      "title": "Enhance Narration Options with User-Selectable Voices in Platform Service 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "narration",
+        "voice",
+        "maestro",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces a new optional `voice` parameter in Maestro, allowing users to select from a curated catalog of professional voices for narration. The implementation includes validation and normalization functions to ensure safe input, while maintaining backward compatibility for existing clients. Comprehensive tests have been added to ensure functionality and stability."
+    }
+  ]
+}
