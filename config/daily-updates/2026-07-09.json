@@ -3,6 +3,37 @@
   "date": "2026-07-09",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#113",
+      "title": "Enhance WeChat 4.0 Message Handling and Fix Startup Issues in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "enhancement",
+        "wechat",
+        "startup",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update addresses two critical issues in WeChat 4.0: correcting message sender attribution and preventing startup hangs. The sender/direction attribution was fixed by aligning message database row IDs, ensuring accurate message display. Additionally, startup processes were optimized to avoid blocking calls, allowing the application to launch successfully even under slow conditions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#685",
+      "title": "Enhance Auth Iframe Behavior in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "auth",
+        "frontend",
+        "update",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update modifies the authentication iframe behavior by ensuring that the default providers remain visible on the main Platform host. Specifically, it prevents the passing of the `site` parameter when the iframe is opened on the official Platform, while still allowing white-label hosts to customize their branding. This change enhances user experience by keeping Google as a login option for the main Platform login test."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1213",
       "title": "Enhance Web Login with Iframe Support in Nexior 🚀",
       "tags": [
