@@ -3,6 +3,228 @@
   "date": "2026-07-09",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#106",
+      "title": "Fixed English WeChat QR Login Detection in Wisdom 🔐",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "qr",
+        "authentication",
+        "ocr",
+        "bugfix",
+        "testing"
+      ],
+      "public": false,
+      "summary": "Updated QR page detection to recognize the English \"Scan to log in\" label used by WeChat 4.0, preventing login QR requests from being misclassified. The change resolves failures in the authentication QR endpoint on fresh English installations by prioritizing the correct QR anchors. A new test covers the reported OCR output to verify the fix and prevent regressions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#188",
+      "title": "Made Billing Profiles Always Visible in Frontend Web 🧾",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "billing",
+        "navigation",
+        "feature-flags",
+        "vue"
+      ],
+      "public": false,
+      "summary": "The billing profiles navigation item is now always visible by removing the invoice feature flag check. This makes the existing billing page consistently accessible from the user navigation and also cleans up the unused feature flag import. The change was verified with linting and type checking."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#220",
+      "title": "White-Label Progress Moves Forward in Index 📈",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "white-label",
+        "progress",
+        "tracking",
+        "planning"
+      ],
+      "public": false,
+      "summary": "The white-label progress tracker was updated to reflect that Wave 1 has been fully merged. It also records Wave 2 review status, with pending reviews highlighted for the remaining work. The documentation now provides a clearer snapshot of completed milestones and the current review queue."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#674",
+      "title": "Enhance White-Label Footer Customization in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "white-label",
+        "branding",
+        "footer",
+        "customization"
+      ],
+      "public": false,
+      "summary": "This update allows the white-label developer portal to hide our legal identity in the footer, including company name and ICP registration, while maintaining default behavior when branding is not configured. Key modifications include updates to the `ISiteBranding` interface and the footer component to conditionally render branding information based on new flags. This ensures a cleaner presentation for white-label users without compromising existing functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1209",
+      "title": "Enhance White-Label Sharing Links in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "white-label",
+        "sharing",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1209",
+      "summary": "This update modifies the distribution sharing links to prevent the exposure of the `share.acedata.cloud` domain for white-label sites. Instead, these sites will retain a neutral short URL, while official sites will continue to use the branded domain. The change involves a simple logic adjustment in the code, ensuring a seamless experience for both types of users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#673",
+      "title": "Enhanced Invoice Dialog and Order List Features in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "invoice",
+        "frontend",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update refines the invoice application dialog by centering its layout and improving the eligibility message for clarity. Additionally, a new button has been added to the order list for eligible orders, allowing users to apply for invoices directly from the list. These changes enhance user experience and ensure accurate information is presented."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#918",
+      "title": "Enhance Order List with Active Invoice Details in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "optimization",
+        "invoice"
+      ],
+      "public": false,
+      "summary": "This update refines the order list API by integrating active invoice information directly into each order row. The `OrderIndexSerializer` now includes a method to fetch the active invoice's brief details, improving efficiency by eliminating unnecessary data fetching on the frontend. Additionally, the queryset is optimized to prefetch active invoices, ensuring no N+1 query issues arise."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#921",
+      "title": "Unify Stripe Webhook Paths for Consistency in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "webhook",
+        "stripe",
+        "backend",
+        "refactor",
+        "urls"
+      ],
+      "public": false,
+      "summary": "This update aligns the Stripe webhook paths for both orders and invoices to a consistent format of `/<resource>/stripe/webhook/`. The invoice path has been modified, and the order detail action has been refactored to eliminate magic strings. This change enhances clarity and maintainability while ensuring existing functionality remains intact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#186",
+      "title": "Enhance Invoice Header Form Experience in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "billing",
+        "frontend",
+        "ui",
+        "i18n",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update refines the invoice header form based on user feedback, addressing issues such as empty states and field order. Key improvements include mandatory fields for special invoices, enhanced auto-completion for registered headers, and a more user-friendly layout for international addresses. Additionally, the update ensures compliance with internationalization standards across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#219",
+      "title": "Update on White-Label Progress in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "white-label",
+        "progress",
+        "Nexior"
+      ],
+      "public": false,
+      "summary": "The white-label README has been updated with the latest progress on key items. Notably, the Nexior branding features are under review, including the ability to hide branding elements like 'About' and 'View Code'. This update ensures that all five items in the first wave have corresponding PRs, with one already merged and others pending review."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#187",
+      "title": "Enhance Login Branding for Resellers in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "branding",
+        "frontend",
+        "login",
+        "theme",
+        "reseller"
+      ],
+      "public": false,
+      "summary": "This update introduces per-site branding for the SSO login page, allowing resellers to display their own title, favicon, and theme color. Key changes include the addition of site-specific theme handling in the login interface, ensuring a seamless branding experience without altering the default settings for the bare auth domain. The implementation is designed to maintain compatibility with existing features and enhance user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1208",
+      "title": "Empower Resellers to Hide Branding in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "branding",
+        "nexior",
+        "reseller",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1208",
+      "summary": "This update introduces functionality allowing resellers to hide AceDataCloud branding in Nexior. Key changes include the addition of new types for site branding, modifications to the About and View Code components, and the implementation of helper functions to manage branding visibility. The default behavior remains unchanged, ensuring a seamless experience for users who do not configure branding settings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#105",
+      "title": "Pin WeChat Version to Prevent Automation Breakage in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "automation",
+        "docker",
+        "update",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update introduces a new PowerShell script to disable the WeChat auto-update feature, ensuring that the application remains on a validated version. Key changes include modifications to the Dockerfiles and the addition of scripts that prevent the installation of new versions, thereby protecting the automation functionalities of Wisdom. The implementation has been validated live, confirming that the running client remains unaffected while blocking unwanted updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#104",
+      "title": "Fix transient header read issue in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "wechat",
+        "automation",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update addresses a false-negative issue when sending messages in the WeChat integration, specifically when the chat header briefly returns `None` after a prior send. The fix enhances the `_open_and_verify_title()` function to differentiate between transient reads and genuine wrong chats, ensuring messages are sent correctly. Additionally, the retry mechanism for reading chat titles has been improved, increasing the number of attempts to enhance reliability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#103",
       "title": "Fix English Shortcuts Recognition for Group Creation in Wisdom 🚀",
       "tags": [
