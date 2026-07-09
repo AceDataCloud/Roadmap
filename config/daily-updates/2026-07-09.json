@@ -3,6 +3,336 @@
   "date": "2026-07-09",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#926",
+      "title": "Enhance Site Domain Handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "security",
+        "api",
+        "refactor"
+      ],
+      "public": false,
+      "summary": "This update introduces `referer` as the preferred input for the frame ancestor API, ensuring that duplicate values are rejected. Additionally, it maintains origin normalization for full browser Referer URLs. These changes enhance security and improve the handling of frame ancestor requests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#925",
+      "title": "Enhance frame ancestor header exposure in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "security",
+        "csp",
+        "nginx",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update adds the `X-Frame-Ancestor-Origin` header to successful responses from the `/api/v1/site-domains/frame-ancestors` endpoint. This change allows the production nginx to utilize the backend-normalized origin for dynamic `frame-ancestors` Content Security Policy (CSP) configurations. The implementation has been validated with tests and is crucial for the upcoming AuthFrontend nginx CSP adjustments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#109",
+      "title": "Refactor WeChat Read Adapter and Enhance Target Resolution in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "refactor",
+        "wechat",
+        "db",
+        "enhancement",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update includes a rename of the WeChat read adapter for clarity and improved functionality. The new `resolve_target` method enhances the ability to map various identifiers to the canonical contact display name, ensuring accurate message sending. Additionally, the update drops unnecessary app-DB persistence for WeChat 4.0, streamlining the message handling process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#922",
+      "title": "Enhance iframe policy endpoint for AuthFrontend in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "security",
+        "api",
+        "backend",
+        "iframe"
+      ],
+      "public": false,
+      "summary": "This update introduces a new public endpoint at `/api/v1/site-domains/frame-ancestors` to manage iframe embedding policies for AuthFrontend. It allows first-party origins and tenant custom domains only when marked as active, while maintaining a separate Caddy TLS policy to prevent deadlocks. The changes enhance security and ensure a smoother user experience for embedded logins."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1210",
+      "title": "Enhance Web Login with Embedded Auth Iframe in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "auth",
+        "iframe",
+        "web",
+        "security",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1210",
+      "summary": "This update introduces an embedded AuthFrontend iframe for web login, improving the user experience by allowing seamless authentication without leaving the white-label host. The existing native login flow is preserved, and strict validation measures are implemented to ensure security. Additionally, a Beachball patch change file has been added to support this feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#679",
+      "title": "Enhance Portal Login with Embedded Iframe in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "auth",
+        "frontend",
+        "iframe",
+        "security",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update replaces the portal authentication redirect page with an embedded login iframe sourced from AuthFrontend. It ensures that logins are only accepted from the specified origin and iframe, while implementing a fallback to the legacy redirect if necessary. Key improvements include enhanced security measures and a smoother user experience for authentication."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#191",
+      "title": "Secure Embedded Login Route Added in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "auth",
+        "frontend",
+        "security"
+      ],
+      "public": false,
+      "summary": "We've introduced a new `/auth/embed-login` route for email and phone-only embedded logins, enhancing support for white-label hosts. The Cloudflare Worker now injects a per-request `Content-Security-Policy` for this route, ensuring secure access. Existing login behaviors remain intact for full-page and OAuth flows, with fallback mechanisms in place for app-side consumers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#680",
+      "title": "Boost UTM Attribution Dashboard for Marketing in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "marketing",
+        "analytics",
+        "dashboard",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update enhances the `/console/distribution-analytics` section by adding a new Marketing Attribution dashboard for admin users. It now displays detailed UTM source, medium, and campaign data, along with key metrics like signups and revenue. Additionally, UTM parameters are persisted on landing pages, improving tracking accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#924",
+      "title": "Enhance Marketing Attribution with New API in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "marketing",
+        "backend",
+        "feature",
+        "attribution"
+      ],
+      "public": false,
+      "summary": "This update introduces a new admin-only API endpoint at `/marketing-attribution/summary/` that groups signup cohorts by UTM parameters. It tracks signups to their corresponding usage and revenue, while also categorizing incomplete UTM data as 'unknown'. The changes improve data accuracy and provide clearer insights for marketing efforts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#283",
+      "title": "Enhance User Signup with UTM Metadata in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "auth",
+        "metadata",
+        "signup",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces the ability to accept and store UTM metadata, including `utm_medium`, for new users during signup. It ensures that blank UTM fields are allowed to prevent malformed URLs from hindering the signup process. Additionally, the serializer has been updated to handle these changes defensively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#192",
+      "title": "Enhance UTM Tracking for Signups in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "utm",
+        "signup",
+        "frontend",
+        "tracking",
+        "auth"
+      ],
+      "public": false,
+      "summary": "This update captures full UTM attribution parameters (`utm_source`, `utm_medium`, and `utm_campaign`) during the signup process in AuthFrontend. The changes ensure that UTM cookies are set atomically, preventing stale data from affecting new campaigns. This enhancement applies across various registration methods, including email, phone, and social logins."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#678",
+      "title": "Enhance Pricing Page Display in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "pricing",
+        "bugfix",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the pricing page by addressing two main issues: it now properly formats the JsonLogic rules for better readability and removes duplicate entries for internal aliases. Key changes include the addition of a utility function to filter out synthetic alias cost rules and enhancements to the rendering of pricing formulas, making them clearer for users. These adjustments ensure a more user-friendly experience on the pricing page."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#923",
+      "title": "Enhance Revenue Exclusion Logic in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "revenue",
+        "backend",
+        "exclusion",
+        "tests",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update excludes settlement-proof orders from the revenue summary when they are marked as revenue-exempt through metadata or tags. A new function has been added to streamline this exclusion process, and a regression test has been implemented to ensure the integrity of the revenue queries. These changes aim to improve the accuracy of revenue reporting."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#193",
+      "title": "Enhanced Verification Details Display in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "verification",
+        "user-experience",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces a professional verification details card that appears after successful personal and enterprise verifications. Key fields such as ID card and phone numbers are masked to maintain privacy while still providing essential proof context. The changes enhance user experience by clearly presenting verification information."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#677",
+      "title": "Refine Admin Platform Rank Card Spacing in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "admin",
+        "ui",
+        "spacing",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update tightens the vertical spacing on the `/console/admin/platform-rank` page by removing duplicated margins from summary and podium cards. It introduces a new `row-gap` for better mobile card alignment and slightly adjusts the filter row separation for consistency. These changes enhance the overall layout and visual rhythm of the admin interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#670",
+      "title": "Enhance API Documentation with Export Options in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "documentation",
+        "api",
+        "i18n",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces an 'Export API' dropdown in the API documentation header, allowing users to easily copy the OpenAPI URL, download the OpenAPI spec as JSON, and import it directly into Apifox or Postman. The dropdown is context-sensitive, appearing only when applicable, and supports multiple languages with i18n updates. Security measures have been implemented to ensure safe URL handling and clipboard operations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#108",
+      "title": "Optimize WeChat-4 Appliance Startup Window in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "deploy",
+        "kubernetes",
+        "optimization",
+        "wechat4",
+        "statefulset"
+      ],
+      "public": false,
+      "summary": "The startupProbe window for the WeChat-4 appliance has been tightened from 2 hours to 1 hour, adjusting the failureThreshold from 240 to 120. This change ensures a faster response to stuck boots while still allowing adequate time for a cold Win10 installation, which typically takes around 40 minutes. The update enhances efficiency without compromising the installation process, as pods can resume from persistent storage if restarted."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#190",
+      "title": "Fix billing profiles display issue in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "fix",
+        "billing",
+        "frontend",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the billing profiles list remained empty despite the API returning data. The parsing logic has been improved to handle responses containing `items` or `results`, ensuring that profiles are correctly populated. The fix enhances the user experience by displaying the correct billing profiles."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#189",
+      "title": "Enhance user menu with invoice icon in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "icon",
+        "frontend",
+        "ui",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update registers the invoice icon in the user menu, which previously displayed without an icon due to a missing entry in the Font Awesome library. The change ensures a more complete and visually appealing user interface. The code has been verified and is clean."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#221",
+      "title": "Documentation Update: Custom Domain Coverage in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "update",
+        "nexior",
+        "white-label"
+      ],
+      "public": false,
+      "summary": "This update modifies the white-label documentation, specifically enhancing the section on custom domains. The coverage for custom domains has been successfully implemented, with internal redirects now utilizing location.origin. A known issue remains with the order/download footer, which is noted for future attention."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#107",
+      "title": "Fix chat opening issue in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "wechat",
+        "automation",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue in WeChat where sending messages to closed group chats failed due to incorrect search handling. The search function now correctly identifies the chat box and clicks the appropriate result instead of pressing ENTER, which previously triggered an unwanted web search. Comprehensive tests have been added to ensure the functionality works as intended."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#106",
       "title": "Fixed English WeChat QR Login Detection in Wisdom 🔐",
       "tags": [
