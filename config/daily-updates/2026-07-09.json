@@ -3,6 +3,166 @@
   "date": "2026-07-09",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#476",
+      "title": "Exciting New HappyHorse CLI Package Added in Clis 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "video",
+        "ai",
+        "happyhorse",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/476",
+      "summary": "This update introduces the HappyHorse CLI package, enabling users to generate AI videos from text, images, and reference images via the AceDataCloud platform. Key commands include 'generate', 'image-to-video', and 'video-edit', along with comprehensive task management features. All OpenAPI parameters are now accessible, enhancing the CLI's functionality and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#916",
+      "title": "Inject STRIPE_WEBHOOK_SECRET for Invoice Automation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "deployment",
+        "stripe",
+        "webhook",
+        "backend",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update integrates the `STRIPE_WEBHOOK_SECRET` environment variable into the main container of the platform-backend. This change ensures that the Stripe webhook for the invoice system can verify signatures and automate invoicing without disrupting existing functionalities. The deployment has been tested successfully, confirming that the webhook now returns the correct status code."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#672",
+      "title": "Launch credential-as-authorization feature in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "ui",
+        "authorization",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "The `credauth` feature flag has been removed, making the credential-as-authorization UI fully available. Key changes include the removal of conditional gates in various components, ensuring that the Authorize page and buttons are always visible. This update streamlines the user experience without altering backend authorization processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#216",
+      "title": "Enhance Service API Mapping Documentation in Index 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "api",
+        "models",
+        "index",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update significantly improves the documentation for the service API mapping process, particularly emphasizing the importance of the `service_api_mapping.json` file as the entry point for the public `/models` AI Model Directory. Key changes include a rewrite of Step 22 to clarify the consequences of missing submissions and additional notes on media services and their branding requirements. The documentation now also addresses previously overlooked pitfalls related to syncing and media service branding."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#213",
+      "title": "Revamp White-Label Strategy with 23 Detailed Docs in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "white-label",
+        "Nexior",
+        "branding",
+        "API",
+        "custom-domain"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive breakdown of the white-label project into 23 actionable documents, aimed at ensuring that end-users and developers feel no presence of AceDataCloud. Key changes include the addition of a structured README, detailed site configuration schema, and specific implementation plans for branding, custom domains, and API management. These enhancements are designed to improve user experience and streamline the deployment of white-label solutions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#669",
+      "title": "Revamp Recharge Action Color in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "design",
+        "service"
+      ],
+      "public": false,
+      "summary": "The recharge action color for the service hero has been restored to a vibrant danger/red hue, enhancing visibility and user experience. Other actions maintain their compact sizing and primary/secondary styling. This change ensures consistency and clarity in the service interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#915",
+      "title": "Add HappyHorse Video Model to Models Directory in Backend 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "catalog",
+        "happyhorse",
+        "models",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update resolves the issue of the HappyHorse video model not appearing in the /models directory. Key changes include adding HappyHorse to the service_api_mapping.json and updating catalog.py to ensure proper display. The catalog now correctly returns seven HappyHorse video cards, enhancing user access to this model."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#914",
+      "title": "New OpenAPI Export Endpoint for Easy API Integration in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "openapi",
+        "api",
+        "documentation",
+        "backend",
+        "feature"
+      ],
+      "public": false,
+      "summary": "We've introduced a new public, read-only endpoint that provides a complete OpenAPI 3.x document for any public API documentation page. This allows users to easily import API specifications into tools like Postman and Apifox, enhancing accessibility and usability. Key changes include the addition of the `wrap_openapi()` function to ensure valid OpenAPI files and improved localization for international users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#913",
+      "title": "Enhance Language Resolution for JSON Responses in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "i18n",
+        "backend",
+        "feature",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a new language resolution mechanism in the JSONLocalizationRenderer, prioritizing the `?lang=` query parameter over the `Accept-Language` header. This allows users to specify a language directly in the URL, improving usability for scenarios like OpenAPI exports. Additionally, tests have been added to ensure the correct precedence and normalization of language selections."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#671",
+      "title": "Streamline Admin Navigation with Collapsible Group in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "admin",
+        "navigation",
+        "ui",
+        "frontend",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "The admin console's left navigation has been revamped to group superuser-only entries under a single collapsible 'Admin' header, enhancing usability. This change includes an auto-expand feature for active routes, a red badge for pending tasks, and improved keyboard accessibility. The update maintains existing functionality for non-admin users and ensures internationalization across all supported locales."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#668",
       "title": "New Invoice System Features in Frontend Web 🚀",
       "tags": [
