@@ -3,6 +3,98 @@
   "date": "2026-07-09",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Index#218",
+      "title": "Progress Update: White-Label Items in Review and Merged in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "progress",
+        "white-label",
+        "updates",
+        "nexior"
+      ],
+      "public": false,
+      "summary": "Wave 1 is making strides with item 00 now in review, focusing on the Site.branding column. Additionally, item 17, which addresses per-service pricing, has been successfully merged. These updates enhance our white-label capabilities and improve overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#919",
+      "title": "Enhance Site Branding with New JSON Field in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "branding",
+        "json",
+        "backend",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update introduces a new validated JSON field, `Site.branding`, to support per-site branding configurations. Key changes include the addition of a validator and a migration for the new field, ensuring that site owners can customize their branding without affecting existing data. Comprehensive testing has been conducted to ensure stability and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1411",
+      "title": "Enhance Task Failure Attribution in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "logging",
+        "attribution",
+        "performance",
+        "observability"
+      ],
+      "public": false,
+      "summary": "This update introduces per-task failure attribution to the maestro worker, enhancing observational logging without altering rendering behavior. It allows for clearer identification of failure causes, such as container-limit OOM or time budget issues, aiding in data-driven decision-making for resource adjustments. The implementation is purely additive and has passed all tests successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#849",
+      "title": "Enhance HappyHorse API Pricing Visibility in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "hotfix",
+        "api",
+        "pricing",
+        "backend",
+        "happyhorse"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical hotfix for the HappyHorse pricing page by ensuring that both 720P and 1080P API cost rows are visible. The changes include modifications to the API cost JSON file and the addition of tests to validate the correct display of pricing. The fix has already been applied to the production database, enhancing the user experience on the pricing tab."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#217",
+      "title": "Progress Update: Per-Service Pricing Bug Fix Submitted in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "progress",
+        "bugfix",
+        "documentation",
+        "update"
+      ],
+      "public": false,
+      "summary": "The per-service pricing bug fix for item 17 has been submitted for review in the PlatformBackend repository. The README progress has been updated to reflect this change, moving from red to yellow. Future updates will continue to track the completion of wave tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#917",
+      "title": "Fix per-service pricing bug for distributors in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "billing",
+        "tests",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical bug where the per-service markup for distributors was not being applied during order billing. Key changes include the introduction of a new function to determine effective markup ratios and modifications to the order processing logic to ensure that per-service overrides are correctly utilized. Comprehensive tests have been added to validate these changes and ensure the integrity of the billing process."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#476",
       "title": "Exciting New HappyHorse CLI Package Added in Clis 🎉",
       "tags": [
