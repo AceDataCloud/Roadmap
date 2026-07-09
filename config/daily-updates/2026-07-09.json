@@ -3,6 +3,513 @@
   "date": "2026-07-09",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#668",
+      "title": "New Invoice System Features in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "invoice",
+        "frontend",
+        "admin",
+        "feature",
+        "management"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive invoice management system on the frontend, including a new invoice application dialog and an admin management page. Users can now apply for invoices directly from the order details page, while admins gain enhanced control over invoice statuses and management. The feature is controlled by a feature flag for gradual rollout."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#46",
+      "title": "Enhance Invoice Metadata Handling in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "stripe",
+        "invoice",
+        "metadata",
+        "payment",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update integrates order metadata into the auto-generated invoice objects within the Stripe payment process. By adding `invoice_data.metadata` to the `invoice_creation` parameters, the system ensures that the PlatformBackend can reliably link invoices back to their corresponding orders. This change specifically impacts the web PaymentLink functionality, while leaving intent and automatic recharge processes unaffected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#912",
+      "title": "Exciting New Invoice System Features in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "invoice",
+        "api",
+        "backend",
+        "stripe",
+        "refund",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive backend for the invoice system, including user and admin APIs, Stripe webhook integration, and refund linkage. Key changes include the creation of new models for invoices and billing profiles, along with a robust service layer for handling invoice eligibility and status transitions. The implementation ensures a seamless experience for both users and administrators while maintaining data integrity and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#185",
+      "title": "New Independent Invoice Entry Page in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "billing",
+        "frontend",
+        "internationalization",
+        "feature-flag"
+      ],
+      "public": false,
+      "summary": "This update introduces a dedicated entry page for invoice titles at `/user/billing`, enhancing user experience by separating it from the profile section. It includes two tabs for China and overseas users, allowing for multiple invoice titles with options to add, edit, or delete. The implementation also supports internationalization across several languages and is controlled by a feature flag."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#282",
+      "title": "Enhance Billing Profiles for Invoice Management in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "billing",
+        "api",
+        "backend",
+        "features",
+        "models",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update introduces the `BillingProfile` model to manage invoice titles and addresses, supporting multiple entries per user with region-specific validations. New API endpoints for creating, updating, and deleting billing profiles have been implemented, ensuring secure access for owners only. The changes include comprehensive unit tests and migration scripts, enhancing the overall functionality of the billing system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#665",
+      "title": "Enhance Usage List with Credential ID Visibility in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "update",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces a new 'Credential ID' column to the usage list, positioned just before the created time. It displays the credential name when available, or the full credential ID otherwise, improving clarity for users. Changes have been made to both the API and Proxy usage tables, ensuring consistent labeling across languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1207",
+      "title": "Enhanced Credential Visibility in Nexior 🌟",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "localization",
+        "ui",
+        "usability"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1207",
+      "summary": "This update introduces a new column for credential visibility in Nexior's usage list, allowing users to see the credential name alongside the usage records. The change applies to both API and Proxy tables, enhancing usability and clarity. Additionally, the new feature is localized across 18 languages, ensuring accessibility for a diverse user base."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#911",
+      "title": "Enhance Documentation Links for Services in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "backend",
+        "fix",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update fixes the documentation links on the introduction pages for the services Fish, Flux, Grok, and Maestro. The '查看文档' button now directs users to the respective service's primary API documentation in a new tab, improving user experience and accessibility. No frontend changes were made, ensuring a seamless integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#214",
+      "title": "Enhance Skills with API Validation and i18n Backfill in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "skills",
+        "api",
+        "i18n",
+        "validation",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces two powerful skills: `validate-live-api` for end-to-end checks on the AceDataCloud API, and `i18n-backfill` to ensure all locales are updated with new keys from zh-CN. The `validate-live-api` skill includes features like response shape validation and JSON/Markdown reporting, while `i18n-backfill` automates the addition of missing keys without disrupting existing translations. Both skills have been thoroughly tested and are ready for deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#666",
+      "title": "Streamline Service Hero Action Buttons in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "design",
+        "accessibility"
+      ],
+      "public": false,
+      "summary": "This update enhances the service hero action buttons by compacting them to fit 3-4 actions in a single row on desktop. The two-variant color system is retained, and titles are added to buttons for better accessibility. Additionally, the margin for adjacent buttons has been reset to improve spacing control."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#99",
+      "title": "Fix global search issue in Wisdom 🔍",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "wechat4",
+        "search",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update resolves a problem where sending messages to contacts not in the recent session list failed due to the incorrect search box being used. The `_find_search_edit` function now correctly identifies the top-left global search box, ensuring successful message delivery even when the group chat-info drawer is open. All relevant tests have passed, confirming the fix's effectiveness."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#102",
+      "title": "Fix WeChat search result selection issue in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "wechat",
+        "search",
+        "tests",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update addresses a bug where the WeChat search box sometimes opened the web search page instead of the intended chat. The fix ensures that the search function now correctly identifies and skips the web search result, preventing it from being selected. Additionally, new tests have been added to verify that the web search row is ignored during selection."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#910",
+      "title": "Enhance Seedream Service Intro with 5.0 Updates in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "updates",
+        "pricing",
+        "seedream",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update enriches the Seedream service introduction by adding the new 5.0 Pro and Lite models, along with updated pricing information. The prices have been adjusted to reflect current rates, ensuring accuracy and consistency with live billing. Additionally, the documentation now features enhanced model tags and a revised FAQ section to guide users effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#211",
+      "title": "Complete Invoice System Design for Clients in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "invoice",
+        "design",
+        "stripe",
+        "billing",
+        "frontend",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive design for an invoice system aimed at clients wishing to issue invoices. Key features include a billing profile stored in the authentication database, a six-state status machine for invoice processing, and integration with Stripe for automated invoicing. The design addresses five user requirements and rectifies ten overlooked rules, ensuring a robust and compliant invoicing process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#662",
+      "title": "Redirect Empty Container Docs to First Child in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "navigation",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update addresses the issue of empty pages rendering for container documents by implementing a redirect to their first child. The changes in `Detail.vue` ensure that when a container document is accessed, it now fetches and displays the first child inline without additional requests. This enhancement improves user experience by preventing blank pages and streamlining document navigation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#909",
+      "title": "Enhance Document Detail Response with Public Children in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "optimization",
+        "serializer"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `DocumentChildSerializer` that returns public, rank-ordered children inline for container documents. By optimizing the detail response, it eliminates the need for a second request, improving performance and user experience. The changes ensure that only lightweight fields are loaded, maintaining efficiency while preventing private child leakage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#473",
+      "title": "Updated Seedream API Docs to Remove Invalid Model ID in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "docs",
+        "api",
+        "seedream",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/473",
+      "summary": "This update removes the invalid dot-form model ID `doubao-seedream-5.0-lite` from the Seedream API documentation. The change ensures that only the accepted canonical IDs are listed, aligning with the PlatformService `ALLOWED_MODELS` and improving clarity for users. This is a documentation-only update that enhances the accuracy of the API reference."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#433",
+      "title": "Streamline Seedream Model IDs for Compatibility in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "bugfix",
+        "models",
+        "cleanup",
+        "compatibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/433",
+      "summary": "This update removes invalid dot-form model IDs from the SeedreamModel, ensuring compatibility with the upstream worker. The changes include retaining only the six canonical date-suffixed IDs that are accepted, thus preventing HTTP 400 errors. The modifications also clean up related documentation and tools, enhancing overall functionality without affecting valid inputs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1410",
+      "title": "Fix Seedream 5.0 Pro Parameter Injection Issues in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "seedream",
+        "platform",
+        "production",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical bug affecting the Seedream 5.0 Pro, which was failing due to unsupported parameters being injected into requests. The fix ensures that parameters like `sequential_image_generation` and `stream` are only forwarded for models that support them, allowing the Pro model to function correctly while preserving behavior for other models. A thorough verification process confirms that existing functionalities remain intact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#664",
+      "title": "Streamline Action Button Styles in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "design",
+        "mobile",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update simplifies the action button styling in the service hero section to a two-variant visual system. The primary action now uses the site’s main color, while a translucent secondary style is applied to other buttons. Additionally, the pricing action has been removed for clarity, and button sizes have been standardized for better mobile responsiveness."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#472",
+      "title": "Exciting addition of Seedream 5.0 Pro model in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "feature",
+        "update",
+        "seedream",
+        "cli",
+        "models"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/472",
+      "summary": "This update introduces the Seedream 5.0 Pro model to the Seedream CLI, enhancing the model options available for image generation and editing. Key changes include updates to the output format help notes, README documentation, and test cases to reflect the new model. The integration ensures a seamless experience for users looking to leverage the latest capabilities of the Seedream CLI."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#470",
+      "title": "Enhance Seedream API with Pro Model in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "seedream",
+        "api",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/470",
+      "summary": "This update adds the Seedream 5.0 Pro model to the Seedream API documentation. Key changes include updates to the README and the integration guide, ensuring users can access the new model in their requests. This is a documentation-only change aimed at improving user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#432",
+      "title": "Introducing the Seedream 5.0 Pro Model in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "feature",
+        "update",
+        "seedream",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/432",
+      "summary": "We've added the Seedream 5.0 Pro model to the Seedream MCP server, enhancing our offerings with a flagship single-image generation option. Key updates include modifications to the model types, updated documentation, and a revised feature-comparison matrix. This addition aims to provide users with the highest quality output for single-image tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1206",
+      "title": "Introducing Seedream 5.0 Pro Model Option in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "localization",
+        "ui",
+        "seedream"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1206",
+      "summary": "This update adds the Seedream 5.0 Pro model option to the Studio Seedream configuration. Key changes include the addition of a new model constant, updates to the capabilities matrix, and localization support across 17 languages. This enhancement allows users to select the Pro model, which is optimized for single image output."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#907",
+      "title": "Exciting Seedream 5.0 Pro Pricing and API Updates in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "api",
+        "docs",
+        "tests",
+        "seedream"
+      ],
+      "public": false,
+      "summary": "This update introduces the Seedream 5.0 Pro pricing structure, including tiered costs based on output pixels and additional charges for extra input images. Key changes include modifications to the API cost rules, the addition of new test cases, and updated documentation for the Pro model. These enhancements aim to improve user experience and ensure accurate billing for the new features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1409",
+      "title": "Introducing Seedream 5.0 Pro with Tiered Billing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "billing",
+        "metadata",
+        "seedream",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update adds the Seedream 5.0 Pro model to the volcengine worker, enhancing the output capabilities with tiered billing metadata. Key changes include the addition of the Pro model to allowed models and output formats, along with new metadata emissions for billing purposes. The integration ensures compatibility with existing cost rules while maintaining a clean and efficient billing process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#908",
+      "title": "Enhanced Service Documentation and Demos in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "documentation",
+        "migration",
+        "urls",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update backfills the `Service.doc_url` and `Service.demo_url` fields for public services, adding 29 documentation URLs and 23 demo URLs. The migration ensures that only empty fields are filled, preserving existing data. All URLs have been verified for accuracy, enhancing the accessibility of service information."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#663",
+      "title": "Enhance Service Actions with New Links in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "localization",
+        "ui",
+        "features",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update replaces the single-purpose CTA area in the service hero with a unified action group, showcasing explicit service actions for documentation, pricing, online experience, and balance top-up. Localized labels have been added across all supported languages, ensuring a consistent user experience. Key behaviors have been refined to display actions based on available service data, improving navigation and usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#661",
+      "title": "Enhance Usage Records with Credential Names in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "usage",
+        "i18n",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update introduces a new 'Credential' column in the console usage list, allowing users to easily identify which API key generated each usage record. The display shows the credential name, with a fallback to a shortened ID for cases where the name is not available. Additionally, the change includes updates to internationalization files to support this new feature across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#906",
+      "title": "Enhance API Usage Records with Credential Info in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "api",
+        "usability"
+      ],
+      "public": false,
+      "summary": "This update introduces a read-only `credential` object to the API usage serializers, allowing users to see which API key generated each usage record. The change improves readability by displaying the credential name instead of the raw UUID. Additionally, a new helper function has been added to facilitate this serialization."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#660",
+      "title": "Update homepage uptime display to fixed value in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "homepage",
+        "uptime",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update hardcodes the homepage service availability stat to '99.9%', ensuring a consistent uptime display. It retains dynamic updates for calls, active users, active APIs, and the as-of date from the public usage snapshot, while removing the previous dependency on the API usage file. The changes enhance the reliability of the homepage metrics without affecting the underlying data fetching logic."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#659",
+      "title": "Smooth Scroll to Tab Content on Deep Links in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "user-experience",
+        "scroll",
+        "vue",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update enhances user experience by automatically scrolling to the specified tab content when deep-linking to a service page with a query parameter. The `ServiceDetail` component now includes a smooth scroll feature that activates only once per session for deep links, ensuring users can easily access the relevant information without manual scrolling. Key modifications include the addition of a reference for the tab section and a new flag to manage the scroll behavior efficiently."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#658",
       "title": "Revert payment button changes in Frontend Web 🚀",
       "tags": [
