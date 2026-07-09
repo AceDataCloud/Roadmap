@@ -3,6 +3,37 @@
   "date": "2026-07-09",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#103",
+      "title": "Fix English Shortcuts Recognition for Group Creation in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "wechat",
+        "automation",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where the English version of WeChat 4.0 was unable to recognize the 'Shortcuts' label in the group creation menu. By adding 'Shortcuts' to the `_QUICK_ACTION_LABELS`, the functionality is restored, allowing users to successfully initiate group chats. Additionally, a new test has been implemented to ensure this path works correctly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#101",
+      "title": "Enhance WeChat Moments with Full CRUD Functionality in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "moments",
+        "api",
+        "crud",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive CRUD interface for WeChat Moments, allowing users to publish, read, and delete their posts via the API. Key features include the ability to publish text and images, retrieve a list of Moments from the local database, and safely delete posts with content verification. The implementation ensures a seamless user experience while maintaining data integrity."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#218",
       "title": "Progress Update: White-Label Items in Review and Merged in Index 🚀",
       "tags": [
