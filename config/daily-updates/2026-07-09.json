@@ -1,0 +1,38 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-09",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#658",
+      "title": "Revert payment button changes in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "revert",
+        "payment",
+        "frontend",
+        "localization",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update reverts the previous changes made to disable the Stripe payment button and the associated outage alert. Key modifications include the removal of localized messages regarding Stripe's temporary unavailability across multiple languages. The changes also affect the payment selection logic in the console and order pages, restoring previous functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#100",
+      "title": "Enhance Group Creation and Renaming in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "feature",
+        "bugfix",
+        "improvement",
+        "wechat4",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update introduces an atomic method for creating groups with an optional name, eliminating the need for name-guessing during the renaming process. Additionally, it fixes a false-negative issue in the renaming verification, ensuring accurate title updates. Robustness improvements have also been made to handle intermittent title reads more effectively."
+    }
+  ]
+}
