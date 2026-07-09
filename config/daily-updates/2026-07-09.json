@@ -3,6 +3,260 @@
   "date": "2026-07-09",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1213",
+      "title": "Enhance Web Login with Iframe Support in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "auth",
+        "iframe",
+        "web",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1213",
+      "summary": "This update introduces a feature flag for the web login process, allowing the reuse of the existing AuthPanel iframe when the `?features=auth-iframe` parameter is enabled. The changes ensure that the default login behavior remains unchanged while providing a seamless experience for users opting for the iframe method. Additionally, the protected-route guard has been updated to respect the new `auth-iframe` flag."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#684",
+      "title": "Enhance Login Experience with Iframe Feature Flag in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "auth",
+        "iframe",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a feature-flagged iframe mode for the login process, allowing users to access the AuthFrontend directly within the PlatformFrontend. The legacy redirect flow remains the default, ensuring a smooth transition. Key changes include the addition of the AuthFrameDialog component and modifications to the routing logic to support the new iframe functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#112",
+      "title": "Revamp Documentation for WeChat 4.0 Architecture in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "documentation",
+        "update",
+        "wechat",
+        "4.0",
+        "architecture"
+      ],
+      "public": false,
+      "summary": "This update rewrites the Wisdom documentation to reflect the WeChat 4.0-only architecture, following the recent code de-versioning. Key changes include the removal of references to deprecated endpoints and modules, ensuring clarity for users. The README, SPEC, and SETUP documents have been thoroughly revised to align with the new architecture, enhancing usability and accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#927",
+      "title": "Fix revenue summary to retain normal orders in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "revenue",
+        "backend",
+        "api",
+        "json"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue with the revenue summary API returning all zeros due to missing JSON keys in the metadata. The fix ensures that normal orders are retained when exemption keys are absent, only excluding those explicitly marked as true. This change restores a significant number of non-exempt orders, enhancing the accuracy of revenue reporting."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#197",
+      "title": "Streamline Login Experience in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "auth",
+        "security",
+        "frontend",
+        "login",
+        "csp"
+      ],
+      "public": false,
+      "summary": "This update removes the dedicated `/auth/embed-login` route and allows the standard `/auth/login/` to display all configured login methods, whether framed or top-level. Additionally, it enhances security by implementing dynamic `frame-ancestors` in the Content Security Policy, preventing unauthorized iframes from receiving tokens. These changes improve both usability and security for users accessing the login page."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1212",
+      "title": "Retire Estimate/Start API Layer in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "chore",
+        "cleanup",
+        "api",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1212",
+      "summary": "This update removes the cost-estimate and two-phase 'Start' API layer from Nexior as the feature is being retired. Key methods and interfaces related to estimates have been eliminated, streamlining the video creation process to directly post to '/maestro/videos'. All changes have been verified to ensure no UI call sites were affected, maintaining a clean type-check."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#186",
+      "title": "Retire Maestro Estimates from Auth Whitelist in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "chore",
+        "gateway",
+        "api",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update removes the `/maestro/estimates` endpoint from the `SKIP_AUTH_API_IDS` in the settings file, reflecting the retirement of the maestro cost-estimate feature. As a result, both skip-auth and skip-record whitelisting for this endpoint are eliminated, ensuring no billing risks remain. The `/maestro/tasks` endpoint remains unaffected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#111",
+      "title": "Revert startupProbe window to 2h for smoother installs in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "revert",
+        "deployment",
+        "install",
+        "probe",
+        "configuration"
+      ],
+      "public": false,
+      "summary": "This update reverts the startupProbe window to a 2-hour threshold, ensuring that the appliance first-boot install can accommodate typical cold installs without interruption. The change restores the previous configuration, allowing for better handling of slow nodes and ISO tails during installation. Overall, this adjustment enhances the reliability of the deployment process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1412",
+      "title": "Retire Cost-Estimate Feature from Maestro in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "chore",
+        "cleanup",
+        "billing",
+        "maestro",
+        "feature-removal"
+      ],
+      "public": false,
+      "summary": "This update removes the `/maestro/estimates` cost-estimate feature from the Maestro video service as part of a billing redesign. Key files such as `estimator.py` and `pricing.py` have been deleted, along with associated tests. The change streamlines the service by transitioning to actual-consumption metering, ensuring that legacy estimate tasks cannot be billed or re-run."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#110",
+      "title": "Streamline WeChat Support by Removing Legacy Code in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "refactor",
+        "wechat",
+        "cleanup",
+        "codebase",
+        "maintenance"
+      ],
+      "public": false,
+      "summary": "This update eliminates all support for WeChat 3.x, consolidating the codebase to focus solely on WeChat 4.0. Key changes include the removal of deprecated files, endpoints, and dependencies, as well as renaming components to reflect the new standard. The impact is a cleaner, more efficient codebase that enhances maintainability and performance for users of WeChat 4.0."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#683",
+      "title": "Revamp Admin Attribution and Analytics in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "admin",
+        "analytics",
+        "marketing",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update addresses the information architecture by separating admin attribution from distribution analytics. The revenue dashboard and distribution analytics have been restored to their original functionality, while a new dedicated route for marketing attribution has been introduced. This change enhances the clarity and usability of the admin console, ensuring historical data remains visible."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1211",
+      "title": "Revert web login iframe changes in Nexior 🔄",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "revert",
+        "auth",
+        "iframe",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1211",
+      "summary": "This update reverts the recent changes made to the web login iframe functionality. Modifications were made to the AuthPanel and actions files, removing embedded iframe references and restoring previous code. The impact of this change aims to stabilize the authentication process for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#682",
+      "title": "Reverted login iframe integration for a cleaner auth experience in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "auth",
+        "frontend",
+        "revert",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update reverts the previous implementation of embedding a login iframe in the portal. The changes include significant reductions in the Login.vue file, removing unnecessary iframe-related code. This aims to streamline the authentication process and improve overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#196",
+      "title": "Enhance CSP Handling in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "security",
+        "csp",
+        "nginx",
+        "auth",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update modifies the Content Security Policy for the embed login feature by using a backend-normalized `X-Frame-Ancestor-Origin` value. It retains the referer validation from previous changes while ensuring that the URL-encoded `embed_origin` does not appear in the CSP. This improves security and maintains proper functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#195",
+      "title": "Enhance User Verification Display in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "user-interface",
+        "verification",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the user verification interface by hiding empty personal and enterprise verification fields, replacing the previous '未设置' fallback. The masking for ID card and phone fields remains intact when values are present, enhancing the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#194",
+      "title": "Strengthen Embed Login Security in Frontend Web 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "security",
+        "nginx",
+        "csp",
+        "auth",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update enforces the Content Security Policy for the embed login feature in production nginx, ensuring that only allowed origins can frame the content. It utilizes `auth_request` to validate the browser's `Referer` and responds with a 403 status when the parent origin is missing or unauthorized. These changes enhance security and protect against clickjacking attacks."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#926",
       "title": "Enhance Site Domain Handling in Backend 🚀",
       "tags": [
