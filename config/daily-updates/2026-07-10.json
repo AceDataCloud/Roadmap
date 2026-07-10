@@ -1,0 +1,52 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-10",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#116",
+      "title": "Enhance Logging for Task Results in Wisdom 📊",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "logging",
+        "ui",
+        "enhancement",
+        "async"
+      ],
+      "public": false,
+      "summary": "This update introduces detailed logging for various async UI task runners, allowing operators to track the outcomes of actions like group management, moments posting, and search queries. Key changes include logging results from `wechat_service` calls and UI task executions. This enhancement improves transparency without altering existing functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#115",
+      "title": "Enhanced Debug Logging for WeChat Operations in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "logging",
+        "debug",
+        "wechat",
+        "observability",
+        "chore"
+      ],
+      "public": false,
+      "summary": "This update introduces extensive debug and trace logging across the WeChat read, send, and database paths. Key changes include detailed logging in `wechat_read.py`, `wechat_send.py`, and `wechat_db.py`, allowing for better observability without altering existing behaviors. The logging levels are structured to ensure normal operations remain quiet while providing insights when needed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#114",
+      "title": "Refine Smoke Scripts for Consistency in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "tests",
+        "refactor",
+        "improvement",
+        "consistency"
+      ],
+      "public": false,
+      "summary": "This update enhances the smoke test scripts in the Wisdom project by introducing shared helper functions and improving consistency across various test files. Key changes include the addition of new argument handling methods and the requirement for media sources in specific tests. Overall, the modifications streamline the testing process and ensure better maintainability."
+    }
+  ]
+}
