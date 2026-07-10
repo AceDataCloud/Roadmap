@@ -3,6 +3,69 @@
   "date": "2026-07-10",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1416",
+      "title": "Enhance Maestro Route Skills Enforcement in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "maestro",
+        "routing",
+        "tests",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update hard-locks explicit Maestro scenario routes by removing mutually exclusive route skills from the per-task sandbox. The change ensures that only selected route skills are available for explicit scenarios, improving route enforcement during skill discovery. Validation tests have been updated and passed successfully, confirming the effectiveness of this implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#223",
+      "title": "Moved Wisdom golden-snapshot deploy guide to its rightful home in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "refactor",
+        "wisdom",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "The Azure AKS golden-snapshot build and deploy guide has been successfully relocated from the monorepo to the Wisdom repository. This change includes the deletion of the old document and updates to cross-references, ensuring all links point to the new location. The move enhances organization and accessibility for users working with the Wisdom service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#119",
+      "title": "New Azure AKS Golden-Snapshot Deployment Guide in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "docs",
+        "azure",
+        "deployment",
+        "wisdom",
+        "guide"
+      ],
+      "public": false,
+      "summary": "We've added a comprehensive guide for deploying the Wisdom golden-image on Azure AKS, now located directly within the service documentation. This document details the multi-tenant production deployment process, including resource lifecycle management and troubleshooting tips. The previous version has been removed from the monorepo, ensuring all operational documentation is conveniently co-located with the relevant code."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1415",
+      "title": "Optimize Worker Scheduling for Better Performance in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "optimization",
+        "scheduling",
+        "deployment",
+        "maestro",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update implements a crucial fix for the Maestro worker scheduling, reducing resource requests to enhance deployment efficiency. Key changes include lowering CPU and memory requests and introducing a soft hostname topology spread to prevent resource contention. Additionally, explicit routing contracts for non-auto scenarios have been established to ensure proper task execution."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1217",
       "title": "Enhance iframe login experience in Nexior 🚀",
       "tags": [
