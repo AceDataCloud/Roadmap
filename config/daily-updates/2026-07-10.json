@@ -3,6 +3,69 @@
   "date": "2026-07-10",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#199",
+      "title": "Enhance OAuth Login Flow in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "oauth",
+        "frontend",
+        "login",
+        "iframe",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a same-origin postMessage mechanism for OAuth popup logins, allowing the iframe to receive login success notifications directly. Key files modified include `Login.vue`, `Google.vue`, and `Github.vue`, ensuring a seamless integration with existing deep link and connector callback functionalities. This enhancement improves user experience by maintaining session consistency across different login methods."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#198",
+      "title": "Enhance China Invoice Requirements in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "billing",
+        "frontend",
+        "localization",
+        "validation",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update mandates the inclusion of comprehensive billing details for China invoice profiles, including invoice type, taxpayer ID, and bank information. The changes ensure that both general and special VAT invoices are clearly communicated in the UI. Additionally, input validation has been improved to handle whitespace-only entries effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#688",
+      "title": "Enhance Mobile Responsiveness in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "mobile",
+        "responsive",
+        "frontend",
+        "ui",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves mobile layout by making the top header responsive, allowing navigation items to scroll horizontally. Additionally, it constrains the models catalog controls and footer to prevent horizontal overflow on narrow viewports. Code blocks are now scoped to scroll internally, enhancing user experience on mobile devices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#687",
+      "title": "Update Distribution Analytics Icons in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "icons",
+        "ui",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update replaces unregistered distribution analytics summary icons with the registered icons already in use by the distributions console. This change prevents reward, order amount, and invitee cards from displaying empty icon circles, enhancing the user interface. The modifications were validated with a clean build."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#686",
       "title": "Refine auth modal width for better UX in Frontend Web 🎨",
       "tags": [
