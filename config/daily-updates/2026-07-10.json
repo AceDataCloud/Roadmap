@@ -3,6 +3,101 @@
   "date": "2026-07-10",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1217",
+      "title": "Enhance iframe login experience in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "auth",
+        "iframe",
+        "login",
+        "nexior",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1217",
+      "summary": "This update improves the iframe login process by ensuring the web surface reloads upon successful login, rather than relying solely on Vue router navigation. Additionally, it maintains the native and desktop login behavior on the existing router path to prevent unnecessary app shell reloads. The redirect is now constrained to same-origin paths for better security and consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#675",
+      "title": "Enhance Brand Name Handling in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "branding",
+        "frontend",
+        "bugfix",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update improves the internationalization (i18n) handling of brand names in the PlatformFrontend. It corrects a typo in the brand name across all languages and ensures that the white-label sites display the correct branding. The changes enhance consistency and accuracy in the user interface without affecting existing i18n keys."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#689",
+      "title": "Enhance Auth Flow and API Key Access in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "auth",
+        "frontend",
+        "api",
+        "user-experience",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update improves the authentication flow by routing unauthenticated users to the credentials page and ensuring a fresh state after login. Key changes include redirecting API key CTAs to the credentials page instead of the console and implementing same-origin checks for post-login redirects. These enhancements streamline user experience and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1414",
+      "title": "Enhance Maestro Draft Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "maestro",
+        "audio",
+        "timeout",
+        "narration",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update increases the Maestro draft timeout from 20 to 60 minutes, allowing for more extensive processing without interruptions. It also resolves conflicts by designating Fish's `fish_audio_meta.py` as the sole narration path, eliminating previous issues with silent renders. Comprehensive tests confirm the stability of these changes, ensuring a smoother user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#654",
+      "title": "Update TypeScript ESLint Parser to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "typescript",
+        "eslint",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update bumps the @typescript-eslint/parser from version 8.62.1 to 8.63.0, aligning it with other projects. Key improvements include new features for detecting async usage and various fixes for eslint-plugin functionalities. This ensures better linting capabilities and overall code quality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1216",
+      "title": "Streamline Login Experience in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "auth",
+        "ui",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1216",
+      "summary": "This update removes the standalone Login button from the Navigator and integrates the login option into the user menu. The UserCenter remains accessible, ensuring a seamless experience for authenticated users while guest users can still log in through the menu. This change enhances the overall user interface and maintains existing functionality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1215",
       "title": "Enhance iframe login experience in Nexior 🚀",
       "tags": [
