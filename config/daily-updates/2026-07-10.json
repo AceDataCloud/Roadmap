@@ -3,6 +3,22 @@
   "date": "2026-07-10",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#686",
+      "title": "Refine auth modal width for better UX in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "auth",
+        "frontend",
+        "ui",
+        "ux",
+        "css"
+      ],
+      "public": false,
+      "summary": "This update adjusts the global authentication iframe modal's maximum width from 430px to 400px, enhancing the user experience. The mobile viewport constraint remains intact, ensuring a responsive design. This change is purely cosmetic and does not affect any existing functionality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#117",
       "title": "Fix(scripts): restore install/start/stop.ps1 + start kills stale instances first in Wisdom 🐛",
       "tags": [
