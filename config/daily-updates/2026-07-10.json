@@ -3,6 +3,39 @@
   "date": "2026-07-10",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#929",
+      "title": "Align Maestro Pricing with Seedance in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "api",
+        "documentation",
+        "tests",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update lowers the Maestro standard pricing to a Seedance-like formula of `0.85 credits/second`, while retaining existing multipliers for different scenarios. Key API documentation and service introduction materials have been updated to reflect these changes, resulting in significant cost reductions for users. Validation tests confirm the accuracy of the new pricing structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1214",
+      "title": "Enhance Maestro Task Cards with Request Params and Trace ID in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "maestro",
+        "ui",
+        "tracking",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1214",
+      "summary": "This update enriches the Maestro task detail cards in Nexior by displaying additional request parameters such as mode, scenario, style, quality, aspect ratio, duration, and languages. The trace ID is now visible on both success and failure cards, improving task tracking and debugging. These enhancements ensure that users have more context and information at their fingertips."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthFrontend#199",
       "title": "Enhance OAuth Login Flow in Frontend Web 🚀",
       "tags": [
