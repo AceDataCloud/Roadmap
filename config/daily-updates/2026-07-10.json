@@ -3,6 +3,38 @@
   "date": "2026-07-10",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#930",
+      "title": "Update Hong Kong COS Storage Class to MAZ in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "storage",
+        "update",
+        "tests",
+        "production"
+      ],
+      "public": false,
+      "summary": "This update sets the Hong Kong COS storage class to `MAZ_STANDARD` in both defaults and production environments. Key changes include modifications to the settings, deployment YAML, and relevant tests to ensure compatibility with the new storage class. The adjustments aim to resolve issues encountered during live upload tests, enhancing overall system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#928",
+      "title": "Enhance File Uploads to Hong Kong COS in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "file-upload",
+        "cos",
+        "backend",
+        "migration",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update moves the PlatformBackend COS defaults to the Hong Kong region, ensuring public file uploads are routed correctly. Key changes include the addition of a dry-run/apply script for EdgeOne origin switching and a comprehensive cutover runbook for old-bucket migration checks. The platform's file upload documentation has also been aligned with the new response structure and size limits."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#929",
       "title": "Align Maestro Pricing with Seedance in Backend 🚀",
       "tags": [
