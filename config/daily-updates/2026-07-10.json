@@ -3,6 +3,30 @@
   "date": "2026-07-10",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#117",
+      "title": "Fix(scripts): restore install/start/stop.ps1 + start kills stale instances first in Wisdom 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#655",
+      "title": "Update query-string to version 9.4.1 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps the query-string package from version 9.4.0 to 9.4.1. The new version includes a fix for handling relative URLs with fragments, enhancing the overall functionality of the application."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#116",
       "title": "Enhance Logging for Task Results in Wisdom 📊",
       "tags": [
