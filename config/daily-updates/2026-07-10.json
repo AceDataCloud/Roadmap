@@ -3,6 +3,39 @@
   "date": "2026-07-10",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1215",
+      "title": "Enhance iframe login experience in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "auth",
+        "iframe",
+        "modal",
+        "login",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1215",
+      "summary": "This update routes iframe-based web logins through a global AuthPanel modal, improving user experience by avoiding full-page redirects. A new unauthenticated bottom-nav login button has been added, and the original target route is preserved in the auth state for seamless navigation post-login. The changes ensure that normal web redirect behavior remains intact when the iframe feature is disabled."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#118",
+      "title": "Streamline Module Names by Removing Redundant Prefixes in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "refactor",
+        "cleanup",
+        "modules",
+        "wisdom",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update refactors the module names in the Wisdom package by removing the unnecessary 'wechat_' prefix, enhancing clarity and reducing confusion. Key changes include renaming several core and automation modules, which now follow a cleaner naming convention. The refactor maintains all existing functionality and ensures that all imports and usages are updated accordingly."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#930",
       "title": "Update Hong Kong COS Storage Class to MAZ in Backend 🚀",
       "tags": [
