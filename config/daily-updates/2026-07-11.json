@@ -3,6 +3,118 @@
   "date": "2026-07-11",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#128",
+      "title": "Align Builder and Preview Container Environment in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "fix",
+        "deployment",
+        "environment",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update resolves a boot-loop issue during fresh installations by aligning the builder and preview container environment variables with the standardized wechat-bot Service values. Key changes include updating the VERSION to '10' and setting the LANGUAGE, REGION, and KEYBOARD to 'Chinese' and 'zh-CN'. These adjustments ensure that fresh golden builds complete successfully and the API becomes healthy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1424",
+      "title": "Streamline gpt-image-2 Reverse Pool for Better Performance in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "performance",
+        "router",
+        "gpt-image-2",
+        "config",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update refines the `gpt-image-2` reverse pool by limiting it to only `br` and `br-fallback`, eliminating the slow `ttapi` and `ephone` channels. Analysis showed that the removed channels rarely contributed to successful requests, ensuring that high-resolution requests are prioritized. The change enhances overall efficiency and aligns with customer expectations for true 4K quality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#126",
+      "title": "Revamped WeChat Desktop Experience in Wisdom 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "ui",
+        "api",
+        "optimization",
+        "features",
+        "web"
+      ],
+      "public": false,
+      "summary": "This update significantly enhances the web interface to mirror the WeChat desktop experience, addressing six user requests including UI and API optimizations. Key changes include a redesigned layout, improved API integrations, and the introduction of new features like Moments and group management. The overall user experience is now more intuitive and responsive, ensuring seamless interactions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#692",
+      "title": "Enhance WeChat API Test Endpoints in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "api",
+        "frontend",
+        "wechat",
+        "deployment",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces four new read-only GET endpoints for the WeChat appliance API test dropdown on the deployment management page. Users can now access endpoints for contacts, conversations, messages, and moments, enhancing the testing capabilities. Additionally, the dropdown allows for custom path entry, improving user flexibility in API testing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#480",
+      "title": "Revamp CLI to Align with Updated API in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "api",
+        "update",
+        "documentation",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/480",
+      "summary": "This update synchronizes the `veo` CLI package with the latest API documentation by removing outdated commands and simplifying the `upscale` functionality to support only 1080p. Key changes include the removal of legacy commands and models, as well as updates to tests and documentation to reflect the current API contract. The command guidance has been clarified to enhance user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1422",
+      "title": "Enhance gpt-image-2 routing to ensure high-res output in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "routing",
+        "gpt-image-2",
+        "high-res",
+        "bananarouter",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update addresses the issue of low-resolution outputs from the gpt-image-2 model by removing it from the cortex channel and introducing a new fallback channel. The routing now prioritizes high-resolution images by utilizing a dual bananarouter setup, ensuring that requests retry on a second channel instead of degrading to a lower quality. The official relay remains unchanged, maintaining the integrity of other models served by cortex."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1225",
+      "title": "Revamped Video Type Thumbnails for a Cohesive Look in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "thumbnails",
+        "design",
+        "update",
+        "visuals"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1225",
+      "summary": "This update regenerates the Video Type thumbnails into a cohesive set of 3:4 portrait images, ensuring each type is easily recognizable at a glance. The new thumbnails eliminate cropping issues, featuring subjects in the upper frame for a polished appearance. Only the thumbnail URLs in the constants file were modified, with no impact on logic or layout."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1224",
       "title": "Retire Veo Ops Actions for a Cleaner UI in Nexior 🚀",
       "tags": [
