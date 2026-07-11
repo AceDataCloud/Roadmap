@@ -3,6 +3,22 @@
   "date": "2026-07-11",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#127",
+      "title": "Enhance WeChat Profile Retrieval After Login in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "weixin",
+        "profile",
+        "backend",
+        "fix",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a background task to backfill the WeChat profile (nickname, wechat_id, avatar) after a post-startup login. Key changes include a new method to read profile data directly from the local WeChat database, eliminating the need for UI interaction. The implementation has been tested thoroughly, ensuring that profiles are populated promptly and accurately."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#128",
       "title": "Align Builder and Preview Container Environment in Wisdom 🚀",
       "tags": [
