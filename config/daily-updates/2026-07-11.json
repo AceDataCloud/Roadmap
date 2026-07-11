@@ -3,6 +3,308 @@
   "date": "2026-07-11",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#697",
+      "title": "Streamline Auth Iframe Login Logic in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "auth",
+        "frontend",
+        "login",
+        "cookies",
+        "router"
+      ],
+      "public": false,
+      "summary": "This update modifies the authentication process by removing the reliance on the feature flag for the embedded auth-iframe login. Instead, the login method is now determined by the `LOGIN_METHOD` cookie, defaulting to a full-page redirect unless explicitly set to use the iframe. Key changes include the introduction of new utility functions for managing login preferences and updates to the router logic for handling login routes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#694",
+      "title": "Revamp User Dropdown for Consistency with Nexior in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "design",
+        "frontend",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "The top-right user dropdown has been redesigned to align visually with the Nexior menu. Key updates include the addition of an account header with an avatar and email, a divider for better separation, and FontAwesome icons for each action. The dropdown's behavior remains unchanged, ensuring a seamless user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1232",
+      "title": "Empower Site Admins with Per-Service Pricing Controls in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "admin",
+        "settings",
+        "i18n",
+        "pricing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1232",
+      "summary": "This update introduces a new 'Services' settings tab for site admins, allowing them to configure per-service pricing and display options directly within the app. Key features include editable markup previews, service visibility toggles, and enhanced internationalization support across 18 locales. The changes streamline the management of service settings, making it easier for admins to customize their offerings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#946",
+      "title": "Align per-service markup cap to site-wide limit in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "markup",
+        "pricing",
+        "backend",
+        "refactor"
+      ],
+      "public": false,
+      "summary": "This update lowers the per-service markup ceiling from 100 to 5, aligning it with the site-wide cap. This change simplifies the pricing structure and eliminates confusion by ensuring all components of the stack adhere to the same markup limit. The implementation has been verified against production data, confirming no existing entries exceed the new limit."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#695",
+      "title": "Revamped Pricing Tab and Money Preview for Enhanced UX in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "pricing",
+        "ux",
+        "i18n",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update restores the site-wide Pricing tab, allowing affiliate admins to configure markup with live previews. It also unifies the markup cap across site-wide and per-service settings, ensuring consistency. Inline validation and internationalization improvements enhance usability across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#696",
+      "title": "New Bank Transfer Payment Option Added in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "payment",
+        "frontend",
+        "i18n",
+        "bank-transfer"
+      ],
+      "public": false,
+      "summary": "We've introduced a new payment method for bank transfers on the console order details page, which is gated by the `enableBankTransfer` feature flag and is hidden by default. This option is available for orders of $10,000 or more, providing users with essential account information and guidelines for successful transactions. Additionally, internationalization support has been added for all 12 languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#482",
+      "title": "Clean Up Service Tier in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "api",
+        "cleanup",
+        "tests",
+        "video"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/482",
+      "summary": "This update removes the `service_tier` parameter from the seedance API as per the latest API spec changes. Key modifications include the deletion of the `_SERVICE_TIERS` constant and the removal of related options in the video command. Additionally, tests have been updated to reflect these changes, ensuring that `service_tier` is no longer part of the payload."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#948",
+      "title": "New USD Bank Transfer Payment Method for Large Orders in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "payments",
+        "backend",
+        "bank-transfer",
+        "enterprise"
+      ],
+      "public": false,
+      "summary": "This update introduces a new enterprise USD bank-transfer payment method for orders exceeding $10,000. The payment process requires buyers to wire funds to our Mercury account, generating a unique reference code for tracking. The order remains in a PENDING state until fulfilled by a superuser, ensuring secure handling of large transactions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#947",
+      "title": "Retire service_tier parameter from API spec in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "cleanup",
+        "documentation",
+        "specification"
+      ],
+      "public": false,
+      "summary": "This update removes the `service_tier` parameter from the API specification and documentation, as it was not effectively integrated into the cost rules and caused confusion for users. Key changes include the deletion of related properties in the OpenAPI JSON and documentation files. This cleanup enhances clarity and prevents potential customer-facing issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1230",
+      "title": "Eliminate Flex Tier to Boost Seedance Performance in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "performance",
+        "seedance",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1230",
+      "summary": "This update removes the 'flex' service tier from the Seedance configuration, which was causing timeout issues during video generation. By defaulting to the 'realtime' tier, users will experience faster processing times and improved reliability. Key changes include the removal of the ServiceTier selector and adjustments to the API request handling to ensure the 'flex' tier is not used."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1429",
+      "title": "Retire service_tier parameter for smoother video generation in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "performance",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update removes the `service_tier` parameter from the Volcengine seedance worker, addressing customer-reported timeouts during video generation. All requests will now default to the realtime tier, ensuring faster processing times. Key changes include modifications to the request handling and core logic to eliminate the parameter entirely."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1231",
+      "title": "Enhance Login Experience with Configurable Modes in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "settings",
+        "login",
+        "user-experience",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1231",
+      "summary": "This update introduces a new feature allowing users to choose their preferred login method in the settings. Users can select between an embedded iframe popup or a full-page redirect, with their choice saved in a persistent cookie. This change improves user experience by making the login method more accessible and customizable."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1428",
+      "title": "Strengthening Logo Integrity in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "logo",
+        "fidelity",
+        "update",
+        "maestro",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces a critical fix to prevent the use of fabricated brand logos in Maestro videos. A new rule mandates sourcing official logos instead of hand-drawing or generating them, addressing a previously overlooked fabrication vector. The changes enhance fidelity checks and ensure that only verified brand marks are used, significantly improving the quality and authenticity of video content."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#227",
+      "title": "Enhance Mercury USD Channel with New Features in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "bank-transfer",
+        "mercury",
+        "usd",
+        "documentation",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update introduces the Mercury USD international wire transfer channel, implementing a $10,000 minimum threshold, mandatory reference codes, and customer support fallback strategies. Key documents have been added to outline the integration and eligibility gating processes, ensuring a robust framework for handling transactions. No production code changes were made, focusing solely on documentation enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1228",
+      "title": "Enhance server-side auth-iframe support in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "auth",
+        "feature-flag",
+        "bugfix",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1228",
+      "summary": "This update fixes the issue where the server-side `auth-iframe` feature flag was ignored, ensuring that in-app iframe login works as intended. Key changes include the addition of a fallback mechanism to read server flags and the preservation of client-side opt-outs. The validation process confirmed that the new logic functions correctly without introducing regressions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1229",
+      "title": "Fix iOS App Store Submission Issues in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ios",
+        "ci",
+        "bugfix",
+        "submission",
+        "release"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1229",
+      "summary": "This update addresses a critical issue where the iOS App Store auto-submit was failing due to missing required release notes. Key changes include setting the 'whatsNew' notes for submissions, cleaning up stale drafts, and ensuring that submission failures are now visibly flagged. These improvements will enhance the reliability of the submission process and prevent future freezes in the App Store version."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#200",
+      "title": "Revamp WeChat Login UI for a Sleeker Look in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "ui",
+        "frontend",
+        "design",
+        "weChat",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update enhances the WeChat login interface by transforming the previously stark white iframe into a designed scan card with rounded corners and a subtle shadow. The iframe's width has been adjusted to prevent overflow while maintaining a clean aesthetic. These changes improve the visual experience without altering the underlying login logic."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1427",
+      "title": "Enhance Narration Budgeting for Maestro in Platform Service 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "narration",
+        "rendering",
+        "validation",
+        "maestro"
+      ],
+      "public": false,
+      "summary": "This update introduces a deterministic narration budget for the Maestro video rendering process. Key changes include enforcing a script length that matches the requested duration, preventing issues with overlong narrations that previously caused render timeouts. Additionally, the delivery and resume prompts have been updated to ensure proper validation of completed renders, enhancing overall reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1425",
+      "title": "Enhance Maestro with Trace ID and Canonical Task IDs in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "maestro",
+        "uuid",
+        "trace",
+        "api",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces canonical UUID strings for Maestro task IDs, improving clarity and consistency. Additionally, the top-level `trace_id` is now included in the responses of `POST /maestro/tasks`, allowing clients to better track gateway traces. Focused tests have been added to ensure proper functionality of these features."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#693",
       "title": "Fix SPA Hang on Initial Navigation with Auth Iframe in Frontend Web 🚀",
       "tags": [
