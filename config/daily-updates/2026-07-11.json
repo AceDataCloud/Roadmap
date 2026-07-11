@@ -3,6 +3,85 @@
   "date": "2026-07-11",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#693",
+      "title": "Fix SPA Hang on Initial Navigation with Auth Iframe in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "auth",
+        "frontend",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where the SPA would hang on a blank loading spinner for users with the auth-iframe feature enabled. The fix ensures that the initial navigation is no longer aborted, allowing the app to render properly. Additionally, a new mechanism has been implemented to handle the overlay display without race conditions, improving user experience during authentication."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1426",
+      "title": "Ensure Narration Voice is Hard-Pinned in Platform Service 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "audio",
+        "narration",
+        "maestro",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update fixes the issue where the requested narration voice was not being applied correctly in Maestro. By hard-pinning the voice in the environment, the system now guarantees that the specified voice takes precedence over any agent suggestions. This change enhances the reliability of audio outputs for narration tasks without affecting multi-character voice settings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1226",
+      "title": "Update Maestro Bot Logo in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "update",
+        "logo",
+        "maestro",
+        "nexior",
+        "assets"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1226",
+      "summary": "This update changes the Maestro bot logo to the new Holo Window design by modifying the `MAESTRO_LOGO` constant. The new logo URL is now set to `https://cdn.acedata.cloud/df0e7b7eea.svg`, ensuring consistency across the platform. Additionally, the update includes validation checks to confirm the logo's functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#945",
+      "title": "Update Holo logo assets for Maestro in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "update",
+        "assets",
+        "maestro",
+        "backend",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update enhances Maestro's public display by implementing the new Holo Window redesign. Key changes include updated URLs for the service and document icons, ensuring distinct assets for both the small icon and wider thumbnail. The migration has been validated for consistency and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#944",
+      "title": "Enhance Suno Voice Clone Audio Guidelines in Backend 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "suno",
+        "voice-clone",
+        "guidelines"
+      ],
+      "public": false,
+      "summary": "This update clarifies the audio requirements for the Suno voice clone feature by consolidating key information into a single blockquote. It details accepted audio formats, minimum duration, and specific voice characteristics while addressing potential risks associated with noise and multi-speaker scenarios. This change improves the documentation's clarity and usability for developers."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#127",
       "title": "Enhance WeChat Profile Retrieval After Login in Wisdom 🚀",
       "tags": [
