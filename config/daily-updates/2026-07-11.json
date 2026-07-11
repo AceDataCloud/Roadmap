@@ -3,6 +3,305 @@
   "date": "2026-07-11",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#690",
+      "title": "Streamlined Integration Docs & Translated 4.8k Strings in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "accessibility",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update shortens the 'Integration Docs' button to a more concise 'Docs' across multiple locales. Additionally, approximately 4,800 untranslated strings have been translated into 10 different languages, enhancing accessibility and user experience for a diverse audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#226",
+      "title": "Standardize Workload Provider to k8s_appliance in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "standardization",
+        "k8s",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a banner in the canonical plans to indicate the standardization of the `aks_appliance` workload provider to a vendor-neutral `k8s_appliance`. The change groups cluster-identifying fields under a `cluster` profile, clarifying that AKS is now treated as configuration rather than a provider. Historical references to `aks_appliance` are preserved for design record purposes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#124",
+      "title": "Standardize AKS to K8s Appliance in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "docs",
+        "standardization",
+        "k8s",
+        "wisdom"
+      ],
+      "public": false,
+      "summary": "This update introduces a key standardization in the Wisdom golden-snapshot design documentation, changing the `aks_appliance` provider to a vendor-neutral `k8s_appliance`. The modification includes a banner in the documentation that clarifies this shift, ensuring that AKS is now treated as a configuration rather than a provider. The historical decision regarding `aks_appliance` remains intact for reference."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1419",
+      "title": "Update Wisdom Docs for Provider Renaming in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "docs",
+        "update",
+        "platform",
+        "wisdom"
+      ],
+      "public": false,
+      "summary": "This update synchronizes the Wisdom deployment documentation with the recent standardization of the PlatformBackend provider, changing references from `aks_appliance` to `k8s_appliance`. Key modifications include updates to various documentation files and the deployment pipeline schema, ensuring clarity and consistency across the platform. No functional changes were made, as this is a documentation-only update."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#691",
+      "title": "Standardize appliance provider name to k8s_appliance in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "update",
+        "standardization",
+        "kubernetes"
+      ],
+      "public": false,
+      "summary": "This update renames the `aks_appliance` provider to `k8s_appliance` in the Manage.vue component, aligning with the PlatformBackend standardization. The `isApplianceWorkload` function now recognizes `k8s_appliance` as an appliance workload, ensuring that Stop/Start controls and WeChat QR/MCP channel cards are properly rendered for Kubernetes golden-snapshot tenants."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#937",
+      "title": "Standardize AKS to Vendor-Neutral K8s Provider in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "k8s",
+        "deployment",
+        "migration",
+        "backend",
+        "standardization"
+      ],
+      "public": false,
+      "summary": "This update standardizes the deployment abstraction by renaming the `aks_appliance` to `k8s_appliance`, making it vendor-neutral. Key changes include restructuring cluster-identifying fields under a `cluster` profile block and updating various deployment scripts and tests accordingly. The migration ensures existing services are rewritten to the new format while maintaining a clean codebase with no references to the old provider."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#933",
+      "title": "Update Wisdom Appliances to QR-fix v5 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "deployment",
+        "wisdom",
+        "aks",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update points the `wechat-bot` and `wisdom` AKS appliance services to the new QR-fix v5 image. The migration script has been added to ensure the correct image is used for new tenants, while existing services have been validated successfully. The deployment has been updated in AKS to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#122",
+      "title": "Enhance WeChat 4 QR Navigation Support in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "qr",
+        "auth",
+        "navigation",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces support for WeChat 4's navigable login state for QR requests, improving user experience. Key changes include the addition of an owner-drawn 'Switch Account' click path and enhancements to the QR capture process using an OCR-aware service page detector. These modifications ensure consistent classification of WeChat 4 windows and prepare the system for future golden builds."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#934",
+      "title": "Enhance Maestro Document Relations in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "migration",
+        "backend",
+        "documentation",
+        "translations",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update introduces an idempotent data migration to register and repair Maestro documents within the public development document tree. Key improvements include fixing document ranks, tags, and metadata, along with seeding translations for service labels. The migration has been rebased onto the latest main branch to ensure consistency and avoid conflicts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#478",
+      "title": "Documented x402 Sync Result as No-Op in Clis 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "sync",
+        "documentation",
+        "no-op",
+        "clis"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/478",
+      "summary": "This update confirms that the documentation-only changes for `x402` do not require any syncing actions within the Clis monorepo. No source files were modified, and it was verified that there is no corresponding package or entry for `x402`. The issue is now resolved as a no-op, ensuring clarity in the sync process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#225",
+      "title": "Updated Company Address for Slack Marketplace Plan in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "update",
+        "documentation",
+        "slack",
+        "address"
+      ],
+      "public": false,
+      "summary": "The company address has been updated in the Slack marketplace plan from 201 North Broad St, Middletown, DE to 131 Continental Dr, Suite 305, Newark, DE 19713. This change ensures that users have the most accurate contact information. The update was made in the relevant documentation file."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Docs#68",
+      "title": "Updated Company Address for All Locales in Docs 📍",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "address",
+        "update",
+        "documentation",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/68",
+      "summary": "The company address for Germey Technology, LLC has been updated across 53 files in various locales, changing from 651 N Broad St, Suite 201, Middletown, Delaware to 131 Continental Dr, Suite 305, Newark, DE 19713. This update ensures that all documentation reflects the correct address for customer support and privacy information."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#935",
+      "title": "Optimize Application List Query for Performance in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "performance",
+        "postgresql",
+        "optimization",
+        "backend",
+        "query"
+      ],
+      "public": false,
+      "summary": "This update addresses a significant PostgreSQL CPU spike caused by inefficient querying in the Applications list endpoint. By restructuring the query to utilize indexed sub-queries instead of an OR-join, execution time has been reduced from 2539 ms to approximately 3 ms, greatly enhancing performance. Additionally, tests have been updated to reflect these changes and ensure continued reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1418",
+      "title": "Retire Motion Graphics Workflow in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "retirement",
+        "workflow",
+        "maestro",
+        "backend",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update fully retires the Motion Graphics workflow from the Maestro system, aligning backend routing with the UI. Key changes include the removal of the `motion` scenario from the flow registry and the deletion of the entire `skills/motion-graphics/` workflow. All related documentation has been scrubbed to reflect this change, ensuring a clean and consistent user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#224",
+      "title": "Automate Wisdom Golden-Image CI Lifecycle in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "automation",
+        "ci",
+        "documentation",
+        "platformbackend",
+        "wisdom"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive plan to automate the Wisdom golden-snapshot lifecycle through GitHub Actions, replacing manual processes with streamlined workflows. Key additions include new documentation for CI automation and a fix in the PlatformBackend provider to ensure proper image and snapshot handling. The implementation will follow in subsequent PRs, enhancing efficiency and reliability in deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1220",
+      "title": "Retire Motion Graphics & Require Video for Captions in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "update",
+        "i18n",
+        "maestro",
+        "video"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1220",
+      "summary": "This update removes the Motion Graphics option from the Maestro video-type picker, as it was underperforming. Additionally, the Captions feature now requires an uploaded source video before generating captions, improving user experience by preventing confusion. Internationalization updates have been made to reflect these changes across all supported languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1219",
+      "title": "Enhance spacing for in-progress task cards in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "css",
+        "ui",
+        "design",
+        "maestro"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1219",
+      "summary": "This update improves the visual layout of the in-progress task card in Maestro by adjusting the row spacing for the request-params list and Task ID. The margin-bottom has been increased from 4px to 8px, aligning it with the success and failure card styles. This change is purely cosmetic, ensuring a more consistent and less cramped appearance across card states."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1417",
+      "title": "Enhance Seedance Model Mapping for Quality in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "docs",
+        "maestro",
+        "seedance",
+        "quality",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a refined mapping of the Maestro Seedance 2.0 r2v models to production quality tiers, ensuring that draft models are linked to mini, standard to fast, and premium to pro. The changes are applied to both short-drama and avatar workflows, incorporating retry and fallback budgets to prevent unintended upgrades. The validation process confirmed the consistency and alignment with Seedance 2.0 constraints."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#932",
+      "title": "Enhance Windows Viewer Access for AKS in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "aks",
+        "vnc",
+        "security",
+        "deployment",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This update exposes the dockur Windows viewer for AKS Wisdom and WeChat-bot appliances through a new ingress on port 8006, secured with Basic Auth. Key changes include the addition of migration 0201 to enable this feature on existing services and updates to deployment access URLs for application owners. The implementation has been validated with successful tests and thorough reviews."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#931",
       "title": "Align WeChat Bot Dockur Environment in Backend 🚀",
       "tags": [
