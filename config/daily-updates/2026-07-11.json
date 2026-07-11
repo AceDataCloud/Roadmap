@@ -3,6 +3,22 @@
   "date": "2026-07-11",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#129",
+      "title": "Fix fresh golden builds and enhance diagnostics in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "diagnostics",
+        "health-gate",
+        "automation",
+        "build"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where fresh golden builds failed to start due to a command parse crash in the install script. Key changes include direct launching of startup scripts and the addition of a log-forwarding script for better diagnostics. The health-gate mechanism has also been improved to ensure reliable monitoring of the builder's status."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#697",
       "title": "Streamline Auth Iframe Login Logic in Frontend Web 🚀",
       "tags": [
