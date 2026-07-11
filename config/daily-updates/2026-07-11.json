@@ -3,6 +3,134 @@
   "date": "2026-07-11",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1222",
+      "title": "Enhance Video Type Cards for Better Visibility in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "css",
+        "ui",
+        "enhancement",
+        "maestro",
+        "video"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1222",
+      "summary": "This update improves the display of Video Type cards in the Maestro config panel by changing the thumbnail aspect ratio from 16:9 to 3:4. The new compact vertical design ensures that subjects' heads are fully visible, enhancing clarity and aesthetics. No image regeneration is necessary as the original photos contain the full subjects."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#941",
+      "title": "Revamped Maestro API Integration Guides in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "api",
+        "integration",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "The integration guides for the Maestro API have been completely rewritten to align with the house style of other API documentation. Key updates include detailed sections on the application process, usage examples in CURL and Python, and accurate billing information. These changes enhance clarity and usability for developers integrating with the Maestro service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#940",
+      "title": "Restore cinematic service thumbnail in Backend 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "maestro",
+        "thumbnail",
+        "migration",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update restores the cinematic service thumbnail for the Maestro service, which was previously replaced by a flat SVG logo due to a migration error. A new migration has been implemented to revert the thumbnail back to its original artwork while retaining the SVG logo for the icon. This ensures that the service's visual representation is accurate and appealing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1221",
+      "title": "Standardize Maestro Task-Card Row Spacing in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "css",
+        "ui",
+        "design",
+        "fix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1221",
+      "summary": "This update aligns the Maestro task-card metadata rows to match the established spacing conventions used in the nanobanana and kling previews. The changes include normalizing vertical gaps to `mb-2` for most rows and ensuring the last row has `mb-0`. This CSS-only adjustment enhances visual consistency without impacting functionality or data."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1420",
+      "title": "Improve Error Handling for Kling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "bug-fix",
+        "kling",
+        "timeout",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update enhances error handling in the Kling service by classifying certain input-fetch failures as 400 errors instead of 500, reducing unnecessary 5xx alerts. Additionally, it fixes a bug related to poll timeouts, ensuring that tasks that do not succeed will now correctly trigger a 504 TimeoutError. These changes improve the reliability and clarity of error reporting in the service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#123",
+      "title": "Automate Golden-Image CI Workflows in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "ci",
+        "automation",
+        "deployment",
+        "workflow",
+        "golden-image"
+      ],
+      "public": false,
+      "summary": "This update implements the CI portion of the golden-image plan, featuring two new workflows: one for building and snapshotting the golden image, and another for promoting it. Key changes include the addition of YAML templates for deployment and validation steps, ensuring robust health checks and streamlined promotion processes. The enhancements will improve the efficiency and reliability of the golden-image deployment in the Wisdom environment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#938",
+      "title": "Enhance golden snapshot resolution in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "k8s",
+        "deployment",
+        "backend",
+        "refactor",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update refines the golden snapshot resolution process by ensuring that the `golden-current` ConfigMap serves as the single source of truth for both image and snapshot. The changes streamline the deployment process, allowing for a more atomic and efficient promotion of golden images without the need for Service metadata edits. Additionally, tests have been updated to reflect these changes, ensuring robust functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#939",
+      "title": "Update Maestro Document and Icon Alignment in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "fix",
+        "backend",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This update keeps the `/documents/maestro` as an empty root document and aligns its icon with Nexior's logo. The changes also ensure that the migration graph is resolved by depending on the current `0204_*` migrations. A live hotfix has already been applied in production to reflect these updates."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#690",
       "title": "Streamlined Integration Docs & Translated 4.8k Strings in Frontend Web 🚀",
       "tags": [
