@@ -1,0 +1,69 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-11",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#931",
+      "title": "Align WeChat Bot Dockur Environment in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "migration",
+        "wechat-bot",
+        "aks",
+        "backend",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces a data migration to align the WeChat bot and Wisdom AKS appliance dockur environment with the verified Chinese Windows 10 golden snapshot. Key changes include setting the critical dockur base environment variables and updating the AKS appliance metadata schema to prevent stale values in future seed data. Validation confirms that the tenant successfully booted without issues, ensuring a smooth deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1218",
+      "title": "Update macOS Desktop Icon for Better Visibility in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "icon",
+        "macos",
+        "desktop",
+        "update",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1218",
+      "summary": "This update regenerates the macOS desktop app icon assets to include an opaque white badge background, enhancing visibility. The Windows icon and shared assets have been synchronized with the new icon generator output. Additionally, desktop icon assets and generator scripts are now included in the workflow to ensure future changes are properly validated."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#121",
+      "title": "Updated Documentation to Reflect New Structure in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "docs",
+        "update",
+        "structure",
+        "sync"
+      ],
+      "public": false,
+      "summary": "This PR synchronizes the documentation with the recent restructuring of the Wisdom project. Key updates include a rewritten README, updated architecture diagrams, and corrections across multiple documentation files to align with the new directory layout. These changes enhance clarity and ensure that users have accurate information about the project's structure and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#653",
+      "title": "Update qs dependency to enhance performance in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "performance",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps the qs library from version 6.15.1 to 6.15.3, introducing several fixes and performance improvements. Key changes include enhanced robustness in parsing and stringifying, as well as optimizations that make the utility functions more efficient. These updates will help ensure better handling of query strings in the application."
+    }
+  ]
+}
