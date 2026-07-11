@@ -3,6 +3,103 @@
   "date": "2026-07-11",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1224",
+      "title": "Retire Veo Ops Actions for a Cleaner UI in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "ui",
+        "cleanup",
+        "veo",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1224",
+      "summary": "This update removes the Veo post-processing actions from the Nexior UI, streamlining the user experience as Veo transitions to a generation-only model. Key components related to upsample, extend, reshoot, and object actions have been deleted, resulting in a total of 1597 deletions while maintaining the generation flow intact. All relevant internationalization keys have also been removed symmetrically across all locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#943",
+      "title": "Boosted Pricing and API Retirement for Veo in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "api",
+        "veo",
+        "backend",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This update raises the pricing for Veo's quality and fast tiers by approximately 1.5x, aligning with the upstream TTAPI changes. Additionally, four Veo operations APIs have been deprecated and soft-hidden, ensuring existing integrations remain functional while removing them from public documentation. The migration is reversible, and all related tests have passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1421",
+      "title": "Exciting New Veo Video Generation Feature in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "video",
+        "ttapi",
+        "feature",
+        "update",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces Veo video generation to the ttapi upstream worker, allowing the `/veo/videos` endpoint to serve responses identical to the existing Veo provider. Key additions include a new handler for video requests and modifications to core functionalities to facilitate video generation and fetching. The rollout is additive and safe, ensuring no immediate traffic changes until further routing adjustments are made."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#942",
+      "title": "Enhance Translation CronJob Resilience in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cronjob",
+        "backend",
+        "resilience",
+        "deployment",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update strengthens the `platform-backend-translation` CronJob by increasing memory limits and adjusting job history retention settings. The memory limit is raised to 768Mi to prevent OOM crashes, while the failed jobs history limit is increased to 3 to aid in debugging. Additionally, finished jobs will now auto-delete after one day to avoid stale entries, enhancing overall system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1223",
+      "title": "Clickable Image Thumbnails for Full-Screen Preview in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "enhancement",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1223",
+      "summary": "We've enhanced the user experience by making all image thumbnails in task history and result cards clickable, allowing users to open a full-screen preview lightbox. This update applies across various image and video services, ensuring a consistent and intuitive interaction. Key components have been modified to support this feature while preserving existing functionalities like upload progress and error handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#125",
+      "title": "Extended health-gate timeout for smoother installs in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "ci",
+        "workflow",
+        "timeout",
+        "install",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "The health-gate timeout for the snapshot job has been increased from 90 minutes to 180 minutes to accommodate fresh Windows installs on contended KVM nodes. This change ensures that golden-build runs can complete end-to-end without manual intervention, improving overall reliability during the process. The adjustments were made following observations during a live end-to-end run."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1222",
       "title": "Enhance Video Type Cards for Better Visibility in Nexior 🎨",
       "tags": [
