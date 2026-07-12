@@ -3,6 +3,85 @@
   "date": "2026-07-12",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#187",
+      "title": "Enhance Durable Agent Run Authorization and Settlement in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "durable",
+        "authorization",
+        "settlement",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces durable grants for authenticated conversations, ensuring precise settlement with global balance locking and idempotent retries. Key changes include the addition of internal authorization endpoints and enhancements to the control plane, which is initially set to default-off. Comprehensive testing has confirmed the stability and functionality of the new features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#960",
+      "title": "New Agent Run Grant Schema for Enhanced Data Management in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "migration",
+        "data-management"
+      ],
+      "public": false,
+      "summary": "This update introduces the `AgentRunGrant` and `AgentRunSegment` models along with migration 0211, enhancing the data management capabilities of the Platform. Key features include the persistence of run identity and various snapshots, while maintaining an additive schema for future deployments. The rollout is designed to ensure stability with launch flags remaining off during initial deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#959",
+      "title": "Enhance Credential Preservation for Stopped Tenants in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "application",
+        "backend",
+        "deployment",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update modifies the application to treat stopped deployments as redeploys, ensuring that release_name, namespace, and auto_env remain stable. This change allows operators to replace a stopped appliance PVC without the need to rotate API tokens or credentials. Validation has been completed with all focused tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1437",
+      "title": "Streamline BGM Volume Controls in Platform Service 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "migration",
+        "bgm",
+        "maestro",
+        "hyperframes",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update migrates Maestro's legacy BGM volume controls to a new HyperFrames format, enhancing project determinism. The legacy assignment is removed while preserving other playback functionalities, ensuring a smoother integration for existing projects. Comprehensive tests confirm the migration's success and maintain system integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#139",
+      "title": "Fix preview PVC recreation for snapshots in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "fix",
+        "preview",
+        "pvc",
+        "concurrency",
+        "stability"
+      ],
+      "public": false,
+      "summary": "This update resolves issues with the preview PVC by ensuring that old deployments are deleted before creating new ones. Key changes include improved concurrency handling and adjustments to the health probes for better stability. Live validation confirms successful boot and stress testing under load, ensuring reliability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#704",
       "title": "Superadmins Can Now Access Secure Windows Viewer in Frontend Web 🔐",
       "tags": [
