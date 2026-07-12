@@ -3,6 +3,147 @@
   "date": "2026-07-12",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#191",
+      "title": "Enhance Durable Context Resolution in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "enhancement",
+        "gateway",
+        "durable",
+        "internal",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces an authenticated internal endpoint for resolving the durable initial context. Key changes include the binding of initial durable identity to specific parameters and adjustments to how application segments are handled based on their state. The production durable admission has been set to false for a controlled rollout, ensuring stability during this transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#190",
+      "title": "Enable Durable Run Admission in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "production",
+        "deployment",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update enables durable run admission for the PlatformGateway in production. Key changes include the successful deployment of the durable coordinator and the verification of necessary preconditions. The rollout process has been validated with a clean verdict, ensuring a smooth transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1440",
+      "title": "Enable Durable Timer Waits in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "aichat2",
+        "production",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update activates the timer-only aichat2 durable coordinator in production, ensuring that the necessary backend migrations and durable tables are live. The rollout is designed to enable service first while keeping Gateway admission disabled for external clients during this phase. Validation steps confirm the successful implementation of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1439",
+      "title": "Enhance Aichat2 Deployment Reliability in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "deployment",
+        "aichat2",
+        "platform-service",
+        "reliability",
+        "workflow"
+      ],
+      "public": false,
+      "summary": "This update ensures that the Aichat2 deployment fails closed, waiting for actual rollout readiness. Key changes include asserting that the live `DURABLE_RUNS_ENABLED` value matches the rendered manifest and propagating deployment failures through the shared PlatformService workflow. This hardening improves deployment reliability while maintaining legacy behavior for other services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#962",
+      "title": "Enhance Runtime Access Preservation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "deployment",
+        "fix",
+        "testing",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update addresses issues with deployment runtime access by restoring saved access URLs and credentials after provider status calls. Key changes include improved handling of deployment states and enhanced transaction management to prevent data loss. The implementation has been validated with focused tests and thorough adversarial review."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#189",
+      "title": "Enhance Gateway Deployment Verification in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "deployment",
+        "verification",
+        "gateway",
+        "ci",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update implements a fail-closed mechanism for PlatformGateway deployments by using `set -eu`. It ensures that the deployment process waits for the rollout readiness of `platform-gateway` and verifies that the `DURABLE_RUNS_ENABLED` value matches the expected manifest before CI can succeed. These changes enhance the reliability of the deployment workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1438",
+      "title": "Introducing Durable Timer Waits for Aichat2 in Platform Service ⏳",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "aichat2",
+        "durable",
+        "mongodb",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update adds a feature-flagged, non-streaming durable-run path to Aichat2, enabling timer-based waits with a new `wait_for_duration` adapter. Key improvements include checkpointing run states in MongoDB, managing due waits with fenced leases, and ensuring safe deletion and timeout cancellation. The changes enhance the reliability of new conversations by allowing for recoverable waiting across pods and preventing replay of already dispatched requests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#961",
+      "title": "Enhance Cold Boot Handling for Tenants in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "kubernetes",
+        "deployment",
+        "backend",
+        "fix",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update raises the startupProbe budget for tenant cold boots to 80 x 15 seconds, allowing for a maximum startup time of 20 minutes. Additionally, the progressDeadlineSeconds has been set to 1800 seconds to ensure deployment rollout reporting accommodates the new startup budget. Validation tests have confirmed the changes with all manifest tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#188",
+      "title": "Fix Python 3.9 Annotation Issues in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "bugfix",
+        "python",
+        "compatibility",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update defers annotation evaluation in the durable runs utility, restoring compatibility with Python 3.9 for PEP 604 type annotations. The previous image caused crash loops due to unsupported operand types, but this fix ensures smooth rollout and operational stability. Validation checks confirm that the changes are effective and do not introduce new issues."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformGateway#187",
       "title": "Enhance Durable Agent Run Authorization and Settlement in Gateway 🚀",
       "tags": [
