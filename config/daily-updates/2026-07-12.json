@@ -3,6 +3,39 @@
   "date": "2026-07-12",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#192",
+      "title": "Enhance Durable Retry Mechanism in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "durable",
+        "retry",
+        "billing",
+        "safety",
+        "postgresql",
+        "auth"
+      ],
+      "public": false,
+      "summary": "This update pins initial durable retries to segment zero’s immutable trace and charged application, ensuring settled snapshots are returned across both auth-gate and post-validation race windows. Key improvements include enforcing current source/global permissions and locking durable settlement rows in a deterministic PostgreSQL order. This patch is a dark safety update, requiring live verification post-deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1442",
+      "title": "Enhance durable context resolution in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "enhancement",
+        "http-errors",
+        "testing",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update improves the durable context resolution by utilizing authenticated traces while ignoring stale or client-supplied fields. Key changes include mapping resolver rejections and timeouts to stable HTTP errors, and wiring the resolver endpoint to handle various failure scenarios. The modifications enhance the reliability and clarity of error handling within the service."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformGateway#191",
       "title": "Enhance Durable Context Resolution in Gateway 🚀",
       "tags": [
