@@ -3,6 +3,54 @@
   "date": "2026-07-12",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#703",
+      "title": "Streamline Extension by Removing Background Refresh in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "extension",
+        "update",
+        "frontend",
+        "cookies",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update enhances the extension by removing the background cookie refresh functionality, including access-token synchronization and various refresh triggers. The extension has been updated to version 0.4.3, retaining only the user-initiated cookie retrieval process. This change simplifies the extension's permissions and improves its overall performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#702",
+      "title": "Enhance Service Override Pricing Features in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "pricing",
+        "localization",
+        "ui",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update refines the service override pricing by displaying public services with optional favicons in the table and picker. It introduces percentage-based markup inputs while maintaining backend compatibility, aligns the layout for create/edit fields, and localizes help text across multiple languages. Additionally, the table now preserves up to two decimal places for percentage displays, enhancing user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#136",
+      "title": "Revert changes to ensure golden builder stability in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "revert",
+        "builder",
+        "stability",
+        "fix",
+        "wisdom"
+      ],
+      "public": false,
+      "summary": "This update reverts the recent changes that removed the .env file at boot, which caused the builder to fail during live testing. The previous implementation allowed for a fallback token, preventing the API from getting stuck during initialization. By restoring the original logic, we aim to enhance the reliability of the golden build process."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#135",
       "title": "Enhance tenant security by using individual .env files in Wisdom 🚀",
       "tags": [
