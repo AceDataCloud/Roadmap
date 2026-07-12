@@ -3,6 +3,174 @@
   "date": "2026-07-12",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1242",
+      "title": "Enhance Scheduled Tasks Page Background in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "css",
+        "ui",
+        "scheduled-tasks",
+        "design"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1242",
+      "summary": "This update modifies the Scheduled Tasks page by implementing the `--el-bg-color-page` for the background, ensuring a cohesive look. The task cards now retain the default white color without any additional background overrides. This change improves visual consistency and user experience on the page."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1240",
+      "title": "Add 'Run Now' Button for Scheduled Tasks in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "i18n",
+        "scheduled-tasks"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1240",
+      "summary": "This update introduces a 'Run Now' button for each scheduled task card, allowing users to trigger tasks immediately without waiting for their scheduled time. The button is strategically placed between the toggle and edit/delete options, enhancing user experience. Additionally, internationalization support has been added for 17 locales, ensuring accessibility for a wider audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#134",
+      "title": "Fix golden boot issues and enhance health-gate in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "fix",
+        "boot",
+        "health-gate",
+        "oem",
+        "ascii"
+      ],
+      "public": false,
+      "summary": "This update resolves the fresh-golden failure caused by corrupted non-ASCII bytes in the startup.bat comments, ensuring a successful boot process. Both OEM .bat files have been cleaned to pure ASCII, allowing for proper execution during fresh and in-guest reboots. Additionally, the health-gate has been rewritten to eliminate the use of kubectl exec, improving reliability through a ClusterIP Service and self-curling probe."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#953",
+      "title": "Update Maestro Thumbnail to Full-Bleed Artwork in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "thumbnail",
+        "update",
+        "migration",
+        "backend",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update replaces the Maestro service-card thumbnail with a new full-bleed Holo artwork, eliminating the previous white-edge issue in the service carousel. The migration ensures that updates only occur if the thumbnail is still the old URL, with a safe rollback mechanism in place. Validation checks confirm the successful implementation of the new thumbnail."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#585",
+      "title": "Empower Hashnode Publishing with Cookie Auth in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "hashnode",
+        "skills",
+        "publishing",
+        "automation",
+        "cookies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/585",
+      "summary": "This update introduces a new skill for Hashnode that allows users to publish, draft, and manage blog posts using their own login cookies, bypassing the need for a Pro plan. Key features include creating drafts, publishing articles, and handling automoderation warnings. The skill is fully verified and operational, ensuring a seamless experience for users without the Pro subscription."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#285",
+      "title": "Feat(connectors): switch Hashnode to cookie capture (no Pro) in Backend ✨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1241",
+      "title": "Revamp Login Mode to Auth Tab for Better Site Config in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "settings",
+        "i18n",
+        "refactor"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1241",
+      "summary": "This update moves the Login Mode setting from the General settings to a newly renamed Auth tab, reflecting its role as a site-wide configuration. The change includes a new selection interface for login methods and removes outdated components, streamlining the user experience. Additionally, internationalization support has been updated to ensure consistency across all locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1238",
+      "title": "Revamp Scheduled Tasks Page for a Sleeker Look in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "css",
+        "design",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1238",
+      "summary": "The Scheduled Tasks page has been restyled to enhance visual consistency with the app. Key changes include a white background for the page and grey cards that now sit flat without borders, improving the overall aesthetic. Hover effects have been simplified to maintain a clean user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#952",
+      "title": "Empower Site Admins with Configurable Login Modes in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "authentication",
+        "config",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `login_mode` configuration for site admins, allowing them to choose between a full-page redirect or an iframe popup for user authentication. The default setting is a redirect, but existing iframe preferences are preserved. This change ensures a consistent login experience across all visitors to a site, enhancing usability and control for site administrators."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#700",
+      "title": "Ensure Avatar Stays Perfectly Circular in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "css",
+        "frontend",
+        "bugfix",
+        "avatar"
+      ],
+      "public": false,
+      "summary": "This update addresses the issue of the avatar rendering as an oval by adding `flex-shrink: 0` to the avatar's CSS. This change ensures that the avatar maintains its intended 40x40 dimensions, preventing any unwanted distortion. The fix has been verified on the live site, confirming the avatar now displays correctly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#699",
+      "title": "Perfect Circle Avatar & Spacing Aligned with Nexior in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "css",
+        "frontend",
+        "ui",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update fixes the avatar display by ensuring it maintains a perfect circle shape, regardless of the source image's aspect ratio. Additionally, the dropdown menu spacing has been adjusted to match Nexior's exact styles, enhancing consistency across the platform. Key changes include updated padding and margin values for a cleaner layout."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthFrontend#202",
       "title": "Enhance Invoice Title Buttons for Better UX in Frontend Web 🎨",
       "tags": [
