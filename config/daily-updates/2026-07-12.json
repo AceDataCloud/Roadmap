@@ -3,6 +3,22 @@
   "date": "2026-07-12",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1243",
+      "title": "Enhance Scheduled Tasks Background Color in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "css",
+        "scss",
+        "bugfix",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1243",
+      "summary": "This update modifies the Scheduled Tasks page by enforcing the background color using `!important`. The change ensures that the page background color reliably overrides any inherited styles, improving visual consistency. A single line of SCSS was adjusted in the ScheduledTasks.vue file to implement this fix."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#703",
       "title": "Streamline Extension by Removing Background Refresh in Frontend Web 🚀",
       "tags": [
