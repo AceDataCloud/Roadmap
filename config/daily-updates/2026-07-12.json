@@ -1,0 +1,118 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-12",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1234",
+      "title": "Streamlined API Docs Access in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "api",
+        "documentation",
+        "improvement",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1234",
+      "summary": "The 'View docs' button in the API code dialog now directs users to the service's documents landing page instead of a specific API doc. This change simplifies the linking process by using the first path segment of the API path to derive the correct document URL. The previous manual mapping of service document aliases has been removed, enhancing maintainability and consistency across services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1227",
+      "title": "Enhance Task Trace ID Display in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "maestro",
+        "ui",
+        "patch"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1227",
+      "summary": "This update improves the display of task trace IDs in the Maestro component by reading them from the top-level `trace_id` returned by the `/maestro/tasks` endpoint. It maintains compatibility with legacy `response.trace_id` payloads and includes a new beachball patch change file. The changes have been validated with successful type checks and will be re-evaluated in CI."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1423",
+      "title": "New veo deployment and service added in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "deployment",
+        "service",
+        "ttapi",
+        "platform",
+        "veo"
+      ],
+      "public": false,
+      "summary": "This update introduces a dedicated `platform-service-ttapi-veo` deployment and service, enhancing the production capabilities for `/veo/videos` and `/veo/tasks`. The manifests have been captured in Git, ensuring consistency with the existing deployments while sharing the same MongoDB database for task history continuity. The deployment has already been applied live to the HK cluster and verified for functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1235",
+      "title": "Enable Run Again in API Code Dialog in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "maestro",
+        "api",
+        "button",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1235",
+      "summary": "This update fixes the issue where the 'Run again' button in the Maestro API code dialog was unclickable for users. By adding 'maestro' to the PATH_TO_STORE, the dialog can now correctly resolve the API token, allowing the button to function as intended. The change is minimal and does not affect other services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1233",
+      "title": "Streamline iframe login process in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "auth",
+        "login",
+        "feature",
+        "refactor"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1233",
+      "summary": "The login mechanism has been updated to rely solely on the 'Login mode' setting, eliminating the previous feature flag for iframe login. This change simplifies the decision-making process for login methods, ensuring that the default behavior is a full-page redirect unless explicitly set to use the iframe. The feature flag infrastructure remains intact for future use, while unnecessary code related to the old feature flag has been removed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#132",
+      "title": "Enhance OOBE Resilience with Task Scheduler in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "fix",
+        "oobe",
+        "task-scheduler",
+        "installation",
+        "wisdom"
+      ],
+      "public": false,
+      "summary": "This update modifies the installation process to ensure that fresh AKS golden builds can complete successfully without being interrupted by OOBE finalization. By re-launching the setup as a Scheduled Task, the process is safeguarded against premature termination, allowing for a smoother installation experience. Additionally, it includes a fallback to inline execution if Task Scheduler is unavailable, enhancing overall reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#652",
+      "title": "Update wrangler to the latest version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "frontend",
+        "wrangler"
+      ],
+      "public": false,
+      "summary": "This update bumps the wrangler package from version 4.106.0 to 4.108.0, incorporating several minor changes and patch updates. Key improvements include enhanced deployment processes for static Pages and better error handling during non-interactive deployments. Additionally, dependency versions for workerd and @cloudflare/workers-types have been updated to ensure compatibility and performance."
+    }
+  ]
+}
