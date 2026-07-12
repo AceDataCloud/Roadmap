@@ -3,6 +3,22 @@
   "date": "2026-07-11",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#131",
+      "title": "Optimize Builder Scheduling with Anti-Affinity in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "optimization",
+        "scheduling",
+        "kubernetes",
+        "affinity",
+        "builder"
+      ],
+      "public": false,
+      "summary": "This update reverts the CPU request for the builder pod to a more manageable level, addressing the issue of the pod being stuck in a Pending state. Additionally, a soft pod anti-affinity rule has been implemented to prevent disk I/O contention by avoiding nodes already running tenant QEMU instances. These changes enhance the overall scheduling efficiency and resource utilization in the cluster."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#130",
       "title": "Optimize builder node allocation for smoother installs in Wisdom 🚀",
       "tags": [
