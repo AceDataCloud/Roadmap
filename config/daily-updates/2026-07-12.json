@@ -3,6 +3,199 @@
   "date": "2026-07-12",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#704",
+      "title": "Superadmins Can Now Access Secure Windows Viewer in Frontend Web 🔐",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "security",
+        "vnc",
+        "deployment",
+        "i18n",
+        "superadmin"
+      ],
+      "public": false,
+      "summary": "Added a Windows Viewer (VNC) operations card to Deployment Management that is visible only to platform superadmins. The interface displays validated HTTPS viewer details with masked and revealable credentials, copy actions, and a quick-open button while enforcing frontend access checks. The update also extends deployment models and adds localization support across all target languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#957",
+      "title": "Harden Wisdom access controls and health checks in Backend 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "security",
+        "kubernetes",
+        "redaction",
+        "health-checks"
+      ],
+      "public": false,
+      "summary": "Updated deployment health handling so API readiness can remove unhealthy services while TCP liveness allows the in-guest supervisor to recover without restarting Windows workloads. Added consistent redaction of viewer credentials, host tokens, and sensitive deployment fields for non-superusers across application responses and history serialization. Added focused tests covering access filtering, manifest probe behavior, and safe metadata handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#138",
+      "title": "Prevent API hangs by isolating UI checks in Wisdom 🛡️",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "api-health",
+        "event-loop",
+        "kubernetes",
+        "resilience"
+      ],
+      "public": false,
+      "summary": "Moved synchronous WeChat UI inspection work off the FastAPI event loop to keep health endpoints responsive during login and status checks. Added API health handling and updated deployment probes so readiness uses HTTP checks while liveness keeps a TCP fallback. Extended startup handling and added resilience tests to validate recovery without restarting Windows or the active WeChat session."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1436",
+      "title": "Enhance Audio Control in Platform Service 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "audio",
+        "maestro",
+        "hyperframes",
+        "update",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update pins the HyperFrames audio volume contract in Maestro's delivery prompt, ensuring static BGM levels are set correctly and playback controls are restricted. A new MP4 is required after any audio mix changes to prevent reuse of prior outputs. The changes have been validated with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#231",
+      "title": "Enhance Aichat2 with Durable Waits in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "aichat2",
+        "durable-waits",
+        "runtime",
+        "orchestration",
+        "index"
+      ],
+      "public": false,
+      "summary": "This update introduces a robust runtime design for Aichat2, featuring durable waits that improve task management without relying on extended HTTP timeouts. Key enhancements include the implementation of fenced leases, conversation revisions, and idempotent billing segments, ensuring better orchestration and state management. The proposal aims to streamline long-running tasks and improve overall system resilience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#229",
+      "title": "Enhance Design System Consistency in Index 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "design",
+        "audit",
+        "frontend",
+        "Nexior",
+        "consistency"
+      ],
+      "public": false,
+      "summary": "This update focuses on auditing the design system consistency across Nexior, PlatformFrontend, and AuthFrontend. Key findings include a significant number of inconsistent border-radius declarations and color usages across 723 Vue SFCs. The proposal outlines a unified approach to design tokens and component libraries, aiming for a more cohesive user experience without altering existing product UI code."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1433",
+      "title": "Enhance Image URL Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "image",
+        "url",
+        "safety",
+        "refactor",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces the ability to detect and promote safe HTTPS image URLs embedded in user messages to OpenAI-compatible image blocks. Key changes include the implementation of safety checks, URL parsing, and a cap on the number of inferred image URLs. The original user text is preserved while ensuring that inferred image blocks do not persist in memory history."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1248",
+      "title": "Enhance Language Selection for Maestro in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "localization",
+        "ui",
+        "testing",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1248",
+      "summary": "This update improves the Maestro language selection by replacing raw language codes with localized names and separating the primary language from optional outputs. It also preserves the API contract while normalizing legacy values and includes responsive styling, locale coverage, and regression tests to ensure functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#287",
+      "title": "Unleash TikTok Draft Upload Connector in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "tiktok",
+        "connector",
+        "backend",
+        "video",
+        "publishing"
+      ],
+      "public": false,
+      "summary": "This update exposes the TikTok connector in the production directory, allowing for account profile access and draft video uploads. The Direct Post feature remains gated pending TikTok review. The connector is now visible and installable, enabling immediate demo recording."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1253",
+      "title": "Enhance Maestro Translations for Global Reach in Nexior 🌍",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "translations",
+        "localization",
+        "i18n",
+        "ci",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1253",
+      "summary": "This update replaces English placeholders in Maestro customization controls with verified translations across 16 non-English locales. It also strengthens the i18n CI guard to prevent untranslated keys from being used and ensures that any missing or malformed messages are flagged during validation. The changes enhance user experience by providing localized terminology for various customization options."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1251",
+      "title": "Revamp Price Settings for Enhanced Clarity in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "pricing",
+        "ui",
+        "localization",
+        "bugfix",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1251",
+      "summary": "This update introduces a consolidated Price settings section, combining site-wide markup with custom per-service markup and display overrides. Key changes include the removal of the sample-price UI, improved terminology across 18 locales, and enhanced error handling for save operations. The Price dialog is optimized for mobile and tablet views, ensuring a seamless user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1434",
+      "title": "Enhance TTS Fallback Mechanism in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "tts",
+        "fallback",
+        "error-handling",
+        "tests",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update introduces a fallback mechanism for TTS requests that encounter upstream channel issues, specifically for `s2-pro` requests. It ensures that requests can revert to the legacy audio path while maintaining request semantics and preserving latency. Additionally, the changes include new error handling and regression tests to enhance reliability and performance."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#484",
       "title": "Enhance OpenAI and WAN CLI for New Specs in Clis 🚀",
       "tags": [
