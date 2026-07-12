@@ -3,6 +3,38 @@
   "date": "2026-07-12",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#135",
+      "title": "Enhance tenant security by using individual .env files in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "security",
+        "fix",
+        "update",
+        "wisdom"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical security issue where tenants were inadvertently using a shared golden token instead of their own .env configurations. The fix involves modifying the startup script to delete any snapshot-baked .env file at boot, ensuring that each tenant loads its unique configuration. This change enhances both security and correctness by preventing unauthorized access to the golden database."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1239",
+      "title": "Enhance Site Services with Favicon Picker and Localizable Fields in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "localization",
+        "ui",
+        "services",
+        "markup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1239",
+      "summary": "This update introduces a refined service picker that only displays services with a favicon, enhancing the user experience by preventing private services from appearing. Additionally, fine-print markup helpers have been restyled for clarity, and both display name and summary fields now support auto-translation toggles for better localization. Minor adjustments to tip spacing improve overall layout consistency."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1242",
       "title": "Enhance Scheduled Tasks Page Background in Nexior 🎨",
       "tags": [
