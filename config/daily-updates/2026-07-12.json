@@ -3,6 +3,171 @@
   "date": "2026-07-12",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#484",
+      "title": "Enhance OpenAI and WAN CLI for New Specs in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "openai",
+        "wan",
+        "update",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/484",
+      "summary": "This update modifies the OpenAI and WAN CLI tools to accommodate recent OpenAPI spec changes. The WAN service now supports multiple reference video URLs for the image-to-video command, while the OpenAI service can handle batch inputs for embeddings. These enhancements improve usability and flexibility for users working with these services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#955",
+      "title": "Securely Handle Trailing Slash in Application Routes in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "routing",
+        "security",
+        "tests",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update fixes the routing issue for application detail views by ensuring both trailing and non-trailing slash URLs direct to the secure ApplicationRetrieveUpdateDestroyViewSet. The changes maintain authentication and permissions while preventing server errors. Additionally, new tests have been added to validate the routing behavior and ensure custom actions are not shadowed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#954",
+      "title": "Enhance OpenAPI Array Input Contracts in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "openapi",
+        "backend",
+        "api",
+        "testing",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the OpenAPI specifications by defining the input for OpenAI embeddings as a supported array of strings or tokens, ensuring non-empty entries. Additionally, the `reference_video_urls` field is now correctly specified as a non-empty array of URIs. Regression tests have been added to validate these changes, enhancing the reliability of the API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#434",
+      "title": "Enhance Input Schema for MCP Tools in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "schema",
+        "update",
+        "compatibility",
+        "mcp",
+        "tools"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/434",
+      "summary": "This update improves the input schemas for various MCP tools, ensuring better compatibility with OpenAI's API. Key changes include exposing image and embedding inputs as arrays, along with a new schema for reference video URLs. The modifications enhance data handling and maintain backward compatibility with legacy formats."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1252",
+      "title": "Enhance Maestro Remix Reference Previews in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "maestro",
+        "enhancement",
+        "testing",
+        "ui",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1252",
+      "summary": "This update improves the Maestro remix result cards by displaying the referenced source video above the instructions. It implements a more efficient reference resolution process, adding features like bounded retries, abortable request timeouts, and visible manual retry states to enhance user experience and reliability. Comprehensive tests have been added to ensure functionality and prevent regressions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1247",
+      "title": "Enhance New Scheduled Task Form Reset in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "enhancement",
+        "tests",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1247",
+      "summary": "This update ensures that the scheduled task form resets every time the New dialog is opened, preventing any stale edits from affecting new drafts. Additionally, it introduces safeguards against dialog switching during save operations and adds regression tests for the new behavior. These changes improve user experience and reliability in task management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1246",
+      "title": "Introducing Default-Off Maestro Customization Controls in Nexior 🎛️",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "customization",
+        "maestro",
+        "localization",
+        "ui",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1246",
+      "summary": "This update introduces a new compact `Customize` toggle for Maestro, allowing users to control video type, visual style, and voice timbre. The toggle is off by default, ensuring a streamlined experience while preserving user selections locally for easy reactivation. Localization updates have been made across all supported languages to enhance accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1432",
+      "title": "Enhance Voice Verification Retry Logic in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "voice",
+        "verification",
+        "retry",
+        "testing",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces a retry mechanism for transient voice verification failures when using the OpenAI-HK API. It ensures that retries occur within a strict 115-second budget while preserving genuine validation failures. Additionally, focused regression tests have been added to validate the new logic, enhancing overall reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1244",
+      "title": "Enhance Artifacts Page with Unified Styling in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "accessibility",
+        "responsive",
+        "filters",
+        "design"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1244",
+      "summary": "This update aligns the Artifacts page with the styling of Scheduled Tasks, improving the overall user experience. Key changes include merging duplicate summary cards, enhancing responsive layouts, and implementing count-aware filters. Additionally, accessibility improvements ensure a consistent experience across different devices and themes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#137",
+      "title": "Enhance Security by Scrubbing Builder Credentials in Wisdom 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "security",
+        "update",
+        "testing",
+        "api",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update implements a crucial security enhancement by ensuring that builder credentials are scrubbed before creating snapshots. Key changes include the introduction of a Bearer-protected endpoint that securely deletes sensitive information and the validation of token responses. Additionally, comprehensive tests confirm the effectiveness of these modifications, enhancing the overall integrity of the system."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1243",
       "title": "Enhance Scheduled Tasks Background Color in Nexior 🎨",
       "tags": [
