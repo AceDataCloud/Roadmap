@@ -3,6 +3,153 @@
   "date": "2026-07-12",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#202",
+      "title": "Enhance Invoice Title Buttons for Better UX in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "ui",
+        "ux",
+        "frontend",
+        "buttons",
+        "element-plus"
+      ],
+      "public": false,
+      "summary": "Updated the action buttons on the invoice title cards to solid button styles for improved visual consistency. The changes include modifying the 'Edit', 'Delete', and 'Set Default' buttons to use Element Plus's primary and danger types. This update enhances user interaction without altering any underlying logic or styles."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#584",
+      "title": "Update Hashnode API Endpoint and Auth in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "hashnode",
+        "api",
+        "authentication",
+        "skills",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/584",
+      "summary": "This update addresses the deprecation of the Hashnode GraphQL API endpoint, switching from `gql.hashnode.com` to `gql-beta.hashnode.com`. It also implements Bearer token authentication for improved security and future-proofing. Additionally, the skill now accurately distinguishes between authentication errors and Pro plan restrictions, providing clear guidance for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#201",
+      "title": "Enhance OAuth Apps Table Layout in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "css",
+        "layout"
+      ],
+      "public": false,
+      "summary": "This update widens the Operation column in the OAuth Apps table from 160px to 200px, providing more space for the Edit and Delete buttons. The change is purely a layout adjustment with no impact on functionality or internationalization. It improves the user interface by reducing button crowding."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#698",
+      "title": "Enhance User Menu to Match Nexior Style in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "design",
+        "ui",
+        "user-menu",
+        "nexior"
+      ],
+      "public": false,
+      "summary": "This update refines the user menu in the header to align with Nexior's design standards. Key changes include a rounded floating card, inset menu padding, and a rounded-pill hover effect, all while maintaining existing functionality. The avatar has been removed from the header for a cleaner look, ensuring a seamless integration with Nexior's aesthetic."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#133",
+      "title": "Enhance Golden Build Process for Wisdom in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "installation",
+        "workflow",
+        "pod",
+        "automation",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update improves the installation process by ensuring a clean pod restart after installation. Key changes include modifications to the install script and the golden build workflow, which now waits for an install-complete marker before recreating the builder pod. This ensures that the startup script runs correctly, enabling WeChat and the API to launch seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#583",
+      "title": "Boost HTTP Timeout for Smooth Media Uploads in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "http",
+        "timeout",
+        "media",
+        "bugfix",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/583",
+      "summary": "This update raises the HTTP timeout for media uploads in the Skills module, addressing a ReadTimeout issue that occurred during image posting. By implementing a 60-second timeout, the system now accommodates larger uploads without failure. Additionally, the error handling has been improved to provide clearer feedback to users when timeouts occur."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1236",
+      "title": "Enhance Scheduled Tasks with Custom Frequency Options in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "scheduling",
+        "localization",
+        "ui",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1236",
+      "summary": "This update introduces an advanced schedule builder for scheduled tasks, allowing users to set custom frequencies such as every N minutes, hours, or days, along with a new 'hourly-at-minute' option. A real-time preview feature has been added to enhance usability. Additionally, 17 new localization keys have been integrated across multiple languages to support these features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1237",
+      "title": "Enhance Live Agent Activity Display in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "maestro",
+        "progress",
+        "telemetry"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1237",
+      "summary": "This update introduces real-time agent activity and render percentage details in the Maestro progress checklist. The UI now displays dynamic messages reflecting the agent's current actions, improving user experience during long rendering processes. Key changes include the addition of new telemetry data and updates to the ProgressSteps component for better detail presentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1430",
+      "title": "Fix remix freezing and enhance live progress updates in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "progress",
+        "remix",
+        "updates",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the remix process would freeze at 93% during delivery due to misfiring conditions. It also introduces live activity and render progress updates, providing real-time feedback on the rendering process. The changes improve the accuracy of the progress indicators, ensuring users receive truthful updates during video processing."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1234",
       "title": "Streamlined API Docs Access in Nexior 🚀",
       "tags": [
