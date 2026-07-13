@@ -1,0 +1,293 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-13",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#142",
+      "title": "Ensure Fresh Shared Environment Before API Startup in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "api",
+        "testing",
+        "startup"
+      ],
+      "public": false,
+      "summary": "This update mandates that the `load-shared-env.ps1` script must successfully execute before the API starts, preventing issues with stale tokens from previous sessions. A new static regression test has been added to verify the order of operations for loading the shared environment and token. The changes improve the reliability of the API startup process, ensuring it only runs with a fresh configuration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#141",
+      "title": "Enhance Profile Refresh Handling in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "performance",
+        "api",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of account profile refreshes by ensuring that login-state checks do not block the FastAPI event loop. Key changes include running profile inspections on dedicated executors and implementing timeouts for these checks. The modifications enhance system reliability by preventing timeouts on critical API endpoints."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#707",
+      "title": "Enhance CodingBridge Setup Instructions in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "codingbridge",
+        "fix",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update replaces Unix-only pipx instructions with a more universal approach using `python -m coding_bridge`, ensuring compatibility across different operating systems. It also clarifies the usage of the config editor and local environment variable names, improving the overall user experience. The changes have been validated with ESLint and vue-tsc passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#589",
+      "title": "Enhance Reddit Integration with Cookie Support in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "reddit",
+        "authentication",
+        "security",
+        "ci",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/589",
+      "summary": "This update introduces a new Reddit helper that prioritizes cookie-based authentication while providing a fallback to token-based authentication. Key features include support for user submissions, enhanced security measures for write operations, and comprehensive validation of Reddit response shapes. Additionally, all Bash recipes are now self-contained, and CI tests have been integrated for improved reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#61",
+      "title": "Fix WeChat Task Endpoint Verification in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "fix",
+        "wechat",
+        "api",
+        "windows",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/61",
+      "summary": "This update resolves issues with the WeChat task endpoint by ensuring the correct API path is used throughout the client, documentation, and tests. It also improves the handling of the module version and adds recovery instructions for Windows users facing stale installations. All changes have been validated with passing tests and clean code checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#436",
+      "title": "Enhance README with MCP Registry Ownership Info in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "documentation",
+        "metadata",
+        "pyPI",
+        "maestro"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/436",
+      "summary": "This update modifies the Maestro MCP README to include the required MCP Registry ownership line, ensuring compliance with PyPI validation. The addition aligns with existing conventions and facilitates a successful publish workflow to PyPI. This change is purely metadata and does not affect any logic."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#484",
+      "title": "Enhance Maestro API Documentation in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "api",
+        "maestro",
+        "video-production",
+        "integration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/484",
+      "summary": "This update introduces comprehensive documentation for the Maestro API, including integration guides for both video and task APIs. Key files added include detailed instructions on API usage, authentication, and error handling, ensuring developers have the necessary resources to effectively utilize the Maestro service. All documentation has been cross-verified for accuracy against live sources."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#588",
+      "title": "Introducing the maestro-video skill for seamless video production in Skills 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "feature",
+        "video",
+        "maestro",
+        "skills",
+        "ai-media"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/588",
+      "summary": "This update adds the new `maestro-video` agent skill, enabling users to produce complete videos using the AceDataCloud Maestro API. Key features include generating, remixing, and editing videos from natural language briefs, along with support for multilingual variants and a robust async workflow. The skill is now documented and integrated into the existing AI-media skills framework."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#435",
+      "title": "Introducing the Maestro MCP Server in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "feature",
+        "video",
+        "api",
+        "oauth",
+        "deployment"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/435",
+      "summary": "This update adds the new Maestro MCP server, which integrates with the AceDataCloud Maestro API to facilitate end-to-end video production from natural-language briefs. Key features include tools for creating, remixing, and managing video tasks, along with a robust OAuth authentication mechanism. The implementation includes comprehensive testing and deployment configurations to ensure seamless integration and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#140",
+      "title": "Enhance conversation limits handling in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "performance",
+        "testing",
+        "web"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of conversation limits in the web UI by clamping oversized requests to a maximum of 200 and enforcing a maximum offset of 1000. Additionally, it marks certain responses to prevent caching, ensuring users always see the most up-to-date information. The changes include new tests and a thorough review process to enhance stability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#706",
+      "title": "Enhance API Test Response Display in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "api",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update wraps the API Test response CodeBlock in a bounded scroll area, limiting its height to 420px or 50vh. This prevents long JSON responses from stretching the management page, while keeping the header and copy button fixed. The changes ensure better usability across desktop and mobile views."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#705",
+      "title": "Enhance Pricing Clarity in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "pricing",
+        "localization",
+        "ui",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update removes the editable sample-base-price UI and clarifies the distinction between site-wide and per-service markup across all 12 locales. Additionally, it ensures that deleting a service override restores catalog display fields while pricing inherits the site-wide markup. Dead sample-preview locale keys have been removed, and a pricing UI contract guard has been implemented in the prebuild process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1255",
+      "title": "Align Purchase Previews with Effective Markup in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "pricing",
+        "backend",
+        "checkout",
+        "user-experience",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1255",
+      "summary": "This update enhances the purchase preview functionality by integrating the backend-resolved `effective_markup_ratio`, ensuring that usage and subscription previews accurately reflect order charges. It also implements safeguards against outdated backend responses, requiring a loaded Site state before fallback options are applied. Additionally, the checkout process is disabled when no compatible packages are available, improving the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#958",
+      "title": "Enhance Pricing Logic and Error Handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "backend",
+        "error-handling",
+        "optimizations",
+        "serializers"
+      ],
+      "public": false,
+      "summary": "This update introduces several key improvements to the pricing logic within the application. It exposes the `effective_markup_ratio` only on specific endpoints, ensuring a stable fail-closed response when pricing data is unavailable. Additionally, it enhances the resolution of custom domains and optimizes serializer performance, contributing to a more robust backend system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1254",
+      "title": "Empower Maestro with Custom Toggles in Nexior 🎛️",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "customization",
+        "maestro",
+        "ui",
+        "localization",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1254",
+      "summary": "This update replaces Maestro's single global customization switch with independent toggles for Video Type, Visual Style, and Voice Timbre. Each control is now visible but disabled until its corresponding toggle is enabled, enhancing user experience and flexibility. The changes ensure compatibility with legacy values while maintaining a clean interface across all locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#288",
+      "title": "Enhance Reddit Authentication with Cookie Support in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "authentication",
+        "reddit",
+        "backend",
+        "cookies",
+        "oauth"
+      ],
+      "public": false,
+      "summary": "This update introduces Reddit as a connector with cookie authentication, enhancing user experience by allowing session persistence through a valid `reddit_session`. Key changes include strict validation of cookie attributes and OAuth scope management, ensuring security and compliance. The implementation relies on existing BYOC environment injection, requiring no changes to PlatformService."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#193",
+      "title": "Enable Durable Run Admission in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "gateway",
+        "deployment",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update activates the `DURABLE_RUNS_ENABLED` flag in the production Gateway manifest, enhancing the system's capabilities without any code or configuration changes. The deployment has been validated with successful prerequisites and a clean review verdict. Rollback is straightforward, requiring only a flag reset."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#651",
+      "title": "Update Node Types to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps the @types/node package from version 26.1.0 to 26.1.1. The changes include minor updates that ensure better compatibility and performance. This will help maintain the stability of the frontend codebase."
+    }
+  ]
+}
