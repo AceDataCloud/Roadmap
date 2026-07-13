@@ -3,6 +3,54 @@
   "date": "2026-07-13",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1451",
+      "title": "Enhance Chromium Sandbox Stability in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "chromium",
+        "sandbox",
+        "deployment",
+        "infrastructure",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update pins the sandbox base to a verified multi-architecture Debian Bookworm image, ensuring consistent Chromium startup across production kernels. Key improvements include the installation of 'tini' as PID 1 for better process management, the addition of a non-root image-build Chromium startup smoke test, and enhanced rollout verification processes. These changes aim to bolster the reliability and security of the sandbox environment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#650",
+      "title": "Update appkit-universal-connector to 1.8.22 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "frontend",
+        "appkit",
+        "walletconnect"
+      ],
+      "public": false,
+      "summary": "This update bumps the @reown/appkit-universal-connector from version 1.8.21 to 1.8.22, introducing several key enhancements. Notable changes include new methods for headless wallet management and improvements to the WalletConnect URI handling. Additionally, the TRON transaction payload shape has been fixed to align with the wallet's session properties, ensuring better compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#150",
+      "title": "Enhance WeChat Release Notes Handling in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "ocr",
+        "automation",
+        "bugfix",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of the WeChat release notes popup by ensuring it is automatically closed when a user is logged in. Key changes include enhancements to the OCR detection pipeline and adjustments to the window management logic to prevent false positives during login. The application remains stable with all tests passing successfully."
+    },
+    {
       "id": "gh:pr:AceDataCloud/CommonFrontend#17",
       "title": "Feat: add shared visual design tokens in Common Frontend ✨",
       "tags": [
