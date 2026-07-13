@@ -3,6 +3,151 @@
   "date": "2026-07-13",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#152",
+      "title": "Enhanced Golden Preview Startup Time in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "enhancement",
+        "testing",
+        "performance",
+        "stability"
+      ],
+      "public": false,
+      "summary": "This update extends the golden preview smoke budget from 15 to 25 minutes, allowing for a more reliable startup process. Key changes include adjustments to polling for the Weixin/WeChat PID and improvements in the system restart tests. The modifications aim to enhance stability and performance during the preview phase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1267",
+      "title": "Fix custom domain tab issue with '@' escaping in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "i18n",
+        "vue",
+        "testing",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1267",
+      "summary": "This update addresses a critical issue where the Custom Domain settings tab would go blank due to a bare '@' character in i18n messages. The fix involves escaping the '@' in all relevant locales to prevent vue-i18n from throwing a compilation error. Additionally, a new test has been added to ensure all messages compile correctly across all i18n namespaces."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#238",
+      "title": "Documenting Visual Token Rollout in Index 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "visual-tokens",
+        "frontend",
+        "adoption",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update records the adoption of merged translation DTOs and the integration of CommonFrontend visual tokens in the latest core release. All consumer branches are marked pending PR review, with Nexior's rendered-page verification remaining open for further validation. Key changes include modifications to README files to reflect the current status and updates on visual token implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#209",
+      "title": "Refactor to Use Shared Visual Tokens in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "refactor",
+        "frontend",
+        "design",
+        "scss",
+        "upgrade"
+      ],
+      "public": false,
+      "summary": "This update upgrades the @acedatacloud/core package to version 0.12.0 and integrates shared styles into the application SCSS. Key changes include mapping global Element Plus design tokens for colors, borders, and typography, while maintaining existing theme behaviors. The validation process confirmed successful builds and rendered checks across various themes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#716",
+      "title": "Refactor to Adopt Shared Visual Tokens in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "frontend",
+        "design",
+        "css",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update upgrades `@acedatacloud/core` to version 0.12.0 and implements core styles before application overrides in both CSR and SSR entries. It maps global Element Plus design elements to shared semantic tokens while maintaining the app's theme behavior and CSS-variable overrides. Validation has been completed successfully, ensuring no horizontal overflow and consistent rendering across devices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1266",
+      "title": "Refactor to Adopt Shared Visual Tokens in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "design",
+        "update",
+        "scss",
+        "tokens"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1266",
+      "summary": "This update upgrades the `@acedatacloud/core` package to version 0.12.0 and integrates its stylesheet with the application. Key changes include mapping global design elements like colors and typography to shared semantic tokens while maintaining the Nexior theme. Validation steps have been completed, ensuring a smooth transition to the new design standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1265",
+      "title": "Enhance Messaging Settings with New Shortcut in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "settings",
+        "ui",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1265",
+      "summary": "This update introduces a new send-message shortcut option in the settings, allowing users to choose between 'Enter' or '⌘/Ctrl + Enter' for sending messages. Additionally, the previous source-code link has been removed from the settings interface. The chat composer now respects this preference, improving user experience across all supported locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#151",
+      "title": "Enhance Remembered-Account Login Experience in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "auth",
+        "login",
+        "weixin",
+        "ui",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update improves the remembered-account login process by ensuring the WeChat login window is reliably foregrounded before any interaction. It removes unsafe coordinate fallbacks that could inadvertently trigger QR login and introduces auto-login for positively detected pages. Additionally, startup consoles are hidden to prevent them from obstructing the WeChat interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1264",
+      "title": "Enhance Theme Options with System Preference in Nexior 🌈",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "settings",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1264",
+      "summary": "This update introduces a new 'System' theme option to the theme switcher in the settings, allowing the application to follow the user's OS color scheme preferences. It utilizes `matchMedia` to detect changes in the OS theme and ensures that listeners are managed to prevent stacking. The implementation is fully localized across all 18 supported languages and does not require any backend changes."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthBackend#293",
       "title": "New MCP Connectors for Maestro & Happy Horse in Backend 🚀",
       "tags": [
