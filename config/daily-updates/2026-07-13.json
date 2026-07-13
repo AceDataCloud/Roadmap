@@ -3,6 +3,104 @@
   "date": "2026-07-13",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#144",
+      "title": "Enhance SMB Probe Handling in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "smb",
+        "security",
+        "powerShell",
+        "cleanup",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of the shared environment probe by loading the gateway `.env` through an in-process PowerShell runspace, ensuring it retains SMB access. Key changes include validating the `API_TOKEN` before replacing the local environment and implementing a cleanup for credential-bearing temporary files. The modifications enhance security and reliability without compromising the fresh-environment gate."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#964",
+      "title": "Fix image payload staging for Windows guests in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "backend",
+        "windows",
+        "image",
+        "payload"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the Windows guest was not receiving the correct image payload due to improper mounting of the new container image. Key changes include the addition of optional staging for the shared image payload and validation of configured paths. The fix has been validated with all tests passing and a clean security review."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#63",
+      "title": "Ensure CLI Output is ASCII-Only in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "ascii",
+        "cli",
+        "windows",
+        "bugfix",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/63",
+      "summary": "This update modifies the channels_cli.py to ensure all output is ASCII-only, addressing potential UnicodeEncodeError issues on Windows legacy consoles. A regression assertion has been added to validate the changes, and tests confirm that the output functions correctly in a real Chinese Windows CP936 CMD environment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#710",
+      "title": "Enhance API Recovery Status Display in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "api",
+        "frontend",
+        "deployment",
+        "localization",
+        "status"
+      ],
+      "public": false,
+      "summary": "This update introduces a new status label, 'API recovering', for deployed APIs that are temporarily not ready. It maintains the existing deployment states while adding recovery status keys across multiple locales. Additionally, it preserves warning severity when no replicas are ready and provides a manual restart hint if recovery does not complete."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#62",
+      "title": "Enhance Windows Console Support in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "windows",
+        "unicode",
+        "bugfix",
+        "testing",
+        "channels"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/62",
+      "summary": "This update addresses UnicodeEncodeError issues in Windows legacy consoles by replacing Unicode markers with ASCII-only outputs. The changes ensure that users can view connectivity results without errors, particularly in Chinese Windows CMD environments. Validation tests confirm that the new output format works correctly under CP936 encoding."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#963",
+      "title": "Enhance Guest Config Sharing in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "kubernetes",
+        "deployment",
+        "backend",
+        "fix",
+        "config"
+      ],
+      "public": false,
+      "summary": "This update addresses the issue of read-only Kubernetes Secret volumes by implementing a writable guest config share. Key changes include mounting the Secret read-only in a hardened initContainer and copying the .env file into a writable EmptyDir. The addition of a shared-env checksum annotation ensures that configuration changes trigger pod recreation, enhancing overall reliability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#142",
       "title": "Ensure Fresh Shared Environment Before API Startup in Wisdom 🚀",
       "tags": [
