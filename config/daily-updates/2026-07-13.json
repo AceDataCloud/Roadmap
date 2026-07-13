@@ -3,6 +3,119 @@
   "date": "2026-07-13",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#709",
+      "title": "Implement CommonFrontend Consumer-Contract Harness in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ci",
+        "frontend",
+        "validation",
+        "harness",
+        "typescript"
+      ],
+      "public": false,
+      "summary": "This update introduces a CommonFrontend consumer-contract harness for the PlatformFrontend, enhancing CI validation for the `@acedatacloud/core` package. The harness ensures that each consumer app can verify compatibility with its peer dependencies without affecting runtime. Key changes include the addition of a new workflow and script for contract validation, alongside necessary modifications to existing components."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#145",
+      "title": "Enhance Preview Cold Boot Stability in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "fix",
+        "preview",
+        "stability",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update improves the preview cold boot process by aligning the startup probe with production standards, switching from an HTTP probe to a TCP probe. Additionally, the readiness probe is adjusted to prevent premature termination of the Windows/QEMU VM during API initialization. A regression assertion has been added to ensure that the HTTP startup probe does not reappear in future previews."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#204",
+      "title": "Enhance AuthFrontend with CommonFrontend Contract Harness in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "ci",
+        "frontend",
+        "auth",
+        "testing",
+        "harness"
+      ],
+      "public": false,
+      "summary": "This update introduces a CommonFrontend consumer-contract harness for AuthFrontend, ensuring compatibility with the `@acedatacloud/core` package across different peer versions. The CI-only harness validates that AuthFrontend can consume the core package with its pinned peer dependencies, specifically `vue-i18n@9`. Key scripts and workflows have been added to facilitate this cross-version check without impacting the product code."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1256",
+      "title": "Introducing CommonFrontend Consumer-Contract Harness in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "frontend",
+        "validation",
+        "nexior",
+        "contract"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1256",
+      "summary": "This update adds a CommonFrontend consumer-contract harness to Nexior, enhancing CI capabilities for consumer applications. It ensures that each app can validate its consumption of the `@acedatacloud/core` package with its specific peer versions, all without impacting product code or runtime. The implementation includes robust validation checks and a JSON report for CI artifacts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#12",
+      "title": "Unified Multi-Compiler Build Foundation in Common Frontend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "build",
+        "frontend",
+        "typescript",
+        "vue",
+        "npm"
+      ],
+      "public": false,
+      "summary": "This update introduces a unified build foundation for the Common Frontend, consolidating AuthFrontend, Nexior, and PlatformFrontend into a single package. The new multi-compiler build process enhances the output by merging various compilers' results into one distribution, ensuring no runtime changes or product behavior are affected. Key scripts for building and validating the output have been added, ensuring a robust and reversible build process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#590",
+      "title": "Launch new TGStat research skill for Telegram in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "tgstat",
+        "skills",
+        "telegram",
+        "api",
+        "research"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/590",
+      "summary": "This update introduces an installable TGStat skill that allows users to research public Telegram channels without needing a login. It features built-in web search capabilities, structured fallbacks for rate limits, and integration with the official Stat API when a token is provided. Comprehensive tests have been conducted to ensure functionality and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#143",
+      "title": "Enhance OEM Image Loading Process in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "oem",
+        "fix",
+        "powerShell",
+        "docker",
+        "wisdom"
+      ],
+      "public": false,
+      "summary": "This update addresses critical issues with the OEM startup process, ensuring that the current image code is loaded correctly from shared resources. Key changes include staging the shared application into site-packages, improving PowerShell scripts for better timeout handling, and aligning the preview with writable configurations. These enhancements aim to streamline the startup process and improve overall system reliability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#144",
       "title": "Enhance SMB Probe Handling in Wisdom 🚀",
       "tags": [
