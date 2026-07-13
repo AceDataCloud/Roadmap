@@ -3,6 +3,37 @@
   "date": "2026-07-13",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#649",
+      "title": "Updated vue-chartjs to 5.3.4 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "frontend",
+        "vue",
+        "charts"
+      ],
+      "public": false,
+      "summary": "This update bumps vue-chartjs from version 5.3.3 to 5.3.4, addressing a bug where the chart instance reference remained null with Vue 3.5.39. The changes enhance the stability and functionality of chart rendering in the application. Overall, this ensures a smoother user experience with improved chart performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#153",
+      "title": "Enhance secret management in Wisdom 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "fix",
+        "deployment",
+        "security",
+        "workflow"
+      ],
+      "public": false,
+      "summary": "This update improves the deletion process for preview workloads and PVCs by label, while specifically targeting the preview app Secret by its resource name. The cert-manager TLS Secret is preserved to maintain security. These changes ensure a smoother cleanup process during deployments."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#152",
       "title": "Enhanced Golden Preview Startup Time in Wisdom 🚀",
       "tags": [
