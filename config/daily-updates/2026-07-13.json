@@ -3,6 +3,55 @@
   "date": "2026-07-13",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#293",
+      "title": "New MCP Connectors for Maestro & Happy Horse in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "connectors",
+        "mcp",
+        "backend",
+        "updates",
+        "ai"
+      ],
+      "public": false,
+      "summary": "This update introduces two new connectors for the recently launched AceDataCloud MCP: Maestro and Happy Horse. Both connectors follow the established DCR model and will automatically sync via the `sync_connectors` CronJob after deployment. Additionally, the `webextrator` entry's `auth_methods` have been streamlined for better organization."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1450",
+      "title": "Strengthen Happy Horse Delivery Workflow in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "delivery",
+        "happyhorse",
+        "workflow",
+        "testing",
+        "improvements"
+      ],
+      "public": false,
+      "summary": "This update enhances the Happy Horse delivery process by recovering uniquely nested project outputs while ensuring local rendering and deterministic preflight checks. Key improvements include refined error handling, mandatory single audio stream delivery, and comprehensive test coverage for nested projects. The changes aim to streamline the delivery workflow and improve overall reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#595",
+      "title": "Streamline Xiaohongshu Chromium Profile Path in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "chromium",
+        "xiaohongshu",
+        "bugfix",
+        "testing",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/595",
+      "summary": "This update creates Xiaohongshu Chromium runtime profiles directly under `/tmp`, resolving issues with long per-session `TMPDIR` paths that exceeded Chromium's Unix socket limits. A regression test has been added to ensure the new implementation correctly handles long sandbox-style `TMPDIR` values. Overall, this change enhances stability and performance for Xiaohongshu operations."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1451",
       "title": "Enhance Chromium Sandbox Stability in Platform Service 🚀",
       "tags": [
