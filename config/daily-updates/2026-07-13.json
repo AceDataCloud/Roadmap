@@ -3,6 +3,214 @@
   "date": "2026-07-13",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#16",
+      "title": "Enhance Translation DTOs in Common Frontend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "feature",
+        "typescript",
+        "testing",
+        "refactor"
+      ],
+      "public": false,
+      "summary": "This update consolidates translation interfaces from Nexior and PlatformFrontend into the core module, ensuring a unified approach. It introduces comprehensive type tests for all translation-related DTOs, enhancing type safety and reliability. Consumers will need to adjust their imports accordingly, but existing operator behavior remains unchanged."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1447",
+      "title": "Exciting Integration of Happy Horse with Private Model Pins in Platform Service 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "integration",
+        "maestro",
+        "video",
+        "debug",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update integrates the `happyhorse-video` skill into Maestro, enhancing the provider map for video generation. It introduces support for undocumented debug pins through a secure directive, allowing for improved handling of silent/action shots while maintaining Seedance for dialogue. The rollout requires a new token for private pins, ensuring normal requests remain unaffected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#236",
+      "title": "Currency Mapping Rollout Completed in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "currency",
+        "documentation",
+        "pagination",
+        "frontend",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "The rollout of currency mapping has been successfully recorded, marking the completion of Pagination adoption across CommonFrontend, Nexior, and PlatformFrontend. Key updates include the removal of mappings from the next-candidate list and documentation changes in the README files. This update ensures a cleaner architecture without introducing new roadmaps or versions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#714",
+      "title": "Refactor to Use Shared Core Currency Mappings in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "frontend",
+        "currency",
+        "mappings",
+        "core"
+      ],
+      "public": false,
+      "summary": "This update bumps the `@acedatacloud/core` package to version 0.10.0 and integrates shared locale and currency mappings into the price and initializer code. It also removes the outdated local barrel export and deletes the `src/constants/mapping.ts` file, resulting in a net reduction of 64 lines of code. All validation checks have passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1260",
+      "title": "Streamline Currency Mappings in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "currency",
+        "mappings",
+        "cleanup",
+        "core"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1260",
+      "summary": "This update refactors the currency mappings by utilizing shared locale/currency mappings from the core library, improving code maintainability. The local barrel export and the stale mapping constants have been removed, resulting in a cleaner codebase with 15 additions and 64 deletions. All validations, including ESLint and the full test suite, passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#15",
+      "title": "Enhance Currency Mappings in Common Frontend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "enhancement",
+        "currency",
+        "testing",
+        "core"
+      ],
+      "public": false,
+      "summary": "This update integrates currency mappings from the core package into the Common Frontend. It includes the addition of locale-to-currency and currency-label mappings as readonly string records, along with comprehensive tests for all locale defaults and currency labels. As a result, consumers will only need to adjust three imports and can remove two local mapping files."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1446",
+      "title": "Enhance Scheduled Run Outcome Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "backend",
+        "testing",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of scheduled run outcomes by deriving the status from the terminal reason instead of relying on hardcoded success. Key changes include modifications to the conversations and scheduled trigger handler files to return accurate run outcomes, along with the addition of unit tests for the new functionality. This ensures that failed runs are correctly identified and displayed, enhancing overall reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#235",
+      "title": "Streamline CommonFrontend Rollout in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "refactor",
+        "cleanup",
+        "frontend",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update simplifies the CommonFrontend rollout by maintaining `@acedatacloud/core` as the sole shared package and eliminating package renaming. It replaces a lengthy roadmap with a concise extraction policy, records previous infrastructure changes, and updates the design audit to remove conflicting instructions. The changes resulted in 79 additions and 640 deletions, enhancing clarity and efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#713",
+      "title": "Refactor Pagination to Shared Core in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "pagination",
+        "core",
+        "frontend",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update bumps `@acedatacloud/core` to version 0.9.0 and replaces all local Pagination imports with the shared component from the core library. The local `Pagination.vue` file has been removed, resulting in a cleaner codebase with 29 additions and 101 deletions. All validation checks have passed, ensuring stability and consistency across the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1259",
+      "title": "Refactor Pagination to Use Shared Core Component in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "pagination",
+        "core",
+        "nexior",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1259",
+      "summary": "This update bumps `@acedatacloud/core` to version 0.9.0 and replaces all local Pagination imports with the shared component from the core library. The local `Pagination.vue` file has been removed, resulting in a net reduction of 89 lines of code. All tests and builds have passed successfully, ensuring no functional changes were introduced."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#292",
+      "title": "Integrate Xiaohongshu Connector Skill in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "xiaohongshu",
+        "connector",
+        "backend",
+        "integration",
+        "skills"
+      ],
+      "public": false,
+      "summary": "This update links the existing Xiaohongshu Cookie connector to the AceDataCloud ecosystem, enhancing our social media capabilities. A focused seed contract test has been added to ensure the required Skill and Cookie capture settings are met. The rollout utilizes existing sync and backfill mechanisms, ensuring a smooth integration without introducing new commands."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#712",
+      "title": "Enhance Wisdom Message Testing Features in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "api",
+        "i18n",
+        "testing",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new action to send messages to the File Transfer Assistant via the Wisdom API. It includes robust error handling, polling for task status, and improved user experience by preventing concurrent actions. Additionally, internationalization has been updated to support multiple languages, ensuring a wider reach for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#594",
+      "title": "Introducing the Xiaohongshu Connector Skill in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "xiaohongshu",
+        "connector",
+        "skills",
+        "update",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/594",
+      "summary": "This update adds a new Xiaohongshu Agent Skill that leverages the existing BYOC cookie connector and runs sandboxed Chromium over CDP. Key features include account management, content publishing, and interaction capabilities, all while ensuring safety through strict write confirmations and isolated testing environments. The skill is now registered in the marketplace and ready for use."
+    },
+    {
       "id": "gh:pr:AceDataCloud/APIs#485",
       "title": "Enhance Happy Horse Video API Documentation in A P Is 🚀",
       "tags": [
