@@ -3,6 +3,353 @@
   "date": "2026-07-13",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/APIs#485",
+      "title": "Enhance Happy Horse Video API Documentation in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "api",
+        "documentation",
+        "happyhorse",
+        "video",
+        "integration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/485",
+      "summary": "This update introduces comprehensive documentation for the Happy Horse Video API, including detailed integration guides for video generation and editing workflows. Key features such as API endpoints, request/response examples, and error handling are thoroughly documented to ensure clarity and usability. The changes also include updates to the main README and synchronization files to reflect the new API integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#593",
+      "title": "Introducing Happy Horse Video Skill in Skills 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "video",
+        "skills",
+        "happyhorse",
+        "documentation",
+        "ai"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/593",
+      "summary": "We've added the Happy Horse video skill, enhancing our suite of video generation tools. This new skill provides detailed documentation on usage, parameter constraints, and async task-polling flows for effective video creation and editing. Key updates include a decision table for various actions and ready-to-copy JSON for workflows, ensuring seamless integration for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#437",
+      "title": "Exciting New Happy Horse Video MCP Server Added in M C Ps 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "feature",
+        "video",
+        "MCP",
+        "OAuth",
+        "API"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/437",
+      "summary": "We've introduced the Happy Horse video MCP server, enhancing our capabilities with tools for video generation and editing. This includes features like text-to-video, image-to-video, and batch task polling, all accessible via a unified API. The integration also supports OAuth authentication and various transport methods, ensuring robust functionality and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#148",
+      "title": "Enhance Contact List Pagination in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "pagination",
+        "web",
+        "api",
+        "bugfix",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update replaces the hard-coded `limit=500` in the Web contact list with API-compliant pagination, limiting requests to 200 items. It ensures that responses are accumulated locally and published atomically, preventing partial data exposure. A regression check has been added to validate the Web request contract."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#234",
+      "title": "Reverted Durable Waits and Reports in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "revert",
+        "cleanup",
+        "aichat2",
+        "durable",
+        "index"
+      ],
+      "public": false,
+      "summary": "This update reverts the durable-waits design and related production E2E reports, effectively removing the durable plan and associated files. Key changes include the deletion of several AICHAT2-DURABLE files and the preservation of unrelated content from a previous PR. The changes ensure a cleaner state for the project while maintaining necessary references."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#965",
+      "title": "Reverting Durable Agent Run Schema in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "migration",
+        "rollback",
+        "backend",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update removes the `AgentRunGrant` and `AgentRunSegment` models along with their public imports, as requested. A new migration, `0213_remove_agent_run_grants`, has been added to drop these tables while preserving the existing migration history. The changes ensure that the feature is completely removed from the system without impacting any active data."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#195",
+      "title": "Rollback Durable Features for Stability in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "rollback",
+        "stability",
+        "gateway",
+        "durable",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This PR reverts multiple previous changes related to the durable agent-run protocol, effectively restoring the repository to its state before the durable commit. Key components removed include durable grant authorization, trace resolver logic, and various tests, ensuring a clean rollback. Validation confirms that the entire repository tree matches the pre-durable state, with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1445",
+      "title": "Reverted durable timer implementation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "revert",
+        "aichat2",
+        "cleanup",
+        "deployment",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update fully reverts the durable timer implementation from previous PRs, removing components such as the durable coordinator, Gateway client, and various related configurations and tests. The repository tree is restored to its state prior to the durable changes, ensuring a clean slate for future development. Validation confirms that the repository matches the pre-durable baseline and all tests have passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#14",
+      "title": "Enhance Shared Pagination Component in Common Frontend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "pagination",
+        "shared",
+        "components",
+        "frontend",
+        "typescript"
+      ],
+      "public": false,
+      "summary": "This update introduces a shared Pagination component from the core package, reducing duplication across Nexior and PlatformFrontend. The component is now exported from `@acedatacloud/core/components`, along with a scoped stylesheet for styling. This change will streamline imports and improve maintainability across applications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#147",
+      "title": "Revive COS Artifact Uploader in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "fix",
+        "release",
+        "cos",
+        "upload",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update restores the Tencent COS artifact uploader that was previously deleted, ensuring successful uploads of versioned artifacts with proper caching. Key changes include the addition of a new uploader script and offline tests to validate functionality. The workflow now emits SHA-256 hashes and GitHub outputs, enhancing traceability and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#13",
+      "title": "Revert multi-compiler build changes in Common Frontend 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "revert",
+        "build",
+        "frontend",
+        "common"
+      ],
+      "public": false,
+      "summary": "This update reverts the previous changes made to unify the multi-compiler build foundation. Key files such as build scripts and configuration files have been removed, restoring the project to its prior state. The impact of this change will help maintain stability in the current development workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#208",
+      "title": "Reverted CommonFrontend Core Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "revert",
+        "dependencies",
+        "frontend",
+        "stability"
+      ],
+      "public": false,
+      "summary": "This update reverts the dependency for `@acedatacloud/core` from version 0.8.1 back to 0.4.0 in both `package-lock.json` and `package.json`. This change aims to restore compatibility with previous implementations and ensure stability in the application. The modifications include adjustments in the dependency resolution and integrity checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#711",
+      "title": "Reverted CommonFrontend Consumer-Contract Changes in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "revert",
+        "frontend",
+        "vue",
+        "workflow"
+      ],
+      "public": false,
+      "summary": "This update reverts the recent addition of the CommonFrontend consumer-contract harness. Key files removed include the workflow configuration and several scripts, which significantly reduces the codebase. Minor modifications were made to the Documents and Materials Vue components to maintain functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#207",
+      "title": "Revert CommonFrontend Consumer-Contract Changes in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "revert",
+        "frontend",
+        "workflow",
+        "scripts"
+      ],
+      "public": false,
+      "summary": "This update reverts the recent changes made to the CommonFrontend consumer-contract harness. Key files removed include the workflow configuration and associated scripts, which collectively eliminated over 480 lines of code. This rollback aims to stabilize the project by removing potentially disruptive additions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1257",
+      "title": "Reverted CommonFrontend Consumer-Contract Changes in Nexior 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "revert",
+        "commonfrontend",
+        "stability",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1257",
+      "summary": "This update reverts the recent changes made to the CommonFrontend consumer-contract harness. The reverted files include the workflow configuration and associated scripts, which were removed to restore the previous state. This action aims to maintain stability in the Nexior project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#146",
+      "title": "Enhance WeChat Window Handling in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "bugfix",
+        "automation",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of WeChat main window blockers during message sending. It introduces a more precise classification of WeChat windows, ensuring that only the appropriate main window is treated as such, while compact login windows are ignored. Additionally, the update includes robust testing and validation to ensure functionality remains intact and reliable."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#233",
+      "title": "Enhanced E2E Reporting for Durable Timer in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "e2e",
+        "report",
+        "durable",
+        "timer",
+        "production",
+        "risk"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive production E2E report for the Durable Timer, including machine-readable evidence and a status update on the durable-waits plan. Key findings highlight a partial pass on the timer canary tests, with several risks identified, including issues with global custom-auth body forwarding and orphan grants. The production Gateway now ensures fail-closed behavior for external durable requests, enhancing overall system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#232",
+      "title": "Documentation Update: CommonFrontend Foundation Progressing in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "commonfrontend",
+        "implementation",
+        "progress"
+      ],
+      "public": false,
+      "summary": "The global CommonFrontend plan has been moved from research to implementation in progress. Key foundation PRs CF-01, PF-01, AF-01, and NX-01 have been merged, with AF-02A currently under review. This update focuses solely on documentation status, with no changes to implementation or architecture."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#206",
+      "title": "Pin CommonFrontend Core to 0.8.1 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "dependencies",
+        "update",
+        "authfrontend"
+      ],
+      "public": false,
+      "summary": "This update pins the `@acedatacloud/core` package from `^0.4.0` to `0.8.1` in both `package.json` and `package-lock.json`. This change establishes a compatibility baseline for AuthFrontend ahead of upcoming changes to the shared package identity. All builds pass successfully without the new optional dependencies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#291",
+      "title": "Switch to Telegram Username for TGStat in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "migration",
+        "tgstat",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update replaces the TGStat API Token requirement with a public Telegram username field, streamlining the connection process. The migration ensures that existing Token connections are revoked and users must reconnect with their usernames. Key validations have been passed, ensuring a smooth transition without impacting other services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#592",
+      "title": "Streamline TGStat to Username Profiles in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "tgstat",
+        "update",
+        "skills",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/592",
+      "summary": "This update simplifies the TGStat functionality by removing the dual-mode behavior of Token/API. It now utilizes the connector-injected `TGSTAT_USERNAME` as the default target for commands, while introducing a read-only `profile` command that reports the normalized username. Key features like public web discovery and safety checks remain intact, enhancing user experience without compromising security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#194",
+      "title": "Disable Durable Admission for Stability in Gateway 🚧",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "bugfix",
+        "deployment",
+        "gateway",
+        "e2e",
+        "stability"
+      ],
+      "public": false,
+      "summary": "This update disables the durable-run admission feature in the production Gateway manifest to address unresolved blockers identified during the E2E release. The change sets the `DURABLE_RUNS_ENABLED` flag to false, ensuring compatibility with existing deployed components while preventing potential billing-admission risks. The deployment has successfully rolled out with this adjustment, paving the way for future remediation once the blockers are resolved."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#709",
       "title": "Implement CommonFrontend Consumer-Contract Harness in Frontend Web 🚀",
       "tags": [
