@@ -3,6 +3,236 @@
   "date": "2026-07-14",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#154",
+      "title": "Enhance WeChat Window Detection and Diagnostics in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "diagnostics",
+        "automation",
+        "ui",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update improves the detection and handling of WeChat compact windows by implementing a more robust arbitration mechanism. Key changes include enhanced UIA evidence requirements for login detection and the introduction of read-only diagnostics for window states. The modifications aim to ensure accurate identification of login states and improve overall system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1279",
+      "title": "Enhance Site Code Visibility Control in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "site",
+        "visibility",
+        "admin",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1279",
+      "summary": "This update introduces a configurable option for the 'View Code' button visibility on a per-site basis. By default, the button will be hidden on white-label subsites while remaining visible on the official site. Administrators can now toggle this setting in the site configuration, improving control over API exposure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1280",
+      "title": "Enhance Contact UI with Icons and Smaller Inputs in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "design",
+        "enhancement",
+        "contacts",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1280",
+      "summary": "This update brings a fresh look to the Support Contacts feature in Site Settings. Each summary chip now displays an icon corresponding to the contact type, enhancing visual clarity. Additionally, editor controls have been resized to 'small', improving the overall user experience without altering any core functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#20",
+      "title": "Enhance Core Control Adapter in Common Frontend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "feature",
+        "ui",
+        "css",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a new shared core control adapter, standardizing key UI components like Button, Input, and Card while preserving existing styles. The adapter's CSS is now imported after application styles to ensure proper styling precedence. Additionally, the core package version has been bumped to 0.15.0, enhancing overall functionality and stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1278",
+      "title": "Launch of the New Marketing Landing Page in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "landing-page",
+        "ui",
+        "i18n",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1278",
+      "summary": "This update introduces a fully functional marketing landing page at `/home` for Nexior, showcasing our all-in-one AI capabilities across chat, image, music, and video. Key enhancements include a new route, improved layout with multiple sections, and internationalization support across 17 locales. The changes also fix previous navigation issues, ensuring a seamless user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#239",
+      "title": "Introducing the BrowserDevice Bridge for aichat2 in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "browser",
+        "architecture",
+        "security",
+        "aichat2",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update proposes a new outbound-only BrowserDevice architecture for aichat2, eliminating public endpoints and cloud fallbacks. Key features include a dedicated Browser Relay, a first-class `browser_session` Connector mode, and enhanced local executor capabilities. The documentation outlines a staged migration plan and addresses various risks through thorough validation and adversarial reviews."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1277",
+      "title": "Enhance Contact Editor with Icons and Reliability in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "bugfix",
+        "enhancement",
+        "reactivity"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1277",
+      "summary": "This update introduces two key improvements to the Support Contacts editor. Each contact row now displays the corresponding channel icon, enhancing visual clarity. Additionally, saved contacts will reliably appear upon reopening the editor, ensuring a seamless user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#720",
+      "title": "Enhance UI with P0 Interaction Baseline in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "design",
+        "frontend",
+        "update",
+        "core"
+      ],
+      "public": false,
+      "summary": "This update upgrades the core to version 0.14.0 and implements a new mapping for Element control density at 32/40/48px. It also adopts shared tokens for keyboard focus, elevation, and motion, while preserving existing button variants and shadow modes. Comprehensive validation has been performed, ensuring a clean build and improved mobile responsiveness."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#213",
+      "title": "Enhanced Interaction Design in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "design",
+        "frontend",
+        "update",
+        "core",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update upgrades the core to version 0.14.0 and implements a new interaction baseline with improved control densities. Key changes include the adoption of shared tokens for keyboard focus, motion, and elevation, while preserving existing button variants and shadow modes. Validation checks confirm that all elements render correctly, ensuring a smooth user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1275",
+      "title": "Enhanced Interaction Design in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "design",
+        "upgrade",
+        "core",
+        "tokens",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1275",
+      "summary": "This update introduces a significant upgrade to core version 0.14.0, enhancing the Element control density for 32/40/48px. Key design tokens for keyboard focus, elevation, and motion have been adopted, while preserving existing button variants and shadow modes. The changes ensure a more cohesive user experience across the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1276",
+      "title": "Dynamic Brand Name in Welcome Toast for Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "ui",
+        "enhancement",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1276",
+      "summary": "The welcome toast for new users now dynamically displays the site brand instead of the hardcoded 'Nexior'. This change ensures that white-label tenants see their own brand name, enhancing the user experience across different locales. The implementation updates the relevant i18n keys to use a placeholder for the brand name, ensuring consistency and safety in rendering."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#719",
+      "title": "Hide Crypto Surfaces for CN Visitors in Frontend Web 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "geo",
+        "frontend",
+        "crypto",
+        "regulations",
+        "Nexior"
+      ],
+      "public": false,
+      "summary": "This update introduces a geo-gating feature that hides crypto, ACE-coin, and x402 surfaces from users in mainland China. Key components affected include the homepage token carousel, top navigation menu, and console links, ensuring compliance with regional regulations. The implementation leverages a new `country` field from the backend to determine user location dynamically."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1274",
+      "title": "New Disable Recharge Toggle for Site Config in Nexior ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "settings",
+        "admin",
+        "ui",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1274",
+      "summary": "This update introduces a new toggle in the site configuration settings that allows administrators to disable recharge options for users. When activated, all recharge and purchase buttons will be hidden, preventing users from topping up their balances. This feature aims to support scenarios like offline settlements or internal use, providing greater control for site administrators."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#599",
+      "title": "Enhance Telegram Skill with Join/Leave Commands in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "telegram",
+        "features",
+        "updates",
+        "safety",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/599",
+      "summary": "This update introduces the ability for the Telegram skill to join and leave groups or channels, a crucial feature for enhancing user engagement in the RU AI Telegram funnel. Both commands are gated behind a confirmation flag to ensure user safety, preventing any unintended actions. The documentation has been updated to reflect these changes, and all API calls have been verified against official Telethon documentation."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1273",
       "title": "Restrict App Download Page to Official Site in Nexior 🚀",
       "tags": [
