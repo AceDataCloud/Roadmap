@@ -3,6 +3,87 @@
   "date": "2026-07-14",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#486",
+      "title": "Exciting new GPT-5.6 models added to CLIs in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "gpt",
+        "cli",
+        "update",
+        "models",
+        "sync"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/486",
+      "summary": "This update syncs the `aichat` and `openai` CLI packages with the latest GPT-5.6 model variants: `gpt-5.6-luna`, `gpt-5.6-terra`, and `gpt-5.6-sol`. These models have been added to the respective model lists, ensuring they are prominently featured at the top. This enhancement aligns with the OpenAPI specifications and improves user access to the latest capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#284",
+      "title": "Enhance China Billing Requirements in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "billing",
+        "validation",
+        "backend",
+        "china",
+        "invoice"
+      ],
+      "public": false,
+      "summary": "This update mandates that all China billing profiles must include essential invoice details such as invoice type, taxpayer ID, company address, company phone, bank name, and bank account. The billing profile serializer tests have been updated to ensure compliance with these requirements, enhancing the validation process for both general and special VAT invoices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#968",
+      "title": "Exciting New GPT-5.6 Models Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "gpt-5.6",
+        "openai",
+        "backend",
+        "features",
+        "models"
+      ],
+      "public": false,
+      "summary": "This update introduces three new OpenAI GPT-5.6 chat models: `gpt-5.6-luna`, `gpt-5.6-terra`, and `gpt-5.6-sol`. Key changes include updated billing rules, model visibility in chat completions, and comprehensive documentation updates. All models are now live and ready for use, enhancing our chat capabilities significantly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1452",
+      "title": "Exciting New GPT-5.6 Models and Fixes in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "gpt-5.6",
+        "openai",
+        "models",
+        "fallbacks",
+        "testing",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces support for three new OpenAI GPT-5.6 models: `gpt-5.6-luna`, `gpt-5.6-terra`, and `gpt-5.6-sol`. Key changes include adding these models to the `VISIBLE_MODELS` list and implementing price-safe fallback chains. Additionally, regression tests have been added to ensure the new fallback logic is functioning correctly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#157",
+      "title": "Enhance phone confirmation classification in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "authentication",
+        "classification",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update classifies WeChat's phone-confirmation page as 'logging_in' to improve accuracy in user authentication states. It prevents misclassification by avoiding generic substring matching and ensures that visible text is preserved without reporting a percentage for this state. The changes have been validated with successful unit tests and a clean review."
+    },
+    {
       "id": "gh:pr:AceDataCloud/CommonFrontend#21",
       "title": "Exciting New Semantic Icons Added in Common Frontend 🎉",
       "tags": [
