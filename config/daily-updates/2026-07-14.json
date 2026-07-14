@@ -3,6 +3,299 @@
   "date": "2026-07-14",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1273",
+      "title": "Restrict App Download Page to Official Site in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "nexior",
+        "ui",
+        "redirect",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1273",
+      "summary": "The app download page is now exclusively displayed on the official main site, enhancing user experience by preventing access from subdomains and white-label domains. Key components like the header, footer, and user center have been updated to include checks for the main official host, ensuring that users are redirected appropriately. This change improves site integrity and reduces confusion for users accessing the download page."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#969",
+      "title": "Enhance Geo Detection for China in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "geo",
+        "backend",
+        "features",
+        "ip-detection",
+        "china"
+      ],
+      "public": false,
+      "summary": "This update introduces offline IP detection for mainland China in the `GET /config` endpoint, allowing the frontend to hide specific features for users from Chinese IPs. The response now includes a `country` field indicating the user's location, which can be expanded for future regions. Key changes include the addition of a CIDR list for China and improvements to the geo detection logic, ensuring efficient lookups without external calls."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1272",
+      "title": "Enhance Sub-site Branding for Recharge Titles in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "branding",
+        "localization",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1272",
+      "summary": "This update replaces the hardcoded 'Ace Data Cloud' in the global recharge title with a dynamic brand name placeholder across 18 languages. The changes ensure that sub-sites display their own brand names, improving brand consistency. The main site remains unaffected, continuing to show 'Ace Data Cloud' as before."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#598",
+      "title": "Enhance tgstat render efficiency in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "tgstat",
+        "performance",
+        "bugfix",
+        "validation",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/598",
+      "summary": "This update introduces a wall-time budget for tgstat renders, ensuring that retries do not exceed the agent sandbox's time limits. Key changes include a shared render deadline and adjustments to timeout settings, which help prevent wasted agent turns on stubborn pages. The implementation has been validated with successful lookups and passing unit tests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#212",
+      "title": "Enhance mobile login with postMessage for iframe in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "mobile",
+        "login",
+        "iframe",
+        "postmessage",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update resolves mobile login issues by modifying the deep link handling in iframes. The `consumeNativeDeepLink` function now returns null for in-app iframes, ensuring that the login process falls back to using `postMessage`. This change unifies the login experience across mobile and desktop platforms, improving reliability and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1269",
+      "title": "Enhance Support Contacts Feature in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "support",
+        "ui",
+        "enhancement",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1269",
+      "summary": "This update introduces a new feature allowing site owners to publish customer-service contacts on the About tab, which can be edited in Site Settings. The design is now extensible, enabling multiple contact types and custom entries without code changes. Additionally, the About tab will display specific first-party items only on official builds, enhancing user experience and support accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#967",
+      "title": "Enhance Customer Service Contacts in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "validation",
+        "schema",
+        "contacts"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `contacts` list to `Site.branding`, allowing for multiple customer service channels on Nexior's About tab. The schema supports various types like phone, email, and custom channels, ensuring flexibility without requiring schema changes. Comprehensive validation tests confirm the robustness of the implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#19",
+      "title": "Exciting New Interaction Design Tokens in Common Frontend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "design",
+        "tokens",
+        "frontend",
+        "update",
+        "core"
+      ],
+      "public": false,
+      "summary": "This update introduces a range of new design tokens, including control density, focus outlines, elevation, and motion tokens. The shared styles have been documented and validated through comprehensive testing. Additionally, the core package version has been bumped to 0.14.0, paving the way for future consumer adoption."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1271",
+      "title": "Center Dropdown Hover Highlight in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "css",
+        "ui",
+        "fix",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1271",
+      "summary": "This update fixes the vertical alignment issue in the service catalog dropdown within the site services override dialog. By making the dropdown items flex containers and adjusting padding, the hover highlight is now properly centered, enhancing the user interface. The change is purely CSS-based and has been validated with lint-staged checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1270",
+      "title": "Streamline Tailwind Theme with Semantic Tokens in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "design",
+        "tailwind",
+        "refactor",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1270",
+      "summary": "This update removes the dormant purple Tailwind theme and replaces it with runtime semantic design tokens. Stale blue-purple surfaces and fixed purple glows have also been updated to use shared CSS variables. A regression test has been added to ensure the legacy palette does not return, closing a significant global-baseline gap."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#295",
+      "title": "Integrate TGSTAT_RENDER_TOKEN for Enhanced Skill Functionality in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "deployment",
+        "backend",
+        "auth",
+        "skills",
+        "secrets"
+      ],
+      "public": false,
+      "summary": "This update wires the TGSTAT_RENDER_TOKEN into the auth-backend pod environment, enabling the tgstat skill to render through WebExtractor. Key changes include modifications to the deployment YAML and the creation of a new secret for the token, ensuring that the system remains operational even if the token is not set. This enhancement improves the overall functionality and reliability of the skill."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#211",
+      "title": "Refactor to Use Shared Core Debug Utility in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "refactor",
+        "frontend",
+        "core",
+        "debug",
+        "utility"
+      ],
+      "public": false,
+      "summary": "This update upgrades the @acedatacloud/core package to version 0.13.0 and imports the debug utility from the shared core utils. The local log utility has been removed to eliminate duplication, streamlining the codebase. Validation steps confirm that the SSG build completes successfully without any stale imports or exports."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#717",
+      "title": "Refactor to Use Shared Core Debug Utility in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "frontend",
+        "core",
+        "utility",
+        "upgrade"
+      ],
+      "public": false,
+      "summary": "This update upgrades the @acedatacloud/core package to version 0.13.0 and imports the debug utility from the core utils. The local log utility has been removed to eliminate duplication, streamlining the codebase. Validation steps confirm that all builds and linting processes are successful, ensuring stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#210",
+      "title": "Fix login iframe CSP for native and desktop apps in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "csp",
+        "nginx",
+        "frontend",
+        "auth",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update resolves a white screen issue encountered when logging in via avatar taps on Nexior's native and desktop applications. By statically allowlisting the necessary app origins in the nginx configuration, the iframe can now render correctly, ensuring a seamless login experience across platforms. The changes also maintain compatibility with existing web domains."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#597",
+      "title": "Enhance Xiaohongshu Publish Flow in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "xiaohongshu",
+        "publish",
+        "cdp",
+        "error-handling",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/597",
+      "summary": "This update improves the trusted publish flow for Xiaohongshu by implementing a real native button click within the closed shadow DOM using trusted CDP mouse events. Key changes include a refined event queue, better handling of publish responses, and enhanced error management. The validation suite has passed all tests, ensuring stability and reliability in the publishing process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1268",
+      "title": "Enhance Dark Mode Readability in Nexior 🌙",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "css",
+        "dark-mode",
+        "accessibility",
+        "ui",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1268",
+      "summary": "This update improves the visibility of the admin-only notice banner in the Settings section for dark mode users. By assigning explicit dark text colors to various tones, the text now contrasts effectively against the light banner background, ensuring readability across themes. This is a straightforward CSS adjustment with no logic changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#294",
+      "title": "Enhance tgstat Skill with Platform Token Injection in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "api",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces the injection of a platform-held AceDataCloud API token into the `tgstat` skill sandbox, enabling it to render public tgstat.com pages via WebExtrator. Key changes include the addition of the `TGSTAT_RENDER_TOKEN` in the connector's metadata and a new test assertion to verify this integration. The deployment requires setting the token in the auth-backend secret for proper functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#596",
+      "title": "Enhance tgstat Skill with WebExtrator for Cloudflare Bypass in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "tgstat",
+        "webextrator",
+        "cloudflare",
+        "metrics",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/596",
+      "summary": "This update reroutes tgstat page fetching through the WebExtrator service to bypass Cloudflare's restrictions, resolving previous HTTP 403 errors. Key changes include a new fetch layer, improved metric parsing, and enhanced recognition logic to ensure accurate data retrieval. The skill now supports retries for blocked requests and provides clear error handling for not-found scenarios."
+    },
+    {
       "id": "gh:pr:AceDataCloud/CommonFrontend#18",
       "title": "Enhance Debug Utility in Common Frontend 🎉",
       "tags": [
