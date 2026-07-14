@@ -1,0 +1,37 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-14",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#18",
+      "title": "Enhance Debug Utility in Common Frontend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "debug",
+        "utility",
+        "typescript",
+        "release"
+      ],
+      "public": false,
+      "summary": "This update introduces a duplicate router debug utility to the core utilities, ensuring the console receiver is preserved through a typed forwarding wrapper. The package version has been bumped to 0.13.0, and comprehensive tests have been added to validate functionality. Overall, this improves debugging capabilities for developers working with the Common Frontend."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#149",
+      "title": "Enhance Auth Status with Progress Reporting in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "auth",
+        "api",
+        "wechat",
+        "progress",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a visible text feature for the authentication status API, allowing users to see the login progress while WeChat is signing in. Key changes include the addition of a `progress` field that reports loading percentages and a standardized `page` identifier. The implementation ensures real-time action detection and improves error handling during the login process."
+    }
+  ]
+}
