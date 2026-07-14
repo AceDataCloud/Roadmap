@@ -3,6 +3,37 @@
   "date": "2026-07-14",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#721",
+      "title": "Enhance QR Handling and Localization in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "localization",
+        "wechat",
+        "qr-code",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the QR request process by ensuring it only triggers for recognized WeChat states, reducing unnecessary retries. Additionally, it introduces localized messages for blocked, security, and login progress statuses, enhancing user experience across multiple languages. Stale QR task polling is now canceled when the flow stops or the page unmounts, ensuring better resource management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#155",
+      "title": "Enhance QR Recovery Fail-Safe in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "security",
+        "authentication",
+        "testing",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update improves the QR recovery process by ensuring that navigation from unrecognized or transitional WeChat states is refused. Key changes include the implementation of explicit error responses for various states and the addition of comprehensive tests to cover logout behavior. Overall, these enhancements bolster the security and reliability of the authentication flow."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#154",
       "title": "Enhance WeChat Window Detection and Diagnostics in Wisdom 🚀",
       "tags": [
