@@ -3,6 +3,360 @@
   "date": "2026-07-14",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1290",
+      "title": "Align Element Plus Control Sizes in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "scss",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1290",
+      "summary": "This update removes the custom size overrides for Element Plus components, ensuring that `el-input`, `el-select`, and `el-button` all align at the same height. The `_common.scss` file has been modified to revert to the native sizes provided by Element Plus, enhancing consistency across the UI. Additionally, the dependency on `@acedatacloud/core` has been bumped to version `^0.17.0` to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#726",
+      "title": "Standardize Element Plus Control Sizes in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "element-plus",
+        "scss",
+        "dependencies"
+      ],
+      "public": false,
+      "summary": "This update removes custom size overrides for Element Plus components, aligning all controls to their native sizes. The changes ensure that `el-input`, `el-button`, and `el-select` now share consistent dimensions, enhancing UI coherence. Additionally, the dependency on `@acedatacloud/core` has been bumped to version 0.17.0 to reflect these adjustments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#490",
+      "title": "Enhance Kling CLI with New Image List Feature in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "feature",
+        "update",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/490",
+      "summary": "This update introduces the `--image-list` option to the Kling image-to-video CLI, allowing users to provide a structured JSON array of images. The change maintains backward compatibility with existing options while improving the request schema to align with the latest documentation. Additionally, focused tests have been added to ensure the new functionality works as intended."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#972",
+      "title": "Enhance Multi-Image Support for Kling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "openapi",
+        "kling",
+        "backend",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces the `image_list` parameter for the `kling-video-o1` model, allowing users to reference multiple images in their requests. The OpenAPI schema and documentation have been updated accordingly, including examples and usage guidelines. Note that the new functionality will only be effective after the deployment of the related PlatformService PR."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1459",
+      "title": "Enhance Kling Video Handler to Support Image List in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "kling",
+        "video",
+        "update",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update allows the `kling-video-o1` worker to accept and forward an optional `image_list` from the request body, enhancing its functionality. The changes include reading the `image_list`, appending it to the existing frame arrays, and improving logging for better traceability. This ensures that the worker can now handle multiple image references effectively, aligning with the official structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#22",
+      "title": "Fix control sizes for consistency in Common Frontend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "bugfix",
+        "ui",
+        "controls",
+        "element-plus"
+      ],
+      "public": false,
+      "summary": "This update resolves inconsistencies in Element Plus control sizes within the settings pop-up. The shared control adapter no longer overrides sizes, ensuring that buttons and inputs align with Element Plus defaults. The version has been updated from 0.16.0 to 0.17.0, and tests have been adjusted to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1460",
+      "title": "Enhance resilience of createTask with retries in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "resilience",
+        "http",
+        "retry",
+        "timeout"
+      ],
+      "public": false,
+      "summary": "This update improves the resilience of the createTask function by increasing the HTTP timeout from 30 seconds to 60 seconds and implementing a retry mechanism for transient errors. The changes ensure that a single cross-border submit does not fail the entire request, while deterministic errors are still handled promptly. Overall, this enhancement aims to reduce customer-visible failures on the default route."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#297",
+      "title": "Implement White-Label SMS Webhook Support in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "sms",
+        "webhook",
+        "backend",
+        "auth"
+      ],
+      "public": false,
+      "summary": "This update introduces a white-label SMS webhook feature that allows per-site configurations via a read-only connection to the PlatformBackend. Key changes include the addition of a new `SiteConfig` model, modifications to the SMS delivery service, and the exposure of a new `/sms-code` endpoint. The implementation ensures that AuthBackend remains site-agnostic while securely delivering SMS codes to specified webhooks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#970",
+      "title": "Enhance SMS Webhook Integration in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "sms",
+        "webhook",
+        "validation",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a per-site white-label SMS webhook configuration under the existing Site.auth structure. Key changes include the addition of a write-only secret for the webhook, ensuring it is never exposed in GET requests, and the implementation of validation and redaction functions. The changes are fully tested with 18 new test cases, ensuring robust functionality without altering existing models or requiring migrations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#488",
+      "title": "Update element_id to integer type for CLI commands in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "update",
+        "integer",
+        "openapi",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/488",
+      "summary": "This update modifies the CLI to align with the OpenAPI specification by changing the `element_id` type from string to integer for the `POST /kling/videos` endpoint. Key changes include updating the `--element-id` option to enforce integer validation and adjusting the internal data structures accordingly. Tests have also been updated to reflect these changes, ensuring that numeric values are used consistently."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#216",
+      "title": "Enhance SMS Code Requests with White-Label Site Origin in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "sms",
+        "frontend",
+        "auth"
+      ],
+      "public": false,
+      "summary": "This update introduces the ability to send the white-label site origin with SMS code requests. The changes include modifications to the SMS code operator to inject the site parameter from the login query, ensuring that SMS delivery is routed to the appropriate subsite webhook. This enhancement maintains existing functionality for the main site while improving flexibility for subsites."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#724",
+      "title": "Ensure @acedatacloud Scope Uses Public Registry in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "npm",
+        "frontend",
+        "fix",
+        "registry",
+        "element-plus"
+      ],
+      "public": false,
+      "summary": "This update modifies the `.npmrc` file to pin the `@acedatacloud` scope to the public npmjs registry. This change addresses issues with Element Plus component sizing on machines using outdated corporate proxies, ensuring that the latest version of `@acedatacloud/core` is always accessible. Existing installations will need to reinstall core to apply the fix."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1458",
+      "title": "Enhance Polling and Error Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "enhancement",
+        "seekapi",
+        "robustness",
+        "error-handling"
+      ],
+      "public": false,
+      "summary": "This update introduces critical robustness improvements for the SeekAPI polling mechanism, allowing retries on transient network issues and timeouts. Additionally, it enhances error reporting by parsing HTTP 200 responses that contain error messages, ensuring clearer feedback for validation failures. These changes improve the overall reliability and user experience of the Platform Service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#67",
+      "title": "New buyback entry added for July 2026 in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "buyback",
+        "usdc",
+        "ace",
+        "transaction",
+        "roadmap"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/67",
+      "summary": "This update introduces a new on-chain buyback record to the Roadmap Buyback History. The transaction details include a swap of 26.776458 USDC for 66,308.084697 ACE, processed via the Jupiter Aggregator. All data has been verified for accuracy and conforms to the required schema."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#971",
+      "title": "Enhance Omni-Video Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "backend",
+        "video-editing",
+        "kling",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update improves the documentation for the omni-video reference and video-edit capabilities of the kling-video-o1 model. Key changes include the addition of item structures for video and element lists, clarification of prompt referencing conventions, and a new section detailing video editing examples. These enhancements aim to eliminate confusion and ensure users can effectively utilize the video editing features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1287",
+      "title": "Ensure @acedatacloud Scope Points to Public npmjs in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "npm",
+        "registry",
+        "fix",
+        "styles",
+        "contributor"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1287",
+      "summary": "This update modifies the `.npmrc` file to pin the `@acedatacloud/*` scope to the public npmjs registry. This change addresses issues where contributors using outdated corporate proxies were unable to access the latest version of `@acedatacloud/core`, resulting in missing styles for Element Plus controls. The fix ensures that future installations will not revert to older versions, maintaining consistent styling across all environments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1288",
+      "title": "Remove focus outline from chat composer textarea in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "css",
+        "accessibility",
+        "bugfix",
+        "chat"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1288",
+      "summary": "This update eliminates the unwanted 2px square focus outline from the chat composer textarea, which was caused by a global CSS rule. A specificity override has been implemented to ensure the textarea does not display the outline while maintaining accessibility through the wrapper's focus indication. The fix has been verified on the live page, confirming the outline is now removed as intended."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1457",
+      "title": "Introducing SeekAPI Worker for Enhanced Video Generation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "video",
+        "integration",
+        "api",
+        "deployment",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `seek` worker for the PlatformService, integrating the 优影云 SeekAPI for Doubao Seedance 2.0 video generation. Key features include real-person references, 4k support, and seamless integration with existing task databases, ensuring billing parity with the ephone channel. The deployment includes new endpoints and robust error handling for improved performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#217",
+      "title": "Enhance OAuth Apps with Semantic Icons in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "accessibility",
+        "localization",
+        "icons",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update upgrades `@acedatacloud/core` to version `^0.16.0` and pins `@lucide/vue` to `1.23.0`. It migrates nine static OAuth Apps call sites to use explicit semantic icon subpaths while ensuring accessibility improvements, such as persistent native buttons for copy actions. Additionally, the localized `common.button.copy` contract has been added to all 18 locale catalogs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#723",
+      "title": "Enhanced Semantic Icons in Shared Controls in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "accessibility",
+        "icons",
+        "updates",
+        "semantic"
+      ],
+      "public": false,
+      "summary": "This update upgrades `@acedatacloud/core` to version `0.16.0` and pins `@lucide/vue` to `1.23.0`. It migrates several static icon call sites to use explicit semantic subpaths while maintaining some icons with Font Awesome until further review. Accessibility improvements include converting the header search trigger to a native button and enhancing screen reader announcements for copy actions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1286",
+      "title": "Upgrade to Semantic Icons in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "upgrade",
+        "accessibility",
+        "icons",
+        "semantic",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1286",
+      "summary": "This update enhances the Scheduled Tasks by migrating four static actions to explicit semantic icon subpaths, improving accessibility and user experience. The core package has been upgraded to version 0.16.0, and the Lucide icons are now integrated for better semantic clarity. Additionally, necessary validation checks have been performed to ensure stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1456",
+      "title": "Enhance GitHub Proxy with Responses Shim in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "proxy",
+        "responses",
+        "shim",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces a shim in the GitHub proxy that allows responses-only models to be accessed via the standard chat completions API. Key models like gpt-5.4, gpt-5.5, and gpt-5.6 are now fully supported, ensuring seamless integration while maintaining the functionality of the native responses endpoint. Comprehensive unit tests validate the implementation, enhancing reliability and performance."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#486",
       "title": "Exciting new GPT-5.6 models added to CLIs in Clis 🚀",
       "tags": [
