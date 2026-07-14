@@ -3,6 +3,55 @@
   "date": "2026-07-14",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#21",
+      "title": "Exciting New Semantic Icons Added in Common Frontend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "icons",
+        "update",
+        "frontend",
+        "lucide",
+        "semantic"
+      ],
+      "public": false,
+      "summary": "This update introduces a new semantic icon manifest with 12 tree-shakeable Lucide icons, enhancing our iconography while keeping brand logos separate. The core package has been bumped to version 0.16.0, and all changes have been validated through comprehensive testing. Additionally, documentation has been updated to reflect the new exact-pin requirements for consumers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1283",
+      "title": "Refactor Design to Adopt Shared Control Adapter in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "design",
+        "update",
+        "scss",
+        "validation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1283",
+      "summary": "This update upgrades the core to version 0.15.0 and loads the new `controls.css` after the app and Tailwind styles. It also removes 94 lines of duplicated global control SCSS while retaining essential features like the primary glow and mobile dialog layout. Comprehensive validation has been performed, ensuring a clean and efficient codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#156",
+      "title": "Enhance WeChat Popup Recovery Mechanism in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "webrtc",
+        "popup",
+        "recovery",
+        "automation",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of non-minimized WeChat windows by ensuring that the release-notes popup is correctly processed. Key changes include adjustments to the compact-window handler and the dismissal logic for minimized popups, enhancing overall reliability. Validation through unit tests confirms the effectiveness of these modifications."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#240",
       "title": "Revamp SMS Delivery for White-Label Sites in Index 🚀",
       "tags": [
