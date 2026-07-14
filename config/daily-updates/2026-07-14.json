@@ -3,6 +3,150 @@
   "date": "2026-07-14",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Index#240",
+      "title": "Revamp SMS Delivery for White-Label Sites in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "sms",
+        "webhook",
+        "white-label",
+        "design",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update introduces a new design document for SMS delivery webhooks, allowing white-label sites to send verification messages without displaying the Nexior brand. Key changes include the removal of hardcoded signatures and the implementation of a per-site configuration, ensuring compliance and responsibility lies with the site owners. The document outlines security measures and operational constraints for SMS delivery in China."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1285",
+      "title": "Unified Login Experience with Floating Popup in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "auth",
+        "ui",
+        "login",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1285",
+      "summary": "This update enhances the native and desktop login experience by replacing the full-screen white page with a centered floating popup. The new design features a semi-transparent blurred background, a close button, and maintains the functionality of the previous implementation. All platforms now present a consistent login interface, improving user experience and accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#215",
+      "title": "Enhance Email Verification with Custom Logo in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "email",
+        "branding",
+        "frontend",
+        "verification"
+      ],
+      "public": false,
+      "summary": "This update integrates the white-label site logo into the email verification process. The logo is now sent alongside the verification code in registration, password reset, and email binding functionalities. This change ensures that the branding is consistent with the current sub-site, enhancing user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#296",
+      "title": "Enhance Email Verification with Custom Logos in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "email",
+        "branding",
+        "security",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update introduces support for custom white-label logos in verification emails, allowing sub-sites to display their own branding. The backend now accepts an optional `logo` parameter in the email code request, which is safely processed to prevent security risks. Additionally, nine new unit tests have been added to ensure the functionality works as intended while maintaining security standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1282",
+      "title": "Streamline 'View Code' Visibility in Nexior 🌐",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "cleanup",
+        "security",
+        "ui",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1282",
+      "summary": "This update modifies the display logic for the 'View Code' button, ensuring it only appears on the main official host, `studio.acedata.cloud`. Redundant site configuration options have been removed, leading to a cleaner codebase with a net change of +17 lines added and -228 lines deleted. The changes enhance security by limiting API exposure on non-official domains."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#600",
+      "title": "Enhance Telegram Skill with Forum Topic Support in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "telegram",
+        "features",
+        "skills",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/600",
+      "summary": "This update introduces crucial support for forum topics in the Telegram skill, allowing users to list topics and send messages to specific threads. The new `list-topics` command enables users to view available topics, while the `send` command now accepts a `--topic` option for posting into those threads. These enhancements improve user interaction in forum-style supergroups, ensuring messages reach the right audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#214",
+      "title": "Refactor design to adopt shared control adapter in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "refactor",
+        "design",
+        "scss",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update upgrades the core to version 0.15.0 and loads `controls.css` after the app styles. It eliminates 104 lines of duplicated SCSS for Button, Input, Select, Card, and Dialog adapters while retaining Auth-specific components. Validation has been completed with ESLint, vue-tsc, and builds, ensuring a clean and efficient codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#722",
+      "title": "Refactor design to adopt shared control adapter in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "design",
+        "frontend",
+        "scss",
+        "upgrade"
+      ],
+      "public": false,
+      "summary": "This update upgrades the core to version 0.15.0 and modifies the loading order of stylesheets in both CSR and SSR entries. It removes 97 lines of duplicated SCSS for Button, Input, Select, Card, and Dialog adapters while retaining specific Platform components like breadcrumbs and mobile-dialog layouts. The changes have been validated through various build checks and ensure no overflow issues in the mobile view."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1281",
+      "title": "Clean up application extras imports in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "style",
+        "prettier",
+        "eslint",
+        "patch"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1281",
+      "summary": "This update formats the application extras route imports to ensure compliance with the repository-wide Prettier standards. Additionally, a patch change record has been added to document this modification. Importantly, this change does not affect any existing functionality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#721",
       "title": "Enhance QR Handling and Localization in Frontend Web 🚀",
       "tags": [
