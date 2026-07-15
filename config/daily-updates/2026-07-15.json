@@ -3,6 +3,281 @@
   "date": "2026-07-15",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1491",
+      "title": "Enhance Data Protection for Memory Imports in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "data-protection",
+        "memory-imports",
+        "health-data",
+        "security",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update introduces blocking mechanisms for sensitive health and personal data during bulk memory imports. Key changes include the normalization of Unicode and separators to effectively identify obfuscated terms in both English and Chinese. The implementation has passed all memory tests, ensuring robust data protection without affecting regular chat memory functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#995",
+      "title": "Launch Enhanced Email Campaign Delivery in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "email",
+        "deployment",
+        "backend",
+        "operations",
+        "marketing"
+      ],
+      "public": false,
+      "summary": "This update introduces a robust operational delivery plane for email campaigns, featuring a single-replica PostgreSQL queue worker with advanced consent and suppression checks. Key enhancements include the reconciliation of ambiguous provider outcomes and the refreshing of audience profiles while ensuring compliance with data privacy standards. The deployment also includes comprehensive documentation and validation, ensuring a smooth rollout and operational integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#754",
+      "title": "Enhance direct marketing filter synchronization in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "marketing",
+        "bugfix",
+        "synchronization"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of the direct marketing filter by consuming the Element Plus switch change payload directly. It ensures that the `includeDirect` state is synchronized and clears any invalid selected `direct` source when the switch is turned off, while maintaining existing marketing dashboard behaviors. All validations, including ESLint and production builds, have passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#994",
+      "title": "Launch Email Marketing Campaign Foundation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "email",
+        "marketing",
+        "backend",
+        "development",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces the foundational elements for registered-user email marketing campaigns in PlatformBackend. Key features include consent modeling, audience profiles, and a DB-backed global kill switch, along with superuser APIs for managing campaigns and preferences. The rollout is designed to ensure stability and privacy, with thorough validation completed across multiple tests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/GermeyTech#3",
+      "title": "Streamlined AI and Data Service Policies in Germey Tech 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "GermeyTech",
+        "policy",
+        "update",
+        "documentation",
+        "ui",
+        "pricing"
+      ],
+      "public": false,
+      "summary": "This update aligns the Checkout, Contact, Terms, Privacy, and Refunds sections with a unified AI Solutions and Data Services model. Key changes include clarified pricing structures, customer rights, and processing terms, ensuring consistency across all customer-facing documentation. Additionally, all routes and layouts have been validated and legacy wording removed for a cleaner user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1316",
+      "title": "Revamp Veo Action Configuration for Better UX in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ux",
+        "veo",
+        "localization",
+        "ui",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1316",
+      "summary": "This update enhances the Veo action configuration by replacing the dropdown with compact tabs for Text, Image, and Ingredients. The model selector is now constrained to the current Veo contract, and reference uploads are made action-aware, improving the user experience significantly. Additionally, localization updates ensure that all changes are reflected across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1317",
+      "title": "Enhance Memory Imports with Asynchronous Polling in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "memory",
+        "async",
+        "polling",
+        "frontend",
+        "localization",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1317",
+      "summary": "This update introduces asynchronous polling for long memory imports, improving the user experience by preventing timeouts and duplicate submissions. Key changes include the implementation of idempotency UUIDs for imports, enhanced error handling, and localized messages for in-progress imports. The frontend timeout has been aligned with backend settings to ensure smoother operations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/GermeyTech#2",
+      "title": "Streamlined Focus on AI Solutions and Data Services in Germey Tech 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "GermeyTech",
+        "website",
+        "update",
+        "ai",
+        "data-services",
+        "checkout"
+      ],
+      "public": false,
+      "summary": "This update refines the Germey Tech website by concentrating on two primary service lines: AI Solutions and Data Services. Key changes include a simplified homepage and checkout process, aligning legal copy, and removing the physical address. All routes and layouts have been validated for both desktop and mobile views."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1486",
+      "title": "Enhance Memory Imports with Asynchronous Processing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "memory",
+        "import",
+        "asynchronous",
+        "performance",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update introduces asynchronous processing for long memory imports, addressing previous issues with timeouts. Key changes include immediate response with a task ID, background processing of imports, and improved job management to prevent orphaned tasks. The implementation has been validated with extensive tests, ensuring stability and performance enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#753",
+      "title": "Enhance Pairing Identity Display in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "security",
+        "ui",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces the display of key fingerprint, platform, packaged extension version, and fixed extension origin during the claim confirmation process. It ensures that these details are only visible while a claim is pending and hides them afterward to protect sensitive information. Comprehensive tests confirm the functionality and security of the new features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#752",
+      "title": "Enhance marketing filters and revenue display in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "marketing",
+        "ui",
+        "filters",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update improves the marketing channel filters by replacing freeform UTM inputs with searchable selects, while still allowing custom entries. Additionally, general-balance revenue is now displayed as 'General/通用' instead of '-', enhancing clarity. The changes ensure a smoother user experience and maintain optional backend response fields for safe deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/GermeyTech#1",
+      "title": "Revamped Germey Tech for AI Consulting Services in Germey Tech 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "GermeyTech",
+        "ui",
+        "refactor",
+        "consulting",
+        "automation",
+        "ai"
+      ],
+      "public": false,
+      "summary": "This update repositions Germey Technology to focus on AI technology consulting, software integration, data workflow engineering, and automation implementation. Key changes include the removal of outdated service descriptions and the alignment of the homepage, checkout, and other pages to reflect new professional service offerings. Validation checks confirm that all public routes are functioning correctly and the site is optimized for both desktop and mobile views."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#246",
+      "title": "Enhance Nexior branding with site-specific overrides in Index 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "branding",
+        "nexior",
+        "customization",
+        "features",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces the ability for site administrators to customize the name and icon of Nexior capability apps directly from the Settings menu. A new `SiteCapabilityOverride` entity has been implemented to manage these overrides, ensuring a seamless user experience without additional requests. The changes also include comprehensive validation and a clean review process, confirming the robustness of the new features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#751",
+      "title": "Update pairing version handling in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "pairing",
+        "versioning",
+        "frontend",
+        "update",
+        "auth"
+      ],
+      "public": false,
+      "summary": "This update removes the hardcoded pairing version and injects the actual version from the extension manifest into the pairing service. The AuthBackend now correctly receives the packaged version during challenge requests, ensuring better version management. All tests have passed successfully, confirming the integrity of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#996",
+      "title": "Enhance Marketing Attribution Filters in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "marketing",
+        "analytics",
+        "backend",
+        "performance",
+        "filters"
+      ],
+      "public": false,
+      "summary": "This update introduces normalized UTM source, medium, and campaign filter options to the fast marketing analytics response. The options are derived during the signup metadata scan without additional database queries, ensuring performance is maintained. Each list is capped at the 100 most frequent values, enhancing the clarity and usability of marketing data."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1304",
+      "title": "Say Goodbye to AI ID Photo Feature in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "cleanup",
+        "removal",
+        "nexior",
+        "features",
+        "maintenance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1304",
+      "summary": "The unused AI ID Photo feature has been permanently removed from Nexior, including all associated components, pages, and localization files. A total of 115 files were changed, resulting in approximately 5,818 lines of code removed. This cleanup enhances the overall performance and maintainability of the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#620",
+      "title": "Enhance Xiaohongshu Skill for Improved User Control in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "xiaohongshu",
+        "skills",
+        "update",
+        "testing",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/620",
+      "summary": "This update replaces the previous cloud tab discovery instructions with a user-controlled 'Attach current tab' flow, ensuring a more intuitive experience. It also removes unsupported claims regarding account attestation and maintains the Skill in a read-only state until local approval is obtained. Additionally, contract tests have been strengthened to reflect these changes, ensuring better reliability and compliance."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#740",
       "title": "Enhance Pricing Tier Selection Behavior in Frontend Web 🚀",
       "tags": [
