@@ -3,6 +3,278 @@
   "date": "2026-07-15",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#734",
+      "title": "Enhanced Browser Agent Tools for Chrome Extension in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "browser",
+        "extension",
+        "security",
+        "frontend",
+        "development"
+      ],
+      "public": false,
+      "summary": "This update integrates the Browser Agent into the PlatformFrontend Chrome MV3 extension, enhancing its capabilities while maintaining the existing Publisher cookie bridge. Key features include non-extractable device identity, improved session management, and a dedicated CI gate for extension validation. The changes ensure a more secure and efficient user experience while adhering to strict validation protocols."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1481",
+      "title": "Enhance Browser Skills Dispatching in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "browser",
+        "skills",
+        "dispatch",
+        "platform",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces the ability to dispatch browser skills through paired devices, enhancing the execution of browser capabilities. Key changes include the addition of new configurations for browser execution, improved filtering of legacy skills, and the introduction of new browser-related tools and tests. The production feature remains disabled by default, ensuring a safe rollout."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1480",
+      "title": "Enhance Browser Tool Execution Routing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "browser",
+        "redis",
+        "authentication",
+        "tool-execution",
+        "synchronous"
+      ],
+      "public": false,
+      "summary": "This update introduces synchronous dispatch, cancel, and status handling for browser tool execution using Redis for two-replica ownership. The Browser Relay now verifies authentication grants, derives routing identities, and manages tool call envelopes, while also implementing strict result handling and timeout management. Extensive validation has been performed with 40 tests, ensuring robust functionality and readiness for deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#301",
+      "title": "Enhance Browser Execution Capabilities in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "browser",
+        "authentication",
+        "security",
+        "backend",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces significant enhancements to the browser execution capabilities within the AuthBackend. Key changes include the addition of browser session challenges, improved device pairing, and robust validation mechanisms. The implementation supports short-lived grants and ensures strict verification processes, enhancing security and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#245",
+      "title": "Streamline BrowserAgent Integration in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "integration",
+        "cleanup",
+        "submodule",
+        "validation"
+      ],
+      "public": false,
+      "summary": "The standalone BrowserAgent repository has been successfully integrated into the existing PlatformFrontend/extension Chrome extension. This update removes the duplicate top-level submodule and .gitmodules entry, ensuring a single ownership boundary for the extension. Validation checks confirm that BrowserAgent is no longer present in the index and all related commands pass without issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#160",
+      "title": "Enhance WeChat Search Navigation in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "search",
+        "ui",
+        "diagnostic",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update improves the WeChat search functionality by allowing users to click on specific rows without triggering web-search actions. It ensures that chat titles match the requested targets before reporting success and introduces a diagnostic tool for search UIA that operates under abnormal conditions. The changes enhance user experience and reliability in search operations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#500",
+      "title": "Confirmed CLI Alignment with Latest Docs in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "openapi",
+        "sync",
+        "verification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/500",
+      "summary": "This update verifies that the `gemini`, `kling`, and `veo` CLIs are fully aligned with the latest OpenAPI specifications. A thorough comparison was conducted, confirming no code changes are necessary as all command surfaces and payload mappings match the current documentation. The sync results show no drift, ensuring consistency across the services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#735",
+      "title": "Enhance Marketing Dashboard with Daily Insights in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dashboard",
+        "analytics",
+        "localization",
+        "frontend",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update improves the marketing dashboard by loading core analytics faster and displaying daily active user trends with 31 data points. The update also separates the monthly active user card and introduces a localized Refresh button for on-demand channel details. Additionally, stale requests are invalidated, and the trend title is translated into all supported languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#498",
+      "title": "Confirmed sync of gemini, kling, and veo CLIs with latest Docs in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "sync",
+        "docs",
+        "cli",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/498",
+      "summary": "This update verifies that the `gemini`, `kling`, and `veo` CLIs are fully aligned with the latest Docs OpenAPI specifications. A thorough comparison showed that no changes were necessary, as the current implementations already match the upstream specs. This PR serves as a confirmation of the existing alignment without requiring any source or test modifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1301",
+      "title": "Seamless Memory Import from Other AIs in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "memory",
+        "import",
+        "localization",
+        "ui",
+        "backend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1301",
+      "summary": "This update introduces a guided memory import flow, allowing users to easily transfer memories from other AI assistants like ChatGPT and Claude. Users can copy an export prompt, paste results, and review imported entries immediately, enhancing their experience. Additionally, the update includes localized import strings for 18 languages and various backend improvements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#991",
+      "title": "Enhance User Analytics with Daily Active Users in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "analytics",
+        "backend",
+        "performance",
+        "api",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces a new admin-only endpoint for daily active-user analytics, allowing for detailed tracking of user engagement. The core analytics response remains efficient by providing an option to exclude active users, ensuring backward compatibility. Performance benchmarks show significant improvements in response times for both the new and legacy endpoints."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1476",
+      "title": "Enhance Veo with Ordered Provider Failover in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "failover",
+        "veo",
+        "deployment",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a task-aware Veo failover-router that enforces a strict provider order of cqtai, mountsea, and ttapi. It preserves synchronous blocking calls while orchestrating asynchronous tasks, and includes comprehensive testing to ensure the correct provider is used under various failure conditions. Additionally, it implements a robust deployment strategy with rollback capabilities, enhancing the reliability of video processing services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1477",
+      "title": "Enhance Memory Import Functionality in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "memory",
+        "import",
+        "api",
+        "enhancement",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a Claude-style paste import action to the scoped memories API, allowing for deterministic parsing of memory exports. Key features include sanitization of prompt-injection variants, deduplication of entries, and enforcement of size and line limits. The implementation has passed all memory import tests, ensuring robust functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#989",
+      "title": "Enhance Gemini Videos Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "gemini",
+        "backend",
+        "integration",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update improves the Gemini Videos integration documentation with live-verified examples. Key changes include the addition of a `POST /gemini/tasks` request and response example, documentation of new response fields like `aspect_ratio` and `prompt`, and clarification on the `video_url` status during processing. Overall, these enhancements provide clearer guidance for users integrating with the omni-flash service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#244",
+      "title": "Launch Comprehensive Email Marketing System in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "email",
+        "marketing",
+        "development",
+        "system",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update introduces a robust email marketing distribution system designed for AceDataCloud. Key features include a centralized admin console, PostgreSQL durable queue, and a detailed development plan with a focus on consent and audience management. The implementation plan outlines necessary steps for rollout, ensuring a reliable and scalable email campaign process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#496",
+      "title": "Enhance CLI with Motion Mode Fixes and Reference Video URLs in Clis 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "update",
+        "bugfix",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/496",
+      "summary": "This update addresses two CLI specification mismatches in the motion command and adds a required option for generating reference video URLs. The `--mode` option now correctly restricts to specified modes, and `--character-orientation` is now mandatory. Additionally, the `generate` command for the wan model has been updated to include the `--reference-video-urls` option, enhancing its functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#990",
+      "title": "Align Video O1 Duration Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "api",
+        "backend",
+        "kling",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update clarifies that the `kling-video-o1` model only accepts a duration of 5 seconds, removing the previously misleading global duration enum. The OpenAPI description has been updated to maintain the specific rules for V3, Video O1, and legacy models. This change enhances the accuracy of the API documentation and prevents confusion for users."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Docs#69",
       "title": "Revamped Localized Guide Sync in Docs 🚀",
       "tags": [
