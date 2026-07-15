@@ -3,6 +3,341 @@
   "date": "2026-07-15",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1294",
+      "title": "New Memory Preference Toggle for Chat Settings in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "settings",
+        "memory",
+        "bugfix",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1294",
+      "summary": "This update introduces a memory settings switch that allows users to enable or disable long-term memory in chats. The feature is backed by an account-level preference and ensures that existing memories are preserved even when disabled. Additionally, conflicts with ScheduledTasks have been resolved, and various linting issues have been addressed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#729",
+      "title": "Enhance Pricing Conditions Display in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "pricing",
+        "ui",
+        "localization",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces significant improvements to the pricing conditions display for Seedance and Midjourney. It adds explicit columns for reference video options and consolidates surcharge conditions to eliminate redundancy. Additionally, the new utility for JsonLogic condition extraction enhances maintainability and testing across all supported locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1455",
+      "title": "Enhance conversation revisions with CAS support in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "update",
+        "testing",
+        "maintenance"
+      ],
+      "public": false,
+      "summary": "This update introduces monotonic conversation revisions and compare-and-swap (CAS) writes across various operations, including sync, async, and CRUD paths. A rollout flag is set to false by default to maintain legacy functionality until a coordinated maintenance window is executed. Additionally, it implements typed 409 conflict responses and includes extensive tests to ensure stability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1468",
+      "title": "Enhance Aichat2 Memory Management in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "memory",
+        "aichat2",
+        "platform",
+        "update",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces persistent memory preferences for users, allowing them to opt-out of memory features across chat prompts and tools. Key changes include enforcing account preferences, preserving settings during memory clearance, and implementing atomic write operations to prevent race conditions. Additionally, the latest Prettier fixes have been applied to ensure a clean linting process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1292",
+      "title": "Enhance Browser Execution States in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "browser",
+        "chat",
+        "updates",
+        "testing",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1292",
+      "summary": "This update introduces read-only chat rendering for durable BrowserDevice execution states, enhancing user experience without requiring cloud approval controls. Key features include strict state normalization, early-event buffering, and a dedicated activity card. The implementation has passed a comprehensive test suite, ensuring stability across various builds and locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1295",
+      "title": "Add Reference Video Uploader for Omni Editing in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "video",
+        "kling",
+        "ui",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1295",
+      "summary": "This update introduces a Reference Video uploader in the Kling config panel, enabling users to utilize the `kling-video-o1` Omni video editing feature effectively. The new component allows for the upload of MP4/MOV files, enhancing the editing capabilities by automatically managing prompt tokens and ensuring a seamless user experience. Additionally, internationalization support has been added for 18 locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#978",
+      "title": "Add omni-flash video pricing to Gemini service page in Backend 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "gemini",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces the omni-flash pricing rule to the Gemini service display-pricing file, ensuring that the video generation and editing price is visible on the pricing page. Previously, users could not see the pricing for the omni-flash model, which is now aligned with the existing billing rules. This change enhances user transparency regarding video service costs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#159",
+      "title": "Enhance phone confirmation handling in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "login",
+        "watchdog",
+        "classifier",
+        "testing",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update teaches the shared login classifier to recognize phone confirmation as a 'logging_in' state, improving the accuracy of account-selection matching. It also prevents the standalone watchdog and quick-login callers from clicking during phone confirmation, ensuring a smoother user experience. Comprehensive tests confirm that the changes are effective and do not introduce regressions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#298",
+      "title": "Introducing BrowserDevice and Session Management in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "browser",
+        "authentication",
+        "backend",
+        "security",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update adds a foundational `BrowserDevice` identity and introduces browser session connection/auth modes, which are initially disabled by default. Key features include owner-scoped device management with idempotent soft revoke, enhanced token handling for browser sessions, and a new Browser Relay readiness contract. The changes ensure a robust and secure integration for browser-based connections."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1454",
+      "title": "Enhance Browser Session Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "browser",
+        "session",
+        "aichat2",
+        "platform",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces improved handling for active browser sessions within the aichat2 framework, ensuring they are excluded from various processes such as token lookups and skill loading. Key files have been modified to implement these changes, and new tests have been added to validate the functionality. The changes maintain existing behaviors for OAuth and other connection types, paving the way for future enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1466",
+      "title": "Introduce Memory Toggle for Aichat2 Requests in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "memory",
+        "aichat2",
+        "feature",
+        "update",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update adds a new `memory_enabled` flag to Aichat2 requests, allowing users to control memory features. When set to false, memory prompt injection, memory tools, and background learning are disabled, enhancing user control over memory usage. The change is backward-compatible and has been validated with successful tests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1293",
+      "title": "Enhance Error Localization in Nexior 🗣️",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "localization",
+        "error-handling",
+        "i18n",
+        "frontend",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1293",
+      "summary": "This update localizes the error messages for scheduled tasks, ensuring that all 13 distinct failure codes are now properly translated across 18 supported locales. Key changes include the addition of localized messages for the `billing_gate_failed` error and improvements to the rendering of error messages in the task cards. This enhances user experience by providing clear and understandable error notifications in their native languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#219",
+      "title": "Upgrade AuthFrontend for Better Control Sizing in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "upgrade",
+        "frontend",
+        "auth",
+        "element-plus"
+      ],
+      "public": false,
+      "summary": "This update upgrades AuthFrontend from `@acedatacloud/core` version 0.16 to 0.18, allowing Element Plus to manage control sizing effectively. The change aligns button sizes with Studio's native 32px defaults, eliminating the need for local workarounds. Validation checks confirm the successful implementation of this upgrade."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1467",
+      "title": "Enhance Mountsea Concurrency Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "error-handling",
+        "routing",
+        "testing",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of upstream concurrency limits in Mountsea by detecting saturation through HTTP 429 and nested 'too_many_requests' responses. It maps these errors to the existing BusyError(500) contract, ensuring smoother failover routing and providing clearer public messages instead of generic object representations. Additionally, it includes tests to validate the new error mapping functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#728",
+      "title": "Enhance Console Scroll Behavior in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "ui",
+        "frontend",
+        "console",
+        "scroll"
+      ],
+      "public": false,
+      "summary": "This update improves the console's scroll behavior by ensuring that the root scroll area no longer expands unnecessarily. Key changes include the addition of paint containment for the desktop layout, which prevents the document root from scrolling independently of the console. This fix enhances the user experience by maintaining a clean and consistent interface across different screen sizes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#977",
+      "title": "Streamline Application Responses for Efficiency in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "optimization",
+        "api",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a compact service projection for the application list endpoint, significantly reducing response sizes. The new projection decreases uncompressed data from over 3.8MB to approximately 362KB, and gzip sizes from around 657KB to about 44KB. Regression tests have been added to ensure both the compact and full detail contracts remain intact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#727",
+      "title": "Restored Admin Invoice Icon in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "icons",
+        "admin",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update adds the `faFileInvoice` icon to the centralized icon library and restores its display next to the admin Invoices navigation item. The changes ensure that the icon is properly registered and available for use, enhancing the user interface for admin functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1465",
+      "title": "Fix video storage path for omni-flash outputs in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "video",
+        "storage",
+        "gemini",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update changes the storage path for omni-flash video outputs from the shared '/sora' folder to the dedicated '/gemini' folder. The fix involves adding a new constant for the gemini path and updating the relevant transfer function call. Existing '/sora' URLs remain functional, ensuring no disruption for past records."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#243",
+      "title": "Enhance API Debugging Skills in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "api",
+        "debugging",
+        "skills",
+        "reporting",
+        "workflow"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `debug-api-case` skill designed to assist in diagnosing API requests by tracing various identifiers and logs. It establishes a comprehensive workflow for clue-to-trace and forensic reporting, enabling detailed reconstruction of user interactions and root cause analysis. Additionally, a reusable report template has been added to standardize findings and recommendations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1464",
+      "title": "Enhance Model Support Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "enhancement",
+        "mongodb",
+        "http",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update dynamically builds the supported-model catalog from MongoDB capabilities and returns a 400 error for unsupported models. It preserves the 500 error for temporarily invalid accounts and removes the historical account truncation while ensuring safe catalog reads. Key improvements include better handling of model fallbacks and case insensitivity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#158",
+      "title": "Enhance WeChat Watchdog Supervision in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "watchdog",
+        "supervision",
+        "oem",
+        "health-check",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update introduces a new standalone watchdog supervisor for the WeChat integration, ensuring robust monitoring and automatic restarts every 15 seconds. Key changes include the addition of a PowerShell script for health checks and modifications to the startup process to prevent multiple watchdog instances. The implementation has passed extensive testing, confirming its reliability and effectiveness."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1463",
       "title": "Revive aichat2 Tool Calls for GPT-5.5 in Platform Service 🚀",
       "tags": [
