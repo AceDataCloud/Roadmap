@@ -3,6 +3,233 @@
   "date": "2026-07-15",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#218",
+      "title": "Enhance BrowserDevice Management UI in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "ui",
+        "security",
+        "frontend",
+        "browser",
+        "management"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive owner-facing UI for managing BrowserDevice pairing and secure exact-claim processes. Key features include challenge code handling, real-time expiry management, and the ability to rename or revoke devices. The UI is designed to enhance user experience while maintaining strict security protocols, ensuring that ordinary users cannot access the pairing flow without the appropriate feature flag."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#601",
+      "title": "Transition to Local Browser Execution for Xiaohongshu in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "xiaohongshu",
+        "browser",
+        "migration",
+        "local-execution",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/601",
+      "summary": "This update replaces the unlaunched Xiaohongshu cloud runtime with a local browser execution skill. Key changes include the removal of over 7,800 lines of cloud code, implementing strict local account verification, and ensuring that media publishing remains blocked until local upload capabilities are established. The migration is designed to enhance performance and security while maintaining user control."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1453",
+      "title": "Launch Browser Relay Skeleton in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "browser-relay",
+        "authentication",
+        "redis",
+        "deployment",
+        "websocket"
+      ],
+      "public": false,
+      "summary": "This update introduces the foundational structure for the authenticated Browser Relay service, enabling outbound-only WebSocket connections for registered browser devices. Key features include P-256/JCS authentication, Redis integration, and a robust security model with strict origin policies. The deployment is validated with successful unit tests and integration checks, paving the way for future enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#982",
+      "title": "Resolve Migration Conflicts in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "migration",
+        "django",
+        "backend",
+        "fix",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces a no-op Django merge migration to resolve conflicts between the `0214_restore_veo_extend_api` and `0215_order_finished_at` migrations. It also unblocks the PlatformBackend init container, which was previously failing due to multiple migration leaf nodes. The changes ensure smoother deployment and stability in the backend environment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1296",
+      "title": "Exciting New Omni Video Module Added in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "video",
+        "omni",
+        "nexior",
+        "editing",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1296",
+      "summary": "We've introduced a brand new standalone Omni video module to Nexior, enabling text-to-video, image-to-video, and video editing capabilities powered by omni-flash. This module follows the established standalone video pattern and integrates seamlessly with the existing gemini services. Key components include a new configuration panel, recent tasks display, and support for multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#299",
+      "title": "Enhance BrowserDevice Pairing and Relay Bootstrap in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "security",
+        "backend",
+        "pairing",
+        "relay",
+        "postgresql"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive BrowserDevice pairing state machine, including P-256 proof and owner confirmation. Key features such as signed resumable completion polling, PostgreSQL-backed public rate limits, and two-phase Relay bootstrap introspection have been added. The changes ensure secure credential handling and allow for schema deployment without immediate feature activation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#242",
+      "title": "Integrate BrowserAgent as a Submodule in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "submodule",
+        "integration",
+        "update",
+        "git",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update registers the `AceDataCloud/BrowserAgent` repository as a top-level submodule in the Index, tracking the main branch. The integration includes a pinned commit for consistency and validation checks have confirmed the integrity of the setup. The `.gitmodules` file has been updated accordingly to reflect this new addition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1297",
+      "title": "Enhance Task Media Display in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "kling",
+        "media",
+        "task",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1297",
+      "summary": "This update introduces the display of input images, videos, and audio for tasks in Kling, enhancing user experience. It includes support for various media types and improves task rendering by safeguarding against malformed video list data. The changes have been validated with comprehensive testing and linting."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#981",
+      "title": "Revamped TTAPI Pricing and Features in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "api",
+        "veo",
+        "backend",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update restores the `/veo/extend` endpoint to public access and lowers the pricing for Veo generation. The new rates are set at 1.68 credits for fast and 12.00 credits for quality, aligning with TTAPI's native extension support. Additionally, optional fields for aspect ratio and resolution have been added to the OpenAPI documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1469",
+      "title": "Enhance TTAPI with Veo Video Extension Support in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "ttapi",
+        "veo",
+        "video",
+        "feature",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `POST /veo/extend` endpoint to the TTAPI worker, allowing users to extend Veo video tasks while preserving existing contracts. Key improvements include user verification for source tasks, model matching, and aspect ratio inheritance. The rollout plan ensures a smooth transition with minimal disruption to existing services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/BrowserAgent#1",
+      "title": "Launch of Read-Only BrowserAgent MVP in Browser Agent 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "BrowserAgent",
+        "mvp",
+        "security",
+        "browser",
+        "development",
+        "release"
+      ],
+      "public": false,
+      "summary": "The new read-only MVP for the BrowserAgent has been successfully implemented, featuring a fixed extension ID, managed tab isolation, and strict security measures. Key functionalities include a non-extractable P-256 identity and fail-closed tool calls until authentication capabilities are established. The code has passed extensive validation, including audits and tests, ensuring a robust foundation for future enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#730",
+      "title": "Revamp Marketing Dashboard for Admins in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dashboard",
+        "analytics",
+        "localization",
+        "frontend",
+        "admin"
+      ],
+      "public": false,
+      "summary": "This update transforms the existing Marketing Attribution page into a comprehensive Marketing Dashboard. Key features include KPI cards for signups and revenue, a conversion funnel, and synchronized date filters. The dashboard is now fully localized across all supported languages, enhancing accessibility for users worldwide."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#979",
+      "title": "Launch Marketing Analytics API in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "analytics",
+        "api",
+        "revenue",
+        "migrations",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new admin-only marketing analytics API that tracks signup cohorts, user funnels, and revenue metrics. Key features include enhanced attribution for shared credentials and the ability to analyze monthly active users over a trailing 30-day period. Additionally, new database migrations ensure accurate revenue tracking and historical data integrity during deployments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#980",
+      "title": "Refresh Featured Models for Enhanced Visibility in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "catalog",
+        "models",
+        "update",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update promotes GPT-5.6 Luna, Terra, and Sol, along with Gemini 3.5 Flash, in the public model directory. Additionally, GPT Image 2 and Kling v3 Omni are now featured, while GPT-5.5 has been retired from the Featured list. The changes ensure that the catalog reflects the latest and most relevant models for users."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1294",
       "title": "New Memory Preference Toggle for Chat Settings in Nexior 🎉",
       "tags": [
