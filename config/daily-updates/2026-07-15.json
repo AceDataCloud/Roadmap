@@ -1,0 +1,176 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-15",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1463",
+      "title": "Revive aichat2 Tool Calls for GPT-5.5 in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "gpt-5.5",
+        "aichat2",
+        "responses",
+        "tools"
+      ],
+      "public": false,
+      "summary": "This update restores functionality for the aichat2 tool calls when using GPT-5.5 by modifying the responses shim. Key changes include converting tool calls to the Responses API format and ensuring proper handling of function call arguments. The implementation has been thoroughly tested, passing all tests and aligning with OpenAI's Responses API documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#492",
+      "title": "Enhance Gemini CLI with Video Options in Clis 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "enhancement",
+        "video",
+        "cli",
+        "gemini"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/492",
+      "summary": "This update introduces new features to the Gemini CLI, including a resolution option for existing commands and a new video-to-video command. Users can now specify video resolutions (720p or 1080p) and utilize the new command to transform videos with specified URLs. These enhancements improve the flexibility and usability of the CLI for video processing tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#975",
+      "title": "Fix: preserve translated json quotes in Backend 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#974",
+      "title": "Enhance Video Editing Documentation in Backend 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "video",
+        "api",
+        "gemini",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update documents the video editing capabilities of the `/gemini/videos` API, introducing optional parameters for `video_urls` and `resolution`. The changes include refined descriptions in the OpenAPI spec and additional documentation in Chinese, ensuring clarity for users. This enhancement streamlines video editing processes without the need for a separate catalog."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1461",
+      "title": "Enhance Video Editing Capabilities in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "video",
+        "editing",
+        "gemini",
+        "platform",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces video editing features directly on the existing `/gemini/videos` route, allowing users to upload and edit videos with optional parameters for `video_urls` and `resolution`. The changes streamline the process by eliminating the need for a separate `/omni/videos` service, enhancing efficiency and user experience. Validation improvements ensure that only valid inputs are processed, further solidifying the functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1291",
+      "title": "Align Edit Support Contacts Dialog with Element Plus Sizes in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "design",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1291",
+      "summary": "The Edit Support Contacts dialog has been updated to remove explicit small size attributes from various controls, ensuring consistency with the default Element Plus sizing used throughout the UI. This change enhances the visual coherence of the dialog with the rest of the application, as it now matches the native control sizes. No other logic or styling changes were made."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#23",
+      "title": "Expanded Semantic Icon Set in Common Frontend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "icons",
+        "frontend",
+        "update",
+        "semantic",
+        "release"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive semantic icon manifest with 189 reviewed product meanings. The new static, tree-shakeable entry point `@acedatacloud/core/icons/components` exposes all semantics while preserving existing single-icon subpaths. The release is tagged as immutable version `@acedatacloud/core@0.18.0`, ensuring compatibility and stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1289",
+      "title": "Enhance SMS Webhook Configuration in Nexior 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "sms",
+        "auth",
+        "localization",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1289",
+      "summary": "This update introduces a customizable SMS webhook configuration in the Auth panel, allowing site owners to set their own SMS sender endpoint. Key features include a toggle for enabling custom endpoints, updated documentation access, and a testing interface for connectivity checks. The changes enhance user control over SMS delivery while ensuring proper localization across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#300",
+      "title": "Enhance SMS Webhook Testing with Owner Validation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "sms",
+        "webhook",
+        "backend",
+        "security",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update introduces a new endpoint for testing SMS webhooks, allowing site owners to verify their configurations before going live. Key features include authentication checks to ensure only site owners can access the endpoint, rate limiting per user, and input validation to prevent abuse. The changes enhance security and usability for the SMS delivery system in Nexior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#725",
+      "title": "Enhance Auto-Recharge UI with VIP Discounts in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "auto-recharge",
+        "discount",
+        "frontend",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update addresses user feedback by ensuring the auto-recharge UI displays the correct VIP credit discount. The front end now relies on backend data to show the discounted price, eliminating any confusion regarding pricing. Key changes include updates to the auto-recharge modal and list page, along with internationalization adjustments for multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#973",
+      "title": "Streamline Auto-Recharge Pricing Logic in Backend ⚡",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "auto-recharge",
+        "backend",
+        "pricing",
+        "refactor",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update introduces a unified pricing mechanism for auto-recharge by implementing the `quote_recharge` function, which standardizes the calculation of charges and discounts. Key changes include modifications to serializers and views to ensure that the displayed price matches the actual charge, enhancing consistency and reliability. Additionally, new tests have been added to validate the functionality and ensure robustness."
+    }
+  ]
+}
