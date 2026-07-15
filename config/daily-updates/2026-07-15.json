@@ -3,6 +3,87 @@
   "date": "2026-07-15",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#494",
+      "title": "Enhance CLI with grok-4.5 support in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "grok",
+        "aichat",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/494",
+      "summary": "This update adds the new `grok-4.5` model to the CLI for both the aichat and grok components, ensuring alignment with the latest OpenAPI specifications. Key modifications include the addition of `grok-4.5` to the model lists and updates to the display labels for clarity. These changes enhance user experience by providing access to the latest model options."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1471",
+      "title": "Enable Grok 4.5 Model Routing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "grok",
+        "routing",
+        "openai",
+        "platform",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update allows the OpenAI-compatible worker to accept and advertise the `grok-4.5` model ID. Key validations confirm successful integration, including HTTP responses and testing outcomes. The rollout is currently blocked by a related backend PR, ensuring a smooth transition once dependencies are resolved."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#983",
+      "title": "Launch Grok 4.5 Pricing and Model Metadata in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "grok",
+        "pricing",
+        "backend",
+        "model",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces the Grok 4.5 model to the public catalog, complete with official two-tier token pricing. Key changes include adjustments to the pricing structure based on prompt token usage and updates to the OpenAPI enums. The rollout ensures that the model is fully integrated and validated across various services, enhancing the overall functionality and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1299",
+      "title": "Enhance Loading Feedback for Conversations in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "loading",
+        "ui",
+        "conversations",
+        "accessibility",
+        "fix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1299",
+      "summary": "This update introduces an animated loading indicator and message skeleton while historical conversations are being retrieved. The composer remains anchored and submission is disabled during the restore process to prevent sending stale context. Additionally, the restore state is scoped to the active conversation to enhance user experience during rapid conversation switching."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1470",
+      "title": "Enhance GitHub Proxy for Model Compatibility in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "proxy",
+        "responses",
+        "model",
+        "compatibility",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update improves the GitHub proxy by aligning response compatibility with various models, addressing issues with static model lists and endpoint routing. Key changes include dynamic reading of supported endpoints, enhanced error handling, and a robust caching mechanism. The modifications ensure seamless integration and improved performance for responses-only models while maintaining compatibility with existing services."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthFrontend#218",
       "title": "Enhance BrowserDevice Management UI in Frontend Web 🚀",
       "tags": [
