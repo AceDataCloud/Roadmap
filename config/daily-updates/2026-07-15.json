@@ -3,6 +3,102 @@
   "date": "2026-07-15",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Docs#69",
+      "title": "Revamped Localized Guide Sync in Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "localization",
+        "sync",
+        "testing",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/69",
+      "summary": "This update restores the synchronization of localized guides by reading from the new document feed and handling mapping conflicts effectively. Key improvements include retry mechanisms for feed errors and explicit warnings for missing localized guides. Additionally, regression tests have been added to ensure the robustness of the synchronization process across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#988",
+      "title": "Retired Veo Operations Documentation Hidden in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "veo",
+        "backend",
+        "documentation",
+        "deprecation",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This update hides deprecated Veo operation APIs and their integration guides, ensuring a cleaner user experience. The Upsample, Extend, Reshoot, and Objects APIs are marked as deprecated and removed from visibility, while maintaining their billing rules for legacy calls. The migration has been validated with successful tests and production checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1298",
+      "title": "Revamp Capabilities with Icons and Summaries in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "localization",
+        "icons",
+        "testing",
+        "capabilities"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1298",
+      "summary": "This update renames 'Function Settings' to 'Capabilities' across 18 locales and introduces a compact 22px service icon for each of the 31 capabilities. It replaces toggle instructions with concise, localized introductions for each service, enhancing user understanding. Additionally, regression tests have been added to ensure the integrity of icon and description mappings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#733",
+      "title": "Optimize marketing analytics requests in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "analytics",
+        "frontend",
+        "performance",
+        "error-handling"
+      ],
+      "public": false,
+      "summary": "This update enhances the loading sequence for marketing analytics by prioritizing core analytics before the heavier channel-attribution report. It also improves error handling by utilizing an existing localized message key and implements safeguards against stale data through token generation and request invalidation. Overall, these changes aim to streamline performance and reliability in the analytics process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#987",
+      "title": "Revamp Marketing Analytics for Speedy Insights in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "performance",
+        "analytics",
+        "backend",
+        "optimization",
+        "postgresql"
+      ],
+      "public": false,
+      "summary": "This update optimizes marketing analytics by replacing numerous batched ORM queries with parameterized PostgreSQL cohort joins. Key improvements include significant reductions in query times, with the first-event cohort query dropping from ~53 seconds to ~0.194 seconds, enhancing overall performance for analytics endpoints. The changes also ensure accurate attribution and efficient data aggregation for better insights."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#986",
+      "title": "Enhance Seek Balance Monitoring in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "monitoring",
+        "backend",
+        "tests",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature to monitor Seek balance by querying the Seek API. It includes handling for various account statuses like 'ok', 'unlimited', and 'error', while also converting remaining quotas to CNY. Additionally, focused tests have been added to ensure robust functionality and validation of the new feature."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#494",
       "title": "Enhance CLI with grok-4.5 support in Clis 🚀",
       "tags": [
