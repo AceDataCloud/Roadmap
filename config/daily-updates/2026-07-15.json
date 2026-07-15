@@ -3,6 +3,244 @@
   "date": "2026-07-15",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#740",
+      "title": "Enhance Pricing Tier Selection Behavior in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "pricing",
+        "user-experience",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update prevents the automatic rotation of the service pricing package selector and the models directory top-up tier. The largest package is now selected by default while allowing for manual selection, improving user experience and clarity in pricing options."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#502",
+      "title": "Veo CLI is perfectly in sync with the latest Docs! 🎉 in Clis 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "sync",
+        "veo",
+        "cli",
+        "docs",
+        "openapi"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/502",
+      "summary": "The recent updates to the Docs have been reviewed, and it turns out the Veo CLI is already aligned with the latest OpenAPI specifications. No changes were necessary as all modifications were limited to guide MDX files, and the CLI matches the spec exactly. This ensures a seamless experience for users without any additional updates required."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#993",
+      "title": "Restoring Veo Pricing to Pre-July Levels in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "veo",
+        "backend",
+        "update",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update restores the pricing for the current supported Veo generation models to their pre-July-11 rates, significantly reducing costs for users. Key changes include adjustments to the API billing and service display pricing, as well as updates to public documentation to reflect the new pricing structure. All relevant tests have passed, ensuring stability and accuracy in the pricing model."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1485",
+      "title": "Enhance Memory Imports with LLM Extraction in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "llm",
+        "memory",
+        "import",
+        "security",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update replaces regex parsing with LLM semantic extraction for various data formats, improving the handling of imported memories. It introduces stricter validation for pasted exports and maintains existing sanitization and deduplication processes. The changes ensure a more reliable and secure memory import experience while capping LLM output to prevent excessive data accumulation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1484",
+      "title": "Enforce Seedance Duration Validation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "validation",
+        "billing",
+        "seedance",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update implements strict validation for Seedance duration requests, rejecting any requests with frames and ensuring that invalid numeric durations are not processed. Successful requests will now be billed based on the valid realized duration while maintaining an auditable requested duration. The changes enhance the reliability of the billing process and prevent undercharging."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#738",
+      "title": "Fix marketing dashboard card resizing issues in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "bugfix",
+        "performance",
+        "chartjs",
+        "responsive"
+      ],
+      "public": false,
+      "summary": "This update removes the percentage min-height from marketing analysis cards, preventing standalone table cards from depending on the auto-height page wrapper. Additionally, it places the Chart.js canvas in a fixed-height parent to comply with responsive sizing requirements, effectively stopping the ResizeObserver feedback loop that caused card height issues. The changes stabilize card heights and enhance overall performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#221",
+      "title": "Enhance Proxy for Browser Capability JWKS in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "nginx",
+        "auth",
+        "frontend",
+        "proxy",
+        "capability"
+      ],
+      "public": false,
+      "summary": "This update adds a specific nginx proxy location for the browser capability JWKS endpoint in the AuthFrontend configuration. Previously, valid Relay calls were failing due to the SPA fallback returning the index.html instead of the required JWKS file. The change ensures successful validation and improves the overall functionality of the production browser extension."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#737",
+      "title": "Enhance fetch handling in extension service worker in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "fetch",
+        "service-worker",
+        "extension",
+        "bugfix",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update resolves an 'Illegal invocation' error by binding the native fetch function correctly within the extension service worker. Key changes include invoking `globalThis.fetch(...)` through lexical wrappers for improved pairing and session refresh. The modifications have been validated with a full extension audit, resulting in all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1483",
+      "title": "Reverted Bill Seek Seedance Changes in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "revert",
+        "video",
+        "validation",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update reverts the recent changes made to the Bill Seek Seedance functionality. Key modifications include the removal of validation checks for duration and frames, which were previously introduced. The impact of this revert aims to restore the previous behavior of the video handling process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1479",
+      "title": "Enhance Seedance Billing with Realized Duration in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "seedance",
+        "seek",
+        "updates",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update implements support for the Seedance 2.0 `duration: -1` auto mode in the Seek worker, ensuring accurate billing based on realized duration. Key changes include validating the `frames = 25 + 4n` request option and preserving original requested duration and frames in billing metadata. The implementation also includes safeguards against charging when realized duration is omitted or invalid."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1478",
+      "title": "Update Veo Router Command for Correct Upstream Port in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "docs",
+        "veo",
+        "update",
+        "kubernetes",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update adds the `--upstream-port 8080` flag to the TSE create-service command for the Veo router in the documentation. This change ensures that the service correctly targets the Kubernetes service port 8080, resolving issues encountered during live rollout. Validation confirms that the command formatting is correct and that the service now has two targets on the appropriate port."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1302",
+      "title": "Enhance Capabilities with Omni and AI ID Photo Icons in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "localization",
+        "testing",
+        "icons"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1302",
+      "summary": "This update introduces the Omni capability to the settings list and replaces the generic AI ID Photo avatar with a dedicated favicon. Localized labels and summaries for Omni have been added across 18 languages, ensuring a consistent user experience. Additionally, regression tests have been implemented to verify the new features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#736",
+      "title": "Enhance Relay Bootstrap Handling in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "bootstrap",
+        "pairing",
+        "validation",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update allows the BrowserDevice to rebootstrap after the initial pairing expiry by parsing the device-session bootstrap independently. The changes ensure that only the short-lived Relay expiry is validated, improving the robustness of the device-session exchange. All tests and validations have passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1482",
+      "title": "Enable paired browser execution in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "browser",
+        "deployment",
+        "production",
+        "aichat2",
+        "relay"
+      ],
+      "public": false,
+      "summary": "This update activates the authenticated Browser Relay tool routing and aichat2 browser Skill dispatch. Key changes include modifications to deployment configurations for both aichat2 and browser-relay, ensuring that browser execution is enabled in production. The implementation is contingent on the readiness of the AuthBackend, which must be healthy before merging."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#302",
+      "title": "Activate BrowserDevice Bridge for Production in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "backend",
+        "production",
+        "browser",
+        "kubernetes",
+        "auth"
+      ],
+      "public": false,
+      "summary": "This update enables the BrowserDevice pairing and browser_session connector creation in production, along with the ES256 capability grants. Key Kubernetes secrets have been provisioned, and the necessary code paths and migrations have been validated through extensive PostgreSQL testing. This is a crucial step before enabling browser execution in the PlatformService."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#734",
       "title": "Enhanced Browser Agent Tools for Chrome Extension in Frontend Web 🚀",
       "tags": [
