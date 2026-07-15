@@ -3,6 +3,134 @@
   "date": "2026-07-15",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1000",
+      "title": "Enhance Email Audience Filtering in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "email",
+        "backend",
+        "testing",
+        "audience",
+        "filtering"
+      ],
+      "public": false,
+      "summary": "This update restricts audience previews and freezes to configured test recipients when real-recipient delivery is disabled. It normalizes test addresses and ensures the audience remains empty if no test recipients are configured. A regression test has been added to confirm that real users are excluded from the frozen snapshot in seed mode."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#999",
+      "title": "Enhance Email Marketing Deployment Stability in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "deployment",
+        "email-marketing",
+        "backend",
+        "tests",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update fixes the deployment structure for the email marketing API, ensuring it receives the correct secret. It also mounts the email configuration across all relevant components and implements fail-fast behavior for missing keys. Additionally, regression tests have been added to validate the changes and ensure stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1318",
+      "title": "Enhance Memory Actions with Solid Buttons in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "buttons",
+        "memory",
+        "nexior",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1318",
+      "summary": "This update introduces solid primary and danger buttons for Memory actions, improving the visual hierarchy and usability. The 'Import' button is now a solid primary action, while 'Clear all' and 'Forget' are styled as solid danger actions with red backgrounds. Additionally, the buttons are designed to prevent shrinking and ensure proper wrapping in narrow layouts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#739",
+      "title": "Launch Email Marketing Admin Console in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "email",
+        "admin",
+        "frontend",
+        "ui",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces a new Email Marketing entry in the admin navigation, featuring six dedicated workspaces: overview, campaigns, audiences, subscriptions/suppressions, Tencent settings, and delivery events. Additionally, it includes user email preferences and typed API operators, enhancing user control and experience. Comprehensive validation has been performed, ensuring a clean build and robust functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#755",
+      "title": "Enhance UTM Source Select Behavior in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ux",
+        "bugfix",
+        "element-plus"
+      ],
+      "public": false,
+      "summary": "This update remounts the creatable UTM source select when direct changes are included, ensuring that the Element Plus internal state is cleared when 'direct' is removed. The existing summary request behavior is preserved, enhancing the user experience. Validation checks have passed, confirming the integrity of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#304",
+      "title": "Enhance phone login for passwordless accounts in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "authentication",
+        "testing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update fixes issues with phone login for social accounts that had null or unusable passwords, preventing crashes. It now returns a generic 401 password_incorrect response for both email and phone passwordless accounts, along with added regression tests to cover legacy scenarios."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#998",
+      "title": "Enhance CI for Email Marketing Tests in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "ci",
+        "testing",
+        "postgresql",
+        "pytest",
+        "email-marketing"
+      ],
+      "public": false,
+      "summary": "This update integrates `pytest-django` into the CI environment, allowing the email marketing test suite to run fully during PR checks. PostgreSQL 15 services are now consistently utilized across both PR and deploy workflows, ensuring matching credentials. Additionally, linting has been added for the email marketing tests to maintain code quality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#504",
+      "title": "Sync Verification Complete for Docs in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "sync",
+        "verification",
+        "docs",
+        "clis",
+        "quality"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/504",
+      "summary": "The recent sync check for the `veo` CLI confirmed that all documentation updates did not require any changes to the OpenAPI specification. A thorough comparison showed that all models, aspect ratios, resolutions, actions, and endpoints are in perfect alignment. With 58 tests passing and no lint errors, everything is functioning smoothly."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1491",
       "title": "Enhance Data Protection for Memory Imports in Platform Service 🚀",
       "tags": [
