@@ -3,6 +3,131 @@
   "date": "2026-07-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#758",
+      "title": "Optimize Marketing Channel Loading for Better Performance in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "performance",
+        "frontend",
+        "analytics",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "This update enhances the automatic loading of marketing channels by ensuring sequential processing to reduce database contention. Key changes include maintaining the automatic state on initial entry and date changes, and canceling queued summaries when filters or date sequences change. The improvements lead to faster analytics completion times and a smoother user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#223",
+      "title": "Enhance Phone Authentication Experience in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "authentication",
+        "frontend",
+        "user-experience",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the phone authentication process by enhancing captcha feedback and password guidance. It skips captcha for resolved non-official sites while ensuring that official and unresolved callers still require it. Additionally, the canonical site origin is now passed across all SMS/email code-send surfaces, streamlining the user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#305",
+      "title": "Streamline Captcha Process for Registered Subsites in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "captcha",
+        "backend",
+        "security",
+        "updates",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces a significant change by skipping captcha requirements for registered non-official Site origins when issuing SMS/email codes. The system will still require captcha for unknown or official Site contexts, while maintaining per-receiver throttling and implementing a new subsite limit. Comprehensive tests have been added to ensure functionality and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#247",
+      "title": "Enhance Referral Risk Audit and Allowlist Design in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "referral",
+        "audit",
+        "design",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive design for the referral risk audit and allowlist, focusing on documenting invalid referral-risk audit histories and implementing a directed, append-only bypass system. Key changes include low-lock idempotency, invalid aggregate filtering, and improved reconciliation processes, ensuring a more robust and transparent referral system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#757",
+      "title": "Automate Marketing Channel Loading in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "performance",
+        "analytics",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update introduces automatic loading of channel attribution on the initial dashboard entry and when the reporting date range changes. It optimizes performance by running the channel request in parallel with core analytics, ensuring fast KPI and funnel rendering. Additionally, an explicit refresh option is retained for filter changes to enhance user interaction."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1319",
+      "title": "Enhance App Customization Features in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "customization",
+        "ui",
+        "localization",
+        "testing",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1319",
+      "summary": "This update introduces a compact edit action for customizing app names and icons on a per-site basis within the Settings > Capabilities section. It leverages existing image upload and translation functionalities, ensuring a seamless user experience across all Navigator surfaces. Additionally, it includes typed CRUD operators and comprehensive tests to maintain code quality and localization support."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#997",
+      "title": "Enhance Site Capabilities with Custom Branding in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "localization",
+        "branding",
+        "capabilities",
+        "admin"
+      ],
+      "public": false,
+      "summary": "This update introduces the `SiteCapabilityOverride` model, allowing for per-site branding with localized display names and custom icon URLs. It includes site-admin CRUD operations, strict HTTPS validation, and improved translation lifecycle management. The changes are additive and backward-compatible, ensuring a smooth rollout before the Nexior consumer PR."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1494",
+      "title": "Standardize Rate Limit Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "platform-service",
+        "updates",
+        "improvements"
+      ],
+      "public": false,
+      "summary": "This update maps third-party provider HTTP 429 responses to server-side 500 errors for various adapters including OpenAI HK, ephone, seek, TTAPI, and Volcengine. It preserves intentional public 429 responses for Midjourney Relax queue errors while ensuring internal throttling remains unchanged. The changes enhance error handling consistency across the platform."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1493",
       "title": "Align GPT-Image-2 Routing for Consistency in Platform Service 🚀",
       "tags": [
