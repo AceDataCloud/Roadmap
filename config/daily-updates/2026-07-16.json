@@ -3,6 +3,118 @@
   "date": "2026-07-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#766",
+      "title": "Enhance Tab Grouping Functionality in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "tabs",
+        "feature",
+        "improvement",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature that allows the ACE Browser Agent to reuse tab groups across all attached tabs within the same Chrome window while maintaining separate groups in different windows. Key improvements include the consolidation of legacy tab groups and better handling of closed tabs or invalidated group IDs, ensuring a smoother user experience. Comprehensive validation has been completed with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#765",
+      "title": "Revamp Applications Menu to Balance Management in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "localization",
+        "frontend",
+        "ui",
+        "update"
+      ],
+      "public": false,
+      "summary": "The applications sidebar item in the console has been renamed to 'Balance Management' and localized across all 12 supported languages. This update ensures that the terminology is consistent and accurately describes the functionality related to global and dedicated application balances, while keeping the page title and route unchanged."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1498",
+      "title": "Update error handling for Nano failures in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "mountsea",
+        "api",
+        "production",
+        "resilience"
+      ],
+      "public": false,
+      "summary": "This update modifies the error handling for MountSea Nano task failures, changing the mapping of upstream error code `451` from `ForbiddenError` (HTTP 403) to `ApiError` (HTTP 500). This allows the production Nano failover router to continue to the next eligible channel instead of halting at MountSea, ensuring better resilience in error scenarios. The implementation remains within the existing inline error-mapping branch without introducing new abstractions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1321",
+      "title": "Enhance Veo Task Details in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "veo",
+        "ui",
+        "metadata",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1321",
+      "summary": "This update enriches the Veo generation task details by adding reference-image thumbnails above each task prompt, aligning with the design of Nano Banana and Seedance history cards. The ambiguous tabs have been replaced with localized names, and a consistent metadata panel is now displayed for all task statuses. Legacy task history remains readable, ensuring a smooth transition for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#763",
+      "title": "New Referral Risk Management Console in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "admin",
+        "referral",
+        "localization",
+        "risk-management"
+      ],
+      "public": false,
+      "summary": "This update introduces a superuser-only referral risk management page at /console/admin/distribution-risk. It features comprehensive histories of blocked, bypassed, and compensated referrals, along with live compensation previews. The page is linked from the admin navigation and supports multiple languages, enhancing usability for global users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#764",
+      "title": "Enhance Recovery for Ace Data Cloud Extension in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "enhancement",
+        "permissions",
+        "ui",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update improves the recovery process for the Ace Data Cloud extension after a stop event. Key changes include preserving required permissions, renaming 'Paused' to 'Stopped', and enhancing the Enable functionality to retry cleanup and reconnect sessions. The extension now handles errors more effectively, providing clearer guidance for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1004",
+      "title": "Enhance Referral Risk Decision Auditing in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "audit",
+        "referral",
+        "backend",
+        "compensation",
+        "risk"
+      ],
+      "public": false,
+      "summary": "This update introduces significant enhancements to the referral risk decision auditing process. Key changes include the persistence of blocked, bypassed, and compensated decisions, along with new APIs for managing bypass approvals. Additionally, live compensation previews and a robust reconciliation process have been implemented to improve accuracy and transparency in compensation handling."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#1003",
       "title": "Launch Formal Email Campaign Templates in Backend 🚀",
       "tags": [
