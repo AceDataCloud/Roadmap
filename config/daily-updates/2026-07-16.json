@@ -3,6 +3,165 @@
   "date": "2026-07-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#309",
+      "title": "Eliminate Cookie Reset Functionality in Backend 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "backend",
+        "cleanup",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update removes the `clear_cookies` capability from various components, including the runtime serializer and connector allowlist. The historical migration remains intact, ensuring that existing data is preserved. Additionally, connector synchronization now correctly overwrites live policies with the supported capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#770",
+      "title": "Streamline Extension by Removing Cookie Reset in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "extension",
+        "security",
+        "update",
+        "frontend",
+        "release"
+      ],
+      "public": false,
+      "summary": "This update removes the `browser.clear_cookies` functionality from the extension's capabilities, ensuring a more secure user experience. It also restores the backward-compatible optional `browser.key.ref` and releases the extension version 0.6.1. All tests have passed successfully, confirming that the changes do not affect other functionalities like file uploads."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1503",
+      "title": "Streamline Browser Capabilities by Removing Cookie Reset in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "browser",
+        "capabilities",
+        "cleanup",
+        "tests",
+        "typescript"
+      ],
+      "public": false,
+      "summary": "This update removes the `clear_cookies` capability from the browser tool and related tests, enhancing the clarity of browser functionalities. The changes include modifications to several files, ensuring that the upload functionality remains intact while simplifying the overall browser capabilities. All tests have been validated, confirming no errors and maintaining compatibility with existing features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#629",
+      "title": "Streamline Xiaohongshu Account Management in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "xiaohongshu",
+        "skills",
+        "update",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/629",
+      "summary": "This update removes the `clear_cookies` functionality from the Xiaohongshu frontmatter and browser tool instructions, opting instead for visible logout and switch-account controls for account resets. The changes ensure that the parseable frontmatter fix from the previous update is preserved, maintaining all publishing workflows. Validation confirms that all skills tests passed successfully without the cookie reset feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#627",
+      "title": "Enhance Xiaohongshu Skill Frontmatter Parsing in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "yaml",
+        "testing",
+        "skills",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/627",
+      "summary": "This update improves the frontmatter parsing for the Xiaohongshu skill by encoding the description as a YAML block scalar, ensuring valid syntax. The parsing now utilizes `yaml.safe_load` in contract tests, aligning with production behavior. Validation results show all tests passed, confirming the robustness of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#626",
+      "title": "Enhance Xiaohongshu Workflows for Full User Experience in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "xiaohongshu",
+        "skills",
+        "enhancement",
+        "local-browser",
+        "capabilities"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/626",
+      "summary": "This update expands the Xiaohongshu Skill to support comprehensive workflows including login, recommendations, and content publishing. Key changes include the introduction of explicit high-impact capabilities like file uploads and cookie management, ensuring all actions occur in the user's local browser with strict origin checks. The validation process confirmed the robustness of these enhancements with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1502",
+      "title": "New Browser Tools for Enhanced Publishing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "browser",
+        "tools",
+        "aichat2",
+        "security",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces explicitly gated browser tools, including file upload and cookie clearing capabilities, enhancing the aichat2 browser functionality. Legacy trusted input remains limited, ensuring security and compliance with existing policies. Comprehensive testing confirms that all changes are stable and ready for deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#308",
+      "title": "Enhance Xiaohongshu Uploads with Browser Capabilities in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "browser",
+        "capabilities",
+        "security",
+        "uploads",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces explicit browser capabilities for Xiaohongshu uploads, requiring both `file_upload` and `clear_cookies` permissions. The changes ensure that old devices fail selection until re-paired, enhancing security and functionality. All tests have passed successfully, confirming the robustness of the new implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#769",
+      "title": "Enhance Xiaohongshu Publishing Tools in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "security",
+        "tools",
+        "extension",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces locally approved publishing tools, including `browser.file_upload` and `browser.clear_cookies`, to the Ace Data Cloud extension. It ensures that sensitive details are kept memory-only and validates targets post-approval. The extension is now version 0.6.0, featuring enhanced security measures and explicit device capabilities for uploads and cookie resets."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#768",
+      "title": "Enhance Extension Enablement Without Panic Blocks in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "extension",
+        "cleanup",
+        "permissions",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update improves the extension's ability to enable without blocking during panic cleanup. Key changes include immediate updates to local runtime state, independent panic recovery alarms, and refined handling of host match patterns to prevent unnecessary permission removals. The validation process confirmed that all tests passed successfully, ensuring a robust implementation."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#162",
       "title": "Enhance Taskbar Pinning Functionality in Wisdom 🚀",
       "tags": [
