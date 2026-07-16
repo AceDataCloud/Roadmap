@@ -3,6 +3,36 @@
   "date": "2026-07-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1493",
+      "title": "Align GPT-Image-2 Routing for Consistency in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "routing",
+        "gpt-image-2",
+        "platform",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update aligns the routing for `gpt-image-2:official` with the existing `gpt-image-2` by routing both through the same `br -> br-fallback` pool. The official alias will no longer dispatch to cortex/openai-hk, ensuring routing parity for image generations and edits. The public model name and billing remain unchanged, maintaining stability for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1492",
+      "title": "Enhance OpenAI HK Error Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "openai",
+        "updates",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update classifies the OpenAI HK provider's capacity-saturation response as a `500 api_error`, while preserving ordinary upstream rate-limit responses as `429 too_many_requests`. Additionally, it normalizes Unicode and whitespace to ensure minor formatting changes are correctly classified. These improvements enhance error handling and maintain system reliability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1320",
       "title": "Eliminate Polling for Removed Desktop Agent Endpoint in Nexior 🚀",
       "tags": [
