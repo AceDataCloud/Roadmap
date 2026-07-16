@@ -3,6 +3,262 @@
   "date": "2026-07-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1003",
+      "title": "Launch Formal Email Campaign Templates in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "email",
+        "templates",
+        "accessibility",
+        "campaigns",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces formal bilingual email campaign templates with Ace Data Cloud branding, ensuring accessibility and compatibility across email clients. Key enhancements include a centralized subscription topic management and the rejection of ServiceNotice campaigns with declared topics. Extensive testing confirms the stability and functionality of the new templates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#762",
+      "title": "Display Site Favicons in Browser Agent in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "features",
+        "permissions",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces the rendering of Chrome-provided favicons for each attached origin in the Browser Agent. A text fallback is included for instances where a favicon fails to load, enhancing user experience. Additionally, the narrow `favicon` extension permission has been added and validated, ensuring compliance with security policies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#225",
+      "title": "Revoked browser devices can now be permanently deleted in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "localization",
+        "backend",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces a new irreversible 'Delete' action for revoked browser devices, ensuring that users can permanently remove devices after revocation. The backend has been updated to support this functionality, and all relevant locales have been backfilled with the necessary translations. Additionally, the UI has been adjusted to align with the Ace Data Cloud branding."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1002",
+      "title": "Updated Email Marketing Sender to Noreply in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "email",
+        "marketing",
+        "backend",
+        "tencent",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update migrates the email marketing identity to `email.acedata.cloud` and sets `noreply@email.acedata.cloud` as the default From address. Key changes include enhanced validation for sender registration and updates to the operations runbook to reflect new DNS settings. The implementation ensures compliance with Tencent SES requirements, improving email campaign reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#307",
+      "title": "Enhance Browser Device Management with Re-Pairing and Deletion in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "browser",
+        "device",
+        "backend",
+        "management",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces support for re-pairing browser devices by allowing a new pending claim from the same user and installation IDs. It also adds a permanent delete endpoint for revoked devices, ensuring that pairing audit claims are preserved while deleting the associated connections. Comprehensive tests confirm that all changes are functioning as intended."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#761",
+      "title": "Enhance Tab Management and Pairing in Ace Data Cloud Extension 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "extension",
+        "pairing",
+        "ui",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a more intuitive paired state display, hiding the pairing form once paired. Users can now easily clear local sessions and initiate a new pairing flow with the 'Pair new' option. Additionally, the extension now lists all attached origins with a 'Detach' option for each session, improving user control and experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#759",
+      "title": "Email Marketing Access for Superusers in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "email-marketing",
+        "admin",
+        "frontend",
+        "superuser",
+        "accessibility"
+      ],
+      "public": false,
+      "summary": "This update exposes the Email Marketing admin entry directly to superusers on the main Ace Data Cloud host, removing the need for a hidden feature flag. The admin route is now accessible without restrictions, while keeping sub-official and white-label hosts hidden. This change enhances the visibility and usability of the email marketing console for superusers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1497",
+      "title": "Enhance tool name handling for LLM requests in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "llm",
+        "tooling",
+        "fix",
+        "validation",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces a fix for handling invalid tool names in LLM requests, specifically addressing the issue with dots in tool names. The solution encodes invalid names into fixed-length aliases while preserving valid names and contracts. Comprehensive validation confirms the effectiveness of these changes across various scenarios."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#625",
+      "title": "Update Branding for Xiaohongshu Skill in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "branding",
+        "xiaohongshu",
+        "skills",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/625",
+      "summary": "This update modifies the branding in the Xiaohongshu Skill to refer to the product as the 'Ace Data Cloud extension'. The existing manual 'Attach current tab' workflow and all read-only safety boundaries remain unchanged. Validation tests for both Xiaohongshu and the Skills repository have passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#760",
+      "title": "Hide refresh icon during loading in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "loading",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update removes the refresh icon while the channel request is loading, enhancing the user experience by relying solely on the Element Plus loading spinner. The circular button's size, tooltip, and accessible name remain unchanged to ensure consistency. All validations, including ESLint and production build, have passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#161",
+      "title": "Enhance WeChat Window Management in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "windows",
+        "automation",
+        "taskbar",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update restores hidden WeChat windows from the system tray and ensures the taskbar button remains pinned. Key changes include improved handling of window states and persistent checks for taskbar pinning, enhancing user experience. The modifications have been validated with extensive tests, confirming stability and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1001",
+      "title": "Updated Referral Commission in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "update",
+        "backend",
+        "referral",
+        "api"
+      ],
+      "public": false,
+      "summary": "The maximum referral commission in the Studio overview has been corrected from 25% to 24%. This change aligns the public guide with the live 13-tier distribution API, ensuring accurate information for users. The update has been validated against the live API and confirmed to be clean."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#506",
+      "title": "Veo CLI is in perfect sync with Docs in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "sync",
+        "veo",
+        "cli",
+        "docs",
+        "verification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/506",
+      "summary": "Recent updates to the documentation for the `veo` service have been verified, confirming that no changes are needed in the CLI. All components, including models, aspect ratios, resolutions, actions, endpoints, and task actions, have been checked and are in alignment. With all 58 tests passing and the linting clean, the CLI remains robust and ready for use."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1496",
+      "title": "Enhance Error Handling for Gemini Upstream in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "gemini",
+        "platform-service",
+        "testing",
+        "http-status"
+      ],
+      "public": false,
+      "summary": "This update improves error classification for Gemini/Omni upstream validation failures, mapping them to appropriate HTTP status codes. Key changes include handling moderation failures as 403 and timeouts as 504, along with new regression tests for the 10-second video limit. The modifications ensure clearer error messaging and better user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#248",
+      "title": "Streamline Project Skills into Commands in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "refactor",
+        "commands",
+        "workflow",
+        "organization",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update consolidates all project workflow skills into a single directory, removing duplicates and enhancing organization. Seven unique workflows have been migrated to command files, while five existing commands remain intact. Additionally, command routing and internationalization guidance have been updated to ensure clarity and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1495",
+      "title": "Enhance Router Response Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "router",
+        "json",
+        "billing",
+        "normalization",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update improves the router's handling of managed task responses by ensuring a single terminal JSON response is requested. It normalizes legacy JSON sequences and reuses the final response for task persistence and billing records. Additionally, it filters out unnecessary headers, enhancing compatibility and reliability across various worker services."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#758",
       "title": "Optimize Marketing Channel Loading for Better Performance in Frontend Web 🚀",
       "tags": [
