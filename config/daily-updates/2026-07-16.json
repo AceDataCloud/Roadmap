@@ -3,6 +3,137 @@
   "date": "2026-07-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Skills#630",
+      "title": "Revamp Xiaohongshu Note Card Reconstruction in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "xiaohongshu",
+        "reconstruction",
+        "skills",
+        "update",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/630",
+      "summary": "This update enhances the reconstruction of Xiaohongshu list cards by implementing a deterministic scan for named links and bounded ranges. It addresses issues such as ignoring empty duplicates and reporting ambiguous authors without guessing. The changes ensure a more reliable and accurate representation of note cards, improving the overall functionality of the Skills module."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#164",
+      "title": "Enhance Search Result Stability in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "search",
+        "stability",
+        "bugfix",
+        "testing",
+        "wisdom"
+      ],
+      "public": false,
+      "summary": "This update improves the reliability of search result clicks by implementing a secondary validation check on the selected cell's name before proceeding. If the cell has been rebound to a different result, the click is skipped, preventing incorrect actions. The changes include new tests to ensure the functionality works as intended without impacting existing interactions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1325",
+      "title": "Enhance Homepage Story Headings for Better Visibility in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "homepage",
+        "headings",
+        "design",
+        "ui",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1325",
+      "summary": "This update emphasizes the homepage business-story headings by applying a bolder font weight of 800 while maintaining the existing semantic structure and responsive sizes. The changes ensure that the headings stand out without affecting the overall design or functionality. Validation checks confirm that the adjustments are clean and consistent across various devices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1303",
+      "title": "Revamp Home to Showcase AI Business Platform in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "ux",
+        "localization",
+        "performance",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1303",
+      "summary": "The home page has been completely rebuilt to highlight the full capabilities of the AI business platform while maintaining Nexior's dark brand aesthetic. Key features include a detailed capability catalog, functional hero callouts, and improved responsive design. The update also enhances localization support and ensures all assets are CDN-hosted for optimal performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#771",
+      "title": "Refined Referral Risk Admin Page in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "design",
+        "responsive",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update enhances the Referral Risk Admin page by aligning it with adjacent console pages, implementing a bold title and Element Plus card styling. Key improvements include the removal of duplicate padding, the addition of a dedicated warning icon, and ensuring responsive filters for both desktop and mobile views. Comprehensive validation checks confirm the visual consistency and functionality across various screen sizes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1504",
+      "title": "Enhance Browser Upgrade Guidance Visibility in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "browser",
+        "guidance",
+        "update",
+        "capabilities",
+        "filtering"
+      ],
+      "public": false,
+      "summary": "This update ensures that interactive Browser Skills remain visible even when no eligible BrowserDevice is selected, providing users with necessary update guidance. Additionally, browser tools are now registered one capability at a time, contingent on both connector policy and device capabilities. The changes also maintain strict filtering for scheduled and unattended executions, while keeping certain tools unavailable for older devices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1009",
+      "title": "Enhance Wisdom Endpoint Resilience in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "wisdom",
+        "kubernetes",
+        "resilience",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update improves the resilience of the single-tenant Wisdom endpoint by allowing it to remain ready during transient login and OCR stalls for up to two minutes. The failure threshold for the readiness probe has been increased from 2 to 12, preventing premature removal of the endpoint and reducing 502/503 errors during brief outages. Validation tests confirm that the changes maintain overall system stability while enhancing user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#163",
+      "title": "Enhance Wisdom API Stability and Recovery in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "api",
+        "stability",
+        "wechat",
+        "logging",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update stabilizes the Wisdom API post-login by preventing duplicate auto-start instances and allowing a recovery window for running APIs. Key changes include improved error handling for API crashes, a new PowerShell console for live logging, and adjustments to the WeChat UI interaction to avoid unnecessary refresh tasks. Overall, these enhancements aim to ensure a more reliable and responsive user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthBackend#309",
       "title": "Eliminate Cookie Reset Functionality in Backend 🚫",
       "tags": [
