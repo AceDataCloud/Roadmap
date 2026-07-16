@@ -3,6 +3,104 @@
   "date": "2026-07-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#162",
+      "title": "Enhance Taskbar Pinning Functionality in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "taskbar",
+        "ocr",
+        "windows",
+        "bugfix",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of the Windows 10 LTSC compositor-rendered taskbar jump-list by implementing precise OCR for the 'Pin to taskbar' label. It ensures that the system fails safely on OCR misses and retains checks for pinned shortcuts. Validation tests have passed successfully, confirming the robustness of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#339",
+      "title": "Sync veo resource with latest Docs spec in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "sync",
+        "update",
+        "veo",
+        "sdk",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/339",
+      "summary": "This update aligns the `veo` OpenAPI spec with recent changes, including the removal of `veo2` and `veo2-fast` models. The `translation` field has been changed from a string to a boolean, and the `aspect_ratio` is now restricted to only `16:9` and `9:16`. Both TypeScript and Python SDKs have been updated accordingly to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1006",
+      "title": "Introducing Reusable Email Campaign Templates in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "email",
+        "templates",
+        "backend",
+        "campaigns",
+        "marketing"
+      ],
+      "public": false,
+      "summary": "This update replaces per-campaign Tencent templates with reusable, versioned templates that are keyed by message class and locale. Key features include a streamlined unsubscribe process, enhanced content validation, and improved template management. The changes ensure that campaigns maintain a consistent structure while allowing for localized content delivery."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#767",
+      "title": "Enhance Referral Risk Admin Page Functionality in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "vue",
+        "element-plus",
+        "production"
+      ],
+      "public": false,
+      "summary": "This update explicitly registers all Element Plus components used in the referral risk admin page, resolving a critical issue that caused a blank production page. The fix addresses the problem of unknown table components invoking row slots without scope, ensuring a smoother user experience. Validation steps included a successful Vite production build and thorough testing with Playwright."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#34",
+      "title": "Configure Canonical X402 API Host in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "docs",
+        "api",
+        "typescript",
+        "python",
+        "client"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/34",
+      "summary": "This update explicitly configures the canonical API host `https://x402.acedata.cloud` across all TypeScript and Python quick-start clients. It aligns the shared agent example client with the dedicated X402 host, preventing fallback to the legacy default. All SDK constructors have been verified to include the new host, ensuring a seamless integration experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1005",
+      "title": "Set X402 as Default Gateway in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "x402",
+        "backend",
+        "update",
+        "documentation",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update establishes `https://x402.acedata.cloud` as the default canonical origin for X402 discovery resources. It includes a refresh of the discovery cache key, enhanced unit testing for canonical URL generation, and updates to the X402 source documentation to reflect these changes. The modifications ensure a more reliable and consistent experience for users accessing X402 resources."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#766",
       "title": "Enhance Tab Grouping Functionality in Frontend Web 🚀",
       "tags": [
