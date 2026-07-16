@@ -3,6 +3,221 @@
   "date": "2026-07-16",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#773",
+      "title": "Revamped Email Marketing Workbench in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "email",
+        "design",
+        "accessibility",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "The email marketing admin interface has been completely redesigned to function as a cohesive operator workbench. Key features include a bilingual email composer, a comprehensive campaign lifecycle view, and enhanced metrics for audience and template readiness. This update ensures a consistent user experience with improved accessibility and responsive design."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1506",
+      "title": "Enhanced Security for Kling Logs in Platform Service 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "security",
+        "logging",
+        "kling",
+        "error-handling",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update improves security by redacting sensitive upstream credentials from logs related to Kling video, motion, lip-sync, and talking-photo functionalities. Key changes include enhanced error handling in the BaseHandler and the introduction of safe logging methods to prevent credential exposure during debugging. These modifications ensure that essential debugging information is retained without compromising security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1323",
+      "title": "Enhance Omni Reference UI in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "kling",
+        "omni",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1323",
+      "summary": "This update introduces a streamlined canonical `kling-o1` model with new Omni image and video reference controls. Key features include multi-image uploads, reference-video selection, and enhanced user interface translations across 17 locales. The changes improve user experience and ensure compliance with new submission requirements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#508",
+      "title": "Update Kling Model Identifier in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "update",
+        "kling",
+        "cli",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/508",
+      "summary": "This update reflects the upstream Docs OpenAPI specification change, renaming the Kling O1 model identifier from `kling-video-o1` to `kling-o1`. Key modifications include updates to the `KLING_MODELS` list and the models table in the README. These changes ensure consistency across the CLI and documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#342",
+      "title": "Enhance Omni SDK with Canonical Contracts in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "sdk",
+        "kling",
+        "python",
+        "typescript",
+        "contracts",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/342",
+      "summary": "This update introduces the canonical `kling-o1` model across both Python and TypeScript SDKs, enhancing the functionality with typed contracts for camera, image, and video references. Key improvements include the removal of unsafe elements and unknown-field forwarding, alongside strict type checks and new tests for serialization. The rollout is contingent on the deployment of related platform services to ensure seamless integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#299",
+      "title": "Enhance Kling Tool with Canonical References in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "feature",
+        "kling",
+        "validation",
+        "update",
+        "dify"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/299",
+      "summary": "This update exposes the canonical `kling-o1` model ID in the Dify Kling tool, improving the handling of Omni references. Key changes include the addition of typed and sanitized `image_list` and `video_list` forwarding, along with strict validation constraints for model requests. The plugin will only be published after completing necessary dependencies, ensuring a smooth rollout."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#507",
+      "title": "Publish Canonical Omni Guide in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "kling",
+        "omni",
+        "api",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/507",
+      "summary": "This update introduces the canonical `kling-o1` model name and outlines the five-second constraint. It documents various Omni request shapes, including multi-image and video-edit requests, while also addressing forbidden combinations and tenant-safe replacements. Historical claims regarding the Extend model have been corrected for accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#628",
+      "title": "Enhance Omni References Documentation in Skills 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "documentation",
+        "kling",
+        "omni",
+        "skills",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/628",
+      "summary": "This update documents the canonical `kling-o1` and V3 Omni image/video reference workflows, detailing parameters such as O1 duration and media-format constraints. It also removes the `element_list` parameter for tenant safety and completes the core `/kling/videos` parameter table. Validation has been performed with all tests passing, ensuring the integrity of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#438",
+      "title": "Enhance Omni Tools with Canonical Updates in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "enhancement",
+        "documentation",
+        "validation",
+        "pydantic",
+        "models"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/438",
+      "summary": "This update replaces the legacy O1 identifier with the new canonical `kling-o1`, enhancing the model's reliability. It introduces typed Pydantic schemas for `image_list` and `video_list`, while also improving camera control validation. The README and changelog have been aligned with the new model catalog, ensuring clear documentation for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#165",
+      "title": "Enable Remote Debugging by Default in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "feature",
+        "debugging",
+        "security",
+        "api",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update changes the default setting for the remote debugging endpoint to enabled, allowing for easier remote operations on Wisdom appliances. The endpoint remains token-gated, ensuring that only users with a valid API token can access it. Key files updated include configuration settings, API routes, and test cases to reflect this change."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1007",
+      "title": "Launch of Canonical Kling Model in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "api",
+        "billing",
+        "openapi",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update replaces the unlaunched `kling-video-o1` identifier with the canonical `kling-o1` across various components, including billing and OpenAPI. It introduces structured contracts for image and video lists while ensuring O1 billing is limited to specific generation types. Additionally, OpenAPI types have been corrected, enhancing overall API accuracy and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1500",
+      "title": "Enhance Omni Routing with Canonical Model in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "routing",
+        "validation",
+        "api",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces the canonical public O1 model ID 'kling-o1' and maps it to ephone's legacy provider ID. Key improvements include strict model validation, immediate availability of O1 and V3 Omni references, and enhanced routing capabilities. Additionally, tenant-unsafe elements are rejected, and reference payloads are sanitized to ensure security and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1505",
+      "title": "Enhance Tool Result Serialization in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "serialization",
+        "tooling",
+        "json",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces a centralized serialization method for structured tool results, ensuring that compact JSON outputs are preserved even when pretty JSON exceeds character limits. Key changes include the addition of a new serialization function and modifications to existing orchestration and streaming executor files. The implementation has been validated with extensive tests, confirming that results are accurately managed across different execution paths."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Skills#630",
       "title": "Revamp Xiaohongshu Note Card Reconstruction in Skills 🚀",
       "tags": [
