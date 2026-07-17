@@ -3,6 +3,53 @@
   "date": "2026-07-17",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#783",
+      "title": "Enhance SSR Deployment Stability in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "deployment",
+        "kubernetes",
+        "ssr",
+        "diagnostics",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update modifies the SSR Deployment configuration by setting the `progressDeadlineSeconds` to 1500 seconds, ensuring Kubernetes does not prematurely fail the rollout. Additionally, diagnostics for Deployment and pod statuses are now printed if the SSR rollout encounters issues, improving troubleshooting capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#782",
+      "title": "Give SSR rollouts extra breathing room in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ssr",
+        "deploy",
+        "kubernetes",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "Increased the SSR rollout timeout from 10 minutes to 20 minutes to allow deployments more time to complete. Added a 120-second termination grace period for SSR pods so in-flight renders can finish during rollouts. Updated deployment validation scripts to confirm the rollout configuration changes cleanly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1508",
+      "title": "Enhance Task Management with Router Guards in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "task-management",
+        "router",
+        "updates",
+        "client",
+        "improvements"
+      ],
+      "public": false,
+      "summary": "This update improves task management by preserving independent task persistence for each provider worker while suppressing client task writes from router-managed attempts. Key changes include the propagation of the verified `routerManaged` state and the introduction of AST contracts for better write management. The update ensures that all affected clients handle task writes correctly, maintaining the integrity of independent and managed executions."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthBackend#311",
       "title": "Activate Xiaohongshu Browser Connector in Backend 🚀",
       "tags": [
