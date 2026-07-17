@@ -3,6 +3,116 @@
   "date": "2026-07-17",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#779",
+      "title": "Make Admin Order Names Editable in Frontend Web ✏️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "admin",
+        "update",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update introduces a 255-character input field for editing admin order names, replacing the static description. The order name and price can now be saved together using the updated functionality. Additionally, the operator payload type has been narrowed to focus on these two editable fields, enhancing the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1014",
+      "title": "Enhance Admin Order Editing Capabilities in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "admin",
+        "orders",
+        "validation",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update allows superusers to edit both the description and price of orders simultaneously, with validation for a maximum description length of 255 characters and non-negative prices. New regression tests have been added to ensure the functionality works as intended, enhancing the overall order management experience for admins."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#778",
+      "title": "Enhance Order Discount Clarity in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "discounts",
+        "localization",
+        "ui",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update introduces human-readable discount percentages while maintaining the backend's 0–1 ratio. Customers will now see their actual payment percentage in the dialog and table, with discounts over 30% highlighted in red for better visibility. Additionally, all locale validation ranges have been updated to reflect the new 0–100 percentage format."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#171",
+      "title": "Refresh SSH gateway documentation status and rollout checklist in Wisdom 📝",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "ssh",
+        "docs",
+        "gateway",
+        "rollout"
+      ],
+      "public": false,
+      "summary": "Updated the SSH gateway design document to reflect merged design status and current implementation progress. The documentation now tracks open implementation slices, validation state, remaining deployment gates, and an evidence-based rollout checklist while keeping deployment disabled until readiness requirements are met."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#777",
+      "title": "Revamp Email Marketing UI for Consistency in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "design",
+        "email-marketing",
+        "element-plus"
+      ],
+      "public": false,
+      "summary": "This update aligns the email marketing workbench with the existing Element Plus design system, ensuring consistency across light and dark modes. Key changes include standardizing card styles, updating color variables, and normalizing spacing within the email marketing module. The rendered email canvas remains unchanged, preserving its original styling while enhancing the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#749",
+      "title": "Update aegis-web-sdk to latest version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "frontend",
+        "sdk"
+      ],
+      "public": false,
+      "summary": "This update bumps the aegis-web-sdk from version 1.41.13 to 1.41.14. Key changes include updates in the package-lock and package.json files, ensuring compatibility with the latest features and fixes. This enhancement aims to improve the overall performance and stability of the frontend application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#510",
+      "title": "Streamline video commands by removing deprecated element_list in Clis 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "api",
+        "cleanup",
+        "commands",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/510",
+      "summary": "This update removes the `element_list` field from the video commands in response to changes in the upstream API. The `--element-id` option and related helper functions have been eliminated from the `generate` and `image-to-video` commands, along with corresponding tests. All other fields remain aligned with the current OpenAPI specification."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformDeployment#12",
       "title": "Update readiness probe to API health check in Platform Deployment 🚀",
       "tags": [
