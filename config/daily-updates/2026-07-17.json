@@ -1,0 +1,53 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-17",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#750",
+      "title": "Update vue-tsc to 3.3.7 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "typescript",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps the vue-tsc package from version 3.3.5 to 3.3.7. Key improvements include fixes for single expression event handlers and filtering const globals from template completions, enhancing overall performance and reliability in TypeScript support."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#167",
+      "title": "Designing a Shared SSH Gateway for Wisdom in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "ssh",
+        "gateway",
+        "design",
+        "security",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive design for a shared SSH gateway for Wisdom tenants, allowing secure access without the need for individual public IPs. Key features include a centralized SSH endpoint, high availability with sshpiper, and enhanced security measures like host key pinning. The documentation details the architecture, security boundaries, and deployment strategies to ensure a robust implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#166",
+      "title": "Refine File Transfer Assistant Search Logic in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "search",
+        "fix",
+        "enhancement",
+        "wisdom",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update enhances the search functionality for the File Transfer Assistant by ensuring it only selects results from the appropriate '功能' section. Key changes include the introduction of a new constant for section names and adjustments to the search result filtering logic. The fix prevents incorrect navigation to the web search when similar names appear in different contexts."
+    }
+  ]
+}
