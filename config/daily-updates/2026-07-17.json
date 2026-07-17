@@ -3,6 +3,67 @@
   "date": "2026-07-17",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#786",
+      "title": "Enhance Kubernetes API Read Resilience in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "kubernetes",
+        "deploy",
+        "frontend",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces a retry mechanism for read-only `kubectl get` calls in the production deploy script. By implementing this change, we can handle transient API timeouts more effectively, ensuring smoother deployments without altering the rollout order or traffic switching behavior. The modifications aim to improve the reliability of static release readiness and endpoint checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#785",
+      "title": "Enhance Deployment Resilience in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "deployment",
+        "frontend",
+        "resilience",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the deployment process by ensuring that the static release pods are fully running and ready before proceeding. It also enhances the resilience of endpoint convergence against transient pod deletions, addressing issues from previous deployments. Key modifications were made to the deployment script to implement these changes effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#784",
+      "title": "Enhance Static Frontend Rollout Timing in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "deployment",
+        "frontend",
+        "improvement",
+        "diagnostics"
+      ],
+      "public": false,
+      "summary": "This update extends the static frontend rollout wait time from 10 minutes to 20 minutes, allowing for smoother deployments. Additionally, it introduces diagnostic outputs for deployment and pod statuses if the rollout fails, improving troubleshooting capabilities. These changes align CI processes with observed rollout latencies, enhancing overall deployment reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#251",
+      "title": "Enhance Nexior Scenario UI Consistency in Index 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "ui",
+        "consistency",
+        "nexior",
+        "audit",
+        "proposal"
+      ],
+      "public": false,
+      "summary": "This update proposes a comprehensive audit and unification plan for the Nexior scenario UI, focusing on 20 generated workflows. Key changes include a structured approach to standardizing UI components and interactions across different media types, while ensuring no immediate modifications to the product UI. The plan aims to improve user experience by addressing inconsistencies in parameter controls and media previews."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#783",
       "title": "Enhance SSR Deployment Stability in Frontend Web 🚀",
       "tags": [
