@@ -3,6 +3,341 @@
   "date": "2026-07-17",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#311",
+      "title": "Activate Xiaohongshu Browser Connector in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "activation",
+        "connector",
+        "migration",
+        "backend",
+        "xiaohongshu"
+      ],
+      "public": false,
+      "summary": "This update activates the Xiaohongshu browser connector as part of the unified browser connection rollout. It includes the deletion of legacy browser session rows with empty identifiers while preserving valid connections. The connector is now set to visible and installable, ensuring a smoother integration for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#250",
+      "title": "Streamline Connector Auth Models for Unified Connections in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "connector",
+        "auth",
+        "browser",
+        "plan",
+        "unified"
+      ],
+      "public": false,
+      "summary": "This PR outlines a comprehensive plan to align browser connectors with a unified Connection model, ensuring consistency across various auth modes. Key changes include the removal of unnecessary duplication in the Connector installation process and the introduction of a clear structure for creating user Connections. The plan has been validated against the existing model, confirming its integrity and readiness for review."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1017",
+      "title": "Streamline Airwallex Secrets for Deployment in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "deployment",
+        "airwallex",
+        "backend",
+        "secrets",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update removes the requirement for the Airwallex secrets during deployment when the bank transfer feature is disabled. The reconciliation process now skips gracefully if the provider token is not configured, enhancing deployment flexibility. Additionally, documentation has been updated to clarify the need for provisioning secrets before enabling the server flag."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#774",
+      "title": "Enhance Payment Options with Airwallex Bank Transfer in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "payments",
+        "ui",
+        "features",
+        "airwallex",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new Bank Transfer UI for Airwallex-backed USD orders, requiring explicit tester opt-in and server-side configuration. The feature is gated for orders priced at $5,000 or more, ensuring only eligible transactions can utilize this payment method. Additionally, existing bank instructions will remain visible post-payment creation, enhancing user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#637",
+      "title": "Enhance Xiaohongshu Connector Integration in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "xiaohongshu",
+        "connector",
+        "skills",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/637",
+      "summary": "This update binds the Xiaohongshu browser execution to its specific Connector identifier, ensuring accurate resolution and preventing alias conflicts. Key changes include the addition of a contract assertion for the canonical provider and successful validation of the Xiaohongshu browser contract. This enhancement improves the reliability of workflows involving Xiaohongshu."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1510",
+      "title": "Enhance Browser Connector Resolution in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "browser",
+        "security",
+        "update",
+        "connector",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update ensures that the aichat2 browser execution strictly resolves to an exact canonical Connector Connection. Key changes include the removal of alias fallbacks and the introduction of explicit requirements for Connector identifiers, enhancing security and clarity in browser execution. Additionally, negative tests have been added to validate the new selection criteria."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#226",
+      "title": "Enhance Browser Connector Device Selection in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "browser",
+        "localization",
+        "ui",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a dedicated BrowserDevice picker for the AuthFrontend, streamlining the installation flow for browser connectors. Key features include displaying allowed origins, device compatibility, and auto-selecting compatible devices. Additionally, the dialog is now responsive and supports localization across 17 languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#310",
+      "title": "Unified Browser Connectors Implementation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "backend",
+        "connectors",
+        "browser",
+        "auth",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces a robust foundation for browser-backed Connectors within the AuthBackend. Key changes include the acceptance of `browser_device_id` in installation requests, enhanced validation of device ownership, and the creation of a unique `Connection` for each browser session. The update also allows a single BrowserDevice to support multiple Connectors, streamlining the connection process and improving overall system efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#776",
+      "title": "Enhance Wisdom Lifecycle Visibility in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "deployment",
+        "wisdom",
+        "update",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update integrates the Wisdom runtime lifecycle into the PlatformFrontend, utilizing the `GET /api/status` endpoint as the sole source of lifecycle information. Key states such as 'starting', 'waiting_for_login', 'preparing', 'ready', and 'error' are now supported, improving user feedback during the login process. Additionally, the QR code handling has been refined to ensure accurate results and prevent old data from interfering with new requests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1012",
+      "title": "Update readiness probe to use health endpoint in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "update",
+        "health",
+        "probe",
+        "wisdom"
+      ],
+      "public": false,
+      "summary": "This update modifies the Wisdom AKS appliance readiness probe to transition from the `/api/ping` endpoint to the more reliable `/api/health`. This change ensures that the business lifecycle state does not affect ingress accessibility. The affected manifest tests have been validated, with a successful outcome on 20 out of 21 tests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1507",
+      "title": "Unified Health Checks for Wisdom API in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "docs",
+        "api",
+        "health",
+        "wisdom",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update consolidates the health check endpoints for the Wisdom API, replacing `/api/ping` with a unified `/api/health` endpoint. Key documentation and deployment templates have been updated accordingly to reflect this change, ensuring a smoother operational experience. The modifications enhance the reliability of health checks during service startup."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#780",
+      "title": "Streamline Order Updates in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "update",
+        "order",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update enhances the order editing process by directing admin edits to the newly named `update-details` endpoint, while removing the outdated `update-price` call from the frontend. These changes ensure a more efficient and accurate handling of order details, improving overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#781",
+      "title": "Enhance Asset Safety for Frontend Releases in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "deployment",
+        "stability",
+        "assets",
+        "production"
+      ],
+      "public": false,
+      "summary": "This update addresses critical issues from overlapping rollouts that caused asset retrieval failures in production. Key changes include serialized production workflows, improved asset retention strategies, and enhanced deployment scripts to ensure stability during updates. The modifications aim to prevent future incidents and ensure a smoother user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1501",
+      "title": "Enhance V5.5 Replace Section Functionality in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "v5.5",
+        "regression",
+        "api",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update fixes the `replace_section` requests for the `chirp-v5-5` model by ensuring explicit bounded infill context is sent. It validates the requested range against the source clip duration, preserving existing behaviors and adding a focused regression test for V5.5. The changes enhance the reliability of the model while maintaining compatibility with previous versions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1010",
+      "title": "Streamline Airwallex Transfers with Automation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "payments",
+        "automation",
+        "webhooks",
+        "security",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces automated Airwallex bank transfers for verified enterprise customers, ensuring a seamless payment experience. Key features include direct webhook handling, enhanced security with HMAC verification, and a fallback reconciliation process. The implementation also includes new models and management commands to support these functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#512",
+      "title": "Update grok CLI docs to align with OpenAPI spec in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "documentation",
+        "update",
+        "grok",
+        "cli"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/512",
+      "summary": "The grok CLI documentation has been updated to reflect changes in the OpenAPI specification. Key updates include the addition of `grok-4.5` to the chat model list and corrections to video model names, ensuring they match the current spec. No code changes were necessary as the CLI already handles the updated duration default seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1015",
+      "title": "Enhance Order Details Update Route in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "api",
+        "update",
+        "admin",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `POST /api/v1/orders/{id}/update-details/` admin action while retaining the `update-price` alias for backward compatibility. It ensures that only validated fields are persisted to prevent overwriting concurrent order state changes and includes a regression test for route registration. The changes enhance the overall functionality and reliability of order management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#48",
+      "title": "Exciting New Global Account APIs for Airwallex in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "airwallex",
+        "api",
+        "payments",
+        "backend",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces the standard Airwallex provider adapter with new endpoints for managing Global Accounts. Key features include support for opaque local payment IDs and the ability to independently query Airwallex Deposit data, all while keeping PayBackend stateless. The implementation is validated with a full pytest suite, ensuring robust functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1326",
+      "title": "Update Grok Video Default Duration to 6 Seconds in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "grok",
+        "video",
+        "update",
+        "patch"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1326",
+      "summary": "This update changes the default video duration for Grok video generation from 8 seconds to a stable 6 seconds. The adjustment ensures consistency across initial state, reset behavior, selector fallback, and request submission. Additionally, a patch release note has been added for user clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1013",
+      "title": "Align Grok video defaults and billing duration in Backend 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "grok",
+        "video",
+        "billing",
+        "openapi",
+        "tests"
+      ],
+      "public": false,
+      "summary": "Updated Grok video API defaults and examples to use a 6-second duration while keeping existing duration ranges supported. Adjusted billing fallbacks, OpenAPI contracts, documentation examples, and display pricing tests to match the new default. Added coverage for omitted-duration cost evaluation and refreshed user-facing error wording."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1509",
+      "title": "Set Grok Video Duration to Six Seconds in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "grok",
+        "video",
+        "default",
+        "test",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update establishes a shared default video duration of six seconds for Grok video generation. The change is reflected in both request metadata and the outgoing generation payload, ensuring consistency across the platform. Additionally, a new test has been added to verify the default duration, enhancing the reliability of the worker test suite."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#779",
       "title": "Make Admin Order Names Editable in Frontend Web ✏️",
       "tags": [
