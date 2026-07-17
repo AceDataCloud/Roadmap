@@ -3,6 +3,37 @@
   "date": "2026-07-17",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformDeployment#12",
+      "title": "Update readiness probe to API health check in Platform Deployment 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformDeployment",
+        "helm",
+        "readiness",
+        "api",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "The readiness probe for the legacy `acedatacloud-wisdom` Helm chart has been updated from the business endpoint `/api/status` to the health endpoint `/api/health`. This change ensures that instances remain accessible for user interactions during login and data preparation phases. The modifications were validated through template path checks and `git diff` assessments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#170",
+      "title": "Enhance Runtime Lifecycle Management in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "lifecycle",
+        "api",
+        "performance",
+        "stability",
+        "improvements"
+      ],
+      "public": false,
+      "summary": "This update introduces a new public lifecycle for the API, improving the handling of system states during data preparation. Key changes include the isolation of WCDB processes to reduce CPU load, a refined health check endpoint, and enhanced error handling for service readiness. These improvements aim to boost system stability and responsiveness, particularly during high-load scenarios."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#750",
       "title": "Update vue-tsc to 3.3.7 in Frontend Web 🚀",
       "tags": [
