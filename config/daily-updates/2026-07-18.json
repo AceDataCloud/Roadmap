@@ -3,6 +3,70 @@
   "date": "2026-07-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1523",
+      "title": "Prevent x402 Image Fanout Until Variable Settlement is Ready in Platform Service 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "image-fanout",
+        "x402",
+        "payment",
+        "settlement",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces a rejection mechanism for OpenAI image fanout on x402 payments when the count exceeds one, ensuring that variable settlement is supported. The changes maintain support for single image requests and Bearer-token payments while preventing overcharging scenarios. Comprehensive tests confirm the functionality and integrity of the implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#55",
+      "title": "Boost Facilitator Image Push Timeout in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "timeout",
+        "deployment",
+        "docker",
+        "workflow",
+        "facilitator"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/55",
+      "summary": "This update sets the `COMPOSE_HTTP_TIMEOUT` to 600 seconds specifically for the Facilitator image push step. This change addresses previous timeout issues experienced during deployments, ensuring smoother and more reliable image pushes to GHCR. The workflow has been validated with successful parsing and a clean diff check."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#793",
+      "title": "Strengthen Static Deploy Startup Gate in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "deployment",
+        "security",
+        "frontend",
+        "nginx"
+      ],
+      "public": false,
+      "summary": "This update disables service-account token mounting for static nginx release pods, enhancing security during deployment. Additionally, a final static readiness check has been added to ensure at least one pod is ready before timing out the deployment, improving reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#792",
+      "title": "Enhance Static Deploy Traffic Switching in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "deployment",
+        "frontend",
+        "static",
+        "traffic",
+        "safety"
+      ],
+      "public": false,
+      "summary": "This update allows static deploys to switch traffic once at least one new static pod is ready, improving deployment efficiency. It maintains endpoint convergence as a safety gate and preserves older static releases until the new release achieves full replica readiness, ensuring rollback capacity during scheduling stalls."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#791",
       "title": "Enhance SSR Deployment Process in Frontend Web 🚀",
       "tags": [
