@@ -3,6 +3,84 @@
   "date": "2026-07-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#791",
+      "title": "Enhance SSR Deployment Process in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "deployment",
+        "ssr",
+        "frontend",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the SSR deployment process by ensuring the deployment spec image matches the build and retains at least one ready endpoint. It also removes the requirement for a newly scheduled SSR pod on the new image before the deployment can pass. These changes enhance the reliability and efficiency of the deployment workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#54",
+      "title": "Increase SKALE Gas Limit for Permit2 Settlements in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "skale",
+        "gas",
+        "permit2",
+        "update",
+        "x402"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/54",
+      "summary": "This update raises the SKALE transaction gas limit from 2,000,000 to 50,000,000 for Permit2 `upto` settlements. Key changes include modifications to the settings and deployment files, ensuring that the new gas limit is effectively utilized. All tests have passed, confirming the stability and readiness of this enhancement."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#790",
+      "title": "Enhance SSR Deployment Readiness Check in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "deployment",
+        "ssr",
+        "frontend",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the SSR deployment readiness gate by requiring at least one non-deleting SSR pod to be ready on the new image before proceeding. It also ensures that the deployment spec points to the new image and includes diagnostics for cases where no new SSR pod becomes ready. These changes aim to streamline the deployment process and reduce potential failures."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#789",
+      "title": "Enhance Agent Workbench Labels in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "improvement",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update improves the Agent Workbench by prioritizing the service alias from `document.agent` for the scope label. Additionally, it formats known acronyms to prevent awkward phrasing in legacy `Service.title` values. These changes enhance clarity and maintain consistency in the user interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#317",
+      "title": "Revamp Connection Methods for Consistency in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "refactor",
+        "backend",
+        "connectors",
+        "testing",
+        "compatibility"
+      ],
+      "public": false,
+      "summary": "This update rewrites all connector cards and methods to utilize a canonical execution and credential object structure. It introduces reverse compatibility for legacy auth methods, ensuring that existing clients continue to function seamlessly. Additionally, the update includes comprehensive validation and testing to confirm the integrity of the new methods."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthBackend#321",
       "title": "Enhance Dual-Write Connection Methods in Backend 🚀",
       "tags": [
