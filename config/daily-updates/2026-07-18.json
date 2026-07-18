@@ -3,6 +3,102 @@
   "date": "2026-07-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1520",
+      "title": "Enhance Logging for Bananarouter Responses in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "logging",
+        "bananarouter",
+        "image-responses",
+        "platform-service",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces a new logging mechanism for Bananarouter image responses, ensuring that sensitive information is omitted while preserving essential identifiers. Key changes include the addition of a sanitized summary that captures provider request IDs, response IDs, and usage counts, which will help in tracking and debugging issues related to prompt assembly. The improvements aim to close the evidence gap for provider responses, enhancing overall system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#312",
+      "title": "Enhance connection method schema in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "schema",
+        "validation",
+        "migrations"
+      ],
+      "public": false,
+      "summary": "This update introduces the new `Connector.connection_methods` schema, enhancing the existing connection methods without disrupting current installations. It includes backfilling legacy connectors and connections, along with validation helpers to ensure compatibility with future runtime support. Comprehensive tests confirm the stability and integrity of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1519",
+      "title": "Enhance Bananarouter with Image Batch Fanout in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "enhancement",
+        "openai",
+        "bananarouter",
+        "batch-processing"
+      ],
+      "public": false,
+      "summary": "This update introduces a prototype for batch processing of OpenAI Images on the Bananarouter channel, allowing for multiple image generations while maintaining existing functionality for single requests. Key features include improved error handling, optimized resource usage, and the ability to return successful images in order, even if some requests fail. The new feature is opt-in and disabled by default, ensuring stability in production environments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#255",
+      "title": "Revamp API Documentation with Agent Workbench in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "api",
+        "localization",
+        "planning",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive plan for transforming API document pages into an Agent Workbench, enhancing user experience with a focus on service integration. Key changes include locking the `agent` contract, defining localization strategies, and outlining a detailed rollout plan across multiple PRs. The new structure aims to streamline access to API resources and improve clarity for users navigating through various agent services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#254",
+      "title": "Revamp Connector Architecture for Enhanced Clarity in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "architecture",
+        "migration",
+        "connector",
+        "auth",
+        "planning"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive plan to separate the execution and credential methods within the connector architecture, moving away from the overloaded `auth_mode` and `Connection.kind`. Key changes include a full migration inventory for 115 connectors, a detailed migration strategy, and a breakdown of implementation across eight PRs. The older multi-auth plan has been marked as superseded, ensuring clarity and improved functionality moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1340",
+      "title": "Streamlined Generator Panel Spacing in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "design",
+        "refactor",
+        "validation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1340",
+      "summary": "This update unifies the sidebar spacing for 21 generator components, ensuring a consistent width of 320px for desktop and 340px for mobile drawers. Key changes include the removal of unnecessary padding and the establishment of a single scroll area for content, enhancing user experience across various services. All modifications have been validated and pass ESLint, Prettier, and type checks."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1517",
       "title": "Enhance Browser Connector Recognition in Platform Service 🚀",
       "tags": [
