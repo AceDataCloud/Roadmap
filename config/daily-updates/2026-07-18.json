@@ -3,6 +3,150 @@
   "date": "2026-07-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1517",
+      "title": "Enhance Browser Connector Recognition in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "browser",
+        "connectors",
+        "security",
+        "updates",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of browser connectors by ensuring they are only recognized as connected when their exact browser selection is successful for the current request. It also shares the connection status across various components, enhancing consistency and reliability. Additionally, browser sessions are now kept unavailable for token/MCP and unattended execution paths, improving security and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#228",
+      "title": "Fix Connector Naming in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "bugfix",
+        "ui",
+        "typescript"
+      ],
+      "public": false,
+      "summary": "This update ensures that the browser Connector names are displayed accurately by prioritizing the joined catalog name. In cases where the catalog is unavailable, it falls back to the Connection-level identity, preventing any confusion with device names. The changes have been validated with successful checks across Vue TypeScript, ESLint, and production builds."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1339",
+      "title": "Enhance Audio Previews for Accessibility in Nexior 🎧",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "accessibility",
+        "audio",
+        "ui",
+        "localization",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1339",
+      "summary": "This update transforms the audio preview component from a clickable div to a native button, improving keyboard accessibility. Users can now activate the audio previews using the Enter and Space keys, and a warning is displayed if the audio fails to load. Localization updates have also been made to ensure accessible labels are available in multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1338",
+      "title": "Enhance Seedream with Explicit Generate/Edit Options in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "seedream",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1338",
+      "summary": "This update introduces clear distinctions between Generate and Edit modes on the Seedream page using Element Plus radio buttons. Users can now switch between modes without losing uploaded images, and the interface disables invalid actions based on model capabilities. Additionally, inactive generation options have been cleaned up to improve user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1337",
+      "title": "Enhance Kling Tab Readability in Nexior 📱",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "accessibility",
+        "kling",
+        "tabs",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1337",
+      "summary": "This update improves the readability of the Kling scenario tabs by ensuring they remain visible in narrow parameter panels. Key changes include allowing tab labels to display in two lines and adjusting the height and line spacing for better accessibility. The modifications have been validated with passing tests and lint checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#747",
+      "title": "Update FontAwesome to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "frontend",
+        "fontawesome"
+      ],
+      "public": false,
+      "summary": "This update bumps the @fortawesome/fontawesome-svg-core package from version 7.2.0 to 7.3.1. Key changes include improvements and new features as noted in the release notes. The package-lock and package.json files have been modified to reflect this update."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#514",
+      "title": "Align Video Duration Default with OpenAPI in Clis 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "grok",
+        "cli",
+        "openapi",
+        "documentation",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/514",
+      "summary": "This update modifies the default video duration in the Grok CLI from 8 to 6 seconds, aligning it with the OpenAPI specification. The command tests have been extended to ensure that the outgoing payload reflects this change when the duration flag is omitted. Additionally, the CLI documentation has been updated to accurately represent the new default value."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#227",
+      "title": "Enhance Browser Connector Installation Experience in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "browser",
+        "installation",
+        "user-experience",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the installation process for browser connectors by integrating the BrowserDevicePicker into the Browse Connectors page. Users can now select compatible devices before pairing, ensuring a smoother experience. Additionally, the Browser Devices navigation is now permanently accessible, and backend errors are surfaced in the picker for better user feedback."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#200",
+      "title": "Refine X402 Hosting Strategy in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "deployment",
+        "security",
+        "gateway",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update narrows the production `X402_HOSTS` to exclusively use `x402.acedata.cloud`, enhancing security by ensuring tokenless requests to the API host return a standard HTTP 400 error. Key validations confirm that the new setup passes all tests, including the full Gateway suite. The deployment is now streamlined for better performance and reliability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1515",
       "title": "Refine Veo Routing to Exclude CQTai in Platform Service 🚀",
       "tags": [
