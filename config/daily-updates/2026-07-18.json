@@ -3,6 +3,217 @@
   "date": "2026-07-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#321",
+      "title": "Enhance Dual-Write Connection Methods in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "enhancement",
+        "backend",
+        "testing",
+        "integration",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces dual-write connection methods with comprehensive method resolution and validation, ensuring robust integration across various provisioning paths. Key enhancements include the addition of method identifiers, execution types, and credential types, which are now exposed only after all writers are populated. The implementation has passed extensive testing, reinforcing its reliability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1020",
+      "title": "Enhance Agent Skill Manifest Copy in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "update",
+        "backend",
+        "localization",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update replaces generated skill summaries with hand-written Chinese (zh-CN) copies for the Agent Workbench, improving clarity and user experience. Additionally, several skill artifact display names have been normalized, such as 'AI Chat' and 'HappyHorse Video'. All production agent manifests have been validated to ensure consistency and correctness."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#315",
+      "title": "Enhance Connector Methods Exposure in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "connectors",
+        "serialization",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces dual-write functionality for `Connector.connection_methods`, sourced from existing `auth_methods`. Key changes include the exposure of `connection_methods` and `recommended_method_id` in both public and internal serializers, while maintaining legacy fields for current consumers. The implementation ensures compatibility and prepares for future enhancements in connection creation paths."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1522",
+      "title": "Enhance Connection Methods with New Metadata in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "metadata",
+        "connection",
+        "auth",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces explicit connector and connection execution methods, enhancing the handling of runtime metadata. Key changes include the addition of new fields for connection types and improved routing for connector status and consent gates. The implementation ensures compatibility with existing AuthBackend setups while preparing for future enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#640",
+      "title": "Enhance Connector Method Preferences in Skills 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "enhancement",
+        "oauth",
+        "weibo",
+        "reddit",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/640",
+      "summary": "This update introduces canonical connector method preferences for Reddit and Weibo, prioritizing Reddit's official OAuth over cookie credentials while maintaining a fallback option. Weibo will continue to use cookie-only access until its OAuth support is implemented. The changes ensure that existing required-connection parsing remains intact and preference keys are now using canonical identifiers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#229",
+      "title": "Enhance Connector Methods for Better Integration in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "feature",
+        "frontend",
+        "integration",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces new execution and credential method types along with a centralized `getConnectorMethods()` adapter. The new `connection_methods` wire format is now preferred, ensuring backward compatibility with legacy `auth_methods`. All method-list consumers have been migrated to utilize the new adapter, enhancing the overall connection management experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#53",
+      "title": "Enhance Deployment Process and Boost SKALE Gas Limit in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "deployment",
+        "migration",
+        "skale",
+        "gas-limit",
+        "kubernetes",
+        "facilitator"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/53",
+      "summary": "This update introduces a migration job that runs before deploying Facilitator pods, ensuring database migrations are applied successfully. Additionally, the SKALE gas limit has been increased from 400,000 to 2,000,000 to accommodate larger transactions. The deployment process now includes fail-safe mechanisms to abort if migration fails, enhancing overall reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1019",
+      "title": "Clean Up Missing Agent Manifests in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cleanup",
+        "backend",
+        "production",
+        "stability"
+      ],
+      "public": false,
+      "summary": "This update removes agent manifests for services that are not present in the production database, specifically aichat, face-change, and shorturl. The change ensures that the sync.py script operates fail-closed while allowing the verified production services to sync properly. This correction enhances the stability of the system by preventing issues related to unknown service aliases."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#52",
+      "title": "Enhance Multichain Settlement Process in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "settlement",
+        "multichain",
+        "x402",
+        "updates",
+        "ci",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/52",
+      "summary": "This update strengthens the multichain settlement process by verifying Solana payer signatures and requiring exact EVM authorizations. It introduces new state transitions for settling and failed transactions, ensuring robust reconciliation of chain states without duplicates. Additionally, CI test coverage has been expanded to ensure reliability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#787",
+      "title": "Enhance SSR Deployment Readiness Check in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "deployment",
+        "ssr",
+        "frontend",
+        "updates",
+        "kubernetes"
+      ],
+      "public": false,
+      "summary": "This update replaces the SSR `kubectl rollout status` command with a more direct pod readiness and image validation approach. It also modifies the rolling update strategy to minimize capacity requirements during deployments. These changes aim to improve the reliability of SSR deployments and prevent issues with stale pods."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#35",
+      "title": "Enhance EVM and Solana Signing Features in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "solana",
+        "evm",
+        "signing",
+        "tests",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/35",
+      "summary": "This update strengthens the signing process for both EVM and Solana transactions. Key changes include the removal of clock-skew failures, the introduction of mandatory fee payers for Solana transactions, and alignment of types across Python and TypeScript. Additionally, new tests have been added to ensure robust functionality and compliance with recent requirements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#788",
+      "title": "Introducing the Agent Workbench for Enhanced Document Management in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "localization",
+        "ui",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update replaces the previous document right-rail API-only section with a fully functional Agent Workbench. Key features include the addition of MCP and Skill panels driven by `document.agent` data, new typed models, and localized UI strings in multiple languages. The workbench is designed to align with the current dark code-surface documentation style and includes mobile-visible integration links."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1018",
+      "title": "Enhance Service Agent Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "backend",
+        "validation",
+        "localization",
+        "services"
+      ],
+      "public": false,
+      "summary": "This update introduces the `Service.agent` declaration for machine-readable agent documentation, ensuring it is only exposed at the top level. It includes strict validation and the addition of 23 verified service manifests sourced from real MCP/Skills, enhancing the platform's capabilities. Key improvements also include refined localization and the replacement of unverified links with verified URLs."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#256",
       "title": "In-depth LibTV vs Maestro Research Report in Index 🚀",
       "tags": [
