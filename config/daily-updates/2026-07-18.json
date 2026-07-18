@@ -3,6 +3,358 @@
   "date": "2026-07-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1529",
+      "title": "Enhance OpenAI Image Handling in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "openai",
+        "ttapi",
+        "image-processing",
+        "billing"
+      ],
+      "public": false,
+      "summary": "This update introduces support for fanout of OpenAI-compatible image generation and editing requests within the TTAPI. Key changes include improved error handling for individual image slots, metadata for billing, and the addition of new tests to ensure functionality. The deployment configuration has also been updated to enable this feature seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1528",
+      "title": "Enhance CQT Nano Image Processing with Batch Fanout in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cqt",
+        "image-processing",
+        "fanout",
+        "performance",
+        "billing"
+      ],
+      "public": false,
+      "summary": "This update introduces a worker-local bounded fanout for CQT Nano, allowing for multiple image generations and edits in a single request. Key improvements include the preservation of the existing single-output path, efficient URL reuse for edit inputs, and enhanced billing accuracy with partial success reporting. The changes aim to optimize performance and user experience in image processing tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1526",
+      "title": "Enhance OpenAI-HK Image Processing with Batch Fanout in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "openai",
+        "image-processing",
+        "batch",
+        "platform-service",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a worker-local bounded fanout for OpenAI-HK image generations and edits, allowing for batch processing with `n > 1`. Key changes include preserving the existing `n=1` path, handling partial successes, and implementing per-item COS mirroring. The feature is currently enabled only for the OpenAI-HK deployment, enhancing efficiency and reliability in image processing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1024",
+      "title": "Enhance Kimi K3 Visibility in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "k3",
+        "backend",
+        "models",
+        "openapi",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update adds Kimi K3 to the model directory, promoting it as Moonshot's flagship model while retiring K2.5. Key changes include exposing K3's reasoning and vision capabilities, updating the OpenAPI model enum, and ensuring comprehensive tests pass for the new features. The integration enhances user access to K3 through the AI Chat V2 interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#794",
+      "title": "Restoring Stability to Platform Frontend Deployment in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "deployment",
+        "frontend",
+        "stability",
+        "service",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update restores the fixed `platform-frontend` Deployment and its associated Service selector, enhancing stability after a previous deployment change caused issues. Key modifications include the use of a permanent Service label and a rolling update strategy that ensures zero downtime during transitions. Validation confirms that both the `platform-frontend` and `platform-frontend-ssr` Deployments are fully operational on the latest image."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#516",
+      "title": "Introducing Kimi CLI for Chat Completions in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "kimi",
+        "chat",
+        "acedata",
+        "command-line"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/516",
+      "summary": "This update introduces the Kimi CLI, a new command-line tool for interacting with Kimi chat completions via the AceDataCloud API. Key features include a single endpoint for chat completions, support for nine models, and various utility commands for managing configurations and listing models. The structure aligns with existing CLIs, ensuring a familiar experience for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#301",
+      "title": "Scaled Down Production Workloads in Dify 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "cleanup",
+        "production",
+        "deployments",
+        "dify",
+        "optimization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/301",
+      "summary": "All seven Dify production Deployments have been scaled down to zero replicas, ensuring a clean state while retaining essential resources for recovery. This cleanup includes the removal of failed Pods and finished Jobs, effectively optimizing the production environment. Validation confirms that the changes were successful, with no impact on persistent data or networking resources."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#323",
+      "title": "Enhance OAuth Registration Throttling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "throttling",
+        "backend",
+        "registration",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update implements rate limits for OAuth registrations across Google, GitHub, Apple, and WeChat, ensuring a smoother user experience. Existing user logins remain unaffected while new users are subject to defined limits based on fingerprint, IP, and email domain. Additionally, a fallback mechanism for providers without email is introduced, along with improved handling of WeChat aliases."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#322",
+      "title": "Enhance email domain blocking for security in Backend 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "security",
+        "backend",
+        "auth",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update adds `goomel.site` and `ghuil.store` to the list of blocked email domains in production, while maintaining the existing block for `web-library.net`. New account registrations from these domains will be rejected across all registration methods, including OAuth. This change aims to enhance security by preventing abuse from these identified domains."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1527",
+      "title": "Exciting Kimi K3 Model Support Added in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "openai",
+        "k3",
+        "model",
+        "platform"
+      ],
+      "public": false,
+      "summary": "We've successfully integrated the Kimi K3 model into the OpenAI-compatible worker's default model list, enhancing our offerings. The exact pricing metadata for K2.6 has been added for fallback validation, while fallback capabilities for Kimi K3 remain temporarily disabled to ensure reliability. Comprehensive tests have been conducted, confirming the robustness of these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1022",
+      "title": "Enhance Kimi Model Margins in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "kimi",
+        "backend",
+        "cost",
+        "updates",
+        "regression"
+      ],
+      "public": false,
+      "summary": "This update raises the consumption credits for Kimi K2.6 and K3 models, ensuring K3 remains three times the cost of K2.6 while maintaining a 20% markup. Key regression tests have been updated and validated, confirming the changes align with expected billing outcomes. The deployment process has been outlined for seamless integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1021",
+      "title": "Exciting Kimi K3 Pricing and Catalog Update in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "pricing",
+        "api",
+        "backend",
+        "k3"
+      ],
+      "public": false,
+      "summary": "This update introduces Kimi K3 to the API catalog and adjusts its pricing model to be three times that of Kimi K2.6. Key changes include the addition of K3 to the OpenAPI model enum and updates to service pricing across multiple platforms. Validation tests confirm the implementation is robust and ready for production routing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#56",
+      "title": "Enhance Settlement State Transitions in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "settlement",
+        "x402",
+        "EVM",
+        "SKALE",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/56",
+      "summary": "This update introduces significant improvements to the settlement state transitions, including the release of failed EVM transactions back to `VERIFIED` and enhanced persistence for prepared hashes. Key changes also involve the removal of the SKALE `upto` scheme from the Facilitator factory, ensuring only supported schemes are utilized. The updates have been validated with 68 tests passing, ensuring robust functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#319",
+      "title": "Streamline Connection Model by Removing Legacy Fields in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "refactor",
+        "backend",
+        "django",
+        "migration",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update removes the `Connection.kind` and `Connection.auth_method` fields from the Django model and ORM usage, while retaining computed read-only fields. A new migration ensures that physical columns remain for rolling-deploy safety. The changes enhance the model's clarity and maintainability, paving the way for future improvements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#220",
+      "title": "Completed Icon Migration for Enhanced Accessibility in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "icon-migration",
+        "accessibility",
+        "frontend",
+        "ui",
+        "semantic"
+      ],
+      "public": false,
+      "summary": "This update successfully migrates all non-brand Font Awesome and explicit Element Plus icons to `@acedatacloud/core@0.18.0`, enhancing the accessibility and consistency of the UI. Key components such as OAuth apps, authentication, and profile sections have been updated with semantic icons, ensuring better user experience and compliance with accessibility standards. The changes include 60 modified files and thorough validation to maintain functionality and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1525",
+      "title": "Enhanced Suno Account Retry Logic in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "suno",
+        "retry",
+        "error-handling",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update increases the retry budget for the TTAPI Suno 'No available accounts' error from 2 to 5 attempts, allowing for a total of 6 submission attempts. The changes ensure that error matching and HTTP 500 classifications are preserved, enhancing the robustness of account handling. Validation tests have been updated to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#746",
+      "title": "Update Vue Plugin to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "update",
+        "vite"
+      ],
+      "public": false,
+      "summary": "This update bumps the @vitejs/plugin-vue dependency from version 6.0.6 to 6.0.8. Key improvements include the addition of a forced vapor mode option and various bug fixes related to dependency updates. This ensures better performance and stability for the frontend application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#202",
+      "title": "Disable incompatible SKALE upto payments in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "payments",
+        "SKALE",
+        "Gateway",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update stops advertising SKALE 'upto' payment requirements while keeping SKALE 'exact' and Base 'upto' intact. Key modifications were made to the payment requirements logic to ensure compliance and prevent service without payment. All tests have passed successfully, confirming the stability of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1524",
+      "title": "Enhance TTAPI Account Retry Logic in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "retry",
+        "ttapi",
+        "suno",
+        "api",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces a retry mechanism for TTAPI Suno submissions when no available accounts are detected. The system will attempt to resubmit up to three times with a one-second delay between attempts, classifying failures due to exhausted account capacity as an ApiError. This enhancement improves reliability and user experience during account unavailability scenarios."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#732",
+      "title": "Completed Icon Migration and Enhancements in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "icon-migration",
+        "accessibility",
+        "frontend",
+        "semantic",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update successfully migrates all non-brand Font Awesome and Element Plus icons to the latest version of `@acedatacloud/core`. Key changes include the conversion of various components to static semantic formats, ensuring improved accessibility and compatibility. A thorough validation process confirms that all updates maintain the integrity of the application while enhancing the user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1300",
+      "title": "Completed Icon Migration for Enhanced Accessibility in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "icon-migration",
+        "accessibility",
+        "semantic",
+        "update",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1300",
+      "summary": "This update successfully migrates all non-brand icons to a static semantic surface from the latest core version. Key changes include the removal of various icon libraries, ensuring only official brand icons remain, and enhancing accessibility through thorough audits and adjustments. The migration impacts over 256 files, improving the overall user experience and maintaining compatibility across the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#318",
+      "title": "Streamline Auth Methods by Removing Legacy Fields in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "refactor",
+        "migration",
+        "auth",
+        "backend",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update removes the `Connector.auth_methods` field from the Django state and runtime, while ensuring legacy API outputs remain intact. A new migration has been added to catch up on connections created during the migration window, enhancing the overall efficiency of the auth backend. The physical legacy column will be retained for old pods until a later migration phase."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1523",
       "title": "Prevent x402 Image Fanout Until Variable Settlement is Ready in Platform Service 🚫",
       "tags": [
