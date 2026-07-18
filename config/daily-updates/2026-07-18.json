@@ -3,6 +3,150 @@
   "date": "2026-07-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Index#256",
+      "title": "In-depth LibTV vs Maestro Research Report in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "research",
+        "libtv",
+        "maestro",
+        "documentation",
+        "strategy"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive 673-line research report comparing LibTV and Maestro, detailing their workflows, growth models, and reliability metrics. Key recommendations include a phased approach to enhance reliability and asset management. The report has been registered in the active video-and-marketing plans index, ensuring it is accessible for future reference."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#201",
+      "title": "Enhance X402 Task Polling and Settlement in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "x402",
+        "settlement",
+        "polling",
+        "security",
+        "solana"
+      ],
+      "public": false,
+      "summary": "This update introduces several key enhancements to the X402 task polling and settlement process. It allows tokenless task retrieval to bypass payment for strict method matches, resolves task paths securely, and integrates Solana fee payer metadata. Additionally, it ensures proper authentication and pre-seeding of necessary secrets for production deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#314",
+      "title": "Enhance Registration Throttling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "throttle",
+        "registration",
+        "backend",
+        "performance",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update implements a robust throttling mechanism for automated registrations and email code issuance. Key changes include rate-limiting based on independent buckets for fingerprints, IPs, and email domains, as well as adding new indexes for optimized queries. The configuration is flexible, allowing adjustments to limits based on environment settings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#352",
+      "title": "Enhance async task detection capabilities in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "async",
+        "tasks",
+        "python",
+        "typescript",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/352",
+      "summary": "This update improves the detection of completed asynchronous tasks by recognizing top-level `finished_at` and nested `response.success` without relying on `response.status`. The changes ensure that terminal and non-terminal statuses remain authoritative, while also aligning the null/status semantics between Python and TypeScript. Comprehensive regression tests have been added to validate these enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#313",
+      "title": "Enhance email security by blocking abusive domains in Backend 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "security",
+        "email",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a configurable policy to block specific email domains, enhancing security during user registration and email code issuance. The implementation includes checks for GitHub, Google, and Apple signups while ensuring existing users can still log in. Notably, the domain 'web-library.net' has been added to the block list due to its history of generating automated accounts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#253",
+      "title": "Revamp Nexior UI for Consumer-First Approach in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "ui",
+        "consumer-first",
+        "nexior",
+        "development",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update shifts the Nexior UI development to a consumer-first model, closing previous PRs that followed a pre-built scenario framework. Key changes include the prohibition of zero-consumer components and a focus on real user issues with main-based PRs. The implementation emphasizes direct fixes to real pages and ensures that any new components are only added when necessary."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1343",
+      "title": "Align Pika Ingredient Fields for Better Usability in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "bugfix",
+        "enhancement",
+        "pika"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1343",
+      "summary": "This update removes the 60px offset between Pika Ingredients and Image fields, ensuring a cleaner layout. It consolidates labels and info icons into a single column with a fixed 6px gap, while also fixing issues related to image preview synchronization and upload error reporting. Overall, these changes enhance the user interface and improve functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1341",
+      "title": "Unify Generator Field Margins for Consistency in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "design",
+        "refactor",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1341",
+      "summary": "This update aligns the margin settings of various generator fields across the Nexior project to a consistent 16px vertical rhythm. Key components modified include Fish, Sora, Hailuo, and Veo, ensuring a uniform appearance. All changes have been validated through runtime checks and code quality tools, confirming no outliers remain."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1521",
+      "title": "Enable OpenAI Image Fanout for Bananarouter in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "deployment",
+        "openai",
+        "bananarouter",
+        "production"
+      ],
+      "public": false,
+      "summary": "This update enables the OpenAI Images fanout feature for the bananarouter in production by setting the environment variable `OPENAI_IMAGE_FANOUT_ENABLED=true`. The change specifically affects the `platform-service-bananarouter-openai` deployment while leaving other deployments unchanged. Validation steps confirm that the implementation is clean and functional."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1520",
       "title": "Enhance Logging for Bananarouter Responses in Platform Service 🚀",
       "tags": [
