@@ -1,0 +1,71 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-18",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Index#252",
+      "title": "Enhance X402 Host Cutoff to Fail Closed in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "x402",
+        "security",
+        "validation",
+        "improvements"
+      ],
+      "public": false,
+      "summary": "This update modifies the `/test-x402` to utilize the dedicated `x402.acedata.cloud` contract, ensuring that various checks fail closed. Key improvements include enforcing a two-PR Gateway rollout boundary and requiring explicit consent for payments. Additionally, independent review findings have been addressed to enhance the robustness of the implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#199",
+      "title": "Update custom-auth plugin to version 0.12.0 in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "update",
+        "plugin",
+        "gateway",
+        "auth",
+        "versioning"
+      ],
+      "public": false,
+      "summary": "This update versions the Kong `custom-auth` plugin to `0.12.0`, which now includes forwarding the original request Host as `X-Request-Host`. The changes ensure that production traffic behavior remains unaffected, with thorough validation confirming the integrity of the Gateway functionality. The plugin archive has been prepared for manual activation in Tencent TSE following successful tests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#349",
+      "title": "Set Default API Clients to X402 Gateway in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "api",
+        "python",
+        "typescript",
+        "sdk",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/349",
+      "summary": "This update defaults the Python and TypeScript API clients to use `https://x402.acedata.cloud`, while maintaining the existing management plane. Key enhancements include independent retry mechanisms for paid requests, improved streaming payment negotiation, and better error handling for malformed requests. Validation tests confirm the changes are functioning as expected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#748",
+      "title": "Update FontAwesome Vue Package in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "update",
+        "vue",
+        "fontawesome"
+      ],
+      "public": false,
+      "summary": "This update bumps the @fortawesome/vue-fontawesome package from version 3.3.0 to 3.3.2. Key improvements include new canvas sizing options and fixes for TypeScript errors in Vue render functions. This change enhances the overall functionality and stability of the icon library used in the project."
+    }
+  ]
+}
