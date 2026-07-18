@@ -3,6 +3,53 @@
   "date": "2026-07-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1515",
+      "title": "Refine Veo Routing to Exclude CQTai in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "routing",
+        "veo",
+        "ci",
+        "go",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update removes `veo31-fast-ingredients` from the CQTai capability list in the production Veo router, ensuring that requests are routed through Mountsea and TTAPI instead. Additionally, a Go regression test has been implemented to validate the changes, enhancing the reliability of the routing process. The CI workflow has also been updated to include a `go-test` job for the failover-router."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1330",
+      "title": "Align Task Identities with Services in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "update",
+        "enhancement",
+        "user-experience",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1330",
+      "summary": "This update replaces legacy `XXX Bot` labels in task responses with each capability's Service name, ensuring consistency across the platform. Additionally, task avatars and names are now sourced from the same capability presentation, honoring display name and icon URL overrides. These changes enhance the user experience by providing a more cohesive interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1516",
+      "title": "Enhance Task History Visibility for Users in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "tasks",
+        "visibility",
+        "user-experience",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update implements a new task-history rule across all `/tasks` endpoints, ensuring that both grantees and owners can view the appropriate task history. The changes allow application owners to see all tasks billed to them, while grantees will only see their own tasks. This enhancement improves user experience and data visibility across the platform."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1514",
       "title": "Enhance Task History Visibility for Owners and Grantees in Platform Service 🚀",
       "tags": [
