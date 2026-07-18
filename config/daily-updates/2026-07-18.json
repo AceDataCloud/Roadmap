@@ -3,6 +3,21 @@
   "date": "2026-07-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1514",
+      "title": "Enhance Task History Visibility for Owners and Grantees in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "openai",
+        "tasks",
+        "platformservice"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where task history was incorrectly displayed for grantees using shared credits. Now, both application owners and grantees can view their respective tasks accurately. The OpenAI worker's task retrieval logic has been adjusted to ensure proper scoping by user roles, enhancing clarity and usability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#252",
       "title": "Enhance X402 Host Cutoff to Fail Closed in Index 🚀",
       "tags": [
