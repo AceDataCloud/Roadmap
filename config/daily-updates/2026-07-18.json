@@ -3,6 +3,210 @@
   "date": "2026-07-18",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#327",
+      "title": "Enhance OAuth Domain Risk Management in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "backend",
+        "security",
+        "postgresql",
+        "concurrency"
+      ],
+      "public": false,
+      "summary": "This update enforces a new OAuth account creation policy, allowing one account per non-shared email domain every 30 minutes. It introduces a dedicated PostgreSQL table for domain risk management, ensuring domains are isolated and do not interfere with each other. Additionally, it implements fail-fast transaction locks to handle concurrency effectively while maintaining existing security controls."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1346",
+      "title": "Remove Seedream Watermarks in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "seedream",
+        "watermark",
+        "update",
+        "tests",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1346",
+      "summary": "This update eliminates the Seedream watermark toggle and ensures all requests default to `watermark: false`. Historical task API-code reruns are sanitized to prevent legacy watermark values from being used. Additional regression tests have been added to cover the changes, ensuring a smooth transition without watermarks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#320",
+      "title": "Clean up legacy connection columns in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "migration",
+        "refactor",
+        "backend",
+        "database"
+      ],
+      "public": false,
+      "summary": "This update physically removes the legacy `Connector.auth_methods`, `Connection.kind`, and `Connection.auth_method` columns from the database. The migration is designed to fail if dependent objects are found, ensuring no silent removals occur. This change is irreversible without a database restore, reinforcing the integrity of the schema."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#518",
+      "title": "Ensured CLI Sync with OpenAPI Spec in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "sync",
+        "cli",
+        "openapi",
+        "verification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/518",
+      "summary": "The CLI for aichat has been verified to be fully in sync with the OpenAPI specification, confirming no changes are needed. The investigation showed that while the CLI implements the models for the `/aichat/conversations` endpoint, it does not cover the `/aichat2/conversations` endpoint. All parameters for the implemented endpoint are already in place, ensuring smooth functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1025",
+      "title": "Optimize CronJob History Retention in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "k8s",
+        "cronjob",
+        "backend",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "This update implements bounded retention for all 11 deployed CronJobs across 9 production manifests in the PlatformBackend. Successful job history is now set to 0, while failed job history is limited to 1, with completed jobs automatically deleted after 600 seconds. These changes aim to reduce object accumulation and enhance system performance following the recent TKE L20 incident."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformPublisher#521",
+      "title": "Optimize CronJob History Retention in Publisher 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformPublisher",
+        "k8s",
+        "cronjob",
+        "optimization",
+        "maintenance"
+      ],
+      "public": false,
+      "summary": "This update modifies the production publisher CronJob to enhance efficiency by setting the successful Job history to 0 and retaining only 1 failed Job for diagnostics. Completed Jobs will now be automatically deleted after 600 seconds, addressing the previous accumulation issue following the TKE L20 incident. Durable history will still be accessible through centralized logs and task records."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1530",
+      "title": "Optimize CronJob History Retention in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "k8s",
+        "cronjob",
+        "optimization",
+        "retention",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces limits on the history retention for the OpenAI checker and scheduler sweeper CronJobs. Successful job history is now set to 0, while failed job history is limited to 1, with completed jobs automatically deleted after 600 seconds. These changes help manage job accumulation effectively, especially following the recent TKE L20 object-capacity incident."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#325",
+      "title": "Optimize CronJob History Retention in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "k8s",
+        "cronjob",
+        "optimization",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update sets the successful Job history to 0 for all six production CronJobs while retaining one failed Job for immediate diagnosis. Completed Jobs will now be automatically deleted after 600 seconds, addressing the accumulation issue following the TKE L20 incident. Durable history will still be available in centralized logs and application data."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1344",
+      "title": "Streamline Seedream Image Mode Selection in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "seedream",
+        "automation",
+        "ui",
+        "testing",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1344",
+      "summary": "This update removes manual create/edit tabs from Seedream, automatically determining the mode based on model capabilities and uploaded images. It retains edit-only model validation while hiding the uploader for text-only models. Comprehensive regression tests have been added to ensure the new automatic mode changes function correctly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#796",
+      "title": "Enhanced Agent Workbench UX in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ux",
+        "frontend",
+        "ui",
+        "i18n",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update refines the Agent Workbench's user experience by introducing concise introductions, icon-style host options, and a three-step guidance system. Additionally, it implements a live authorization token feature for API snippets, ensuring tokens are masked by default with a reveal option. Locale coverage has been expanded, enhancing accessibility for users across different languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#324",
+      "title": "Enhance email domain security in Backend 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "security",
+        "backend",
+        "auth",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update adds `gacmel.store` and `gmonil.com` to the list of blocked email domains in production, while preserving existing blocks for `web-library.net`, `goomel.site`, and `ghuil.store`. This change addresses recent incidents of abuse involving the creation of multiple Google OAuth accounts in a short time frame. All affected applications were disabled prior to this PR, ensuring enhanced security measures are now in place."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#795",
+      "title": "Streamline Frontend Rollout Labels in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "cleanup",
+        "deployment",
+        "production"
+      ],
+      "public": false,
+      "summary": "This update removes obsolete frontend rollout labels and cleans up the deployment configuration. Key changes include reverting to the standard selector for the stable Service and eliminating unused variables, ensuring a smoother production experience. Validation confirms that the service endpoints remain stable and functional post-update."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1023",
+      "title": "Enhance Billing for Nano Image Costs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "billing",
+        "backend",
+        "api",
+        "testing",
+        "pricing"
+      ],
+      "public": false,
+      "summary": "This update scales the pricing for Nano Banana models based on the output count, ensuring accurate billing for OpenAI-compatible image generations and edits. Key changes include multiplying prices by the output count for models like `nano-banana` and `nano-banana-2`, while maintaining backward compatibility with existing API rules. Comprehensive tests confirm the functionality and correctness of the new billing behavior."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1529",
       "title": "Enhance OpenAI Image Handling in Platform Service 🎨",
       "tags": [
