@@ -3,6 +3,238 @@
   "date": "2026-07-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1045",
+      "title": "Streamline migration by removing duplicate entry in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "migration",
+        "cleanup",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update removes the duplicate migration file `0229_merge_0228_leaves`, which was unnecessary since the equivalent migration `0229_merge_0228` was already merged. The retained migration continues to depend on the relevant `0228` leaves, ensuring no disruption to the migration process. Validation checks confirm that there are no changes detected post-removal."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1539",
+      "title": "Enhance MongoDB 5 Index Support in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "mongodb",
+        "indexing",
+        "bugfix",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update replaces partial dispatcher indexes with ordinary indexes on the `mountsea_suno_tasks` collection while maintaining the unique public task ID index. A regression guard has been added to prevent unsupported partial filters from returning. The changes ensure compatibility with MongoDB 5.0.12 without affecting the legacy tasks collection."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#803",
+      "title": "Streamline Payment Process by Removing Bank Transfer References in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "payments",
+        "frontend",
+        "localization",
+        "ui",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update removes all references to bank transfers, including the warning, field, and related dependencies. Dead reference keys have been eliminated from all order locales, and support copy has been updated to request only the order ID and wire receipt. The changes enhance the user experience by simplifying the payment process across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1044",
+      "title": "Consolidate Migration Leaves for Efficiency in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "migration",
+        "backend",
+        "django",
+        "merge"
+      ],
+      "public": false,
+      "summary": "This update merges two independent migration leaves, `0228_drop_bank_transfer_reference_columns` and `0228_remove_x402_replay`, into a single migration. The merge migration, `0229_merge_0228_leaves`, contains no operations as both migrations are already live. Validation checks confirm no changes were detected, ensuring a smooth integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#172",
+      "title": "Enhance WCDB Data Prewarming for Better Performance in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "performance",
+        "database",
+        "api",
+        "preparation",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update expands the WCDB preparation process to include warming of self profile, contacts, conversations, moments, and sample messages. It also ensures that structured preparation details are returned from the WCDB worker and that the DB-backed self profile is persisted during runtime preparation, allowing the /api/account endpoint to be populated before readiness. These changes aim to improve the overall efficiency and responsiveness of the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1043",
+      "title": "Fix migration graph for concurrent updates in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "migration",
+        "backend",
+        "fix",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update merges the `0228_drop_bank_transfer_reference_columns` and `0228_remove_x402_replay` migrations into a new `0229` merge migration. It restores a single migration leaf, allowing new PlatformBackend pods to successfully pass their migrate init container. No schema changes are made, ensuring existing pods remain available during the transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1538",
+      "title": "Enable Suno Rollout and Voices in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "suno",
+        "integration",
+        "deployment",
+        "api",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update isolates the MountSea Suno task and introduces a new `/suno/voices` endpoint, enhancing the integration with OpenAI-HK. Key improvements include preserving provider affinity and enabling router-managed verification for the Suno deployment. The changes also address a startup blocker related to legacy data, ensuring a smoother rollout."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1537",
+      "title": "Enhance Browser Relay Diagnostics in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "browser",
+        "relay",
+        "logging",
+        "diagnostics",
+        "redis"
+      ],
+      "public": false,
+      "summary": "This update improves the logging for Browser Relay notifications by providing privacy-safe reasons for delivery failures. Key changes include hashing call IDs into non-reversible references and preserving fail-closed behavior for malformed Redis epoch values. These enhancements aim to better diagnose silent delivery drops without compromising sensitive information."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#806",
+      "title": "Revamp Agent Integration Guides in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "integration",
+        "ui",
+        "updates",
+        "enhancements"
+      ],
+      "public": false,
+      "summary": "This update replaces the hardcoded Agent host UI with a dynamic renderer for backend-compiled manifests. Key enhancements include improved token handling, rendering capabilities, and the removal of legacy components, streamlining the integration process. The changes ensure better support for various app configurations and enhance overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1041",
+      "title": "Clean up unused X402Replay model in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cleanup",
+        "migration",
+        "django",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update removes the unused `X402Replay` Django model and its public export, ensuring a clean migration history. The migration `0226_x402_replay` is preserved as immutable, while a new migration `0228_remove_x402_replay` is added to physically drop the table. Validation confirms no production references exist, maintaining system integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1039",
+      "title": "Clean Up Obsolete Payment References in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cleanup",
+        "migration",
+        "database",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update removes the outdated `Order.bank_reference` and `BankTransferRecord.reference` columns from the database. The migration is designed to run outside of a transaction to ensure that locks are released independently, enhancing performance. Additionally, reverse SQL scripts are provided to restore the original columns if needed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1037",
+      "title": "Streamline Airwallex Account Allocation per Order in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "payments",
+        "migration",
+        "backend",
+        "airwallex",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update replaces the previous customer-shared account design with a required Global Account allocation for each order. Key changes include the removal of conflicting fields and the deletion of prelaunch test data, ensuring a cleaner and more efficient payment process. The migration also includes validation checks and a structured rollout plan to minimize risks during deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1536",
+      "title": "Introducing Suno V2 Adapter for Enhanced Audio Processing in Platform Service 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "suno",
+        "audio",
+        "deployment",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update adds a MountSea Suno V2 adapter while maintaining existing public routes and response shapes. It implements all 17 `/suno/audios` actions, along with various APIs for lyrics, mashups, and more. Key improvements include durable checkpoints, task recovery, and a dedicated Suno deployment, currently set to zero replicas until rollout gates are approved."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#49",
+      "title": "Streamline Airwallex Payment Process in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "payments",
+        "airwallex",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update removes references to Airwallex transfers, simplifying the payment creation process. The changes include reducing the payload to essential fields and ensuring compatibility only with the new structure. All relevant tests have passed, confirming the stability of the modifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1356",
+      "title": "Enhance Producer Task Failure Reporting in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "producer",
+        "localization",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1356",
+      "summary": "This update improves the visibility of failed Producer tasks by displaying task-level failure messages when no audio results are generated. Users can now see and copy the task ID, failure reason, and trace ID, while partial results will still be shown if available. Additionally, failure metadata types have been added for 18 locales to enhance user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#805",
       "title": "Enhance Browser Grant Validation in Frontend Web 🚀",
       "tags": [
