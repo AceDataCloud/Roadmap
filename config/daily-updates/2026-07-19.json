@@ -3,6 +3,22 @@
   "date": "2026-07-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#805",
+      "title": "Enhance Browser Grant Validation in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "validation",
+        "security",
+        "frontend",
+        "update",
+        "extension"
+      ],
+      "public": false,
+      "summary": "This update improves the validation of browser capability JWTs by ensuring they match the SHA-256 hash of the exact canonical tool input. It also introduces checks to reject any valid signed grants if the Relay input has been altered. Additionally, the extension package has been updated to version 0.6.2, ensuring all tests passed successfully."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1535",
       "title": "Enhance Browser Input Hashing for Capability Grants in Platform Service 🚀",
       "tags": [
