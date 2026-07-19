@@ -1,0 +1,153 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-19",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1350",
+      "title": "Enhanced Media Field Spacing in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "improvement",
+        "spacing",
+        "media",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1350",
+      "summary": "This update improves the vertical spacing around media fields in Seedance, Kling, and Midjourney components. Key adjustments include increasing the margin around reference images, audio, and video fields to enhance usability and visual clarity. All upload buttons and controls maintain their original sizing, ensuring a consistent user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1032",
+      "title": "Streamline Balance Provider Credentials Management in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "kubernetes",
+        "credentials",
+        "backend",
+        "security",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update removes hardcoded provider credentials from `balance.py`, standardizing the naming convention for balance runtime names. It integrates the balance CronJob with existing Kubernetes Secrets and introduces dedicated `BALANCE_API_TOKEN` keys for specific providers. Additionally, it enhances error handling by allowing optional credentials to be skipped without interrupting checks, improving overall reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#644",
+      "title": "Enhance Xiaohongshu Skill with Local Workflows in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "xiaohongshu",
+        "skills",
+        "enhancement",
+        "testing",
+        "validation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/644",
+      "summary": "This update introduces a refined structure for the Xiaohongshu skill, encapsulating all provider-specific behavior within the Skill package. Key changes include the addition of various references for login, browsing, publishing, and interactions, along with a contract helper for validation. Comprehensive tests have been implemented to ensure robustness against unsafe inputs and other edge cases."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1349",
+      "title": "Enhance Suno Variation and Seedance Spacing in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "enhancement",
+        "suno",
+        "seedance",
+        "layout"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1349",
+      "summary": "This update restores the implementation to a fresh baseline while refining the Suno Advanced Parameters by enlarging the Variation Type. Additionally, it improves the layout of Seedance frame fields, providing more height and space for the First and Last Frame Image title rows. Overall, these changes enhance usability without altering existing components."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#799",
+      "title": "Streamline Agent Guide Scopes in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "agent",
+        "update",
+        "i18n",
+        "simplification"
+      ],
+      "public": false,
+      "summary": "This update simplifies the Agent guide by removing the local/device install scope, now only displaying project/user scopes. It also replaces generic MCP/Custom host entries with specific OpenClaw and Hermes options when applicable. Additionally, PowerShell-specific setup for Claude MCP is generated when Windows is selected, enhancing user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1348",
+      "title": "Align Seedream Spacing with Nano Banana in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "spacing",
+        "alignment",
+        "testing",
+        "ui",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1348",
+      "summary": "This update restores the Seedream task spacing to match Nano Banana's 10px and ensures the containment properties are consistent. Additionally, it introduces a 15px margin above the failure panel when there is no rendered prompt. Regression tests have been added to cover various prompt scenarios, ensuring stability and alignment across components."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1030",
+      "title": "Revamp MountSea Balance Monitoring in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "mountsea",
+        "balance",
+        "api",
+        "testing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update replaces the deprecated MountSea JWT flow with the new API-key endpoint for balance checks. It introduces a graceful fallback mechanism when the API key is unavailable and enhances the response reporting with explicit status messages. Additionally, focused tests have been added to ensure the integrity of the new implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#57",
+      "title": "Manual Deployment Required for FacilitatorX402 in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "ci",
+        "deployment",
+        "manual",
+        "workflow"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/57",
+      "summary": "This update stops automatic deployments of FacilitatorX402 on every push to the main branch. Instead, it introduces a manual deployment process using `workflow_dispatch`, ensuring that only the main branch can trigger deployments. Existing pull-request CI and currently running production pods remain unaffected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#798",
+      "title": "Enhanced Agent Integration Guide in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "documentation",
+        "ui",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update refines the Agent Integration Guide by renaming the right-rail workbench and improving the layout of API code blocks. Key changes include the addition of a markdown-style guide, full-width source buttons, and adjustments to the MCP/Skill install dimensions. These enhancements aim to provide a clearer and more user-friendly experience for developers."
+    }
+  ]
+}
