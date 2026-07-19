@@ -3,6 +3,149 @@
   "date": "2026-07-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1364",
+      "title": "Enhance Luma Task Labels for Clarity in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "luma",
+        "ui",
+        "improvement",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1364",
+      "summary": "This update improves the labeling of Luma tasks by displaying 'Pending' when there is no response and 'Processing' for pending or processing states. The waiting branch now uses a time icon instead of a warning icon, aligning with the existing alert structure in video scenarios. These changes enhance user understanding of task statuses."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1362",
+      "title": "Enhance Veo Task Metadata Coverage in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "veo",
+        "metadata",
+        "testing",
+        "patch"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1362",
+      "summary": "This update adds coverage for Veo task metadata states, specifically for pending, success, and failure scenarios. Key changes include modifications to the Preview test file and the addition of a new JSON file for patch details. The implementation ensures compatibility with legacy action inference and maintains UI consistency across various scenarios."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#530",
+      "title": "Update Kimi README to Reflect OpenAPI Defaults in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "documentation",
+        "update",
+        "kimi",
+        "cli"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/530",
+      "summary": "The Kimi README has been updated to align with the current OpenAPI defaults, specifically marking `kimi-k3` as the default model. The changes include an updated reference for the `chat` option and a revised models table. This ensures that user-facing documentation is consistent with the latest implementation without altering any CLI behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#812",
+      "title": "Enhance Interactive Control Prioritization in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "update",
+        "extension",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of interactive controls by scanning up to 10,000 DOM elements while maintaining a 2,000 semantic-candidate cap. It ensures that interactive controls are emitted before ordinary content, preserving critical submit buttons. The extension has been updated to version 0.6.7, with all tests passing and no vulnerabilities found."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1051",
+      "title": "Launch of Comprehensive Distribution Manual in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "distribution",
+        "manual",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces the first two articles of a structured 'Earning Manual' focused on distribution strategies. Key additions include an overview of three earning paths and an introduction to the white-label Studio feature, both written in alignment with existing documentation. These resources aim to provide clear, factual guidance for users looking to leverage AI for income generation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#175",
+      "title": "Boost WCDB Warmup Timeout for Larger Accounts in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "timeout",
+        "wcdb",
+        "performance",
+        "tests",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update extends the warmup timeout for the WCDB from 60 seconds to 900 seconds, ensuring that contacts, conversations, moments, and message samples can complete on larger accounts. The total legacy prepare budget remains bounded, maintaining the startup and warmup duration at 1800 seconds. Key tests have been modified to reflect this change and confirm the new timeout settings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#811",
+      "title": "Enhance Screenshot Handling in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "screenshot",
+        "jpeg",
+        "extension",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of JPEG screenshot data URLs by decoding them locally, eliminating the need for a fetch call in the MV3 background. It also includes stricter validation to reject non-JPEG and malformed base64 sources, along with the addition of byte-exact parser tests. The extension has been updated to version 0.6.6, ensuring a more reliable user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#810",
+      "title": "Enhance Semantic Click Targets in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "accessibility",
+        "frontend",
+        "update",
+        "semantic",
+        "extension"
+      ],
+      "public": false,
+      "summary": "This update exposes roleless keyboard-focusable controls and cursor-pointer elements as semantic buttons, improving accessibility. It also addresses issues with nested pointer targets and ensures that editable content does not leak text. The extension version has been updated to 0.6.5, enhancing the overall functionality and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1544",
+      "title": "Enhance OpenAI-HK Retry Logic in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "retry",
+        "openai",
+        "tests",
+        "docker"
+      ],
+      "public": false,
+      "summary": "This update introduces a retry mechanism for the OpenAI-HK Suno persona account when encountering a specific offline error. It limits retries to artist consistency requests and ensures that other error types do not trigger retries. Additionally, a regression test suite has been added to the Docker production build to maintain reliability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#528",
       "title": "Enhance aichat and kimi CLI Tools with Latest Updates in Clis 🚀",
       "tags": [
