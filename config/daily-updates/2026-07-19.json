@@ -3,6 +3,202 @@
   "date": "2026-07-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#814",
+      "title": "Enhance Click Functionality with Normalized Coordinates in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "extension",
+        "update",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces a new generic `browser.click_at` function that utilizes normalized viewport coordinates ranging from 0 to 1000. It includes strict guards against out-of-range inputs and ensures security by rejecting invalid targets. The extension version has been updated to 0.6.9, and extensive validation has been performed to ensure robustness."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1549",
+      "title": "Enhanced Browser Click Functionality in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "browser",
+        "capabilities",
+        "testing",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `click_at` capability for the browser, allowing clicks at normalized viewport coordinates ranging from 0 to 1000. The feature is only exposed when a Skill explicitly declares the `click_at` capability, ensuring controlled usage. All related tests have passed successfully, paving the way for a more interactive browser experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#330",
+      "title": "Enhance Browser Device with Click Capability in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "browser",
+        "capabilities",
+        "backend",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces the `click_at` capability for BrowserDevice, allowing for more precise interactions. It ensures that `browser.click_at` is authorized only when necessary, improving security and functionality. Additionally, older devices that only support coarse `trusted_input` will now fail selection, enhancing overall compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1546",
+      "title": "Enhance Suno Voice Persona Workflow in Platform Service 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "suno",
+        "mountsea",
+        "voice",
+        "workflow",
+        "enhancement",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update implements a native two-phase workflow for the Suno voice persona within the MountSea worker. Key changes include the removal of the previous OpenAI-HK proxy, the introduction of a Fish voice model training process, and the enforcement of a 30-second completion window for task recovery. Additionally, focused tests for Suno have been added to ensure reliability in production."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1547",
+      "title": "Streamlined OpenAI-HK Voice Integration in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cleanup",
+        "voice",
+        "OpenAI-HK",
+        "MountSea",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update removes outdated workarounds for the MountSea voice integration, including unnecessary retries and associated tests. Key changes include the deletion of the offline account retry mechanism and the cleanup of related Docker scripts. The existing verification phrase retry and essential task-write guards remain intact, ensuring system stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1545",
+      "title": "Exciting New HappyHorse Video Generation Worker in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "alibaba",
+        "video",
+        "deployment",
+        "worker"
+      ],
+      "public": false,
+      "summary": "We've introduced a new worker for Alibaba Cloud Model Studio, specifically for HappyHorse video generation. This feature includes a single endpoint for multiple video generation variants, strict validation, and a robust error handling mechanism. The deployment is set up with Docker and Kubernetes, ensuring scalability and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1370",
+      "title": "Enhance Nano Banana Response Handling in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "enhancement",
+        "testing",
+        "vue"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1370",
+      "summary": "This update improves the handling of unfinished Nano Banana responses by labeling them with pending semantics instead of failure messages. The error-only legacy responses will still prioritize failure states, while the success rendering logic remains unchanged. Comprehensive tests have been added to ensure functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1369",
+      "title": "Improve Pika task state labels and handling in Nexior 🚦",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "pika",
+        "task-status",
+        "ui",
+        "bugfix",
+        "testing",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1369",
+      "summary": "This update refines the display of Pika task waiting states by showing 'Pending' when there is no response and 'Processing' during incomplete responses. It ensures that tasks with empty data still render their cards instead of disappearing silently. Additionally, failure states like failed, cancelled, and error now take precedence, allowing media playback to transition tasks into a success state. Comprehensive tests and linting confirm the changes are clean and stable."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#813",
+      "title": "Enhance Native Control Prioritization in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "extension",
+        "update",
+        "native-controls",
+        "release"
+      ],
+      "public": false,
+      "summary": "This update prioritizes native browser controls over explicit controls and pointer containers, ensuring that essential buttons are named correctly before large containers consume text space. The extension has been upgraded to version 0.6.8, with successful validation across multiple tests confirming the changes. This enhancement improves user interaction by making critical functions more accessible."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1367",
+      "title": "Enhance Wan Task States Display in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "ui",
+        "testing",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1367",
+      "summary": "This update improves the labeling of Wan task states, ensuring that queued, pending, processing, and running tasks are displayed correctly. The success state is now only shown when tasks are not in a waiting or failure state. Additionally, comprehensive tests have been added to validate these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1366",
+      "title": "Enhance Kling Task States in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "kling",
+        "status",
+        "update",
+        "bugfix",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1366",
+      "summary": "This update improves the handling of Kling task states by clearly displaying 'Pending' and 'Processing' statuses for unfinished video tasks. Additionally, it ensures that failure states take precedence over success states, preventing overlap. The changes have been validated with comprehensive tests and code reviews."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1365",
+      "title": "Enhance Sora Task Labels for Clarity in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "sora",
+        "ui",
+        "update",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1365",
+      "summary": "This update improves the labeling of Sora task states by clearly distinguishing between 'Pending' and 'Processing' statuses. The waiting branch now uses a time icon instead of a warning icon, enhancing user experience. Additionally, tests have been added to ensure the new labeling semantics function correctly."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1364",
       "title": "Enhance Luma Task Labels for Clarity in Nexior 🚀",
       "tags": [
