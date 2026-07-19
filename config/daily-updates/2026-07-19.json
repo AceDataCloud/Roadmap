@@ -3,6 +3,168 @@
   "date": "2026-07-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1535",
+      "title": "Enhance Browser Input Hashing for Capability Grants in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "security",
+        "browser",
+        "hashing",
+        "capabilities",
+        "auth"
+      ],
+      "public": false,
+      "summary": "This update introduces a new hashing mechanism for bounded browser input prior to requesting capability grants. The Browser Relay now independently hashes the dispatch input before authentication verification, ensuring enhanced security. Compatibility for status and cancel control requests is maintained without hashing, and inputs that cannot be RFC8785 canonicalized will fail closed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#329",
+      "title": "Enhance Browser Capability Grants in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "browser",
+        "jwt",
+        "capabilities",
+        "deployment",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces an optional input hash for browser capability grants during rolling deployments. The hash is signed into new capability JWTs and enforced by Relay, while legacy support is maintained. Additionally, stale browser capability fixtures have been migrated to canonical connection fields, ensuring a smoother transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1355",
+      "title": "Enhance Suno Task Failure Visibility in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "suno",
+        "ui",
+        "bugfix",
+        "localization",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1355",
+      "summary": "This update introduces a task-level failure fallback for Suno tasks that fail to generate audio. Users will now see the Task ID, failure reason, and Trace ID for failed tasks, ensuring transparency and better debugging. Additionally, partial results with playable audio will remain visible without displaying a failure banner, improving user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#63",
+      "title": "Migrating to Official x402 v2 for Enhanced Performance in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "migration",
+        "x402",
+        "sdk",
+        "postgresql",
+        "deployment"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/63",
+      "summary": "This update replaces the legacy facilitator entrypoints with the official x402 v2 Base SDK, ensuring robust transaction handling and state management. Key features include PostgreSQL authorization retention, a manual cutover path, and removal of outdated routes. The deployment process has been thoroughly validated with all tests passing, ensuring a smooth transition to the new system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1038",
+      "title": "New X402 Replay Ledger Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "ledger",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This update introduces the `X402Replay` ledger, which enhances the Gateway's capabilities for indexed payment and nonce replay lookups. Key changes include ensuring unique payment digests and nonce keys while treating trace IDs as non-unique. The migration must be executed before deploying the new PlatformGateway image to ensure proper functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1354",
+      "title": "Enhance Fish Task Failure Visibility in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "localization",
+        "ui",
+        "fish",
+        "tasks"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1354",
+      "summary": "This update improves the handling of failed Fish tasks by clearly distinguishing them from pending tasks. It introduces detailed failure information, including the reason, elapsed time, and trace ID for failed TTS tasks. Additionally, localization updates have been made to support these changes across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1353",
+      "title": "Enhance OpenAI Image Task States in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "openai",
+        "tasks",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1353",
+      "summary": "This update clarifies the display of OpenAI Image task states by introducing distinct icons and titles for pending and legacy responses. New tasks awaiting a response will show a clock icon with a 'Pending' title, while legacy responses without a success outcome will display an info icon with a 'Status' title. The changes improve user experience by providing clearer feedback on task statuses."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#802",
+      "title": "Streamlined Browser Actions with Continuous Consent in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "browser",
+        "extension",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update enhances the extension by allowing attached tabs to function with continuous consent for browser actions, eliminating the need for per-write approvals. Key changes include the removal of the approval broker and side-panel prompts while maintaining security checks and operational bounds. The legacy approval storage has also been cleared during initialization, ensuring a cleaner user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1352",
+      "title": "Update Flux Task Status to Pending in Nexior ⏳",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "flux",
+        "ui",
+        "status",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1352",
+      "summary": "This update changes the status label for Flux tasks awaiting a response from 'Failure' to 'Pending', improving clarity for users. The associated icon has also been updated from a warning to a time icon to reflect this change. Regression tests have been added to ensure that the new 'Pending' status is displayed correctly without affecting other task statuses."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#262",
+      "title": "Revamped Agent Guide Manifest for Enhanced Localization in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "localization",
+        "documentation",
+        "update",
+        "validation",
+        "V2"
+      ],
+      "public": false,
+      "summary": "This update replaces locale-specific guide files with a unified catalog structure, improving localization through a new JSON format. The V2 model introduces an extensible app catalog and tightens runtime contracts, ensuring better performance and reliability. Additionally, extensive validation confirms the integrity of the changes, paving the way for a smoother rollout."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#1035",
       "title": "Enhance bank transfer order handling in Backend 🚀",
       "tags": [
