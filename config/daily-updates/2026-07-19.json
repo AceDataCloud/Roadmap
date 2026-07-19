@@ -3,6 +3,589 @@
   "date": "2026-07-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#528",
+      "title": "Enhance aichat and kimi CLI Tools with Latest Updates in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "update",
+        "aichat",
+        "kimi",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/528",
+      "summary": "This update synchronizes the `aichat` and `kimi` CLI tools with the latest OpenAPI specifications from AceDataCloud/Docs. Key changes include the addition of new commands for `aichat2` and updates to the default model for `kimi`, enhancing user experience and functionality. The changes also include new model listings and improved command options for better interaction."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1052",
+      "title": "Enhance NanoBanana Agent Skill Alignment in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "nano-banana",
+        "agent-skill",
+        "backend",
+        "update",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update advances the NanoBanana Agent Skill to align with the latest merged commit from AceDataCloud/Skills. Key changes include updating the skills revision and ensuring service-level and artifact-level immutability. Validation confirms that all agent service sources compile successfully and focused tests have passed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1543",
+      "title": "Enhance Suno Result Management in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "suno",
+        "mountsea",
+        "openai",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update makes MountSea Suno clip normalization idempotent for already-normalized OpenAI-HK results and preserves raw prompt semantics. It also suppresses unnecessary cache writes during execution and extends AST ownership coverage across various media types. The changes improve efficiency and reliability in voice creation tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#174",
+      "title": "Enhance WCDB Startup and Warmup Separation in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wcdb",
+        "startup",
+        "warmup",
+        "security",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update splits the WCDB preparation into distinct startup and bounded warmup phases, improving clarity and performance. It also ensures that legacy prepare RPC timeouts accommodate both phases and isolates decrypted WCDB temp files per worker, enhancing security. Cleanup processes have been refined to prevent leaks of plaintext files during timeouts or closures."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1047",
+      "title": "Enhance Kimi Documentation and Model Updates in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "k3",
+        "aichat",
+        "models",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update adds the missing `kimi-k2.6` model entry and enhances the AI Chat V2 OpenAPI enum contract. It recommends `kimi-k3` across various client integration guides and replaces outdated examples with real production responses. Additionally, the authoritative K3 contract is documented, ensuring clarity on reasoning capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1050",
+      "title": "Enhance Airwallex Account Counting in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "payments",
+        "backend",
+        "airwallex",
+        "capacity",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces a provider-side baseline for existing Airwallex accounts to improve capacity checks. The production baseline is set to 5, aligning with the current provider account count, and ensures accurate quota usage by counting both baseline and recent local reservations. Additionally, negative configurations are clamped to zero, with documentation provided for manual updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#266",
+      "title": "Streamline Airwallex Sandbox Simulation in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "airwallex",
+        "simulation",
+        "testing",
+        "safety",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update removes reference requirements from the Airwallex Demo deposit simulation, lowering the default simulation amount to $5. It introduces a mandatory `--confirm-simulate` flag for state mutations and adds eight safety tests to enhance contract integrity. Production account creation remains disabled to ensure security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#657",
+      "title": "Update NanoBanana MCP Endpoint for Accuracy in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "mcp",
+        "update",
+        "skills",
+        "validation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/657",
+      "summary": "The NanoBanana hosted MCP endpoint has been corrected to the accurate hostname, enhancing reliability. Key updates were made to the canonical Skill, shared MCP catalog, and repository catalog. All relevant unit tests and frontmatter files have been validated successfully, ensuring a smooth transition to the new endpoint."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1540",
+      "title": "Streamline OAuth with CLIProxyAPI in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "oauth",
+        "cli",
+        "api",
+        "security",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update replaces the custom Node Claude OAuth relay with the pinned CLIProxyAPI v7.2.89, ensuring compatibility with existing endpoints like `/v1/messages` and `/v1/chat/completions`. The new implementation requires only Anthropic-issued Claude `setup-token` credentials and enhances security by managing authentication files more effectively. Key changes include disabling cloak mode and ensuring stateless replicas to prevent refresh-token rotation issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#809",
+      "title": "Enhance Sidebar Navigation for Full Width Highlight in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "css",
+        "ui",
+        "frontend",
+        "navigation",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update fixes the sidebar navigation by ensuring that each row extends fully to the right edge, eliminating unwanted whitespace. Key changes include adjusting widths and paddings in the CSS to achieve a seamless hover and active state experience. The modifications enhance the visual consistency across both desktop and mobile views."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#526",
+      "title": "Kimi CLI Sync Check Complete in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "sync",
+        "documentation",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/526",
+      "summary": "This update confirms that the Kimi CLI is fully aligned with the latest documentation updates. Key checks included verifying endpoint paths, model choices, and handling of `reasoning_effort`, all of which matched the current API contract. No changes to commands, options, or endpoints were necessary, ensuring a seamless integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#265",
+      "title": "Streamline Agent Guide with New Manifest in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "agent",
+        "update",
+        "archive",
+        "manifest"
+      ],
+      "public": false,
+      "summary": "This update renames the canonical agent guide plan and consolidates the documentation into a single, production-verified entry. The previous dual-schema rollout has been replaced with a streamlined architecture, and historical documents have been archived for reference. Key changes enhance clarity and maintainability of the agent integration documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1049",
+      "title": "Enhance Kimi Documentation with Official References in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "kimi",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update adds an Official References section to the Kimi Chat Completions developer guide, linking to key Moonshot resources. Additionally, the same traceable sources are now included in the Kimi service-page FAQ. All links have been verified for accessibility and proper formatting."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#524",
+      "title": "Align `reasoning_effort` to Max Only in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "openapi",
+        "update",
+        "documentation",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/524",
+      "summary": "This update synchronizes the `kimi` CLI with the latest OpenAPI changes, restricting the `--reasoning-effort` option to 'max' only. The command help text and user-facing documentation have been updated accordingly to reflect this change. Additionally, tests have been adjusted to reject any legacy values that are no longer supported."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1542",
+      "title": "Enhance Suno Voice Account Retry Logic in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "suno",
+        "voice",
+        "retry",
+        "lint",
+        "openai"
+      ],
+      "public": false,
+      "summary": "This update introduces a retry mechanism for Suno voice creation when the selected upstream account is not age-eligible. The existing 115-second deadline and 55-second minimum retry budget are preserved, while definitive audio errors remain non-retryable. Additionally, Prettier has been applied to the OpenAI-HK source files to resolve linting issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#264",
+      "title": "Expanded LLM Model Release Checklist in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "llm",
+        "checklist",
+        "update"
+      ],
+      "public": false,
+      "summary": "The LLM model release checklist has been significantly expanded from 8 to 16 comprehensive steps, enhancing the process for various surfaces. Key additions include a new independent models catalog, Mongo checker routing, and updated fallback policies. The documentation now emphasizes that generated files must not be edited directly, ensuring consistency and accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1363",
+      "title": "Exciting Updates: Kimi K3 and K2.6 Added in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "localization",
+        "chat",
+        "models",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1363",
+      "summary": "This update introduces Kimi K3 and K2.6 to the Nexior chat model picker, enhancing user experience with improved model capabilities. K3 is now prioritized in the model list and features expanded reasoning, vision, and file support. Additionally, localization updates have been made across 17 languages, ensuring consistent messaging and removing outdated references."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#524",
+      "title": "Enhance Kimi API Documentation in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "kimi",
+        "api",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/524",
+      "summary": "This update improves the Kimi API README and integration guide by recommending the Kimi K3 model. Key changes include detailed documentation on reasoning, vision, and tool calling capabilities, along with updated request examples. Historical K2.5 snapshots are preserved for reference, ensuring clarity for users transitioning to K3."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#652",
+      "title": "Enhance AI Chat Models with Kimi K3 in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "ai",
+        "chat",
+        "models",
+        "skills",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/652",
+      "summary": "This update adds the `kimi-k3` and `kimi-k2.6` models to the canonical AI chat skill model table, positioning K3 as Moonshot's flagship model. The changes ensure that the model ordering and identifiers are consistent across the board, maintaining high standards for the skill's content. Validation checks confirm that all updates are clean and compliant."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#439",
+      "title": "Expose Kimi K3 Models in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "feature",
+        "aichat",
+        "models",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/439",
+      "summary": "This update introduces the `kimi-k3` and `kimi-k2.6` models to the AiChat V2 MCP public model. Additionally, a contract test has been added to ensure both model identifiers are correctly implemented. The changes have been validated with successful tests and code checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1048",
+      "title": "Streamline Kimi K3 Reasoning to Max Only in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "k3",
+        "reasoning",
+        "documentation",
+        "backend",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update restricts the Kimi K3 `reasoning_effort` enum to the officially supported value: `max`. Claims regarding `standard` and `high` as usable tiers have been removed, ensuring clarity in documentation. The field remains optional, as omitted requests default to `max`, while compatibility warnings are added for other string inputs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#808",
+      "title": "Enhance Extractor Self-Containment in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "extension",
+        "update",
+        "testing",
+        "release"
+      ],
+      "public": false,
+      "summary": "This update makes the injected semantic page extractor self-contained following Chrome's function serialization. It includes a new detached VM execution test to ensure compliance with Chrome's no-module-closure boundary. Additionally, the extension has been upgraded to version 0.6.4, reflecting these improvements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#64",
+      "title": "Dependency Updates Galore in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "dependencies",
+        "updates",
+        "performance",
+        "bugfixes",
+        "python"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/64",
+      "summary": "This PR bumps several key dependencies in the x402 project, including updates to loguru, psycopg2-binary, web3, pydantic, solana, and uvicorn. These updates enhance performance, fix bugs, and ensure compatibility with the latest Python versions, ultimately improving the overall stability and functionality of the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#522",
+      "title": "Align Reasoning Effort Enum with OpenAPI in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "update",
+        "cli",
+        "openapi",
+        "documentation",
+        "validation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/522",
+      "summary": "This update synchronizes the `--reasoning-effort` enum in the Kimi CLI with the latest OpenAPI specifications, changing the allowed values to `standard`, `high`, and `max`. The command validation now utilizes a shared constant, and documentation has been updated accordingly. No changes were necessary for NanoBanana as it already matched the schema."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#263",
+      "title": "Unveiling the Poivelle AI Studio Design in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "ai",
+        "design",
+        "workspace",
+        "collaboration"
+      ],
+      "public": false,
+      "summary": "This update introduces the Poivelle professional AI film-production workspace, allowing seamless collaboration between humans, CLI/SDK clients, and Skill Agents on a unified Project Graph. Key features include a comprehensive set of editing tools, workspace-scoped assets, and secure templates, all while maintaining a robust architecture for trust and concurrency. The changes are documented in the new RFC and have undergone thorough validation and review."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1541",
+      "title": "Enhance Suno Task Polling Precision in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "suno",
+        "polling",
+        "performance",
+        "hotfix"
+      ],
+      "public": false,
+      "summary": "This update replaces the seconds-based sleep call in MountSea Suno polling with a millisecond-native setTimeout, improving polling accuracy. Regression guards have been added to ensure the millisecond timer is used correctly, preventing unsafe helper calls. The fix addresses a critical delay issue that caused significant timeouts in public requests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1361",
+      "title": "Streamline Scenario Tab Styles in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "styles",
+        "ui",
+        "components",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1361",
+      "summary": "This update consolidates the baseline styles for scenario tabs across multiple components, including Fish, Kling, Midjourney, Producer, Suno, and Veo. It maintains specific behaviors for Kling and Veo while ensuring compatibility with nested tool tabs. The changes enhance the overall consistency and usability of the scenario tabs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#173",
+      "title": "Optimize WCDB Preparation for Faster Warmup in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "performance",
+        "optimization",
+        "warmup",
+        "rpc",
+        "wisdom"
+      ],
+      "public": false,
+      "summary": "This update caps the WCDB preparation RPC timeout to 60 seconds, significantly reducing wait times. The warmup process is now limited to a more manageable set of contacts and conversations, while still allowing for optional and non-blocking message warmup when no conversations are available. These changes enhance performance and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1360",
+      "title": "Enhance Midjourney Task State Alignment in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "midjourney",
+        "enhancement",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1360",
+      "summary": "This update introduces consistent top-spacing for the Midjourney task state alerts, specifically for the imagine, videos, and describe states. It aligns the metadata rhythm for pending, success, and failure states, ensuring a uniform presentation. Additionally, new tests have been added to validate these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1359",
+      "title": "Standardize Image Task Preview Gaps in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "spacing",
+        "ui",
+        "tests",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1359",
+      "summary": "This update unifies the spacing between image task previews to a consistent 10px across various components, including Flux and QR Art. It aligns with existing styles from Seedream, Nano Banana, and OpenAI Image, ensuring a cohesive look. New tests have been added to verify the spacing adjustments, enhancing overall quality and consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1358",
+      "title": "Refactor image result spacing ownership in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "spacing",
+        "midjourney",
+        "tests",
+        "layout"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1358",
+      "summary": "This update removes implicit ownership of external layout spacing from the `ImageWrapper` component. It explicitly retains the `mb-4` margin in the Midjourney single image result caller, ensuring a consistent spacing contract across various callers including Flux and OpenAI Image. Comprehensive tests confirm the changes maintain layout integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1357",
+      "title": "Enhance Seedream Prompt Spacing in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "testing",
+        "seedream",
+        "spacing",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1357",
+      "summary": "This update adds regression coverage for spacing issues related to null prompts in Seedream legacy tasks. It ensures that failed content retains proper spacing regardless of whether the prompt is null, undefined, or an empty string. Additionally, valid prompts do not introduce extra top spacing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1046",
+      "title": "Enhance Kimi K3 Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "k3",
+        "api",
+        "testing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update exposes Kimi K3's `reasoning_effort` values in the request form and OpenAPI contract, improving clarity for users. Additionally, it refreshes the Kimi service introduction to prioritize K3 content while maintaining K2 compatibility. A regression test has been added to ensure the accuracy of the Kimi request/response schema."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#249",
+      "title": "Revamp Airwallex Global Payments Design in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "payments",
+        "documentation",
+        "design",
+        "Airwallex",
+        "global"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive design for Airwallex's global payments and per-order accounts. Key changes include the establishment of a corporate BankTransfer as a unique Global Account per order, removal of the rejected customer-shared account, and detailed documentation on account matching and quota behaviors. These enhancements aim to streamline payment processes and improve operational efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#807",
+      "title": "Enhance Page Extraction Efficiency in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "enhancement",
+        "frontend",
+        "extension",
+        "release",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update improves the page extraction process by binding semantic page discovery to a maximum of 2,000 visited elements and text nodes. It caps synchronous extraction at 1.5 seconds while ensuring useful candidates are retained, and replaces repeated label scans with native associated labels. Additionally, the extension has been released as version 0.6.3, following thorough validation and testing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1042",
+      "title": "Revamp Agent Integration Guides in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "agent",
+        "integration",
+        "backend",
+        "localization",
+        "ci"
+      ],
+      "public": false,
+      "summary": "This update replaces the outdated per-service Agent JSON validator with a unified compiler, enhancing the integration process. It compiles 20 service sources into localized manifests, ensuring efficient translations and payload management. Key improvements include read-only evidence tooling, CI for guide freshness, and immutable Skill source links, significantly boosting the reliability of Agent integrations."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#1045",
       "title": "Streamline migration by removing duplicate entry in Backend 🚀",
       "tags": [
