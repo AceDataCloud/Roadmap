@@ -3,6 +3,247 @@
   "date": "2026-07-19",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1035",
+      "title": "Enhance bank transfer order handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "payments",
+        "backend",
+        "validation",
+        "exception-handling"
+      ],
+      "public": false,
+      "summary": "This update replaces the unstructured validation for pending bank transfer orders with a structured HTTP 409 response. It includes the existing order ID for better client recovery and maintains user-specific advisory locking and filters. The changes improve the robustness of the payment processing system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#261",
+      "title": "Enhance Agent Workflows with New Commands in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "workflow",
+        "enhancement",
+        "agent",
+        "audit",
+        "release"
+      ],
+      "public": false,
+      "summary": "This update introduces three new agent workflow commands: a resumable release closure workflow, a cross-repository capability shipping workflow, and a provider route audit workflow. These enhancements aim to streamline processes for PR management, deployment, and auditing, ensuring better tracking and resolution of issues. All commands have been registered in the AGENTS.md intent router for easy access."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#520",
+      "title": "Enhance nano-banana with --count option for image commands in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "feature",
+        "cli",
+        "update",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/520",
+      "summary": "This update introduces a new `--count` option to the `generate` and `edit` commands in the nano-banana CLI, allowing users to specify the number of images to process (1-4). The feature enhances flexibility in image generation and editing requests. Additionally, tests have been added to ensure proper functionality and validation of the new parameter."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1351",
+      "title": "Enhance Pixverse Error Display in Nexior 🚨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "testing",
+        "pixverse"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1351",
+      "summary": "This update modifies the styling for failed Pixverse tasks, changing the alert from 'info' to 'failure' to better highlight errors. Additionally, regression tests have been added to ensure that failed tasks consistently use the 'failure' class. The overall layout and display of successful tasks remain unchanged."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1034",
+      "title": "Enhance Native Image Billing by Count in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "billing",
+        "native",
+        "backend",
+        "api",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces a new billing mechanism for Native images, allowing charges based on the actual count of images requested, ranging from 1 to 4. Key changes include modifications to the response contract, scaling of unit prices during authentication, and improved documentation on partial success behavior. The rollout process is clearly defined to ensure a smooth transition without misbilling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1533",
+      "title": "Enhance Native Multi-Image Support in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "native",
+        "images",
+        "billing",
+        "concurrency"
+      ],
+      "public": false,
+      "summary": "This update introduces support for Native multi-image output in the BananaRouter and other workers, allowing for a count of 1-4 images per request. It includes improvements to concurrency handling and billing processes, ensuring accurate billing for successful image generations. The feature is initially disabled by default to facilitate a controlled rollout."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#328",
+      "title": "Enhance Skill Tarball Fetching in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "backend",
+        "skills",
+        "fetch",
+        "improvement",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update improves the fetching of Skill repository tarballs by ensuring they are retrieved using the resolved commit SHA. It addresses issues with metadata consistency when the main branch changes during requests and adds regression tests for URL pinning and SHA propagation. The changes enhance reliability and accuracy in syncing skills."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#800",
+      "title": "Enhance Bank Transfer Option Visibility in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "payments",
+        "ui",
+        "feature",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a targeted bank transfer option that appears only when the low amount test flag is enabled. The UI now features a shared organization icon in the selector and order summary, replacing the previous blank icon. Key validations have passed, ensuring a smooth integration with the backend."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#258",
+      "title": "Completed MountSea Suno V2 Audit in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "audit",
+        "mountsea",
+        "suno",
+        "integration",
+        "compatibility"
+      ],
+      "public": false,
+      "summary": "The audit of all public Suno paths and audio actions against MountSea V2 has been successfully completed. Key findings include the successful integration of 17 audio actions and the identification of a functional blocker in the `/suno/voices` endpoint. Compatibility classifications have been corrected, ensuring that internal compositions remain unchanged while meeting external schema requirements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#259",
+      "title": "Enhance Nexior Scenario Spacing Consistency in Index 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "audit",
+        "nexior",
+        "spacing",
+        "documentation",
+        "consistency"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive 629-line audit for 22 Nexior generation and workflow scenarios, focusing on spacing consistency. Key changes include a visual legend for status markers, detailed scorecards, and defined ownership for spacing. The findings highlight areas of compliance and exceptions, paving the way for improved layout and task-state management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1033",
+      "title": "Enhance Low-Value Bank Transfer Testing in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "payments",
+        "backend",
+        "features",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a targeted low-value bank transfer testing feature, allowing a minimum transfer amount of USD 5 when the `ENABLE_BANK_TRANSFER_LOW_AMOUNT_TEST` flag is active. The standard minimum remains at USD 5,000, ensuring compliance with existing authentication and verification processes. Key files modified include the order handling logic and settings for the new test threshold."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#647",
+      "title": "Enhance Metric Preservation in Skills 📊",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "enhancement",
+        "xiaohongshu",
+        "metrics",
+        "skills",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/647",
+      "summary": "This update ensures that labeled engagement values using ASCII or full-width colons are preserved, while unlabeled profile counters are retained separately. All provider-specific behaviors are maintained within the Xiaohongshu Skill package. The changes have passed all relevant tests, confirming their stability and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#646",
+      "title": "Enhance Xiaohongshu Note Parsing in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "enhancement",
+        "xiaohongshu",
+        "parsing",
+        "tests",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/646",
+      "summary": "This update introduces deterministic parsers for note-detail and profile snapshots in Xiaohongshu. Key improvements include the preservation of canonical URLs and handling of ambiguous author states, along with the addition of new read workflow commands and sanitized fixtures. The changes have been validated with successful unit and integration tests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#260",
+      "title": "Revamped Agent Guide Manifest V2 in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "agent",
+        "manifest",
+        "update",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces the Agent Integration Guide Manifest V2, enhancing the existing Service.agent and Document.agent configurations without requiring new database models. Key changes include the consolidation of metadata and command templates into the PlatformBackend agent configuration, and the transition of the PlatformFrontend to a more versatile rendering system. The V1 core has been marked as shipped, paving the way for improved operational efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#645",
+      "title": "Enhance Xiaohongshu Parsing Capabilities in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "feature",
+        "xiaohongshu",
+        "parsing",
+        "tests",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/645",
+      "summary": "This update introduces deterministic parsers for Xiaohongshu note-detail and profile snapshots, allowing for better handling of structured fields. It includes the normalization of note and profile URLs, and ensures that only explicitly labeled metrics and comments are processed. Additionally, new sanitized fixtures have been added to improve testing accuracy."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1350",
       "title": "Enhanced Media Field Spacing in Nexior 🎉",
       "tags": [
