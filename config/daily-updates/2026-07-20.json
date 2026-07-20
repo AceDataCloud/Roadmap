@@ -3,6 +3,340 @@
   "date": "2026-07-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#818",
+      "title": "Enhance Document Navigation with Expand-All Feature in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "navigation",
+        "enhancement",
+        "vue",
+        "document"
+      ],
+      "public": false,
+      "summary": "This update introduces an opt-in expand-all mode for the shared document tree, specifically for the earning and promotion category. The legacy sidebar and mobile drawer remain consistent while preserving the collapsed behavior for development and application documents. Key validations have been performed to ensure functionality and maintain existing features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#817",
+      "title": "Streamlined Admin Order Creation Dialog in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "admin",
+        "order",
+        "frontend",
+        "ui",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a new order creation dialog for admins, enhancing the order management experience. Key features include application validation, dynamic package selection, and a custom pricing option with real-time credit guidance. The dialog is designed to be responsive and user-friendly, ensuring a smooth workflow for order creation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1061",
+      "title": "Launch admin-only order creation API in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "admin",
+        "orders",
+        "backend",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces a dedicated API for admin-only order creation, enhancing the order management capabilities. Key features include a new context for admin orders, support for custom package creation, and robust protections against unauthorized modifications. The implementation ensures that orders are tied to the customer application, maintaining integrity and security throughout the process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1060",
+      "title": "Enhance backend deployment stability in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "deployment",
+        "backend",
+        "workflow",
+        "stability",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces several key improvements to the backend deployment process. It serializes production workflows to prevent stale deployments, implements a fail-fast mechanism for rendering errors, and adds retry logic for transient failures. These changes aim to enhance the reliability and efficiency of the deployment pipeline."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#331",
+      "title": "Streamline Connector Logic by Removing Legacy Contracts in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "refactor",
+        "connectors",
+        "backend",
+        "cleanup",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update refactors the connector logic by eliminating legacy runtime contracts, specifically removing compatibility fields for `auth_methods`, `auth_mode`, and `kind`. It introduces a canonical approach for dispatching behaviors across various connection types and updates internal APIs and serializers accordingly. The changes enhance maintainability and ensure that only relevant fields are retained, paving the way for a cleaner integration with the AuthFrontend and PlatformService."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1555",
+      "title": "Streamline Connector Contracts in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "aichat2",
+        "connector",
+        "authbackend",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update refactors the aichat2 connector contracts by removing legacy fallbacks and enforcing a required `connector_identifier` in the AuthBackend connection contract. Key changes include the consumption of canonical execution types and credential types, enhancing the overall clarity and reliability of the connection handling process. The PR has passed all tests, ensuring stability and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1552",
+      "title": "Enhance billing attribution with self-reporting channel in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "attribution",
+        "feature",
+        "alibaba",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces a self-reporting mechanism for the `channel=ali` in the billing attribution process. The changes ensure that the `channel` is injected into the `/record` and `/price` payloads, allowing accurate usage tracking without leaking client information. The implementation is configurable via the `HAPPYHORSE_CHANNEL` environment variable, defaulting to `ali`."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#230",
+      "title": "Streamline Connector Handling in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "refactor",
+        "frontend",
+        "cleanup",
+        "typescript",
+        "connections"
+      ],
+      "public": false,
+      "summary": "This update removes legacy frontend contract elements, directly consuming connection methods and credentials. Key compatibility types have been eliminated, simplifying the codebase while maintaining essential flows. The changes enhance clarity and performance in the connector browsing and installation processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#177",
+      "title": "Enhance conversation search stability in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "stability",
+        "ui",
+        "automation",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a 2-second wait for the Qt search popover to stabilize before interaction. It requires four consecutive stable samples of the same UIA cell and includes runtime ID and rectangle in the stability signature. The changes ensure a more reliable user experience by validating the live cell immediately before clicking and maintaining fail-closed paths for any failures."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1055",
+      "title": "Boost Appliance Proxy Timeout for Better Performance in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "timeout",
+        "backend",
+        "performance",
+        "error-handling"
+      ],
+      "public": false,
+      "summary": "This update increases the appliance proxy read timeout from 12 seconds to 120 seconds for UIA-backed endpoints, ensuring smoother operations. Additionally, the Gunicorn worker timeout has been raised from 120 seconds to 150 seconds to maintain authoritative deadlines. The changes also include mapping appliance read timeouts to HTTP 504 errors instead of the generic 502, enhancing error handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#176",
+      "title": "Enhance WCDB Logging for Better Insights in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "logging",
+        "wcdb",
+        "performance",
+        "monitoring"
+      ],
+      "public": false,
+      "summary": "This update introduces comprehensive logging for the WCDB preparation stages, including parent RPC timing and worker operation lifecycles. Key processes such as database discovery and warmup stages are now logged, while maintaining a controlled log volume by adjusting log levels. The changes ensure no timeout or preparation behavior is altered, enhancing monitoring capabilities without impacting performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1372",
+      "title": "Introducing Claude Fable 5 to the Chat Models in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "chat",
+        "localization",
+        "testing",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1372",
+      "summary": "This update adds Claude Fable 5 as the first option in the Claude model picker, enhancing our chat capabilities with advanced reasoning, vision, and file handling features. Localization has been improved with new translations for 17 languages, ensuring a broader reach. All changes have been validated with focused tests and code quality checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#440",
+      "title": "Introduce Claude Fable 5 to AiChat Models in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "feature",
+        "aichat",
+        "models",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/440",
+      "summary": "This update adds the `claude-fable-5` model to the AiChat v2 public model list and includes a new model contract test to ensure its functionality. Validation has confirmed that all tests, including focused contract tests, passed successfully after an ordering fix. The merge is contingent on the visibility of PlatformService Fable, with the necessary Mongo route already live."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1059",
+      "title": "Introducing Claude Fable 5 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "models",
+        "update",
+        "backend"
+      ],
+      "public": false,
+      "summary": "Claude Fable 5 has been added to the public model catalog as the flagship model, enhancing our offerings with its 1M context and long-horizon capabilities. The canonical introduction has been updated to reflect this change, ensuring users are informed about its advanced features. All relevant tests have passed, confirming the stability and readiness of this new model."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1553",
+      "title": "Expose Claude Fable 5 in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "openai",
+        "integration",
+        "models",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces `claude-fable-5` to the OpenAI-compatible models list at `/v1/models`, enhancing our AI capabilities. The routing remains controlled by the Mongo checker, ensuring stability and performance. All routing tests have passed successfully, confirming the integration's reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#532",
+      "title": "Ensured Aichat and Kimi CLIs are Aligned with Documentation in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "sync",
+        "cli",
+        "documentation",
+        "verification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/532",
+      "summary": "This update confirms that both Aichat and Kimi CLIs are fully synchronized with the latest documentation changes. Key findings include the reduction of the `reasoning_effort` enum in Kimi and the addition of `kimi-k2.6` in Aichat's model list, both of which are already reflected in the CLI code. No code changes were necessary as all elements were verified to match exactly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1058",
+      "title": "Enhance Agent Catalog with New Integrations in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "agent",
+        "integration",
+        "backend",
+        "security",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update integrates real application assets for Windows, macOS, and Linux into the Agent catalog, alongside new Markdown guides and project/user/platform recipe variants. It introduces pending integrations for Qwen Code, Cline, and Amp across 20 services while ensuring client templates are validated in isolated profiles to maintain security. The changes enhance the overall functionality and usability of the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1057",
+      "title": "Revamp Grok Fast Video Pricing in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "grok",
+        "backend",
+        "updates",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update modifies the billing structure for the `grok-imagine-video-1.5-fast` service, aligning it with TTAPI's new quota tiers of 6/15/25. The pricing now reflects charges of 0.63, 1.575, and 2.625 Credits for durations of 1-10s, 11-20s, and 21-30s respectively. Additionally, regression tests have been added to ensure coverage for omitted durations and transitions between tiers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#815",
+      "title": "Enhance Agent Guide Workbench Experience in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "markdown",
+        "accessibility",
+        "usability"
+      ],
+      "public": false,
+      "summary": "This update improves the Agent guide workbench by rendering backend-provided selector icons with reliable fallbacks and presenting Agent prose as free-form Markdown. Additionally, code headers have been compacted, and long localized text is now better handled on mobile devices. These changes enhance usability and accessibility for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1551",
+      "title": "Enhance Fish Model ID Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "enhancement",
+        "mountsea",
+        "fishmodel",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of Fish model response IDs by accepting the live `_id` for verification voice model creation while maintaining compatibility with legacy response shapes. It also ensures that empty or non-string identifiers are rejected, streamlining the MountSea voice workflow. Comprehensive tests confirm that the changes are functioning correctly and do not introduce errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1548",
+      "title": "Introducing Poivelle: A New Creative Studio Backend in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "backend",
+        "fastapi",
+        "mongodb",
+        "kubernetes",
+        "docker",
+        "creative"
+      ],
+      "public": false,
+      "summary": "This update adds Poivelle, a standalone FastAPI and MongoDB backend designed for professional creative studios. Key features include a comprehensive Project Graph, enhanced authentication with JWTs, and a robust deployment setup with Docker and Kubernetes. The implementation ensures high availability and security for studio clients while streamlining project management and execution workflows."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#267",
       "title": "Complete BrowserAgent 1.0 Capabilities in Index 🚀",
       "tags": [
