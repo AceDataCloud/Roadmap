@@ -3,6 +3,197 @@
   "date": "2026-07-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#832",
+      "title": "Enhance Browser Agent Snapshot Rendering in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "browser-agent",
+        "snapshot",
+        "frontend",
+        "performance",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces significant improvements to the Browser Agent's snapshot rendering capabilities. Key changes include optimized sampling methods, enhanced filtering for hidden elements, and the release of version 0.7.2 of the Browser Agent extension. These enhancements aim to reduce rendering time and improve overall performance, as evidenced by successful validation tests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#833",
+      "title": "Streamline WeChat Status Mapping for Clarity in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "wechat",
+        "status",
+        "ui",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update consolidates the WeChat status handling into a single, clear mapping, improving the user experience during login. The new structure eliminates confusion by ensuring each backend state is distinctly represented in the UI, with updated labels for various statuses. Additionally, the code has been cleaned up, enhancing maintainability and reducing potential errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1373",
+      "title": "Revamp Poivelle UI to Align with Nexior Design in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "design",
+        "nexior",
+        "poivelle",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1373",
+      "summary": "This update integrates Poivelle's UI with Nexior's design tokens, enhancing visual consistency across components. Key changes include updated typography, responsive surfaces, and improved keyboard focus indicators while maintaining existing functionality. The modifications ensure a cohesive user experience without altering any core behaviors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#185",
+      "title": "Fix account profile sync for WeChat logins in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "account",
+        "weixin",
+        "testing",
+        "profile"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where the console displayed the wrong WeChat account due to improper handling of account switches. The `_persist_prepared_profile` function has been enhanced to ensure that the currently logged-in account's profile is authoritative, replacing stale data when switching accounts. Key tests have been added to verify the correct behavior during account transitions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1368",
+      "title": "Enhance Hailuo Task States Display in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "ui",
+        "testing",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1368",
+      "summary": "This update improves the display of Hailuo task states by clearly indicating queued, pending, processing, and running statuses. Additionally, it prioritizes failure states for error, failed, and cancelled tasks. The changes include new test cases and modifications to the Preview component for better user feedback."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#830",
+      "title": "Removed distribution risk management button from status page in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "cleanup",
+        "admin"
+      ],
+      "public": false,
+      "summary": "The distribution risk management button has been successfully removed from the admin distribution status page as requested. This change does not affect the accessibility of the risk management page, which remains reachable via the admin sidebar. The overall functionality and navigation of the console are preserved."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#831",
+      "title": "Fix invoice download flow with authentication in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "fix",
+        "authentication",
+        "frontend",
+        "invoice",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update resolves a 401 error when downloading invoices by ensuring that the download URL is fetched through an authenticated request. The frontend now opens a new tab with the signed URL after successfully retrieving it, enhancing the user experience while maintaining security. Error handling has also been improved to close the tab and display an error message if the download fails."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1072",
+      "title": "Enhance invoice download handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "invoice",
+        "download",
+        "backend",
+        "json",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update modifies the invoice download functionality to serve signed download URLs as JSON, allowing the SPA to handle the download more effectively. The new `_download_response()` helper function enables the SPA to request the URL with a `?response=json` parameter, while maintaining backward compatibility for direct API callers. This change improves user experience by ensuring authenticated requests can access the download link seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#232",
+      "title": "Streamlined Device Management with One Delete Button in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "user-experience",
+        "i18n",
+        "refactor"
+      ],
+      "public": false,
+      "summary": "This update consolidates the device management process on the browser devices page by merging the revoke and delete actions into a single delete button. The backend has been adjusted to support a one-step hard delete, enhancing user experience by reducing unnecessary clicks. Additionally, internationalization keys related to the revoked state have been removed to simplify the interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#336",
+      "title": "Streamline Device Management with Unified Delete Action in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "delete",
+        "browser-devices",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update merges the revoke and delete actions for browser devices into a single delete operation, simplifying the user experience. The new endpoint now hard-deletes devices and their connections in one step, eliminating the previous revoke requirement. All related tests have been updated and successfully pass, ensuring the integrity and security of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#184",
+      "title": "Streamline WeChat Login with Auto-dismiss Feature in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "login",
+        "automation",
+        "tests",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces an auto-dismiss feature for the WeChat login security notice, enhancing the user experience by removing the blocking notice during login. A new watchdog handler has been implemented and registered, ensuring smooth operation with live verification and four unit tests. Additionally, previous review feedback has been addressed, improving the robustness of the feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#829",
+      "title": "Enhance Browser Agent with Semantic Probing in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "browser-agent",
+        "frontend",
+        "update",
+        "semantic",
+        "css"
+      ],
+      "public": false,
+      "summary": "This update introduces bound CSS pointer-style probing, separating it from structural DOM scanning to improve reliability. Key changes include caching pointer boundaries and releasing the Browser Agent extension as version 0.7.1. The implementation has passed extensive validation tests, ensuring robust performance in semantic extraction."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1575",
       "title": "Enhance Product Identity for TVC in Platform Service 🎥",
       "tags": [
