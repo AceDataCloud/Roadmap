@@ -3,6 +3,169 @@
   "date": "2026-07-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1575",
+      "title": "Enhance Product Identity for TVC in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "tvc",
+        "product-identity",
+        "updates",
+        "platform-service",
+        "enhancements"
+      ],
+      "public": false,
+      "summary": "This update establishes shot 01 as the canonical reference for the commercial TVC graph, ensuring product identity is preserved across scenes. Key changes include adding typed dependencies for specific shots and implementing checks to prevent reference regeneration when a valid shot is selected. The rollout maintains existing project graphs while introducing new reference edges for future revisions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1574",
+      "title": "Enhance Heartbeat Management for Local Renders in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "heartbeat",
+        "local-render",
+        "bugfix",
+        "production",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of heartbeat leases during synchronous local operations, ensuring that media downloads, rendering, and uploads maintain ownership integrity. Key changes include aborting rendering on heartbeat failures and retrying transient database errors within a confirmed lease window. These enhancements address a production incident where local renders were stuck due to lease conflicts, ensuring smoother operation and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1371",
+      "title": "Introducing Poivelle: Your New AI Film Workspace in Nexior 🎬",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ai",
+        "film",
+        "workspace",
+        "nexior",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1371",
+      "summary": "This update adds Poivelle as a standalone professional AI film workspace within Nexior, featuring tools like Canvas, Storyboard, Timeline, and Review projections. Key enhancements include a direct API client, mobile/desktop layouts, and comprehensive support for 18 locales. The integration of a LibTV-depth commercial TVC workflow further enriches the production capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#231",
+      "title": "Enhance Connector Experience with Reconnect Button in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "user-experience",
+        "feature",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update introduces a new 'Reconnect' button in the connector detail pane, allowing users to re-authorize connections without needing to disconnect first. The button is only visible for connected rows with a valid catalog, ensuring a seamless user experience. This change improves the workflow for users facing connection issues by eliminating unnecessary steps."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#183",
+      "title": "Streamlined Login Process and UI Updates in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "login",
+        "ui",
+        "optimization",
+        "performance",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update enhances the login experience by optimizing the UI executor during the verification phase, allowing it to release resources sooner. Key changes include a quicker response for the verification code and the introduction of a settle gate to improve the efficiency of the preparation phase. These adjustments lead to a smoother user experience and reduced waiting times."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#744",
+      "title": "Update element-plus to 2.14.3 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "update",
+        "element-plus"
+      ],
+      "public": false,
+      "summary": "This update bumps the element-plus library from version 2.14.2 to 2.14.3, introducing new features such as virtual scroll support for the transfer component and enabling bundledDev. Additionally, several bug fixes have been implemented, including improvements to the input-otp component's field line-height and form size inheritance. These changes enhance the overall functionality and user experience of the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#335",
+      "title": "Enhance Xiaohongshu Connector Browser Policy in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "backend",
+        "connector",
+        "policy",
+        "capabilities",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update aligns the Xiaohongshu Connector browser policy with the merged Skill capability frontmatter. It introduces seven generic BrowserAgent capabilities essential for upstream-MCP parity workflows and locks the 17-capability policy in the connector seed contract test. No changes were made to the core code, ensuring stability while enhancing functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#270",
+      "title": "Enhance Suno Post-Deploy Evidence in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "suno",
+        "post-deploy",
+        "evidence",
+        "json",
+        "parity",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update adds a comprehensive post-deploy section to the Suno JSON parity report, including authoritative build data and archived production JSON for retesting. Key improvements include distinguishing current results from historical snapshots and ensuring all archived JSON parses correctly. The final verified state shows high alignment across various audio actions and helper functions, with a few remaining gaps noted for future attention."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Backend#8",
+      "title": "Enhance X9 Finalize Proof Foundation in X402 Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Backend",
+        "feature",
+        "x402",
+        "backend",
+        "proof",
+        "validation",
+        "pricing"
+      ],
+      "public": false,
+      "summary": "This update introduces the X9 finalize proof foundation, enabling local quote generation and validation within the X402Backend. Key changes include the removal of dependencies on PlatformGateway, the implementation of RFC 8785 for proof verification, and the introduction of a new pricing module. These enhancements aim to improve the reliability and security of payment processing in the system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#667",
+      "title": "Mirror Xiaohongshu MCP Workflows in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "xiaohongshu",
+        "skills",
+        "mcp",
+        "workflows",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/667",
+      "summary": "This update benchmarks Xiaohongshu business workflows against the upstream repository, ensuring all routes, state machines, and interactions are preserved in the Skill layer. Key features include enhanced login checks, deterministic publish success, and comprehensive interaction state validations. The addition of a new MCP parity reference solidifies the alignment with upstream functionalities."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1573",
       "title": "Enhance MIDI Conversion Process in Platform Service 🎹",
       "tags": [
