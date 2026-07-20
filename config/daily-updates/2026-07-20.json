@@ -1,0 +1,54 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-20",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Index#267",
+      "title": "Complete BrowserAgent 1.0 Capabilities in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "browser",
+        "capabilities",
+        "RFC",
+        "security",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces the comprehensive BrowserAgent 1.0 capability-completion RFC, defining 22 core tools and 4 optional observation tools. It establishes a new protocol version, ensuring all workflows remain Skill-only while enhancing security and functionality. The changes aim to streamline browser interactions and improve user experience by consolidating capabilities and maintaining compatibility with previous versions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1550",
+      "title": "Enhance OAuth Request Cloaking in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "oauth",
+        "claude",
+        "proxy",
+        "documentation",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update explicitly enables CLIProxyAPI's `auto` cloaking for the Claude setup-token authentication file, ensuring that requests from non-Claude-Code clients receive the necessary billing headers. Additionally, it documents third-party system prompt handling, token rotation, and upstream validation processes. The changes improve the overall functionality and reliability of the OAuth path, addressing previous issues that led to production errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#745",
+      "title": "Upgrade @unhead/vue to 3.1.8 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "vue",
+        "performance",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update bumps the @unhead/vue package from version 3.1.6 to 3.1.8, introducing several bug fixes and performance improvements. Key changes include optimizations for SSR hot paths, reduced bundle size, and enhancements to the handling of script callbacks across frameworks. These updates aim to improve the overall efficiency and reliability of the application."
+    }
+  ]
+}
