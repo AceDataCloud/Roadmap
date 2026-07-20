@@ -3,6 +3,374 @@
   "date": "2026-07-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1573",
+      "title": "Enhance MIDI Conversion Process in Platform Service 🎹",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "midi",
+        "conversion",
+        "performance",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update implements a sequential approach for the MountSea MIDI conversion, ensuring all-or-nothing completion and durable checkpoints. It removes the previous three-way concurrency that led to account capacity issues, resulting in a more reliable processing method. The changes have been validated with successful tests and improved performance metrics."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#666",
+      "title": "Enhance X identity and read capabilities in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "enhancement",
+        "bugfix",
+        "testing",
+        "cloudflare",
+        "x-api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/666",
+      "summary": "This update restores the `whoami` functionality through authenticated X account settings and introduces strict verification for screen names. It also improves the handling of Cloudflare errors and adds regression tests to ensure reliability. Key changes include enhanced filtering for UserMedia and updates to the X skill playbook."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Backend#7",
+      "title": "Introducing Fail-Closed Bazaar Discovery in X402 Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Backend",
+        "bazaar",
+        "discovery",
+        "payments",
+        "security",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update lays the groundwork for the X8 Bazaar discovery feature, which is currently set to default-off. Key enhancements include the integration of route declarations using official Bazaar extension helpers, validation of signed-catalog schemas, and a robust payment lifecycle requirement. The changes also ensure strict security measures for credential handling and URL policies, while maintaining a focus on testing and validation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#828",
+      "title": "Automatic i18n Updates from Chinese Translations in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translations",
+        "frontend",
+        "updates",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update introduces automatic translation updates for internationalization (i18n) files based on changes from the Chinese (zh-CN) source. Key modifications include the addition of new status messages across multiple languages, enhancing user experience and accessibility. The changes affect Arabic, German, Spanish, French, Italian, Japanese, Korean, Portuguese, Russian, and Traditional Chinese translations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1572",
+      "title": "Enhance MIDI Aggregation for Non-Vocal Stems in Platform Service 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "midi",
+        "aggregation",
+        "mountsea",
+        "platform-service",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a robust method for converting unique non-vocal stems into MIDI using MountSea. It aggregates non-empty instrument tracks into the TTAPI public MIDI contract while ensuring deduplication and complete success for each conversion stage. The implementation processes MDI conversions in durable batches, enhancing reliability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#827",
+      "title": "Enhance Wisdom Runtime Status UI in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "frontend",
+        "wisdom",
+        "status",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update classifies all Wisdom runtime statuses into distinct categories such as loading, verification, and failure. It also restricts QR rendering to states supported by the appliance QR endpoint and adds a prebuild contract test for the `/api/status` flow. These changes improve the user experience and ensure better synchronization between the UI and backend states."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1571",
+      "title": "Streamline BrowserAgent Modes in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "browser",
+        "update",
+        "platform",
+        "tools"
+      ],
+      "public": false,
+      "summary": "This update removes unsupported snapshot options from the V1 model schema, including depth and interactive modes. It ensures that only executable observation tools are available, preventing errors in snapshot generation. Validation tests confirm that the changes maintain functionality and improve reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1070",
+      "title": "Revamped Earning Documentation for Clarity and Engagement in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "updates",
+        "tutorials",
+        "clarity",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update overhauls the 'Earning Alliance' documentation, ensuring accuracy and user-friendliness. Key changes include fact corrections, removal of misleading content, and the addition of hands-on tutorials with visual aids. The new structure aims to empower users with clear, actionable insights while maintaining alignment with platform code."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#825",
+      "title": "Enhance Console Spacing for a Cleaner Look in Frontend Web ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "design",
+        "spacing",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update standardizes the spacing across multiple console pages, particularly addressing the inconsistent margins in KPI card layouts. Key changes include the introduction of a global row gap for card rows and the removal of redundant padding in the Console layout, improving the overall visual consistency and usability. The adjustments affect 11 files, ensuring a cohesive design across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1071",
+      "title": "Expanded Agent Client Variants in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "agent",
+        "mcp",
+        "backend",
+        "update",
+        "variants"
+      ],
+      "public": false,
+      "summary": "This update introduces additional Agent client variants, including Amp, Cline, and VS Code user MCP variants. The compiled Fish manifest has been expanded from 6 to 9 Agent clients and from 21 to 25 variants, enhancing visibility and functionality. Key adjustments include refining verification statuses and aligning expiration times."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#824",
+      "title": "Launch of BrowserAgent V1 Extension 0.7.0 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "release",
+        "browser",
+        "extension",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "The BrowserAgent V1 extension has been released as version 0.7.0, aligning package, lockfile, and Chrome manifest versions without any runtime code changes. Validation checks confirmed zero vulnerabilities and all tests passed successfully, ensuring a smooth upgrade for users. Existing installations need to reload and pair again to record the final capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#665",
+      "title": "Enhance Xiaohongshu Skill with BrowserAgent V1 in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "xiaohongshu",
+        "browseragent",
+        "update",
+        "validation",
+        "media"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/665",
+      "summary": "This update aligns the Xiaohongshu skill with the final BrowserAgent V1 tools by replacing outdated references and improving media validation processes. Key changes include the removal of local approval language and the introduction of opaque resource IDs for media uploads. The rollout enhances user experience by reducing redundant consent prompts during browser selection."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Backend#5",
+      "title": "Enhance Settlement Reconciliation with X5 Provider Support in X402 Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Backend",
+        "settlement",
+        "reconciliation",
+        "payments",
+        "x5",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces the X5 provider-pinned settlement reconciler, enhancing the payment processing capabilities. Key features include automated sweeping of pending payments, validation checks before accepting transactions, and a new CLI for sweeping and repairing payments. The changes aim to improve reliability and efficiency in settlement processes while ensuring production safety until further validation is completed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1069",
+      "title": "Enhance Evidence Runners for Agent Clients in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "evidence",
+        "agents",
+        "backend",
+        "vscode",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces fixed-version native evidence runners for Amp, Cline, and VS Code, ensuring secure installation with SHA-256 verification. It also allows nonsecret client evidence on branch workflow dispatch while maintaining restrictions on protected hosted MCP discovery. Comprehensive cross-platform configurations and regression coverage have been added to enhance reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Backend#4",
+      "title": "Introducing Durable Payment State and Artifacts in X402 Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Backend",
+        "payments",
+        "security",
+        "ledger",
+        "artifacts",
+        "X402"
+      ],
+      "public": false,
+      "summary": "This update establishes the X4 durable payment-state and artifact framework, enhancing the existing X3 infrastructure. Key features include the creation of a dedicated `x402_payments` ledger, robust state management, and secure artifact storage with AES-256-GCM encryption. The implementation ensures unique payment identities and supports retry mechanisms, while production capabilities remain disabled until necessary adapters are available."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Backend#2",
+      "title": "Exciting New X3 Resource Server Features in X402 Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Backend",
+        "feature",
+        "backend",
+        "x402",
+        "fastapi",
+        "development"
+      ],
+      "public": false,
+      "summary": "This update introduces the official X3 resource server lifecycle for the X402 backend, enhancing the SERP allowlist functionality. Key changes include binding signed catalog snapshots to requests, implementing a pluggable Facilitator client, and enforcing strict limits on request and response handling. The rollout is currently in draft mode, pending the implementation of durable payment artifacts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#826",
+      "title": "Streamline Login State with Wisdom Runtime in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "login",
+        "api",
+        "refactor",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update enhances the `WisdomRuntimeState` to align with the appliance's API status contract, removing redundant polling requests. It simplifies the rendering of security verification and QR/login transitions by utilizing a single source for runtime status. Additionally, it ensures that the authoritative status is refetched after a rejected verification code, improving the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#182",
+      "title": "Enhance WeChat Login Status Visibility in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "login",
+        "api",
+        "status",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update exposes detected logged-out WeChat pages through the `/api/status.status` endpoint, improving clarity by removing the ambiguous `waiting_for_login` state. The product lifecycle states `preparing`, `ready`, and `error` remain intact, while the web login flow and documentation have been updated to reflect these changes. Comprehensive tests have been added to ensure the integrity of the new status mappings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1567",
+      "title": "Transforming Timelines into MP4s in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "ffmpeg",
+        "mp4",
+        "deployment",
+        "validation",
+        "timeline"
+      ],
+      "public": false,
+      "summary": "This update introduces a robust FFmpeg H.264/AAC MP4 renderer, replacing the previous JSON placeholder. Key enhancements include freezing confirmed timelines into the ExecutionPlan, validating media properties, and normalizing error handling. The deployment process has been refined to ensure seamless transitions and rollback capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Backend#6",
+      "title": "Implement X7 Provider Calibration Release Gate in X402 Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Backend",
+        "calibration",
+        "validation",
+        "security",
+        "providers",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces the fail-closed X7 provider calibration release gate, enhancing validation processes by requiring a truthful Ace raw baseline and multiple independent third-party reports. Key additions include new provider configurations, a protected-CI HMAC attestation, and a deterministic canonical bundle digest. The PR also includes extensive tests to ensure compliance and security, paving the way for future live calibration capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Backend#1",
+      "title": "Exciting New X402 Conformance Runner Features in X402 Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Backend",
+        "feature",
+        "conformance",
+        "testing",
+        "x402",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a provider-neutral raw X402 v2 conformance runner, which includes 53 core-v2 cases with deterministic EIP-3009 vectors. It generates JSON, Markdown, and fail-closed JUnit reports while categorizing errors into protocol, infrastructure, profile, ambiguity, and runner errors. The changes enhance the testing framework without impacting production traffic."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1569",
+      "title": "Enhanced Retry Logic for MountSea Painting Failures in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "retry",
+        "mountsea",
+        "painting",
+        "platform",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a robust retry mechanism for terminal MountSea painting failures, allowing up to three attempts while maintaining distinct durable stages for each try. The changes ensure that only specific errors are retried, improving reliability without impacting copyright or moderation processes. Validation tests confirm the implementation's effectiveness and safety."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1568",
+      "title": "Enhance MountSea Audio Processing in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "audio",
+        "mountsea",
+        "update",
+        "billing",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update preserves MountSea account affinity by directly passing cropped clips to the `add_vocals` and `add_instrumental` functions, eliminating the need for intermediate re-uploads. Additionally, a contract guard has been added to prevent issues during the painting-specific upload stage. The changes improve the reliability of audio processing and billing for users."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1566",
       "title": "Align TTAPI Suno Helper Responses in Platform Service 🚀",
       "tags": [
