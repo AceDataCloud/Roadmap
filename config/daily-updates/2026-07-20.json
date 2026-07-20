@@ -3,6 +3,164 @@
   "date": "2026-07-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#181",
+      "title": "Enhance WeChat Verification Flow in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "wechat",
+        "verification",
+        "update",
+        "tests",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the WeChat verification process by allowing polling through transitional states like `logging_in` and `login_other`. The timeout for verification outcomes has been extended from 30 seconds to 120 seconds, ensuring a smoother user experience. Key tests have been added to validate the new flow, and all existing tests have passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1565",
+      "title": "Ensure Stable MountSea Suno Deployment in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "deployment",
+        "suno",
+        "kubernetes",
+        "testing",
+        "production"
+      ],
+      "public": false,
+      "summary": "This update maintains the MountSea Suno deployment at one replica, applying the existing deployment and service configurations. Key changes include updates to the deployment contract test to prevent unintended scaling down of replicas. The production environment is now stable with the latest image and zero restarts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1564",
+      "title": "Enhance MountSea Suno Responses for TTAPI Compatibility in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "ttapi",
+        "mountsea",
+        "suno",
+        "audio",
+        "waveform"
+      ],
+      "public": false,
+      "summary": "This update aligns MountSea Suno responses with TTAPI field allow-lists across various routes, including Audios and Vox. Key changes include reproducing TTAPI Vox range types and an 11-level waveform contract, while also preparing MIDI stems for MountSea MDI. The `/suno/mashup-lyrics` endpoint remains unregistered due to a native 404 response from TTAPI."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1563",
+      "title": "Enhance Media Reuse for Efficient Workflows in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "media",
+        "workflow",
+        "optimization",
+        "artifacts",
+        "tvc"
+      ],
+      "public": false,
+      "summary": "This update introduces significant improvements to media artifact handling by allowing the reuse of selected media takes across executions. Key changes include the idempotent creation of media takes, enhanced visibility of committed artifacts, and refined selection processes to prevent unnecessary regeneration of already approved dependencies. These enhancements streamline workflows and optimize resource usage in commercial TVC validations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1067",
+      "title": "Enhance Agent Guide Markdown Clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "markdown",
+        "agent",
+        "backend",
+        "documentation",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update removes optional platform placeholders from the shared MCP Markdown, ensuring clarity in the Agent guides. It preserves app labels for both project and user variants and introduces a compiled-project regression test for app context and platform-independent Markdown. The changes enhance the user experience by providing clearer instructions without unnecessary platform references."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#180",
+      "title": "Enhance WeChat Security Verification Outcomes in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "security",
+        "verification",
+        "testing",
+        "api",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update clarifies the WeChat security verification process by maintaining the existing flow while explicitly reporting outcomes as 'logged_in', 'rejected', or 'pending'. New tests have been added to validate these outcomes, ensuring robust functionality. The changes improve user experience by eliminating ambiguity in verification status."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#179",
+      "title": "Enhance Group Member Resolution with Invite Capability in Wisdom 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "feature",
+        "enhancement",
+        "testing",
+        "contact-resolution"
+      ],
+      "public": false,
+      "summary": "This update introduces invite-aware contact resolution, ensuring that only contacts with the ability to invite are considered when creating groups. The changes include modifications to the group creation process and the addition of tests to validate the new functionality. Overall, this enhancement improves the user experience by reducing ambiguity in contact resolution."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#178",
+      "title": "Enhance Message Sending with Idempotency and Retry Logic in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "enhancement",
+        "clipboard",
+        "idempotency",
+        "retry",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces robust retry mechanisms for transient clipboard failures and adds an optional idempotency key for message sends. The changes ensure that duplicate submissions return the original task, enhancing user experience and reliability. Additionally, the implementation includes strict idempotency checks to prevent unintended duplicates after uncertain UI interactions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1562",
+      "title": "Enhanced Kling Video Execution Calibration in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "kling",
+        "video",
+        "calibration",
+        "tests",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update improves the Kling video execution by accurately parsing top-level media URL fields and switching the default model to the production-validated 'kling-v3'. It also includes new regression tests to ensure compatibility with the updated response structure. The changes enhance the reliability of video generation tasks, as evidenced by successful task completions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1560",
+      "title": "Enhance task polling for Kling and Suno in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "task-polling",
+        "bug-fix",
+        "improvement",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update modifies the task polling mechanism for Kling and Suno to use the documented `id` field instead of `task_id`. It preserves the existing Seedream `id` contract and includes a fallback for empty responses. The changes ensure that Poivelle accurately records task states, improving reliability in task management."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthBackend#333",
       "title": "Clean Up Connection JSON Residue in Backend 🚀",
       "tags": [
