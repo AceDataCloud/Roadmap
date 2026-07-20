@@ -3,6 +3,134 @@
   "date": "2026-07-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1566",
+      "title": "Align TTAPI Suno Helper Responses in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "ttapi",
+        "suno",
+        "mountsea",
+        "update",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update restores the MountSea `/suno/mashup-lyrics` route following a change in the TTAPI production response from 404 to 200. It aligns the Mashup Lyrics output with the current TTAPI data contract, ensuring consistency in fields like `status`, `tags`, `text`, and `title`. Additionally, it retains `is_public` and `source_audio_url` in the Persona List items to match the latest TTAPI specifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1068",
+      "title": "Enhance Invoice Status Notifications in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "notifications",
+        "invoices",
+        "stripe",
+        "email",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces reliable notifications for issued, rejected, and voided invoices using Tencent SES service templates. It ensures notifications are localized by invoice region and sent only after transaction commits, improving user experience and tracking. Additionally, it implements strict validation for Stripe webhook signatures and enhances the testing suite with new database-free tests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#822",
+      "title": "Enhance Invoice Workflow and Visibility in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "invoice",
+        "frontend",
+        "ui",
+        "improvement",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update improves the admin invoice table by implementing the correct backend pagination and displaying all invoice applications by default. Key changes include clarifying invoice states, enhancing the layout for better mobile behavior, and adding focused UI regression tests. Overall, these enhancements aim to streamline the invoice management process and improve user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#823",
+      "title": "Launch Complete BrowserAgent V1 Tool Set in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "browseragent",
+        "frontend",
+        "deployment",
+        "tools",
+        "v1"
+      ],
+      "public": false,
+      "summary": "This update implements the full 26-tool BrowserAgent launch catalog on protocol V1, enhancing the authorization capabilities during pairing. Key changes include the addition of bounded observation and deterministic interaction, while unsupported local modes are now explicitly fail-closed. The validation process has successfully passed all tests, ensuring a robust deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1561",
+      "title": "Launch Complete BrowserAgent V1 Tool Registry in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "browser",
+        "registry",
+        "v1",
+        "schemas",
+        "launch"
+      ],
+      "public": false,
+      "summary": "This update defines the complete 26-tool BrowserAgent launch registry directly on protocol V1. Key changes include replacing pre-launch aliases with final tool names, publishing strict JSON schemas for multi-mode browser calls, and enforcing these schemas server-side. This is the first V1-only launch PR, and it should be merged with the corresponding AuthBackend and PlatformFrontend implementations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#334",
+      "title": "Finalize BrowserAgent V1 Capabilities in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "browser",
+        "capabilities",
+        "backend",
+        "update",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update defines the final capabilities for BrowserAgent V1, mapping 26 tools to 25 authorization capabilities. It removes outdated labels and validates the pairing capability advertisements against the final V1 allowlist. Additionally, the Xiaohongshu browser connector policy has been updated to reflect these final capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#821",
+      "title": "Enhance Invoice Status Display in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "invoice",
+        "responsive",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update improves the presentation of invoice statuses on order details by separating the invoice label from its status and actions using a responsive layout. Ineligible orders are now displayed as a subdued informational callout with an icon, while existing behaviors for invoice application, cancellation, status, and download remain intact. The changes ensure a cleaner and more user-friendly interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#820",
+      "title": "Enhance WeChat Security Verification Flow in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "wechat",
+        "security",
+        "frontend",
+        "verification",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update introduces a new WeChat security verification form, allowing users to enter a 4–8 digit code during the login process. Key changes include improved polling for verification status and handling of different outcomes such as rejected and pending codes. The implementation also includes multilingual support with updated text for various languages."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#181",
       "title": "Enhance WeChat Verification Flow in Wisdom 🚀",
       "tags": [
