@@ -3,6 +3,193 @@
   "date": "2026-07-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Index#273",
+      "title": "Auto-attach feature implemented in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "feature",
+        "browser",
+        "auto-attach",
+        "update"
+      ],
+      "public": false,
+      "summary": "The documentation for the auto-attach feature in the browser-device-bridge has been updated to reflect its successful implementation. Key changes include the introduction of origin-scoped capability grants, allowing for runtime gating without the need for local cookie domains. This update enhances tab management by enabling auto-adoption of same-origin tabs and self-healing on navigation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#837",
+      "title": "Clean Up API Test Dropdown in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "cleanup",
+        "frontend",
+        "i18n",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update removes the obsolete `/api/auth/status` option from the Wisdom appliance API test dropdown and its corresponding i18n key across all locales. This change is a follow-up to the removal of the `GET /api/auth/status` endpoint, ensuring that the frontend no longer references a non-existent API. The adjustments enhance the user experience by preventing 404 errors when selecting the outdated option."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1579",
+      "title": "Update logout verification to use /api/status in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "docs",
+        "wisdom",
+        "api",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update modifies the Wisdom golden-image runbook to utilize the `/api/status` endpoint for logout verification, replacing the deprecated `/api/auth/status`. The change ensures that the readiness check is streamlined, confirming logout status through the new endpoint without any code path alterations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#186",
+      "title": "Streamlined Auth Endpoint by Removing Redundant Status Check in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "auth",
+        "cleanup",
+        "api",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update removes the redundant `GET /api/auth/status` endpoint from the Wisdom backend, consolidating functionality into the existing `GET /api/status` endpoint. Key changes include the deletion of the `login_status()` function and associated tests, along with updates to documentation to reflect this change. The impact is a cleaner API surface and improved efficiency in status checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#668",
+      "title": "Enhance Personal WeChat Task Polling with Time Import in Skills ⏰",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "bugfix",
+        "testing",
+        "personal-wechat",
+        "python"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/668",
+      "summary": "This update imports the standard library time module for improved task polling in Personal WeChat. Additionally, a regression test has been added to ensure successful queued-task completion. The changes have been validated with passing tests and no compilation errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#836",
+      "title": "Enhance Icon Alignment in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "icons",
+        "layout",
+        "css"
+      ],
+      "public": false,
+      "summary": "This update improves the layout of various icons across the console pages, ensuring better alignment and visual consistency. Key changes include centering email marketing metrics and deployment card icons, as well as adjustments to wallet address icons. These enhancements contribute to a more polished user interface in the PlatformFrontend."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#835",
+      "title": "Fix untranslated header in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "frontend",
+        "bugfix",
+        "localization"
+      ],
+      "public": false,
+      "summary": "The order-list page now correctly displays the translated header for the operation column by using the existing `order.field.actions` key. This change resolves the issue of showing a raw, untranslated string and ensures consistency across all 12 locales. No new localization keys were added, simplifying the maintenance of translations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1577",
+      "title": "Enhance K3 with Price-Safe Fallback in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "fallback",
+        "billing",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces a price-safe fallback for the `kimi-k3` model, allowing it to route requests to available `kimi-k2` models until a live upstream is established. The change ensures that billing is done at the requested `k3` rate, maintaining revenue integrity. Additionally, tests have been updated to reflect this new fallback mechanism, ensuring robust functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#272",
+      "title": "Enhance frictionless attach design in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "design",
+        "browser",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces the design for a zero-manual-attach browser control, detailed in the new document for frictionless attachment. Key features include AI-triggered tab attachment and a robust authorization mechanism based on connector installation. The documentation also outlines the implementation status and highlights the need for owner review before merging."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#834",
+      "title": "Strengthen Origin Validation for Extension Bridge in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "security",
+        "extension",
+        "validation",
+        "testing",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update enhances the security of the extension's content script by implementing an explicit origin allowlist for the page↔extension cookie bridge. Key changes include the addition of a new file for origin validation and modifications to the message handler to ensure only trusted origins can communicate. The implementation also includes new tests to verify the allowlist behavior and prevent future drift in the manifest."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#271",
+      "title": "Revamp Browser Agent Execution Engine in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "browser",
+        "architecture",
+        "security",
+        "update",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update introduces a new architecture for the Browser Agent, moving away from the previous custom implementation to a more robust and isolated package. Key changes include the integration of Chrome APIs, a refined accessibility hierarchy, and enhanced policy capabilities, which collectively improve reliability and security. The transition aims to streamline operations and ensure a more durable execution environment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1576",
+      "title": "Exciting New Narrative Blueprints Added in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "narrative",
+        "blueprints",
+        "api",
+        "video",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces new narrative production blueprints for 60-second lyric music videos and milestone documentaries, each featuring 12 narrative cues and a dedicated managed operation. Key enhancements include a cost-aware motion profile and improved API endpoints for blueprint cataloging and project creation. The changes aim to streamline the narrative creation process while ensuring robust validation and error handling."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#832",
       "title": "Enhance Browser Agent Snapshot Rendering in Frontend Web 🚀",
       "tags": [
