@@ -3,6 +3,247 @@
   "date": "2026-07-20",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#333",
+      "title": "Clean Up Connection JSON Residue in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "cleanup",
+        "backend",
+        "migration",
+        "api",
+        "metadata"
+      ],
+      "public": false,
+      "summary": "This update removes unnecessary fields from the Connection metadata, specifically `browser_origins` and `required_capabilities`, streamlining the data structure. It also eliminates migration-only markers while preserving historical connection rows. The changes enhance the API's response efficiency and maintain essential OAuth metadata integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#269",
+      "title": "Enhance MountSea Suno JSON Parity with Comprehensive Evidence in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "json",
+        "documentation",
+        "validation",
+        "evidence",
+        "audit"
+      ],
+      "public": false,
+      "summary": "This update introduces a complete set of paired JSON data for MountSea Suno, including 32 detailed comparison tables and full request/response validation. Key additions include comprehensive action coverage for `/suno/audios`, along with strict OpenAPI validation and machine-readable evidence files. The findings highlight significant differences in audio handling and task retrieval between MountSea and TTAPI."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1066",
+      "title": "Publish verified Agent client variants in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "mcp",
+        "agent",
+        "verification",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces 21 evidence-backed MCP variants across six Agent clients, enhancing project/user scope and platform selectors for Windows, macOS, and Linux. The changes include a new Fish compiler regression for six apps and the verification of 35 variants, all passing the freshness gate. Pending clients like Cursor and VS Code will be addressed once equivalent evidence is available."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1559",
+      "title": "Enhance Provider Polling SLA Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "provider",
+        "polling",
+        "sla",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of provider tasks in the reconciliation process by ensuring that tasks with known IDs are retained until their configured timeout. It also maintains a three-attempt limit for idempotent redispatches when no task ID is returned. Comprehensive tests confirm the stability and effectiveness of these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#332",
+      "title": "Streamline Connection Metadata by Removing Legacy Auth Method in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "migration",
+        "cleanup",
+        "backend",
+        "oauth",
+        "serializer"
+      ],
+      "public": false,
+      "summary": "This update removes the redundant `Connection.metadata.auth_method` key from existing rows using an idempotent PostgreSQL JSONB migration. The legacy key is defensively hidden in the `ConnectionSerializer` during the rollout, ensuring that nested OAuth protocol metadata remains intact. The migration has been validated with comprehensive tests, confirming its effectiveness without altering critical connection data."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#819",
+      "title": "Strengthen BrowserAgent Functions in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "security",
+        "browser",
+        "frontend",
+        "update",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update enhances the security of active BrowserAgent functions, including click, key, and screenshot capabilities. Key changes include blocking sensitive labels and cross-origin interactions, while refining key support to only allow `Enter` and `Escape`. The improvements ensure that page snapshots maintain their integrity and that screenshot captures are accurately tied to the active tab."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1065",
+      "title": "Enhance admin order creation with improved locking in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "postgresql",
+        "django",
+        "testing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update refines the admin order creation process by restricting the `SELECT ... FOR UPDATE` lock to the Application row, ensuring that the nullable Service relation is eagerly loaded without unnecessary locks. A new PostgreSQL regression test has been added to validate the functionality with a Usage Application where the service is NULL. Overall, this fix addresses a critical HTTP 500 error encountered in production, enhancing stability and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1558",
+      "title": "Exciting New Commercial TVC Workflow Added in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "api",
+        "blueprint",
+        "tvc",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces the `commercial.tvc@1` Project schema along with a 40-second PulseCam X1 commercial blueprint featuring 10 shots across 6 acts. New APIs for blueprint creation and storyboard projection have been implemented, enhancing the Project Graph capabilities. Additionally, managed execution is now secured with superuser checks and an AceDataCloud API token, ensuring robust cost management and reconciliation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1556",
+      "title": "Fix run state and deployment issues in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "deployment",
+        "validation",
+        "jwt",
+        "poivelle"
+      ],
+      "public": false,
+      "summary": "This update addresses critical issues in the Poivelle deployment process and execution run state. Key changes include the addition of a missing deployment script, improved error handling for deployment failures, and enhancements to workspace membership discovery for JWT actors. The changes have been validated with comprehensive tests, ensuring stability and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1064",
+      "title": "Enhance UTF-8 Decoding for Agent Clients in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "utf-8",
+        "decoding",
+        "backend",
+        "agent",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update implements explicit UTF-8 decoding for client stdout and stderr across all runners, preventing crashes from malformed bytes. Key improvements include replacing invalid bytes and preserving ASCII assertions, ensuring robust output handling. The changes have been validated with 54 passing tests and a clean Ruff check."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1063",
+      "title": "Enhance Agent Evidence Handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "agent",
+        "codex",
+        "windows",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update improves the execution of npm shims on Windows by utilizing isolated cmd.exe. It also marks Codex project fixtures as trusted before testing and documents the trust prerequisite. Key validation steps were completed, including passing 53 Agent tests and ensuring proper configuration parsing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#268",
+      "title": "Revalidate MountSea Suno Parity in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "suno",
+        "mountsea",
+        "validation",
+        "voice",
+        "production"
+      ],
+      "public": false,
+      "summary": "This update focuses on the revalidation of the full 13-route public Suno surface following the MountSea production rollout. Key changes include successful comparisons of the Sea channel with the default provider across various levels, and documentation of all 17 `/suno/audios` actions with production task evidence. The Voice Persona workflow has been completed, although there is a current limitation with persona-song capacity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1557",
+      "title": "Enhance Voice Persona Affinity Handling in Platform Service 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "voice",
+        "metadata",
+        "affinity",
+        "playlist",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update preserves the `voicePersona/complete.vocal_clip_id` as private account-affinity metadata, ensuring that the same-account clip is utilized for VOX persona playlist creation. It introduces fail-closed mechanisms for legacy personas and missing playlist IDs while maintaining the existing public response schemas. Comprehensive tests confirm the stability and reliability of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1054",
+      "title": "Complete Whitelabel Earning Manual with Connectors in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "whitelabel",
+        "api",
+        "connectors",
+        "content-marketing",
+        "earning"
+      ],
+      "public": false,
+      "summary": "This PR expands the 'Earning' section by adding 24 new Chinese documents, creating a comprehensive manual on whitelabel strategies, referral mechanics, and API resale. Key additions include practical guides for using connectors across various platforms like Bilibili, CSDN, and LinkedIn, enhancing content marketing capabilities for developers. The updates ensure accurate representation of platform functionalities and provide clear guidelines for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1062",
+      "title": "Restoring Deploy Permissions for Smooth Builds in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "permissions",
+        "backend",
+        "deploy",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update restores the `contents: write` permission for the build-number action, ensuring that the deployment process can create the next build-number ref without encountering HTTP 403 errors. The serialized deployment concurrency and other scoped permissions remain intact, allowing for efficient and secure deployments."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#818",
       "title": "Enhance Document Navigation with Expand-All Feature in Frontend Web 🚀",
       "tags": [
