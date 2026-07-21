@@ -3,6 +3,38 @@
   "date": "2026-07-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1582",
+      "title": "Enhance LLM Stream Reliability in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "llm",
+        "streaming",
+        "reliability",
+        "timeout",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update improves the reliability of LLM stream handling by implementing retries for stalled first-token streams, allowing up to three attempts if no meaningful SSE event is received within 60 seconds. Additionally, the timeout for post-first-event streams has been extended to 600 seconds, and measures have been taken to prevent orphaned requests when clients disconnect. The changes have been validated with comprehensive tests, ensuring robust performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1075",
+      "title": "Remove Incorrect `type` Field from Cursor MCP Config in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "mcp",
+        "cursor",
+        "backend",
+        "configuration"
+      ],
+      "public": false,
+      "summary": "This update eliminates the fabricated `type` field from the Cursor MCP configuration template, aligning it with official documentation. The change ensures that the configuration is accurate and prevents confusion for users copying the template. This fix is part of a preventive measure before the MCP variants are verified and made live."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#1073",
       "title": "Revamped Earning Documentation in Backend 🚀",
       "tags": [
