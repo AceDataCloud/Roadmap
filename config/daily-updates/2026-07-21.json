@@ -3,6 +3,55 @@
   "date": "2026-07-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1076",
+      "title": "Update Suno Pricing to 0.77 Credits in Backend 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "suno",
+        "backend",
+        "updates",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update raises the pricing for Suno music generation actions from 0.55 to 0.77 Credits. The changes ensure that the runtime API billing and service-page display pricing remain aligned. Additionally, focused regression tests have been added for the adjusted actions while maintaining checks for unchanged actions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#671",
+      "title": "Introducing CNBlogs Publishing Skill in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "cnblogs",
+        "publishing",
+        "skills",
+        "api",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/671",
+      "summary": "This update adds a new CNBlogs publishing skill, featuring a CLI and agent that adheres to the official CNBlogs API. Key functionalities include token verification, post management (create, update, delete), and draft handling, ensuring a streamlined user experience. Comprehensive tests validate the implementation, enhancing reliability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#340",
+      "title": "Introducing CNBlogs PAT Publishing Connector in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "connector",
+        "publishing",
+        "cnblogs",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update adds a new CNBlogs publishing connector that allows users to connect using a personal access token securely. The connector features an official CNBlogs icon and integrates with the existing skill set for enhanced publishing suggestions. Comprehensive testing has been conducted to ensure functionality and reliability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1582",
       "title": "Enhance LLM Stream Reliability in Platform Service 🚀",
       "tags": [
