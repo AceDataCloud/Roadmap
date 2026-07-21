@@ -3,6 +3,134 @@
   "date": "2026-07-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#66",
+      "title": "Revamp of Facilitator with Official x402 v2 in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "enhancement",
+        "deployment",
+        "cleanup",
+        "x402",
+        "postgresql"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/66",
+      "summary": "This update replaces the legacy facilitator with the official x402 version 2.16.0, enhancing support for multiple production rails including Base and Solana. Key improvements include PostgreSQL persistence, two-replica signer locking, and a new deployment at https://facilitator2.acedata.cloud. The cleanup also removes 16 outdated files, streamlining the codebase significantly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1078",
+      "title": "Implement prepaid-period expiry for Wisdom appliances in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "billing",
+        "cronjob",
+        "k8s",
+        "deployment",
+        "management"
+      ],
+      "public": false,
+      "summary": "This update introduces a new hourly CronJob that enforces the prepaid-subscription lifecycle for Wisdom appliances. Key changes include the addition of a management command to handle deployment expirations and a structured logging system for billing events. The implementation ensures that resources are reclaimed only after a grace period, enhancing user experience and resource management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1077",
+      "title": "Launch Prepaid Packages for Wisdom Appliance in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "billing",
+        "features",
+        "subscriptions",
+        "backend",
+        "wisdom"
+      ],
+      "public": false,
+      "summary": "This update introduces three prepaid subscription packages for the Wisdom digital-human appliance, enabling purchase options for both the `wechat-bot` and `wisdom` deployment services. The packages include a 3-day, 7-day, and 30-day option, allowing users to prepay and extend their service duration. This change resolves the previous issue of the appliance being un-buyable due to the absence of available packages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#277",
+      "title": "Introducing Prepaid Billing for Wisdom Appliance in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "billing",
+        "documentation",
+        "wisdom",
+        "subscription",
+        "index"
+      ],
+      "public": false,
+      "summary": "This update adds a new design document for the Wisdom appliance billing model, featuring a prepaid period subscription. Key changes include a structured expiry process and the introduction of three period packages for users. The documentation also outlines the expected margins and resource management strategies to ensure profitability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1583",
+      "title": "Enhance Forensic Validation Contracts in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "forensics",
+        "validation",
+        "api",
+        "enhancement",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces new forensic validation contracts, including versioned reference frames and QC result contracts. Key features include deterministic timeline validation, immutable project-scoped records, and new APIs for forensic report management. These enhancements aim to improve the reliability of video segment validation and ensure explicit error handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#276",
+      "title": "Enhance Poivelle Documentation with Forensics Reference in Index 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "forensics",
+        "privacy",
+        "schema",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update adds the Reference Forensics & Delivery Proof contract to the Poivelle RFC, establishing hard-gate requirements for frame-exact failures. Key documentation improvements include detailed privacy, rights, and consent guidelines, along with an updated plans index that clarifies the schema's capabilities. The changes aim to enhance clarity and compliance for future implementations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#741",
+      "title": "Update Vue to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "vue",
+        "frontend",
+        "dependencies",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps Vue from version 3.5.38 to 3.5.40, incorporating several bug fixes and improvements. Key changes include enhancements in compiler-core, hydration, and runtime-core, which aim to improve performance and stability. The update ensures that the application benefits from the latest features and fixes provided by the Vue team."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#233",
+      "title": "Strengthen WeChat OAuth Callback Handling in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "oauth",
+        "security",
+        "frontend",
+        "weixin",
+        "auth"
+      ],
+      "public": false,
+      "summary": "This update introduces a canonical WeChat OAuth contract, ensuring fixed redirect URIs and single string inputs for redirect and state parameters. It enhances security by rejecting duplicate arrays and removing sensitive logs. The changes aim to prevent prior query contamination and streamline the OAuth flow for both desktop and mobile users."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#1076",
       "title": "Update Suno Pricing to 0.77 Credits in Backend 🎶",
       "tags": [
