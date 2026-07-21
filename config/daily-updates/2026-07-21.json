@@ -3,6 +3,139 @@
   "date": "2026-07-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1597",
+      "title": "Centralized Tool Schema Management in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "revert",
+        "normalization",
+        "code-cleanup",
+        "aichat2",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update reverts the previous change that stripped top-level combinators from tool schemas specific to Claude models. The central OpenAI worker now handles this normalization for all providers, enhancing consistency and reducing redundancy in the codebase. The revert ensures that non-BYOK paths remain fully covered while acknowledging the rare case of BYOK usage for Claude models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1322",
+      "title": "Arabic UI Localization Enhancements in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "localization",
+        "i18n",
+        "arabic",
+        "ui",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1322",
+      "summary": "This update localizes 380 Arabic UI messages across 14 namespaces, replacing outdated English and Chinese placeholders. It introduces an opt-in translator repair mode for existing placeholders and strengthens the i18n CI to reject non-compliant messages. Additionally, validation processes for interpolation variables and HTML-like tags have been implemented to ensure quality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#344",
+      "title": "Exciting New Connectors: Ghost, Habr, and Pinterest Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "connectors",
+        "oauth",
+        "ghost",
+        "pinterest",
+        "habr",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces new connectors for Ghost, Habr, and Pinterest, enhancing our integration capabilities. The Ghost connector allows users to connect their self-hosted sites using the Admin API, while Pinterest's OAuth connector is now available, albeit hidden until further review. Habr continues to utilize a lightweight cookie method, ensuring existing connections remain valid without migration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#678",
+      "title": "Streamlined Habr Cookie Client Integration in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "enhancement",
+        "security",
+        "integration",
+        "validation",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/678",
+      "summary": "This update replaces the heavier Habr BrowserDevice workflow with a lightweight Cookie-authenticated Skill, enhancing performance and security. Key improvements include strict Cookie-domain filtering, CSRF handling, and robust post-publish verification. The integration has been validated against Habr's production environment, ensuring reliability and efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1596",
+      "title": "Fix default TTS format to mp3 for seamless requests in Platform Service 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "tts",
+        "mp3",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where Fish TTS requests without a specified format were returning HTTP 400 errors. By defaulting the body format to 'mp3', the system now ensures that these requests succeed, improving user experience. Additionally, tests have been added to verify the new behavior and prevent future regressions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#36",
+      "title": "Official v2 Payment Payloads Implementation in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "feature",
+        "payment",
+        "X402",
+        "update",
+        "client"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/36",
+      "summary": "This update introduces the official v2 `PaymentPayload`, aligning with the accepted requirements. It includes support for canonical Base, SKALE, and Solana CAIP-2 networks, and implements payment retries via `PAYMENT-SIGNATURE`. Additionally, it maintains compatibility with legacy amount handling while enhancing the overall payment structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1384",
+      "title": "Exciting New Playable Finished Films in Nexior 🎬",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "poivelle",
+        "films",
+        "update",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1384",
+      "summary": "This update introduces visible 'Finished film' badges and separate Play/Copy actions on Poivelle discovery cards. Users can now enjoy real finished films in a full-control player, complete with features like seek, volume, and fullscreen options. Additionally, a new narrative-film category has been added, enhancing the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1594",
+      "title": "New Films Added to Discovery API in Platform Service 🎬",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "discovery",
+        "films",
+        "api",
+        "enhancement",
+        "poivelle"
+      ],
+      "public": false,
+      "summary": "This update introduces three verified Poivelle finished films to the discovery API: PulseCam TVC, 《醒来之前》, and Northstar: Origin. Key enhancements include typed HTTPS-only video URLs, a narrative category, and explicit copyable semantics, ensuring a structured approach to film access and playback. The changes enhance user experience while maintaining strict compliance with media rights and access protocols."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1595",
       "title": "Enhance Pinterest Integration in Platform Service 🚀",
       "tags": [
