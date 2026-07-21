@@ -3,6 +3,412 @@
   "date": "2026-07-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1595",
+      "title": "Enhance Pinterest Integration in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "oauth",
+        "testing",
+        "pinterest"
+      ],
+      "public": false,
+      "summary": "This update maps the Pinterest OAuth provider to the `$PINTEREST_TOKEN` environment variable, enhancing the Pinterest Skill functionality. It includes the addition of tests for the provider environment variable resolver and ensures that no secret values are exposed in the source code. The changes are validated with passing tests and linting checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#677",
+      "title": "Exciting New Skills for Habr, Ghost, and Pinterest in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "features",
+        "skills",
+        "api",
+        "security",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/677",
+      "summary": "This update introduces three new skills: a Habr local-browser skill for managing articles, a Ghost Admin API skill with enhanced security features, and a Pinterest API v5 skill for creating and reading Pins. Each skill requires explicit user confirmation for actions, ensuring a secure and controlled experience. The changes enhance the platform's capabilities and provide users with more tools for content management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#343",
+      "title": "Revamp Feishu Connector Icon for Clarity in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "icon",
+        "update",
+        "backend",
+        "feishu",
+        "connector"
+      ],
+      "public": false,
+      "summary": "This update replaces the broken Feishu connector icon and publisher logo with verified official assets from Feishu's homepage. The new URLs ensure that the images are accessible and correctly displayed, enhancing the user experience. All references to the old icon have been removed, confirming a clean integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1593",
+      "title": "Strengthen Suno Rollout Resilience in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "suno",
+        "mountsea",
+        "error-handling",
+        "dns",
+        "rollout",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update enhances the Suno rollout by fixing DNS lookup issues and improving error handling for async credit-exhaustion failures in MountSea. Key changes include better reporting of provider-owned fields during validation failures and improved diagnostics for callback errors. The overall worker behavior is now more robust, ensuring safer automatic rollouts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1592",
+      "title": "Enhance tool schema handling for Claude & Gemini in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "openai",
+        "schema",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update dissolves top-level combinators for function tools in response to strict upstream requirements from Claude and Gemini, which previously resulted in errors. The changes ensure that non-BYOK clients, including Nexior, receive the same protection against invalid schemas. Comprehensive tests confirm that parameters are preserved and return successful responses across both platforms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1383",
+      "title": "Say Goodbye to Claude Fable 5 in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "cleanup",
+        "ui",
+        "models",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1383",
+      "summary": "This update removes Claude Fable 5 from the Studio Claude model picker and the global chat model registry. All related locale keys and model-name union members have been eliminated, ensuring a cleaner user experience. The backend remains unaffected, maintaining stability across billing, OpenAPI, and other services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#846",
+      "title": "Streamline Wisdom Deploy Wizard to One Screen in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "ui",
+        "i18n",
+        "deployment",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "The Wisdom deploy wizard has been refactored from a four-step process into a single-screen layout, enhancing user experience. Key changes include the integration of subscription plan details and instance specifications on one screen, while maintaining existing deployment logic. Internationalization support has been added for all 12 locales, ensuring a consistent experience across languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1590",
+      "title": "Fix tool-schema arrays for Gemini compatibility in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "gemini",
+        "openai",
+        "schema",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses the issue where Gemini models return HTTP 400 errors due to missing 'items' in array nodes of function-tool JSON Schemas. The worker now injects a permissive 'items: {}' when absent, ensuring compatibility with Gemini while maintaining functionality for other models. Verification through unit tests and live E2E tests confirms that the changes resolve the issue effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#845",
+      "title": "Refactor Deployment Components for Better Modularity in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "frontend",
+        "components",
+        "modularity",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update extracts the appliance-only BillingBar and McpChannel components from Manage.vue, enhancing modularity and maintainability. The new components are now self-contained, allowing for cleaner code in the management page while preserving existing functionality. Key computed properties and methods have been appropriately adjusted to ensure no behavioral regressions occur."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#342",
+      "title": "Enhance Facebook Connector for Studio Chat in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "facebook",
+        "connector",
+        "skills"
+      ],
+      "public": false,
+      "summary": "This update completes the Facebook BYOC connector, enabling it to function within studio chat. Key changes include the addition of required skills for automatic installation and an optional page_id credential field for better integration. These improvements ensure that connected Facebook accounts can now effectively interact with the system, enhancing user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#674",
+      "title": "New Facebook Page Publishing Skill Added in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "facebook",
+        "skills",
+        "api",
+        "connector",
+        "publishing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/674",
+      "summary": "We've introduced a new BYOC connector skill that allows users to publish text, link, and photo posts to their Facebook Page via the Graph API. This skill also enables reading recent posts from the Page, enhancing the functionality of our existing Facebook connector. With this update, users can now effectively manage their Facebook Page content directly from our platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1382",
+      "title": "Eliminate Empty Space Above Veo Config Tabs in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "ui",
+        "veo",
+        "tabs",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1382",
+      "summary": "This update resolves the issue of excessive whitespace above the Veo config tabs by aligning the ActionSelector with the shared 48px scenario-tabs pattern. The tab height has been adjusted from 64px to 48px, eliminating the dead space and ensuring proper alignment with the field labels below. All relevant tests have been updated and passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1578",
+      "title": "Enhance Seedance Mini's First-Frame Functionality in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "seedance",
+        "narrative",
+        "bugfix",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update ensures that Seedance 2.0 Mini operates strictly in first-frame-only mode by removing the unsupported `reference_image` payload and its associated Graph edges. The changes maintain the integrity of the identity through the selected refined first-frame Artifact while keeping Seedance Fast transitions unchanged. Validation tests confirm that all narrative blueprints function correctly without regressions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1588",
+      "title": "Exciting New Discovery Features in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "discovery",
+        "features",
+        "projects",
+        "community",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces an authenticated Poivelle discovery feed featuring nine official works and community workflows. Users can now create complete projects with a single click, ensuring community listings are tenant/site scoped while maintaining creator privacy. The changes enhance project creation and discovery processes, making it easier for users to access and utilize various templates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#441",
+      "title": "Updated V8.1 MCP Guidance for Clarity in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "mcp",
+        "v8.1",
+        "guidance",
+        "documentation",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/441",
+      "summary": "This update sets the default MCP version to V8.1 and corrects prompt guidance, clarifying that V8.1 does not support Quality or Turbo modes. It also separates the rules for V8.0 Alpha from V8.1, removes outdated examples, and ensures the documentation reflects the current capabilities accurately. Comprehensive tests confirm the changes are clean and functional."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#534",
+      "title": "Exciting New Midjourney CLI Package Added in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "feature",
+        "cli",
+        "midjourney",
+        "api",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/534",
+      "summary": "We've introduced the `midjourney/` package to the CLI, implementing all 8 API endpoints for seamless interaction with Midjourney. Key commands include `imagine`, `edits`, `videos`, and more, allowing users to generate and manipulate images and videos effortlessly. This addition enhances the functionality of the AceDataCloud CLI, making it a powerful tool for creative projects."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#69",
+      "title": "Strengthen Production Cutover Process in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "production",
+        "security",
+        "testing",
+        "cutover"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/69",
+      "summary": "This update enhances the production cutover process by ensuring only expired legacy authorizations are drained during preflight. Key changes include hardening the preflight pod's security settings and using the configured canonical Base network. Additionally, new tests have been added to validate these improvements, ensuring a smoother transition to the official v2 settings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1380",
+      "title": "Align Upload Actions for Better Layout in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "layout",
+        "ui",
+        "enhancement",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1380",
+      "summary": "This update enhances the layout of scenario upload actions by pinning them to the right while keeping labels and help icons on the left. Additionally, it restores spacing in the ConfigPanel and adjusts Pika previews to maintain their lifecycle. The changes improve user experience and maintain consistency across components."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1379",
+      "title": "Streamline Voice Model Creation by Defaulting to Private in Nexior 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "privacy",
+        "voice-clone",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1379",
+      "summary": "This update removes the visibility picker from the Fish voice-clone creation panel, simplifying the user interface. Voice models will now always be created as private by default, enhancing user privacy. The payload still sends visibility as 'private', ensuring consistency across the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1381",
+      "title": "Revamp Creator Experience with Prompt-First Home in Nexior 🎬",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "enhancement",
+        "localization",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1381",
+      "summary": "This update introduces a new prompt-first creator home for the `/poivelle` route, enhancing user engagement by showcasing real works and providing one-click project copying. Key features include a searchable feed of projects, improved error handling, and support for 17 locales. The professional Studio workspace remains accessible, ensuring a seamless transition for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#844",
+      "title": "Enhance Currency Price Display in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "pricing",
+        "ui",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update improves the display of currency prices for base packages by reusing the existing `basePackage` prop. Users can now see currency prices before selecting a package, while maintaining the current pricing and discount behavior for selected packages. The changes ensure a seamless user experience without introducing new pricing contracts or frontend logic."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1377",
+      "title": "Enhance V8.1 Capabilities in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "midjourney",
+        "v8.1",
+        "capabilities",
+        "bugfix",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1377",
+      "summary": "This update enforces new capabilities for Midjourney V8.1, including hiding unsupported Quality controls and normalizing selections. Turbo mode is now restricted for image generation while preserving it for video. Comprehensive tests have been conducted to ensure functionality and stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1587",
+      "title": "Enhance Midjourney V8.1 Control Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "midjourney",
+        "quality",
+        "turbo",
+        "testing",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of unsupported Midjourney V8.1 controls by rejecting invalid Quality and Turbo parameters. It ensures that hold mode does not inject unsupported flags and preserves the behavior of V8.0 Alpha Quality. Comprehensive tests have been added to validate these changes and maintain system integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1081",
+      "title": "Enhance V8.1 Billing Capabilities in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "billing",
+        "v8.1",
+        "api",
+        "documentation",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update refines the billing structure for V8.1 by replacing the previous premium rules with two official resolution tiers: SD at 0.216 Credits and HD at 0.351 Credits. It also eliminates unnecessary surcharges and clarifies that V8.1 supports Fast and Relax modes only, while documenting these changes in the API and relevant documentation. Comprehensive validation has confirmed the accuracy of these updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1586",
+      "title": "Normalize Claude Tool Schemas for Better Compatibility in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "schema",
+        "claude",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update prevents Claude chat requests from forwarding unsupported top-level schema combinators, ensuring compatibility with the Claude proxy. The changes preserve nested schema constraints while leaving non-Claude model requests unaffected. Validation tests confirm that the modifications enhance functionality without introducing errors."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1378",
       "title": "Enhance Pending Task Metadata Display in Nexior 🚀",
       "tags": [
