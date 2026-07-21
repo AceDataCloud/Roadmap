@@ -3,6 +3,134 @@
   "date": "2026-07-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1378",
+      "title": "Enhance Pending Task Metadata Display in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "metadata",
+        "testing",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1378",
+      "summary": "This update introduces the display of Nano Banana task metadata, including model, resolution, aspect ratio, action, and task ID, while the generation is still pending. Existing success and failure rendering is preserved once a response is received, and regression coverage has been added for the pre-response state. Comprehensive validation has confirmed the functionality across various task previews."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#341",
+      "title": "Launch Feishu Store App Connector in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "feishu",
+        "integration",
+        "backend",
+        "connector"
+      ],
+      "public": false,
+      "summary": "This update introduces the Feishu Store App OAuth connector to the Studio connector catalog, enhancing integration capabilities. Key changes include the injection of Feishu credentials into AuthBackend and the implementation of a connection refresh CronJob. The integration ensures that invalid refresh tokens are rejected, maintaining secure access to Feishu's APIs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1376",
+      "title": "Enhance Voice Model Controls Visibility in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "enhancement",
+        "fish",
+        "controls"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1376",
+      "summary": "This update improves the visibility and train-mode controls in the Fish voice-clone create panel by removing the 'small' size attribute from the radio groups. As a result, these controls now match the default size of surrounding elements, enhancing consistency and usability. The change involves a minor template adjustment with no impact on functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#843",
+      "title": "Enhance Subscription Flow in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "subscription",
+        "deployment",
+        "frontend",
+        "i18n",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update integrates the prepaid subscription gate into the Wisdom deploy funnel, enhancing the user experience by ensuring only subscribed users can deploy appliances. Key changes include modifications to the Wisdom and Buy components for better handling of subscription checks and redirect logic, as well as improvements in internationalization support. The validation process confirms that all changes are clean and functional."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1080",
+      "title": "Enforce Active Subscription for Wisdom Deployments in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "billing",
+        "deployments",
+        "backend",
+        "subscriptions",
+        "k8s"
+      ],
+      "public": false,
+      "summary": "This update introduces a requirement for an active subscription to deploy Wisdom appliances, closing the last billing bypass. Non-superuser deployments of `k8s_appliance` will now return a 402 error if the subscription is expired or missing, while other deployment types remain unaffected. This change ensures that all new deployments are gated appropriately, enhancing billing integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#60",
+      "title": "Upgrade Django to 5.2.16 in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "upgrade",
+        "django",
+        "security",
+        "dependencies"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/60",
+      "summary": "This update bumps Django from version 3.2.25 to 5.2.16, enhancing security and performance. Key fixes include addressing multiple CVEs and ensuring better response handling. The changes in the poetry.lock and pyproject.toml files reflect the updated dependencies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#275",
+      "title": "Revamped Browser Device Bridge Architecture in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "architecture",
+        "browser",
+        "cloud",
+        "security",
+        "implementation"
+      ],
+      "public": false,
+      "summary": "This update consolidates the previous conflicting Browser Device Bridge proposals into a single, actionable architecture driven by cloud aichat2 for real Chrome execution. Key changes include the introduction of a unified extension model, clear responsibilities for various components, and a focus on security and reliability without backward compatibility. The implementation plan outlines a structured rollout with detailed testing and validation processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#207",
+      "title": "Enhance Credential Limits Enforcement in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "billing",
+        "credentials",
+        "gateway",
+        "security",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update implements stricter enforcement of credential request limits within the billing path of the Gateway. It ensures that requests are rejected if the combined used amount and estimated cost exceed the defined limit, preventing overspending. Additionally, it introduces new utility functions to handle credential limit checks and maintains existing behaviors for free requests."
+    },
+    {
       "id": "gh:pr:AceDataCloud/FacilitatorX402#68",
       "title": "Streamline and Modernize Facilitator in x402 🚀",
       "tags": [
