@@ -3,6 +3,72 @@
   "date": "2026-07-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1374",
+      "title": "Enhance Production Workflows in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "workflow",
+        "usability",
+        "localization",
+        "video"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1374",
+      "summary": "This update transforms Poivelle's backend controls into user-friendly production workflows, allowing users to review project costs, inspect run details, and compare Takes. Key features include video clip reordering, forensic failure diagnostics, and support for multiple locales. The changes improve usability and maintain existing API functionality, ensuring a seamless transition for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1584",
+      "title": "Enhance Media Quality Gates for Production in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "quality",
+        "media",
+        "production",
+        "enhancement",
+        "verification"
+      ],
+      "public": false,
+      "summary": "This update implements stringent quality gates for media compositions in production, ensuring that only artifacts meeting specific criteria are committed. Key changes include the enforcement of frame count and FPS verification, as well as the introduction of automatic quality evidence in the production review workflow. These enhancements aim to mitigate risks associated with media quality and improve overall reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#67",
+      "title": "Enhance Documentation and Production Deployment in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "documentation",
+        "deployment",
+        "migration",
+        "validation",
+        "x402"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/67",
+      "summary": "This update introduces comprehensive documentation for the v2 migration, detailing architecture changes, client-visible updates, and rollback procedures. Key enhancements include aligning production deployments with validated candidates, implementing health probes, and deploying a reconciliation CronJob for improved stability. The changes ensure a smoother transition and robust validation processes for the x402 system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#840",
+      "title": "Enhance Subscription Management UI for Wisdom Appliance in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "subscription",
+        "billing",
+        "i18n",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new UI for users to buy or renew subscriptions for the Wisdom appliance, enhancing the billing experience. Key features include a dedicated billing bar in the management view, which displays subscription status and a countdown to expiry, as well as improved internationalization support across multiple languages. The changes ensure a seamless user experience while maintaining existing functionality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/FacilitatorX402#66",
       "title": "Revamp of Facilitator with Official x402 v2 in x402 🚀",
       "tags": [
