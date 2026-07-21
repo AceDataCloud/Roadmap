@@ -1,0 +1,52 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-21",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1073",
+      "title": "Revamped Earning Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "update",
+        "backend",
+        "marketing",
+        "whitelabel"
+      ],
+      "public": false,
+      "summary": "This update overhauls the earning documentation, removing references to Nexior deployment and replacing them with a no-code Studio white-label setup. A total of 30 document files were modified or added, featuring real screenshots and examples to enhance clarity and accuracy. Key improvements include updated marketing content and connector visuals, ensuring a more user-friendly experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1074",
+      "title": "Fix Skill Install Command to Use Release Tags in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "skills",
+        "backend",
+        "validation",
+        "release"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the Skill install command was incorrectly using a SHA, which led to silent failures. The command now correctly pins to a published Skills release tag, ensuring that the correct version is installed. All relevant services have been updated and validated, resulting in successful tests and a clean implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#743",
+      "title": "Update markdown-it-anchor to 9.2.1 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps the markdown-it-anchor dependency from version 9.2.0 to 9.2.1. The new version preserves the level of inline tokens in header links, enhancing the functionality of the markdown parser. This change is expected to improve the overall rendering of markdown content in the application."
+    }
+  ]
+}
