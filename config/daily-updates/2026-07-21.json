@@ -3,6 +3,89 @@
   "date": "2026-07-21",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#68",
+      "title": "Streamline and Modernize Facilitator in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "refactor",
+        "docker",
+        "deployment",
+        "cleanup",
+        "modernization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/68",
+      "summary": "This update removes obsolete scaffolding and consolidates builds into a single non-root Dockerfile. Key changes include the removal of outdated manifests and settings, alongside a modernization of the deployment workflow to align with current Docker actions. All tests passed successfully, ensuring stability and performance improvements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1585",
+      "title": "Standardized Poivelle Billing Implementation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "security",
+        "deployment",
+        "update",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update aligns the Poivelle provider's billing process with the standard architecture used across AceDataCloud services. Key changes include the removal of outdated endpoints and the introduction of a new credential system for external runs, enhancing security and efficiency. The deployment has been validated with all tests passing, ensuring a smooth transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1375",
+      "title": "Enhance Poivelle Billing Credentials in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "billing",
+        "credentials",
+        "poivelle",
+        "integration",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1375",
+      "summary": "This update aligns Poivelle with Nexior's standard billing practices by implementing a temporary credential system for external provider closures. Key changes include the creation of a 24-hour credential that adheres to existing cost rules and usage recording, ensuring a seamless integration with public APIs. The update also improves error handling and credential management, enhancing overall system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#64",
+      "title": "Enhance Wisdom Channel Replies with Polling Fallback in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "enhancement",
+        "polling",
+        "webrtc",
+        "testing",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/64",
+      "summary": "This update introduces a polling fallback for Wisdom channel replies, ensuring that WeChat messages can be answered even when WebSocket connections are active. Key improvements include deduplication of messages, stable conversation IDs, and enhanced pagination handling. The changes have been verified with comprehensive tests and live checks, ensuring robust functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#278",
+      "title": "Enhance Billing Integration and Refactor Manage Page in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "billing",
+        "refactor",
+        "ui",
+        "deployment",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update introduces a new design document for integrating billing into the deployment funnel, addressing key issues where billing was only accessible through the renewal path. The refactor of the Manage page aims to streamline components and improve user experience by separating appliance-specific logic. Additionally, the configuration wizard has been simplified to enhance usability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1374",
       "title": "Enhance Production Workflows in Nexior 🚀",
       "tags": [
