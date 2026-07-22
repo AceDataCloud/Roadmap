@@ -3,6 +3,282 @@
   "date": "2026-07-22",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#857",
+      "title": "Enhance Usage Page with Credential Filter in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "api",
+        "filter",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update introduces a new multi-select dropdown for filtering API usage by specific credentials on the Usage page of the developer console. Users can now select their credentials to view detailed consumption data, ensuring consistency across lists, charts, and CSV exports. The implementation also includes necessary internationalization updates and backend adjustments to support the new filtering feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1088",
+      "title": "Enhance API Usage Filtering by Token in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "filter",
+        "backend",
+        "enhancement",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a new filtering capability for API usage by specific credential IDs, allowing users to view usage data for individual tokens. Four API endpoints have been modified to support the `?credential_id=` parameter, enhancing the granularity of data retrieval without compromising security. Additionally, new unit tests have been added to ensure the functionality works as intended."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#854",
+      "title": "Final Browser Device Engine Integrated in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "integration",
+        "frontend",
+        "browser",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update integrates the final Browser Device engine into the PlatformFrontend extension, enhancing capabilities with mandatory CDP/session/command features. Key changes include the implementation of a two-stage Relay owner proof and a durable local ledger, while removing legacy paths. Extensive validation has been completed with successful TypeScript checks and tests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#669",
+      "title": "Upgrade Xiaohongshu to Browser Command V2 in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "xiaohongshu",
+        "browser",
+        "upgrade",
+        "skills",
+        "v2"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/669",
+      "summary": "This update pins Xiaohongshu to the Browser command V2 manifest and replaces 17 authorization entries with a more stable policy class. It retains all ergonomic mappings while ensuring that routes and workflows remain within the Skill layer. Validation tests have confirmed the successful implementation of these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1388",
+      "title": "Enhance Browser Execution Experience in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "browser",
+        "ux",
+        "enhancement",
+        "nexior",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1388",
+      "summary": "This update replaces prototype browser states with a finalized session lifecycle and typed recovery actions. Key improvements include binding scheduled browser execution to specific connection revisions and surfacing session provenance on artifacts. Additionally, the fallback for Desktop local execution has been removed, streamlining the user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1599",
+      "title": "Finalizing Aichat2 Execution Features in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "aichat2",
+        "browser",
+        "consent",
+        "session"
+      ],
+      "public": false,
+      "summary": "This update implements key features for the Aichat2 execution, including the exposure of browser schemas and enhanced session management. It introduces new tools for consent receipt handling and removes legacy components, ensuring a more streamlined browser interaction. Comprehensive tests have validated the changes, paving the way for improved functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#234",
+      "title": "Enhance Device Management UI for Browsers in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "ui",
+        "frontend",
+        "device-management",
+        "localization",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update finalizes the device management UI for browsers, incorporating the complete BrowserDevice summary contract. Key improvements include enhanced connection details, better handling of revoked devices, and localization support across 17 languages. The UI now provides a more intuitive experience for managing active sessions and device compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#346",
+      "title": "Enhance Browser Authority Grants in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "security",
+        "backend",
+        "authorization",
+        "improvements"
+      ],
+      "public": false,
+      "summary": "This update replaces the generic browser-grant surface with a more robust authority system, including session management and immutable receipts. Key features include enhanced security measures, such as pre-session signed attestations and device/account tombstones, ensuring a more reliable and secure user experience. The changes also streamline the authorization process and improve the overall architecture of the AuthBackend."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#37",
+      "title": "Migrated Examples to Official v2 Wire in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "migration",
+        "cleanup",
+        "examples",
+        "v2",
+        "payment"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/37",
+      "summary": "This update successfully migrates all public examples and E2E scenario scripts from the legacy `X-Payment` to the official `PAYMENT-SIGNATURE`. Key changes include the introduction of canonical CAIP-2 network IDs and the v2 `amount` field, along with a static guard to prevent legacy wire examples from being returned. Compatibility with the production Gateway remains intact, ensuring external clients can still utilize the legacy system while transitioning to the new standard."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1087",
+      "title": "Cleanup of Disabled X402 Bulk Scripts in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cleanup",
+        "backend",
+        "scripts",
+        "removal"
+      ],
+      "public": false,
+      "summary": "This update removes the permanently disabled x402b Base, Solana, and swarm synthetic-payment scripts, along with their associated CronJobs. Additionally, stale references to these scripts in Tencent Cloud credential documentation have been eliminated. The cleanup enhances the overall codebase by removing unnecessary components and ensuring no production references remain."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#70",
+      "title": "Retired facilitator2 canary workflow in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "cleanup",
+        "workflow",
+        "documentation",
+        "production",
+        "migration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/70",
+      "summary": "This update removes the retired facilitator2 canary workflow along with all associated deploy and canary manifests. The README and migration documentation have been updated to reflect the successful cutover to the official-v2 production. All production deployment and rollback constraints remain intact, ensuring a smooth transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1598",
+      "title": "Enhance Browser Relay Sessions in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "browser",
+        "relay",
+        "security",
+        "redis"
+      ],
+      "public": false,
+      "summary": "This update implements a two-stage device-signed owner proof for Relay sessions, enhancing security and session management. Key changes include the introduction of explicit session lifecycle events, Redis queue delivery for session events, and improved validation for session grants and time attestations. These enhancements aim to optimize the browser Relay functionality and ensure robust session handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#855",
+      "title": "Enhance Integration Guide Panel for Theme Consistency in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "theme",
+        "docs",
+        "design"
+      ],
+      "public": false,
+      "summary": "The Integration guide panel on the API docs page has been updated to align with the light/dark theme of the rest of the documentation. Key changes include the use of Element Plus theme variables for the panel's styling, ensuring a cohesive look and improved readability. The embedded code terminal remains dark by design, preserving its intended aesthetic."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#279",
+      "title": "Enhance Release Closure with Browser Device Bridge Digest Gate in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "release",
+        "browser",
+        "digest",
+        "gate"
+      ],
+      "public": false,
+      "summary": "This update introduces a Browser Device Bridge digest gate to the release closure process, ensuring that all components agree on a single canonical manifest before enabling the feature flag. Key checks include verifying the `wire_contract_digest` and `facade_catalog_digest` across various components. This change aims to maintain compatibility and prevent issues during releases involving the Browser Device Bridge."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1391",
+      "title": "Enhance CI with Separate Concurrency Groups for Mobile Builds in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "mobile",
+        "build",
+        "concurrency",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1391",
+      "summary": "This update introduces distinct concurrency groups for iOS and Android mobile builds, preventing testing and production workflows from canceling each other. By appending production-specific inputs to the concurrency group keys, we ensure that both testing and production builds can run without interference. The daily auto-submit functionality remains unaffected and continues to operate smoothly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#345",
+      "title": "Enhance Device Identity Locking Mechanism in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "security",
+        "testing",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This update implements the authoritative Browser Device Bridge plan, enhancing the locking mechanism for device contracts. Key changes include the introduction of a new wire identity for BrowserDevice and PairingClaim, as well as strict validation processes for device transactions. The migration ensures no compatibility issues with existing models, and extensive testing confirms the robustness of the new features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1591",
+      "title": "Enhance Browser Device Bridge Contract in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "browser",
+        "contract",
+        "validation",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces a new Browser Device Bridge contract, replacing the legacy implementation with a clean, authoritative version. Key features include strict session management, detailed command/result schemas, and comprehensive validation through multiple testing frameworks. The changes ensure improved reliability and security for browser interactions within the Platform Service."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1390",
       "title": "Revamp Project Start with Guided Overview in Nexior 🚀",
       "tags": [
