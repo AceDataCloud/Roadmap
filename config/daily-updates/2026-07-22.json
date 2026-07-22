@@ -3,6 +3,102 @@
   "date": "2026-07-22",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#860",
+      "title": "Enhanced Credential Filter with Grouping and Masked Values in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "enhancement",
+        "frontend",
+        "ui",
+        "usability",
+        "filter"
+      ],
+      "public": false,
+      "summary": "This update refines the credential filter by implementing a grouped dropdown that displays masked token values alongside their names, improving usability. Additionally, the filter row has been narrowed to ensure the Export CSV option is back on the first line, enhancing the overall layout. These changes aim to provide a more intuitive experience for users interacting with the consumption page."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#211",
+      "title": "Enhance x402 Delete Action for Free Access in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "security",
+        "api",
+        "x402",
+        "delete"
+      ],
+      "public": false,
+      "summary": "This update allows x402 callers to delete their own generation-history records without facing a payment challenge. The change adds 'delete' to the free-action allowlist for the `/tasks` API, ensuring that users can perform this action seamlessly. Security measures remain intact, as ownership checks are enforced downstream."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#856",
+      "title": "New Embedded Card Payment Option in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "payment",
+        "stripe",
+        "frontend",
+        "feature",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update introduces an embedded CreditCard payment option on the authenticated order page, utilizing Stripe's Payment Element for seamless transactions on our domain. Key changes include the addition of a new `CreditCardPay.vue` component, enhanced internationalization support, and safety measures for payment confirmation. The feature is gated by specific flags to ensure proper functionality and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1086",
+      "title": "Add embedded Card payment option for HK in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "payments",
+        "stripe",
+        "backend",
+        "feature",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This update introduces the `OrderPayWay.CREDIT_CARD`, enabling an embedded Stripe Payment Element checkout for our second HK Stripe account. The existing US payment flow remains unaffected, ensuring zero risk. Key changes include the addition of a new migration for payment options and server-side handling of payment intent success events."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#50",
+      "title": "Add HK Stripe Account for Credit Card Flow in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "stripe",
+        "payment",
+        "feature",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a second Stripe account for Hong Kong, specifically for the new embedded Credit Card payment method, while retaining the existing US account as the default. Key changes include per-request API key handling and a new account selector for payment intents, ensuring that the HK account operates independently without falling back to the US key. Additionally, necessary deployment configurations have been updated to support this new setup."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1601",
+      "title": "Empower Users with Task Deletion Feature in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "security",
+        "backend",
+        "tasks",
+        "user-control"
+      ],
+      "public": false,
+      "summary": "This update introduces a new 'delete' action for users to hard-delete their own generation-history tasks across multiple Node and Python workers. The implementation ensures robust security measures to prevent unauthorized deletions, requiring both task ID and user ID to be non-empty strings. This backend capability sets the stage for a forthcoming UI button in Nexior, enhancing user control over sensitive records."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#280",
       "title": "Audit Implementation Alignment for Browser Device Bridge in Index 🚀",
       "tags": [
