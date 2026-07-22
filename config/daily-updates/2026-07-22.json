@@ -3,6 +3,39 @@
   "date": "2026-07-22",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Index#280",
+      "title": "Audit Implementation Alignment for Browser Device Bridge in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "audit",
+        "implementation",
+        "browser",
+        "blockers",
+        "alignment"
+      ],
+      "public": false,
+      "summary": "This update includes a comprehensive audit of the Browser Device Bridge implementation against the authoritative plan from September to mid-October. Key blockers have been identified, including conflicts with multiple PRs and incomplete features that prevent merging or enabling the current implementation. The audit clarifies the status of various components and outlines the necessary steps to resolve outstanding issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#536",
+      "title": "Update Midjourney CLI Response Fields to Match OpenAPI Spec in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "update",
+        "midjourney",
+        "cli",
+        "openapi",
+        "fix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/536",
+      "summary": "This update fixes the Midjourney CLI's output for the `shorten` and `translate` commands by aligning the response field names with the OpenAPI specification. The changes include renaming `shortened_prompts` to `prompts` and `translated_content` to `content` in the output display. Additionally, mock fixtures in the tests have been updated to reflect these changes, ensuring consistency across the application."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#857",
       "title": "Enhance Usage Page with Credential Filter in Frontend Web 🚀",
       "tags": [
