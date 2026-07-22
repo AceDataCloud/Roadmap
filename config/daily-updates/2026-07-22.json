@@ -1,0 +1,280 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-22",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#210",
+      "title": "Update custom-auth plugin to 0.13.0 in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "release",
+        "custom-auth",
+        "plugin",
+        "update",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update bumps the TSE Kong `custom-auth` plugin from version `0.12.0` to `0.13.0`, with a focus on forwarding `PAYMENT-SIGNATURE`. The behavior of `access.lua` and `schema.lua` remains unchanged, ensuring compatibility. All tests have passed, confirming the integrity of the release."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#852",
+      "title": "Patch high-severity vulnerabilities in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "security",
+        "frontend",
+        "dependencies",
+        "vulnerabilities"
+      ],
+      "public": false,
+      "summary": "This update addresses two high-severity transitive dev-dependency vulnerabilities in the Extension CI job. The `brace-expansion` and `fast-uri` packages have been updated to secure versions, ensuring that the project passes all validation checks with zero vulnerabilities. No changes were made to the source or package manifest files."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#851",
+      "title": "Align Status Tags and Actions for Consistency in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "design",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update aligns the status tags and adjacent action buttons using Element Plus's native dimensions, ensuring a consistent look across various components. Key changes include adjustments in the order detail, order list, appliance subscription bar, and site domain header. A focused contract has been added to verify the installed Element Plus CSS and the correct pairing of tags and buttons."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1085",
+      "title": "Streamline Skill Installation Process in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "skills",
+        "backend",
+        "update",
+        "validation",
+        "installation"
+      ],
+      "public": false,
+      "summary": "This update removes the pinning of skills to specific tags, allowing for the installation of the latest version directly from the default branch. Key changes include modifications to installation templates, source links, and validation processes, ensuring a smoother and more up-to-date user experience. All tests have passed successfully, confirming the effectiveness of these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1084",
+      "title": "Fix X402 Order Replay Issues in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "x402",
+        "backend",
+        "e2e",
+        "metadata"
+      ],
+      "public": false,
+      "summary": "This update resolves two critical E2E regressions related to X402 order replay functionality. Authenticated owners can now successfully replay Finished/Paid X402 orders and receive cached payment responses without initiating a new settlement. Additionally, settlement receipts are now correctly persisted under the appropriate metadata structure, ensuring compatibility with legacy order data."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/GermeyTech#5",
+      "title": "Automate HK Cluster Deployments in Germey Tech 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "GermeyTech",
+        "ci",
+        "automation",
+        "kubernetes",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces an automated deployment workflow for the HK cluster, triggered by pushes to the main branch. The new GitHub Actions workflow installs kubectl, loads the kubeconfig from a secure secret, and executes the existing deployment script. This streamlines the deployment process, ensuring efficient updates without manual intervention."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/GermeyTech#4",
+      "title": "Updated Footer Copyright for a Cleaner Look in Germey Tech ✨",
+      "tags": [
+        "github",
+        "pr",
+        "GermeyTech",
+        "footer",
+        "update",
+        "text-change",
+        "site",
+        "germey-tech"
+      ],
+      "public": false,
+      "summary": "The footer copyright has been updated across all six pages to remove 'LLC', simplifying the text to '© 2026 Germey Technology. All rights reserved.' This change enhances the visual clarity of the site while maintaining the formal legal name in the contact section. The update was a straightforward text edit with no impact on functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#850",
+      "title": "Fix Wisdom Controls and Appliance Presets Rendering in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "ui",
+        "frontend",
+        "deployment",
+        "accessibility"
+      ],
+      "public": false,
+      "summary": "This update resolves issues with the Wisdom deployment page, ensuring all necessary Element Plus components are properly imported and registered. It also normalizes the schema for resource presets, allowing for a seamless user experience when selecting deployment options. Additionally, the UI has been enhanced for better accessibility and visual clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1385",
+      "title": "Fix TTS Task Error Display in Nexior 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "tts",
+        "ui",
+        "error-handling"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1385",
+      "summary": "This update resolves an issue where failed Fish Audio TTS tasks were incorrectly displayed as pending forever. The failure detection logic has been enhanced to recognize errors based on the response status and message, ensuring users receive clear feedback on task failures. Additionally, a new utility function has been introduced to convert raw error messages into user-friendly formats."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#537",
+      "title": "Updated API Documentation for Latest Models in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "api",
+        "documentation",
+        "updates",
+        "models",
+        "gpt",
+        "grok"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/537",
+      "summary": "This update refreshes the API documentation to reflect the latest flagship models across various families, including OpenAI's GPT-5.6, Grok-4.5, Gemini-3.5-flash, GLM-5.2, and Claude-Fable-5. Key changes include updated keywords, overviews, and examples to ensure consistency with the live platform's source of truth. Historical response snapshots remain intact, preserving the integrity of recorded data."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#676",
+      "title": "Updated flagship models in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "documentation",
+        "ai-chat",
+        "models",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/676",
+      "summary": "This update enhances the `ai-chat` skill's model table by adding the latest flagship chat models from OpenAI, Grok, and Gemini. The models `gpt-5.6-luna`, `gpt-5.6-terra`, `gpt-5.6-sol`, `grok-4.5`, and `gemini-3.5-flash` are now prioritized, ensuring alignment with the platform's source of truth. The changes are automatically propagated through symlinks, maintaining consistency across the documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#443",
+      "title": "Enhance AiChat with New Flagship Models in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "aichat",
+        "models",
+        "update",
+        "testing",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/443",
+      "summary": "This update introduces several flagship chat models to the AiChat MCP, including gpt-5.6, grok-4.5, gemini-3.5-flash, and glm-5.2. These additions align the MCP with the latest platform configurations, ensuring that the AiChatV2Model can accept these models for improved functionality. A new contract test has also been implemented to verify the integrity of these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#374",
+      "title": "Enhance x402 Payment Handling in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "payment",
+        "x402",
+        "sdk",
+        "typescript",
+        "python",
+        "go"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/374",
+      "summary": "This update introduces support for parsing base64 `PAYMENT-REQUIRED` headers across TypeScript, Python, and Go. It ensures that payment handlers receive the necessary canonical requirements and implements robust handling for empty 402 bodies and malformed headers. Additionally, the Go streaming requests now support x402 payment retries, enhancing the overall payment processing capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#209",
+      "title": "Enhance Payment Handling with Official x402 v2 Transport Lane in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "payment",
+        "gateway",
+        "x402",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces the official x402 v2 transport lane, enabling the emission of standard `PAYMENT-REQUIRED` challenges and accepting `PAYMENT-SIGNATURE` for routing to the formal Facilitator. Legacy `X-Payment` handling is preserved for rollback, while improvements in observability and credential limit annotations for Python 3.9 are included. The changes have been validated with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#847",
+      "title": "Upgrade to Official X402 v2 for Wallet Payments in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "payments",
+        "x402",
+        "solana",
+        "evm",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update migrates wallet payment processing to the official `@acedatacloud/x402-client@2026.708.0`, enhancing order signature handling for EVM and Solana. Key changes include replacing the legacy `X-PAYMENT` header with `PAYMENT-SIGNATURE`, improved wallet selection for various networks, and the removal of outdated Solana helpers. The changes ensure a more secure and standardized payment process across platforms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1083",
+      "title": "Enhanced Payment Migration to X402 v2 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "migration",
+        "payments",
+        "backend",
+        "x402",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update successfully migrates console order payments from X402 v1 to the official X402 2.16.0 version. Key changes include the introduction of canonical CAIP-2 challenges, improved authentication for settlement, and the requirement of a transaction identifier before crediting orders. The deployment ensures that production networks are pinned to canonical identifiers, enhancing stability and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#849",
+      "title": "Enhance Console Navigation with New Model List & Developer Docs in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "navigation",
+        "i18n",
+        "ui",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces two new sidebar entries in the developer console: 'Model List' and 'Developer Docs', enhancing user navigation. The sidebar has been reordered to improve accessibility, placing these new links prominently for easier access. Additionally, internationalization support has been added for these new entries across multiple languages."
+    }
+  ]
+}
