@@ -3,6 +3,197 @@
   "date": "2026-07-22",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/X402Backend#11",
+      "title": "Launch Production Runtime for X402 in X402 Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Backend",
+        "production",
+        "deployment",
+        "security",
+        "postgresql",
+        "kubernetes"
+      ],
+      "public": false,
+      "summary": "This update promotes the X402Backend to a fail-closed production resource server, incorporating PostgreSQL for payment durability and enhanced security features like Tencent KMS. Key changes include the integration of signed quotes from PlatformBackend and the introduction of immutable Docker/Kubernetes resources. The deployment process is now staged in Hong Kong, ensuring a robust and secure environment for operations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1053",
+      "title": "Exciting New Features for Signed X402 Contracts in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "x402",
+        "contracts",
+        "authentication"
+      ],
+      "public": false,
+      "summary": "This update introduces a fully signed x402 resource catalog, enhancing internal authentication and pricing calculations. Key improvements include the addition of idempotent usage endpoints and the integration of independent catalog and quote secrets into production. The rollout is designed to maintain existing public routing while providing robust internal functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1607",
+      "title": "Enhance tool call handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "tooling",
+        "testing",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update finalizes the handling of assistant prose before tool calls by flushing the `ThinkTagSplitter` at the terminal `finish_reason`. Key improvements include maintaining early telemetry for tool use and adding regression tests to ensure proper splitting of text. The changes enhance the user experience by ensuring live progress is displayed accurately during tool interactions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Backend#9",
+      "title": "Enhance Live Manifest Generation in X402 Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Backend",
+        "feature",
+        "conformance",
+        "live-manifest",
+        "x402",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new auditable `x402-live-manifest` generator that integrates the frozen 53-case profile with a real provider rail, enhancing the signing of EIP-3009 payloads using the official x402 Python SDK. Additionally, it includes a raw provider profile for runtime-only settlement authentication and normalizes token-domain values in calibration checks. The changes aim to improve conformance tooling without affecting production capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#65",
+      "title": "Increase doctor probe timeout to prevent false negatives in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "timeout",
+        "fix",
+        "channels",
+        "probe",
+        "bug"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/65",
+      "summary": "The timeout for the `channels doctor` probe has been increased from 5 seconds to 15 seconds. This change addresses issues where the probe reported connectivity problems due to cold TLS handshakes taking longer than the previous timeout. With this fix, users will no longer encounter misleading error messages during initial setup."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#861",
+      "title": "Fix WeChat AI Setup Snippet for Smooth Deployment in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "fix",
+        "deployment",
+        "frontend",
+        "webrtc",
+        "codingbridge"
+      ],
+      "public": false,
+      "summary": "This update corrects the WeChat AI agent setup snippet in the appliance console, ensuring users can properly install CodingBridge via pipx. Key changes include the injection of the real base_url, an optional ANTHROPIC block for API key usage, and the addition of a channels smoke test for verification. These adjustments enhance the setup process and prevent common errors related to outdated installations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1092",
+      "title": "Standardize Balance Terminology in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "terminology",
+        "backend",
+        "chinese"
+      ],
+      "public": false,
+      "summary": "This update unifies the terminology for 'Dedicated Balance' across multiple client documentation. The phrase '所属应用余额充足' has been changed to '所属应用的余额充足' in six documents to prevent confusion with the '专属余额' label. This is a purely textual change affecting only the Chinese source files."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1397",
+      "title": "Unify Dedicated Balance Terminology in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "localization",
+        "bugfix",
+        "ui",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1397",
+      "summary": "This update standardizes the terminology for 'Dedicated Balance' across all supported languages in the Nexior application. The changes include updates to the `title.applicationBalance` and `field.remainingAmount` keys, ensuring consistency in user messaging. Additionally, a bug related to the global balance description has been fixed, enhancing clarity for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#862",
+      "title": "Unifying Dedicated Balance Terminology in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "frontend",
+        "localization",
+        "ui",
+        "consistency"
+      ],
+      "public": false,
+      "summary": "This PR standardizes the terminology for 'Dedicated Balance' across the platform, ensuring consistency in multiple languages. Key changes include renaming 'instanceBalance' to 'Dedicated Balance' and correcting related terms in various locales. The adjustments enhance clarity for users interacting with the balance features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1605",
+      "title": "Fix Fish TTS Billing by Reporting Byte Count in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "fix",
+        "fish",
+        "tts",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update addresses the billing issue with Fish TTS by ensuring that the byte count of the input text is reported correctly. The `getRecordMetadata()` method in the `FishTtsHandler` class has been overridden to return both character and byte counts, allowing the billing system to charge accurately based on usage. No changes to pricing have been made, and existing tests confirm that the per-byte pricing remains intact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1395",
+      "title": "Enhance Tool Progress Handling in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "tooling",
+        "ui",
+        "updates",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1395",
+      "summary": "This update improves the handling of tool progress in the Nexior application by separating early tool lifecycle UI from the canonical assistant message content. It ensures that in-progress tools remain visible without splitting words and introduces a new `tool_use_commit` event for finalizing tools, enhancing compatibility with older workers. The changes have been validated with extensive testing and are ready for deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1606",
+      "title": "Enhance Tool Call Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "tooling",
+        "updates",
+        "performance",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update refines how tool calls are processed by treating early tool use events as temporary telemetry rather than final content boundaries. It ensures that tool blocks are only persisted upon complete input, preventing issues with incomplete or aborted calls. The changes improve the overall reliability of tool execution and feedback mechanisms."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1603",
       "title": "Restore Default Audio Format for Fish TTS in Platform Service 🎶",
       "tags": [
