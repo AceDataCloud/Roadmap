@@ -3,6 +3,243 @@
   "date": "2026-07-22",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1622",
+      "title": "Enhance Production Safety Measures in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "production",
+        "safety",
+        "observability",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update disables the activation of the aichat2 browser facade and the Browser Relay tool in production environments. Key observability features such as pairing, authentication, and health checks are preserved for internal readiness. The changes ensure that execution remains gated until all necessary conditions are met for safe operation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1098",
+      "title": "Enhance Fish TTS Pricing Display in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "backend",
+        "updates",
+        "fish-tts"
+      ],
+      "public": false,
+      "summary": "This update improves the Fish TTS pricing table by explicitly displaying the 's2-pro' model instead of a placeholder. The catch-all rule is now hidden, ensuring only relevant models are shown while maintaining billing accuracy. The changes have been validated with successful tests, enhancing clarity for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1620",
+      "title": "Enhance Health Endpoints with Contract Digests in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "health",
+        "browser",
+        "aichat2",
+        "testing",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update exposes the `wire_contract_digest` and `facade_catalog_digest` in the aichat2 `/health` endpoint, as well as the `wire_contract_digest` in Browser Relay readiness responses. Focused tests have been added to ensure the integrity of these runtime response contracts. Overall, the health status codes and dependency readiness semantics remain unchanged."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#351",
+      "title": "Enhance Health Endpoint with Browser Contract in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "health",
+        "backend",
+        "api",
+        "enhancement",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a new public `/health` JSON endpoint that is dependency-free and exposes the Browser Device Bridge's `wire_contract_digest`. The existing plain-text root probe functionality remains intact and has been regression-tested to ensure stability. Overall, this enhancement improves the monitoring capabilities of the AuthBackend."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1096",
+      "title": "Fix grsai balance retrieval for accurate reporting in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "balance",
+        "api",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the grsai balance monitor incorrectly displayed a balance of ¥0. The function now correctly retrieves the account's real spendable balance using the `getCredits` API, ensuring accurate balance reporting and triggering alarms for low balances as intended."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#685",
+      "title": "fix discord skill frontmatter parsing issue in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "bugfix",
+        "yaml",
+        "discord",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/685",
+      "summary": "This update resolves a critical YAML parsing issue in the `discord` skill's frontmatter, which was causing the skill to be silently skipped during synchronization. The problematic colon in the description was removed, allowing the frontmatter to parse correctly and ensuring that the latest content reaches the database. This fix prevents the old read-only discord skill from being served and enhances the overall functionality of the integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#538",
+      "title": "Enhance CLI with Latest Fish API Updates in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "api",
+        "updates",
+        "validation",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/538",
+      "summary": "This update aligns the CLI options for the `fish` command with the latest OpenAPI specifications. Key changes include the addition of new TTS request options, improved validation for JSON inputs, and updated model query filters. These enhancements ensure better compatibility and user experience when interacting with the Fish API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1618",
+      "title": "Exciting Seedance 2.0 Video Deployment in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "deployment",
+        "kubernetes",
+        "seedance",
+        "bananarouter",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update introduces the Kubernetes deployment configuration for the Seedance 2.0 video handler, enhancing the platform's capabilities. Key additions include a new deployment and service YAML, alongside modifications to the README and deployment scripts. The deployment has been successfully verified through Kong, ensuring seamless routing and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#874",
+      "title": "Switch to Hosted Card Payments for Enhanced Security in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "payment",
+        "frontend",
+        "update",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update transitions card payments from an embedded form to a hosted redirect, aligning with the US Stripe implementation. The embedded card component has been removed, and the Stripe payment component now handles both Stripe and card payment methods. This change enhances security and simplifies the payment process for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1095",
+      "title": "Enhance HK PaymentLink for Card Orders in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "payment",
+        "stripe",
+        "invoice",
+        "backend",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update aligns the payment process for Card orders in Hong Kong with the existing US Stripe flow, utilizing hosted PaymentLinks and native invoice emails. Key changes include the addition of an optional account parameter in the payment creation function, modifications to the order view for Card payments, and the implementation of dual-key verification for invoice webhooks. These enhancements ensure a consistent user experience and improved invoice handling across regions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#52",
+      "title": "Enhance Stripe Support for HK Accounts and One-Time Payment Links in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "stripe",
+        "payments",
+        "feature",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces support for a second Stripe account in Hong Kong, allowing for one-time payment links that expire after a single use. Key changes include the addition of a new route for the HK account and modifications to ensure that payment links cannot be reused. The implementation maintains compatibility with existing US payment processes and enhances the overall payment experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1093",
+      "title": "Revamp Fish TTS Pricing with New Models in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "tts",
+        "backend",
+        "updates",
+        "fish"
+      ],
+      "public": false,
+      "summary": "This update introduces a new pricing structure for Fish TTS, offering a 30% discount on the official rate, now set at $10.50 per 1M UTF-8 bytes for models s1, s2-pro, and the newly added s2.1-pro. Key changes include updated API rules, service documentation, and tests to ensure accurate billing per model. The pricing page has been enhanced to reflect these updates, providing clear visibility of the new rates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1617",
+      "title": "Enhance Fish TTS with Per-Model Billing and New Model in Platform Service 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "tts",
+        "features",
+        "models",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces per-model billing for Fish TTS, allowing for separate pricing of the new s2.1-pro model alongside existing models. Key changes include updates to the getRecordMetadata function to report the resolved model and adjustments to the VALID_MODELS array. The new pricing structure is set to 30% below retail, ensuring accurate billing for all models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1619",
+      "title": "Fix credential handling for Browser Relay in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "deployment",
+        "credentials",
+        "documentation",
+        "relay"
+      ],
+      "public": false,
+      "summary": "This update injects the `AUTH_BACKEND_RELAY_TOKEN` from the pre-provisioned Browser Relay Secret, ensuring that deployments fail if the token is absent. The changes align the Compose, environment examples, and deployment documentation with the new credential management. As a result, Browser Relay now operates with 2/2 updated replicas and zero restarts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#350",
+      "title": "Enhance Browser Relay Security in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "security",
+        "deployment",
+        "backend",
+        "ci",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update injects the `BROWSER_RELAY_INTERNAL_TOKEN` into AuthBackend from the vault, ensuring both browser relay credentials are persisted securely. The deployment script has been made POSIX-compatible, addressing CI invocation issues, and preflight checks have been implemented to prevent partial rollouts. Overall, these changes enhance the reliability and security of the Browser Relay rollout."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1409",
       "title": "Enhance Seedance with Talking Mode in Nexior 🎤",
       "tags": [
