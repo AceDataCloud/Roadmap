@@ -3,6 +3,363 @@
   "date": "2026-07-22",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1409",
+      "title": "Enhance Seedance with Talking Mode in Nexior 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "seedance",
+        "talking-mode",
+        "i18n",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1409",
+      "summary": "This update introduces a default model switch to Seedance 2.0 Fast and adds a Talking Mode toggle, allowing characters to speak lines based on user prompts. The changes include automatic remapping of uploaded images to reference images, forced audio generation, and smart prompts to guide users in dialogue phrasing. Additionally, internationalization support has been expanded across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#875",
+      "title": "Streamline WeChat Setup with One-Command Flow in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "deployment",
+        "wechat",
+        "frontend",
+        "update",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update simplifies the WeChat setup process by replacing the previous multi-step command with a single command flow. Users can now enable the WeChat channel without manual edits or interactive prompts, enhancing the overall user experience. Additionally, Windows PowerShell users receive specific instructions to avoid potential issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#66",
+      "title": "Streamline WeChat Setup with One Command in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "wechat",
+        "setup",
+        "cli",
+        "enhancement",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/66",
+      "summary": "This update introduces the `coding-bridge channels enable wechat` command, simplifying the WeChat gateway setup process by eliminating the need for manual configuration. It automatically generates a valid `channels.toml` file, ensuring proper validation and idempotency. The changes enhance user experience by allowing a no-portal setup and preserving existing configurations during updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#71",
+      "title": "Introducing Robinhood Chain as a New Payment Network in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "feature",
+        "payment",
+        "integration",
+        "usd",
+        "x402"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/71",
+      "summary": "This update integrates the Robinhood Chain (chainId 4663) as an exact-scheme payment network for x402 settlements, utilizing USDG as the stablecoin. Key changes include the addition of configuration settings, updates to the rail policy, and dynamic currency support. The feature is defaulted to off, requiring a verified RPC URL and signer to activate."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1394",
+      "title": "Add per-card delete button for GPT-image and Nano Banana history in Nexior 🗑️",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "delete",
+        "internationalization",
+        "tasks"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1394",
+      "summary": "This update introduces a per-card delete button for GPT-image and Nano Banana history, allowing users to remove tasks directly from the UI. The implementation includes server-side hard delete functionality and updates to the task preview components. Additionally, internationalization support has been added for multiple languages, enhancing accessibility for users worldwide."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1396",
+      "title": "Align Download & View-Code Buttons in Nexior 🛠️",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "nexior",
+        "frontend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1396",
+      "summary": "This update fixes the vertical misalignment of the download and view-code buttons in the Fish TTS task card. By converting the operations row to a flex layout and adjusting the button classes, the buttons are now properly aligned, matching the conventions used in other task cards. The change is scoped to the Fish TTS card, ensuring no impact on other components."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1094",
+      "title": "Enhance Grsai Credit Monitoring in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "monitoring",
+        "backend",
+        "grsai",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces Grsai to the upstream balance monitoring system, ensuring visibility for credit balances. The implementation includes a new function to query Grsai's API for credits, updates to the deployment configuration, and an alarm for low balances below ¥20. These changes will prevent silent failures in generations due to insufficient credits."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#349",
+      "title": "Enhance Discord Connector with BYOC User-Token Method in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "discord",
+        "connector",
+        "feature",
+        "backend",
+        "messaging"
+      ],
+      "public": false,
+      "summary": "This update introduces a new BYOC user-token method for the Discord connector, allowing users to send messages as their own account. It complements the existing OAuth method, enabling full channel actions with the appropriate credentials. Additionally, the connector's documentation has been refreshed to reflect these changes and a new messaging tag has been added."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#682",
+      "title": "Enhance Discord Skill with Self-Bot Capabilities in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "discord",
+        "skills",
+        "enhancement",
+        "integration",
+        "user-token"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/682",
+      "summary": "The Discord skill now integrates both OAuth and BYOC modes, allowing users to perform full personal-account actions with their own tokens. The previous standalone `discord-user` skill has been merged into this unified skill, simplifying usage and enhancing functionality. Key updates include a new script for user actions and improved error handling during connection methods."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1398",
+      "title": "Enhance Chat Metadata Preservation in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "chat",
+        "metadata",
+        "upload",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1398",
+      "summary": "This update introduces the preservation of owner-bound upload metadata during chat attachment submissions in Nexior. Key changes include the addition of file_id, SHA-256, MIME type, and size to the upload response, ensuring backward compatibility with older deployments. The metadata is now structured within user message blocks, enhancing the overall chat experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1608",
+      "title": "Enhance Chat Attachment Uploads in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "upload",
+        "validation",
+        "testing",
+        "aichat"
+      ],
+      "public": false,
+      "summary": "This update completes the staging process for owner-uploaded chat attachments on the aichat-side. Key changes include validation of file UUIDs, SHA-256 checks, and MIME types, ensuring robust handling of structured references while maintaining legacy URL support. The rollout will keep the browser execution feature off until all dependencies are in place and E2E tests pass successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1090",
+      "title": "Enhance File Uploads with Owner Metadata in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "uploads",
+        "metadata",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces owner-bound metadata receipts to the file upload process, enhancing the existing API without disrupting legacy responses. Key features include the addition of file identification, MIME type, and size, along with a 24-hour expiration for owner metadata. The changes ensure compatibility with existing systems while improving the management of uploaded files."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#281",
+      "title": "Updated Browser Device Bridge Audit for Clarity in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "audit",
+        "browser",
+        "update",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update refreshes the Browser Device Bridge implementation-alignment audit, ensuring accurate reporting of resource and fixture statuses. Key changes include the replacement of outdated statements with precise PR validation statuses and a comprehensive merge and deployment DAG. The rollout remains blocked pending further validations and coverage improvements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#863",
+      "title": "Enhance Relay Extension Testing in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "testing",
+        "relay",
+        "playwright",
+        "frontend",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update replaces an invalid fixture with a real execution test for the Relay Extension. Key improvements include a test-only MV3 service worker, enhanced validation processes, and fixes for startup bugs. The CI pipeline now supports headed validation using Playwright, ensuring a robust testing environment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1615",
+      "title": "Preinstall discord.py-self for Discord User Skill in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "docker",
+        "discord",
+        "sandbox",
+        "python"
+      ],
+      "public": false,
+      "summary": "This update preinstalls `discord.py-self` version 2.1.0 in the sandbox image, enabling the new `discord-user` skill to operate a personal Discord account. The Dockerfile has been modified to include `discord` in the Python smoke check to ensure that any issues with the library are caught before production. This change is essential for the skill's functionality, as it cannot install dependencies at runtime."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1609",
+      "title": "Exciting New Seedance 2.0 Video Generation Feature in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "video",
+        "feature",
+        "bananarouter",
+        "seedance",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces Seedance 2.0 video generation to the BananaRouter PlatformService, enabling users to create videos via the new `POST /seedance/videos` endpoint. The implementation supports both async and sync modes, allowing for flexible video processing and asset enrollment. Comprehensive tests have been added to ensure functionality and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#859",
+      "title": "Enhance Browser Resource Transfers in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "browser",
+        "transport",
+        "validation",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces the BrowserResource and BrowserArtifact transport mechanisms, enhancing the final Browser Device Bridge. Key improvements include command-bound resource resolution, metadata validation, and robust error handling, ensuring secure and efficient data transfers. Additionally, several tests have been added to validate the new functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1602",
+      "title": "Integrate Command Artifacts into Chat in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "artifacts",
+        "chat",
+        "browser",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update merges Browser Relay `artifact_refs` into the standard aichat2 tool artifacts after command completion or recovery. Key changes include validation of artifact details and emission of standard artifacts for the chat pipeline, while capping the number of artifacts at 20. The implementation ensures robust artifact ownership verification and maintains clean execution binding."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1089",
+      "title": "Enhance Browser Transfers with New Receipt Layer in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "security",
+        "postgresql",
+        "browser"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive receipt layer for BrowserResource and BrowserArtifact transfers, enhancing security and user management. Key features include command-grant-bound receipts, per-user quotas, and short-lived presigned URLs, all backed by PostgreSQL. The rollout will be controlled until dependent components are fully integrated and validated."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#858",
+      "title": "Streamline Browser Agent Execution Path in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "cleanup",
+        "browser",
+        "frontend",
+        "refactor",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update removes the obsolete synthetic Browser Agent execution path following the integration of the single-extension CDP engine. Key files such as `pageTree.ts` and `readPage.ts` have been deleted, along with the legacy test suite, ensuring a cleaner and more efficient codebase. The canonical Browser Agent now operates exclusively through updated components, maintaining existing cookie bridge behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#348",
+      "title": "Enhance Resource Staging Grants for Browsers in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "browser",
+        "auth",
+        "staging"
+      ],
+      "public": false,
+      "summary": "This update introduces a new short-lived internal `resource_prepare` authority grant for staging BrowserResources uploaded by owners. Key changes include binding user and session details, signing various metadata, and ensuring the grant is validated at verification time. This enhancement is crucial for the upcoming staged file upload feature in the PlatformBackend."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1610",
+      "title": "Enhance OpenAI Image Support with New Adapter in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "openai",
+        "images",
+        "grsai",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces an OpenAI-compatible image adapter for the grsai nano-banana channel, adding endpoints for image generations and edits. The integration allows for independent async 4K image processing, enhancing the platform's capabilities while ensuring billing accuracy. Key improvements include robust error handling and optimized request processing for multiple images."
+    },
+    {
       "id": "gh:pr:AceDataCloud/X402Backend#11",
       "title": "Launch Production Runtime for X402 in X402 Backend 🚀",
       "tags": [
