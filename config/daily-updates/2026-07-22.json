@@ -3,6 +3,88 @@
   "date": "2026-07-22",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1390",
+      "title": "Revamp Project Start with Guided Overview in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "usability",
+        "mobile",
+        "guidance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1390",
+      "summary": "This update introduces a guided project start for Poivelle, enhancing user experience by replacing the initial screen with a structured overview of the production workflow. Key features include explicit action prompts, maximum cost confirmations, and a requirement for frame selection before proceeding. The changes aim to streamline the project initiation process and improve usability across devices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1387",
+      "title": "Optimize CI for Nexior Builds in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "optimization",
+        "macos",
+        "builds",
+        "cost-saving"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1387",
+      "summary": "This update significantly reduces GitHub Actions costs by changing the scheduling of macOS builds from per-merge to a daily schedule. Key improvements include implementing a CocoaPods cache to save time and resources, and adding concurrency controls to cancel in-progress builds. These changes aim to maintain efficiency while minimizing expenses associated with macOS builds."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#853",
+      "title": "Unify Admin Nav Group Header Style in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "style",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update standardizes the font weight and color of the Admin collapsible group header in the console sidebar to match its sibling navigation rows. The changes ensure a consistent appearance across the interface, enhancing user experience without affecting functionality. The chevron remains to indicate the collapsible nature of the group."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#679",
+      "title": "Enhanced DM Support for Discord Bot in Skills 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "discord",
+        "bot",
+        "feature",
+        "update",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/679",
+      "summary": "This update introduces a controlled `send-opt-in-dm` helper for the Discord Bot, ensuring that DMs are sent only after verifying the source message, author, and recipient. It includes a dry-run feature and requires confirmation to prevent accidental messages. Additionally, the implementation sanitizes API errors and suppresses duplicate messages, enhancing overall reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#347",
+      "title": "Enhance Discord DM Support in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "discord",
+        "backend",
+        "connector",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces permission-first single-recipient DM support for the Discord Bot connector. It requires an advertised keyword along with recipient and message confirmations, while maintaining the existing bot-token and authorization contracts. Key tests have been added to ensure functionality and compliance with the new features."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformGateway#210",
       "title": "Update custom-auth plugin to 0.13.0 in Gateway 🚀",
       "tags": [
