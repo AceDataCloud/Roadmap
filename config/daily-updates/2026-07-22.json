@@ -3,6 +3,72 @@
   "date": "2026-07-22",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1603",
+      "title": "Restore Default Audio Format for Fish TTS in Platform Service 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "tts",
+        "audio",
+        "tests",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update re-applies the default audio format for the Fish TTS service, correcting a regression that caused HTTP 400 errors due to missing format specifications. Key changes include restoring the default format to 'mp3' in settings and ensuring that the payload defaults to 'mp3' when the format is falsy. Additionally, new tests have been added to verify the functionality and prevent future issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1604",
+      "title": "Boosting 4K Resilience with Grsai Channel in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "grsai",
+        "failover",
+        "4k",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces Grsai as a new independent nano-banana image channel, enhancing the failover-router's capability to handle 2K/4K redundancy. By utilizing Grsai's async API, the system can now maintain functionality even when existing scrapers are down, significantly improving reliability. Key changes include the addition of a new worker and updates to the failover-router configuration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1389",
+      "title": "Enhance Voice Picker with Public Library Search in Nexior 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "voice-picker",
+        "public-library",
+        "ui",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1389",
+      "summary": "The Voice Picker component now allows users to search Fish's extensive public voice library alongside their own cloned voices. Key updates include grouped sections for 'My voices' and 'Public voice library', debounced remote search functionality, and inline audio previews for each option. This enhancement significantly improves user experience by providing access to over 2.4 million voices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1393",
+      "title": "Fix chat tool-call rows spinning forever in Nexior 🔄",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "chat",
+        "vue",
+        "reactivity",
+        "frontend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1393",
+      "summary": "This update resolves an issue where tool-call rows in the chat interface would display a spinning icon indefinitely. The fix involves cloning each content part during the rendering process to ensure that Vue detects changes and updates the UI correctly. This change enhances the responsiveness of the chat tool, providing users with accurate status indicators for their tool calls."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#860",
       "title": "Enhanced Credential Filter with Grouping and Masked Values in Frontend Web 🎉",
       "tags": [
