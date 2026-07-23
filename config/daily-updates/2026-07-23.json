@@ -3,6 +3,104 @@
   "date": "2026-07-23",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1107",
+      "title": "Enhance Email Campaign Rendering in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "email",
+        "backend",
+        "features",
+        "testing",
+        "markdown"
+      ],
+      "public": false,
+      "summary": "This update introduces the rendering of locked campaign Markdown as safe headings, lists, and HTTPS links. It also creates content-specific Tencent SES templates with a 96-bit content fingerprint while ensuring the unsubscribe domain remains fixed. Comprehensive tests have been conducted, confirming no issues with the rendered templates across various screen sizes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#285",
+      "title": "Enhance Browser Engine Capabilities in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "browser",
+        "security",
+        "hardening",
+        "capabilities",
+        "index"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive hardening plan for the Browser Engine, establishing a secure boundary for the Browser Device Bridge. Key changes include the implementation of 30 canonical commands and a refined upload architecture with two distinct routes. The plan aims to improve security and functionality while addressing previous limitations in large-file uploads and site support."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#257",
+      "title": "Revamp of X402 Resource Server Architecture in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "architecture",
+        "x402",
+        "backend",
+        "documentation",
+        "security",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive overhaul of the X402 resource server architecture, detailing the transition to the X402Backend as the sole resource server. Key changes include the removal of legacy components, explicit cost structures, and enhanced security measures. The documentation now reflects the latest architectural decisions and implementation strategies, ensuring a robust and efficient system moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#284",
+      "title": "Enhance Maestro Short-Drama Story Quality Gates in Index 🎭",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "design",
+        "quality",
+        "maestro",
+        "short-drama",
+        "review",
+        "planning"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive design for improving the quality of Maestro short-drama stories before media generation. Key features include versioned story plans, scene-level validations, and a robust review process to ensure narrative integrity. The plan also establishes a framework for independent semantic reviews and targeted rewrites, aiming to enhance overall production quality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1635",
+      "title": "Enhance WebSocket Connection Logging in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "websocket",
+        "logging",
+        "improvement",
+        "security",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update improves the logging of WebSocket connection lifecycles by recording detailed information such as close source, reason, and duration. It distinguishes between server protocol closes and peer disconnects while ensuring sensitive data remains protected. The changes have been validated with a full test suite, confirming the reliability of the new logging mechanism."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#879",
+      "title": "Enhance Relay Connection Recovery in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "relay",
+        "extension",
+        "frontend",
+        "diagnostics",
+        "watchdog"
+      ],
+      "public": false,
+      "summary": "This update introduces a persistent 30-second MV3 alarm watchdog to ensure that suspended or restarted service workers can refresh their bootstrap and reconnect effectively. Key improvements include atomic replacement of in-flight sockets, enhanced diagnostics for connection failures, and the release of Extension version 0.7.5. These changes aim to improve the reliability and user experience of the Relay connection."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1634",
       "title": "Enhance codex-proxy request limits in Platform Service 🚀",
       "tags": [
