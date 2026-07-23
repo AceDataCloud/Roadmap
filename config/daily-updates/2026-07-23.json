@@ -3,6 +3,155 @@
   "date": "2026-07-23",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1417",
+      "title": "Removed redundant chat loading indicator in Nexior 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1417"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#877",
+      "title": "Update Extension to Use Correct Relay WebSocket Path in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "extension",
+        "relay",
+        "websocket",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update connects the Extension to the correct /v1/ws Relay ingress, replacing the previous nonexistent /device path. The Extension has been bumped to version 0.7.4, and an exact endpoint regression test has been added to ensure functionality. Validation shows all tests passed successfully, confirming the stability of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1101",
+      "title": "Docs(captcha): publish /captcha/tasks poll API on the docs site in Backend 📝",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1629",
+      "title": "Streamlined Async Create Response in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "api",
+        "response",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "This update simplifies the async captcha create acceptance response by removing redundant fields, leaving only the task_id and trace_id. The HTTP 201 status remains unchanged, ensuring that the response still indicates successful processing. This change optimizes the response payload while maintaining compatibility with existing functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#352",
+      "title": "Update minimum Extension version for compatibility in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "deployment",
+        "testing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update sets the minimum Extension version to 0.7.3, ensuring compatibility with protocol requirements. A new deployment regression test has been added to maintain alignment between the default and manifest settings. The production environment has been patched, resolving previous issues where compatible devices were incorrectly flagged as outdated."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1414",
+      "title": "Enhance Upload Experience with Drag-and-Drop in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "upload",
+        "ui",
+        "enhancement",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1414",
+      "summary": "This update introduces drag-and-drop functionality for all file uploaders in Nexior, allowing users to easily upload files by dragging them onto the uploader interface. The feature includes a dynamic overlay that appears only when a file is dragged over an uploader, enhancing user interaction without cluttering the UI. Additionally, various uploader components have been updated to support this new functionality, ensuring a seamless experience across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1416",
+      "title": "Fix chat OOM crash caused by reactive loop in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "performance",
+        "chat",
+        "reactive"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1416",
+      "summary": "This update addresses a critical issue where sending any message would freeze and crash the chat interface due to a reactive infinite loop. The fix introduces a guard in the Composer's references watcher to prevent unnecessary resets of the file list during uploads, ensuring stability while sending messages. Additionally, debug logs that exacerbated the issue have been removed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#876",
+      "title": "Revamp Extension Pairing with Canonical Contracts in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "extension",
+        "pairing",
+        "update",
+        "bugfix",
+        "release"
+      ],
+      "public": false,
+      "summary": "This update replaces the outdated hand-maintained Extension pairing capability list with a new, canonical generated policy capabilities list. It also includes the `wire_contract_digest` in the pairing challenge and binds version, platform, digest, and capabilities into the signed pairing proof. The Extension has been bumped to version `0.7.3`, addressing previous production failures related to invalid capability names."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#544",
+      "title": "Enhance hCaptcha Async Recognition Output in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "hcaptcha",
+        "async",
+        "cli",
+        "update",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/544",
+      "summary": "This update synchronizes the hCaptcha async recognition output with the latest documentation behavior. It ensures that the CLI presents the returned task_id in a human-readable format and adds a new panel for submitted tasks when a task_id is returned without a solution. Additionally, focused tests have been implemented to verify the async submission behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1100",
+      "title": "Enhance Automatic Invoice Handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "invoice",
+        "stripe",
+        "backend",
+        "automation",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update disallows manual invoice applications for Card orders while ensuring automatic invoice issuance through Stripe remains intact. Key changes include the convergence of duplicate Stripe invoice events and the requirement for a secondary webhook signing secret in production. The deployment has been verified with successful order processing and comprehensive tests."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1628",
       "title": "Enhance Extension Policy Capabilities in Platform Service 🚀",
       "tags": [
