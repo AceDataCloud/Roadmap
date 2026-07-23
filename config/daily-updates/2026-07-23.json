@@ -1,0 +1,103 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-23",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Clis#540",
+      "title": "Introducing hCaptcha CLI for Easy Verification in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "hcaptcha",
+        "cli",
+        "verification",
+        "acedata",
+        "command-line"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/540",
+      "summary": "This update introduces a new hCaptcha CLI, enabling users to classify challenge images and retrieve tokens via the AceDataCloud API. Key commands include `recognize` for image classification and `token` for solving captchas with asynchronous support. The CLI follows a consistent structure with other tools in the monorepo, enhancing usability and integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1097",
+      "title": "Exciting New Async Poll API for Captcha Tasks in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "captcha",
+        "api",
+        "async",
+        "backend",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update introduces the new `/captcha/tasks` API for asynchronous captcha task polling, enhancing the hCaptcha service. Key changes include the addition of an `async` parameter to the OpenAPI request body and comprehensive documentation on the new functionality. The migration also ensures that the API is registered with a cost rule of zero, streamlining the billing process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#213",
+      "title": "Enhance Captcha Handling with Idempotency Guard in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "billing",
+        "captcha",
+        "idempotency",
+        "gateway",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces support for the yescaptcha async create and poll flow in the Gateway. Key changes include the addition of a new `/captcha/tasks` endpoint that bypasses auto-billing while ensuring token authentication. An idempotency guard has also been implemented to prevent double-charging during retries, enhancing the reliability of the billing process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1621",
+      "title": "Enhance YesCaptcha with Async Task Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "yescaptcha",
+        "async",
+        "billing",
+        "mongodb",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces an asynchronous create and poll mode for the YesCaptcha API, allowing users to submit tasks and retrieve tokens without blocking requests. Key improvements include a new MongoDB task store for ownership enforcement and single-shot billing, ensuring that only successful token solves incur charges. The changes enhance the efficiency of multi-solver setups and maintain robust billing practices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#282",
+      "title": "Final Runtime Audit Completed in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "audit",
+        "deployment",
+        "production",
+        "browser",
+        "security"
+      ],
+      "public": false,
+      "summary": "The pre-merge Browser Device Bridge audit has been replaced with authoritative merged commits and production rollout evidence. Key incidents and runtime proofs have been documented, while public rollout remains blocked pending further internal validations. All relevant PRs have been merged, ensuring a clean deployment closure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1616",
+      "title": "Transforming Task Deletion to Soft Delete in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "soft-delete",
+        "tasks",
+        "backend",
+        "update",
+        "Nexior"
+      ],
+      "public": false,
+      "summary": "This update changes the `/tasks` delete action from a hard delete to a soft delete by adding a `deleted_at` timestamp. This ensures that deleted tasks are retained in the database but are excluded from task-history reads, enhancing data integrity and user experience. The implementation affects multiple worker scripts across various services, ensuring consistent behavior without requiring client-side changes."
+    }
+  ]
+}
