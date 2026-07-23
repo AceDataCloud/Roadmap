@@ -3,6 +3,135 @@
   "date": "2026-07-23",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1628",
+      "title": "Enhance Extension Policy Capabilities in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "extension",
+        "policy",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update includes the canonical `policy_capabilities` in the generated Extension contract profile, ensuring that the Extension projection aligns with the single manifest source. A regression test has been added to validate this change, confirming that the Extension pairing now functions correctly without returning HTTP 400 errors. The rollout is designed to maintain compatibility with the PlatformFrontend pairing consumer."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#283",
+      "title": "Introducing Persistent Discord Bot Deployment Design in Index 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "discord",
+        "bot",
+        "deployment",
+        "design",
+        "helm"
+      ],
+      "public": false,
+      "summary": "This update adds a comprehensive design document for a persistent, auto-reply Discord bot deployment service, transforming the existing one-shot skill into a continuous, per-tenant bot. Key changes include the use of a `helm` provider and a new `connector` auto_env source for managing user tokens securely. The document outlines the core design decisions and resolves all findings from the Codex review, paving the way for the next steps in implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#542",
+      "title": "Enhance hcaptcha CLI with Async Support in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "hcaptcha",
+        "cli",
+        "async",
+        "update",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/542",
+      "summary": "This update introduces asynchronous support for the `hcaptcha recognize` command, aligning it with the latest OpenAPI specifications. Users can now include the `--async` flag to receive immediate task IDs instead of waiting for the captcha to be solved. Additionally, the documentation has been updated to reflect this new feature, ensuring users have clear guidance on its usage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1415",
+      "title": "Fix ChatGPT Conversations Freeze on Send in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "performance",
+        "chat",
+        "storage",
+        "optimization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1415",
+      "summary": "This update addresses a critical issue where sending messages in ChatGPT caused freezing and out-of-memory errors. The root cause was identified as the persistence of full message histories, including large base64 screenshots, in localStorage. The fix ensures that only summaries are stored, significantly improving performance and preventing OOM errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1099",
+      "title": "Enhance Captcha Documentation for Async Mode in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "captcha",
+        "async",
+        "openapi",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update documents the asynchronous mode for all captcha endpoints, ensuring clarity on how to implement the `async:true` parameter. Key changes include the addition of the `async` boolean request parameter across five OpenAPI specs and corresponding updates to the developer documentation. This enhancement improves user experience by providing detailed examples and billing information related to async operations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1410",
+      "title": "Clarify Input Fields for Seedance in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "documentation",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1410",
+      "summary": "This update removes the confusing 'Talking-mode' switch and replaces it with clear descriptions for each input field based on official documentation. Key changes include the deletion of unnecessary UI elements and the redefinition of how to make characters speak, ensuring users understand the differences between first-frame images and reference images. The documentation has been updated across multiple languages for better clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1624",
+      "title": "Fix 404 Handling for Unknown Tasks in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "api",
+        "error-handling",
+        "production"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where polling `/captcha/tasks` with an unknown `task_id` incorrectly returned a 500 error instead of a 404. The fix involves returning explicit JSON responses for various scenarios, ensuring that missing or unknown task IDs are handled correctly without affecting existing billing and processing paths. Live verification confirms that the changes operate as intended in production."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1626",
+      "title": "Enhance Async Captcha Recognition Flow in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "yescaptcha",
+        "async",
+        "recognition",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update extends the async create and poll captcha flow to include three live recognition endpoints, ensuring all solvers can utilize the submit-now/poll-later approach. Key changes include the introduction of a structured result field for recognition responses and improved inline-resolve safety to prevent billing for unsolved responses. Overall, this enhances the consistency and reliability of the captcha service."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1412",
       "title": "Enhance Fish TTS Credit Estimates in Nexior 🎉",
       "tags": [
