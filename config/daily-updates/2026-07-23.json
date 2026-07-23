@@ -3,6 +3,70 @@
   "date": "2026-07-23",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1412",
+      "title": "Enhance Fish TTS Credit Estimates in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "billing",
+        "utf-8",
+        "tests",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1412",
+      "summary": "This update improves the Fish TTS credit estimation by deriving byte counts from trimmed UTF-8 text and including the default `s2-pro` model in cost evaluations. It ensures small positive estimates are displayed accurately without rounding to zero and adds regression tests for Chinese UTF-8 byte counts. Overall, these changes enhance the accuracy and clarity of billing for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1625",
+      "title": "Enhance Upstream Correlation IDs for Seedance in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "debugging",
+        "metadata",
+        "logging",
+        "correlation"
+      ],
+      "public": false,
+      "summary": "This update introduces the recording of upstream correlation IDs in the BananaRouter Seedance video path, enabling better tracing of finished jobs back to their upstream sources. Key changes include capturing `upstream_task_id`, `upstream_original_task_id`, and `upstream_request_id`, which are now included in the `ISeedanceVideo` result and logged for reconciliation. This enhancement improves debugging capabilities without affecting billing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1413",
+      "title": "Enhance AuthPanel Listener Management in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "auth",
+        "fix",
+        "performance",
+        "cleanup",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1413",
+      "summary": "This update addresses a critical issue with the AuthPanel by ensuring that stale iframe message listeners are properly removed when login panels close. Key changes include the addition of cleanup logic for both web and native listeners, which prevents memory leaks and potential crashes during user sessions. Comprehensive regression tests have also been implemented to validate these improvements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1623",
+      "title": "Fix missing deploy script for yescaptcha in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "deployment",
+        "kubernetes",
+        "yescaptcha"
+      ],
+      "public": false,
+      "summary": "This update adds the missing `yescaptcha/deploy/run.sh` script, ensuring that yescaptcha deployments are correctly applied to the Kubernetes cluster. Previously, deployments were built and pushed but never applied, resulting in stale pod images. The new script mirrors existing deployment patterns and includes a rollout status check to confirm successful application."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#540",
       "title": "Introducing hCaptcha CLI for Easy Verification in Clis 🚀",
       "tags": [
