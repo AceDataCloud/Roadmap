@@ -3,6 +3,108 @@
   "date": "2026-07-23",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1634",
+      "title": "Enhance codex-proxy request limits in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "codex-proxy",
+        "ingress",
+        "update",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update raises the codex-proxy ingress request body limit from 1 MiB to 32 MiB, aligning it with the existing limits of claude-proxy and github-proxy. This change allows for larger conversation histories and attachments to be processed without rejection, enhancing the overall functionality of the CLIProxyAPI."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1633",
+      "title": "Boost request limits for GitHub proxy in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "proxy",
+        "ingress",
+        "update",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update raises the GitHub proxy ingress request body limit from 1 MiB to 32 MiB, allowing larger requests for Claude Code histories and multimodal prompts. The change addresses recent 413 errors by ensuring requests can reach the existing 64 MiB wrapper buffer. Validation confirms the new configuration is correctly applied and operational."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1632",
+      "title": "Fix(claude-proxy): allow 32 MiB request bodies in Platform Service 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1630",
+      "title": "Introducing a Per-Tenant Discord Account Proxy in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "discord",
+        "proxy",
+        "api",
+        "security",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces a per-tenant Discord account proxy, allowing users to interact with Discord through a dedicated container that holds their Discord token. The proxy exposes functionalities via both MCP and REST API, enabling seamless integration with external AIs and programs. Key improvements include enhanced security measures and comprehensive testing to ensure robust performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1104",
+      "title": "Refactor automatic pay-way naming in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "refactor",
+        "backend",
+        "invoice",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update generalizes the naming of automatic pay-ways by renaming `STRIPE_AUTO_INVOICE_PAY_WAYS` to `AUTO_INVOICE_PAY_WAYS`. The existing behavior for Card and Stripe automatic invoices remains unchanged. All references have been updated accordingly, and validation tests have passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1103",
+      "title": "Enhance Invoice Logic by Blocking Stripe Manual Applications in Backend 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "invoice",
+        "stripe",
+        "backend",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update implements a restriction on manual invoice applications for Stripe orders, aligning with existing behavior for Card payments. Automatic invoice issuance remains intact for both Stripe and Card webhook events. The changes have been validated with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#878",
+      "title": "Enhance Invoice Polling After Payment in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "invoice",
+        "payment",
+        "frontend",
+        "update",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update implements automatic polling of the order invoice endpoint after a payment is marked as Paid or Finished. Polling will cease once the automatic Stripe invoice is available or after 30 seconds. Additionally, manual invoice actions for Card and Stripe have been removed from the order detail and list pages to streamline the user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1417",
       "title": "Removed redundant chat loading indicator in Nexior 🔧",
       "tags": [
