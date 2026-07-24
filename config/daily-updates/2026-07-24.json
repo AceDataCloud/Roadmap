@@ -1,0 +1,390 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-24",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1646",
+      "title": "Enhance Video Duration Validation in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "video",
+        "validation",
+        "bugfix",
+        "platform-service",
+        "grok"
+      ],
+      "public": false,
+      "summary": "This update introduces a minimum duration check for video requests to prevent upstream errors. The new `GROK_VIDEO_MIN_DURATION` ensures that requests with durations below the model-specific minimum are clamped to the minimum value instead of being rejected. This change improves user experience by reducing unnecessary 400 errors while maintaining consistent billing practices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1119",
+      "title": "Complete Discord Bot Service Onboarding in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "discord-bot",
+        "onboarding",
+        "deployment",
+        "backend",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update finalizes the onboarding process for the Discord Bot Deployment service, making it fully operational for users. Key additions include a new script for data-layer onboarding and comprehensive HTML landing pages that detail service capabilities. The changes ensure a seamless user experience and provide essential information about the service's features and usage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1645",
+      "title": "Enhance CI for Discord Bot Chart Release in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "ci",
+        "discordbot",
+        "charts",
+        "ghcr",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update resolves a 403 Forbidden error during the chart release workflow by utilizing the `GHCR_TOKEN` for org-level package pushes. The change ensures that future CI runs can operate independently without manual intervention. Additionally, the chart has been manually published to maintain service continuity while this fix is implemented."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/GermeyTech#6",
+      "title": "Rebranding AI Solutions to Data Processing and Analysis in Germey Tech 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "GermeyTech",
+        "rebranding",
+        "data-processing",
+        "html",
+        "javascript",
+        "app"
+      ],
+      "public": false,
+      "summary": "This update removes all AI branding from the Germey Tech marketing site, renaming the second scoped service from AI Solutions to Data Processing and Analysis. Key changes include updates to multiple HTML files, the app.py, and site.js to ensure consistency across the platform. The internal plan key remains unchanged to avoid breaking existing checkout links."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#357",
+      "title": "Stabilize Ruff Linting in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "ci",
+        "linting",
+        "ruff",
+        "backend",
+        "stability"
+      ],
+      "public": false,
+      "summary": "This update pins Ruff to the validated 0.9.10 baseline to ensure consistent linting across the repository. It also installs the same lint requirements in CI, preventing unexpected changes from floating releases. The isolated installation has been validated, confirming that 223 files are already formatted correctly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#288",
+      "title": "Revamped x402 Resource Architecture in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "architecture",
+        "x402",
+        "resource",
+        "update",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update corrects the x402 direct resource architecture, replacing the previous Bearer/Credits design. Key changes include the removal of API Bearer tokens and a streamlined execution path that enhances resource management and settlement processes. The new architecture ensures that all interactions are validated and that the x402Backend serves as the sole official resource server."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Backend#13",
+      "title": "Enable direct execution of signed x402 resources in X402 Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Backend",
+        "feature",
+        "security",
+        "execution",
+        "payments",
+        "validation",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces a generic direct x402 Resource Server that executes signed resources without requiring bearer tokens, credits, or service-specific executors. It validates cluster-local targets, maintains atomic USDC pricing, stores encrypted artifacts before settlement, and returns resource bodies only after durable receipts. The rollout is currently in draft, with no production DNS or ingress changes, ensuring a secure and streamlined execution flow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1116",
+      "title": "Decoupled X402 Catalog from Credits in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "architecture",
+        "catalog",
+        "validation",
+        "x402"
+      ],
+      "public": false,
+      "summary": "This update introduces a significant architectural correction by publishing a signed generic direct-resource catalog without dependencies on credits or various endpoints. Key changes include the removal of quote and usage endpoints, along with a streamlined resource requirement process. Validation tests have passed successfully, ensuring stability and readiness for future implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1644",
+      "title": "Enhance YesCaptcha with BYOP Proxy and Timing Features in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "yescaptcha",
+        "proxy",
+        "features",
+        "timing",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces two major enhancements to the YesCaptcha service: the ability for users to bring their own proxy (BYOP) and the inclusion of elapsed time metrics for captcha solves. Users can now specify a proxy to improve IP quality and avoid errors, while every solve response will now include timestamps and elapsed time, aligning with platform standards. These changes enhance user control and provide better performance tracking."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1418",
+      "title": "Upgrade to GPT 5.6 Models in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "update",
+        "gpt",
+        "models",
+        "nexior",
+        "chat"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1418",
+      "summary": "This update replaces the previous ChatGPT models (5.5 and 5.4) with the new GPT 5.6 models: Sol, Terra, and Luna. Notably, GPT 5.6 Luna is now the default and the only free model for new chats and scheduled tasks. All related locale files and tests have been updated to reflect these changes, ensuring a seamless transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#887",
+      "title": "Enhance Real Relay Wait Command in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "testing",
+        "relay",
+        "javascript",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces a real `wait/condition` command to the Extension Relay fixture, allowing it to wait for delayed DOM states and return device-signed results. The changes include modifications to the fixture and the corresponding test specifications, ensuring that the command operates effectively. Validation has confirmed that the new command passes the tests successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#548",
+      "title": "Docs alignment verified for hcaptcha, image2text, and recaptcha in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "docs",
+        "verification",
+        "no-op",
+        "hcaptcha"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/548",
+      "summary": "The documentation sync for `hcaptcha`, `image2text`, and `recaptcha` has been validated against the current CLI packages. The `hcaptcha` endpoints are aligned with the OpenAPI specifications, while no corresponding directories exist for `image2text` and `recaptcha`, resulting in no code changes. This PR serves as a record of the no-op sync verification."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#695",
+      "title": "Enhance Browser Core Isolation in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "browser",
+        "testing",
+        "security",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/695",
+      "summary": "This update introduces executable checks to ensure that the browser core does not contain any references to Xiaohongshu or TikTok semantics. Additionally, it confirms that TikTok remains on its audited OAuth/API path until explicit approval for a browser canary is granted. The changes include the addition of a new test file that successfully passed validation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#888",
+      "title": "Enhance command handling by rejecting expired requests in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "command",
+        "testing",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update introduces a mechanism to reject browser commands that have expired before they reach the ledger or browser authority. It ensures that expired commands are filtered out after grant verification, enhancing the reliability of command execution. The changes include modifications to the command dispatcher and additional tests to validate the new behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1115",
+      "title": "Enhance Browser Streaming Validation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "validation",
+        "streaming",
+        "tests",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces an incremental SHA-256 and size validator for browser transfer streams, ensuring data integrity during streaming. It includes tests for success, mismatches, and early-aborts, enhancing the robustness of the streaming process. The new functionality is the first P0-4 streaming primitive from a related pull request."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1640",
+      "title": "Enhance CI for Discord Bot Chart with yq in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "ci",
+        "discordbot",
+        "yq",
+        "fix",
+        "yaml"
+      ],
+      "public": false,
+      "summary": "This update replaces the fragile `sed` command in the chart-release workflow with `yq`, ensuring reliable edits to `values.yaml`. This change prevents corruption that previously led to a 404 error for the `discord-bot` blueprint by sanitizing the image tag and chart version bump. The fix has been verified locally with successful `helm lint` and `helm package` executions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1114",
+      "title": "Enhance Captcha Integration Guide in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "captcha",
+        "backend",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update adds the source file for the asynchronous polling integration guide for the `/captcha/tasks` API, ensuring it is now available in the repository. The new document, `development_captcha_tasks.md`, provides detailed instructions on the API's usage, including task creation and error handling. This addition aligns with existing translations and ensures future documentation syncs function correctly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#881",
+      "title": "Streamlined WeChat Automation Setup in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "deployment",
+        "wechat",
+        "automation",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update renames the deployment setup to 'WeChat Automation Bot Service' across public locales and simplifies the configuration by removing unnecessary runtime specifications. The purchase gate remains, allowing deployment without client-selected presets, ensuring the backend manages the standard configuration effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1109",
+      "title": "Strengthen X402 Resource Contracts in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "security",
+        "backend",
+        "contracts",
+        "validation",
+        "x402"
+      ],
+      "public": false,
+      "summary": "This update enhances the X402 resource contracts by introducing signed JSON request/response content types and setting byte limits for requests and responses. It also implements stricter validation for catalog paths and ensures that only specific HTTPS endpoints are allowed. These changes aim to improve security and maintain explicit resource allowlisting."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#880",
+      "title": "Enhance Email Preview with Markdown Support in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "email",
+        "markdown",
+        "frontend",
+        "localization",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces the ability to render campaign Markdown in the live email preview, allowing for headings, lists, and clickable links. It enforces HTTPS links only and disables raw HTML to ensure security. Additionally, the help key has been backfilled across all locales, enhancing user guidance on supported authoring syntax."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1113",
+      "title": "Streamline Email Campaign Templates in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "refactor",
+        "email",
+        "backend",
+        "templates"
+      ],
+      "public": false,
+      "summary": "This update removes the unnecessary versioning from unlaunched marketing campaign template names, simplifying them to a more consistent format. The existing transactional service-notice templates remain unchanged, ensuring no disruption to current operations. All relevant tests have passed, confirming the integrity of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#885",
+      "title": "Deploy Wizard for Discord Proxy is Here in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "deployment",
+        "discord",
+        "frontend",
+        "wizard",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update introduces a new deployment wizard for the Discord proxy, allowing users to easily connect their Discord accounts. The wizard features a two-step process for token entry and instance size selection, ensuring secure handling of user tokens. Additionally, it includes internationalization support across multiple languages and improves user experience by addressing previous UX defects."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1112",
+      "title": "Enhance Discord Bot Deployment with Token Fixes in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "deployment",
+        "discord",
+        "backend",
+        "blueprint",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a new blueprint for the Discord bot service and resolves token corruption issues during deployment. Key changes include the use of `--set-string` for Discord tokens to prevent parsing errors, and the addition of regression tests to ensure deployment integrity. All deployment tests have passed successfully, confirming the robustness of these enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1636",
+      "title": "Exciting New Helm Chart for Per-Tenant Discord Deployments in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "helm",
+        "discord",
+        "kubernetes",
+        "ci",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces a Helm chart for deploying a per-tenant Discord account proxy, enabling the PlatformBackend to manage individual proxy pods for each tenant. Key changes include the addition of deployment, service, ingress, and secret templates, as well as CI workflows for building and pushing the worker image. The implementation ensures secure handling of Discord tokens and improves deployment reliability."
+    }
+  ]
+}
