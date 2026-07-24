@@ -3,6 +3,103 @@
   "date": "2026-07-24",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1131",
+      "title": "Enhance X402 Catalog Payload Handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "x402",
+        "localization",
+        "testing",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update preserves the signed internal X402 catalog on DRF's plain JSON renderer and prevents localization from altering resources post-signing. Key changes include verification of proofs against the rendered wire payload and adjustments to the renderer classes. The modifications ensure better stability and reliability in catalog snapshot proof verification."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#897",
+      "title": "Revamp Appliance Management with Tabs and API Docs in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "documentation",
+        "i18n",
+        "frontend",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces a new tabbed interface for the WeChat-bot service management page, enhancing usability by organizing information into Overview, Logs, and Docs sections. The Docs tab includes in-page API documentation tailored for each tenant's appliance, improving accessibility and context for users. Additionally, internationalization support has been expanded across 12 locales to ensure comprehensive coverage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1129",
+      "title": "Enhance Helm Deployments with Per-Service Names in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "helm",
+        "deployment",
+        "tls",
+        "ingress",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update generalizes the Helm deployment path to support per-service release names and ingress hosts under the domain *.app.acedata.cloud. Key changes include a new naming convention for releases and hosts, ensuring compatibility with existing deployments while enabling future services like whatsapp-bot and wechat-bot. Additionally, a self-healing mechanism for wildcard TLS secrets has been implemented to enhance deployment reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AutoCert#10",
+      "title": "Enhance Wildcard TLS Renewal for acedatacloud-deployment in Auto Cert 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AutoCert",
+        "tls",
+        "renewal",
+        "k8s",
+        "deployment",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update adds the `acedatacloud-deployment` namespace to the HK cluster entry of the `acedata` renewal profile, ensuring that the `*.acedata.cloud` wildcard certificate is properly renewed. Key changes include modifications to `renew.py` and updates to the `README.md` to reflect the new namespace, which supports per-tenant helm deployments. This enhancement prevents the wildcard certificate from becoming outdated in the specified namespace."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Backend#16",
+      "title": "Enhance Origin Binding and Liveness Checks in X402 Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Backend",
+        "bugfix",
+        "enhancement",
+        "monitoring",
+        "logging",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update configures the canonical public origin for PAYMENT-REQUIRED resources and binds production-stage challenges to the specified URL. Additionally, it separates liveness checks from dependency readiness, improving monitoring and logging of initialization failures. The changes have been validated with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#556",
+      "title": "Introducing the Producer CLI for Music Generation in Clis 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "music",
+        "api",
+        "producer",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/556",
+      "summary": "This update introduces a full command-line interface (CLI) for the Producer Music Generation API, enabling users to generate, extend, and manage audio tracks easily. Key commands include audio generation, lyrics creation, media uploads, and task management, all structured to follow monorepo conventions. Additionally, the sync configuration has been updated for future automated syncs."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#554",
       "title": "Enhance hcaptcha CLI with Proxy Support in Clis 🚀",
       "tags": [
