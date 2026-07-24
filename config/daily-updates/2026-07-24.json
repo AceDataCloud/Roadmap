@@ -3,6 +3,324 @@
   "date": "2026-07-24",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1638",
+      "title": "Enhance Story Quality Gate with Maestro CLI in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "story-quality",
+        "maestro",
+        "cli",
+        "short-drama",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update introduces a structured story quality gate for the short-drama skill within Maestro. Key features include a mandatory agent-run CLI for validation and rewriting, alongside the enforcement of narrative continuity through the new NarrativeBridge. The changes ensure that all story artifacts are locked and verified, enhancing the reliability of the storytelling process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#287",
+      "title": "Integrate Kickart E-commerce Video API in Index 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "api",
+        "integration",
+        "ecommerce",
+        "video",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update introduces a new design document for integrating the Volcengine Kickart e-commerce video API into AceDataCloud. Key features include three asynchronous video APIs, a new worker for handling requests, and a structured billing approach. The integration aims to enhance video marketing capabilities for e-commerce, with a phased rollout planned for implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#891",
+      "title": "Enhance Card Payment Icon for Consistency in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "icons",
+        "design",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update replaces the plain line-drawing credit card icon with a VISA/Mastercard image for the Card payment method on order pages. The change ensures a consistent look across all payment icons, including WeChat Pay and Alipay. Additionally, the unused CreditCardIcon component has been removed, streamlining the codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#550",
+      "title": "Introducing Cloudflare Turnstile CLI for Easy Captcha Management in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "feature",
+        "cli",
+        "cloudflare",
+        "turnstile",
+        "captcha",
+        "acedata"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/550",
+      "summary": "This update adds a new Cloudflare Turnstile CLI, enabling users to retrieve bypass tokens and manage configurations seamlessly. Key commands include `turnstile token` for token retrieval and `turnstile config` for displaying current settings. The implementation follows the structure of the existing hcaptcha CLI, ensuring consistency and ease of use."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Backend#14",
+      "title": "Decouple Artifact Purge from Usage Projection in X402 Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Backend",
+        "bugfix",
+        "refactor",
+        "testing",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update successfully decouples the artifact TTL cleanup from the retired usage projection, enhancing the system's reliability. Key improvements include making concurrent artifact purges idempotent and aligning production gates with a direct atomic USDC catalog. The changes also address several risks associated with concurrent purging and ensure robust testing coverage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1642",
+      "title": "Enhance Midjourney Error Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "midjourney",
+        "refactor",
+        "bug-fix",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update generalizes the error classification for Midjourney upstream errors, addressing issues where user input errors resulted in misleading HTTP 500 responses instead of the appropriate 400. Key changes include the introduction of a new utility function for matching error messages and the consolidation of error handling logic across multiple handlers, reducing code complexity significantly. The improvements ensure more accurate error reporting and reduce false alarms in monitoring systems."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1647",
+      "title": "Streamlined API Documentation for Clarity in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "documentation",
+        "cleanup",
+        "api",
+        "platform",
+        "maintenance"
+      ],
+      "public": false,
+      "summary": "This update consolidates API documentation by removing duplicated OpenAPI specs and service docs from the PlatformService repository, ensuring a single source of truth in PlatformBackend. A total of 111 files were changed, resulting in approximately 27.8k deletions, while essential service README files were updated to link directly to the authoritative documentation. This change enhances maintainability and reduces the risk of inconsistencies across documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1121",
+      "title": "Fix seed script for Discord bot service in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "discord",
+        "backend",
+        "service",
+        "script"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue in the seed script for the Discord bot service, where a non-existent 'name' field caused a TypeError during execution. The fix involves removing the 'name' keyword argument and using 'title' instead, ensuring the script runs smoothly. The corrected script has been verified against production, successfully creating the live service and seeding the necessary translations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#892",
+      "title": "Revamp Discord Deploy Wizard with Styled Components in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "ui",
+        "i18n",
+        "frontend",
+        "discord"
+      ],
+      "public": false,
+      "summary": "This update fixes the Discord deploy wizard, which previously rendered as unstyled text due to missing Element Plus component registrations. Key changes include the registration of necessary components and a complete redesign featuring a new layout, improved visuals, and additional internationalization keys for better user experience. The wizard now displays correctly with all elements styled and functional."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1122",
+      "title": "Onboard Cloudflare Turnstile Captcha Service in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "captcha",
+        "cloudflare",
+        "backend",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update introduces the Cloudflare Turnstile captcha service to the platform, enabling users to utilize the new endpoint for captcha verification. Key changes include the addition of billing details, OpenAPI specifications, and comprehensive documentation for integration. The service mirrors existing captcha services, ensuring a seamless experience for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1643",
+      "title": "Enhance yescaptcha with Cloudflare Turnstile Support in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "yescaptcha",
+        "cloudflare",
+        "api",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a new Cloudflare Turnstile captcha-solving endpoint to the yescaptcha proxy worker, effectively closing the gap in supported task types. The new endpoint, `POST /captcha/token/turnstile`, mirrors existing token endpoints and includes necessary billing and async capabilities. Additionally, documentation and OpenAPI specifications have been updated to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#886",
+      "title": "Enhance Relay Authority State Management in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "release",
+        "watchdog",
+        "sockets",
+        "service-worker",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update releases Extension 0.7.6, introducing a liveness-aware MV3 watchdog that maintains healthy sockets during server heartbeats. Key improvements include refreshing one-use bootstrap and ensuring socket replacements occur only after heartbeat timeouts. Additionally, periodic alarms are preserved across service-worker resumes, enhancing overall reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#286",
+      "title": "Unify Resource Authority for Browser Connections in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "browser",
+        "authorization",
+        "security",
+        "cleanup",
+        "architecture"
+      ],
+      "public": false,
+      "summary": "This update replaces outdated browser Connection and Device tombstone semantics with a streamlined current-resource deletion approach. Key changes include the introduction of the AuthBackend `BrowserRelayOwnerLease` for enhanced authorization and routing, as well as the requirement for heartbeat refreshes to maintain device connections. The modifications aim to improve session security and eliminate legacy issues with revoked connections."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#235",
+      "title": "Streamline Active Connections in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "bugfix",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update enhances the user experience by ensuring only active browser devices and connections are rendered. It preserves expired OAuth and MCP rows for reconnection while immediately removing disconnected connections. Additionally, it implements request fencing to prevent outdated responses from reintroducing deleted rows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1639",
+      "title": "Enhance Owner Authority Synchronization in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "auth",
+        "redis",
+        "synchronization",
+        "logging"
+      ],
+      "public": false,
+      "summary": "This update improves the synchronization of owner authority by refreshing the AuthBackend owner lease with each successful Redis heartbeat. It ensures that the Auth lease is only released when Redis confirms the socket is still the current owner, enhancing reliability and logging for supersession and release decisions. The changes have been validated with a full Browser Relay suite and focused auth/websocket tests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#355",
+      "title": "Unify Device State Management in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "backend",
+        "device-management",
+        "api",
+        "cleanup",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This update enhances the AuthBackend by making the BrowserRelayOwnerLease the primary authority for online/picker states. It introduces new APIs for lease management, deletes inactive browser connections, and ensures only active devices are listed. Additionally, it improves the update mechanism for the last seen timestamp during device interactions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#889",
+      "title": "Enhance Campaign Language Options in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "i18n",
+        "email",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces new delivery language options in the Campaign composer, allowing users to select between Automatic, English only, and Chinese only. The selected mode is now displayed in the review and Campaign detail sections, enhancing user experience. Additionally, the API contract remains safe for rolling deployments with an optional field and fallback to 'auto'."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1118",
+      "title": "Enhance Email Campaign Language Selection in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "email",
+        "campaign",
+        "backend",
+        "feature",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature allowing the selection of campaign delivery languages, including automatic, English, and Simplified Chinese. The delivery language is now locked with the content hash, ensuring consistency across audience previews and templates. Additionally, the system will fail closed on any mismatches between recipient locales and templates, enhancing overall reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1120",
+      "title": "Transition GPT 5.6 Luna to Free in AceChat 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "billing",
+        "gpt",
+        "acechat",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update moves the free billing override from GPT 5.4 Mini to GPT 5.6 Luna specifically for AceChat. It ensures that both manual and scheduled runs maintain consistent billing practices while preserving the shared pricing structure for other chat APIs. The changes have been validated with extensive testing, confirming that the new setup functions as intended."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#356",
+      "title": "Enhance Locator Resolution Budget Handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "serialization",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces an optional `max_resolution_attempts` parameter, which is now accepted only when set to exactly 2. The budget is bound into command grant claims and the canonical request hash, improving the handling of locator resolution. Additionally, focused serializer regressions have been added to ensure stability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1646",
       "title": "Enhance Video Duration Validation in Platform Service 🎥",
       "tags": [
