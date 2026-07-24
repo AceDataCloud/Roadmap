@@ -3,6 +3,422 @@
   "date": "2026-07-24",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#554",
+      "title": "Enhance hcaptcha CLI with Proxy Support in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "hcaptcha",
+        "cli",
+        "update",
+        "feature",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/554",
+      "summary": "This update introduces support for a proxy option in the hcaptcha token command, aligning the CLI with the latest OpenAPI contract. Users can now specify a proxy URL when requesting tokens, with the existing behavior preserved when the proxy option is omitted. Documentation has been updated to include usage examples and command help for the new feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#292",
+      "title": "Enhance Documentation Standards in Index 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "standards",
+        "updates",
+        "best-practices"
+      ],
+      "public": false,
+      "summary": "This update introduces two critical reminders to the AGENTS.md file to improve documentation practices. It emphasizes the importance of not leaking upstream supplier information in customer-facing texts and mandates that any service changes must be accompanied by corresponding documentation updates in the same PR. These changes aim to prevent stale documentation and ensure clarity for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1128",
+      "title": "Revamp API Docs and Scrub Upstream Leaks in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "api",
+        "security",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update enhances the documentation for the gpt-image-2 API, correcting the `n` parameter functionality and improving clarity on variant options. Critical upstream information leaks have been removed from customer-facing texts, ensuring compliance and security. These changes aim to provide a more accurate and user-friendly experience for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1653",
+      "title": "Enhance Browser Provider Readiness in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "browser",
+        "auth",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update resolves browser provider readiness by integrating online-compatible providers through the Auth dispatch-context before rendering connector status. It also implements a fail-closed mechanism for offline or incompatible browser bindings, ensuring sanitized logs and bounded concurrent probes. Extensive testing has been conducted to validate the changes, enhancing overall system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1127",
+      "title": "Enhance Captcha Documentation with BYOP Proxy Support in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "captcha",
+        "backend",
+        "openapi",
+        "development"
+      ],
+      "public": false,
+      "summary": "This update improves the documentation for the captcha endpoints by adding support for the BYOP proxy parameter and timing fields. Key changes include updates to OpenAPI specs and development documentation for various captcha types, ensuring consistency across all endpoints. The enhancements will help developers better understand and implement the new features effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#552",
+      "title": "Align Grok Video Model with Latest API in Clis 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "api",
+        "cli",
+        "update",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/552",
+      "summary": "This update synchronizes the Grok CLI with the latest OpenAPI contract for video models. Key changes include updated allowed model values and a new default model. Additionally, the CLI output and documentation have been revised to reflect these updates, ensuring consistency across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1641",
+      "title": "Enhance Browser Contract with Locator Plan in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "browser",
+        "contract",
+        "update",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update introduces a signed `locator_plan` definition to the browser contract, ensuring a fixed `max_resolution_attempts` of 2 while bounding role, name, text, and label selectors. Additionally, the wire digest golden vector has been updated, and all related tests have passed successfully. This change is crucial for maintaining contract integrity and improving browser functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#289",
+      "title": "Enhance Grok Video Stability and Official Endpoint Design in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "video",
+        "stabilization",
+        "endpoint",
+        "design",
+        "ttapi",
+        "grok"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive design for improving Grok video stabilization and onboarding the official ttapi endpoint. Key changes include addressing critical failures related to token availability and duration validation, alongside a dual-channel strategy for endpoint management. The rollout plan encompasses necessary adjustments across multiple components, ensuring a smoother user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#444",
+      "title": "Enhance Grok Video Models for Better Performance in M C Ps 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "video",
+        "grok",
+        "update",
+        "models",
+        "tools"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/444",
+      "summary": "This update introduces four new video models to the GrokMCP video tools, enhancing the capabilities of the ttapi worker. Key changes include updates to the core configuration and types, as well as improvements to the video tools and documentation. The modifications ensure cleaner code and improved functionality, with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1420",
+      "title": "Enhance Grok Video Models with New Endpoints in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "grokvideo",
+        "features",
+        "internationalization",
+        "ui",
+        "models"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1420",
+      "summary": "This update introduces four new Grok video models, replacing the previous picker with options for fast and official endpoints. Key changes include updated model IDs, duration helpers, and improved internationalization support across 17 locales. The ModelSelector and DurationSelector components have been modified to accommodate these new features, ensuring a smoother user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1124",
+      "title": "Enhance Billing for Grok Video Models in Backend 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "billing",
+        "api",
+        "grok",
+        "video",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces new billing models for the Grok video API, including reverse and official pricing variants. Key changes include the addition of four new suffixed models, updated API specifications, and refreshed documentation. The modifications ensure accurate billing and improved cost management for users, with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1649",
+      "title": "Enhance Video Endpoint with Official Support in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "video",
+        "endpoint",
+        "grok",
+        "update",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces the Official grok-video endpoint alongside the existing UnOfficial one, utilizing a new model-naming scheme. Key changes include modifications to settings, core functionality, and handler validations to support the new endpoint structure and ensure compatibility with billing rules. Legacy model names are no longer accepted, streamlining the video generation process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#896",
+      "title": "Clean Up Footer Links and Rename UI Platform to Studio in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "footer",
+        "i18n",
+        "branding",
+        "cleanup",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update removes the broken Profile link from the footer and renames the UI Platform link to Studio. The changes were applied across all 12 locales, ensuring consistency in branding. All related i18n keys have been updated or removed accordingly, enhancing the user experience on the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1126",
+      "title": "Enhance Resource Stream Verification in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "streaming",
+        "validation",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update implements end-to-end verification for resource streams, ensuring that BrowserResource COS metadata is validated against signed receipts before delivery. Key improvements include atomic reservation of receipts, incremental enforcement of byte types and sizes, and robust handling of stream closures on various failure conditions. This completes the server-side streaming lifecycle for BrowserResource, enhancing reliability and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1419",
+      "title": "Sync Locator Contract Digest in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "chore",
+        "browser",
+        "update",
+        "contract",
+        "digest"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1419",
+      "summary": "This update synchronizes the browser locator contract digest with the latest changes from the PlatformService. Key modifications include updating the wire digest and preserving the existing generated-file style. All browser execution operator tests have passed, ensuring stability during this rollout."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#890",
+      "title": "Sync Extension Contract for Improved Stability in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "update",
+        "extension",
+        "contract",
+        "frontend",
+        "typescript"
+      ],
+      "public": false,
+      "summary": "This update regenerates the Extension contract from the PlatformService source, ensuring a consistent wire digest and removing outdated JSON contracts. The package version has been bumped to 0.7.7, and extensive validation has confirmed the stability of the changes with all tests passing. This prepares the extension for internal execution and aligns it with the latest standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#358",
+      "title": "Sync browser contract and update settings in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "chore",
+        "browser",
+        "contract",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update regenerates the Auth browser contract based on the latest changes from PlatformService. Key modifications include pinning the wire digest and updating the minimum extension version to 0.7.7. Validation tests for browser capability and pairing have successfully passed, ensuring stability and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1125",
+      "title": "Enhance X402 Catalog Allowlist Loading in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "kubernetes",
+        "security",
+        "testing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update loads the `X402_CATALOG_ALLOWLIST` from the existing `x402` Kubernetes Secret, ensuring production remains closed by default with an empty Secret value. A deployment contract test has been added to prevent hardcoded API routes, enhancing security and maintainability. All relevant tests have passed, confirming the stability of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1650",
+      "title": "Enhance Fidelity Checks for Story Quality in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fidelity",
+        "validation",
+        "story-quality",
+        "improvement",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces an independent fidelity judge to ensure explicit brief fidelity against canonical plans. Key changes include hard-blocking drift in character identities, relationships, and specified meanings, alongside a final mutating gate for fidelity checks. The implementation aims to enhance internal coherence and prevent mismatches in story elements, significantly improving the validation process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1652",
+      "title": "Enhance Browser Connection Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "security",
+        "aichat2",
+        "testing",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update exposes active browser device connections to the interactive aichat2 connector while ensuring they remain excluded from provider access-token and scheduled unattended policies. Key changes include the introduction of the `isCredentialBackedConnection` function to enhance security and prevent unauthorized access. Comprehensive testing has validated the functionality and stability of these modifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#894",
+      "title": "Hide Crypto Token Address for Mainland China Visitors in Frontend Web 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "compliance",
+        "ui",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update modifies the footer component to hide the $ACE token contract address for visitors from mainland China, ensuring compliance with regulations. The change utilizes an existing computed property to conditionally render the address, maintaining consistency with other elements in the footer. This adjustment enhances user experience while adhering to necessary guidelines."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#893",
+      "title": "Hide Roadmap Link for China Visitors in Frontend Web 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "geo-gating",
+        "user-experience",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update modifies the footer to hide the Roadmap link for visitors from mainland China, ensuring it is only visible to non-China users. The change uses a conditional rendering approach that aligns with existing geo-gated links, maintaining SSR/SSG safety. This enhancement improves the user experience by preventing access to overseas resources for users in the China region."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#895",
+      "title": "Show China ICP Filing Only to Mainland Visitors in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "compliance",
+        "ui",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update modifies the footer component to display the China ICP filing only for visitors from mainland China. The change utilizes the existing `isChina` computed property to ensure compliance with local regulations, preventing non-China visitors from seeing the filing. This enhances user experience while maintaining necessary legal requirements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1106",
+      "title": "Enhance WeChat Promotion Article for Studio in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "promotion",
+        "wechat",
+        "studio",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive promotional article for Studio, tailored for WeChat. It covers key features such as the integration of various AI capabilities and detailed insights into branding, pricing, and distribution mechanisms. The article has undergone thorough reviews and optimizations to ensure clarity and effectiveness in conveying the product's value."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#701",
+      "title": "Align Browser Authority Descriptors for Xiaohongshu in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "bugfix",
+        "validation",
+        "xiahongshu",
+        "skills",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/701",
+      "summary": "This update aligns the Xiaohongshu Browser operation descriptors with the production authority schema from AuthBackend. Key changes include deriving exact wire command allowlists and implementing dynamic validation for declared operations to prevent future sync regressions. The update resolves a production failure that left the Skill hidden due to descriptor issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#698",
+      "title": "Sync Locator Contract Digest in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "update",
+        "manifest",
+        "validation",
+        "browser",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/698",
+      "summary": "This update modifies Xiaohongshu's generated compact browser manifest to align with the latest changes from the PlatformService. Key updates include pinning the wire digest and ensuring the facade catalog remains unchanged. Validation tests have confirmed that the contract and cross-site boundary suites have passed successfully."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#290",
       "title": "Lock Kickart Decisions for E-commerce APIs in Index 🚀",
       "tags": [
