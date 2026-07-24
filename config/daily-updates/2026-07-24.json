@@ -3,6 +3,22 @@
   "date": "2026-07-24",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/X402Backend#15",
+      "title": "Enhanced Key Management with Secret-Backed Artifacts in X402 Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Backend",
+        "security",
+        "encryption",
+        "backend",
+        "deployment",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update replaces the mandatory Tencent KMS with a versioned Secret-backed AES-256-GCM key encryption key (KEK). Key changes include the addition of compatibility checks, two-phase rotation, and validation for secrets, while removing the Tencent KMS SDK dependency. The deployment process has been streamlined, ensuring a clean production ledger and robust artifact management."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1638",
       "title": "Enhance Story Quality Gate with Maestro CLI in Platform Service 🚀",
       "tags": [
