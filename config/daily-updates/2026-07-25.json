@@ -3,6 +3,279 @@
   "date": "2026-07-25",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1137",
+      "title": "Fix spacing and alignment issues in Backend 🛠️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "css",
+        "bugfix",
+        "frontend",
+        "ui",
+        "turnstile"
+      ],
+      "public": false,
+      "summary": "This update addresses CSS bugs affecting the Turnstile service's layout. Key changes include restoring margins for lead and note paragraphs, adjusting hero line heights, and ensuring stat cards maintain uniform height and proper alignment. Additionally, overflow issues with localized text have been resolved for a better user experience across languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1386",
+      "title": "Enhance Scenario Tabs for Better Label Display in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "tabs",
+        "responsive",
+        "bugfix",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1386",
+      "summary": "This update improves the scenario-top tab bars in Nexior by making them width-adaptive, preventing English labels from wrapping. The `stretch` prop has been removed, allowing each tab to size according to its label, ensuring a cleaner user experience with horizontal scrolling for longer labels. Key files modified include TabSwitcher.vue and ConfigPanel.vue across multiple components."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1423",
+      "title": "Card Payment Option Introduced in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "payment",
+        "feature",
+        "update",
+        "internationalization",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1423",
+      "summary": "This update introduces a new Card payment option in Nexior, replacing Stripe when the feature flag `ENABLE_CARD` is activated. Key changes include modifications to the order pages and the addition of internationalization support for the new payment method. The default behavior remains unchanged when the feature flag is off, ensuring a smooth transition for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#903",
+      "title": "Card Payment Option Added in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "payment",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces the Card payment option, which replaces Stripe when the feature flag `ENABLE_CARD` is enabled. Key changes include modifications to the order pages to show the Card option for both authenticated and anonymous users, ensuring international card users have access. The implementation maintains existing functionality when the flag is off, keeping the user experience seamless."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1138",
+      "title": "Enable Card Payments for Anonymous Users in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "payment",
+        "anonymous",
+        "backend",
+        "stripe"
+      ],
+      "public": false,
+      "summary": "This update adds `OrderPayWay.CARD` to the list of allowed payment methods for anonymous users on the public pay page. The integration of the hosted Stripe PaymentLink ensures that card payments can be processed securely while maintaining the existing feature flag for safety. Additionally, tests have been updated to reflect these changes, confirming that the new payment method adheres to the established security protocols."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#902",
+      "title": "Fix Telegram Token Guide for All Locales in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "i18n",
+        "vue",
+        "localization",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where the Telegram token guide was causing a compilation crash in vue-i18n due to the unescaped '@BotFather' syntax. The fix involves escaping the '@' character, ensuring that the guide renders correctly across all 12 locales without altering the displayed text. All locales have been verified to compile and render as expected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#901",
+      "title": "Fix blank Docs tab issue in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "i18n",
+        "frontend",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where the Docs tab in the WeChat-bot appliance rendered blank due to a vue-i18n crash caused by unescaped special characters. The affected keys have been rewritten across all 12 locales to ensure proper rendering without syntax errors. All locales have been verified to compile successfully, eliminating the crash and ensuring consistent user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#900",
+      "title": "Clean up comments for embedded login in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "cleanup",
+        "documentation",
+        "frontend",
+        "auth"
+      ],
+      "public": false,
+      "summary": "This update removes outdated references to the 'auth-iframe' feature flag in comments across the codebase. The changes ensure that documentation accurately reflects the current login mechanism, which is now solely driven by the `LOGIN_METHOD` cookie. No functional changes were made, maintaining the integrity of the existing logic."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1136",
+      "title": "Enhance Turnstile Documentation for Better Clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "turnstile",
+        "backend",
+        "improvements"
+      ],
+      "public": false,
+      "summary": "This update brings the Turnstile service documentation up to speed with hCaptcha and reCAPTCHA. Key improvements include adding a thumbnail and favicon, ensuring visibility in the documents section, and styling the quick-start code block for better presentation. These changes enhance user experience and accessibility for developers integrating the Turnstile service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#560",
+      "title": "Enhance model support with claude-opus-5 in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "update",
+        "feature",
+        "cli",
+        "models",
+        "aichat",
+        "claude"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/560",
+      "summary": "This update adds `claude-opus-5` to the model enums for both `aichat` and `claude`, ensuring alignment with the latest OpenAPI specifications. The CLI commands have been updated to include this new model, and tests have been modified to verify its proper integration. Overall, this enhancement improves the functionality and flexibility of the model selection in the CLI."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#445",
+      "title": "Enhance AiChatV2Model with Claude Opus 5 in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "feature",
+        "aichat",
+        "model",
+        "update",
+        "integration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/445",
+      "summary": "This update adds the `claude-opus-5` model to the `AiChatV2Model` in the aichat MCP, aligning it with the PlatformBackend model. Key changes include modifications to various service costs, API visibility, and configuration files to ensure compatibility with the new model. The integration has been thoroughly tested with all relevant components verified for consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#562",
+      "title": "Enhance Claude API with New Model in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "claude",
+        "api",
+        "update",
+        "documentation",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/562",
+      "summary": "This update adds `claude-opus-5` to the Claude API discovery README, enhancing the model lineup available for users. Key adjustments include updates to keywords and alignment with existing models, ensuring a seamless integration. The changes maintain the integrity of the billing process and have passed extensive testing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#711",
+      "title": "Add new Claude model to AI chat skills in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "documentation",
+        "ai",
+        "skills",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/711",
+      "summary": "This update introduces `claude-opus-5` to the Claude model table within the AI chat skill, enhancing the model offerings. The change is primarily documentation-focused, ensuring that the new flagship-tier model is properly listed. All related components have been aligned with existing models, maintaining consistency across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1422",
+      "title": "Introducing Claude Opus 5 to the Chat Model Picker in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "chat",
+        "internationalization",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1422",
+      "summary": "This update adds Claude Opus 5 as the flagship model in the Nexior chat model picker, positioned ahead of Opus 4.8. Key changes include the addition of constants, type unions, and internationalization support across 18 locales. While the entry is cosmetic for now, it will be functional once the backend API is live."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1658",
+      "title": "Add claude-opus-5 to OpenAI Worker Models in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "openai",
+        "models",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update exposes the `claude-opus-5` model in the OpenAI worker's `VISIBLE_MODELS`, ensuring it appears in the `/v1/models` listing alongside other Claude models. The implementation has been verified for live performance on chat completions, with no changes needed for worker routing. Careful ordering is required for deployment to avoid errors in model availability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1135",
+      "title": "Introducing Claude Opus 5 as a First-Class Chat Model in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "models",
+        "chat",
+        "billing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update adds the new `claude-opus-5` chat model, which is priced the same as `claude-opus-4-8`. Key changes include updates to billing rules, service costs, and API visibility to ensure seamless integration. All tests have passed successfully, confirming that the new model operates without issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1657",
+      "title": "Enhance Maestro's Realizer Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "maestro",
+        "realizer",
+        "metadata",
+        "validation",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of unknown `fact_refs` metadata in the Maestro story realization process. Key changes include the introduction of a sentinel file to prevent retries after failures, enhanced validation checks, and updated documentation to clarify the handling of failed tasks. These modifications aim to ensure greater reliability and clarity in the story processing workflow."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#1134",
       "title": "Update discord-bot chart version for smoother deployments in Backend 🚀",
       "tags": [
