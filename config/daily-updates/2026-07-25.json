@@ -3,6 +3,21 @@
   "date": "2026-07-25",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#870",
+      "title": "Update wrangler to latest version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "frontend",
+        "wrangler"
+      ],
+      "public": false,
+      "summary": "This update bumps the wrangler package from version 4.108.0 to 4.113.0, incorporating several minor enhancements. Key changes include improved email routing during Worker deployments, the addition of an exclude option for dependency instrumentation, and support for artifact sources in queue event subscriptions. These updates aim to enhance deployment efficiency and provide better configuration options."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthBackend#360",
       "title": "Block abusive email domain in Backend 🚫",
       "tags": [
