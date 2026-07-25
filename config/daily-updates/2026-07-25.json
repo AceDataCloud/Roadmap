@@ -3,6 +3,38 @@
   "date": "2026-07-25",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#905",
+      "title": "Enhance Email Marketing with Recipient Selection in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "email-marketing",
+        "frontend",
+        "ui",
+        "features",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update introduces a new UI feature for the email marketing composer, allowing users to manually select recipients and view their profiles, orders, and recent activities. Key components added include the AudienceRecipientTable and AudienceProfileDrawer, enhancing user experience during campaign preparation. The changes also ensure that recipient selections are accurately managed and saved, improving campaign targeting capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1139",
+      "title": "Enhance Email Marketing with Manual Recipient Control in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "email",
+        "backend",
+        "api",
+        "features",
+        "privacy"
+      ],
+      "public": false,
+      "summary": "This update introduces manual recipient inclusion and exclusion capabilities for email marketing campaigns, allowing administrators to select recipients beyond automated rules. New API endpoints provide access to candidate profiles and their details, enhancing the user experience. Additionally, email addresses are now masked to ensure compliance with privacy standards."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#870",
       "title": "Update wrangler to latest version in Frontend Web 🚀",
       "tags": [
