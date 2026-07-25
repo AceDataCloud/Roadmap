@@ -1,0 +1,21 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-25",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1134",
+      "title": "Update discord-bot chart version for smoother deployments in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "deploy",
+        "fix",
+        "backend",
+        "discord-bot"
+      ],
+      "public": false,
+      "summary": "This update bumps the `discord-bot` blueprint's default `chart_version` from `0.1.1` to `0.1.4` in the seed script. The previous version was broken, causing deployment failures due to a missing ServiceAccount template. This change ensures that fresh seed runs will use the stable version, preventing potential regressions in production environments."
+    }
+  ]
+}

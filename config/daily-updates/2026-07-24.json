@@ -3,6 +3,231 @@
   "date": "2026-07-24",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#558",
+      "title": "Exciting New CLI Tools for Captcha and Video Generation in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "image2text",
+        "recaptcha",
+        "kickart",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/558",
+      "summary": "This update introduces new command-line interfaces for `image2text`, `recaptcha`, and `kickart`, enhancing our CLI toolkit. The `image2text` CLI allows for English/numeric captcha recognition, while `recaptcha` supports multiple reCAPTCHA endpoints. Additionally, `kickart` offers commands for generating e-commerce and viral videos, streamlining video production workflows."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1656",
+      "title": "Enhance Maestro Story Recovery Mechanism in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "maestro",
+        "recovery",
+        "improvement",
+        "structural",
+        "story"
+      ],
+      "public": false,
+      "summary": "This update improves the Maestro story recovery process by implementing a bounded full structural replan when no changes are detected. Key changes include the removal of the `--force` option, ensuring failed tasks restart cleanly, and adjustments to preserve explicit clauses in the dialogue. Additionally, the output limits have been increased to accommodate the new recovery path, enhancing overall system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1132",
+      "title": "Revamp Email Marketing to Use SMTP in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "email",
+        "smtp",
+        "marketing",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update transitions the email marketing console to send campaigns via plain SMTP from office@acedata.cloud, replacing Tencent Cloud SES. Key changes include the introduction of a new SmtpProvider class for handling email sending, along with updates to various services and settings to support this new default. The Tencent SES provider remains available for rollback, ensuring a smooth transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#215",
+      "title": "Enhance task polling by skipping auth in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "gateway",
+        "auth",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update adds the Kickart tasks API UUID to the SKIP_AUTH_API_IDS, allowing the free /kickart/tasks polling endpoint to bypass the authentication and billing pipeline. This change ensures that zero-balance users can poll tasks they have already paid for without being rejected, aligning it with the existing treatment for other task endpoints."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1133",
+      "title": "Exciting Kickart E-commerce Video Service Integration in Backend 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "kickart",
+        "ecommerce",
+        "video",
+        "api",
+        "backend",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update introduces the Kickart e-commerce video service to the PlatformBackend, featuring three new asynchronous video APIs: `/kickart/videos`, `/kickart/viral-videos`, and `/kickart/template-videos`, along with a polling endpoint. The integration includes comprehensive pricing structures and a robust testing suite, ensuring seamless functionality and official parity in billing. Additionally, the OpenAPI specifications have been updated to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1651",
+      "title": "Exciting Kickart Integration for E-commerce Videos in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "kickart",
+        "ecommerce",
+        "video",
+        "platformservice",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update introduces the Kickart e-commerce video worker to the PlatformService, enabling seamless video generation through various endpoints. Key features include support for async tasks, error mapping, and a structured billing process. The deployment is designed to operate as its own pod set, ensuring efficient resource management and scalability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1655",
+      "title": "Add missing ServiceAccount template to Discord bot chart in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "helm",
+        "discordbot",
+        "serviceaccount",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces a ServiceAccount template to the Discord bot chart, addressing a critical issue where deployments failed due to the absence of the ServiceAccount. The chart version has been bumped from 0.1.0 to 0.1.2, ensuring that the ServiceAccount is created correctly when specified. Validation confirms that the new template aligns with existing conventions and passes all checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#899",
+      "title": "Enhanced API Documentation for Integrators in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "documentation",
+        "api",
+        "frontend",
+        "i18n",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update transforms the appliance API documentation into a comprehensive reference, detailing how to call each endpoint with clear request/response fields. Key additions include an auth legend, async task handling, and a complete field table for each endpoint. The documentation is now available in multiple languages, ensuring accessibility for a wider audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#708",
+      "title": "Sync Browser Manifest to 100MB Contract in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "sync",
+        "manifest",
+        "validation",
+        "browser",
+        "contract"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/708",
+      "summary": "This update synchronizes the Xiaohongshu compact Browser manifest with the final 100MB contract, ensuring that the facade catalog and operation descriptors remain unchanged. The compact manifest JSON validation has passed, and CI Validate Skills was successful. This change is crucial for enabling the matching aichat2/Relay producer while maintaining the integrity of the facade catalog digest."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1421",
+      "title": "Sync 100MB resource contract in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "sync",
+        "contract",
+        "update",
+        "validation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1421",
+      "summary": "This update synchronizes Nexior with the final 100MB Browser wire contract while preserving the unchanged facade catalog digest. It includes a necessary Beachball patch change file and ensures that all validation checks, including ESLint and CI tests, have passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#359",
+      "title": "Update Browser Contract and Extension Requirement in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "update",
+        "backend",
+        "browser",
+        "contract",
+        "extension"
+      ],
+      "public": false,
+      "summary": "This update synchronizes the final Browser wire contract projection and requires Extension 0.7.8 for the new disk-backed upload contract. The final digest is now exposed through existing health and authority paths, ensuring better integration. All deployment and health digest tests have passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#898",
+      "title": "Enhance Uploads with 100MB Support in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "upload",
+        "extension",
+        "frontend",
+        "release",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update releases Extension 0.7.8, enabling disk-backed browser uploads of up to 100MB. Key improvements include streaming authorized POST responses and persisting download IDs for better recovery during service-worker restarts. The changes also address several risks related to upload management and session handling, ensuring a smoother user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1130",
+      "title": "Enforce 100MB Transfer Limit in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "backend",
+        "transfer",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update lowers the browser resource runtime hard limit from 500MB to 100MB, ensuring that only transfers of exactly 100MB are accepted. Existing transfers exceeding this limit will fail, enhancing system reliability. Key validations have passed, confirming the effectiveness of the new boundary checks and metadata enforcement."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1654",
+      "title": "Capping Browser Resource Limits for Enhanced Performance in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "performance",
+        "resource-management",
+        "relay",
+        "browser"
+      ],
+      "public": false,
+      "summary": "This update introduces a cap on Browser resources at 100MB within the canonical contract, ensuring better resource management. Additionally, the command budget for `transfer/upload` has been set to a bounded 600 seconds, and Relay calls will now utilize individual facade timeouts instead of a global limit. These changes aim to improve the reliability and efficiency of resource handling in the Platform Service."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#872",
       "title": "Update FontAwesome Vue Package in Frontend Web 🚀",
       "tags": [
