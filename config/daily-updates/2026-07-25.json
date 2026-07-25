@@ -3,6 +3,21 @@
   "date": "2026-07-25",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#360",
+      "title": "Block abusive email domain in Backend 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "security",
+        "email",
+        "backend",
+        "abuse"
+      ],
+      "public": false,
+      "summary": "This update adds the email domain `geimmell.my.id` to the `BLOCKED_EMAIL_DOMAINS` blacklist to prevent batch signup abuse. The change ensures that new registrations from this domain are blocked while allowing existing users to log in without issues. The deployment has been verified in the production environment for immediate effect."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#1137",
       "title": "Fix spacing and alignment issues in Backend 🛠️",
       "tags": [
