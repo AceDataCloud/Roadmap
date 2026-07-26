@@ -3,6 +3,264 @@
   "date": "2026-07-26",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Skills#718",
+      "title": "Enhance Reddit Skill with Commenting and Search Features in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "reddit",
+        "features",
+        "commands",
+        "update",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/718",
+      "summary": "This update introduces three new commands to the Reddit skill: `comment`, `search`, and `subreddit-info`. Users can now reply to posts, search for public threads, and access subreddit rules, significantly enhancing interaction capabilities. The changes also include improved safety measures for write operations and comprehensive testing to ensure functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1157",
+      "title": "Retiring Publish Center Pathways in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "decommission",
+        "api",
+        "admin",
+        "backend",
+        "publish"
+      ],
+      "public": false,
+      "summary": "This update marks the first step in the decommissioning of the Publish Center, freezing write paths and disabling scheduled tasks. Key changes include modifying API responses to return a 410 status for deprecated endpoints while keeping read access intact. Additionally, admin models have been set to read-only, ensuring no new entries can be added or modified during this transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#363",
+      "title": "Streamline OAuth Client Registry Management in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "backend",
+        "management",
+        "testing",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces a structured YAML manifest for managing first-party OAuth clients, addressing issues caused by manual entries in production. The new sync command ensures that duplicate client IDs and redirect URIs are flagged, preventing potential OAuth flow failures. Additionally, comprehensive tests have been added to validate the functionality and maintain integrity across deployments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#446",
+      "title": "Fix OAuth Client IDs for Maestro and Grok in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "oauth",
+        "fix",
+        "maestro",
+        "grok",
+        "security"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/446",
+      "summary": "This update resolves OAuth authorization failures for the Maestro and Grok connectors by assigning them their own unique client IDs. Previously, both were incorrectly using client IDs from other MCPs, leading to authorization errors. The changes ensure that each MCP has distinct client IDs, preventing future conflicts and maintaining user access."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1669",
+      "title": "Refactor fish_audio_meta.py to EntryPoint Skill in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "scripts",
+        "skills",
+        "testing",
+        "organization"
+      ],
+      "public": false,
+      "summary": "The fish_audio_meta.py script has been successfully moved from the agent's directory to the entrypoint scripts within the skills folder. This change enhances the organization of skill-related helpers and ensures that the script is bundled correctly in the sandbox environment. All references have been updated accordingly, and extensive testing confirms that the functionality remains intact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#562",
+      "title": "Enhance aichat CLI with New Parameters in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "aichat",
+        "update",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/562",
+      "summary": "This update syncs the `aichat` CLI `chat2` command with the latest OpenAPI specifications, introducing new parameters such as `application_id`, `allowed_skills`, `allowed_mcp_servers`, `offset`, and `limit`. These enhancements allow for more flexible and controlled interactions with the `/aichat2/conversations` endpoint, improving user experience and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1667",
+      "title": "Enhance Video Processing Efficiency in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "video",
+        "performance",
+        "maestro",
+        "async",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "This update introduces a shared helper for video clip processing and addresses timeout issues in the Maestro system. Key changes include a new asynchronous task script that improves video submission and polling, reducing processing time significantly. Additionally, the rendering budget has been clarified to prevent unnecessary re-renders, optimizing resource usage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1666",
+      "title": "Fix black screen issue caused by missing GSAP in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "rendering",
+        "gsap",
+        "stability",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical bug where rendered videos appeared as a black screen due to a missing GSAP script. The fix involves seeding the GSAP file into project directories that reference it, ensuring that animations can load correctly. Additionally, safeguards have been implemented to prevent similar issues in the future, enhancing the overall stability of the rendering process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#305",
+      "title": "Revamping Kuaishou Connector Strategy in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "connector",
+        "kuaishou",
+        "oauth",
+        "api",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update introduces a new approach for the Kuaishou connector, advocating the use of the official Open API with OAuth instead of cookie-based methods. Key changes include the addition of a comprehensive document outlining the API endpoints and necessary permissions for compliance. This shift aims to enhance user experience and ensure adherence to platform regulations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1155",
+      "title": "Enhance Scheduled Task Logs Retrieval in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "backend",
+        "scheduled-tasks",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update adds a new section to the documentation for the `retrieve_runs_batch` feature, which allows users to fetch all scheduled task run records without specifying an ID. The records are returned in reverse chronological order and include task names, with options for filtering by status and pagination. Additionally, a risk identified during review was addressed by correcting the response examples to ensure clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1426",
+      "title": "New 'Runs' Tab Added to Scheduled Tasks in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "enhancement",
+        "tasks",
+        "filtering"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1426",
+      "summary": "This update introduces a new 'Runs' tab to the scheduled tasks page, providing a comprehensive overview of all scheduled runs sorted by time. Users can filter runs by status and easily navigate to the corresponding tasks. The change enhances usability and ensures real-time updates for ongoing tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#303",
+      "title": "Complete Decommissioning Plan for Publisher Center in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "decommission",
+        "documentation",
+        "cleanup",
+        "planning",
+        "index"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive plan for the decommissioning of the Publisher Center, detailing a seven-phase approach to remove the service entirely. Key changes include the addition of a detailed README outlining the steps for backup, service suspension, and eventual deletion of associated resources. The impact of this plan is expected to streamline operations and eliminate unused APIs, ensuring a more efficient system moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1671",
+      "title": "Enhance Scheduled Task History with Cross-Task Querying in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "enhancement",
+        "backend",
+        "testing",
+        "Nexior"
+      ],
+      "public": false,
+      "summary": "This update introduces the `retrieve_runs_batch` action, allowing users to fetch all scheduled task run records sorted by time. The new functionality supports filtering by status and pagination, enhancing the user experience on the Nexior platform. Key changes include updates to several persistence files and the addition of comprehensive tests to ensure reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1156",
+      "title": "Streamlined Stripe Webhook Handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "stripe",
+        "webhook",
+        "backend",
+        "cleanup",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update consolidates the Stripe webhook handling by removing the secondary signing secret, simplifying the codebase. The `STRIPE_WEBHOOK_SECRET` is now mandatory, ensuring that any absence leads to explicit failures rather than silent errors. Additionally, outdated comments and references to the deprecated account have been cleaned up, enhancing code clarity and maintainability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#304",
+      "title": "Enhance Connector Multi-Account Support in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "multi-account",
+        "connector",
+        "implementation",
+        "Nexior"
+      ],
+      "public": false,
+      "summary": "This update introduces comprehensive documentation for enabling multiple accounts per connector, addressing a significant limitation in the current system. Key changes include the addition of fields for labeling, default account selection, and enhanced task scheduling capabilities. The implementation plan is divided into seven PRs across various repositories, ensuring a smooth rollout of these features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1668",
+      "title": "Fix YouTube Token Injection Issue in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "youtube",
+        "testing",
+        "oauth",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where the YouTube skill was failing due to a missing token mapping in the provider environment variables. The mapping for 'google/youtube' to 'GOOGLE_YOUTUBE_TOKEN' has been added, ensuring that the skill can now authenticate properly. Additionally, a new test has been implemented to automatically verify provider mappings, enhancing the robustness of the system."
+    },
+    {
       "id": "gh:pr:AceDataCloud/CodingBridge#69",
       "title": "Revamped Installation and Service Docs in Coding Bridge 🚀",
       "tags": [
