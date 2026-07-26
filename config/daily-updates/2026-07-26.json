@@ -3,6 +3,149 @@
   "date": "2026-07-26",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#934",
+      "title": "Update binding verification to slim protocol in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "update",
+        "frontend",
+        "protocol",
+        "auth",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update modifies the binding verification process to align with the slim protocol, eliminating the requirement for JWT signatures. Key changes include decoding single-segment bindings and retaining field comparisons to ensure device authenticity. The adjustments enhance session establishment reliability and maintain trust in attestation epochs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#732",
+      "title": "Enhance Reddit Comment Verification in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "reddit",
+        "verification",
+        "improvement",
+        "bugfix",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/732",
+      "summary": "This update improves the verification process for Reddit comments by eliminating guesswork in response parsing. Instead of assuming outcomes, the system now checks recent comments to confirm if a write was successful, reducing the risk of duplicate submissions. Key changes include stricter matching criteria and enhanced error handling to ensure clarity in reporting outcomes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1684",
+      "title": "Fix relay handling of device acknowledgment/error frames in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "relay",
+        "session",
+        "deployment",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update addresses issues with the relay incorrectly closing connections due to unsupported message types. Key changes include allowing additional message types from the device and ensuring the BROWSER_SESSION_ENABLED flag is set correctly in the deployment configuration. The fix enhances session stability and prevents premature disconnections during the session handshake."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1681",
+      "title": "Enhance Run Management in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "performance",
+        "mongodb",
+        "scheduled-tasks",
+        "aichat"
+      ],
+      "public": false,
+      "summary": "This update introduces a new mechanism to handle orphaned scheduled runs caused by worker restarts. Key changes include the implementation of a reaper function to clean up stale runs and adjustments to the indexing strategy in MongoDB for improved performance. Additionally, the cutoff time for run termination has been increased to 45 minutes to reduce false positives in run status."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1682",
+      "title": "Fix session routing for browser commands in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "routing",
+        "tests",
+        "e2e"
+      ],
+      "public": false,
+      "summary": "This update corrects the session interface by adding the missing '/v1' prefix to the routing paths, resolving 404 errors encountered during E2E tests. Additionally, the related test cases have been updated to align with the new routing structure, ensuring that the CI pipeline accurately reflects the current implementation. All tests are passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#241",
+      "title": "Streamline Account Name Display in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "bugfix",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update unifies the display of account names in the connections sidebar, resolving inconsistencies caused by multiple logic sources. Now, all account names will follow a single format derived from `label`, `profile.name`, `login`, or `email`, eliminating visual clutter and confusion. The changes have been validated against real production data, ensuring a clean and consistent user interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#931",
+      "title": "Enhance Auto Top-Up Page with Card Re-Addition Info in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "auto-topup",
+        "i18n",
+        "user-experience",
+        "alert"
+      ],
+      "public": false,
+      "summary": "This update adds a persistent alert at the top of the auto top-up page, informing users that previously saved cards are no longer valid due to a change in the payment account. The alert provides clear instructions on re-adding cards to restore auto top-up functionality while ensuring that existing settings remain intact. The changes have been localized in multiple languages to enhance user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1429",
+      "title": "Enhance Scheduled Run Feedback in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "i18n",
+        "scheduled-tasks"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1429",
+      "summary": "This update introduces a new feature that displays whether a scheduled run achieved its goal, based on tool execution records. Key changes include the addition of 'outcome' and 'outcome_reason' fields in the IScheduledRun interface, and updates to the UI to reflect these outcomes with appropriate color coding. This enhancement aims to improve user understanding of task success rates and provide clearer feedback."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1680",
+      "title": "Enhance Goal Achievement Judgement in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "outcome-judging",
+        "aichat2",
+        "platform-service",
+        "bug-fix"
+      ],
+      "public": false,
+      "summary": "This update introduces a new outcome judging mechanism that determines whether a run achieved the user's goal based on tool execution evidence rather than relying on the model's self-report. Key changes include the addition of a dedicated outcome judge service and modifications to various handlers and persistence layers to support this functionality. This enhancement aims to reduce false success rates and improve the reliability of task outcomes."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1679",
       "title": "Fix schema resolution issues for Skill activation in Platform Service 🚀",
       "tags": [
