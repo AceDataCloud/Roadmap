@@ -3,6 +3,227 @@
   "date": "2026-07-26",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1679",
+      "title": "Fix schema resolution issues for Skill activation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "schema",
+        "validation",
+        "facade",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where the xiaohongshu Skill could not be activated due to unresolved schema references. The solution involves inlining `$ref` pointers in the facade input schemas, ensuring they are correctly resolved during compilation. All affected facades have been validated, resulting in zero discrepancies in acceptance testing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#314",
+      "title": "Publisher Decommissioning Completed Successfully in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "decommissioning",
+        "documentation",
+        "cleanup",
+        "verification",
+        "release"
+      ],
+      "public": false,
+      "summary": "The decommissioning of the Publisher has been fully executed across all 7 phases, with this PR documenting the final step of dropping tables and providing verification evidence. Key results include all internal interfaces returning 404, successful API calls, and no residual data in Kubernetes clusters, ensuring a clean transition and system integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1161",
+      "title": "Final Step: Dropping Publish Tables in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "decommission",
+        "database",
+        "cleanup",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This PR completes the decommissioning of the publish center by removing eight publish-related tables from the database. All necessary preconditions have been verified, including data backups and the absence of active consumers. The changes ensure a clean removal without impacting other database elements, following the correct foreign key dependency order."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1677",
+      "title": "Enhance Task Retrieval with Actor Identity in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "security",
+        "identity",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update refines the task retrieval process by scoping access to the actor-injected identity, ensuring that users can only access their own tasks. Key changes include the introduction of `actor_user_id` in the identity keys and modifications to the task listing logic to prevent unauthorized access. The implementation has been thoroughly tested, achieving full test coverage with 202 passed and 11 skipped."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1678",
+      "title": "Enhance long video rendering efficiency in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "performance",
+        "rendering",
+        "documentation",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where long video renders were prematurely detached due to a 600s Bash timeout, leading to excessive turn consumption. Key changes include increasing the Bash timeout to 30 minutes and updating documentation to emphasize the importance of executing long commands within a single Bash call. These adjustments aim to optimize resource usage and improve overall rendering success rates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#240",
+      "title": "Streamline Account Management Experience in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "ui",
+        "usability",
+        "frontend",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update enhances the user experience by consolidating action buttons into a dropdown menu when connected, ensuring a cleaner interface. Additionally, the redundant account naming prompt has been removed, allowing users to proceed directly to authorization without unnecessary steps. These changes improve usability and reduce confusion during account management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#930",
+      "title": "Enhance Payment Methods for Revenue Analysis in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "localization",
+        "frontend",
+        "payment",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update integrates the newly added Card payment method into the revenue analysis page, ensuring all payment options are consistently displayed. Key changes include the unification of payment method sources and localization improvements across multiple languages. Additionally, several bugs related to payment method filtering and display have been resolved, enhancing the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#312",
+      "title": "Cleanup and Decommission of PlatformPublisher in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "cleanup",
+        "decommission",
+        "documentation",
+        "archive",
+        "index"
+      ],
+      "public": false,
+      "summary": "This update finalizes the decommissioning of the PlatformPublisher submodule, removing all related references and documentation. Key changes include the removal of the submodule from `.gitmodules`, updates to AGENTS.md, and archiving of relevant plans. The repository for PlatformPublisher has been archived, ensuring a clean transition and maintaining necessary backup records."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#728",
+      "title": "Fix image offset issues and add checks in Skills 🛠️",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "bugfix",
+        "html",
+        "image",
+        "validation",
+        "review"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/728",
+      "summary": "This update addresses two critical defects found during the latest review. The first defect involved incorrect image offsets due to inconsistent line parsing, which could lead to data loss. The second defect removed essential checks for unclosed HTML tags, risking the inclusion of external image URLs in published content. Both issues have been resolved with robust validation measures."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#929",
+      "title": "Refactor auto-topup to use Card payment method in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "payment",
+        "frontend",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update aligns the frontend with backend changes by switching the auto-topup payment method from Stripe to Card. Key adjustments ensure that even with old cached bundles, users will not create configurations that bypass payment. The implementation has been verified with no errors in `vue-tsc` and a clean eslint report."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1160",
+      "title": "Refactor auto-topup to use Card payment method in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "refactor",
+        "payment",
+        "auto-topup",
+        "backend",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This update refactors the auto-topup feature to record off-session top-ups as Card payments instead of Stripe, aligning with the current account structure. Key changes include updating the default payment method to Card, implementing a migration to convert existing Stripe records, and ensuring that the payment process is streamlined without interruptions. All tests have passed, confirming the stability of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#313",
+      "title": "Enhance Kuaishou Connector Documentation in Index 🚧",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "connector",
+        "kuaishou",
+        "updates",
+        "comparison"
+      ],
+      "public": false,
+      "summary": "This update solidifies the application checklist and real-world status for the Kuaishou connector in the documentation. Key changes include a revised status indicating blockage due to enterprise qualification requirements, new sections comparing Kuaishou with Douyin, and a decision table for enterprise registration. Additionally, the order of operations has been clarified to prevent confusion during implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1676",
+      "title": "Streamlined Browser Tool Activation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "browser",
+        "skills",
+        "activation",
+        "update",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update enhances the browser tool activation process by removing the server-side `BrowserOperationDescriptor`, allowing for a more efficient skill activation flow. Key changes include prioritizing server fields for `browser_authority` and improving the parsing logic for skills, ensuring all necessary capabilities are correctly interpreted. The modifications have been validated with real-world skills, confirming successful parsing and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#374",
+      "title": "Fix Kuaishou Connector Entry in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "connector",
+        "kuaishou",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update cherry-picks the Kuaishou connector entry into the main branch, ensuring it is now included in the connectors.yaml file with the necessary hidden flag. Additionally, the test suite has been updated to reflect the new connector count, enhancing error reporting with improved identifier visibility. All tests have passed successfully."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Docs#70",
       "title": "Removed Deprecated Publisher Guides and OpenAPI in Docs 📚",
       "tags": [
