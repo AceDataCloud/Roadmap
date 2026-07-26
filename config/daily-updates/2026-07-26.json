@@ -3,6 +3,373 @@
   "date": "2026-07-26",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1151",
+      "title": "Update auto-topup to use HK Stripe account in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "stripe",
+        "backend",
+        "auto-topup",
+        "config"
+      ],
+      "public": false,
+      "summary": "This update configures the auto-topup feature to save and charge new cards on the HK Stripe account, as the US account is being phased out. Existing configurations will retain their stored accounts until users re-bind. The change has been applied live and verified, ensuring the manifest is consistent with the current deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#55",
+      "title": "Seal US Stripe Account for HK Payments in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "stripe",
+        "payments",
+        "security",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "The US Stripe account has been decommissioned, and all money-in transactions are now forced to the HK account. This change ensures that no payments can be processed through the US account, enhancing security and reliability. The configuration has been verified in production to prevent any fallback to the US account."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#300",
+      "title": "Streamlined Browser Device Bridge Progress in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "browser",
+        "device",
+        "bridge",
+        "progress",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update documents the progress on the Browser Device Bridge, highlighting the deletion of approximately 4,600 lines related to the digest mechanism, with CI tests passing successfully. Additionally, the scope of PR-4 has been refined to retain five shared authority tables, ensuring device pairing remains intact while only four authority-only tables will be deleted. For detailed changes, refer to the updated plan."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1425",
+      "title": "Streamlined Browser Integration by Removing Digest Gates in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "cleanup",
+        "performance",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1425",
+      "summary": "This update simplifies the Browser Device Bridge by removing the `wire_contract_digest` and `facade_catalog_digest` gates from Nexior. Key changes include the deletion of the generated browser contract module and the compatibility check, while retaining the execution FSM and state validation. The overall impact is a cleaner codebase with improved performance and reduced risk of errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#919",
+      "title": "Streamlined Contract Generation with Handwritten Protocol in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "protocol",
+        "frontend",
+        "performance",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update replaces the previously generated 3.5k lines of contract code with a hand-authored protocol, significantly reducing complexity while maintaining functionality. Key components such as command handling and capability checks remain intact, ensuring no loss in performance. The overall codebase is cleaner, with a net reduction of 3,610 lines across 13 files."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1665",
+      "title": "Streamline Browser Relay by Removing Unused Digest in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "cleanup",
+        "performance",
+        "browser",
+        "relay"
+      ],
+      "public": false,
+      "summary": "This update removes the unnecessary `wire_contract_digest` from the Browser Device Bridge, retaining only the essential `machine_states`. Key changes include the introduction of a hand-authored `MACHINE_STATES` and the deletion of the generated `browser_contract_generated.py` file. The modifications enhance efficiency while maintaining compatibility with existing systems."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1664",
+      "title": "Streamlined Browser Device Bridge for aichat2 in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "cleanup",
+        "browser",
+        "aichat2",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update significantly reduces the complexity of the Browser Device Bridge by removing the custom manifest generator and associated digest checks. Key files, including the generator script and the large generated contract file, have been eliminated, leading to a cleaner codebase while maintaining the integrity of the core capabilities. The manifest remains intact, ensuring compatibility and functionality are preserved."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#68",
+      "title": "Enhance Package Bump Workflow in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "ci",
+        "workflow",
+        "release",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/68",
+      "summary": "This update allows the `workflow_dispatch` event to trigger the package bump process, ensuring that manual runs can publish fresh CalVer versions. Additionally, a concurrency group has been added to prevent race conditions during concurrent publish runs, maintaining the integrity of the release process. The changes ensure that the tap and bucket remain up-to-date without backfilling older versions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#918",
+      "title": "Fix negative pricing display to show positive net rates in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "pricing",
+        "i18n",
+        "bugfix",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update corrects the display of cached token prices on the OpenAI pricing page, ensuring they show positive net rates instead of misleading negative values. Key changes include the introduction of a new helper function to calculate the true net cached price and the addition of missing i18n keys for better localization support. These improvements enhance user experience and clarity in pricing representation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#917",
+      "title": "Enhance Auto-Topup with Account-Specific Stripe Keys in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "stripe",
+        "frontend",
+        "auto-topup",
+        "security",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces account-specific publishable keys for the auto-topup feature, ensuring that Stripe.js is initialized with the correct key based on the user's account. Key changes include a hard-fail mechanism for mismatched keys and improved handling of SetupIntent responses. The implementation enhances security and reliability for card saves, preventing silent failures and ensuring compliance with Stripe's requirements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1149",
+      "title": "Enhance Auto-Topup with HK Stripe Support in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "stripe",
+        "payment",
+        "migration",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces account-aware saved-card recharge for auto-topup, allowing transactions to be processed through the HK Stripe account instead of the default US account. Key changes include the addition of a new `stripe_account` column in the database and modifications to payment handling to ensure the correct account is used for new and existing cards. The migration is complete with all tests passing, ensuring a smooth transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#54",
+      "title": "Enhanced Stripe Integration with Account-Aware Auto-Topup in Pay Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend",
+        "stripe",
+        "payments",
+        "backend",
+        "security",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces a robust Stripe integration that ensures all money-in transactions are routed to the correct account, effectively decommissioning the US account. Key features include account-aware auto-topup and a kill-switch for the US account, enhancing security and compliance. Comprehensive tests have been added to validate the new routing logic and ensure fail-safe operations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#218",
+      "title": "Clean Up Legacy Names in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "refactor",
+        "cleanup",
+        "gateway",
+        "v2",
+        "code"
+      ],
+      "public": false,
+      "summary": "This update refactors local variable names to remove any references to V1, enhancing code clarity. The variables `x_payment_data` and `legacy_requirements` have been renamed to `payment_data` and `base_requirements`, respectively, with no functional changes. All tests have passed successfully, ensuring stability in the payment path."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#920",
+      "title": "Fix component registration for email marketing tables in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "vue",
+        "element-plus"
+      ],
+      "public": false,
+      "summary": "This update resolves issues with the rendering of the email marketing components by ensuring that all necessary Element Plus components are properly imported and registered. The `AudienceRecipientTable` and `AudienceProfileDrawer` components now include all required imports, allowing for correct display of the table and drawer elements. Testing confirms that the components function as expected without any errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#67",
+      "title": "Run the main daemon as a user-scoped OS service in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "feature",
+        "service",
+        "daemon",
+        "cross-platform",
+        "user-scoped"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/67",
+      "summary": "This update introduces the `coding-bridge service` command, allowing users to manage the main daemon as a background OS service across platforms. It supports installation, starting, stopping, and uninstalling the service without requiring root access, ensuring user credentials remain intact. Comprehensive tests confirm functionality across Linux, macOS, and Windows, enhancing usability and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1150",
+      "title": "Update Legacy Payment Header to v2 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "update",
+        "x402",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update migrates all documentation for the x402 server from the outdated `X-Payment` header to the new `PAYMENT-SIGNATURE` header. A total of 11 files were modified to ensure clarity and accuracy, eliminating any references to the deprecated header. This change enhances the documentation's reliability for users interacting with the v2 API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#299",
+      "title": "Revamping Marketing Strategy with Connector Ecosystem in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "marketing",
+        "connector",
+        "strategy",
+        "documentation",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive marketing strategy leveraging the connector ecosystem to enhance AceDataCloud's outreach. Key documents have been added, including a current state overview, connector capability maximization, and execution plans. The findings reveal a significant underutilization of existing distribution channels, prompting a focused effort to activate and optimize these resources for better marketing outcomes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#39",
+      "title": "Align Default Timeout with Official SDK in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "timeout",
+        "sdk",
+        "compliance",
+        "documentation",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/39",
+      "summary": "This update synchronizes the default `maxTimeoutSeconds` from 120 to 3600, aligning with the official x402 SDK. It also enhances documentation in the READMEs to reflect compliance with x402 v2 standards, including the `PAYMENT-SIGNATURE` header and CAIP-2 networks. All tests have passed, confirming that the changes maintain functionality and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#38",
+      "title": "Enhance SDK Parity Guard for EVM Signer in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "sdk",
+        "testing",
+        "dev-dependency",
+        "parity",
+        "migration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/38",
+      "summary": "This update introduces the official `x402` SDK as a development dependency and implements a parity guard to ensure that X402Client's hand-rolled EVM envelope aligns with the official specifications. Key changes include new tests that verify structural equivalence and document known divergences, reducing risks for future migrations. The CI remains stable with the addition of the new dependency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#217",
+      "title": "Enhance Drift Guard for x402 Wire Dicts in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "x402",
+        "testing",
+        "gateway",
+        "schema",
+        "python"
+      ],
+      "public": false,
+      "summary": "This update introduces a drift guard for the Gateway's hand-built x402 wire dicts, ensuring compliance with the V2 specification. Key changes include the addition of tests that verify all required fields are present and that only expected fields are included. The implementation aims to prevent silent failures in payment processing due to schema mismatches, enhancing overall reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#298",
+      "title": "Comprehensive Compliance Audit Findings and Tracker in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "compliance",
+        "audit",
+        "sdk",
+        "tracker",
+        "development"
+      ],
+      "public": false,
+      "summary": "This update documents the results of the 4-way x402 compliance audit following the V2-only consolidation. Key findings include the completion of the official SDK migration, confirmation of V2 compliance for the Gateway with minor deviations, and the establishment of a follow-up tracker for future enhancements. The audit ensures that pricing and coverage are accurate, setting a solid foundation for ongoing development."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1148",
+      "title": "Boost upload limits to 1000/hour for Nexior users in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "upload",
+        "backend",
+        "fix",
+        "nexior",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update raises the upload cap for Nexior users from 100 to 1000 images per rolling hour, addressing the frequent 429 errors experienced by heavy users. The change involves modifying the file receipt TTL from 24 hours to 1 hour, ensuring a smoother upload experience without requiring complex migrations. The fix is verified to maintain existing functionality while enhancing performance for users uploading multiple images."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#912",
+      "title": "Revamp Operation Buttons for Risk Control Page in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "frontend",
+        "style",
+        "button",
+        "update"
+      ],
+      "public": false,
+      "summary": "The operation buttons on the distribution risk page have been updated from link styles to more visually distinct entity buttons. This change enhances usability by ensuring buttons are clearly clickable, with adjustments made to button sizes and column widths to prevent text overflow. The modifications are purely stylistic, with no impact on the underlying logic or functionality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#913",
       "title": "Enhance Pricing Button with Alias URL and Bold Styling in Frontend Web 🚀",
       "tags": [
