@@ -3,6 +3,541 @@
   "date": "2026-07-26",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Docs#70",
+      "title": "Removed Deprecated Publisher Guides and OpenAPI in Docs 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Docs",
+        "docs",
+        "cleanup",
+        "decommission",
+        "openapi"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Docs/pull/70",
+      "summary": "This update removes the publisher guides and OpenAPI documentation following the decommissioning of the publisher service. Key changes include the deletion of five markdown files related to publisher guides and the removal of the OpenAPI JSON file. The navigation structure has also been updated to reflect these changes, ensuring no references to the now-defunct service remain."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#729",
+      "title": "Fix comment reporting issue in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "bugfix",
+        "reddit",
+        "skills",
+        "validation",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/729",
+      "summary": "This update resolves a bug where successfully created comments were incorrectly reported as unknown outcomes. The changes ensure that comments are validated correctly, even when certain fields are missing, and introduces a new command to verify comments before retrying. Additionally, several risks were addressed to enhance the reliability of the comment submission process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#447",
+      "title": "Sunset of Materials Tools in M C Ps 🌅",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "deprecation",
+        "cleanup",
+        "tools",
+        "breaking-change"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/447",
+      "summary": "The materials tools have been removed following the decommissioning of the publishing center. This includes the deletion of `acedatacloud_list_channels` and `acedatacloud_search_materials`, which now return 404 errors due to the retirement of the `PublishMaterial` directory. Content distribution will now be handled through Connector and Skills, enhancing user experience by allowing direct AI publishing after account authorization."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#564",
+      "title": "Enhance OpenAI CLI with New Features in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "openai",
+        "cli",
+        "features",
+        "updates",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/564",
+      "summary": "This update synchronizes the OpenAI CLI with the latest API documentation, introducing new commands like 'speech' and 'realtime'. Key enhancements include expanded request options for 'chat', improved binary response handling, and shared JSON parsing helpers. Documentation has been updated to reflect these changes, ensuring users have access to the latest functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#230",
+      "title": "Enhance Task Outcome Accuracy in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "automation",
+        "task-management",
+        "api",
+        "ui",
+        "improvements"
+      ],
+      "public": false,
+      "summary": "This update introduces a robust system for automatically determining the outcomes of scheduled tasks, addressing previous issues with false success reports. Key changes include a new classification system for task completion, enhanced data storage for task results, and improved API responses to ensure accurate tracking of task statuses. These improvements aim to provide users with reliable feedback and streamline the task management process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#373",
+      "title": "Add 51CTO Blog Connector in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "connectors",
+        "blog",
+        "publishing",
+        "china",
+        "developer"
+      ],
+      "public": false,
+      "summary": "This update introduces a new connector for the 51CTO blog, allowing users to capture login cookies using the ACE plugin. The integration is seamless, requiring no OAuth adapter or migration, and will be automatically synced via the connector catalog. The implementation has passed validation for all connection methods and includes clear documentation on usage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#725",
+      "title": "New 51CTO Blog Drafting Skill in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "feature",
+        "skills",
+        "51cto",
+        "markdown",
+        "security"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/725",
+      "summary": "This update introduces a new skill for creating Markdown drafts on the 51CTO blog using users' own login cookies. The implementation relies solely on standard libraries, ensuring compatibility without third-party dependencies. Key features include a gated draft creation process and comprehensive error handling to enhance security and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1159",
+      "title": "Retire Publish Center and APIs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "retirement",
+        "backend",
+        "cleanup",
+        "migration",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update officially retires the Publish Center, removing all related models, APIs, and workflows. Key changes include the deletion of over 5,000 lines of code, including models and routes, and the successful backup of all associated data. The migration process has been structured to ensure data integrity while preparing for future database adjustments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#310",
+      "title": "Updated Douyin Video Posting Guidelines in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "douyin",
+        "updates",
+        "guidelines",
+        "video",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This PR revises the conclusions regarding video posting capabilities on Douyin, stating that server-side automatic submissions are not feasible, while H5 semi-automatic submissions are allowed. Key changes include the removal of misleading application guidelines and the clarification of supported scopes based on official documentation. The updates aim to ensure compliance and prevent user confusion regarding the capabilities available for Douyin integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#364",
+      "title": "Enhance Toutiao Connector with Required Skills in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "enhancement",
+        "connector",
+        "skills",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update adds the necessary `required_skills` to the Toutiao connector, enabling users to utilize skills effectively after connecting their accounts. The changes ensure that skills are automatically installed during connection, resolving previous routing issues. This aligns the Toutiao connector with existing implementations for other platforms like CSDN and Juejin."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#716",
+      "title": "Empower Users to Read and Publish on 今日头条 in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "toutiao",
+        "skills",
+        "feature",
+        "update",
+        "python"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/716",
+      "summary": "This update introduces a new skill for the 今日头条 platform, allowing users to read and publish articles using their own login cookies. Key features include article listing, detailed statistics, and a robust publishing process that ensures images are uploaded correctly. The implementation relies solely on standard libraries, ensuring compatibility with existing sandbox environments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#724",
+      "title": "Fix Bilibili Article Publishing Issues in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "bugfix",
+        "bilibili",
+        "publishing",
+        "testing",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/724",
+      "summary": "This update addresses critical bugs in the Bilibili article publishing process. It ensures that the correct article URL is returned instead of a draft ID, fixes the hardcoded category issue, and clarifies the submission status to prevent confusion about published articles. Comprehensive testing has confirmed the effectiveness of these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#370",
+      "title": "Fix misplaced Blogger section comment for clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "fix",
+        "yaml",
+        "backend",
+        "comment"
+      ],
+      "public": false,
+      "summary": "This update relocates a misplaced comment in the connectors.yaml file, ensuring that the Blogger section is correctly positioned outside the WordPress entry. The change is purely cosmetic, with no impact on functionality or configuration. All YAML structures remain intact and properly formatted."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#723",
+      "title": "Enhance YouTube Upload Documentation in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "documentation",
+        "youtube",
+        "skills",
+        "update",
+        "error-handling"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/723",
+      "summary": "This update improves the YouTube upload documentation by adding a section on handling CDN URLs instead of local files. Key changes include clearer instructions for downloading videos and better error handling during uploads. The modifications ensure users receive accurate feedback on upload failures, enhancing the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1158",
+      "title": "Fix browser transfer verification process in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "browser",
+        "backend",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update modifies the browser transfer verification method to align with the Browser Relay approach, ensuring that the binding sent by aichat2 is properly validated against live connection data. Key changes include decoding the base64url binding and real-time parsing of device and connection epochs, which prevents unauthorized access. The identity of the caller remains secured through a shared internal token."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1675",
+      "title": "Fix broken execution chain in Platform Service 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "security",
+        "browser",
+        "relay",
+        "aichat2"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical broken execution chain caused by recent changes, ensuring that the browser Skill can now correctly connect and function. Key modifications include the replacement of outdated API calls with the current `browser-capabilities/select`, and the introduction of a new `LocalBrowserAuthorityClient` to verify session bindings without relying on a removed issuer. Overall, this enhances the reliability and security of the connection process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#369",
+      "title": "Enhance Browser Capabilities with Policy Details in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "browser",
+        "capabilities",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces the serialization of `policy_digest`, `policy_revision`, and `method_id` in the `browser-capabilities/select` endpoint. These additions enable downstream systems to construct session bindings effectively without altering existing field semantics. The changes have been validated through comprehensive tests and checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1672",
+      "title": "Enhance Midjourney Error Classification in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "midjourney",
+        "api",
+        "testing",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the classification of errors from the Midjourney API, ensuring that upstream moderation and capacity issues are accurately reported. Key changes include the expansion of the shared keywords list for error handling across multiple handlers, which will reduce false alarms in the alert system. Additionally, new tests have been added to validate the error classification logic."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#75",
+      "title": "Upgrade Python Setup Action to Version 7 in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "dependencies",
+        "upgrade",
+        "ci",
+        "python",
+        "actions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/75",
+      "summary": "This update bumps the actions/setup-python from version 5 to 7, enhancing the workflow with improved dependency management and bug fixes. Key changes include migration to ESM, removal of deprecated inputs, and better error handling for pip cache on Windows. These updates aim to streamline the CI process and enhance overall stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#238",
+      "title": "Center SVG Icons with Core Update in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "update",
+        "svg",
+        "icons",
+        "dependencies"
+      ],
+      "public": false,
+      "summary": "This update bumps the @acedatacloud/core package to version 0.19.0, resolving the issue of misaligned SVG icons in the application. Key pages have been verified to show icons centered correctly, improving the overall user interface. The changes ensure that the application adheres to the latest styling standards without introducing any breaking changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#721",
+      "title": "Update Google Ads Skill to Latest API Version in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "google-ads",
+        "api",
+        "update",
+        "skills",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/721",
+      "summary": "This update addresses the issue of the Google Ads skill using a deprecated API version, v18, which has been sunsetted. The skill has been upgraded to use v25, ensuring functionality and preventing 404 errors. Additionally, the documentation has been improved to clarify the necessary headers and conditions for successful API calls."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#722",
+      "title": "Enhance WordPress Skill for SEO and Publishing in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "wordpress",
+        "seo",
+        "bugfix",
+        "enhancement",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/722",
+      "summary": "This update strengthens the WordPress skill by addressing several critical bugs and enhancing SEO capabilities. Key improvements include the addition of necessary SEO fields, a fail-closed mechanism to prevent duplicate slugs, and adjustments to ensure proper publishing functionality. All changes have been verified in a real WordPress environment, ensuring robust performance for unattended publishing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#308",
+      "title": "Enhance Reddit Marketing Prompts for Manual Review in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "reddit",
+        "marketing",
+        "prompts",
+        "manual-review",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive manual review prompt guide for Reddit marketing, enhancing the capabilities of the Reddit connector. Key changes include the addition of two prompts: one for daily topic scanning and another for manual post replies, ensuring compliance with Reddit's guidelines. The implementation aims to improve user engagement while maintaining safety and effectiveness in promotional activities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1674",
+      "title": "Add KUAISHOU_TOKEN mapping for Kuaishou connector in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "connector",
+        "oauth2",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces the mapping for KUAISHOU_TOKEN in the Kuaishou connector, ensuring that the skill can read the correct token. Previously, the absence of this mapping caused the provider to fallback to an unused variable, leading to skill failures. The changes have been validated with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#720",
+      "title": "Launch Kuaishou Video Publishing Skills in Skills 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "kuaishou",
+        "video",
+        "skills",
+        "publishing",
+        "security"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/720",
+      "summary": "This update introduces a new Kuaishou connector that allows users to publish videos and read their works through the Kuaishou open platform. Key features include a three-step video upload process, security measures for content originality, and a streamlined interface using standard libraries. The implementation has been thoroughly tested, ensuring reliability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#371",
+      "title": "New Kuaishou Connector Entry Added in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "kuaishou",
+        "connector",
+        "backend",
+        "oauth",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a new Kuaishou connector entry in the connectors.yaml file, marked as hidden until specific prerequisites are met. Key changes include the addition of three scopes for user permissions and the injection of the KUAISHOU_OAUTH_APP_ID into the platform environment. Additionally, the test connection method schema has been updated to reflect accurate counts and improve error reporting."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#365",
+      "title": "Introducing Kuaishou OAuth Adapter in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "adapter",
+        "kuaishou",
+        "backend",
+        "integration"
+      ],
+      "public": false,
+      "summary": "This update adds a new OAuth adapter for the Kuaishou platform, enabling seamless integration with its official Open API. Key changes include the addition of the KuaishouAdapter class, modifications to connection handling, and enhancements to token management. The implementation ensures that the adapter operates without blocking on approvals, utilizing mock tests for validation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#309",
+      "title": "Multi-Account Plan Update: PR-6 Invalidated, Access Lifted in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "multi-account",
+        "update",
+        "access",
+        "platformfrontend",
+        "pr-6"
+      ],
+      "public": false,
+      "summary": "The status of the multi-account plan has been updated, with PR-6 now invalidated following the merge of PlatformFrontend#928, which removed key files. This change automatically lifts the hard access restriction previously tied to PR-6, allowing PR-4 to proceed without waiting. The correctness of account selection for publishing will now be ensured by PR-7."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1427",
+      "title": "Enhance Scheduled Tasks with Account Selection in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "scheduled-tasks",
+        "bugfix",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1427",
+      "summary": "This update introduces the ability for users to select specific accounts for scheduled tasks associated with connectors that have multiple accounts. The UI will only display the account selection dropdown when multiple accounts are available, ensuring that tasks consistently use the designated account. Additionally, a field name mismatch has been corrected to align with the backend contract."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#239",
+      "title": "Enhance Multi-Account Support on Connection Page in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "multi-account",
+        "ui",
+        "frontend",
+        "feature",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a revamped connection page that supports multiple accounts, allowing users to add new accounts, set defaults, and rename them. Key changes include a new 'Add Account' feature and improved UI elements that only display additional account options when necessary. The update ensures that existing functionalities remain intact, preventing accidental data overwrites during account management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1673",
+      "title": "Enhance Scheduled Tasks with Account Binding in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "security",
+        "bugfix",
+        "testing",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces the ability for scheduled tasks to specify which account of a connector to use, ensuring consistency in task execution. Key changes include the addition of `connection_bindings[]` to the `unattended_policy`, allowing for precise account selection while maintaining default behavior for interactive chats. The implementation also addresses previous issues with account selection persistence and enhances security checks for binding validation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#367",
+      "title": "Enhance Multi-Account Support for Connectors in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "multi-account",
+        "backend",
+        "api",
+        "models",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This update introduces support for multiple accounts per connector, allowing users to bind several accounts to a single connector. Key changes include the addition of new fields in the model for account management and a partial unique index to ensure only one default account per connector. The API has been updated to accommodate these changes, enhancing user experience while maintaining existing behaviors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1428",
+      "title": "Clean Up Orphan Key in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "cleanup",
+        "i18n",
+        "refactor"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1428",
+      "summary": "This update removes the orphan key `menu.publishIndex` from the Nexior project, as it was not being utilized by any components despite existing translations in 18 locales. The key was part of the retired publishing center feature, which has been fully removed from the PlatformFrontend. This change ensures a cleaner codebase without impacting any user interfaces."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#928",
       "title": "Sunsetting the Publishing Center in Frontend Web 🚀",
       "tags": [
