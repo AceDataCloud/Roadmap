@@ -1,0 +1,273 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-26",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#73",
+      "title": "Fix conformance test to be environment-independent in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "ci",
+        "tests",
+        "fix",
+        "conformance",
+        "x402"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/73",
+      "summary": "This update resolves a CI issue where the `/supported` conformance check failed due to the absence of a configured signer. By implementing a deterministic Base-only signer using `@override_settings`, the test now consistently returns a healthy V2 response, validating the response shape regardless of the environment. All tests have passed successfully, ensuring robust CI functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#297",
+      "title": "Enhance x402 Documentation with Payment-Response Clarifications in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "x402",
+        "sdk",
+        "payment",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update corrects the x402 documentation regarding the optional `PAYMENT-RESPONSE` header and introduces an optimal split-by-resource design. Key findings reveal that omitting the header has minimal impact, while the proposed tiers outline different approaches for handling receipts. The changes ensure compliance with the latest SDK specifications and improve clarity for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1140",
+      "title": "Fix candidate preview to show real audience during pause in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "email-marketing",
+        "backend",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update resolves a bug where the candidate preview would show an empty list when sending was paused, despite eligible profiles being available. The fix involves modifying the `eligible_profiles` function to allow real audience visibility during the preview while maintaining send restrictions. New tests have been added to ensure the functionality works as intended."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#908",
+      "title": "Fix recipient table crash on empty data in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "vue",
+        "email-marketing"
+      ],
+      "public": false,
+      "summary": "This update addresses a bug causing the Recipients table to crash when displaying empty or loading data. The fix involves changing the destructuring of the row property to use optional chaining, preventing errors when the scope is undefined. Additionally, the action column's fixed position has been removed to eliminate known triggers for this issue."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#907",
+      "title": "Align API Playground Tabs for a Sleeker Look in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "bugfix",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update fixes the alignment issue of the 'Request' and 'Response' tabs in the API playground on the homepage. By changing the layout to inline-flex and adjusting the spacing, the icons now display neatly alongside the text. This enhancement improves the overall user experience and visual consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1424",
+      "title": "Updated Card Pay-way Icon for Clarity in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "css",
+        "icon",
+        "update",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1424",
+      "summary": "This update replaces the existing Card pay-way icon with a new, clearer bank-card graphic across the authenticated console order page and the anonymous public pay page. The change is purely a CSS asset URL swap, ensuring no logic or markup alterations. The new icon URL has been verified as reachable and functional."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#909",
+      "title": "Updated Card Pay-way Icon for Clarity in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "css",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update replaces the existing Card pay-way icon with a clearer bank-card graphic across two pages: the authenticated console order page and the anonymous public pay page. The change involves a simple asset URL swap in the scoped CSS, ensuring no logic or markup alterations. The new icon URL has been verified and is fully operational."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#906",
+      "title": "Align Icons in '为什么选择我们' Cards in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "css",
+        "frontend",
+        "bugfix",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update centers the SVG icons in the '为什么选择我们' cards on the homepage, addressing a visual misalignment issue. The fix involved adjusting the CSS properties for the icon components to ensure they align properly with the text. No changes were made to the template or logic, and all tests passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#296",
+      "title": "Documenting Key Design Decisions for Payment Responses in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "design",
+        "documentation",
+        "payment",
+        "architecture",
+        "x402"
+      ],
+      "public": false,
+      "summary": "This update includes design notes for the `PAYMENT-RESPONSE` header and the restructuring of the payment state table. Key options for handling the response header have been outlined, with a recommendation for an async receipt pointer approach. Additionally, the proposal to move the payment state to a dedicated table is discussed, emphasizing the need for this change post-V2 stabilization."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#72",
+      "title": "Enhance Core-V2 Conformance Suite for Facilitator in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "conformance",
+        "testing",
+        "facilitator",
+        "x402",
+        "regression"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/72",
+      "summary": "This update ports the 53-case core-v2 conformance manifest from the retired X402Backend, enabling the execution of 14 deterministic tests against the live X402SupportedView. The addition of these tests ensures a robust regression guard for the facilitator's advertised capabilities, maintaining compliance with the industry-standard contract. The changes include a new manifest and a dedicated test module, both of which have passed verification."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#294",
+      "title": "Retire X402Backend and Update Documentation in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "retirement",
+        "documentation",
+        "integration",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "The standalone X402Backend has been retired, with documentation updated to reflect that x402 is now integrated into PlatformGateway. Key changes include marking the old route as superseded and removing the local X402Backend directory, which was never deployed. The core-v2 conformance suite has been successfully ported to Gateway CI."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#216",
+      "title": "Streamline x402 Payment Lane to V2 Only in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "payment",
+        "v2",
+        "cleanup",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update standardizes the x402 payment lane to exclusively use the V2 specification, removing the legacy V1 `X-Payment` compatibility. Key changes include dropping the `X-Payment` branch in the authentication process, ensuring that both the body and header now align with V2 requirements. New tests have been added to validate the V2-only functionality, enhancing clarity and reducing potential client confusion."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1660",
+      "title": "Streamline Short-Drama Skill with Key Fixes in Platform Service 🎬",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cleanup",
+        "short-drama",
+        "api",
+        "testing",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update focuses on cleaning up the SKILL.md file by removing outdated references and redundant narrative elements, ensuring the integrity of essential API details remains intact. Key changes include fixing a dangling reference from a previous PR and deleting unnecessary historical prose, resulting in a net reduction of 8 lines. The overall functionality and testing coverage have been preserved, with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1659",
+      "title": "Streamlined Story Governance with Deterministic Checks in Platform Service 🎭",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "validation",
+        "storytelling",
+        "governance",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update replaces the complex governance framework for short-drama story validation with a simplified, deterministic script. The new `check_story.py` ensures structural integrity of stories while reducing code complexity by over 2,300 lines. Key improvements include enhanced validation rules and a focus on maintaining the narrative spine without external dependencies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#904",
+      "title": "Refine npm audit for production dependencies in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "npm",
+        "audit",
+        "frontend",
+        "dev-tools",
+        "ci"
+      ],
+      "public": false,
+      "summary": "This update modifies the npm audit command in the extension's package.json to include the --omit=dev flag, ensuring that only production dependencies are audited. This change prevents unnecessary failures due to high-severity vulnerabilities in development tooling, which do not impact the packaged extension. The audit now reports zero vulnerabilities, maintaining the integrity of the CI process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#293",
+      "title": "Streamline x402 to Gateway V2, Retire X402Backend in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "cleanup",
+        "v2",
+        "integration",
+        "architecture",
+        "payment"
+      ],
+      "public": false,
+      "summary": "This update consolidates the x402 functionality into the Gateway V2, effectively retiring the previously unused X402Backend. Key changes include the addition of a live V2 interop probe and a comprehensive architecture teardown document. The transition ensures that industry-standard V2 agents can now process payments seamlessly, enhancing overall system efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#869",
+      "title": "Update autoprefixer to latest version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "update",
+        "autoprefixer"
+      ],
+      "public": false,
+      "summary": "This update bumps the autoprefixer package from version 10.5.2 to 10.5.4. Key improvements include fixes for prefixed rule duplication and enhancements to the gradient and bracket parsers, ensuring better CSS compatibility and performance."
+    }
+  ]
+}
