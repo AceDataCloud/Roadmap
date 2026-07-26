@@ -3,6 +3,207 @@
   "date": "2026-07-26",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#913",
+      "title": "Enhance Pricing Button with Alias URL and Bold Styling in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "i18n",
+        "frontend",
+        "button",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update improves the pricing button on the API docs page by linking it to a user-friendly alias URL instead of a UUID. Additionally, the button's styling has been upgraded from a ghost pill to a solid primary button, making it more visible and inviting for users. Internationalization support has also been added for all 12 locales, ensuring a consistent experience across languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#236",
+      "title": "Align Logout Icon with Label in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "ui",
+        "fix",
+        "frontend",
+        "accessibility"
+      ],
+      "public": false,
+      "summary": "This update fixes the alignment issue between the logout icon and its label in the sidebar. The logout element now uses the same grid structure as other menu items, ensuring consistent vertical alignment. The changes have been verified across desktop and mobile views, maintaining functionality and accessibility standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#914",
+      "title": "Update Sidebar Menu to 'Models & Pricing' in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "frontend",
+        "ui",
+        "update"
+      ],
+      "public": false,
+      "summary": "The sidebar menu on the console has been updated to reflect the accurate content of the models page, changing 'Model List' to 'Models & Pricing' across 12 languages. This change enhances clarity for users, indicating that the page includes both models and pricing information. The update involved no code changes, ensuring a seamless transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#915",
+      "title": "Enhance Analytics Layout for Clarity in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "analytics",
+        "layout",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the layout of the analytics page by repositioning the date filters above the summary cards. Previously, users might have misunderstood the time range for the displayed metrics, as the filters were located below the cards. The change enhances user experience by making the filters more prominent and accessible."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#916",
+      "title": "Enhance row selection handling in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "email-marketing",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update introduces a safeguard in the email marketing recipient table to ensure that the toggleRowSelection function is only called when the table reference is ready. By implementing a check and retry mechanism, it prevents errors during the initial render, enhancing the stability of the campaign editor. The changes have been validated with successful tests and no eslint or type errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1663",
+      "title": "Enhance Image Editing Size Inference in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "image-processing",
+        "gpt-image-2",
+        "platform-service",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update fixes the issue where the `gpt-image-2` image editing feature returned a default 1:1 aspect ratio when no size was specified. The solution involves implementing size inference based on the input image's aspect ratio, ensuring that the output matches the intended dimensions. Key modifications were made across multiple handlers to support this functionality, along with comprehensive testing to validate the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1662",
+      "title": "Enhance Tool Result Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "serialization",
+        "config",
+        "testing",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update resolves the issue of oversized tool results being truncated to a fixed 2000-character preview. Now, results are retained up to a specified ceiling of 20,000 characters, ensuring that larger outputs are fully represented. Key changes include a unified configuration for maximum result size and improvements to the serialization process to maintain accurate size reporting."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1661",
+      "title": "Fix video recovery issue in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "video",
+        "recovery",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical bug where finished videos were incorrectly discarded due to a failure in the delivery detection process. The fix allows the system to recover nested bare MP4 files even when no manifest is present, ensuring that valid outputs are not lost. Comprehensive tests have been added to validate this behavior and ensure reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#910",
+      "title": "Enhance error handling in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "email-marketing",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update improves error handling in the email marketing component by ensuring that the entire slot scope is guarded against undefined values. Changes were made to both the AudienceRecipientTable and AudienceProfileDrawer components to prevent console errors related to accessing properties of undefined. The fix maintains existing functionality while enhancing stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1142",
+      "title": "Revamp Email Marketing Opt-Out Model in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "email",
+        "marketing",
+        "backend",
+        "opt-out",
+        "compliance"
+      ],
+      "public": false,
+      "summary": "This update transitions the email marketing strategy from an opt-in to an opt-out model for topic campaigns, allowing eligible users to receive emails unless they explicitly unsubscribe. Key changes include modifications to the eligible profiles query and email preparation logic to ensure compliance with subscription states. Additionally, several compliance issues identified during review have been addressed, enhancing the overall functionality and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#911",
+      "title": "Clarify Rendering Containers for Service Intro in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "docs",
+        "frontend",
+        "css",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update revises the documentation to accurately describe how service intro pages render in both `.html-document-body` and `.markdown-body`. Key changes include clarifying button color rules to ensure consistency across both surfaces and preventing regression issues. The adjustments are purely documentation-focused, enhancing clarity for developers and avoiding future bugs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1141",
+      "title": "Fix button text color for service intros in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "css",
+        "bugfix",
+        "ui",
+        "docs"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where filled CTA buttons on the service intro pages displayed black text instead of white. By implementing container-agnostic CSS rules, the button text color is now consistently white across both service and documentation pages. The fix applies to the turnstile, discord-bot, and wechat-bot service intros, ensuring improved visibility and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#295",
+      "title": "Streamlining Browser Device Bridge for Efficiency in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "refactor",
+        "documentation",
+        "diagnosis",
+        "simplification",
+        "browser"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive diagnosis and a streamlined PR plan aimed at reducing the complexity of the Browser Device Bridge. Key changes include the addition of two critical documents, archiving outdated designs, and updating the README to reflect the new simplified approach. The goal is to cut down the codebase from approximately 24,000 lines to under 6,000 lines, enhancing maintainability and performance."
+    },
+    {
       "id": "gh:pr:AceDataCloud/FacilitatorX402#73",
       "title": "Fix conformance test to be environment-independent in x402 🚀",
       "tags": [
