@@ -3,6 +3,151 @@
   "date": "2026-07-26",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#928",
+      "title": "Sunsetting the Publishing Center in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "deprecation",
+        "frontend",
+        "cleanup",
+        "redirects"
+      ],
+      "public": false,
+      "summary": "This update officially removes the Publishing Center, including related pages, operators, and internationalization files. Users will now access capabilities through the Connector and Skills at the new entry point. Additionally, old links are redirected to the application list to prevent empty views from appearing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#368",
+      "title": "Add Douyin OAuth Adapter for Video Posting in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "douyin",
+        "adapter",
+        "backend",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces a new OAuth adapter for Douyin, enabling server-side video submissions through its OpenAPI. Key components include the adapter implementation, comprehensive testing with 18 new tests, and necessary adjustments to settings for OAuth client keys. The framework remains unchanged, ensuring seamless integration with existing systems."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#306",
+      "title": "Douyin Video Upload API Validated in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "douyin",
+        "api",
+        "connector",
+        "documentation",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update confirms the feasibility of using Douyin's server-side video upload OpenAPI, aligning it with the existing TikTok connector. Key changes include the addition of a new Douyin documentation file and updates to the marketing distribution documentation. The API endpoints have been verified to be online, enhancing our capabilities beyond TikTok's current offerings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#362",
+      "title": "Fix Habr Cookie Connector to Load Skills in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "connector",
+        "skills",
+        "testing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update addresses the issue with the Habr cookie connector, which previously had an empty required_skills array, rendering it unusable. Key changes include adding the necessary required_skills to both the method and top-level in connectors.yaml, and introducing new tests to ensure proper functionality. The fix ensures that the Habr connector can now correctly load its associated skill, improving its usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#926",
+      "title": "Fix email footer locale mismatch in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "email",
+        "frontend",
+        "i18n",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the unsubscribe link in the email preview footer displayed in the console's UI language instead of the email's locale. Key changes include updating the unsubscribe text to follow the email's locale and ensuring the sender address is dynamically set rather than hardcoded. These adjustments enhance the accuracy of email previews without affecting sent emails."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#719",
+      "title": "Enhance Reddit Search Defaults for Better Relevance in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "reddit",
+        "search",
+        "improvement",
+        "documentation",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/719",
+      "summary": "This update changes the default sorting method for the Reddit search command from 'new' to 'relevance', addressing issues where recent posts were returned without keyword relevance. The time filter default is also adjusted from 'week' to 'month' to provide a broader context for search results. Additionally, documentation has been updated to clarify the intended use of the sorting options."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#366",
+      "title": "New Connectors for Yuque, Oschina, and SegmentFault in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "connectors",
+        "backend",
+        "integration",
+        "china",
+        "productivity"
+      ],
+      "public": false,
+      "summary": "This update introduces three new connectors for Chinese content platforms: Yuque, Oschina, and SegmentFault. These connectors allow seamless integration without the need for OAuth adapters or migrations, as they will be automatically synced via the `auth-backend-connector-catalog-sync`. Key features include user token support for Yuque and cookie-based authentication for the other two platforms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#717",
+      "title": "New Connectors for Chinese Platforms in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "connectors",
+        "skills",
+        "yuque",
+        "oschina",
+        "segmentfault"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/717",
+      "summary": "This update introduces three new connectors for Chinese content platforms: Yuque, OSChina, and SegmentFault. Each connector operates using standard libraries without third-party dependencies, ensuring seamless integration. Key features include dry-run write operations and explicit confirmation for publishing, enhancing user control and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#24",
+      "title": "Restore Inline SVG Display for Centered Icons in Common Frontend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "svg",
+        "tailwind",
+        "css",
+        "bugfix",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update fixes the display issue of inline SVGs caused by Tailwind's preflight settings, which previously rendered SVGs as block elements, disrupting their alignment. The solution ensures that all SVGs are displayed as inline-block, allowing them to be properly centered within their parent containers. Additionally, the changes include updates to the README and tests to validate the fix across various scenarios."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Skills#718",
       "title": "Enhance Reddit Skill with Commenting and Search Features in Skills 🚀",
       "tags": [
