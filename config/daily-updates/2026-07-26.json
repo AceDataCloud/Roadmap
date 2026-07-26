@@ -3,6 +3,203 @@
   "date": "2026-07-26",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/CodingBridge#69",
+      "title": "Revamped Installation and Service Docs in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "docs",
+        "update",
+        "installation",
+        "service",
+        "troubleshooting"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/69",
+      "summary": "This update significantly enhances the installation and service documentation for Coding Bridge. Key changes include a comprehensive install matrix for various package managers and a detailed service section that outlines commands, unit locations, and troubleshooting steps. These improvements aim to provide users with clearer guidance and ensure a smoother setup experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1670",
+      "title": "Enable Browser Execution for Aichat2 and Relay in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "deployment",
+        "testing",
+        "aichat2",
+        "browser-relay"
+      ],
+      "public": false,
+      "summary": "This update activates the browser execution switch for Aichat2 and browser-relay, facilitating end-to-end acceptance testing for the Xiaohongshu platform. Key changes include setting `BROWSER_EXECUTION_ENABLED` and `BROWSER_TOOL_EXECUTION_ENABLED` to true, while ensuring existing service behaviors remain unaffected without proper device connections. A kill switch is also implemented for easy deactivation if needed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#361",
+      "title": "Streamlined Browser Authority Layer in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "refactor",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update removes the authority grant layer from the Browser Device Bridge, significantly reducing code complexity. Key changes include the deletion of several files related to browser authority and the introduction of a new contract file for device pairing. The migration only drops three isolated tables, ensuring that essential functionalities remain intact."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#925",
+      "title": "Fix auto-topup card binding with single Stripe key in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "stripe",
+        "frontend",
+        "auto-recharge"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical bug that disabled the auto-recharge card binding form due to a missing Stripe publishable key. The logic for selecting keys has been simplified, and the key is now injected during the build process to ensure proper account binding. Additionally, the form will clearly indicate when it is disabled due to a missing key, enhancing user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1154",
+      "title": "Streamline Stripe Payment Functions in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "refactor",
+        "stripe",
+        "payment",
+        "backend",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update refactors the payment processing by removing the multi-account handling for Stripe, simplifying the payment functions. Key changes include the deletion of the `account` parameter from six payment functions and the removal of related configurations, resulting in a cleaner codebase with approximately 71 lines removed. All tests passed successfully, ensuring stability in the payment workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PayBackend#56",
+      "title": "Refactor(stripe): drop multi-account plumbing, single Stripe account in Pay Backend 🧹",
+      "tags": [
+        "github",
+        "pr",
+        "PayBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#924",
+      "title": "Fix hero action buttons for long labels in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "frontend",
+        "bugfix",
+        "responsive"
+      ],
+      "public": false,
+      "summary": "This update addresses the issue of hero action buttons being clipped due to fixed widths. The `.action-button` class has been modified to use `min-width` instead of a fixed width, allowing buttons to adapt to longer translated labels while maintaining visual consistency. Similar adjustments were made to other buttons to ensure a cohesive user experience across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#301",
+      "title": "Feat(growth): 增长看板接通真实 utm 漏斗 (P0-1) in Index ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Index"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#923",
+      "title": "Fix(seo): render JSON-LD + legal page content for crawlers under SSR in Frontend Web 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#921",
+      "title": "Fix(ssr): emit per-route canonical/OG/JSON-LD inside <head> in Frontend Web 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1152",
+      "title": "Enhance SEO with Sitemap and Robots.txt Fixes in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "seo",
+        "sitemap",
+        "robots",
+        "backend",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update corrects the sitemap namespace and adds the missing /documents index page, ensuring better visibility for crawlers. Additionally, the robots.txt file has been updated to explicitly allow AI and GEO crawlers while disallowing indexing of sensitive order pages. These changes enhance the site's SEO performance and improve crawler interactions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#302",
+      "title": "Docs(marketing): 修正 connector-marketing-engine 的过期/错误断言 in Index 📝",
+      "tags": [
+        "github",
+        "pr",
+        "Index"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1153",
+      "title": "Chore(email): let the secret control ALLOW_REAL_RECIPIENTS, require postal address in Backend ✨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#76",
+      "title": "Update Python Dependencies for Enhanced Performance in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "dependencies",
+        "update",
+        "python",
+        "djangorestframework",
+        "tencentcloud"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/76",
+      "summary": "This update bumps the `djangorestframework` from version 3.15.1 to 3.17.1, introducing several bug fixes and new features, including support for Python 3.14 and Django 6.0. Additionally, the `tencentcloud-sdk-python` has been updated from 3.1.135 to 3.1.140, ensuring compatibility with the latest enhancements and fixes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#922",
+      "title": "Fix(email-marketing): console copy still claimed opt-in after the opt-out switch in Frontend Web 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend"
+      ],
+      "public": false
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#1151",
       "title": "Update auto-topup to use HK Stripe account in Backend 🚀",
       "tags": [
