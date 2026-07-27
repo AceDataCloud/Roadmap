@@ -3,6 +3,22 @@
   "date": "2026-07-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPs#450",
+      "title": "Enhance CI for WebExtrator with Deploy Workflow in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "ci",
+        "deploy",
+        "webextrator",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/450",
+      "summary": "This update adds the missing deploy workflow for the WebExtrator component, ensuring that it can now automatically deploy new changes. The changes include the addition of 'deploy.yaml' and 'run.sh' files, which were previously absent, aligning the setup with the other components. As a result, the WebExtrator will now reflect the latest code changes from the recent updates."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#574",
       "title": "Enhance block_resources to typed array in Clis 🚀",
       "tags": [
