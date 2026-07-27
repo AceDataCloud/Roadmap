@@ -3,6 +3,230 @@
   "date": "2026-07-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#376",
+      "title": "Enhance account verification signals in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "auth",
+        "backend",
+        "update",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update modifies the account verification process by changing the default behavior to only consider disposable email domains as direct evidence. The new command-line option allows for the use of circumstantial signals, such as shared IPs and bulk signup days, but is disabled by default to prevent false positives. This change aims to protect legitimate users while still addressing potential abuse effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#245",
+      "title": "Fix logo display issue on OAuth authorization page in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "bugfix",
+        "oauth",
+        "frontend",
+        "cdn",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update resolves a logo display issue on the OAuth authorization page, where user-uploaded logos were incorrectly shown as default placeholders. Key changes include switching to CDN for logo uploads, allowing base64 logos for existing data, and implementing size checks for uploads. Additionally, potential blob URL leaks have been addressed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#375",
+      "title": "Enhance User Registration Monitoring with Restricted Accounts Flag in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "user-management",
+        "security",
+        "data-integrity"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `is_restricted` flag for user accounts to identify bulk-signup and throwaway accounts. Key changes include the addition of fields for restriction reasons and timestamps, along with a command for scanning and flagging accounts based on specific criteria. This enhancement aims to improve the integrity of user data and marketing reach while ensuring that legitimate users are not affected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1693",
+      "title": "Fix required parameter issues and enhance feedback in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "improvement",
+        "user-experience",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update addresses three critical bugs identified during live testing. Key changes include ensuring all required parameters are filled based on schema suggestions, improving error messaging to provide users with actionable feedback, and enhancing progress visibility during long-running tasks. These improvements aim to streamline user experience and reduce confusion during interactions with the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1692",
+      "title": "Enhance Task Concurrency for Workers in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "concurrency",
+        "performance",
+        "bugfix",
+        "testing",
+        "worker"
+      ],
+      "public": false,
+      "summary": "This update improves the concurrency of task execution in the worker system, allowing each worker to handle multiple tasks simultaneously, up to a defined limit. The changes address a bottleneck that previously restricted task processing to one per replica, significantly enhancing throughput. Additionally, the shutdown process has been refined to ensure no tasks are lost during reboots, improving reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#937",
+      "title": "Enhance command error handling in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "relay",
+        "command",
+        "error-handling"
+      ],
+      "public": false,
+      "summary": "This update improves the error handling for commands in the browser by ensuring that failures now return a `browser.result` with a `call_id`. This change prevents commands from hanging indefinitely when an error occurs, allowing for better command management and reducing timeout issues. The implementation maintains a consistent structure for both successful and failed commands."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#731",
+      "title": "Enhance Fish TTS Models with s2.1-pro in Skills 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "fish-audio",
+        "tts",
+        "skills",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/731",
+      "summary": "This update adds the `s2.1-pro` model to the Fish TTS engine selection in the `skills/fish-audio/SKILL.md` file, ensuring consistency with the values in `fish.json`. The decommissioning of the publisher service has no impact on existing skills, as no publisher skill was present in this repository. Other minor changes include updates to the OpenAPI specs and translations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#71",
+      "title": "Update Setup Steps and Service Descriptions in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "docs",
+        "setup",
+        "service",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/71",
+      "summary": "This update corrects the setup sequence for pairing devices, ensuring users first run the `coding-bridge pair` command to obtain a pair code before claiming it in the browser. Additionally, it clarifies the differences between using Homebrew services and the `service install` command, emphasizing that they should not be used simultaneously. Documentation has been updated to reflect these changes and improve user guidance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#244",
+      "title": "Enhance Connector Sorting and Skeleton Animation in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "skeleton",
+        "sorting",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces improved sorting for connectors, clustering accounts by type and ensuring the newest entries appear first. Additionally, the skeleton screen animation has been fixed to provide a smoother loading experience, enhancing the overall user interface. These changes aim to eliminate confusion and improve usability on the connections page."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1691",
+      "title": "Fix OAuth link expiration issue in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "oauth",
+        "mongodb",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update resolves the 'Link expired' issue that occurred when OAuth links were shared across multiple server replicas. By storing pending links in MongoDB instead of in-memory, the system ensures durability and consistency, allowing successful link completion regardless of which pod handles the requests. Additionally, new tests have been added to verify the functionality across replicas."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1690",
+      "title": "Allow connection_epoch to be 0 for browser results in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "validation",
+        "browser",
+        "protocol",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update modifies the `BrowserResultPayload` to accept a `connection_epoch` of 0, addressing an issue where the device would return 0 but was previously rejected. The change ensures that the validation process does not fail due to this non-critical field, preventing unnecessary socket closures. Comprehensive tests confirm that the new implementation works as intended without compromising security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1431",
+      "title": "Set ChatGPT Default Model to GPT-5.6 Sol in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "chat",
+        "update",
+        "default",
+        "model",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1431",
+      "summary": "This update changes the default ChatGPT model for new users from GPT-5.6 Luna to GPT-5.6 Sol. The change decouples the default model selection from the model list order, ensuring that the default model is now explicitly set while maintaining the existing order for other models. Existing users will not be affected, as their previously selected models will remain unchanged."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1689",
+      "title": "Enhance MCP Tool Timeout for Better Performance in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "timeout",
+        "mcp",
+        "performance",
+        "config",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update increases the timeout for the MCP tools from 60 seconds to 180 seconds, addressing issues with the AI Chat image generation feature that previously failed due to time constraints. The change introduces a configurable timeout setting, ensuring that the tool can handle longer processing times without interruption. Additionally, it maintains the functionality of built-in tools while allowing for improved performance in media API calls."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#448",
+      "title": "Enhance Image Generation with Async Submission in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "async",
+        "image-generation",
+        "timeout-fix",
+        "documentation",
+        "client-update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/448",
+      "summary": "This update introduces asynchronous submission for image generation requests, addressing timeout issues that previously occurred after 60 seconds. Key changes include modifications to the client and tools to support async operations, allowing for immediate task ID retrieval and improved handling of long-running tasks. Documentation has also been updated to reflect these changes, ensuring clarity for users."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#187",
       "title": "Enhanced API Response Documentation in Wisdom 📚",
       "tags": [
