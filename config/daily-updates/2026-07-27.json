@@ -3,6 +3,165 @@
   "date": "2026-07-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#187",
+      "title": "Enhanced API Response Documentation in Wisdom 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "documentation",
+        "api",
+        "enhancement",
+        "models",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update enriches the API response models with detailed descriptions for 106 previously undocumented fields across various response types, including AccountResponse and MessageResponse. The changes improve the clarity of the API documentation, ensuring users understand the purpose of each field. All modifications have been validated to maintain semantic integrity, with no behavioral differences introduced."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1164",
+      "title": "Fix audience eligibility gates for email marketing in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "email",
+        "backend",
+        "fix",
+        "optimization",
+        "audience"
+      ],
+      "public": false,
+      "summary": "This update corrects the eligibility criteria for email marketing, significantly increasing the reachable user base from 272 to 148,032. Key changes include removing the requirement for real-name verification and adjusting the criteria for 'canonical relationship' to reflect actual user engagement. Additionally, the implementation has been optimized to handle larger datasets without performance issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#70",
+      "title": "Streamlined README for Easier Setup in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "documentation",
+        "readme",
+        "updates",
+        "bugfix",
+        "user-experience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/70",
+      "summary": "The README has been significantly condensed from 470 lines to 193, focusing on essential installation, configuration, and operational guidance. Key details have been relocated to new documentation files without any loss of information. Additionally, several factual inaccuracies were corrected to enhance clarity and usability for new users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#936",
+      "title": "Fix relay ack handling and frame limits in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "relay",
+        "websocket",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update addresses three key issues in the relay communication process. It modifies the acknowledgment handling to prevent unnecessary disconnections, adjusts the close code to comply with WebSocket standards, and increases the outbound frame limit to match the inbound ceiling. These changes enhance the stability and reliability of the session management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1688",
+      "title": "Enhance session handling for device compatibility in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "session",
+        "relay",
+        "compatibility",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update modifies the session handling logic to allow the device to send session.ready payloads without requiring certain fields that it cannot know. The device_id, connection_epoch, and expiry_ms are now optional and will be retrieved from the broker's stored state instead. This change improves compatibility and reduces errors in session delivery."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1687",
+      "title": "Updated Interaction Endpoint and Lazy Initialization in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "update",
+        "fix",
+        "testing",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "The interaction endpoint has been streamlined to `/interactions`, enhancing clarity in the Discord developer portal. Additionally, lazy initialization for Mongo-backed stores has been implemented, resolving issues with module imports that previously required a database. New route contract tests have been added to ensure the integrity of key paths, contributing to a more robust service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#243",
+      "title": "Refine dropdown menu spacing and cleanup in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "cleanup",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update addresses issues with the dropdown menu's separator line and spacing. The margin for the separator has been adjusted to ensure symmetry, and unnecessary code related to a non-functional `::before` pseudo-element has been removed. Additionally, the `multiAccount` property has been deleted as it is no longer in use, streamlining the codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#311",
+      "title": "Launch of Public Bot Acquisition Strategy in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "discord",
+        "bot",
+        "acquisition",
+        "strategy",
+        "public"
+      ],
+      "public": false,
+      "summary": "This update introduces a new public bot for Discord aimed at enhancing AceDataCloud's visibility and customer acquisition. The bot allows users to invite it to their servers and utilize slash commands to access AceData's generation capabilities, focusing on organic exposure rather than direct monetization. Key architectural decisions ensure scalability and compliance with Discord's guidelines, setting the stage for future enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1683",
+      "title": "Launch of Public Discord Bot for AceData's Services in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "discord",
+        "bot",
+        "integration",
+        "public",
+        "services",
+        "launch"
+      ],
+      "public": false,
+      "summary": "We've introduced a public Discord bot that integrates AceData's generation capabilities into slash commands, covering 15 services and 16 commands. This bot allows users to access non-private generation services directly through Discord, enhancing user engagement and acquisition. Key architectural improvements include HTTP interactions without gateway websockets and automated command registration from OpenAPI specs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#935",
+      "title": "Fix time attestation handling for slim protocol in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "protocol",
+        "frontend",
+        "websocket",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update addresses issues with the handling of `time.attestation` frames in the slim protocol. Key changes include storing the `time.attestation` separately and adjusting the validation process to eliminate unnecessary signature checks. The code has been cleaned up, and all tests have passed successfully."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#864",
       "title": "Update appkit-universal-connector to latest version in Frontend Web 🚀",
       "tags": [
