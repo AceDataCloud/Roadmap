@@ -3,6 +3,246 @@
   "date": "2026-07-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1697",
+      "title": "Refactor Discord Bot to Use SDK for Platform Calls in Platform Service 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "sdk",
+        "discord",
+        "improvement",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update refactors the Discord bot to utilize the `acedatacloud` SDK for HTTP client operations, task polling, and artifact URL retrieval. Key improvements include enhanced error handling and a new 'Animate' button for video generation. The codebase has been streamlined, reducing lines significantly while ensuring robust functionality with 123 tests passing, including integration tests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#246",
+      "title": "Enhance Connector Cards with Account Count in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "ui",
+        "enhancement",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update transforms the 'Installed' status on connector cards into an interactive badge displaying the number of connected accounts. Users can now easily add accounts directly from the card, improving accessibility and usability. Additionally, the update includes internationalization adjustments to ensure accurate translations across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#379",
+      "title": "Enhance Connector Directory with Account Counts in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "connectors",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature to the connector directory, allowing it to return the number of accounts associated with each connector. The change replaces the previous boolean response with a count, ensuring users can see how many accounts are linked and manage them effectively. Additionally, new tests have been added to verify the accuracy of account counting and ensure that revoked connections do not inflate the badge count."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#410",
+      "title": "Clarify success status handling in SDK 🛠️",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "bugfix",
+        "sdk",
+        "testing",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/410",
+      "summary": "This update addresses the ambiguity in the success status of tasks within the SDK. Specifically, it ensures that a response with `success: false` and an artifact URL is correctly interpreted as a failure, preventing miscommunication to users. The change has been validated with 155 passing tests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#451",
+      "title": "Realigning Models with API Contract in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "api",
+        "models",
+        "fix",
+        "update",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/451",
+      "summary": "This update addresses discrepancies between 25 MCP servers and the PlatformBackend's OpenAPI contract, correcting five models that had drifted. Key changes include the removal of unsupported models, updates to default selections, and the elimination of misleading fields in payloads. The adjustments enhance the reliability and clarity of API interactions across the board."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#407",
+      "title": "Revamp SDK Architecture and CI Enhancements in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "sdk",
+        "architecture",
+        "ci",
+        "documentation",
+        "typescript",
+        "go"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/407",
+      "summary": "This update formalizes the provider axis in the SDK architecture, ensuring clarity on its structure and functionality. Key changes include fixing the Go base URL to align with the new gateway and enabling TypeScript tests in CI for the first time. Additionally, several inaccuracies in the README were corrected to reflect the current state of the SDK."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1696",
+      "title": "Fix epoch comparison issue causing pending commands in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "testing",
+        "redis",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where commands were stuck in a pending state due to mismatched epoch values between the enqueue and receipt sides. The epoch comparison has been removed, allowing valid results to be processed correctly. Extensive testing confirms that the fix is effective and does not introduce new issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1166",
+      "title": "Aligning Documentation with Official v2 Truth in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "x402",
+        "backend",
+        "update",
+        "v2"
+      ],
+      "public": false,
+      "summary": "This update aligns the documentation for the X402 payment system with the official v2 implementation, addressing critical discrepancies that could disrupt client operations. Key changes include the correct usage of CAIP-2 network identifiers and the removal of outdated fields, ensuring that developers have accurate information for integration. The documentation now reflects real-world testing results, enhancing clarity and usability for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#378",
+      "title": "Refine Value Signals for Account Risk in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "backend",
+        "account-risk",
+        "value-signals"
+      ],
+      "public": false,
+      "summary": "This update modifies the criteria for determining valuable accounts by excluding account balances as a value signal. The new criteria focus on completed orders or real API calls, significantly reducing the number of accounts mistakenly classified as valuable. As a result, the expected flagged accounts will increase while ensuring no paying customers are affected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1695",
+      "title": "Fix connection_epoch issue for browser grants in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "auth",
+        "browser",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where sessions were consistently returning a 403 error due to the connection_epoch being incorrectly set to 0. The change allows connection_epoch to be 0, aligning it with the AuthBackend's behavior, thus preventing grant rejections for never-revoked connections. Comprehensive tests confirm that the fix is effective and does not introduce new issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1165",
+      "title": "Fix Async Contract Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "fix",
+        "backend",
+        "async"
+      ],
+      "public": false,
+      "summary": "This update corrects multiple inaccuracies in the documentation for the asynchronous interfaces in the web extractor. Key changes include adjustments to request parameters, response structures, and error messages across two documentation files. These fixes ensure that users have accurate information to avoid issues when implementing asynchronous calls."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#449",
+      "title": "Enhance Async Handling and Throttle Polling in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "async",
+        "polling",
+        "webextrator",
+        "mcp",
+        "throttle",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/449",
+      "summary": "This update introduces asynchronous submission for the webextrator and implements polling throttling for four MCPs: fish, happyhorse, maestro, and webextrator. Key changes include modifying the webextrator to recognize async requests and adjusting the timeout from 60s to 180s. Additionally, the update ensures that polling does not consume excessive attempts by introducing a 5-second delay while tasks are still running."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1694",
+      "title": "Fix async billing and worker recognition in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "async",
+        "billing",
+        "webextrator",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses critical issues in the webextrator related to asynchronous job handling. Key changes include the addition of an `async` field in the request schema and the implementation of a `recordUsage` function to ensure proper billing for async tasks. These improvements enhance the reliability of billing processes and prevent silent failures for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#377",
+      "title": "Fix type annotations for risk module in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "python",
+        "typing",
+        "tests",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where the risk module crashed in Python 3.8 due to the use of built-in generics like `set[str]`. All instances of built-in generics have been replaced with `typing.Set` and `typing.Dict` to ensure compatibility. Additionally, a new guard test has been implemented to prevent the use of built-in generics in annotations, enhancing code stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#571",
+      "title": "Sync all subdirectories and fix exclusions in APIs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "sync",
+        "update",
+        "exclusions",
+        "repositories",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/571",
+      "summary": "This update completes the mirroring of all 27 subdirectories by creating new repositories for previously unmapped directories. It also fixes the dead code related to exclusion settings in the sync process, ensuring that specified files are properly ignored during synchronization. Additionally, the README has been updated to reflect the new mappings and protect governance files from being deleted during sync operations."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthBackend#376",
       "title": "Enhance account verification signals in Backend 🚀",
       "tags": [
