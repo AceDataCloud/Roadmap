@@ -3,6 +3,53 @@
   "date": "2026-07-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1172",
+      "title": "Enhance Account Restrictions with New Command in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "security",
+        "api",
+        "management"
+      ],
+      "public": false,
+      "summary": "This update introduces the `disable_restricted_applications` command to disable applications owned by flagged accounts that have never made a payment. The command ensures that these accounts, which have consumed significant resources without generating revenue, are effectively restricted from further API access. Additionally, the implementation includes safety measures to prevent data loss and allows for reversible actions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#380",
+      "title": "Enhance Value Signal Check for Accounts in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "auth",
+        "backend",
+        "security",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update refines the criteria for identifying valuable accounts by ensuring only completed orders are considered as valid signals. The previous method inadvertently allowed over 7,800 accounts with no real commercial intent to bypass checks. The changes are expected to significantly improve the accuracy of account evaluations, protecting genuine paying users more effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#938",
+      "title": "Hide API Tab for Deployment Services in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "deployment",
+        "api",
+        "bugfix",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update removes the API tab from the public service page for deployment-type services, preventing confusion for visitors who cannot access these endpoints. A guard condition has been added to ensure that API rows are not displayed for deployment services, while maintaining functionality for other service types. Additionally, a new script has been introduced to prevent regression by verifying the presence of this guard."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPs#450",
       "title": "Enhance CI for WebExtrator with Deploy Workflow in M C Ps 🚀",
       "tags": [
