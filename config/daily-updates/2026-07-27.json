@@ -1,0 +1,181 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-27",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#864",
+      "title": "Update appkit-universal-connector to latest version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "update",
+        "bugfix",
+        "appkit"
+      ],
+      "public": false,
+      "summary": "This update bumps the @reown/appkit-universal-connector from version 1.8.22 to 1.8.23. Key improvements include recovery from Coinbase Wallet signing errors and fixes for the coinbasePreference option. Additionally, the update resolves issues with provider registration and account switching in modals, enhancing overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#307",
+      "title": "Aligning Appliance Documentation with OpenAPI Standards in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "openapi",
+        "alignment",
+        "improvement",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces a significant overhaul of the appliance documentation tab to align it with the public API documentation. Key changes include the transition to an OpenAPI-driven approach, allowing for full component reuse and improved consistency across documentation. The new implementation addresses previous discrepancies in endpoint coverage and enhances user experience with features like online testing and better parameter handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#242",
+      "title": "Enhance Default Connection Visibility and Menu Styling in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "ui",
+        "frontend",
+        "enhancement",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update improves the visibility of the 'Set as default' option for connector accounts, ensuring it remains visible even when selected as the default. Additionally, it aligns the dropdown menu's border radius with the rest of the page for a consistent look, while also enhancing the hover state for the 'Disconnect' option. These changes enhance user experience and interface consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1163",
+      "title": "Enhance Audience Rule Engine with New Operators in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "email",
+        "audience",
+        "rules"
+      ],
+      "public": false,
+      "summary": "This update introduces several new operators to the audience rule engine, allowing for more flexible audience segmentation. Key additions include `between_days`, `before_days`, and basic comparison operators like `ne`, `gt`, and `lt`. Additionally, new endpoints for rule options and real-time audience estimation have been implemented, enhancing the overall functionality and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#315",
+      "title": "Archiving Outcome Plans and Adding Calibration Script in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "calibration",
+        "outcome",
+        "script",
+        "archive",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update archives the outcome judge plan and introduces a new calibration script to enhance performance tracking. The calibration script reports task judgment distributions and highlights any discrepancies in success rates, ensuring accurate assessments in production. Key changes include improved failure detection and a more transparent evaluation process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1686",
+      "title": "Strengthen Maestro Task Security in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "security",
+        "bugfix",
+        "maestro",
+        "platform-service",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update enhances the security of the Maestro task management system by addressing vulnerabilities related to actor injection and unauthorized data access. Key changes include restricting the `actor_user_id` to be read only from the query parameters, implementing type guards in data retrieval methods, and adding defensive checks to prevent unauthorized access to user tasks. These improvements ensure a more robust and secure task handling process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1685",
+      "title": "Fix user identity handling in Platform Service 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "security",
+        "identity",
+        "tasks",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses issues with the `/digital-human/tasks` endpoint, ensuring that the correct user identity is used for task retrieval and deletion. Key changes include the introduction of `actor_user_id` to the identity keys and adjustments to the `_identity` function to prevent unauthorized access to task histories. The fix enhances security and maintains compatibility with historical data."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#932",
+      "title": "Revamp Audience Grouping to Backend Driven in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "backend",
+        "accessibility",
+        "i18n",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update transitions the audience grouping cards to be driven by backend data, allowing for dynamic rendering of segments without requiring frontend deployments. Key changes include the introduction of six categorized groups and improvements to keyboard navigation and ARIA roles for better accessibility. Additionally, internationalization support has been enhanced across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1430",
+      "title": "Enhance Localization for Scheduled Run Status in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "localization",
+        "i18n",
+        "error-handling",
+        "user-experience",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1430",
+      "summary": "This update introduces localized error messages for the 'run_abandoned' status across 18 languages, ensuring users see accurate information rather than a generic error. The message has been changed to 'Run status unknown' to better reflect the situation, avoiding confusion with other error types. All translations have been verified and implemented without relying on English seeds, enhancing the user experience for non-English speakers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1162",
+      "title": "Revamp Email Audience Segmentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "email",
+        "audience",
+        "backend",
+        "segmentation",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive overhaul of the email audience segmentation system, addressing issues with dormant user classification and enhancing data accuracy. Key changes include the addition of a new `last_activity_at` field to track user engagement across various sources, along with the introduction of 12 new audience segments. These improvements ensure more precise targeting and better alignment of user communication strategies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#867",
+      "title": "Upgrade vue-router to 5.2.0 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "upgrade",
+        "vue",
+        "frontend",
+        "dependencies"
+      ],
+      "public": false,
+      "summary": "This update bumps vue-router from version 5.1.0 to 5.2.0, introducing helpful diagnostics and several bug fixes. Key improvements include support for pinia 4 and enhancements to scroll behavior handling. These changes aim to enhance the overall stability and performance of the application."
+    }
+  ]
+}
