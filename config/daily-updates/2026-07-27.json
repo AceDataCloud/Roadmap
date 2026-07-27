@@ -3,6 +3,184 @@
   "date": "2026-07-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1169",
+      "title": "Remove DALL-E 2 References from Documentation in Backend 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "updates",
+        "backend",
+        "openai"
+      ],
+      "public": false,
+      "summary": "This update removes all mentions of DALL-E 2 from the documentation, as it is no longer supported. Key files updated include the OpenAI Images Generations and Edits documentation, ensuring users have accurate information. The changes are purely documentation-related and do not affect any internal APIs or costs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#574",
+      "title": "Enhance Fish Model Documentation and Update Claude Lineup in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "updates",
+        "fish",
+        "claude",
+        "gemini"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/574",
+      "summary": "This update improves the documentation for the Fish model header, clarifying the selection of TTS engines and their differences. It also refreshes the Claude model lineup to include the latest models while retaining older versions for compatibility. Additionally, internal implementation details for Gemini have been removed to streamline user-facing documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1168",
+      "title": "Secure Solana RPC Key Handling in Backend 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "security",
+        "backend",
+        "fix",
+        "testing",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical vulnerability by removing the Solana RPC URL containing an API key from the public-facing configuration. The change ensures that sensitive information is no longer exposed to anonymous users and implements a management command to clean historical data. Additionally, regression tests have been added to verify the integrity of the configuration and prevent future leaks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#411",
+      "title": "Fix task completion tracking in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "bugfix",
+        "sdk",
+        "testing",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/411",
+      "summary": "This update addresses an issue where the `get()` method did not record the terminal state of a task, leading to empty results despite successful task completion. The fix ensures that `get()` captures the final state, allowing `urls()` and `result()` to return the expected outputs. Comprehensive tests have been added to validate this behavior, ensuring a smoother user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1699",
+      "title": "Fix missing configuration for submit() in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "testing",
+        "validation",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where the `CLIENT_CACHE_SIZE` configuration was undefined, leading to an AttributeError during the first call to `submit()`. A new test suite has been added to ensure that the entire submission path is exercised, resulting in 224 tests passing successfully. The fix has been validated with real API calls, confirming the stability of the service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#735",
+      "title": "Revamp API Skills for Accuracy in Skills 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "api",
+        "skills",
+        "update",
+        "bugfix",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/735",
+      "summary": "This update addresses discrepancies between API-backed skills and the PlatformBackend OpenAPI contract, correcting six skills that had drifted. Key changes include the addition of required parameters for face transformation, clarifications on billing for GPT image generation, and the removal of deprecated endpoints. The validation process confirmed zero errors across all skills, ensuring a robust and reliable API experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#933",
+      "title": "Revamp Documentation Tab with OpenAPI Integration in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "documentation",
+        "openapi",
+        "frontend",
+        "deployment",
+        "refactor"
+      ],
+      "public": false,
+      "summary": "This update transforms the documentation tab for deployment management by leveraging OpenAPI specifications, replacing the previous hardcoded implementation. Key changes include the introduction of a new script to generate specs from source code, resulting in a significant reduction of over 1600 lines of code. The new setup enhances documentation accuracy and usability across multiple languages while ensuring security through a whitelist approach."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1167",
+      "title": "Enhance Appliance API Localization in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "localization",
+        "api",
+        "backend",
+        "documentation",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update registers the appliance HTTP APIs as 'Api' rows on their Deployment services, enabling seamless localization of documentation. Key changes include the integration of existing localization mechanisms, allowing the documentation to be rendered in the user's language without requiring additional frontend interfaces. The implementation ensures no routing conflicts and maintains subscription-based billing without cost implications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#316",
+      "title": "Revamped Appliance Documentation with Backend API Integration in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "localization",
+        "api",
+        "backend",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update transitions the appliance documentation to utilize backend API integration, addressing previous localization challenges. Key changes include the registration of appliance HTTP APIs as 'Api' lines, allowing for automatic translation across multiple languages without requiring new front-end interfaces. This approach enhances localization efficiency and aligns with existing platform mechanisms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1698",
+      "title": "Enhance Modality Commands for Versatile Media Requests in Platform Service 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "discord",
+        "commands",
+        "testing",
+        "media"
+      ],
+      "public": false,
+      "summary": "This update introduces new commands `/image`, `/video`, and `/music` to allow users to request media without specifying a provider, enhancing flexibility. The commands delegate to existing providers, ensuring that adding new services to the catalog automatically reflects across all command types. Additionally, the implementation includes robust testing to ensure all commands reach their respective SDK methods effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#452",
+      "title": "Enhance Polling Guidance for MCPs in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "mcp",
+        "polling",
+        "guidance",
+        "openai",
+        "webextrator",
+        "maestro"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/452",
+      "summary": "This update introduces structured polling guidance for four MCPs: OpenAI, Fish, WebExtrator, and Maestro. Key changes include the addition of a polling block that informs the model whether to continue polling and at what intervals, improving task management and response accuracy. The implementation ensures that the polling logic aligns with each worker's actual contract, enhancing overall system reliability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1697",
       "title": "Refactor Discord Bot to Use SDK for Platform Calls in Platform Service 🤖",
       "tags": [
