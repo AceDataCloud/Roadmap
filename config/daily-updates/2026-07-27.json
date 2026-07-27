@@ -3,6 +3,187 @@
   "date": "2026-07-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#574",
+      "title": "Enhance block_resources to typed array in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "webextrator",
+        "cli",
+        "update",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/574",
+      "summary": "This update modifies the `block_resources` field in the webextrator to use a typed array instead of a boolean flag. Users can now specify multiple resource types to block during extraction, improving flexibility and accuracy. The changes include updated command-line options and tests to ensure the new functionality works as intended."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#741",
+      "title": "Update Seedance Skill Documentation for API Consistency in Skills ✍️",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "documentation",
+        "api",
+        "skills",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/741",
+      "summary": "This update aligns the Seedance skill documentation with the latest OpenAPI specifications by removing the outdated `service_tier` parameter. The changes ensure that the documentation accurately reflects the current request fields for the `POST /seedance/videos` endpoint. As a result, users will have a clearer understanding of the available parameters without confusion from deprecated fields."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#580",
+      "title": "CDN URLs and Async API Updates in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "cdn",
+        "api",
+        "update",
+        "documentation",
+        "webextrator"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/580",
+      "summary": "This update includes a migration of CDN URLs to `platform.cdn.acedata.cloud` for services like hailuo, openai, and sora. Additionally, the webextrator async API contract has been modified to use a boolean `async` parameter instead of `mode`, enhancing the API's responsiveness. Documentation has been updated accordingly to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#455",
+      "title": "Seamless Docs Sync with No Changes Needed in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docs",
+        "sync",
+        "openapi",
+        "mcp",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/455",
+      "summary": "This update successfully reconciles recent upstream changes from the Docs without requiring any modifications to the MCP server implementations. Key checks confirmed that all relevant OpenAPI changes were accounted for, with no code drift detected in this repository. The removal of the Publisher service was noted, but it does not impact our current setup."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1171",
+      "title": "Updated CDN Hosts in Documentation Examples in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "backend",
+        "cdn",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update replaces vendor CDN domains in public documentation examples with the platform's own CDN, ensuring compliance with guidelines. A total of 16 instances were modified across various documents, maintaining the original path structure for clarity. All changes have been validated with successful tests, ensuring no impact on functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#578",
+      "title": "Documentation Sync for HappyHorse, Kling, and OpenAI in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "api",
+        "updates",
+        "kling",
+        "happyhorse",
+        "openai"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/578",
+      "summary": "This update synchronizes the API documentation for HappyHorse, Kling, and OpenAI with the latest changes from the AceDataCloud Docs repository. Key additions include two new Kling API guides for lip-sync and talking photo functionalities, along with significant updates to existing documentation reflecting the current authentication flow and model recommendations. The changes enhance clarity and usability for developers integrating these APIs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#739",
+      "title": "Sync Skills with Latest Docs Updates in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "sync",
+        "skills",
+        "update",
+        "api",
+        "video",
+        "captcha"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/739",
+      "summary": "This update synchronizes the Skills repository with the latest AceDataCloud Docs, removing outdated models and endpoints while introducing four new skills. Key changes include the addition of `grok-video`, `kickart-video`, `dreamina-video`, and `turnstile`, enhancing the API's capabilities for video generation and CAPTCHA solving. Existing skills like `veo-video` have also been updated for improved functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#572",
+      "title": "Enhance OpenAI CLI with Enum Validation in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "openai",
+        "enhancement",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/572",
+      "summary": "This update synchronizes the OpenAI CLI with the latest AceDataCloud API specifications by enforcing that the `tasks batch --type` option only accepts predefined enum values. The changes include modifications to the command's implementation and the addition of tests to ensure valid enum values are processed correctly while invalid ones are rejected. This improves the robustness and usability of the CLI tool."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#453",
+      "title": "Enhance AiChat Model Support in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "aichat",
+        "api",
+        "models",
+        "testing",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/453",
+      "summary": "This update expands the AiChat model offerings by adding several models that were previously unavailable in the API contract. Key additions include models like 'gpt-5.6-luna' and 'grok-4.5', ensuring that users can access the latest capabilities. A new test has been implemented to verify these additions, confirming their functionality and maintaining backward compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1170",
+      "title": "Update Documentation for Neutral Language in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "backend",
+        "neutral-language",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update revises multiple documentation files to replace supplier-attributed language with neutral terms, enhancing clarity for users. Key changes include adjustments in the descriptions of constraints and task types across several documents, ensuring consistency with the AGENTS.md guidelines. The modifications are purely textual and do not affect any technical specifications or functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#576",
+      "title": "Update OpenAI Docs: DALL-E 2 Retired & Multi-Image Support Enhanced in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "docs",
+        "openai",
+        "api",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/576",
+      "summary": "This update synchronizes the OpenAI documentation with upstream changes, removing references to DALL-E 2 from the image editing and generation APIs. Key adjustments include clarifying that the gpt-image-2 model now supports multiple images (n > 1), enhancing user guidance for image edits and generations. These changes streamline the documentation and improve clarity for developers using the OpenAI APIs."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#1169",
       "title": "Remove DALL-E 2 References from Documentation in Backend 🚫",
       "tags": [
