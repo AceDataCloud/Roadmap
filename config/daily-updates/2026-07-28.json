@@ -3,6 +3,37 @@
   "date": "2026-07-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1714",
+      "title": "Enhance Signature Validation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "security",
+        "validation",
+        "testing",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update addresses critical security risks identified during the review process by implementing unique frame signature determination and adding missing signature gate tests. Key changes include modifications to the signing logic and the introduction of a new test file to ensure robust signature validation. Overall, these enhancements improve the security and reliability of the browser relay functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#945",
+      "title": "Fix result frame handling for signature verification in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "testing",
+        "relay",
+        "signature"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical bug where the result frame was not explicitly including `result` and `artifact_refs`, leading to silent failures in command execution. By ensuring these fields are always present, the relay can now correctly verify signatures, preventing timeout issues. Comprehensive tests confirm that the changes maintain expected behavior and improve reliability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1710",
       "title": "Fix async handling for typed SDK paths in Platform Service 🚀",
       "tags": [
