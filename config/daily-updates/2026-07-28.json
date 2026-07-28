@@ -1,0 +1,229 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-28",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1710",
+      "title": "Fix async handling for typed SDK paths in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "async",
+        "performance",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update addresses a bug where typed SDK paths were not set to async by default, causing a timeout issue. The `submit()` method now explicitly sets `async_=True` for all typed calls, improving response times from 90 seconds to 0 seconds. Additionally, usage instructions for the sweep tool have been clarified to avoid memory issues during execution."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#421",
+      "title": "Clarify Error Handling for Unavailable Models in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "error-handling",
+        "sdk",
+        "python",
+        "go",
+        "typescript"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/421",
+      "summary": "This update addresses the handling of structured errors when a model is unavailable, ensuring that the system correctly identifies terminal states. Key changes include differentiating between transient errors and structured error responses across Python, Go, and TypeScript implementations. This enhancement prevents unnecessary polling and improves the clarity of error reporting for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#943",
+      "title": "Refactor extension to remove private relay epochs in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "relay",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update eliminates the `device_epoch` and `connection_epoch` fields from the relay, which were previously private and not sent to devices. The changes include modifications to the command dispatcher and authority verifier, ensuring compatibility with both new and old extensions. All tests have passed successfully, confirming the stability of the implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#942",
+      "title": "Enhance CI for Verified Builds in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ci",
+        "frontend",
+        "build",
+        "documentation",
+        "extension"
+      ],
+      "public": false,
+      "summary": "This update introduces a new CI job that uploads validated browser extension artifacts, ensuring developers can access the latest builds without manual intervention. Additionally, the README has been updated to guide users on how to properly test these builds and avoid common pitfalls related to stale service workers. These changes aim to reduce misinterpretations of environment issues as code problems during diagnostics."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1711",
+      "title": "Enhance Browser Relay for Epoch Compatibility in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "browser-relay",
+        "epoch",
+        "compatibility",
+        "migration",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces compatibility for two signing byte formats in the browser relay, allowing both current and migrated devices to function seamlessly. Key changes include the addition of a new method for signing bytes without epoch fields and adjustments to the payload model to set default values for epoch fields. The implementation ensures that devices can continue to validate signatures during the migration process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#744",
+      "title": "Clarify Navigation Rules for Xiaohongshu in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "navigation",
+        "xiaohongshu",
+        "update",
+        "rules",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/744",
+      "summary": "This update introduces a new explicit rule for handling navigation in Xiaohongshu, emphasizing the need to wait for content to load before reading. Previously, immediate reads after navigation resulted in empty responses, which were incorrectly reported as 'no data'. The change aims to improve data accuracy and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#318",
+      "title": "Streamlined R1/S1 Migration Plan in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "migration",
+        "cleanup",
+        "efficiency",
+        "schema",
+        "development"
+      ],
+      "public": false,
+      "summary": "The migration plan for R1 and S1 has been established, detailing a three-step process for R1 and an extension of the existing schema for S1. This update includes the successful deletion of approximately 1,200 lines of dead code across seven merged PRs, enhancing overall system efficiency. Key changes ensure cross-repository coordination and improved compatibility for future developments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1709",
+      "title": "Enhance Cross-Process Contract Testing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "testing",
+        "ci",
+        "protocol",
+        "relay",
+        "aichat2"
+      ],
+      "public": false,
+      "summary": "This update introduces three new assertions to the cross-process contract tests, ensuring that protocol definitions between relay and aichat2 remain consistent. Key changes include modifications to the CI workflow to trigger tests when relevant files are altered, preventing silent protocol drift. The tests now effectively catch errors that previously went unnoticed during merges."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#941",
+      "title": "Clean Up Dead Tool Protocols in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "cleanup",
+        "frontend",
+        "protocols",
+        "deadcode"
+      ],
+      "public": false,
+      "summary": "This update removes obsolete tool command protocols from the extension side, aligning with recent changes in the relay side. A total of 430+ lines of dead code were eliminated, including entire files and unused type definitions, ensuring a cleaner and more efficient codebase. All tests passed successfully, confirming the integrity of the remaining functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1708",
+      "title": "Fix timeout issues and double billing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "timeout",
+        "billing",
+        "notifications",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical timeout issue where long-running tasks were incorrectly marked as failed, particularly affecting the maestro service, which now has a 45-minute execution limit. Additionally, it addresses a bug that could lead to double billing for users when tasks were prematurely reclaimed. The changes include enhanced service timeout configurations and improved message handling to ensure users are properly notified of task completions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1707",
+      "title": "Revamped Discord Ace Message Embeds in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "discord",
+        "embed",
+        "ui",
+        "improvement",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update enhances the Discord Ace integration by transforming result messages into visually appealing embed cards. Key improvements include the addition of task IDs in message footers, the removal of non-functional buttons, and the implementation of video uploads to ensure proper playback. Overall, these changes streamline user interaction and improve the aesthetic consistency of messages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1704",
+      "title": "Refactor manifest claims for slim compatibility in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "manifest",
+        "slim",
+        "claims",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update refactors the `required_claims` in the `manifest.json` to align with the current slim architecture. Key changes include the removal of outdated JWT claims and a unified audience for browser-relay verification. The modifications are minimal, ensuring zero runtime risk and maintaining functionality with only three lines altered."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#940",
+      "title": "Enhance Frame Handling for Better Compatibility in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "compatibility",
+        "frontend",
+        "relay",
+        "code-cleanup"
+      ],
+      "public": false,
+      "summary": "This update refactors the handling of unknown frame types in the DeviceRelay class, allowing the system to ignore unsupported frames instead of closing the socket. The change improves forward compatibility, enabling the relay to introduce new frame types without disrupting existing extensions. Additionally, the redundant RELAY_ACK_FRAMES whitelist has been removed, streamlining the codebase."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1705",
+      "title": "Streamline Grant Validation by Removing Unused Components in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "cleanup",
+        "validation",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update removes the signed-grant validation subsystem, which had no active consumers following the deletion of the tool route. Key deletions include several classes and methods related to grant validation, resulting in a net reduction of 197 lines of code. The changes have been validated with all tests passing successfully."
+    }
+  ]
+}
