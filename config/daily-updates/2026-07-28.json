@@ -3,6 +3,217 @@
   "date": "2026-07-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1433",
+      "title": "Enhance TodoWrite Rendering as Checklist in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "ui",
+        "i18n",
+        "checklist",
+        "todo"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1433",
+      "summary": "This update introduces a new rendering branch for TodoWrite calls, transforming them into a checklist format for better readability. Key features include progress indicators, strikethrough for completed items, and mobile-friendly design constraints. Additionally, five new internationalization keys have been added to support multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#459",
+      "title": "Enhance AiChat v2 with New Conversation Controls in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "aichat",
+        "updates",
+        "features",
+        "tests",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/459",
+      "summary": "This update syncs the AiChat tool with the latest documentation for v2 conversation controls, adding new input fields such as `async`, `callback_url`, and more. The changes ensure that existing functionality remains intact while extending the request payload builder to accommodate these new fields. Additionally, the AiChat usage guide has been updated to reflect these enhancements, along with new contract coverage and tests to verify the correct behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1173",
+      "title": "Sync API Contract by Removing Redundant Field in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "api",
+        "backend",
+        "sync"
+      ],
+      "public": false,
+      "summary": "This update removes the `unattended_policy.mode` field from the API contract, addressing redundancy and preventing potential bugs. The documentation now accurately reflects that authorization is solely determined by the lists of allowed skills and servers, eliminating confusion for API consumers. Key changes include updates to the OpenAPI specification and relevant documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1701",
+      "title": "Streamline Unattended Policy by Removing Redundant Mode in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "cleanup",
+        "authorization",
+        "migration",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update eliminates the redundant `unattended_policy.mode` field, simplifying the authorization process. The authorization is now solely determined by the presence of skills in the list, preventing potential conflicts and ensuring clarity in task permissions. Key changes include adjustments in multiple handler files and the introduction of a migration script to clean up existing data."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#381",
+      "title": "Refactor Browser Epoch Logic and Fix Revocation Issues in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "refactor",
+        "security",
+        "bugfix",
+        "backend",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This update removes the outdated BrowserDeviceEpoch and BrowserConnectionEpoch models, along with associated migration and code adjustments. Key improvements include fixing two existing revocation defects that could allow leases to remain active after a device is revoked, enhancing overall security and reliability. The changes have been validated with new test cases ensuring robust functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1437",
+      "title": "Rename Devices with Cloud Sync in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "sync",
+        "i18n",
+        "backend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1437",
+      "summary": "This update introduces the ability to rename devices in the Coding Bridge interface, with names stored in the cloud for seamless synchronization across all user devices. Key changes include a new UI button for renaming, backend modifications to handle name updates, and extensive internationalization support across 17 locales. The implementation ensures that renaming is reflected in real-time on all connected devices, enhancing user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1713",
+      "title": "Enhance Device Renaming for Seamless Sync in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "sync",
+        "api",
+        "testing",
+        "mongodb"
+      ],
+      "public": false,
+      "summary": "This update introduces a new PATCH endpoint for renaming devices, allowing users to change device names that sync across multiple platforms. Key changes include modifications to the MongoDB schema to store names, updates to the connection handling logic, and the addition of tests to ensure functionality. The implementation ensures that device names are consistent and visible across all user devices, enhancing user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#319",
+      "title": "Documentation Update and PR Progress in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "bugfix",
+        "progress",
+        "safeguards"
+      ],
+      "public": false,
+      "summary": "The documentation for the browser-device bridge has been updated to clarify the rollback capabilities of R1. A total of 16 PRs have been merged, resulting in a net reduction of approximately 1,400 lines of dead code and the implementation of three new safeguards. Notably, a bug fix was made to ensure that failed extension frames are properly handled."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#944",
+      "title": "Enhance Navigation Handling for Cross-Origin in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "navigation",
+        "security",
+        "frontend",
+        "bugfix",
+        "extension"
+      ],
+      "public": false,
+      "summary": "This update improves the navigation handling for cross-origin requests in the extension, ensuring that the session authority checks align with the allowed origins. Key changes include adjustments to the `resolve()` and `settleNavigation()` functions to enhance security and reliability. The implementation now accurately reflects the real tab location and prevents unauthorized access during navigation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1712",
+      "title": "Fix session origin updates for cross-subdomain navigation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "automation",
+        "session",
+        "navigation",
+        "error-handling"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where the browser automation could read but not publish due to session origin not updating across subdomains. Key changes include enhancements to the session manager and facade tool to ensure correct origin tracking and improved error handling for pending states. The modifications ensure smoother navigation and command execution across different subdomains, significantly improving the user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1436",
+      "title": "Automatic Refresh for Scheduled Task Records in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "refresh",
+        "scheduled-tasks",
+        "ui",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1436",
+      "summary": "This update introduces a silent refresh mechanism for the scheduled task records page, ensuring that users see the most current status without needing to navigate away. The page now refreshes every 12 seconds while tasks are queued or running, eliminating the display of outdated 'running' statuses. Additionally, various timeout and error handling improvements have been implemented to enhance reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#72",
+      "title": "Enhance session title accuracy in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "bugfix",
+        "enhancement",
+        "history",
+        "session",
+        "logging"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/72",
+      "summary": "This update improves the accuracy of session titles displayed in the history drawer by ensuring that the correct titles from all providers, including Claude, are utilized. Key changes include reading the `ai-title` from Claude sessions and unifying the title display for Codex. Additionally, error handling has been enhanced to prevent a single bad file from affecting the entire session list."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1715",
+      "title": "Clean Up Legacy Epoch Data in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "cleanup",
+        "legacy",
+        "performance",
+        "browser-relay"
+      ],
+      "public": false,
+      "summary": "This update removes the internal remnants of the legacy family A epoch from the browser relay, streamlining the codebase. Key changes include the deletion of unnecessary fields and adjustments in multiple scripts to ensure compatibility. The refactor enhances overall system performance and maintains backward compatibility for existing extensions."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1714",
       "title": "Enhance Signature Validation in Platform Service 🚀",
       "tags": [
