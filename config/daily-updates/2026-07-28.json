@@ -3,6 +3,275 @@
   "date": "2026-07-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#950",
+      "title": "Fix empty role/name filters in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "testing",
+        "accessibility"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where the `browser.find` function failed to locate elements due to empty role and name filters being incorrectly processed. Now, empty strings are treated as 'not provided', ensuring that the function can return valid matches. Additionally, a new test case has been added to verify this behavior, contributing to improved reliability in element searching."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1175",
+      "title": "Fix default model value for Kling API in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "api",
+        "backend",
+        "kling",
+        "openapi"
+      ],
+      "public": false,
+      "summary": "This update introduces a default model value for the Kling API, addressing a discrepancy where the model was required but not specified in the API documentation. The change ensures that external clients can make successful requests without explicitly providing the model, thus enhancing usability. The modification does not alter existing required fields or the behavior of Discord commands."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#385",
+      "title": "Enhance Yuque Connector with Cookie Authentication in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "enhancement",
+        "yuque",
+        "authentication",
+        "backend",
+        "connector"
+      ],
+      "public": false,
+      "summary": "This update introduces a new cookie-based authentication method for the Yuque connector, allowing free users to connect without needing a personal access token. Key changes include a migration to rename existing provider entries, updates to connection validation logic, and the addition of comprehensive tests to ensure functionality. The integration of this feature enhances accessibility for users and improves the overall connector experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1176",
+      "title": "Fix billing state loss during deployment polling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "deployment",
+        "testing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where the billing state and events were being overwritten during deployment status polling. The fix ensures that these keys are preserved unless explicitly updated, preventing unintended resets and duplicate notifications. Additionally, new tests have been added to validate the preservation of these keys, enhancing the reliability of the deployment process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1441",
+      "title": "Enhance session loading to show latest messages first in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "performance",
+        "user-experience",
+        "relay",
+        "session"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1441",
+      "summary": "This update improves the user experience by ensuring that when a session is opened, it directly displays the latest messages instead of replaying from the oldest. Key changes include skipping unnecessary historical data requests and implementing a new mechanism to handle session state during relay restarts. The fix enhances performance and reliability, ensuring users see real-time updates without delays."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#322",
+      "title": "Strengthening Browser Extensions for Seamless Site Integration in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "browser",
+        "extensions",
+        "bugfix",
+        "hardening",
+        "improvements"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive hardening plan for browser extensions, addressing seven active bugs and six capability gaps. Key improvements include automatic reconnection after debugger detachment and ensuring true key-by-key input for rich text editors. The proposed changes aim to enhance robustness, allowing for new site integrations with minimal modifications required."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#955",
+      "title": "Fix AI Agent Card Icon Alignment in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "ui",
+        "scss"
+      ],
+      "public": false,
+      "summary": "This update resolves the alignment issue of the AI Agent card title icon on the WeChat bot management page. The styles for the `.card-title` and `.token-eye` classes have been moved to their respective child components to ensure proper display. The fix enhances the user interface by ensuring icons and titles are correctly aligned across components."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#248",
+      "title": "Fix cookie connection profile display issue in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "bugfix",
+        "frontend",
+        "connections",
+        "identity",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the identity card was not displaying for cookie connections with profiles. The logic was updated to show the account identity based on data rather than connection type, ensuring that profiles are displayed correctly when available. Additionally, a minor bug related to duplicate status tags on the identity card has been fixed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#387",
+      "title": "Enhance Cookie Profiles for 7 Platforms in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "cookie",
+        "fetcher",
+        "platforms",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces cookie profile fetchers for seven additional platforms: Bilibili, Toutiao, Reddit, Habr, Medium, Juejin, and CSDN. Each fetcher has been rigorously tested with real cookies, ensuring accurate identity resolution. The new implementations streamline the process of obtaining user profiles and improve the overall functionality of the cookie connector framework."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#752",
+      "title": "Enhance GitHub Connection Options in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "skills",
+        "authentication",
+        "documentation",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/752",
+      "summary": "This update introduces the option to use a Personal Access Token (PAT) alongside OAuth for GitHub connections, allowing for more granular permissions. The documentation has been updated to reflect these changes, including a clear distinction between OAuth-only scopes and PAT guidance. Additionally, verification processes have been improved to ensure YAML frontmatter integrity, preventing silent failures in skill execution."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#386",
+      "title": "Enhance GitHub Connector with PAT Support in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "enhancement",
+        "backend",
+        "security",
+        "connector"
+      ],
+      "public": false,
+      "summary": "This update introduces a new connection method for the GitHub connector, allowing users to connect via Personal Access Tokens (PAT) in addition to the existing OAuth method. This enhancement enables teams to restrict access to specific repositories, addressing concerns over broad permissions associated with OAuth. The connector's documentation has been updated to clarify the differences between the two methods, ensuring users can make informed choices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#954",
+      "title": "Fix dark mode styling for WeChat bot config page in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "darkmode",
+        "css",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update addresses a styling issue on the WeChat bot deployment configuration page, where the card rendered with a stark white background in dark mode. The hardcoded colors have been replaced with CSS variables to ensure consistent theming across light and dark modes. The changes improve the visual experience and maintain design integrity across different themes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#953",
+      "title": "Update Subscription Status Label for Clarity in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "localization",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update modifies the subscription status label from 'Running' to 'Subscribed' to eliminate confusion with the instance deployment status. Changes were made in multiple language files to ensure consistency across the application. The new label enhances user understanding and aligns with the actual subscription state."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#951",
+      "title": "Unify Invoice Statuses and Download Functionality in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "invoice",
+        "frontend",
+        "ui",
+        "bugfix",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update addresses inconsistencies in invoice status labels and colors across multiple pages. Key changes include the introduction of a new component for the invoice status tag, which allows direct download of issued invoices. Additionally, the text for statuses has been standardized for clarity and improved user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#952",
+      "title": "Enhanced Order Management with Pagination and User ID Flexibility in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "admin",
+        "pagination",
+        "security",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update introduces pagination support for the order management console, allowing users to view more than 20 orders at a time. The user ID field is now optional, enabling users to browse all recent orders by default. Additionally, routing has been secured with a superuser guard to enhance access control."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1440",
+      "title": "Streamline Unread Notifications in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "notifications",
+        "improvement",
+        "coding-bridge"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1440",
+      "summary": "This update simplifies the unread notification system in the Coding Bridge by removing the redundant red dot and relying solely on bold titles to indicate unread items. The font weight for unread items is now set to 700, while read items are at 400, enhancing visibility. All internationalization keys remain unchanged, ensuring a consistent user experience across locales."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#384",
+      "title": "Enhance Cookie Connectors with Profile Fetching in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "backend",
+        "cookie",
+        "profile",
+        "fetcher",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature for cookie connectors, allowing them to fetch user profiles similar to OAuth connections. By implementing a fetcher for cookie profiles, the system can now display user names and avatars, enhancing user experience. The changes include new modules for profile fetching and extensive tests to ensure reliability and performance."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthFrontend#247",
       "title": "Align China Invoice Form with Backend Requirements in Frontend Web 🚀",
       "tags": [
