@@ -3,6 +3,54 @@
   "date": "2026-07-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1732",
+      "title": "Enhance Browser Functionality with New Modifiers and Upload Modes in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "browser",
+        "upload",
+        "modifiers",
+        "popup"
+      ],
+      "public": false,
+      "summary": "This update introduces critical enhancements to the browser functionality, including new `press.modifiers` for basic editor operations, an `upload.mode: 'drop'` to prevent site freezes, and a `tabs action=list_popups` to ensure proper popup handling. These changes improve user experience and system reliability by addressing previously unexpressed actions and potential deadlocks during file uploads."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#967",
+      "title": "Enhance Keyboard and Popup Functionality in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "enhancement",
+        "keyboard",
+        "popup",
+        "upload",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces significant improvements to keyboard shortcuts, allowing modifier keys to be recognized correctly. It also adds a new entry point for managing popups, ensuring they can be claimed effectively. Additionally, drag-and-drop support for file uploads has been implemented, enhancing user experience and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#966",
+      "title": "Enhance iframe handling with recursive attachment in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "iframe",
+        "frontend",
+        "update",
+        "enhancement",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a robust solution for handling nested iframes by ensuring that child frames are properly attached and reported. Key changes include modifications to the auto-attach mechanism and the addition of blocked frame reporting, which enhances the model's understanding of inaccessible content. All tests have passed successfully, confirming the stability of these enhancements."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1731",
       "title": "Enhance wait functionality with new modes in Platform Service 🚀",
       "tags": [
