@@ -3,6 +3,21 @@
   "date": "2026-07-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1720",
+      "title": "Enhance Seedream Image Upload and Timeout Settings in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "image-upload",
+        "timeout",
+        "performance",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update introduces a new method for uploading base64 images to COS, significantly improving the handling of large image payloads that previously caused timeouts. The upstream timeout has been increased from 150s to 300s, and the server's request timeout is set to 600s to prevent socket disconnections. These changes aim to enhance the reliability of image processing in the Seedream service."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1432",
       "title": "Simplified scheduled task authorization and fixed edit-state restores in Nexior 🛠️",
       "tags": [
