@@ -3,6 +3,99 @@
   "date": "2026-07-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1731",
+      "title": "Enhance wait functionality with new modes in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "ui",
+        "network",
+        "wait",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces three new modes for the `wait` function: `element`, `element_gone`, and `network_idle`. These enhancements allow for more robust waiting conditions beyond just text, improving the handling of UI elements and network requests. The changes ensure that elements like loading spinners and buttons can be effectively waited on, preventing premature actions during uploads."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#965",
+      "title": "Enhance wait functionality with new modes in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "enhancement",
+        "frontend",
+        "automation",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces three new modes for the `wait` function: `element`, `element_gone`, and `network_idle`, enhancing its capability to handle various web automation scenarios. Additionally, the URL matching has been improved to support prefix matching, ensuring better compatibility with SPA routing. The changes are backed by comprehensive tests, all of which passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#964",
+      "title": "Removed browser.batch Implementation for Stability in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "stability",
+        "frontend",
+        "release"
+      ],
+      "public": false,
+      "summary": "This update removes the `browser.batch` implementation due to its consistent failure in production. The change includes the deletion of the `batch()` function and related dispatch cases, ensuring that the system avoids misleading success states. The version has been updated from 0.7.13 to 0.7.14, with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1730",
+      "title": "Streamline Browser Commands in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "browser",
+        "cleanup",
+        "schema",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update removes the `browser.batch` command and four redundant null fields from the payload, enhancing the clarity and efficiency of the command structure. Additionally, the `browser.type` now includes a `delay_ms` parameter to support gradual input, which was previously implemented but not declared in the schema. These changes aim to prevent errors and improve the overall functionality of the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#961",
+      "title": "Enhance Input Handling and Fix Contenteditable Issues in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "input",
+        "fix",
+        "frontend",
+        "testing",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update improves the input handling in the extension by ensuring that the `browser.type` function simulates key-by-key input correctly, addressing issues with rich-text editors. Additionally, it modifies the `fill` function to prevent accidental clearing of entire documents in contenteditable elements. The changes enhance user experience and data integrity across various text editors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#962",
+      "title": "Fix missing sender key for email templates in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "fix",
+        "i18n",
+        "frontend",
+        "localization",
+        "email"
+      ],
+      "public": false,
+      "summary": "This update addresses a missing internationalization key for the 'sender' label in email templates, which was previously rendering as a literal string. The key has been added for ten languages, ensuring proper localization across the platform. All tests for internationalization coverage and linting have passed successfully."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Skills#755",
       "title": "remove problematic browser.batch command in Skills 🚀",
       "tags": [
