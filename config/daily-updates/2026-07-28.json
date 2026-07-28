@@ -3,6 +3,170 @@
   "date": "2026-07-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1432",
+      "title": "Simplified scheduled task authorization and fixed edit-state restores in Nexior 🛠️",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "scheduled-tasks",
+        "authorization",
+        "bugfix",
+        "vue",
+        "tests",
+        "regression"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1432",
+      "summary": "Scheduled task authorization now relies solely on the allowed skills and MCP server lists, removing the redundant mode field that caused saved permissions to appear empty when editing. The update also prevents binding data from being wiped by waiting for capability loading before saving, improves save-state handling during async operations, and adds comprehensive tests covering regressions and legacy scenarios."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#382",
+      "title": "Expanded Domain Blocklist for Enhanced Security in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "security",
+        "backend",
+        "updates",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update significantly expands the blocked email domains from 6 to 26, aligning with the risk control list to prevent abuse. A new consistency test has been added to ensure that the deployed blocklist covers every domain flagged by the risk assessment. These changes aim to enhance the registration process by preventing accounts from domains previously identified as abusive."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#748",
+      "title": "Enhance Yuque Connector with Cookie Login Support in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "enhancement",
+        "yuque",
+        "authentication",
+        "testing",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/748",
+      "summary": "This update introduces dual authentication modes for the Yuque connector, allowing users to log in using either a personal access token or browser cookies. The change enables free users to access the connector without needing a paid membership, significantly broadening usability. Additionally, new tests have been added to ensure functionality and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1716",
+      "title": "Streamlined Result Messaging in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "ui",
+        "improvement",
+        "discord",
+        "readability"
+      ],
+      "public": false,
+      "summary": "This update enhances the readability of result messages in Discord by removing unnecessary formatting elements such as quotation lines and backticks. Additionally, it introduces spacing between lines for better clarity and removes the Animate button to prevent layout inconsistencies. The changes aim to improve user experience by making messages clearer and more accessible."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1706",
+      "title": "Prevent pinned account fallbacks and keep run records accurate in Platform Service 🛡️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "connections",
+        "bindings",
+        "run-history",
+        "mcp",
+        "tests"
+      ],
+      "public": false,
+      "summary": "Fixed connection binding resolution so pinned accounts are matched from connection identities instead of request aliases and no longer silently fall back to default accounts. Added validation to reject unenforceable remote MCP bindings and improved run history handling when account lookups fail. Updated tests cover deleted connections, MCP bindings, and connection lookup failures."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#320",
+      "title": "Published a comprehensive $ACE research and marketing playbook in Index 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "research",
+        "marketing",
+        "compliance",
+        "planning",
+        "token"
+      ],
+      "public": false,
+      "summary": "Added a modular research package covering $ACE token analysis, platform validation, marketing strategy, compliance guidance, execution planning, and reproducible verification steps. The documentation consolidates key business, engineering, and on-chain findings while clearly separating verified facts from open questions and defining pre-launch validation gates for external marketing. It also updates the plans index to surface the new research module and its current status."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#946",
+      "title": "Revamp Protocol Schema for Real Frame Validation in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "schema",
+        "testing",
+        "protocol",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update modifies the browser protocol schema to accurately reflect the frames actually sent by the extension, replacing outdated definitions. Key changes include the addition of real frame types and improved testing to ensure that only valid outputs are validated against the schema. This enhances the reliability of the protocol and addresses previous testing shortcomings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1435",
+      "title": "Easily Duplicate Scheduled Tasks in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "scheduled-tasks",
+        "ui",
+        "i18n",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1435",
+      "summary": "This update introduces a new 'Copy' button for scheduled tasks, allowing users to duplicate existing tasks with pre-filled information in the creation form. The new feature ensures that task names are automatically numbered to avoid conflicts, and authorization for duplicates is set to 30 days. Comprehensive tests have been added to validate the functionality and ensure a seamless user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#745",
+      "title": "Sanitize public skill examples and remove hardcoded account data in Skills 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "privacy",
+        "security",
+        "documentation",
+        "placeholders",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/745",
+      "summary": "Public skill examples across multiple integrations were updated to replace real account identifiers, handles, IDs, counts, and signatures with safe placeholder values. Documentation and CLI examples were aligned to use generic placeholders, optional account assertions where appropriate, and corrected shell-safe syntax. Related tests were updated to use fixed example data, helping prevent accidental reuse of personal information while preserving existing behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#578",
+      "title": "Update CLI for aichat2 to Align with Latest OpenAPI in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "openapi",
+        "updates",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/578",
+      "summary": "This update synchronizes the aichat2 CLI options with the latest OpenAPI specifications. Key changes include making the 'QUESTION' argument optional, enhancing stateful flag semantics, and enforcing argument validation based on documented ranges. Additionally, new tests have been added to ensure coverage for the updated functionalities."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1433",
       "title": "Enhance TodoWrite Rendering as Checklist in Nexior 🎉",
       "tags": [
