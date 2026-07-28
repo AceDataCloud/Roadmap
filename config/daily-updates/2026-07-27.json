@@ -3,6 +3,167 @@
   "date": "2026-07-27",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#576",
+      "title": "Enhance chat2 with new parameters in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "update",
+        "features",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/576",
+      "summary": "This update adds four new parameters to the `chat2` CLI command, aligning it with the latest upstream documentation. The new options include `--message`, `--messages`, `--tool-results`, and `--unattended-policy`, enhancing the command's functionality for complex message handling. Additionally, five new tests have been implemented to ensure robust error handling and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#457",
+      "title": "Sync OpenAI and AiChat Models with Latest Specs in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "sync",
+        "openai",
+        "aichat",
+        "models",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/457",
+      "summary": "This update synchronizes the `openai` and `aichat` MCP servers with the latest upstream OpenAPI specifications. Key additions include new models in the GPT-5.6 series and updates to the model listings in both `openai` and `aichat` tools. This ensures users have access to the most current model options and descriptions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1174",
+      "title": "Enhance run_accounts field documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "backend",
+        "aichat2",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update improves the documentation for the `run_accounts` field in the Aichat2 scheduled tasks. It clarifies the field's semantics, downgrade behavior for deleted accounts, and the impact of invalid accounts on run records. These changes ensure that users have a clear understanding of how connection accounts are recorded and managed during task execution."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1434",
+      "title": "Enhance Run Records with Connector Account Tags in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "enhancement",
+        "scheduled-tasks"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1434",
+      "summary": "This update introduces a new feature that displays the connector account used for each scheduled run in the run records. Each run now shows a tag with the account name (e.g., `zhihu · Germey`), improving clarity for users managing multiple accounts. The change ensures consistency across both the aggregation tab and individual task drawers, enhancing user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1703",
+      "title": "Enhance Run History with Connection Account Details in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "bugfix",
+        "enhancement",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature that allows users to see which connection account was used for each run in the run history. By implementing a snapshot mechanism and a read-time join, the system now accurately reflects the account used, enhancing traceability for users with multiple accounts. Additionally, an old defect was fixed to prevent silent fallback to default accounts when a pinned account becomes invalid, ensuring consistency in account usage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#418",
+      "title": "Fix service endpoint selection logic in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "bugfix",
+        "sdk",
+        "producer",
+        "endpoint",
+        "validation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/418",
+      "summary": "This update modifies the endpoint selection logic for the producer service to prioritize modality over the order of endpoints. The change ensures that the correct endpoint is targeted based on the service type, enhancing usability by allowing users to generate audio without needing an audio ID. Additionally, it addresses a validation issue with the `kling.generate` method, ensuring that the required parameters are correctly specified."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1700",
+      "title": "Fix attachment uploads and user input handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "upload",
+        "user-input",
+        "timeout",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update addresses critical issues in the attachment upload process and user input handling within the Platform Service. Attachments are now correctly uploaded using multipart format, ensuring images are rendered inline rather than as links. Additionally, the system has been refined to prevent automatic filling of user requests, which previously led to unintended charges. A new timeout for submissions has also been implemented to enhance user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1702",
+      "title": "Clean Up Dead Code in Platform Service 🧹",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "cleanup",
+        "dead-code",
+        "browser-relay",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update removes obsolete tool command protocols from the browser relay, streamlining the codebase by eliminating 583 lines of dead code. Key deletions include unused relay routes, WebSocket frames, and several test cases related to the old tool commands. The slim command paths remain untouched, ensuring no disruption to current functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#317",
+      "title": "Root Cause Diagnosis and Cleanup Plan for Browser Bridge in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "cleanup",
+        "diagnosis",
+        "protocol",
+        "technical-debt"
+      ],
+      "public": false,
+      "summary": "This documentation PR outlines the systemic root causes behind the repeated failures in the Xiaohongshu E2E process, which required 12 patches to resolve. It identifies three main issues: dead fields from an incomplete slim protocol migration, lack of a single source of truth in the three-party agreement, and insufficient validation barriers. A phased cleanup plan is proposed to address these technical debts and improve overall system integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#939",
+      "title": "Enhance SSR Locale Handling for Crawlers in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ssr",
+        "localization",
+        "seo",
+        "frontend",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update fixes the server-side rendering (SSR) to correctly render HTML in the requested locale instead of defaulting to English. Key changes include parsing the `?lang=` query parameter to set the appropriate locale and ensuring that both server and client-side hydration match. This improvement enhances SEO for non-English markets by providing localized content for crawlers."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#1172",
       "title": "Enhance Account Restrictions with New Command in Backend 🚀",
       "tags": [
