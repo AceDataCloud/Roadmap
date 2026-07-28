@@ -3,6 +3,199 @@
   "date": "2026-07-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Skills#755",
+      "title": "remove problematic browser.batch command in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "bugfix",
+        "skills",
+        "documentation",
+        "cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/755",
+      "summary": "This update removes the `browser.batch` command from the Skills documentation and related files due to its 100% failure rate in production. Key changes include deletions from `SKILL.md`, the browser manifest, and test files, ensuring that the model no longer teaches this unreliable command. This adjustment prevents potential errors and enhances the overall reliability of the Skills framework."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1181",
+      "title": "Refactor tenant labels to derive from service in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "refactor",
+        "deployment",
+        "labels",
+        "backend",
+        "consistency"
+      ],
+      "public": false,
+      "summary": "This update refactors the tenant label handling in the deployment process, ensuring that labels are derived from the service alias instead of hardcoded values. The change aligns the appliance provider with existing helm configurations, enhancing consistency and maintainability. Additionally, it consolidates the use of the 'wisdom' literal across multiple files into named constants, improving code clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#960",
+      "title": "Refactor WeChat Login Panel for Better Structure in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "frontend",
+        "wechat",
+        "deployment",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update extracts the WeChat login panel from the shared management page, significantly reducing its complexity. The `Manage.vue` file has been streamlined from 2171 to 1599 lines, enhancing maintainability and performance. The new WeChat component is fully functional and has passed all existing contract tests, ensuring a smooth transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1180",
+      "title": "Streamline Deployment Logic with Provider Registry in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "refactor",
+        "deployment",
+        "backend",
+        "error-handling",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces a new provider registry for deployment workloads, reducing the number of manual if-branches from 14 to just 1. Each provider now explicitly declares its supported operations, ensuring that unimplemented operations return a clear error instead of silently falling back to incorrect paths. The changes enhance code maintainability and improve error handling for deployment operations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1179",
+      "title": "Streamlined Email Campaign Process in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "email",
+        "smtp",
+        "campaign",
+        "backend",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update simplifies the email marketing wizard by removing the redundant fourth step for SMTP campaigns, allowing for a more efficient four-step process. Additionally, it enhances error reporting for scheduling campaigns, providing clearer feedback on provider identity issues. The changes also ensure that Tencent SES retains its independent step due to its manual template approval requirement."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#959",
+      "title": "Streamlined Email Campaign Wizard to 4 Steps + Bulk Recipient Selection in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "email",
+        "frontend",
+        "ui",
+        "features",
+        "translations"
+      ],
+      "public": false,
+      "summary": "This update simplifies the email campaign creation process by reducing the wizard from 6 to 4 steps, enhancing user experience. It introduces bulk selection for recipients, allowing users to manage large lists more efficiently. Additionally, various UI elements and translations have been updated to reflect these changes, ensuring a smoother workflow for email marketing tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#956",
+      "title": "Unify Deployment Status Handling in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "deployment",
+        "frontend",
+        "bugfix",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update addresses inconsistencies in how the `degraded` status is interpreted across different pages. A new utility file has been introduced to standardize deployment status semantics, ensuring that `degraded` is treated as a transitional state rather than a failure. As a result, users will no longer see false failure messages during deployment, improving the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1177",
+      "title": "Fix SMTP Credentials for Email Scheduling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "email",
+        "smtp",
+        "testing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the API pod lacked SMTP credentials, causing email scheduling to fail with a 'provider identity is not enabled for sending' error. The deployment configuration has been updated to include the necessary SMTP environment variables, ensuring consistency between the API and worker pods. Additionally, a new test has been added to verify that both pods reference the same SMTP credentials."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#958",
+      "title": "Enhance Debugger Recovery Logic in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "debugger",
+        "frontend",
+        "performance",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue causing the debugger to enter a stale target loop when detaching from tabs. Key changes include improved handling of detach reasons, a new recovery method for reattaching the debugger after a service worker restart, and enhanced navigation indicators. These modifications aim to ensure smoother user experiences and reduce session interruptions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#580",
+      "title": "Align CLI Defaults with OpenAPI for Kling in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "openapi",
+        "tests",
+        "kling",
+        "synchronization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/580",
+      "summary": "This update synchronizes the default request fields for the Kling CLI with the current OpenAPI specifications. Key changes include aligning default values for options in the lip-sync and talking-photo commands, ensuring backward compatibility while improving consistency. Additionally, new tests have been added to validate the default payload serialization, enhancing the reliability of the CLI."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#461",
+      "title": "Sync AiChat V2 Schema with OpenAPI Standards in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "schema",
+        "openapi",
+        "aichat",
+        "tests",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/461",
+      "summary": "This update aligns the AiChat V2 schema with the latest OpenAPI specifications, ensuring consistency across the platform. Key changes include the removal of outdated model entries, adjustments to message typing, and the addition of numeric bounds for request parameters. Contract tests have also been updated to reflect these changes, enhancing the reliability of the implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1728",
+      "title": "Fix session expiry handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "session",
+        "relay",
+        "expiry",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where the `expires_at_ms` field was missing from the `session.start` payload, leading to incorrect session expiry checks. The fix ensures that the `expiry_ms` is now included in the payload, allowing the extension to accurately determine session activity. Additionally, the protocol documentation has been updated to reflect this change, enhancing overall system reliability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#950",
       "title": "Fix empty role/name filters in Frontend Web 🎉",
       "tags": [
