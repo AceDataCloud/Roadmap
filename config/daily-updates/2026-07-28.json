@@ -3,6 +3,155 @@
   "date": "2026-07-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Skills#750",
+      "title": "Fix intermittent identity 404s in Skills 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "bugfix",
+        "retry",
+        "documentation",
+        "identity",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/750",
+      "summary": "This update addresses the issue of X's identity endpoints returning 404 errors, which were incorrectly attributed to expired cookies. A new retry mechanism has been implemented to handle these intermittent failures, allowing up to four retries with fresh client sessions. Additionally, documentation has been updated to clarify that a 404 response does not indicate an authentication error, guiding users to avoid unnecessary reconnections."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#74",
+      "title": "Enhance Cross-Device Unread Marking for History Sessions in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "feature",
+        "history",
+        "cross-device",
+        "testing",
+        "sync"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/74",
+      "summary": "This update introduces a new unread marking system for history sessions that syncs across devices, ensuring that if a session is marked as read on one device, it reflects on all others. Key changes include the implementation of a read watermark stored on the node side, allowing for accurate tracking of session states. The update also includes extensive testing, with all tests passing successfully, ensuring reliability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1722",
+      "title": "Enhance Image Handling with URL Support in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "image",
+        "api",
+        "enhancement",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces support for `image.source.type=url` in the `/v1/messages` endpoint, addressing customer feedback regarding image handling in the Claude models. Key changes include modifications to `handlers/messages.py` for inline processing of external image URLs and updates to `utils/image_inline.py` to ensure compatibility with Anthropic's API requirements. The implementation has been thoroughly tested, resulting in improved functionality without compromising existing features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1719",
+      "title": "Eliminate Upstream Billing Field Exposure in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "security",
+        "api",
+        "cleanup",
+        "sanitization",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update removes the `copilot_usage` field from API responses to prevent the leakage of upstream identity and internal cost models. Key changes include the addition of a sanitization utility that cleanses response bodies across multiple endpoints. The implementation ensures that customer-facing data remains secure without altering existing contracts or dependencies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#749",
+      "title": "Enhance Xiaohongshu Publishing Guidelines in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "xiaohongshu",
+        "documentation",
+        "bugfix",
+        "update",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/749",
+      "summary": "This update clarifies the requirements for publishing on Xiaohongshu, addressing key issues such as mandatory media for image and video notes, and the correct usage of reference contracts. The documentation has been revised to ensure users understand the conditions for successful publishing, including the need for at least one image or video. Additionally, navigation processes have been streamlined to reduce errors during publishing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1718",
+      "title": "Enhance Browser Facade Descriptions in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "bugfix",
+        "browser",
+        "facade",
+        "manifest"
+      ],
+      "public": false,
+      "summary": "This update improves the descriptions for each browser facade in the manifest, ensuring that the model accurately understands where references originate. Key changes include the addition of real descriptions in `manifest.json`, error handling for missing descriptions in `adapter.ts`, and the propagation of these descriptions in `facadeTool.ts`. The modifications enhance the reliability of the browser tools and prevent stale references."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#947",
+      "title": "Fix browser.find issues for seamless publishing in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "release",
+        "automation",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update resolves critical issues with the `browser.find` functionality, ensuring it correctly retrieves elements by implementing a root node for `Accessibility.queryAXTree`. The changes include modifications to the observation engine and adjustments to the CDP allowlist, enhancing the agent's ability to interact with the page. Additionally, version 0.7.9 has been released, reflecting these improvements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1438",
+      "title": "Enhance History Filtering by Source in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "i18n",
+        "testing",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1438",
+      "summary": "This update introduces a new filtering feature for the History Drawer in Nexior, allowing users to filter sessions by source, including Claude Code, Codex, and GitHub Copilot. The filter chips display the count of sessions per source and are only shown when there are multiple sources available. Additionally, the update includes various improvements to the UI and internationalization support across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#73",
+      "title": "Enhance Upgrade Documentation and Version Reporting in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "documentation",
+        "upgrade",
+        "versioning",
+        "service",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/73",
+      "summary": "This update improves the upgrade instructions in the README and service documentation, addressing user confusion about upgrading the service. It adds a `--version` flag to display the installed version, ensuring users can easily verify their installation. Key changes include detailed upgrade commands for various platforms and clarifications on service management during upgrades."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1720",
       "title": "Enhance Seedream Image Upload and Timeout Settings in Platform Service 🚀",
       "tags": [
