@@ -3,6 +3,228 @@
   "date": "2026-07-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#247",
+      "title": "Align China Invoice Form with Backend Requirements in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "billing",
+        "frontend",
+        "validation",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update resolves discrepancies between frontend and backend validations for Chinese VAT invoices. The taxpayer ID is now mandatory, while other fields like company address and phone are optional. This change enhances user experience by clarifying required fields and ensuring smoother invoice processing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#383",
+      "title": "Streamline China VAT Invoice Requirements in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "billing",
+        "validation",
+        "backend",
+        "china",
+        "invoice"
+      ],
+      "public": false,
+      "summary": "This update modifies the billing profile validation for China VAT invoices, ensuring that only the title and tax number are mandatory fields. Other fields such as company address, phone, and bank details are now optional for both general and special invoices. The changes enhance user experience by aligning front-end and back-end validations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1727",
+      "title": "Fix cover art issue and improve inspection tool in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "improvement",
+        "testing",
+        "inspection",
+        "audio"
+      ],
+      "public": false,
+      "summary": "This update resolves a bug where the Open button for `/suno` and `/producer` endpoints incorrectly pointed to cover images instead of the actual audio files. Additionally, the inspection tool's criteria have been revamped to ensure accurate reporting, addressing previously ineffective checks. These changes enhance user experience and improve the reliability of service inspections."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#751",
+      "title": "Enhance GitHub Skill with New Features in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "skills",
+        "features",
+        "api",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/751",
+      "summary": "This update introduces comprehensive recipes for GitHub actions such as starring, watching, forking, and managing notifications, releases, and labels. A new table clarifies the granted scopes, ensuring users understand what actions are supported without unnecessary retries. All changes have been verified against the live API, enhancing the overall functionality and user experience of the GitHub skill."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#949",
+      "title": "Fix sidebar icon and title clipping issues in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "fix",
+        "docs",
+        "frontend",
+        "ui",
+        "bug"
+      ],
+      "public": false,
+      "summary": "This update addresses critical clipping issues in the documentation sidebar, where icons and titles were being cut off. Key changes include adjusting the flex properties and widths to ensure proper display and functionality of the sidebar elements. The fixes have been verified to eliminate clipping and ensure titles display correctly across various viewport sizes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1726",
+      "title": "Fix execution state issues in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "frontend",
+        "backend",
+        "testing",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update addresses two critical bugs affecting the browser tool's execution state. It corrects the mismatched key names for successful command sequences and ensures that failed commands are accurately marked as 'failed'. Additionally, it modifies the event emission for terminal states to reflect the actual command outcomes, enhancing the reliability of the execution status displayed in the frontend."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1725",
+      "title": "Streamline browser schema by removing dead fields in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "schema",
+        "validation",
+        "browser",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update removes the unused `locator_plan` field from the browser schema, which was causing validation errors during model interactions. Additionally, error messages now include specific field paths to aid in debugging. The changes ensure smoother operations without impacting existing functionality, as the removed field was never utilized."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#948",
+      "title": "Improve session error reporting in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "error-handling",
+        "frontend",
+        "session-management",
+        "release"
+      ],
+      "public": false,
+      "summary": "This update enhances the error reporting for session failures by replacing the generic 'unknown_outcome' with specific contract states. Key changes include new error messages for session expiration, non-existent sessions, and policy mismatches, allowing for clearer diagnostics. The version has been bumped to 0.7.10 to reflect these updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1723",
+      "title": "Fix session renewal to prevent command failures in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "session",
+        "browser",
+        "tests",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses session expiration issues causing command failures in the browser. The `ensureSession` method now renews sessions proactively when less than 45 seconds remain, ensuring commands continue to function smoothly. Additionally, new tests have been added to validate the renewal logic and ensure stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1724",
+      "title": "Enhance Video Uploads and Fix Delivery Issues in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "video",
+        "bugfix",
+        "testing",
+        "discord",
+        "upload"
+      ],
+      "public": false,
+      "summary": "This update improves video upload handling by dynamically adjusting the size limit based on Discord's settings, allowing for inline playback of larger videos. Additionally, it fixes a critical bug where successful results were not delivered due to an unbound variable, ensuring users receive their artifacts as expected. New tests have been added to validate these changes and prevent future issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1439",
+      "title": "Enhance Unread Notifications for History Sessions in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "notifications",
+        "coding-bridge"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1439",
+      "summary": "This update introduces a bold title and a red dot indicator for unread history sessions in the Coding Bridge. Users will now be able to easily identify sessions that have finished while they were away, enhancing their experience across devices. The changes include updates to the HistoryDrawer component and the addition of a new action to mark sessions as read."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#321",
+      "title": "Revamped Adversarial Review Process in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "adversarial",
+        "review",
+        "workflow",
+        "AGENTS",
+        "process"
+      ],
+      "public": false,
+      "summary": "The adversarial review process has been updated to operate on an on-demand basis, removing the previous requirement for automatic execution with every PR. Key changes include the removal of related content from AGENTS.md and modifications to several workflow documents to reflect this new optional approach. This aims to reduce unnecessary overhead while maintaining the ability to conduct thorough reviews when needed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#76",
+      "title": "Enhance default working directory handling in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "bugfix",
+        "testing",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/76",
+      "summary": "This update improves the handling of default working directories by preventing sessions from running in the filesystem root. The `_safe_default_cwd()` function now correctly falls back to the user's home directory when launched from an OS launcher that provides an unsuitable cwd. Additionally, new tests have been added to ensure this functionality works as intended."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#75",
+      "title": "Enhance session visibility in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "bugfix",
+        "vscode",
+        "cli",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/75",
+      "summary": "This update resolves the issue where Claude sessions were not visible in the VSCode extension and CLI pickers. By modifying the entrypoint configuration, sessions can now be displayed correctly, ensuring better synchronization across platforms. Additionally, new tests have been added to validate this functionality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Skills#750",
       "title": "Fix intermittent identity 404s in Skills 🔧",
       "tags": [
