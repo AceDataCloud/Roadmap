@@ -3,6 +3,54 @@
   "date": "2026-07-29",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1754",
+      "title": "Fix Browser Skill Activation for Seamless User Experience in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "browser",
+        "skill",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the Browser Skill was not usable in subsequent messages after being loaded. The fix ensures that the skill remains active and available, preventing the model from incorrectly reporting that tools were never exposed. Comprehensive tests have been added to validate the changes and ensure reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1736",
+      "title": "Enhanced LatentSync Timeout for Smooth Rendering in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "latentsync",
+        "timeout",
+        "rendering",
+        "digitalhuman",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update modifies the LatentSync rendering timeout in the digitalhuman pipeline, increasing it from a fixed 30 minutes to a configurable 5100 seconds. This change ensures that longer clips can render successfully without being prematurely terminated, while still adhering to GPU watchdog limits. The fix has been validated with successful rendering of a 63-second clip, improving overall performance and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1753",
+      "title": "Enhance Service Logo Display with Application Emoji in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "discord",
+        "emoji",
+        "bugfix",
+        "readability"
+      ],
+      "public": false,
+      "summary": "This update introduces application emojis for service logos, allowing them to appear inline in message titles on Discord. Key changes include the addition of new emoji handling functionality and adjustments to message formatting for better readability. The implementation also addresses several bugs related to emoji naming and message caching, ensuring a smoother user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1752",
       "title": "Enhance Numeric Handling for Workers in Platform Service 🚀",
       "tags": [
