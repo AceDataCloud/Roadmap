@@ -3,6 +3,69 @@
   "date": "2026-07-28",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#969",
+      "title": "Enhance Extension Version Reporting in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "extension",
+        "relay",
+        "versioning",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature that reports the running version of the extension on every relay handshake, rather than just during pairing. Key changes include modifications to the `auth.init` payload to include the `extension_version`, ensuring better compatibility and version tracking for connected devices. The implementation has passed all tests, confirming its stability and effectiveness."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#388",
+      "title": "Enforce Extension Version Floor for Handshakes in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "feature",
+        "security",
+        "backend",
+        "versioning"
+      ],
+      "public": false,
+      "summary": "This update introduces a critical enforcement of the minimum extension version during device handshakes. Devices with versions below the specified limit will now be rejected, ensuring that outdated connections cannot persist. Key changes include modifications to the relay context and database storage processes, enhancing overall security and compliance with version requirements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1733",
+      "title": "Enhance Extension Version Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "authentication",
+        "security",
+        "relay",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces the optional `extension_version` parameter during the authentication handshake, allowing for better management of extension compatibility. Key changes include modifications to the `auth.init` method and adjustments in how signing bytes are handled to prevent issues with older extensions. The changes ensure that only valid extension versions are stored, enhancing security and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#968",
+      "title": "Enhance Parameter Functionality and Add Safeguards in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "enhancement",
+        "testing",
+        "frontend",
+        "safeguards",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update ensures that five previously declared parameters are now fully functional, addressing issues where they were ignored in implementation. Additionally, behavior-level tests have been introduced to validate the observable effects of these parameters. The changes also include improvements to error handling and performance optimizations, enhancing overall user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1732",
       "title": "Enhance Browser Functionality with New Modifiers and Upload Modes in Platform Service 🚀",
       "tags": [
