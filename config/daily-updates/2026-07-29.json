@@ -1,0 +1,261 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-29",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#957",
+      "title": "Fix subscription package display on pricing page in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "localization",
+        "frontend",
+        "subscriptions"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where subscription packages were not displaying correctly on the pricing page. The filtering logic for service prices has been adjusted to accommodate period-based subscriptions, ensuring all relevant packages are shown. Additionally, localization improvements were made for package names across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1178",
+      "title": "Unify Pricing Structure and Clean Up Legacy Data in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "backend",
+        "cleanup",
+        "testing",
+        "json"
+      ],
+      "public": false,
+      "summary": "This update consolidates the pricing structure by making JSON the sole source of service costs, eliminating outdated preset display prices. Key changes include modifications to the `sync.py` script for better package management and the introduction of new tests to ensure compatibility and correctness. The impact is a streamlined pricing process that reduces the need for manual migrations and enhances clarity in pricing data."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#973",
+      "title": "Improve Error Handling for WeChat Instance Connectivity in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "error-handling",
+        "i18n",
+        "frontend",
+        "wechat"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where users were misled by a persistent loading state when the WeChat instance was unreachable. The error handling now distinguishes between temporary connectivity issues and complete unreachability, providing users with clearer feedback and actionable next steps. Additionally, internationalization support has been enhanced across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1182",
+      "title": "Fix tenant domain routing for appliance in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "dns",
+        "ingress",
+        "testing",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the newly deployed wechat-bot instances were unreachable due to incorrect DNS routing. The ingress domain is now correctly set to point to the Azure AKS cluster, ensuring that requests are routed properly. Additionally, new tests have been added to validate this change and prevent future regressions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#972",
+      "title": "Refactor product panels for better service registration in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "frontend",
+        "deployment",
+        "components",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update refactors the management page by creating a dedicated `WindowsViewerCard` component and aligning the product panel display logic across different pages. It introduces a new `managePanels.ts` file to standardize the criteria for displaying product panels, ensuring consistency and reducing code complexity. The overall code size in `Manage.vue` has been reduced by 33%, improving maintainability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1735",
+      "title": "Fix endpoint bugs for better command handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "discord",
+        "testing",
+        "commands",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses three critical bugs found in the command endpoints of the Discord bot. The new `sweep_all.py` tool now tests all 27 endpoints, revealing issues such as incorrect routing for `/producer videos`, parameter validation failures for `/suno vox`, and incorrect artifact handling for `/suno lyrics` and `/suno style`. These fixes enhance the reliability and user experience of the bot's command functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1442",
+      "title": "Fix session cursor issues for seamless reconnections in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "session",
+        "cursor",
+        "coding-bridge",
+        "reconnection"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1442",
+      "summary": "This update addresses three critical issues related to session cursor management in the coding bridge. Key changes include preventing the replay of the entire buffer on session re-keying, ensuring that closed sessions do not lose their cursors, and properly clearing validation markers on stream truncation. These fixes enhance the reliability of session handling and improve overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1729",
+      "title": "Fix session handling to prevent browser silence in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "session",
+        "testing",
+        "eventlog"
+      ],
+      "public": false,
+      "summary": "This update modifies the `drop()` function to clear events while preserving the sequence counter for closed sessions. This change ensures that clients with stale cursors receive proper notifications instead of being silently ignored. Additionally, new tests have been added to validate these behaviors, ensuring robust functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#971",
+      "title": "Enhance Campaign Delivery Status Display in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "email",
+        "delivery",
+        "i18n",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `DeliveryRecipientTable` component that accurately reflects the delivery status of recipients for frozen campaigns. It replaces the previous candidate list with real-time delivery states, allowing operators to see who has been delivered, bounced, or failed, along with error details. Additionally, the implementation includes improved internationalization support across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#323",
+      "title": "Enhance i18n Process with Repair Step in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "i18n",
+        "documentation",
+        "bugfix",
+        "frontend",
+        "ci"
+      ],
+      "public": false,
+      "summary": "This update corrects the i18n documentation to include a crucial `--repair` step after backfilling translations. The changes in `AGENTS.md` and `.claude/commands/i18n-backfill.md` clarify the process and prevent English placeholders from persisting. This ensures that the CI checks will effectively catch translation issues moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1443",
+      "title": "Fix English Placeholders and Enhance Access Control in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "localization",
+        "bugfix",
+        "enhancement",
+        "scripts"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1443",
+      "summary": "This update addresses the issue of English placeholders remaining in 16 non-English locales by implementing a retranslation process. Key changes include the enhancement of the translation and coverage checking scripts, ensuring that untranslated keys are flagged correctly. Additionally, a whitelist for acceptable English terms has been introduced, significantly improving the localization quality across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#963",
+      "title": "Fix translation issues and enhance access control in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "i18n",
+        "translation",
+        "frontend",
+        "bugfix",
+        "access-control"
+      ],
+      "public": false,
+      "summary": "This update addresses critical translation problems across multiple locales, eliminating over 6,900 instances of English placeholders in non-English locales. Key improvements include a new repair option in the translation script and enhanced checks to prevent English placeholders from reappearing. Additionally, a whitelist for certain English terms ensures accurate localization while maintaining brand integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#249",
+      "title": "Fix English Placeholders and Enhance Access Control in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "i18n",
+        "localization",
+        "frontend",
+        "bugfix",
+        "access-control"
+      ],
+      "public": false,
+      "summary": "This update addresses the issue of 2,485 English placeholders appearing in non-English locales due to a deadlock in translation tools. Key changes include a new repair option in the translation script, enhanced checks for English placeholders, and the introduction of a whitelist for acceptable English terms. These improvements ensure better localization and prevent regression in translations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#324",
+      "title": "Documenting Hardening Plan Outcomes in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "hardening",
+        "security",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update documents the successful implementation of the hardening plan, which involved merging a total of 21 pull requests across three layers. Key changes include adjustments to version storage and the integration of testing protocols to enhance security. The documentation now reflects these changes, ensuring clarity on the implementation process and outcomes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1734",
+      "title": "Implement schema parity test for browser-relay in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "testing",
+        "ci",
+        "schema",
+        "browser-relay",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces a cross-repo contract test that compares the frame models of browser-relay against the JSON Schema defined in the PlatformFrontend repository. The test aims to catch any discrepancies between the two definitions, ensuring that silent drift does not occur. Additionally, modifications to the CI workflow ensure that the schema is fetched correctly, preventing false positives in test results."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#970",
+      "title": "Fix protocol schema discrepancies for better relay compatibility in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "schema",
+        "relay",
+        "frontend",
+        "update",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update corrects two key fields in the browser protocol schema to align with the relay's requirements. The 'execution_sequence' minimum was adjusted from 0 to 1, and a description was added to clarify the handling of 'device_id' and 'connection_epoch'. These changes enhance the schema's accuracy and prevent potential validation failures."
+    }
+  ]
+}
