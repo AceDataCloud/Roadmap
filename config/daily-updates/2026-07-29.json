@@ -3,6 +3,179 @@
   "date": "2026-07-29",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#390",
+      "title": "Enhance Browser Binding Token Authentication in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "authentication",
+        "security",
+        "backend",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces a new authentication class that accepts both broad and narrow tokens for browser binding verification. By allowing the use of a narrower relay token, we mitigate the risk of exposing plaintext OAuth and BYOC credentials. The changes have been thoroughly tested, with all new tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#993",
+      "title": "Enhance Debugger Feedback for User Actions in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "debugging",
+        "frontend",
+        "user-experience",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update improves how the extension handles user interactions with the debugger. When a user cancels debugging or switches to DevTools, the system now correctly reports 'debugger_unavailable' instead of 'stale_target', preventing unnecessary command failures. Key changes include persistent tracking of the reason for tab removal and improved handling of concurrent operations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#991",
+      "title": "Revamp Invoice Details and Application Flow in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "invoice",
+        "frontend",
+        "ui",
+        "i18n",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update enhances the invoice details display in the admin panel by structuring the information into clear sections, improving usability. It also introduces a selection option for invoice types during the application process, ensuring accurate currency representation and preventing errors. Additionally, internationalization support has been expanded to cover multiple languages, enhancing accessibility for users worldwide."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1198",
+      "title": "Fix invoice currency and type selection for China in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "invoice",
+        "currency",
+        "backend",
+        "bugfix",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update resolves issues with invoice amounts displayed in CNY for Chinese orders, ensuring they reflect the actual paid amount in RMB. It introduces a new invoice type selection feature, allowing customers to choose between general and special invoices. Additionally, it enhances error handling for currency conversion and includes a new API endpoint for invoice previews."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1195",
+      "title": "Enhance Security for Remote Debugging in Backend 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "security",
+        "backend",
+        "debugging",
+        "migration",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces a new ops token mechanism for remote debugging, ensuring that tenants cannot access sensitive operations on their Windows VMs. Key changes include the addition of a tenant-specific `WISDOM_OPS_TOKEN`, which is required for executing commands via the `/api/debug/exec` endpoint. The migration also enhances the redaction of privileged keys to prevent unauthorized access, significantly improving the security posture of the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#194",
+      "title": "Strengthened Security for Remote Execution in Wisdom 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "security",
+        "update",
+        "testing",
+        "api",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update enhances the security of the remote execution endpoint by implementing a dual-token system. The `WISDOM_OPS_TOKEN` is now required for access, ensuring that tenants cannot exploit the endpoint without proper authorization. Additionally, several potential data leaks have been addressed, and new tests have been added to verify security surfaces."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#221",
+      "title": "Enhance API Error Messaging for Key Restrictions in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "api",
+        "error-handling",
+        "improvement",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update introduces a new exception, `ApiNotAllowedException`, to provide clearer error messaging when API keys are restricted to specific endpoints. The previous error message misled users into thinking they needed to apply for service access, while the actual issue was a limitation on the key's allowed APIs. The changes improve user experience by ensuring accurate feedback on API access issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1448",
+      "title": "Fix misleading type annotations for numeric setters in Nexior 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "types",
+        "fix",
+        "nexior",
+        "audit",
+        "safety"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1448",
+      "summary": "This update corrects the type annotations for four numeric setters in the Nexior components, changing them from `set(val: string)` to `set(val: number)`. This change enhances type safety and ensures that the components correctly handle numeric values, preventing potential issues during audits and future code modifications. The adjustments have been validated with successful type checks and linting."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1747",
+      "title": "Enhance Parameter Handling for Numeric Inputs in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "validation",
+        "improvement",
+        "billing",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of numeric parameters in the request body by normalizing string inputs to integers. Key parameters like 'frames', 'duration', and others are now validated to ensure they are treated as numbers, preventing errors during processing and billing. This change enhances the robustness of the service and ensures accurate task execution."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#989",
+      "title": "Fix integer parameter handling in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "api",
+        "typescript"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where integer parameters were incorrectly sent as strings, causing errors in API requests. Key changes include unified numeric checks, adjustments to input handling, and improved type definitions to ensure integers are processed correctly. The fix enhances overall API interaction reliability and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#990",
+      "title": "Fix email confirmation dialog issue in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "ui",
+        "frontend",
+        "email"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical bug where the email confirmation dialog was obscured by the composer overlay, preventing users from sending emails. By adjusting the z-index using Element Plus's composable, the confirmation dialog now appears correctly above the composer, ensuring that users can interact with it as intended. Comprehensive testing has been conducted to verify the fix."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#196",
       "title": "Fix read-only file issue for OEM self-heal in Wisdom 🚀",
       "tags": [
