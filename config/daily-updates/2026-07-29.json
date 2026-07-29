@@ -3,6 +3,259 @@
   "date": "2026-07-29",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#977",
+      "title": "Enhance Button Spacing for Icons and Text in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "frontend",
+        "bugfix",
+        "enhancement",
+        "email-marketing"
+      ],
+      "public": false,
+      "summary": "This update addresses the spacing issue between icons and text in several buttons on the Email Marketing page. A total of 15 buttons have been modified to include appropriate margins, ensuring a consistent and visually appealing layout. Additionally, a new script has been introduced to check button icon spacing across the project, enhancing code quality and maintainability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1447",
+      "title": "Fix chat blockquote spacing issue in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "chat",
+        "css",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1447",
+      "summary": "This update addresses a spacing issue with markdown blockquotes in the chat feature. The margin and padding for blockquotes were overridden by lazy-loaded CSS from github-markdown-css, causing visual inconsistencies. The fix restores the intended spacing, ensuring a more cohesive appearance in chat messages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1445",
+      "title": "Revamped Conversation Actions Menu in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "refactor",
+        "i18n",
+        "bugfix",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1445",
+      "summary": "The conversation actions menu has been relocated to the right of the model selector, resolving previous overlap issues with the Credits capsule. This update introduces a new component for conversation actions, consolidating rename, share, and delete functionalities while enhancing internationalization support across multiple languages. The layout has also been improved for better responsiveness on various devices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#582",
+      "title": "Update aichat2 CLI Examples to Match Latest Docs in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "docs",
+        "update",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/582",
+      "summary": "This update aligns the aichat2 CLI examples with the latest documentation schema, specifically addressing changes in the request shape for paused tool resumption and unattended policy payloads. Key modifications include updated help text for CLI commands and refreshed test coverage to ensure accuracy with the current OpenAPI contract."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1738",
+      "title": "Remove Unused System Prompt from Scheduled Tasks in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cleanup",
+        "refactor",
+        "aichat2",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update removes the `system_prompt` field from the scheduled tasks pipeline, which was never utilized in the UI or documentation. Key changes include modifications to the `scheduledTasksHandler`, `scheduledTriggerHandler`, and `scheduledTasks` files to eliminate references to this field. The removal streamlines the codebase and clarifies the intended functionality moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#463",
+      "title": "Confirmed AiChat Alignment with Docs in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "sync",
+        "aichat",
+        "docs",
+        "api",
+        "no-op"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/463",
+      "summary": "This update verifies that the AiChat MCP server is already aligned with the latest documentation following a recent sync. Key endpoints, request parameters, and model enums were checked, confirming no changes were necessary. This no-op sync serves to document that AiChat is current with the OpenAPI source of truth."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1183",
+      "title": "Update AI Chat Scheduled Tasks Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "aichat",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update clarifies the behavior of scheduled tasks in the AI chat system, specifically regarding the handling of user prompts. The documentation now accurately reflects that tasks will not automatically skip steps when user input is required, but will instead halt and be marked as failed. Users are provided with actionable advice to avoid such situations by ensuring prompts are clear and complete."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1737",
+      "title": "Remove misleading tools_filter_exclude for clarity in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cleanup",
+        "documentation",
+        "bugfix",
+        "codequality"
+      ],
+      "public": false,
+      "summary": "This update removes the unused `tools_filter_exclude` field from the `runChatInBackground` function, which was never read in the codebase. The change eliminates confusion caused by incorrect documentation while ensuring no runtime behavior is altered. This cleanup enhances code clarity and maintains accurate user documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#975",
+      "title": "Enhance WeChat Login Experience in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "wechat",
+        "frontend",
+        "ui",
+        "improvement",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update improves the WeChat login card on the deployment management page by changing the display message for unrecognized windows. Instead of directing users to the Windows Viewer, it now shows a loading message and provides clear instructions for users. Additionally, redundant status tags have been removed to streamline the user interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1444",
+      "title": "Enhance Scheduled Tasks with Task ID Display and Copy Feature in Nexior ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "copy",
+        "tasks",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1444",
+      "summary": "This update introduces a new feature that displays the task ID below the task name in the scheduled tasks list. Users can now click the ID to copy it to the clipboard, streamlining the process of troubleshooting and API interactions. The implementation includes updates to the UI and tests to ensure functionality and prevent unintended interactions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#974",
+      "title": "Enhance Invoice Alignment and Badge Colors in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "frontend",
+        "bugfix",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update improves the alignment of invoice lines with order fields by switching to a flex layout, ensuring consistent spacing. The badge color has been changed to a lighter effect for better visibility, and the hover behavior has been refined to eliminate any jitter. Additionally, a redundant download button has been removed to streamline the user interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#976",
+      "title": "Fix Discord Polling and WeChat Card Styles in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "ui",
+        "deployment",
+        "styles"
+      ],
+      "public": false,
+      "summary": "This update addresses two critical issues: the infinite polling for degraded Discord deployments and missing styles in the WeChat login panel. A new timeout mechanism has been implemented to prevent endless polling, while the WeChat component now correctly defines its card title styles, ensuring consistency across the UI. Additionally, an automated script has been added to check for style compliance in deployment components."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1185",
+      "title": "Fix workload label for appliance tenants in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "deployment",
+        "kubernetes",
+        "testing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where the workload label for appliance tenants was incorrectly derived from the service alias, leading to potential scheduling conflicts with tenant VMs. A new stable, product-independent label has been introduced to ensure proper pod anti-affinity and prevent silent failures during deployments. Comprehensive tests have been added to validate the changes and ensure reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#389",
+      "title": "Prevent Default Account Override on New Connections in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "bugfix",
+        "connections",
+        "testing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where binding a new account would unintentionally replace the user's default account. The `set_default_connection()` function now includes a parameter to prevent overriding an existing default account. Additionally, new tests have been added to ensure the functionality works as intended, confirming that existing defaults remain intact when new accounts are connected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#188",
+      "title": "Enhance builder affinity with stable workload labels in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "builder",
+        "affinity",
+        "deployment",
+        "labels",
+        "wisdom"
+      ],
+      "public": false,
+      "summary": "This update modifies the builder's pod affinity settings to prioritize the new stable workload label, `acedatacloud/workload=appliance`. It ensures that fresh installations do not compete for disk I/O with existing QEMU VMs, improving deployment efficiency. The change is compatible with existing setups and will allow for a smoother transition as tenants are updated."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#325",
+      "title": "Enhance Audience Segmentation and Token Management in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "enhancement",
+        "security",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update introduces a new audience segmentation design document, breaking down dormant users into 12 operational groups. Additionally, a new script for managing Threads OAuth tokens has been added, ensuring secure token exchanges without hardcoding secrets. The .gitignore file has also been updated to clean up untracked directories from retired repositories."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#957",
       "title": "Fix subscription package display on pricing page in Frontend Web 🚀",
       "tags": [
