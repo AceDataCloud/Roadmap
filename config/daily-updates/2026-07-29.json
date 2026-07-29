@@ -3,6 +3,245 @@
   "date": "2026-07-29",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#980",
+      "title": "Fix WeChat Deployment Error Messaging in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "wechat",
+        "deployment",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update addresses misleading error messages during WeChat deployments. The error messaging now clearly indicates when the WeChat service is unavailable while the instance remains healthy, preventing unnecessary redeployments. Additionally, a new retry mechanism for stalled preparations has been implemented, enhancing user experience and reducing confusion."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1184",
+      "title": "Enhance CI with Appliance Domain Guard in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "ci",
+        "testing",
+        "security",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update adds the appliance domain guard test to the CI workflow, ensuring that the old domain does not override the cluster records. By including this test, we enhance the reliability of our CI process without altering the execution environment or introducing new failures. This change addresses a critical gap in our testing coverage, improving overall system security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#191",
+      "title": "Enhance Retry Mechanism During Preparation in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "improvement",
+        "async",
+        "retry",
+        "preparation"
+      ],
+      "public": false,
+      "summary": "This update addresses two critical issues that caused the system to freeze during the 'preparing' state. The retry mechanism now consistently sets the retry flag, allowing the coordinator to manage retries effectively. Additionally, the preparation process has been transitioned to a background task, ensuring that the system remains responsive and can handle retries without freezing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#190",
+      "title": "Enhance Agent Health Check to Ensure Device Recovery in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "healthcheck",
+        "watchdog",
+        "agent",
+        "testing",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update modifies the watchdog to probe the agent's own `/api/status` instead of the gateway's `/api/health`, preventing false positives in device health checks. The change ensures that the agent's status is accurately reported, allowing for proper recovery mechanisms to trigger when needed. Additionally, a previously ineffective assertion in the tests has been corrected to improve reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#189",
+      "title": "Optimize Directory Discovery and Caching in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "optimization",
+        "performance",
+        "caching",
+        "testing",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update introduces significant improvements to the directory discovery process by making full disk scans optional and implementing caching for results. These changes address previous performance bottlenecks, reducing the time spent in the 'preparing data' phase from over 20 minutes to just seconds. Additionally, new tests have been added to ensure the reliability of these enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#327",
+      "title": "Documenting S1 Completion and Key Changes in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "s1",
+        "completion",
+        "bugfix",
+        "review"
+      ],
+      "public": false,
+      "summary": "This PR documents the completion of S1 with all five steps finalized, totaling 23 merged PRs. Key changes include a shift from dual-end generation to dual-end assertions and a correction regarding the convergence of canonicalization methods, which were found to introduce bugs rather than resolve them. Additionally, important review findings have been addressed to enhance the overall robustness of the implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1741",
+      "title": "Enhance Frame Validation and Signing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "validation",
+        "signing",
+        "manifest",
+        "testing",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update introduces critical enhancements to the relay-to-device frame validation, ensuring that all frames are now included in parity checks. Additionally, the signing profile assertions have been improved to verify actual byte outputs, preventing potential silent failures. The manifest has also been corrected to avoid requiring outdated fields, enhancing overall system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#981",
+      "title": "Enhance Relay-to-Device Protocol Description in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "protocol",
+        "frontend",
+        "schema",
+        "relay",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update completes the schema for the relay-to-device communication, adding four essential frames: session.start, session.renew, session.stop, and browser.command. It also introduces an enum for the state in browser.result while ensuring that browser.error.state remains flexible. The signing profiles have been aligned across implementations to maintain consistency, and all tests have passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#979",
+      "title": "Unify Invoice Access Points to 'View Invoice' in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "invoice",
+        "frontend",
+        "ui",
+        "i18n",
+        "refactor"
+      ],
+      "public": false,
+      "summary": "This update consolidates three invoice access points across the platform into a single 'View Invoice' option, enhancing user clarity. The backend now presents invoices in the browser instead of offering downloads, which aligns with the new front-end messaging. Additionally, redundant logic has been streamlined into a shared utility function, improving code maintainability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1187",
+      "title": "Enhance Invoice Viewing Experience in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "invoice",
+        "backend",
+        "improvement",
+        "user-experience",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update improves the invoice viewing experience by ensuring that invoices are displayed in the browser instead of being forcefully downloaded. The webhook now prioritizes the hosted invoice URL, providing users with a more informative view, while also normalizing existing data. Additionally, the pre-signed URL for the Chinese region has been updated to explicitly allow inline viewing, enhancing usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1740",
+      "title": "Exciting gpt-image Integration and Bug Fixes in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "gpt-image",
+        "bug-fix",
+        "discord",
+        "integration",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces the gpt-image generation and editing features, providing a new way for users to create and modify images directly in Discord. Additionally, four critical bugs were identified and resolved during real-world testing, enhancing the overall stability and functionality of the platform. Key improvements include better routing support and clearer error messages for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#326",
+      "title": "Audit Fixes for Hardcoded User Messages in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "localization",
+        "audit",
+        "fixes",
+        "notifications",
+        "server-side"
+      ],
+      "public": false,
+      "summary": "This update addresses critical issues with hardcoded user messages in the server-side code, ensuring that notifications are rendered in the user's preferred language. Key changes include the removal of static Chinese text and the implementation of a locale-based fallback system for notifications. Additionally, several other localization issues were identified and documented for future resolution."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1446",
+      "title": "Enhance Scheduled Run Status Display in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "localization",
+        "ui",
+        "scheduled-tasks"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1446",
+      "summary": "This update introduces an 'indeterminate' status for scheduled runs, allowing outcomes that cannot be verified to be displayed as '待确认' instead of '失败'. Key changes include updates to the `IScheduledRunStatus` type, localization for 18 languages, and adjustments to the UI to differentiate between statuses. The implementation improves user experience by accurately reflecting the state of scheduled tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1739",
+      "title": "Enhance Aichat2 Outcome Judging and Notification System in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "enhancement",
+        "localization",
+        "aichat2",
+        "notification"
+      ],
+      "public": false,
+      "summary": "This update improves the Aichat2 outcome judging process by addressing issues with goal truncation and misclassification of outcomes. Key changes include the introduction of an 'indeterminate' status, adjustments to how prompts are processed, and enhancements to notification copy for better localization. These modifications aim to reduce false failure rates and improve user experience across different languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#978",
+      "title": "Fix pricing page navigation for deployment services in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "ui",
+        "navigation",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update addresses a navigation issue on the pricing page for deployment services, ensuring users are correctly guided to create a deployment before subscribing. The button behavior has been adjusted to prevent users from being directed to the universal balance, which does not support the subscription packages. Additionally, a login issue related to the new deployment creation has been resolved, enhancing the overall user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#977",
       "title": "Enhance Button Spacing for Icons and Text in Frontend Web 🚀",
       "tags": [
