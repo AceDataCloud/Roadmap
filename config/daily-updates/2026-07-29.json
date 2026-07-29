@@ -3,6 +3,162 @@
   "date": "2026-07-29",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#196",
+      "title": "Fix read-only file issue for OEM self-heal in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "oem",
+        "testing",
+        "scripts"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where the `api-health.ps1` script failed to refresh due to read-only attributes on files in the `C:\\OEM` directory. The solution involves clearing the read-only attribute before writing, ensuring that the refresh process works correctly on real devices. Additionally, a new test has been added to replicate the original failure scenario, confirming the fix's effectiveness."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1196",
+      "title": "Revamp API Documentation for Enhanced Clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "api",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update focuses on improving the API documentation by removing sensitive implementation details from the appliance specs. Key changes include rewriting descriptions in the OpenAPI files to ensure they are customer-friendly while maintaining the same interface behavior. The documentation now emphasizes user-relevant information without exposing internal processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1746",
+      "title": "Enhance User Experience with Channel Probe in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "bugfix",
+        "discord",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces a new channel probe that evaluates what users actually see in Discord, addressing limitations of existing API checks. It validates key message elements such as logos, prompts, and mentions, ensuring any discrepancies are flagged for review. The implementation has been successfully tested, confirming zero defects across all services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1745",
+      "title": "Updated WeWork API Documentation for Clarity in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "documentation",
+        "api",
+        "wework",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update refines the WeWork API documentation to remove implementation details while preserving essential semantic information. Key changes include rephrasing descriptions of message retrieval and QR code generation to enhance clarity for users. The behavior and contract of the API remain unchanged, ensuring a seamless experience for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#195",
+      "title": "Revamped API Documentation for Clarity in Wisdom ✨",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "documentation",
+        "api",
+        "user-experience",
+        "clarity",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update refines the API documentation by removing technical jargon and implementation details, ensuring a more user-friendly experience. Key phrases have been reworded to focus on user actions rather than backend processes, while maintaining the same functionality and interface contracts. The changes enhance clarity for end-users without altering the underlying behavior of the API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#987",
+      "title": "Enhance API Selector with Service Names and Icons in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "api",
+        "frontend",
+        "ui",
+        "i18n",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update improves the API selector on the authorization page by displaying service names and icons, while filtering out private services. Key changes include grouping APIs by service, enhancing search functionality, and ensuring a clearer interface with distinct method and path displays. Additionally, internationalization support has been updated to reflect these changes across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1193",
+      "title": "Enhance API Security and Clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "security",
+        "backend",
+        "improvement",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update improves the API by preventing private service endpoints from being listed anonymously, reducing the total visible endpoints from 200 to 151. Additionally, the API now includes service information in the response, allowing for better identification of endpoints. Tests have been added to ensure that private services are correctly filtered out in the list view."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#988",
+      "title": "Fix recipient selection issue in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "email",
+        "frontend",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update resolves a deadlock issue when creating new emails, specifically in the recipient selection step. Users can now select recipients without needing to save a draft first, enhancing the overall email creation experience. The logic has been adjusted to allow audience selection based on rules when no draft exists, streamlining the process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1744",
+      "title": "Enhance Discord Message Presentation and Add Service Logo in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "discord",
+        "ui",
+        "logo",
+        "bugfix",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update refines the message presentation in Discord by tightening line spacing and ensuring prompts match the title's font size. Additionally, it introduces service logos to enhance visual identification, addressing previous issues with logo retrieval for certain services. Key changes include improved error handling and adjustments to ensure all services display correctly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1194",
+      "title": "Add WeChat Bot Favicon and Enhance Backfill Script in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "favicon",
+        "backend",
+        "deployment",
+        "script",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a favicon for the WeChat automation bot, addressing its absence in the application list. The backfill script has been modified to support Deployment types, ensuring that these services can now have icons sourced from a curated design. Additionally, the script documentation has been updated to reflect these changes."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1743",
       "title": "Fix task failure handling and recovery in Platform Service 🚀",
       "tags": [
