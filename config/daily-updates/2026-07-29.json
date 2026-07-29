@@ -3,6 +3,247 @@
   "date": "2026-07-29",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1743",
+      "title": "Fix task failure handling and recovery in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "aichat2",
+        "scheduler",
+        "testing",
+        "recovery"
+      ],
+      "public": false,
+      "summary": "This update resolves issues with the task failure handling in the Aichat2 service, specifically addressing the erroneous permanent shutdown of tasks after consecutive failures. Key changes include removing the state change on business failures, allowing tasks in 'error' state to be revived, and ensuring accurate scheduling upon task recovery. Additionally, new tests have been added to validate these changes and ensure system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#985",
+      "title": "Enhance Audience Segmentation with Clickable Groups in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "email-marketing",
+        "ui",
+        "accessibility"
+      ],
+      "public": false,
+      "summary": "This update introduces clickable audience segments on the email marketing page, allowing users to view specific members within each segment. By reusing existing components, users can now access a detailed drawer that lists members, complete with pagination and search functionality. The changes ensure a seamless experience while maintaining data integrity and accessibility standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1188",
+      "title": "New Audience Rule Candidates API for Email Marketing in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "email",
+        "api",
+        "backend",
+        "feature",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update introduces a new POST endpoint for retrieving audience candidates based on specific rules without requiring a campaign. The new API maintains consistency with existing data structures and does not alter any current routes or response formats. Performance tests confirm that the new implementation is efficient and does not introduce additional load on the system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1186",
+      "title": "Integrate Missing Email Audience Tests into CI in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "ci",
+        "testing",
+        "backend",
+        "email",
+        "audience"
+      ],
+      "public": false,
+      "summary": "This update adds four previously unexecuted email audience test files to the CI pipeline, ensuring that 62 tests are now run during continuous integration. Key issues were identified and resolved, including a persistent failing test due to a missing database table and incorrect assertions. The changes enhance the robustness of the testing framework and prepare for future feature developments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#986",
+      "title": "Enhance Debugger Detachment Logging in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "logging",
+        "debugger",
+        "frontend",
+        "improvement",
+        "diagnostics"
+      ],
+      "public": false,
+      "summary": "This update improves the logging of debugger detachment reasons, addressing issues where different detachment scenarios appeared identical in the cloud. Key changes include capturing Chrome's detachment reasons and differentiating between user actions and system events. The modifications enhance diagnostic capabilities, ensuring clearer insights into tab management and recovery processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1742",
+      "title": "Enhance Result Rejection Logging in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "logging",
+        "browser",
+        "aichat2",
+        "relay",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the logging of rejected results in the browser relay and aichat2 components. It now specifies the reasons for rejection, such as authentication issues and state mismatches, while also logging non-completed command statuses. These changes enhance troubleshooting capabilities and reduce ambiguity in error reporting."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#193",
+      "title": "Enhance OEM Self-Heal Mechanism in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "oem",
+        "self-heal",
+        "update",
+        "legacy",
+        "wisdom"
+      ],
+      "public": false,
+      "summary": "This update introduces a new approach to refresh the OEM scripts for existing appliances by leveraging the Wisdom Python package. It addresses a deadlock issue where older devices could not pull in necessary updates due to frozen scripts. The solution ensures that the OEM scripts are always current, significantly improving the self-healing capabilities for legacy tenants."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#192",
+      "title": "Enhance OEM Script Refresh Mechanism in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "oem",
+        "docker",
+        "scripts",
+        "update",
+        "wisdom"
+      ],
+      "public": false,
+      "summary": "This update introduces a new mechanism to refresh OEM scripts from the image on every boot, addressing the issue where existing devices could not receive updates to PowerShell scripts. Key changes include the addition of a new script, `load-shared-oem.ps1`, and modifications to the Dockerfile and startup batch file to facilitate this process. This ensures that fixes can reach appliances that were installed before the update, improving overall system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1192",
+      "title": "Enhance shared image payload support for multiple directories in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "security",
+        "deployment",
+        "oem"
+      ],
+      "public": false,
+      "summary": "This update allows the `shared_image_payload` to accept both single and multiple `{source, target}` mappings, enabling the staging of OEM scripts alongside application code. The migration ensures backward compatibility while improving the deployment process. Additionally, safety checks have been implemented to prevent command injection and path escape vulnerabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#984",
+      "title": "Enhance Email Preview and Step Confirmation in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "email",
+        "frontend",
+        "i18n",
+        "ui",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update improves the email preview functionality by correctly displaying the custom sender name instead of a hardcoded value. Additionally, the step confirmation text has been updated to reflect the new process, changing it to 'Confirm and send'. These changes enhance user experience and ensure clarity in the email marketing workflow."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#584",
+      "title": "Align Suno CLI with Latest OpenAPI Specs in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "suno",
+        "cli",
+        "openapi",
+        "update",
+        "alignment"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/584",
+      "summary": "This update synchronizes the Suno CLI request semantics with the latest OpenAPI documentation. Key changes include updating the `suno custom` command to send the correct payload and making `--user-id` mandatory for the `suno personas` command. Additionally, the action help text has been updated to reflect the current action enum, enhancing user experience and consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#465",
+      "title": "Docs sync confirmation for aichat, fish, and suno in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docs",
+        "sync",
+        "aichat",
+        "fish",
+        "suno"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/465",
+      "summary": "This PR confirms that the OpenAPI contracts for aichat, fish, and suno are aligned with the latest documentation updates. A review of the models, tool inputs, and endpoint paths revealed no discrepancies, and no server code changes were necessary. The updates primarily involved non-contractual message text adjustments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#982",
+      "title": "Enhance API Authorization Controls in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "authorization",
+        "frontend",
+        "i18n",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature allowing users to restrict which APIs can be called by authorized parties. A toggle and multi-select option have been added to the authorization form, enabling users to specify allowed APIs while maintaining existing functionalities. Additionally, internationalization support has been improved across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1191",
+      "title": "Cleaned Up Customer-Facing API Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "api",
+        "cleanup",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update addresses 25 instances across 13 specifications to remove upstream references from customer-facing documentation. Key changes include rephrasing error messages and adjusting audio URLs to point to the platform's CDN. The modifications ensure that customers no longer see any supplier-related information, enhancing confidentiality and compliance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#220",
+      "title": "Enhance API Whitelisting for Credentials in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "api",
+        "security",
+        "gateway",
+        "credential"
+      ],
+      "public": false,
+      "summary": "This update introduces a per-credential API allowlist feature, enabling more granular control over which APIs can be accessed based on the credential used. The implementation ensures that existing credentials remain unrestricted while new ones can specify allowed API IDs, enhancing security without impacting legacy functionality. Additionally, task-polling endpoints are exempt from this restriction to maintain usability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#1190",
       "title": "Enhance API Authorization with Specific Limits in Backend 🚀",
       "tags": [
