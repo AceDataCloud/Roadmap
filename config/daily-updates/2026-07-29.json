@@ -3,6 +3,210 @@
   "date": "2026-07-29",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1752",
+      "title": "Enhance Numeric Handling for Workers in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "workers",
+        "normalization",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update standardizes the handling of numeric strings in the `ephone` and `bananarouter` workers for the `/seedance/videos` endpoint. By normalizing the `duration` and `seed` parameters, we ensure consistent behavior across all four workers, preventing failures when numeric strings are passed. The changes have been validated and result in no deletions, only additions, enhancing the robustness of the service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1459",
+      "title": "Enhance MCP Tool Management with Always-Allow Toggles in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "mcp",
+        "tools",
+        "settings",
+        "ui",
+        "safety"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1459",
+      "summary": "This update introduces a new section for MCP tools, allowing users to set per-tool 'always allow' toggles for connected servers. This enhancement improves user experience by enabling pre-approval of tools before first use, reducing repetitive prompts. Additionally, safety measures ensure that tools are properly classified and that permissions are managed effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#586",
+      "title": "Update frames limit to 289 in Clis 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "bugfix",
+        "cli",
+        "openapi",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/586",
+      "summary": "The maximum frame count for the seedance CLI has been corrected to align with the OpenAPI specification. The help text for the `--frames` option was updated from '29-361' to '29-289', ensuring accurate user guidance. This change enhances compliance with the defined API constraints."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#467",
+      "title": "Enhance Seedance Video Parameters in M C Ps 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "video",
+        "seedance",
+        "api",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/467",
+      "summary": "This update syncs the Seedance MCP server with the latest OpenAPI specifications. Key changes include lowering the maximum frames from 361 to 289 and relaxing the minimum duration requirement to allow for auto-duration with a value of -1. These adjustments enhance flexibility for video generation across different Seedance models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1201",
+      "title": "Update audio/video requirements in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "backend",
+        "seedance",
+        "openapi"
+      ],
+      "public": false,
+      "summary": "This update enhances the documentation by adding specific requirements for audio and video materials in the Seedance feature. Key changes include clarifying the acceptable formats, duration limits, and size restrictions for reference audio and video files. These adjustments aim to prevent user errors and improve the overall experience when creating video generation tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1749",
+      "title": "Align frames limit with official specs in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "documentation",
+        "validation",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update corrects the frames limit and applicable models to align with official documentation. The maximum value for frames has been adjusted from 361 to 289, and errors will now be thrown for unsupported models like 2.0 series and 1.5 Pro when frames are used. This change prevents unnecessary failures upstream and ensures a smoother user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1748",
+      "title": "Enhance seek API to handle numeric strings gracefully in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "api",
+        "validation",
+        "billing"
+      ],
+      "public": false,
+      "summary": "This update improves the `seek` worker in the `/seedance/videos` API by normalizing numeric string inputs for the `duration`, `seed`, and `execution_expires_after` parameters. Previously, passing a string for `duration` resulted in a 400 error, leading to inconsistent API behavior across channels. Now, the API will only accept valid decimal strings, ensuring smoother validation and billing processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1202",
+      "title": "Fix email encoding issue for non-ASCII sender names in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "email",
+        "encoding",
+        "tests",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update addresses a bug where non-ASCII sender names were not properly encoded, leading to SMTP 554 rejections. A new function `_encoded_address()` has been introduced to ensure compliance with RFC 2047 for non-ASCII display names while leaving the email address intact. Additionally, two new tests have been added to validate the encoding functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1199",
+      "title": "Fix authority credentials for browser uploads in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "deployment",
+        "testing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where browser sessions failed to upload images due to a missing authority token, resulting in a 503 error. The fix involves injecting the necessary `AUTH_BACKEND_URL` and `AUTH_BACKEND_INTERNAL_TOKEN` into the deployment configuration. Additionally, new tests have been added to ensure the correct environment variables are set, preventing future occurrences of this issue."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1200",
+      "title": "Enhance CI for Appliance Security Tests in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "ci",
+        "security",
+        "tests",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update integrates appliance security tests into the CI pipeline, ensuring that critical checks are performed during the review phase rather than post-merge. The changes include adding `test_deployment_access.py` and `test_appliance_proxy.py` to the testing workflow, which passed successfully. Additionally, a previous misdiagnosis regarding workflow permissions has been clarified, confirming that current settings are adequate."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#992",
+      "title": "Enhance Webhook Management and Invoice Notification Settings in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "webhook",
+        "invoice",
+        "frontend",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update introduces a new webhook management page and enhances the invoice notification settings panel. Users can now manage webhooks with a comprehensive interface, including editing, testing, and deleting options. Additionally, the invoice page has been updated to allow for notification settings directly linked to webhook events, improving user experience and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1197",
+      "title": "Introducing Configurable Outbound Webhook System in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "webhook",
+        "notification",
+        "backend",
+        "feature",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces a versatile webhook configuration layer, allowing superusers to set up HTTP requests for various events, such as invoice creation and cancellation. Key components include the new Webhook and WebhookSubscription models, enabling reusable outbound requests and event bindings. The implementation enhances notification capabilities, ensuring timely alerts for invoice management without manual checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#995",
+      "title": "Enhance Tab Grouping for Agent Management in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "tabs",
+        "frontend",
+        "agent",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature that groups tabs managed by the agent, providing users with clear visual cues about which tabs belong to the agent. The implementation includes a dedicated color and title for the tab group, enhancing user experience by preventing confusion with personal tabs. Comprehensive testing has been conducted, ensuring all new functionalities are robust and reliable."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthBackend#390",
       "title": "Enhance Browser Binding Token Authentication in Backend 🚀",
       "tags": [
