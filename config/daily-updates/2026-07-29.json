@@ -3,6 +3,54 @@
   "date": "2026-07-29",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1190",
+      "title": "Enhance API Authorization with Specific Limits in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "bugfix",
+        "security",
+        "api",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature allowing API authorization to be restricted to specific API IDs, enhancing security and control. Additionally, it fixes a bug in the editing interface that previously resulted in 405 errors, ensuring users can now update their credentials without issues. The changes maintain backward compatibility for existing credentials while providing a more granular permission model."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#983",
+      "title": "Streamlined Email Sending Process in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "email",
+        "frontend",
+        "ui",
+        "improvement",
+        "campaign"
+      ],
+      "public": false,
+      "summary": "This update simplifies the email campaign process from five steps to just three: Compose Email, Select Audience, and Send. Key changes include the addition of sender display names and reply-to addresses, as well as improved visibility for unsubscribed or suppressed recipients. The Campaign Detail page has been transformed into a pure status page, enhancing user experience and clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1189",
+      "title": "Streamlined Email Sending Process in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "email",
+        "backend",
+        "feature",
+        "update",
+        "efficiency"
+      ],
+      "public": false,
+      "summary": "This update simplifies the email sending process by consolidating multiple steps into a single action, enhancing efficiency for sending product updates to registered users. Key changes include the introduction of a new `send_campaign()` function, removal of the wave concept, and adjustments to recipient visibility in the UI. The modifications aim to maintain compliance while improving user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#980",
       "title": "Fix WeChat Deployment Error Messaging in Frontend Web 🚀",
       "tags": [
