@@ -3,6 +3,71 @@
   "date": "2026-07-30",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1014",
+      "title": "Enhance Email Recipient Management in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "email",
+        "frontend",
+        "ui",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature allowing users to manually add recipients outside of the selected segment by entering their email or user ID. The system now provides feedback for various scenarios, ensuring accurate additions and preventing duplicates. Additionally, any previously excluded users will be automatically removed from the exclusion list upon being added back."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1013",
+      "title": "Clean Up Dead Code and i18n Keys in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "cleanup",
+        "i18n",
+        "frontend",
+        "code-quality",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "This update removes obsolete code and 1,176 dead internationalization keys from the email marketing module. Key changes include the deletion of unused CSS, a non-existent button method, and outdated backend actions. The cleanup enhances code maintainability and optimizes performance across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1012",
+      "title": "Add Retry Failed Recipients Feature in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "email",
+        "frontend",
+        "i18n",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature on the campaign details page that allows users to resend emails to recipients who previously failed to receive them. The option to 'Retry Failed' will only appear when there are eligible recipients, and it creates a draft for review before sending. Additionally, several internationalization files have been updated to support this new functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1465",
+      "title": "Expanded Reference Image Limit to 16 in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "i18n",
+        "openai",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1465",
+      "summary": "This update raises the reference image limit for the OpenAI image editing feature from 5 to 16, aligning with the official OpenAI specifications. Key changes include updating the limit in the UI component and adjusting internationalization files to reflect the new limit across 18 locales. The change enhances user experience by allowing more flexibility in image uploads without backend dependency."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthBackend#395",
       "title": "Enhance Popup Security with Backend Origin Signing in Backend 🚀",
       "tags": [
