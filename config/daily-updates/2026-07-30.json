@@ -3,6 +3,38 @@
   "date": "2026-07-30",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1023",
+      "title": "Fix flaky DER signature length assertion in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "ci",
+        "testing",
+        "der",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update addresses a flaky assertion in the DER signature length check that was causing intermittent CI failures. The assertion has been modified to validate the DER structure instead of relying on a fixed length, ensuring that valid shorter signatures are no longer misreported. Extensive testing has confirmed the fix, with 30 consecutive successful runs post-implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1022",
+      "title": "Enhance Audience Segmentation with Multi-Select Feature in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "email",
+        "ui",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update transforms the audience segmentation card from single-select to multi-select, allowing users to send emails to multiple segments simultaneously. Key changes include the introduction of an array for audience segments and improved compatibility with existing data. The update also ensures that at least one segment is retained to prevent unintended mass mailings."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#1215",
       "title": "Enhance Audience Rules with Multi-Segment Support in Backend 🚀",
       "tags": [
