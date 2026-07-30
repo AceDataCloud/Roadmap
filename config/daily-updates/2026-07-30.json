@@ -3,6 +3,230 @@
   "date": "2026-07-30",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#592",
+      "title": "Align TTS CLI Options with Latest Docs in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "tts",
+        "update",
+        "fish",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/592",
+      "summary": "This update refines the TTS CLI options for the `fish` service to align with the current API schema. The unsupported `--opus-bitrate` option has been removed, and the available formats are now restricted to `mp3`, `wav`, and `pcm`. Additionally, the command help output has been updated to reflect these changes, ensuring a smoother user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#473",
+      "title": "Align Fish Audio Formats with OpenAPI Spec in M C Ps 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "fix",
+        "audio",
+        "openapi",
+        "types",
+        "tools"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/473",
+      "summary": "This update removes the unsupported 'opus' format from the FishAudioFormat type definition and eliminates the 'opus_bitrate' parameter from the fish_generate_audio function. These changes ensure consistency with the upstream OpenAPI specification, enhancing the clarity and reliability of the audio generation tools. The modifications streamline the codebase by removing unnecessary elements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1212",
+      "title": "Align Audio Format Documentation with Actual Support in Backend 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "openapi",
+        "backend",
+        "audio"
+      ],
+      "public": false,
+      "summary": "This update modifies the OpenAPI documentation for the `/fish/tts` endpoint to accurately reflect the supported audio formats. The `format` enum now only includes `mp3` and `pcm`, and the `opus_bitrate` field has been removed as it is not applicable. Additionally, example audio URLs have been updated to point to real CDN links, enhancing clarity for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1761",
+      "title": "Fix task timeout issues in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "discordace",
+        "errorhandling",
+        "sdk",
+        "platformservice"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical bug in the Discordace service where tasks were incorrectly reported as 'timed out' due to upstream errors not being properly recognized. Key changes include enhancing the error handling in the SDK and ensuring unsupported formats are rejected immediately, preventing unnecessary polling. The improvements lead to clearer error messages for users and more efficient task management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1762",
+      "title": "Fix resource upload order and type declarations in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "types",
+        "aichat2",
+        "resource",
+        "upload"
+      ],
+      "public": false,
+      "summary": "This update addresses two critical issues in the resource handling of the aichat2 module. The upload-resource block is now positioned before the skill body to prevent truncation, ensuring that essential references are preserved. Additionally, type declarations for receipt fields have been added to enhance type safety and prevent silent data loss during processing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#590",
+      "title": "OpenAI CLI Sync Check Completed in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "sync",
+        "openai",
+        "cli",
+        "verification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/590",
+      "summary": "This update confirms that the OpenAI CLI is fully aligned with the latest OpenAPI documentation. An audit of the `openai/` package revealed no discrepancies, with all endpoints and parameters matching the current specifications. As a result, no changes were necessary, and the issue has been resolved through verification."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#471",
+      "title": "Validated OpenAI Docs Alignment in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docs",
+        "openai",
+        "validation",
+        "sync"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/471",
+      "summary": "This update confirms that the current OpenAI MCP implementation is fully aligned with the latest OpenAPI contract, requiring no changes to the source code. The validation process checked various components, including model enums and endpoint paths, ensuring everything is in sync. As a result, the sync issue has been resolved without any file modifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1211",
+      "title": "Update documentation for image edits API in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "api",
+        "updates",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update corrects inaccuracies in the documentation for the OpenAI Images Edits API. Key changes include clarifying the maximum number of reference images allowed and correcting the response format descriptions. These adjustments ensure that users have accurate information for utilizing the API effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1758",
+      "title": "Increase Multipart Image Limit to 16 in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "enhancement",
+        "error-handling",
+        "multipart",
+        "upload"
+      ],
+      "public": false,
+      "summary": "This update raises the multipart image upload limit from 11 to 17, accommodating up to 16 reference images as per OpenAI's specifications. It also improves error handling by ensuring that any upload exceeding the limit returns a 400 status instead of a 500 error, enhancing the overall user experience. The changes affect multiple workers, aligning them with the new limits and error handling protocols."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1015",
+      "title": "Fix email status mismatch in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "email",
+        "frontend",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update resolves a contradiction in the email marketing feature where the status title incorrectly indicated that global sending was enabled while it was actually paused. The title now accurately reflects the state of the sending feature, ensuring users receive clear and consistent information. Additionally, internationalization files have been updated to align with these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#251",
+      "title": "Refactor hardcoded origin lists for improved security in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "refactor",
+        "security",
+        "frontend",
+        "dynamic",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update removes two hardcoded origin lists from the frontend, aligning it with the backend's dynamic `return_url` whitelist. The changes enhance security by ensuring that the frontend no longer maintains its own host lists, relying instead on a backend-signed token for origin validation. This prevents potential issues with new clients where the frontend might not recognize valid origins, ensuring a smoother user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#396",
+      "title": "Strengthen Opener Origin Validation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "security",
+        "backend",
+        "validation",
+        "fix",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update implements a critical security fix for validating the `opener_origin` directly within the backend. It ensures that only trusted origins are signed, preventing potential exploitation from malicious URLs. The changes include modifications to the signing logic and enhanced test coverage to verify the new behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#588",
+      "title": "CLI Sync Verification Complete in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "openapi",
+        "verification",
+        "sync"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/588",
+      "summary": "The CLI has been thoroughly audited against the latest OpenAPI spec, confirming that all models, aspect ratios, resolutions, and request body fields are in sync. Key changes from recent documentation commits were reviewed, and no code modifications were necessary. This ensures that the CLI remains aligned with the current API specifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#469",
+      "title": "Update frames validation to match OpenAPI spec in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "validation",
+        "openapi",
+        "pydantic",
+        "video",
+        "tools"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/469",
+      "summary": "This update enforces the maximum frames parameter to 289 in the `seedance_generate_video` and `seedance_generate_video_from_image` functions, aligning with the latest OpenAPI specification. The Pydantic validation now includes constraints to ensure the frame count is between 29 and 289, enhancing runtime validation and preventing invalid inputs."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#1014",
       "title": "Enhance Email Recipient Management in Frontend Web 🚀",
       "tags": [
