@@ -1,0 +1,169 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-30",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1008",
+      "title": "Enhance Email Creation with Per-Person Selection in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "email",
+        "frontend",
+        "feature",
+        "ui",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces the ability to select recipients individually when creating a new email, eliminating the need to save a draft first. The change automatically creates a draft upon entering the second step of email creation, allowing immediate selection without disrupting the user experience. Key adjustments were made to the campaign composer and audience recipient table components to support this functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1757",
+      "title": "Fix attachment receipt handling for uploads in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "upload",
+        "metadata",
+        "classification",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where uploaded attachments were missing critical metadata, causing failures in processing by the model. The changes ensure that all necessary fields, including file_id, sha256, mime, and size, are preserved during the upload process. Additionally, the classification of uploaded files has been improved to correctly identify file types based on mime type rather than just file extensions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1462",
+      "title": "Streamline Skill Management in Nexior Console 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "i18n",
+        "skills",
+        "console"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1462",
+      "summary": "This update integrates skill management directly into the Nexior console, allowing users to manage skills without leaving the platform. The UI has been migrated to the `/console/skills` route, while the underlying data remains managed by AuthBackend. Key changes include the addition of several new components for skill browsing and management, along with comprehensive internationalization support across 18 languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1007",
+      "title": "Enhance Webhook Variables and Secure Sensitive Headers in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "webhook",
+        "security",
+        "frontend",
+        "i18n",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update introduces a new format for webhook variable tables, displaying both placeholders and their descriptions side by side for easier understanding. Additionally, sensitive request headers like 'Authorization' are now masked as password fields to enhance security. Other improvements include updated placeholder texts and better internationalization support."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1205",
+      "title": "Revamp Webhook Content Management in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "webhook",
+        "backend",
+        "feature",
+        "improvement",
+        "bugfix",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update enhances the webhook system by allowing administrators to customize message templates, removing hardcoded content. Key changes include the introduction of a single source for event variables and improved error handling for header management during webhook creation. Additionally, tests have been expanded to ensure robustness and consistency across the system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1006",
+      "title": "Fix email confirmation message for accurate recipient count in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "email",
+        "frontend",
+        "ui",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where the email confirmation dialog inaccurately reported the number of recipients. The logic has been adjusted to ensure the correct count of active paying users is displayed, enhancing clarity for users. Additionally, the confirmation message now specifies the segment of recipients, improving user understanding of the email's reach."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1204",
+      "title": "Fix email recipient count reporting issue in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "email",
+        "backend",
+        "ui",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical bug where the UI inaccurately reported the number of recipients for email campaigns. A new `rule_total` has been introduced to ensure that the total number of recipients is correctly calculated, independent of search filters. This change prevents misleading confirmations and enhances the accuracy of email dispatches."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1461",
+      "title": "Streamlined Connector Management in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "authorization",
+        "migration",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1461",
+      "summary": "This update integrates connector management directly into the Studio console, enhancing user experience by eliminating the need to navigate to an external site. The UI has been migrated while maintaining the existing data layer as read-only, ensuring consistency and security. A feature flag allows for easy rollback if needed, and the authorization process has been improved with a popup mechanism for better usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#250",
+      "title": "Enhance OAuth Flow with Popup Return Page in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "oauth",
+        "frontend",
+        "popup",
+        "user-experience",
+        "studio"
+      ],
+      "public": false,
+      "summary": "This update introduces a new popup return page for managing OAuth connections within the Studio console. The addition of `PopupReturn.vue` allows for seamless authorization without refreshing the calling page, improving user experience. Key changes include enhanced postMessage handling and origin validation to ensure secure communication."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#392",
+      "title": "Enhance return_url security with dynamic allowlist in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "security",
+        "backend",
+        "allowlist",
+        "oauth",
+        "dynamic"
+      ],
+      "public": false,
+      "summary": "This update introduces a dynamic allowlist for the `return_url` parameter to prevent open redirect vulnerabilities. It replaces the static whitelist with a database-driven approach, allowing legitimate custom domains while blocking unauthorized ones. The changes enhance security for connections and ensure compliance with white-label requirements."
+    }
+  ]
+}
