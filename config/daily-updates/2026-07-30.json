@@ -3,6 +3,367 @@
   "date": "2026-07-30",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPs#480",
+      "title": "Exciting New MCP Servers for Captcha Services in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "mcp",
+        "captcha",
+        "hcaptcha",
+        "image2text",
+        "recaptcha",
+        "turnstile"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/480",
+      "summary": "This update introduces new MCP servers for hcaptcha, image2text, recaptcha, and turnstile, enhancing the capabilities of our captcha-related services. Each service follows the established webextrator pattern, ensuring consistency and ease of use. Additionally, all endpoints now support asynchronous handling, allowing for more efficient task management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#598",
+      "title": "Enhance hcaptcha CLI with task command in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "hcaptcha",
+        "cli",
+        "feature",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/598",
+      "summary": "This update introduces a new `task` command to the hcaptcha CLI, enabling users to poll for results of asynchronous captcha tasks. Key changes include the addition of `get_task()` and `print_task_result()` functions, along with the necessary command registration and testing fixtures. This enhancement improves user experience by providing real-time task status updates directly from the CLI."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1019",
+      "title": "Enhance Masking for Sensitive Headers in Frontend Web 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "webhook",
+        "security",
+        "ui",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the display of masked sensitive headers in the webhook settings. The masking now uses fixed-length dots to prevent revealing the actual length of the token, and the real value is only shown when explicitly requested. Additionally, the submission process has been adjusted to ensure that the masked value is correctly handled without overwriting the actual token."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1470",
+      "title": "Fix(console): 连接器/技能页样式对齐 Studio 控制台 in Nexior 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1470"
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1214",
+      "title": "Normalize Translations in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "openapi",
+        "translations",
+        "backend",
+        "sync",
+        "chore"
+      ],
+      "public": false,
+      "summary": "This update standardizes the translations block across 12 OpenAPI files following the recent sync. Key changes include reordering translation keys, adding missing line breaks, and converting hardcoded descriptions to translation references. The files have been verified for stability, ensuring no content changes while improving structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1468",
+      "title": "Introducing Local Search Tools: fs.glob and fs.grep in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "local-tools",
+        "search",
+        "improvement",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1468",
+      "summary": "This update adds two powerful read-only search tools, fs.glob and fs.grep, to the Nexior local tools. Users can now efficiently search for files by name or content without the need for external commands, significantly improving the retrieval process. The implementation includes robust safety checks and extensive testing to ensure reliability and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1467",
+      "title": "Enhance Local Tools with Precise Editing and Pagination in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "local-tools",
+        "file-operations",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1467",
+      "summary": "This update introduces two significant features to the local tools: `fs.edit_file` for precise string replacement and `fs.read_file` with pagination capabilities. The `fs.edit_file` function allows for unique string replacements while preserving file permissions, and the `fs.read_file` function now supports reading files in segments, preventing silent truncation for large files. These enhancements improve efficiency and safety when handling file operations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1017",
+      "title": "Align Upload Button in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "fix",
+        "frontend",
+        "invoice"
+      ],
+      "public": false,
+      "summary": "This update fixes the alignment issue of the 'Upload Invoice PDF' button in the invoice details modal, which was previously 5px higher than other controls. By setting 'show-file-list' to false, the button now aligns perfectly with its peers, enhancing the overall UI consistency. The change also simplifies the display of selected file names."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#596",
+      "title": "Docs sync confirms no CLI code changes needed in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "docs",
+        "sync",
+        "cli",
+        "openapi",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/596",
+      "summary": "This update finalizes the Docs sync request by auditing various services against recent OpenAPI updates. The review confirmed that the monorepo is already aligned, with no source changes required. Notably, the `fish` CLI was found to be compliant with the updated format constraints, eliminating the need for any patches."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1763",
+      "title": "Decommissioning Two Services Due to Missing Secrets in Platform Service 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "deployment",
+        "services",
+        "secrets",
+        "maintenance"
+      ],
+      "public": false,
+      "summary": "This update addresses the ongoing issues with two services, `kickart` and `phoenix`, which have been unable to start due to missing secrets. The replicas for both deployments have been set to zero, with comments added in the YAML files detailing the reasons for decommissioning and the conditions for restoration. This change will help reduce resource consumption while maintaining the deployment configurations for future recovery."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#478",
+      "title": "Fix MCP Dependencies to Prevent CrashLoopBackOff in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "bugfix",
+        "dependencies",
+        "stability",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/478",
+      "summary": "This update modifies the dependency constraints for 25 projects to limit the `mcp` version to less than 2.0.0, addressing a critical issue that caused services to crash due to the removal of the `fastmcp` module. The change ensures that future builds will not encounter the same problem, stabilizing affected services like `mcp-aichat` and `mcp-seedance`. Additionally, the `uv.lock` file for `suno` has been updated to reflect the new dependency specification."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1018",
+      "title": "Fix order display for settled amounts in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "fix",
+        "frontend",
+        "order",
+        "display",
+        "settlement"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where order amounts were displayed using live exchange rates instead of the settled amounts. A new function, `getOrderPriceString()`, has been introduced to ensure that the displayed price reflects the frozen settlement amount, preventing discrepancies caused by currency fluctuations. This change enhances the accuracy of order displays across various sections, including order lists and details."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1466",
+      "title": "Enhance desktop tool functionality and security in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "desktop",
+        "security",
+        "functionality",
+        "macos",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1466",
+      "summary": "This update addresses five critical issues in the desktop local tools, enhancing security and functionality. Key changes include improved file system consent scopes, a functional shell PATH for commands, and the introduction of session grants for all tools. Additionally, macOS folder TCC strings have been added, and the write_file function has been made crash-safe."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#328",
+      "title": "Enhance Local Execution for Scheduled Tasks in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "scheduled-tasks",
+        "local-execution",
+        "electron",
+        "aichat2",
+        "nexior"
+      ],
+      "public": false,
+      "summary": "This update introduces a new execution mode for scheduled tasks, allowing them to run locally on the user's desktop instead of solely in the cloud. Key changes include the addition of an `execution` parameter and the implementation of a local task initiation process via the Electron main process. This enhancement aims to improve the usability of local tools while maintaining cloud-based task management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#78",
+      "title": "Enhance Outbox Resilience Against Socket Failures in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "bugfix",
+        "outbox",
+        "testing",
+        "socket",
+        "resilience"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/78",
+      "summary": "This update improves the handling of outbox events during socket failures by ensuring that truncation warnings are retained for future connections. The `_send_envelope` method now returns a boolean indicating whether the message was successfully sent, allowing the system to manage unacknowledged sessions more effectively. Two new test cases have been added to validate these changes, confirming that the warnings persist even during connection issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#77",
+      "title": "Fix replay issues in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "bugfix",
+        "replay",
+        "testing",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/77",
+      "summary": "This update addresses critical replay issues where old content was erroneously replayed during user sessions. Key changes include enhancing the replay guard mechanism and ensuring that only new messages are processed, preventing the leakage of previous responses. Additionally, several tests have been added to validate these fixes, ensuring the robustness of the system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#594",
+      "title": "Enhance Midjourney Task Filters for Better Usability in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "midjourney",
+        "cli",
+        "update",
+        "features",
+        "synchronization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/594",
+      "summary": "This update synchronizes the Midjourney task commands with the latest Docs schema, introducing new options for task retrieval and batch processing. Users can now utilize `--trace-id` for individual tasks and `--trace-ids` for batch lookups, enhancing the command's flexibility while maintaining existing functionalities. The changes ensure that the Midjourney CLI remains aligned with current standards without affecting other services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#477",
+      "title": "Align Task Metadata Documentation with Latest Updates in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "documentation",
+        "metadata",
+        "tests",
+        "cleanup",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/477",
+      "summary": "This update synchronizes the task metadata documentation with recent changes, including the introduction of `started_at` and `elapsed` fields, replacing the outdated `duration`. Additionally, it removes unsupported Fish `opus` guidance to ensure consistency with the upstream API. Regression tests have been expanded to verify that the new fields are correctly formatted and retained in task payloads."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1213",
+      "title": "Enhance Task Timing Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "backend",
+        "openapi",
+        "tasks",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the documentation for task timing fields, specifically `started_at`, `finished_at`, and `elapsed`, which were previously missing from the documentation. Key changes include adding detailed descriptions across 23 task documentation files and updating 28 OpenAPI schemas to include these properties. This ensures that users have clear guidance on task timing, enhancing overall usability and reducing confusion."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1209",
+      "title": "Update task duration field to elapsed in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "update",
+        "backend",
+        "tasks"
+      ],
+      "public": false,
+      "summary": "This update modifies the documentation across six task files to replace the outdated `duration` field with the correct `elapsed` terminology. Key changes include updates to examples and field descriptions, ensuring users receive accurate information and preventing undefined values. Additionally, the OpenAPI example for Midjourney tasks has been updated accordingly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1759",
+      "title": "Enhance Task Timing Reporting in Platform Service ⏱️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "timing",
+        "error-handling",
+        "testing",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update ensures that failed tasks now report their elapsed time, addressing inconsistencies in timing data across various workers. Key changes include modifications to the error handling in the task processing flow and adjustments to how elapsed time is calculated and stored. Additionally, regression tests have been added to verify the accuracy of these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1016",
+      "title": "Fix(deployment): 微信未运行时给出「重启微信」按钮，不再只留一句干着急的提示 in Frontend Web 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#197",
+      "title": "Enhance WeChat Recovery Mechanism in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "automation",
+        "wechat",
+        "recovery",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where devices were stuck in a 'not_running' state after the WeChat process exited unexpectedly. By implementing a relaunch mechanism within the existing coordinator logic, the system can now automatically restart WeChat, ensuring a seamless user experience without manual intervention. The changes have been validated through extensive testing and are expected to improve the reliability of WeChat bots significantly."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#592",
       "title": "Align TTS CLI Options with Latest Docs in Clis 🚀",
       "tags": [
