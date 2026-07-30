@@ -3,6 +3,53 @@
   "date": "2026-07-30",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1215",
+      "title": "Enhance Audience Rules with Multi-Segment Support in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "email",
+        "backend",
+        "audience",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces support for multi-segment audience rules, allowing users to target multiple segments in a single campaign. The implementation utilizes an 'OR' logic to include any selected segment, ensuring backward compatibility with existing single-segment rules. Additionally, new tests have been added to validate the functionality and ensure robustness."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1021",
+      "title": "Fix dead session tab reservation issue in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "session",
+        "frontend",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where expired sessions were preventing users from accessing their tabs. By ensuring that expired session records are removed during the tab claiming process, we eliminate the risk of stale sessions reserving tabs indefinitely. Comprehensive tests have been added to validate the changes, ensuring a smoother user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1020",
+      "title": "Enhance Email Marketing Features in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "email",
+        "frontend",
+        "bugfix",
+        "ui",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update addresses several key issues in the email marketing functionality. It fixes the recipient list not refreshing after changing segments, adds a loading indicator for segment changes, and improves the layout by positioning the recipient adjustment next to the segment list. Additionally, a preview feature for segments has been introduced, allowing users to view group members without changing the selected segment."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPs#480",
       "title": "Exciting New MCP Servers for Captcha Services in M C Ps 🚀",
       "tags": [
