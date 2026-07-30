@@ -3,6 +3,214 @@
   "date": "2026-07-30",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#395",
+      "title": "Enhance Popup Security with Backend Origin Signing in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "security",
+        "backend",
+        "popup",
+        "validation",
+        "auth"
+      ],
+      "public": false,
+      "summary": "This update introduces backend support for signing the popup opener origin, enhancing security by eliminating hardcoded host lists in the frontend. The backend now validates and signs the origin, allowing for synchronous verification without additional network calls. Key changes include the addition of a unique salt for the opener origin and improved testing for origin validation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1210",
+      "title": "Enhance Email Campaigns with Retry Feature in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "email",
+        "campaigns",
+        "backend",
+        "feature",
+        "retry"
+      ],
+      "public": false,
+      "summary": "This update introduces a new endpoint to clone failed email recipients into a fresh draft for retrying campaigns. The implementation ensures compliance by retaining audit records and only targeting recoverable failures. Additionally, new tests have been added to validate the functionality, with all existing tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1760",
+      "title": "Fix attachment handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "attachments",
+        "testing",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update addresses two critical issues with attachment management in the conversation flow. It ensures that attachments sent by users are preserved during the confirmation process and modifies the resource queue to be session-scoped, allowing for proper retrieval of file identifiers. Extensive testing has confirmed the effectiveness of these changes, with all new tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1011",
+      "title": "Reveal Sensitive Headers with New Functionality in Frontend Web 🔍",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "webhook",
+        "ui",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update introduces a feature that allows users to view sensitive request headers by clicking a 'Reveal' button, fetching real values from the backend. Additionally, it eliminates redundant local copies of sensitive headers and updates placeholder examples to reflect actual variable names. The documentation has also been revised to clarify the new functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1208",
+      "title": "Enhance Webhook Header Visibility in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "webhook",
+        "backend",
+        "security",
+        "feature",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces a new endpoint to retrieve sensitive webhook headers on demand while maintaining security through masking. The backend now sends a list of sensitive headers to the frontend, eliminating the need for manual maintenance. Additionally, the header name matching is now case insensitive, improving usability and consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#393",
+      "title": "Dynamic Whitelist Update for Return URLs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "refactor",
+        "backend",
+        "dynamic",
+        "whitelist",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update refactors the return URL whitelist to dynamically query allowed hosts from the Site table, reducing hardcoded entries to just localhost. It introduces a TTL cache for host lookups to enhance performance and ensures that new white-label domains can be onboarded without code changes. Additionally, a behavior change is noted where `dify.acedata.cloud` is now denied access unless added to the Site table."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#394",
+      "title": "Strengthened Domain Throttling and Blacklist Updates in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "security",
+        "backend",
+        "throttling",
+        "blacklist",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update reduces the per-domain registration limit to 5 accounts per hour and adds 8 domains to the blacklist to combat abuse. A new CronJob has been implemented for automated risk scanning, enhancing security measures against fraudulent registrations. The changes aim to significantly reduce the potential for abuse while maintaining service for legitimate users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1464",
+      "title": "Enhance Browser Tool Card Testing in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "testing",
+        "bugfix",
+        "stream",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1464",
+      "summary": "This update introduces comprehensive stream regression tests for the browser tool card, addressing two previously fixed bugs. The tests ensure that the real reducer and component interactions are validated, covering scenarios like successful completions and error handling. All tests have passed successfully, confirming the robustness of the fixes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1460",
+      "title": "Enhance MCP Tool Image Handling in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "image",
+        "mcp",
+        "desktop",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1460",
+      "summary": "This update improves how MCP tool images are processed by ensuring that images returned by tools are surfaced correctly to the model instead of being buried in JSON. The first liftable image block is now extracted and displayed, while non-liftable images are noted, enhancing user experience by providing clear feedback on image visibility. Testing confirms that the changes are robust and do not introduce regressions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1010",
+      "title": "Fix misleading email delivery status in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "email",
+        "frontend",
+        "ui",
+        "transparency"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where the email delivery status was inaccurately reported as 100% due to hardcoded values in the SMTP health check. Key changes include replacing the misleading 'delivery event callback' with a more accurate global sending switch and updating the delivery rate explanation to clarify that 'delivered' only indicates server acceptance. These adjustments enhance transparency for operations regarding email delivery outcomes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1009",
+      "title": "Enhance Email Delivery Insights in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "email",
+        "frontend",
+        "enhancement",
+        "localization",
+        "delivery"
+      ],
+      "public": false,
+      "summary": "This update improves the email delivery funnel by displaying all recipient states, including previously hidden statuses like 'Skipped' and 'FailedPermanent'. Additionally, it provides detailed reasons for undelivered emails and translates error codes for better clarity. An estimated time of arrival for email delivery is now visible, enhancing operational efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1207",
+      "title": "Enhance Email Delivery Reports with Skip Reasons in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "email",
+        "backend",
+        "feature",
+        "reporting",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature to the email delivery report API, aggregating skip reasons based on the last error codes. Previously, operators had to manually filter through multiple recipient states to understand delivery issues. Now, they can easily see why recipients were skipped, improving operational efficiency and clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1463",
+      "title": "Fix browser tool card freezing and missing results in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "testing",
+        "chat"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1463",
+      "summary": "This update addresses two main issues with the browser tool in chat: the card was stuck in a loading state and the results were not displayed. The execution sequence logic has been corrected to allow proper state transitions, and the UI for the browser tool has been updated to match other tools, enabling visibility of input/output and execution duration. Comprehensive tests have been added to ensure functionality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#1008",
       "title": "Enhance Email Creation with Per-Person Selection in Frontend Web 🚀",
       "tags": [
