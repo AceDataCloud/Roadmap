@@ -3,6 +3,70 @@
   "date": "2026-07-31",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1025",
+      "title": "Fix zIndex Handling for Preview Drawer in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "vue",
+        "zindex",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the preview drawer was not visible due to incorrect zIndex handling. The `useZIndex()` function is now correctly called within the setup function, ensuring that the drawer appears above other components. Additionally, the same fix has been applied to the resend confirmation dialog in the CampaignDetail component to prevent similar issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1024",
+      "title": "Fix email selection count and drawer visibility issues in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "ui",
+        "email",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update addresses two critical bugs: the incorrect display of selected user counts due to a race condition and the visibility issue of the preview drawer being obscured by the dialog. The solution involves updating the segment handling to ensure accurate counts and adjusting z-index values to ensure the drawer is properly displayed. Both issues were identified through backend verification, enhancing the reliability of the UI."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1767",
+      "title": "Fix local tool authorization matching in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "authorization",
+        "testing",
+        "localtools"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical bug where local tool authorization failed due to mismatched naming conventions. The fix ensures that the authorization checks now correctly match the `displayName` instead of the sanitized `name`, preventing silent failures and improving user experience. Comprehensive regression tests have been added to validate the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1476",
+      "title": "Enhance Scheduled Tasks with Cloud and Local Execution Options in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "scheduled-tasks",
+        "local-execution",
+        "cloud",
+        "i18n",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1476",
+      "summary": "This update introduces the ability to choose whether scheduled tasks run in the cloud or locally on the device. It includes a new form field for execution location, device identification for local tasks, and improved authorization for local tools. Additionally, it addresses existing type mismatches and enhances internationalization support with new keys for multiple languages."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1764",
       "title": "Fix(aichat2): 流式对话中途落库，滚动部署不再丢整轮会话 in Platform Service 🐛",
       "tags": [
