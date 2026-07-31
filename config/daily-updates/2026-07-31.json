@@ -3,6 +3,84 @@
   "date": "2026-07-31",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1228",
+      "title": "Optimize Email Health Checks for Faster Campaigns in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "performance",
+        "email",
+        "health-check",
+        "testing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces caching for the console's health checks while ensuring that the email sending path always performs a fresh probe. This change addresses user feedback regarding delays in sending campaigns by reducing unnecessary wait times during health checks. Additionally, tests have been added to ensure the integrity of health checks and prevent false positives in failure scenarios."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1038",
+      "title": "Clean Up Disk Space for Smooth Deployments in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ci",
+        "deployment",
+        "cleanup",
+        "frontend",
+        "docker"
+      ],
+      "public": false,
+      "summary": "This update addresses deployment failures caused by insufficient disk space on the runner. By removing unnecessary pre-installed toolchains and cleaning up dangling images, we ensure that the build process can complete successfully. This change is crucial for unlocking the deployment of the latest code changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1784",
+      "title": "Fix attachment handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "aichat",
+        "platform",
+        "attachments",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where attachments were silently dropped when a message was sent alongside references. The `buildUserContent` function has been modified to ensure that references are processed correctly, allowing attachments to be recognized and utilized. All tests have passed successfully, confirming the fix's effectiveness."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1037",
+      "title": "Fix email delivery count and enhance recipient selection width in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "ui",
+        "frontend",
+        "email"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the email delivery count was incorrectly displayed as zero due to case sensitivity in the keys from the backend. Additionally, the width of the recipient selection section has been increased to utilize more screen space, improving the overall user experience while maintaining readability for email composition. These changes are aimed at providing accurate statistics and a more efficient interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1225",
+      "title": "Fix email campaign recipient stats for real-time accuracy in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "email",
+        "backend",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where the email campaign list displayed outdated recipient statistics due to reliance on a stored snapshot. The list interface now performs a live count of recipients, ensuring that the displayed data reflects the current state of campaigns. A new test has been added to validate this functionality, confirming that the interface returns accurate counts."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1782",
       "title": "Enhance OpenAI Worker to Accept Numeric Strings for Timestamps in Platform Service 🚀",
       "tags": [
