@@ -3,6 +3,298 @@
   "date": "2026-07-31",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1782",
+      "title": "Enhance OpenAI Worker to Accept Numeric Strings for Timestamps in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "openai",
+        "testing",
+        "timestamp"
+      ],
+      "public": false,
+      "summary": "This update allows the OpenAI worker to accept Unix timestamps serialized as strings, ensuring compatibility with ISO timestamps. A regression test has been added to validate the changes and prevent future issues. The modifications enhance the handling of timestamp data, improving overall stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#608",
+      "title": "Enhance Gemini and Grok CLIs with Advanced Chat Options in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "gemini",
+        "grok",
+        "json",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/608",
+      "summary": "This update introduces new advanced chat parameters to the `gemini` and `grok` CLIs, enhancing their functionality. Key additions include 15 new options for `gemini/chat.py` and 11 for `grok/chat.py`, allowing for more flexible and powerful chat interactions. A new `_json.py` helper module has also been added to streamline JSON handling in CLI options."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#490",
+      "title": "Enhance grok service_tier and fix sora version format in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "grok",
+        "sora",
+        "api",
+        "update",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/490",
+      "summary": "This update introduces the `service_tier` parameter to the `/grok/chat/completions` endpoint, allowing for more flexible service options. Additionally, it corrects the `version` field in the `/sora/videos` spec to ensure it sends a string instead of an integer. These changes improve compliance with the latest OpenAPI specifications and enhance functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#606",
+      "title": "Add DigitalHuman, DrawAI, and QRArt CLIs; fix async flag in Flux in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "digitalhuman",
+        "drawai",
+        "qrart",
+        "flux",
+        "async"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/606",
+      "summary": "This update introduces three new CLI packages—DigitalHuman, DrawAI, and QRArt—implementing APIs for video generation, headshot creation, and QR art generation respectively. Each package includes commands for generating content and managing tasks, following existing monorepo conventions. Additionally, the Flux CLI now supports the --async flag for generate and edit commands, aligning with the updated API specification. These enhancements expand CLI capabilities and improve asynchronous operation support."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#222",
+      "title": "Align /auth Timestamp with Workers in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "timestamp",
+        "gateway",
+        "api",
+        "bugfix",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update standardizes the `started_at` timestamp in the /auth endpoint to float epoch seconds, aligning it with the worker side changes. It ensures that the localization worker receives a correctly formatted timestamp, preventing silent data loss and billing discrepancies. The change maintains compatibility with existing parsing methods and requires no modifications to the Lua plugin."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1224",
+      "title": "Enhance Task Documentation with Timing Fields in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "backend",
+        "api",
+        "tasks",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update adds missing timing fields (`started_at`, `finished_at`, and `elapsed`) to 28 task documentation files, ensuring consistency with the existing field descriptions. The changes rectify previous omissions that could lead to confusion for users implementing the API. All updates have been validated for accuracy and consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1781",
+      "title": "Enhance Device Diagnostics for Model Clarity in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "diagnostics",
+        "model",
+        "error-handling",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of device error reporting by allowing the model to receive detailed failure causes instead of generic 'unknown_outcome' messages. Key changes include modifications to the `foldRelayResult` function to extract and relay the actual error details from the device. Additionally, outdated assertions have been updated to reflect current timeout constraints, ensuring better reliability in error handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1036",
+      "title": "Enhance Error Reporting for Cloud Diagnostics in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "error-handling",
+        "diagnostics",
+        "frontend",
+        "cloud",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `CommandFailure` class to improve error reporting by providing detailed diagnostic information when failures occur. Key changes include the ability to distinguish between multiple error states and enhancements to the relay mechanism to ensure accurate error transmission to the cloud. This will significantly aid in identifying the root causes of failures during operations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1035",
+      "title": "Disable Send Button When Email Switch is Off in Frontend Web 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "email",
+        "ui",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update ensures that the send button is disabled when the global email sending switch is turned off, preventing users from encountering error messages. Tooltips have been added to guide users on how to enable the sending feature. The changes enhance user experience by providing clearer feedback on the email sending status."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#488",
+      "title": "Exciting New Lip-Sync and Talking-Photo Tools in M C Ps 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "feature",
+        "tools",
+        "kling",
+        "lip-sync",
+        "talking-photo"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/488",
+      "summary": "This update introduces two powerful tools: `kling_lip_sync`, which synchronizes lip movements with audio or text-to-speech, and `kling_talking_photo`, which animates a portrait to speak using an audio clip. Key changes include new enums for lip-sync modes and audio types, as well as the addition of async methods for both tools. The tools are now registered and ready for use, enhancing the capabilities of the Kling MCP server."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1223",
+      "title": "Update Plugin Download Link and Add Edge Instructions in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "update",
+        "plugin",
+        "edge",
+        "installation"
+      ],
+      "public": false,
+      "summary": "The download link for the Ace Data Cloud browser plugin has been updated to a stable, automatically published URL, eliminating the need for future manual updates. Additionally, installation instructions for Edge have been added to ensure users have the correct guidance for both Chrome and Edge browsers. This change enhances the documentation's accuracy and usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1489",
+      "title": "Add Browser Extension Download Button in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "download",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1489",
+      "summary": "This update introduces a new button on the download page for users to easily download the browser extension for Chrome and Edge. The button links to a CDN-hosted zip file, ensuring users have direct access without needing to navigate through documentation. Additionally, minor style adjustments were made to improve mobile responsiveness."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1034",
+      "title": "Fix pricing display for clamped rules in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "pricing",
+        "frontend",
+        "tests",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where clamped pricing rules were incorrectly rendering raw JsonLogic in the price table. The fix ensures that only the relevant pricing information is displayed, improving readability and user experience. Additionally, new tests have been added to verify the correct display of these rules."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1222",
+      "title": "Enhance OpenAI Transcriptions Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "openai",
+        "api",
+        "backend",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update adds the missing documentation nodes for the OpenAI audio transcriptions API, ensuring visibility on the platform. It includes the creation of both API and integration documents, which were previously orphaned. The changes improve user access to the API and enhance the overall documentation experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1488",
+      "title": "Enhance Mobile Experience with Collapsible Bottom App Bar in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "mobile",
+        "ui",
+        "feature",
+        "bugfix",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1488",
+      "summary": "This update introduces a collapsible bottom app bar for mobile devices, reducing its height from 60px to a slim 22px handle. Users can now reclaim valuable screen space while maintaining access to navigation features, with the state persisted across sessions. Additionally, the PR includes fixes for three identified issues and translations for 18 languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#329",
+      "title": "Standardizing Task Timing Fields to Unix Timestamps in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "task-timing",
+        "unification",
+        "audit",
+        "system-reliability",
+        "index"
+      ],
+      "public": false,
+      "summary": "This update focuses on unifying the format of three task timing fields—`created_at`, `started_at`, and `finished_at`—to Unix floating-point seconds. The decision to retain `created_at` eliminates several risks related to pagination and task execution order, ensuring smoother operations across services. Additionally, extensive audits and adjustments have been made to address existing issues and improve overall system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1221",
+      "title": "Standardize Unix Timestamps Across API Docs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "api",
+        "bugfix",
+        "update",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update aligns the API documentation with the worker-side format by converting 87 schema declarations to use Unix floating-point seconds. Additionally, it fixes a bug from a previous PR that incorrectly declared timestamps as strings in 25 specs. Two previously undocumented endpoints have also been updated to include timing fields, ensuring consistency and clarity for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1778",
+      "title": "Standardize Timing Fields to Unix Float Seconds in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "ci",
+        "typescript",
+        "billing",
+        "timing"
+      ],
+      "public": false,
+      "summary": "This update unifies the `started_at` and `finished_at` fields to use float epoch seconds across the Platform Service, resolving inconsistencies in data formats. Additionally, it addresses three silent bugs related to timing checks and introduces a new CI job for TypeScript testing, ensuring better coverage and reliability. A critical billing bug was also fixed to prevent erroneous charges due to incorrect timestamp calculations."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#1033",
       "title": "Enhance Email Card Layout for Better Readability in Frontend Web 🚀",
       "tags": [
