@@ -3,6 +3,38 @@
   "date": "2026-07-31",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1033",
+      "title": "Enhance Email Card Layout for Better Readability in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "email",
+        "design",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update modifies the email marketing card layout by changing it from a single-line flex to a two-line grid. This adjustment allows for complete visibility of Chinese titles without line breaks or truncation, improving user experience. The card dimensions have been optimized, resulting in a more visually appealing design."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1032",
+      "title": "Automate CDN Uploads for Extensions in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "automation",
+        "cdn",
+        "extensions",
+        "frontend",
+        "workflow"
+      ],
+      "public": false,
+      "summary": "This update introduces a new workflow to automatically build and upload browser extension packages to the CDN upon merging changes to the main branch. It resolves the previous manual upload process and ensures that the latest version is always available at a stable URL, improving user access and documentation accuracy. Additionally, it includes version synchronization checks between manifest and package files to prevent discrepancies."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#604",
       "title": "New `transcribe` Command for Audio Transcriptions in Clis 🎤",
       "tags": [
