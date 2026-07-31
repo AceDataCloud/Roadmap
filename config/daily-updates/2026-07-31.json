@@ -3,6 +3,228 @@
   "date": "2026-07-31",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1217",
+      "title": "Enhance Liveness Probe for Agent Health Checks in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "healthcheck",
+        "kubernetes",
+        "backend",
+        "livenessprobe",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update modifies the liveness probe to utilize a deep health check endpoint, ensuring that the agent's actual status is monitored rather than just the gateway's port availability. The change aims to prevent prolonged undetected outages by allowing Kubernetes to accurately assess the agent's health. Additionally, the readiness probe remains unchanged to avoid unnecessary failures during brief service interruptions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#602",
+      "title": "Enhance task output with timestamps in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "enhancement",
+        "cli",
+        "output",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/602",
+      "summary": "This update adds `started_at` and `elapsed` fields to the task response output in the CLI, improving the visibility of task timing. The `print_task_result` function has been modified to display these new fields, while maintaining backward compatibility with the legacy `duration` key. Additionally, tests have been updated to ensure the new labels appear correctly in the output."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#484",
+      "title": "Exciting New Text-to-Speech Tool Added in M C Ps 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "text-to-speech",
+        "audio",
+        "openai",
+        "tools",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/484",
+      "summary": "We've introduced a new text-to-speech tool for the `/v1/audio/speech` endpoint, enhancing our audio capabilities. Key changes include the addition of new types for audio models and voices, a wrapper function for audio requests, and comprehensive documentation for usage. This tool allows users to convert text into spoken audio, returning base64-encoded audio data."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#203",
+      "title": "Fix golden build failures in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "build",
+        "workflow",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update addresses issues causing the golden build to fail during the final step. Key changes include improved health checks and adjustments to the API account assertions, ensuring that the system correctly handles responses from the agent and gateway. These modifications enhance the reliability of the build process, particularly for clean images."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1219",
+      "title": "Add OpenAI Speech Recognition API in Backend 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "api",
+        "openai",
+        "backend",
+        "speech-recognition"
+      ],
+      "public": false,
+      "summary": "This update introduces the `/v1/audio/transcriptions` endpoint for speech-to-text functionality, enabling the platform to process audio files using the whisper-1 model. Key changes include the addition of billing rules based on audio duration and comprehensive documentation updates. The implementation ensures compatibility with existing OpenAI SDKs, allowing seamless integration for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1775",
+      "title": "Introducing OpenAI-Compatible Speech Recognition in Platform Service 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "speech-recognition",
+        "openai",
+        "transcriptions",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update adds a new OpenAI-compatible endpoint for speech-to-text transcriptions, allowing for seamless audio processing. The implementation utilizes the whisper-1 model, ensuring accurate transcriptions in English and Chinese, with proper billing mechanisms in place. Additionally, the upload limit has been increased to 25MB to align with OpenAI's standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1218",
+      "title": "Update Connector Links for Accurate User Guidance in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "update",
+        "backend",
+        "links",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update fixes two outdated links in the installation guide for the AceDataCloud connector, directing users to the new connector page at studio.acedata.cloud. Previously, users were led to an old page, causing confusion and hindering the verification of plugin installation. The changes ensure users can easily access the correct platform for authorization."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1030",
+      "title": "Fix cookie fetching issue after connector migration in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "extension",
+        "cookies",
+        "release"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where cookie-based authentication for connectors failed after migrating to the new studio URL. The plugin's domain whitelist has been updated to include `studio.acedata.cloud`, ensuring proper injection of content scripts and successful cookie retrieval. All tests have passed, confirming the stability of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#330",
+      "title": "Connector Authorization Issues Across Native Platforms in Index 🚧",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "bugfix",
+        "native",
+        "authorization",
+        "research"
+      ],
+      "public": false,
+      "summary": "This PR documents the current state of connector authorization issues across Electron, Android, and iOS platforms, highlighting critical failures in functionality. Key findings reveal that all three platforms exhibit unique symptoms, such as silent failures and UI freezes, due to inadequate handling of `window.open()`. A comprehensive fix plan is outlined, leveraging existing infrastructure to address these issues without requiring changes to the AuthBackend."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1029",
+      "title": "Fix grid item overlap issue with min-width adjustments in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "css",
+        "frontend",
+        "bugfix",
+        "layout",
+        "grid"
+      ],
+      "public": false,
+      "summary": "This update addresses the persistent grid item overlap issue by explicitly setting min-width to 0 for specific elements. Additionally, it ensures that the el-table respects the maximum width constraints, preventing overflow. The changes have been validated online, showing significant improvements in layout stability across various screen sizes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1774",
+      "title": "Align Upload Timeout with Relay Limits in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "timeout",
+        "testing",
+        "upload"
+      ],
+      "public": false,
+      "summary": "This update modifies the upload timeout in the transfer manifest from 600 seconds to 120 seconds, aligning it with the relay's maximum timeout. A new test has been added to ensure that the upload command remains the longest timeout, preventing future regressions. This change addresses a critical issue where uploads were consistently failing due to timeout mismatches."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1772",
+      "title": "Documenting RAM and Timeout Requirements for 1-Minute Clips in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "docs",
+        "digitalhuman",
+        "performance",
+        "requirements"
+      ],
+      "public": false,
+      "summary": "This update solidifies the prerequisites for running one-minute digital human clips on a 3090 box, specifically requiring at least 24GB of system RAM and adjustments to the timeout ceiling. Key changes include modifications to the README to clarify these requirements, ensuring smoother operations and preventing out-of-memory errors during rendering. The successful validation of these settings has been documented, enhancing the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1484",
+      "title": "Streamline Mobile Controls for Coding Bridge in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "mobile",
+        "ui",
+        "bugfix",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1484",
+      "summary": "This update collapses secondary composer controls into a single toggle on mobile devices, keeping only the backend picker visible. The desktop layout remains unchanged, ensuring a consistent user experience across platforms. Additionally, a bug related to the visibility of the 'devices' button has been fixed, enhancing overall functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1483",
+      "title": "Refine working directory placement for better UX in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "ux",
+        "refactor",
+        "chat"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1483",
+      "summary": "The working directory entry has been moved below the input box to enhance visual coherence with the disclaimer. The style has been updated to a subtle text link, ensuring it does not distract from the main content. Additionally, tooltips now display the full path for improved clarity, while the functionality remains unchanged."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1482",
       "title": "Streamline Authorization Popup Behavior in Nexior 🚀",
       "tags": [
