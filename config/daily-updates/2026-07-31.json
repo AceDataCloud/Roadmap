@@ -3,6 +3,283 @@
   "date": "2026-07-31",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1482",
+      "title": "Streamline Authorization Popup Behavior in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "refactor",
+        "popup",
+        "authorization",
+        "user-experience",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1482",
+      "summary": "This update refactors the authorization popup for DCR connectors, ensuring it closes automatically upon completion, including for custom MCP servers. Key changes include removing unnecessary postMessage listeners and simplifying the return type to indicate completion. The new implementation enhances user experience by preventing the need for manual window closure and maintaining the state of the main application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#252",
+      "title": "Streamline Popup Closure for Connections in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "refactor",
+        "popup",
+        "connections",
+        "frontend",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update refactors the popup handling for connection flows, ensuring that all terminal states now automatically close the popup window. Key changes include the removal of unnecessary token parsing and the introduction of a dedicated exit function, enhancing user experience by preventing the popup from hanging. The modifications also ensure that SSO logins remain unaffected while improving overall flow consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#397",
+      "title": "Streamline Popup Handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "refactor",
+        "popup",
+        "backend",
+        "security",
+        "connections"
+      ],
+      "public": false,
+      "summary": "This update refactors the popup handling mechanism for DCR connections, eliminating unnecessary complexity by removing the postMessage signature checks. The new approach ensures that the main window can automatically close the popup based on its state without relying on cross-origin messaging. Key changes include the introduction of a new return URL recovery method and the deletion of outdated signature-related code."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#201",
+      "title": "Enhance Agent Health Check with Deep Endpoint in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "feature",
+        "healthcheck",
+        "gateway",
+        "monitoring",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `GET /api/health/deep` endpoint that forwards requests to the agent's health check, addressing a critical issue where the agent could be unreachable while the platform reported a healthy status. The change ensures that if the agent is down, a 503 error will be returned, allowing for better monitoring and response. Additionally, the existing shallow health check remains unchanged to prevent unnecessary disruptions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1477",
+      "title": "Optimize MCP Tool Schema Handling in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "optimization",
+        "mcp",
+        "desktop",
+        "efficiency",
+        "backward-compatibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1477",
+      "summary": "This update introduces a significant optimization by deferring local MCP tool schemas instead of sending them with every turn. The change reduces the data size dramatically, saving up to 96% in token usage during conversations. Additionally, it ensures backward compatibility with older workers while enhancing the overall efficiency of the desktop application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1773",
+      "title": "Enhance Suno Clip State Derivation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "suno",
+        "ttapi",
+        "update",
+        "tests",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update modifies the way the Suno clip state is derived, shifting from a job-wide progress to a per-clip basis. The changes ensure that each clip reflects its actual state based on its audio URL, improving data accuracy for clients. Additionally, new tests have been added to validate these changes and ensure alignment with expected behaviors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#202",
+      "title": "Enhance Debug Exec Safety in Wisdom 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "security",
+        "api",
+        "debugging"
+      ],
+      "public": false,
+      "summary": "This update introduces critical limits on the `/api/debug/exec` endpoint to prevent excessive resource usage that can crash devices. New constraints cap the submitted code at 64 KB and output at 256 KB, ensuring that no single diagnostic session can overwhelm the system. Additionally, stderr is now captured alongside stdout to mitigate risks of bypassing safeguards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#200",
+      "title": "Boosted Data Directory Discovery Speed in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "performance",
+        "optimization",
+        "testing",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update significantly reduces the time taken to locate the data directory during the initial login process. By prioritizing the use of glob for single account scenarios and implementing a time budget for handle scans, the preparation time has been cut down from several minutes to just milliseconds. The changes have been validated with comprehensive tests, ensuring reliability and performance improvements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#199",
+      "title": "Enhance Observability for Agent Status in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "observability",
+        "logging",
+        "diagnostics",
+        "gateway",
+        "health-check"
+      ],
+      "public": false,
+      "summary": "This update improves the observability of agent status by distinguishing between a dead agent and a slow one. Key changes include enhanced logging in the gateway and health check scripts, allowing for clearer diagnostics during outages. The modifications ensure that future issues can be quickly identified and addressed, improving overall system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#198",
+      "title": "Fix logging issue causing missing API logs in Wisdom 🛠️",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "logging",
+        "bugfix",
+        "api",
+        "wisdom",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical logging issue where the API logs were not being recorded for an entire day due to the use of `Tee-Object`, which buffers output until the pipeline ends. The script has been modified to use direct redirection, ensuring logs are captured in real-time. Additionally, a new logging setup has been implemented for the supervisor, gateway, and agent processes, allowing each to maintain its own log file."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1027",
+      "title": "Fix email layout issues and outdated messaging in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "ui",
+        "i18n",
+        "frontend",
+        "email"
+      ],
+      "public": false,
+      "summary": "This update addresses a layout overlap in the email recipient area, ensuring proper visibility across various screen sizes. Additionally, outdated messaging related to wave delivery processes has been removed, aligning the interface with the current workflow. The changes enhance user experience and clarity in email marketing functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1769",
+      "title": "Optimize Local MCP Tool Loading in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "optimization",
+        "mcp",
+        "performance",
+        "update",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces deferred loading for desktop local MCP tools, significantly reducing the data sent with each request. By only sending a summary of the tools instead of full schemas, we achieve a 96% reduction in token usage, enhancing performance and user experience. Key changes include modifications to the health endpoint and the introduction of new local MCP handling logic."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1028",
+      "title": "Enhance Clickable Containers in Snapshots in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "snapshot",
+        "testing",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where clickable containers were not appearing in truncated snapshots, causing the upload functionality to fail. By filtering out `InlineTextBox` nodes before reaching the node limit, we ensure that the clickable elements remain accessible. The changes have been thoroughly tested, passing all tests and ensuring a smoother user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1480",
+      "title": "Unify Sidebar and Page Layout for a Smoother Experience in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "layout",
+        "ui",
+        "bugfix",
+        "improvement",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1480",
+      "summary": "This update addresses multiple layout issues in the Studio console, including sidebar overflow and inconsistent panel borders. Key changes include establishing a single source of truth for sidebar width, implementing structural adjustments to prevent overflow, and utilizing global tokens for consistent styling. These improvements enhance the overall user experience and maintain visual integrity across various pages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1481",
+      "title": "Fix tray icon visibility issue in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "desktop",
+        "icon",
+        "macos",
+        "build"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1481",
+      "summary": "This update resolves critical issues with the tray icon not being included in the macOS app bundle, which previously resulted in an invisible menu bar icon. A new script generates the necessary tray images and ensures they are copied to the correct directory during the build process. This change enhances user experience by making the app's running status visible and accessible."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#600",
+      "title": "Exciting Updates: New Commands and Fixes in Clis 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "suno",
+        "hailuo",
+        "maestro",
+        "updates",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/600",
+      "summary": "This update introduces the new `inspo` command for the `suno` CLI, allowing users to generate music from audio seeds. Additionally, the `hailuo` model has been fixed to include `minimax-t2v` in its options. A brand new Maestro CLI has been added, providing a comprehensive tool for video generation and management. These enhancements improve functionality and user experience across the board."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#482",
+      "title": "Sync models and types with latest OpenAPI specs in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "sync",
+        "update",
+        "api",
+        "models",
+        "types"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/482",
+      "summary": "This update synchronizes four MCP servers with the latest AceDataCloud/Docs OpenAPI specifications. Key changes include the addition of new model variants in `flux`, `grok`, `maestro`, and `nanobanana`, along with updates to type definitions in `core/types.py`. These enhancements improve the functionality and consistency of the services, ensuring they align with the latest API standards."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#1026",
       "title": "Enable Global Sending Switch in Frontend Web 🚀",
       "tags": [
