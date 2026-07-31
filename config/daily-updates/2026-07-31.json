@@ -3,6 +3,170 @@
   "date": "2026-07-31",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#604",
+      "title": "New `transcribe` Command for Audio Transcriptions in Clis 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "feature",
+        "cli",
+        "openai",
+        "transcription",
+        "audio"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/604",
+      "summary": "This update introduces a new `transcribe` command that allows users to transcribe audio files using the OpenAI API. Key changes include the addition of a multipart request method and a new command that supports various options like language, model, and response format. This enhancement significantly improves the CLI's functionality for audio processing tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#486",
+      "title": "Add audio transcription tool with OpenAI integration in M C Ps 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "feature",
+        "openai",
+        "transcription",
+        "audio",
+        "tools"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/486",
+      "summary": "This update introduces the `openai_transcribe_audio` tool, enabling audio transcription via the new OpenAI endpoint. Key changes include new types for audio transcription models and response formats, along with a method for handling multipart file uploads. Comprehensive tests have been added to ensure functionality and error handling for the new feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1779",
+      "title": "Added glm-5.2 to VISIBLE_MODELS in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "update",
+        "models",
+        "openai",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update includes the addition of `glm-5.2` to the `VISIBLE_MODELS` list, ensuring that it is now recognized in the model directory. While this change does not affect existing clients using `glm-5.2`, it improves visibility for new clients checking model availability. Other identified issues related to upstream behavior will be addressed separately."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1220",
+      "title": "Enhance API Mapping for OpenAI Transcriptions in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "openai",
+        "transcriptions",
+        "backend",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update adds the OpenAI Audio Transcriptions API to the service API mapping, enhancing the documentation for developers. The change includes 15 new lines of code while ensuring that unrelated API entries are excluded, streamlining the mapping process. This focused addition improves the clarity and usability of the API documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1777",
+      "title": "Enhance Seedance Failover Routing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "failover",
+        "routing",
+        "seedance",
+        "bananarouter",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces a task-aware routing mechanism for Seedance submissions, allowing failed requests to be redirected to the Bananarouter instead of failing outright. Key changes include the addition of a new configuration and deployment for the failover router, ensuring that tasks can be re-dispatched without client-visible changes. The implementation aims to improve reliability and reduce timeout issues experienced by users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1776",
+      "title": "Enhance BananaRouter to Accept Dated Seedance Model ID in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "bananarouter",
+        "seedance",
+        "update",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update allows BananaRouter to accept the dated seedance model ID, resolving a model-id mismatch that previously caused all requests to fail validation. By mapping the dated ID to the listed ID only at the upstream boundary, the task record and client response will retain the original ID sent by callers. This change is expected to enable BananaRouter to handle approximately 50% of seedance traffic on the base 2.0 model, improving overall service reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1485",
+      "title": "Fix local task execution and enhance tray icon visibility in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "local",
+        "daemon",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1485",
+      "summary": "This update resolves a critical bug where local tasks were incorrectly routed through the cloud instead of the daemon, preventing access to local tools. Additionally, the tray icon has been redesigned for better visibility, ensuring it meets macOS menu bar standards. The changes improve user experience by providing clearer feedback and functionality for local task execution."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1486",
+      "title": "Transform Mobile Controls to Dialog in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "mobile",
+        "ui",
+        "dialog",
+        "settings",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1486",
+      "summary": "This update enhances the mobile user experience by replacing inline secondary composer controls with a dedicated settings dialog. The dialog features labeled rows for each control, improving clarity and usability. Desktop functionality remains unchanged, ensuring a seamless transition between devices."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1487",
+      "title": "Revamp Connector Authorization for Desktop, iOS, and Android in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "authorization",
+        "connectors",
+        "desktop",
+        "iOS",
+        "Android",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1487",
+      "summary": "This update introduces a unified authorization flow for connectors across desktop, iOS, and Android platforms, resolving issues where previous attempts resulted in silent failures or stuck screens. The new method ensures that the consent page opens in the appropriate browser for each platform, and the application refreshes correctly upon returning. Additionally, it includes improvements to error handling and internationalization support."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1031",
+      "title": "Fix email preview layout for audience selection in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "ui",
+        "email"
+      ],
+      "public": false,
+      "summary": "This update resolves the issue where the email preview was overlapping with the audience selection, causing the recipient table to be pushed out of view. By adjusting the layout to hide the preview during audience selection, the recipient table is now displayed correctly alongside the grouping options. The changes have been tested and verified for functionality and layout integrity."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#1217",
       "title": "Enhance Liveness Probe for Agent Health Checks in Backend 🚀",
       "tags": [
