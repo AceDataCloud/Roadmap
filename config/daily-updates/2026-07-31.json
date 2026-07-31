@@ -1,0 +1,148 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-07-31",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1764",
+      "title": "Fix(aichat2): 流式对话中途落库，滚动部署不再丢整轮会话 in Platform Service 🐛",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService"
+      ],
+      "public": false
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1473",
+      "title": "Enhance Console UI with Responsive Dialogs and Search Inputs in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "responsive",
+        "search",
+        "dialogs",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1473",
+      "summary": "This update improves the console's user interface by standardizing dialog widths to prevent overflow on tablet screens and aligning breakpoints to 767px. Additionally, the search inputs across various components have been replaced with `el-input` for a consistent look and feel, enhancing usability. The changes ensure a more cohesive experience across the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1765",
+      "title": "Enhance Task Management with New Tool in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "task-management",
+        "testing",
+        "aichat2"
+      ],
+      "public": false,
+      "summary": "This update introduces the `manage_todos` tool, allowing users to view a complete list of tasks during multi-step processes. By returning the full task list with each call, it ensures consistency and visibility, preventing issues with context loss. The implementation includes robust testing to validate functionality and handle various edge cases."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1472",
+      "title": "Enhance Local Tools with Directory-Level Authorization in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "authorization",
+        "local-tools",
+        "testing",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1472",
+      "summary": "This update introduces a new directory-level authorization tier, allowing users to grant permissions for specific tools within designated folders without repeated prompts. The implementation includes a new button in the authorization dialog and ensures strict boundary checks to prevent unintended access. Comprehensive tests have been added to validate the functionality across different operating systems."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1471",
+      "title": "Enhance Persistent Shell and Project Context in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "shell",
+        "project",
+        "testing",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1471",
+      "summary": "This update introduces a persistent shell for session management, allowing commands to retain their working directory, environment variables, and background processes across calls. Additionally, it implements a project context loading mechanism that ensures the correct project conventions are applied based on the working directory, enhancing overall usability and reliability. Comprehensive tests have been added to validate these features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1474",
+      "title": "Local Scheduled Tasks Daemon for Desktop in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "desktop",
+        "daemon",
+        "scheduling",
+        "security"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1474",
+      "summary": "This update introduces a local daemon for executing scheduled tasks directly from the main process, enhancing the desktop experience. Key features include a system tray for task management, automatic startup on login, and improved handling of credentials securely stored on disk. The implementation ensures that tasks run reliably even when the application window is closed, maintaining user convenience and system performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1766",
+      "title": "Enable local execution mode for scheduled tasks in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "scheduled-tasks",
+        "local-execution",
+        "client-tools",
+        "offline-handling",
+        "authorization",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a new execution mode for scheduled tasks, allowing them to run locally on the user's desktop instead of exclusively in the cloud. The architecture remains unchanged, but the task initiator shifts from user-triggered to a local daemon timer. Key features include a three-step device protocol for task retrieval, claiming, and finalization, improved client tool authorization, and enhanced handling of offline devices with skipped run records. Compatibility is maintained with zero migration impact on existing cloud tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1475",
+      "title": "Center Brand Logo and Enhance Dark Mode in Nexior 🌟",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "dark-mode",
+        "logo",
+        "layout",
+        "fix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1475",
+      "summary": "This update addresses three key issues on the share page header: the logo is now centered, the duplicate site title has been removed, and the logo is adapted for dark mode. The layout has been modified to ensure the logo remains visually appealing across different languages, while the logo's appearance in dark mode has been improved for better visibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1005",
+      "title": "Update TypeScript ESLint Parser to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "typescript",
+        "eslint",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update bumps the @typescript-eslint/parser from version 8.63.0 to 8.65.0. Key improvements include added warnings for TypeScript 7 detection and enhanced error handling for unsupported TypeScript versions. These changes aim to improve code quality and maintainability in the project."
+    }
+  ]
+}
