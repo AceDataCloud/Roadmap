@@ -3,6 +3,118 @@
   "date": "2026-07-31",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1026",
+      "title": "Enable Global Sending Switch in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "email",
+        "ui",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a global sending switch directly in the email configuration interface, addressing user concerns about its previous inaccessibility. Key changes include the addition of a switch card that requires a reason for toggling and backend confirmation for enabling sending. The readiness checklist now accurately reflects the global switch status, ensuring users are informed of the current sending capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1216",
+      "title": "Enhance Overview to Include Sending Pause Reason in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "email",
+        "api",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update modifies the `GET /admin/overview/` endpoint to return the reason for a paused sending state, allowing the console to provide clearer explanations. A new test has been added to ensure that the overview correctly reflects the reason when the sending is paused. This change improves transparency for users managing email marketing settings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1771",
+      "title": "Enhance error logging for invalid requests in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "logging",
+        "validation",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the error handling in the browser relay by specifying which field caused a request to be invalid. Now, when a request fails validation, the logs and response will include the field name and the type of constraint violated, making it easier to diagnose issues. This change aims to reduce the time spent troubleshooting by providing clearer feedback on validation errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1479",
+      "title": "Require Working Directory Selection Before Sending Messages on Desktop in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "chat",
+        "desktop",
+        "ui",
+        "settings"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1479",
+      "summary": "This update enforces that users must select a working directory before sending messages on the desktop version. The chat interface now disables the send button and shows a prompt for directory selection if none is chosen. Additionally, a new settings section allows users to change their working directory at any time, with immediate saving to ensure the chat page reflects the latest changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1768",
+      "title": "Fix counting of newly created rows in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "e2e",
+        "testing",
+        "mongodb",
+        "reporting"
+      ],
+      "public": false,
+      "summary": "This update addresses a bug where duplicate reports of skipped ticks incorrectly counted as new entries. By introducing a new function, `upsertRunReportingInsert`, the system now accurately distinguishes between newly created and existing rows. This change ensures that the reported counts reflect true data, preventing inflated metrics in logs and UI displays."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1770",
+      "title": "Enhance Project Directory Awareness in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "security",
+        "enhancement",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a new optional field, `working_directory`, to the request body, allowing the model to recognize the user's current project directory. The change ensures that relative paths are resolved based on this directory, enhancing user experience by eliminating guesswork. Additionally, security measures have been implemented to sanitize inputs and prevent potential injection attacks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1478",
+      "title": "Persist Working Directory in Nexior 🌟",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "local-tools",
+        "security",
+        "config",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1478",
+      "summary": "This update introduces a persistent working directory feature for local tools in Nexior, allowing the main process to retain the user's current project directory. Key changes include the addition of a `workingDir` field in `LocalConfig`, which streamlines interactions with shell and project tools without requiring repeated parameters. Additionally, security improvements ensure that the working directory is validated, preventing unauthorized access to user directories."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#1025",
       "title": "Fix zIndex Handling for Preview Drawer in Frontend Web 🎨",
       "tags": [
