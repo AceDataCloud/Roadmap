@@ -3,6 +3,70 @@
   "date": "2026-08-01",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1068",
+      "title": "Enhance Error Reporting for Server Failures in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "error-handling",
+        "frontend",
+        "updates",
+        "testing",
+        "improvements"
+      ],
+      "public": false,
+      "summary": "This update improves how server errors are reported in the frontend by re-querying the backend for specific error codes when a 'SERVER_FAILED' response is received. It ensures that the actual status code and relevant details are sent to the client, enhancing the clarity of error messages. Additionally, the version has been updated from 0.7.28 to 0.7.30, with new tests added to ensure functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1253",
+      "title": "Enhance Error Reporting for Browser Transfers in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "error-handling",
+        "logging",
+        "tests",
+        "backend",
+        "improvements"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `TransferRejected` exception to provide specific error codes for various permission failures during browser transfers. It improves logging and response clarity by ensuring that each rejection is documented with a detailed reason, addressing issues that previously resulted in ambiguous `SERVER_FAILED` errors. Additionally, tests have been updated to reflect these changes, resulting in improved test coverage and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1067",
+      "title": "Enhance stale_target distinction for better error handling in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "error-handling",
+        "frontend",
+        "updates",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of stale_target errors by differentiating between a dead ref and a session with no tabs. The change introduces a CommandFailure that includes the number of owned tabs and the session state, allowing for more precise error recovery. Additionally, outdated assertions in tests have been updated to align with the new error messaging structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1521",
+      "title": "Enhance iframe-login stability and prevent redirects in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "auth",
+        "iframe",
+        "redirect",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1521",
+      "summary": "This update addresses an issue where iframe-login sites were incorrectly falling back to full-page redirects due to site initialization delays. Key changes include modifying the `initializeSite` function to prevent unnecessary redirects and introducing a new method to check if the site has loaded. These adjustments ensure that users remain on the intended domain during login, enhancing the overall user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1520",
       "title": "Enhance chat report visibility on hover in Nexior 🎉",
       "tags": [
