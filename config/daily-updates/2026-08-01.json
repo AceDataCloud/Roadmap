@@ -3,6 +3,148 @@
   "date": "2026-08-01",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Wisdom#207",
+      "title": "Enhance CI Coverage for Login and Data Discovery Tests in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "ci",
+        "testing",
+        "bugfix",
+        "coverage"
+      ],
+      "public": false,
+      "summary": "This update integrates the previously excluded `test_db_dir_discovery.py` and the newly added `test_login_button_anchors.py` into the CI pipeline. By utilizing `importorskip`, these tests will safely skip on Windows environments, ensuring they run effectively on Ubuntu runners. This change addresses critical bugs that previously went undetected, improving overall test coverage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#206",
+      "title": "Fix login issues with account switching in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "login",
+        "account",
+        "automation",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update addresses two critical bugs affecting device login after account switching. The first bug prevented the system from recognizing the new account's database, causing a persistent error state. The second bug involved the login button not being detected due to mixed language labels, leading to failed login attempts. Both issues have been resolved, ensuring smoother user experience and device readiness."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1801",
+      "title": "Enhance Node Test Timeout and Caching in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "ci",
+        "node",
+        "timeout",
+        "caching",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update introduces a three-tier timeout system for the Node test job, addressing previous issues where tests hung for extended periods. Additionally, npm caching has been implemented to speed up dependency installation across multiple workers, significantly reducing overall job execution time. These changes aim to improve CI efficiency and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#205",
+      "title": "Enhance Snapshot Management in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "ci",
+        "snapshot",
+        "cleanup",
+        "azure",
+        "storage"
+      ],
+      "public": false,
+      "summary": "This update introduces a new pruning step to the golden-build workflow, ensuring that only the latest N snapshots are retained while preserving the promoted snapshot. It also addresses the cleanup of orphaned builder PVCs from failed runs. The changes significantly reduce storage costs, freeing up approximately 1120 GB and saving about $100 monthly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1505",
+      "title": "Fix versioning issue and restore publish flow in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "release",
+        "workflow",
+        "versioning"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1505",
+      "summary": "This update raises the version baseline to 3.350.0, resolving a deadlock in the publish workflow that caused repeated failures. By adjusting the baseline, the versioning will now automatically increment, allowing for successful daily releases on Android and iOS. The change ensures that the accumulated change files will be processed in the next successful publish."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1057",
+      "title": "Fix same-origin iframe visibility issue in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "accessibility",
+        "frontend",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where elements within same-origin iframes were not visible in the accessibility snapshot. By implementing a new method to retrieve frame trees and their content, the extension now correctly captures and displays these elements. The changes have been validated with extensive testing, ensuring all relevant tests pass successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#333",
+      "title": "Refined UX Guidelines and Studio Implementation in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "ux",
+        "tiktok",
+        "guidelines",
+        "studio",
+        "implementation"
+      ],
+      "public": false,
+      "summary": "This update corrects multiple inaccuracies in the UX requirements for TikTok Direct Post, ensuring compliance with official documentation. Key changes include clarifying the Music Usage statement and correcting field name discrepancies, along with outlining a new Studio implementation plan. These adjustments aim to enhance the user experience and ensure adherence to TikTok's guidelines."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1504",
+      "title": "Fix auto-review submission issue in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "android",
+        "fix",
+        "workflow",
+        "playstore"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1504",
+      "summary": "This update addresses a critical issue where the app could not be submitted for review due to a policy rejection status. By adding the `changesNotSentForReview` parameter to the upload and commit processes, the app will now be saved as a draft, allowing for manual submission through the Play Console. This change ensures that uploads are not lost during the review process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1056",
+      "title": "Fix coordinate mismatch in hit testing for Chrome in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "testing",
+        "coordinates",
+        "chrome"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where hit testing coordinates were mismatched between viewport and document coordinates, causing failures in click detection after page scrolling. The fix involves adjusting the coordinate calculations to ensure accurate hit testing, particularly for elements that require scrolling to access. The version has been updated from 0.7.26 to 0.7.27, with extensive tests confirming the effectiveness of the changes."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1799",
       "title": "Enhance system prompts and fix dialect regression in Platform Service 🚀",
       "tags": [
