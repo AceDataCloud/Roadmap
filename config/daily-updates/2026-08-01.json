@@ -3,6 +3,148 @@
   "date": "2026-08-01",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#256",
+      "title": "Clean Up Unused Connection Keys in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "i18n",
+        "cleanup",
+        "localization",
+        "frontend",
+        "maintenance"
+      ],
+      "public": false,
+      "summary": "This update removes 88 unused connection keys from the i18n namespace, streamlining the localization process. The keys were identified as remnants from the connector management page, which has been relocated. All changes have been validated across 18 languages, ensuring consistency and accuracy in the remaining keys."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1058",
+      "title": "Enhance Domain Management with Custom API Support in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "api",
+        "domains",
+        "ux",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature allowing users to bind their own API domains within the Domains tab, now split into 'Page Domains' and 'API Domains' for clarity. Key changes include the addition of a copyable curl command for active API domains and a new `getApiHost()` function that securely displays the backend-derived active API host. The update also improves user experience with a copy button for CNAME records and ensures internationalization support across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#223",
+      "title": "Enhance API Domain Support with Caddy Proxy in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "api",
+        "caddy",
+        "gateway",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces a new Caddy API proxy to handle custom API domain requests for tenants. Key changes include the implementation of CORS handling and a dedicated configuration for API domains, ensuring that only registered API hostnames receive certificates. The deployment requires careful validation of internal DNS stability to prevent service disruptions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#401",
+      "title": "Enhance OAuth Return Target Validation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "backend",
+        "api",
+        "validation",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a critical fix to the OAuth return URL validation by excluding API domains from being considered valid return targets. The changes ensure that only page domains are allowed, preventing login redirects to API gateways, which could lead to dead ends. New tests have been added to verify the correct behavior of the updated filtering logic."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1246",
+      "title": "Enhance SiteDomain with Kind Field for API Separation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "api",
+        "domain",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `kind` field to the `SiteDomain` model, allowing differentiation between Page and API domains. The change ensures that API domains are properly isolated from Page domains, preventing potential conflicts in CNAME resolution and certificate requests. Additionally, the implementation includes necessary adjustments in various components to maintain system integrity and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1247",
+      "title": "Extend browser resource token lifespan for smoother uploads in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "backend",
+        "upload",
+        "token"
+      ],
+      "public": false,
+      "summary": "This update increases the browser resource token expiration time from 5 minutes to 30 minutes, addressing issues where uploads were failing due to token expiration during lengthy processes. The change is a temporary fix to improve user experience while a more permanent solution is being developed. Related adjustments have also been made in the PlatformService to ensure consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1802",
+      "title": "Update TTL from 300s to 1800s in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "docs",
+        "update",
+        "ttl",
+        "aichat2"
+      ],
+      "public": false,
+      "summary": "This update corrects the documentation regarding the time-to-live (TTL) for staged receipts, changing it from 300 seconds to 1800 seconds. The change is purely a documentation fix with no impact on functionality, ensuring clarity for future reference. All tests have passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#255",
+      "title": "Streamlined AuthFrontend by Redirecting to Studio in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "cleanup",
+        "frontend",
+        "refactor",
+        "oauth",
+        "studio"
+      ],
+      "public": false,
+      "summary": "The management interfaces for connectors and skills have been migrated to Studio, leading to the removal of redundant components in AuthFrontend. Key files and localization resources related to skills have been deleted, while essential OAuth-related paths remain intact to ensure a smooth user experience. This cleanup reduces code complexity and enhances maintainability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#334",
+      "title": "Introducing Action Confirmation Framework in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "feature",
+        "ui",
+        "tiktok",
+        "confirmation",
+        "framework"
+      ],
+      "public": false,
+      "summary": "This update introduces a new Action Confirmation Framework designed to provide a structured user experience before executing irreversible actions, such as posting on TikTok. The framework ensures that users receive a clear confirmation prompt, enhancing safety and usability. Key changes include the addition of a dynamic content area based on action type and the removal of outdated code that no longer serves a purpose."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#207",
       "title": "Enhance CI Coverage for Login and Data Discovery Tests in Wisdom 🚀",
       "tags": [
