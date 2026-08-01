@@ -3,6 +3,68 @@
   "date": "2026-08-01",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1063",
+      "title": "Streamline Deployment Docs Access in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "documentation",
+        "ui",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update removes the documentation link from the deployment management header and eliminates the unused `serviceDocUrl` computed property. The standalone API documentation tab remains unchanged, enhancing the user experience by providing a dedicated documentation area. Validation steps confirm that all references to the removed elements have been successfully eliminated."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1807",
+      "title": "Enhance Claude Cache Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "cache",
+        "performance",
+        "github-proxy"
+      ],
+      "public": false,
+      "summary": "This update addresses the cache usage semantics for Claude Code 2.1.220, ensuring that input, cache-read, and cache-creation tokens are preserved separately. Key modifications include adjustments in the canonical usage calculations and the emission of non-overlapping usage data for both streaming and non-streaming responses. The changes improve accuracy in billing and enhance the overall functionality of the GitHub proxy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1062",
+      "title": "Embed Discord API Docs for Deployment Management in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "docs",
+        "deployment",
+        "discord",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces embedded Discord API documentation for any Deployment service that has API definitions. The legacy external guide link will be hidden when embedded docs are available, while maintaining the existing WeChat deployment behavior. This change enhances user experience by providing direct access to relevant documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1250",
+      "title": "Enhance Discord API Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "api",
+        "discord",
+        "backend",
+        "openapi"
+      ],
+      "public": false,
+      "summary": "This update introduces comprehensive API documentation for all 14 Discord proxy REST operations, enhancing the deployment-service API rows. Localized OpenAPI definitions have been generated for the management docs tab, along with the addition of parity tests for routes, migrations, and translations. This improvement ensures that the Discord deployment now has dedicated API documentation, replacing the previous generic fallback."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1510",
       "title": "Revamp Digital Human Result Card with Enhanced Features in Nexior 🚀",
       "tags": [
