@@ -4,6 +4,48 @@
   "subtitle": "On-chain buyback transactions — transparent, verifiable, and linked to Solscan.",
   "transactions": [
     {
+      "tx_hash": "55uv7PGd2v5Sm38Vdx3tQQzwAKymWzzG4xA97J9UPMPtmcpNoi3SQa9tTEvNKoB2bY88GsF4HaYjyMwnGrvLoxEQ",
+      "occurred_at": "2026-08-01T17:11:16Z",
+      "amount_usd": 800.09,
+      "ace_bought": 3002287.77981,
+      "pair": "USDC → ACE",
+      "venue": "OKX: DEX Router",
+      "source": "Revenue",
+      "period": "2026-08-01",
+      "from_label": "Buyback Wallet",
+      "from_address": "6hVavSsYRaNk86UbNZa6V4JfSwqkRGk9HgYZqKNsdU1w",
+      "note": "Revenue buyback — routed 800.088513 USDC → USD1 → WSOL → 3,002,287.77981 ACE via the OKX DEX aggregator (AlphaQ + BisonFi + Pump.fun AMM + Raydium CLMM), including router fees."
+    },
+    {
+      "tx_hash": "3ALcrSfE1WZJQaaMzh4kD1zwKfGo1RxCszPQxbcLSseasy5xS96rgRURdZgGv1mWguzw21sfAxecfPgsaVeRrAzF",
+      "occurred_at": "2026-08-01T17:03:34Z",
+      "amount_usd": 2896.24,
+      "amount_sol": 20,
+      "ace_bought": 0,
+      "pair": "ACE + WSOL → LP Token",
+      "venue": "Pump.fun AMM",
+      "source": "Revenue",
+      "period": "2026-08-01",
+      "from_label": "Buyback Wallet",
+      "from_address": "6hVavSsYRaNk86UbNZa6V4JfSwqkRGk9HgYZqKNsdU1w",
+      "note": "Revenue LP add — deposited 5,450,593.263631 ACE (~$1,448.12) + 20 WSOL (~$1,448.12) into the Pump.fun AMM ACE-WSOL pool and minted 292.574752702 LP tokens."
+    },
+    {
+      "tx_hash": "4ecFBpXc5ytT76q9gz1HfaLYdgkMXP2csxqnSjWHQKmcwdHoirLoVmDRkmgUQhm5uwBhGHynrppM74xwXYujfHzD",
+      "occurred_at": "2026-08-01T16:53:14Z",
+      "amount_usd": 220.08,
+      "amount_sol": 3.026756339,
+      "ace_bought": 822797.636461,
+      "pair": "WSOL → ACE",
+      "venue": "OKX: DEX Router",
+      "source": "Creator Fees",
+      "source_percentage": 25,
+      "period": "2026-08-01",
+      "from_label": "Buyback Wallet",
+      "from_address": "6hVavSsYRaNk86UbNZa6V4JfSwqkRGk9HgYZqKNsdU1w",
+      "note": "Creator fee allocation — 25% of the rolling 30-day Creator Fees total (~$222.03). Routed 3.026756339 WSOL (~$220.08) → 822,797.636461 ACE via the OKX DEX aggregator (Pump.fun AMM + Raydium CLMM), plus a 0.025947986 SOL (~$1.88) router fee."
+    },
+    {
       "tx_hash": "vdwLn5rAe6gqrP1YoMHk1RwYEenZCmPZfd81K9GV6A7dNCZ5TGrkSEA2AeWYnbeL6ozTUjsaEfvGwzw7nFrL76A",
       "occurred_at": "2026-07-14T17:16:11Z",
       "amount_usd": 26.78,
