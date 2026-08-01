@@ -3,6 +3,603 @@
   "date": "2026-08-01",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1235",
+      "title": "Documented Backfill Script for Legacy Deployments in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backfill",
+        "script",
+        "billing",
+        "legacy",
+        "deployments"
+      ],
+      "public": false,
+      "summary": "This update documents a backfill script that was executed to mark legacy unsubscribed deployments as expired. The script addressed 14 applications across 9 users that had been running unpaid since February 2026, ensuring no paid orders were affected. The changes include a new script file that allows for safe and controlled backfilling of deployment statuses."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1242",
+      "title": "Retiring old spelling and cleaning up orphaned applications in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cleanup",
+        "deployment",
+        "retirement",
+        "backend",
+        "maintenance"
+      ],
+      "public": false,
+      "summary": "This update officially retires the `aks_appliance` spelling, as all relevant services have migrated to `k8s_appliance`. Additionally, a new script has been implemented to clean up 12 orphaned deployments that no longer exist, ensuring a more efficient environment. All tests have passed successfully, confirming the stability of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1239",
+      "title": "Enhance Discord Bot Seeding with Chart Version Control in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "discord",
+        "seeding",
+        "backend",
+        "chart"
+      ],
+      "public": false,
+      "summary": "This update modifies the Discord bot seeding script to allow explicit chart version specification, addressing issues with hardcoded constants that could lead to service regressions. New flags have been added for better control, ensuring that users can pin specific chart versions while preventing conflicts. The default chart version is now set to 0.1.6, with documentation updates to guide future users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1796",
+      "title": "Fix discordbot member listing issue in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "discordbot",
+        "api",
+        "errorhandling",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical bug in the discordbot where the `list_members` function incorrectly called an API that does not exist in the discord.py-self library. The fix replaces the erroneous `fetch_members` call with the appropriate `chunk()` method, ensuring that member lists are retrieved correctly. Additionally, structured error handling has been implemented to prevent unhandled exceptions from escaping as bare 500 errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1499",
+      "title": "Refine tray icon size from 18pt to 16pt in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "icon",
+        "design",
+        "update",
+        "visual",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1499",
+      "summary": "This update adjusts the tray icon size from 18pt to 16pt to better align with visual expectations. The change reduces the canvas dimensions while maintaining clarity and visual weight. The updated icon is now slightly smaller than neighboring icons, ensuring a balanced appearance in the menu bar."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1241",
+      "title": "Fix tenant status reporting during redeploy in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "deployment",
+        "k8s",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where tenant deployments were incorrectly reported as 'stopped' during the redeployment process. The root cause was identified as a temporary state during the 'Recreate' strategy rollout, where the replicas count briefly dropped to zero. The fix ensures that the status reflects 'deploying' instead of 'stopped' during this transitional phase, improving user experience and accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1051",
+      "title": "Enhance error reporting for transfer failures in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "error-handling",
+        "frontend",
+        "updates",
+        "testing",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update improves the error handling for transfer failures by including detailed messages from the backend instead of just status codes. It addresses issues with three separate validators returning 400 errors, allowing for better debugging. Additionally, a regression caused by a previous implementation has been fixed, ensuring that state is preserved during error handling. All tests are passing, confirming the stability of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1498",
+      "title": "Boost upload limit to 300MB and fix hang issue in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "upload",
+        "nginx",
+        "fix",
+        "performance",
+        "backend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1498",
+      "summary": "This update raises the `client_max_body_size` in Nginx from 110MB to 300MB, addressing issues where uploads exceeding the previous limit caused the system to hang. The user-facing upload limit remains at 100MB, ensuring a clean JSON 413 response for oversized files. Key changes include modifications to `nginx.conf` and `uploadSize.ts` to clarify upload size constraints."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1049",
+      "title": "Boost upload limits to prevent hang-ups in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "upload",
+        "nginx",
+        "frontend",
+        "bugfix",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update raises the `client_max_body_size` from 110m to 300m to eliminate upload failures caused by exceeding the limit. The change ensures that large uploads are processed correctly, preventing the browser from hanging and returning a clean JSON 413 error instead. The user-facing limit remains at 100MB, maintaining consistency with backend constraints."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1240",
+      "title": "Update upload limit comments for clarity in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "backend",
+        "upload",
+        "comments",
+        "stability"
+      ],
+      "public": false,
+      "summary": "This update modifies the comments related to the `COS_MAX_UPLOAD_BYTES` constant to reflect the new ingress proxy-body-size limit of 300MB. It emphasizes that the upload limit should not be set to meet this ceiling to avoid potential errors during file uploads. The actual upload limit remains unchanged at 100MB, ensuring continued stability in user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1795",
+      "title": "Revamp GitHub Proxy for Compliance and Flexibility in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "architecture",
+        "compliance",
+        "testing",
+        "github-proxy"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive architectural overhaul of the GitHub proxy, enabling compliance with various model protocols while eliminating non-compliant payloads. Key changes include the implementation of a canonical response structure, which decouples inbound protocols from upstream dialects, ensuring all required fields are consistently rendered. Extensive testing confirms the robustness of these modifications, enhancing the overall functionality and reliability of the service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1497",
+      "title": "Unify Search Experience Across Skills and Connectors in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "ux",
+        "refactor",
+        "tests",
+        "cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1497",
+      "summary": "The search functionality on the Skills page has been updated to a permanent input field, aligning it with the Connector page's design. This change enhances user experience by eliminating inconsistencies between the two pages. Additionally, the '+' button styles have been standardized, and unnecessary code has been removed to streamline the interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#253",
+      "title": "Enhance Security Headers and Fix Directory Response Codes in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "security",
+        "nginx",
+        "frontend",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update improves security by adding necessary headers to the Nginx configuration, ensuring they are included in all relevant locations. Additionally, it resolves inconsistencies in directory response codes, changing 403 responses to 200 for certain paths. These changes enhance the overall security posture and user experience of the AuthFrontend application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1048",
+      "title": "Enhance Security Headers and Fix Directory Response in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "security",
+        "nginx",
+        "frontend",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update addresses critical security header issues in the Nginx configuration, ensuring that headers are properly included across all locations. Additionally, it resolves inconsistencies in directory responses, preventing access control bypasses. The changes enhance overall security and maintain the existing caching strategy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1496",
+      "title": "Enhance Security Headers and Fix Access Control in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "security",
+        "nginx",
+        "access-control",
+        "bugfix",
+        "configuration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1496",
+      "summary": "This update addresses critical security issues identified in the nginx configuration, including missing security headers and access control bypasses. A new configuration file for security headers has been introduced, ensuring that essential headers are sent across all routes. Additionally, the handling of the '/auth/' endpoint has been corrected to prevent unauthorized access, improving overall application security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1050",
+      "title": "Enhance Click Handling for Nested Elements in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "click",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update addresses click handling issues where clicks on descendant elements were incorrectly marked as 'covered'. The logic has been refined to allow clicks on child elements of clickable containers, improving user interaction. The version has been updated from 0.7.24 to 0.7.25, with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#798",
+      "title": "Streamline TikTok Integration by Removing Unapproved Scopes in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "tiktok",
+        "api",
+        "update",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/798",
+      "summary": "This update removes the use of unapproved Display API scopes for TikTok, which were causing authorization failures. Key changes include the removal of access to follower and video list data while retaining essential login fields. The Direct Post and draft upload functionalities remain unaffected, ensuring a smooth user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#399",
+      "title": "Fix TikTok Scope Issues for Seamless Login in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "fix",
+        "tiktok",
+        "backend",
+        "authorization",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where the TikTok authorization process failed due to invalid scopes. The fix involves removing three unapproved scopes related to the Display API, ensuring that only the approved scopes are used, which allows for successful login and posting functionalities. Additionally, new tests have been added to prevent similar issues in the future."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1494",
+      "title": "Enhance CI to Include Tray Icon Changes in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "desktop",
+        "testing",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1494",
+      "summary": "This update modifies the CI configuration to ensure that changes to tray icons trigger desktop end-to-end smoke tests. Two paths have been added to the `desktop.yml` workflow: one for the tray template images and another for the tray icon generation script. This enhancement addresses a critical gap that previously left tray icon modifications untested, ensuring a smoother user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1493",
+      "title": "Enhance Tray Icon Visibility in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "icon",
+        "macos",
+        "design",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1493",
+      "summary": "This update improves the tray icon's visibility by increasing its size to 18pt and enhancing its clarity. Key changes include adjusting the canvas size, optimizing the alpha transparency, and ensuring the icon fills the designated area properly. These modifications align the icon's appearance with neighboring applications, providing a more cohesive look in the macOS menu bar."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#622",
+      "title": "Introducing the Discord Bot CLI for Seamless Integration in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "discord",
+        "cli",
+        "api",
+        "feature",
+        "integration"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/622",
+      "summary": "This update introduces the new `discord-bot` CLI, enabling users to interact with the Discord Agent Proxy REST API. Key features include commands for health checks, messaging, and guild management, all designed for per-instance deployment. The CLI follows a structured monorepo format and enhances user experience with clear output and error handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1495",
+      "title": "Add In-App Reporting for AI-Generated Content in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "reporting",
+        "ui",
+        "compliance",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1495",
+      "summary": "This update introduces an in-app reporting feature for AI-generated content, addressing Google Play's compliance requirements. Two new components, ReportDialog and ReportButton, have been added to allow users to report offensive content directly within the app. The feature has been integrated across 23 locations, ensuring a seamless user experience while enhancing content moderation capabilities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#504",
+      "title": "Exciting New Discord Bot MCP Server in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "discord",
+        "mcp",
+        "automation",
+        "api",
+        "tools"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/504",
+      "summary": "This update introduces a new MCP server for the Discord Agent Proxy, enabling seamless integration with Discord through a variety of REST endpoints. Key features include tools for managing channels, sending messages, and more, all designed to enhance automation capabilities. The server is structured to support a self-hosted deployment, ensuring flexibility and user control."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1236",
+      "title": "Add AI Content Reporting API in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "api",
+        "backend",
+        "reporting",
+        "nexior"
+      ],
+      "public": false,
+      "summary": "This update introduces a new API for reporting AI-generated content, addressing Google Play's requirement for in-app user reporting features. Key changes include the creation of the `ContentReport` model, serializers for submission and retrieval, and endpoints for user submissions and admin review. This enhancement ensures compliance with content moderation policies and improves user engagement within the Nexior app."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1047",
+      "title": "Fix orphaned child nodes issue in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "testing",
+        "refactor"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical bug where deleting a parent node resulted in its children becoming orphaned, leading to incorrect page structure in the model. The solution involves recursively reassigning child nodes to their grandparent upon deletion, ensuring they remain connected. Comprehensive tests confirm that the issue is resolved, with all tests passing and no linting errors present."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#620",
+      "title": "Enhance CLI Outputs with Trace ID in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "enhancement",
+        "output",
+        "trace-id",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/620",
+      "summary": "This update improves the CLI outputs for Gemini, hCaptcha, and Suno by consistently displaying the `Trace ID` in task results. Key changes include modifications to the output handling in respective CLI files and the addition of test cases to ensure the correct rendering of `Trace ID`. This enhancement will aid in better tracking and debugging of tasks across the services."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1793",
+      "title": "Unified Router Implementation for Seedance Videos in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "router",
+        "seedance",
+        "failover",
+        "platform-service",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update transforms the router into a single entry point for `/seedance/videos`, replacing the previous model split handled by Kong. Key changes include the implementation of a failover mechanism and adjustments to the routing logic, ensuring that requests are directed to the appropriate channels based on model compatibility. The new configuration enhances reliability and simplifies the routing process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1046",
+      "title": "Enhance Discord Proxy Authentication in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "authentication",
+        "discord",
+        "frontend",
+        "deployment",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update improves the Discord Agent Proxy authentication by adding support for the `auth_token` field in the `IAccessUrl` interface. The `bearerToken()` function now prioritizes reading the token from `auth_token`, while still maintaining compatibility with the legacy `url_with_auth` format. This ensures a seamless transition for existing deployments without disrupting user access."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1234",
+      "title": "Enhance GHCR Secret Management in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "deployment",
+        "testing",
+        "backend",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces a self-healing mechanism for the GHCR pull secret in tenant namespaces, ensuring that deployments like the discord-bot can reliably access private images. The `_ensure_tls_secret` function has been generalized to `_ensure_shared_secret`, allowing for the refresh of pull secrets when necessary. Additionally, new tests have been added to validate the functionality and ensure that TLS secrets remain unaffected during updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1792",
+      "title": "Fix image pull issues and worker bugs in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "deployment",
+        "ci",
+        "mcp",
+        "discordbot"
+      ],
+      "public": false,
+      "summary": "This update resolves critical issues with the `discord-bot` deployment, including the addition of `imagePullSecrets` to ensure proper image retrieval from GHCR. Additionally, it addresses a bug in the worker that arose from an unbounded version constraint on the `mcp` package, which caused import failures. These changes enhance the stability and reliability of the service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#502",
+      "title": "Docs sync update verified for MCP services in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docs",
+        "sync",
+        "mcp",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/502",
+      "summary": "This update confirms that the documentation sync for various MCP services aligns with the latest OpenAPI changes. A thorough comparison revealed no functional drift, meaning no code modifications were necessary. Key elements such as model enums and task response metadata are already compatible with existing implementations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1238",
+      "title": "Complete Identity Fields in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "api",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update adds eight previously unlisted identity fields to the API documentation, ensuring that the spec now accurately reflects the actual response received by clients. Key fields like `trace_id`, `user_id`, and `actor_user_id` are now documented, enhancing clarity for technical support during issue resolution. The changes align the documentation with the actual API behavior, eliminating discrepancies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1492",
+      "title": "Streamlined Browser Device Management in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "bugfix",
+        "ui",
+        "i18n",
+        "console"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1492",
+      "summary": "The browser device management feature has been successfully integrated into the Studio console, aligning it with the previously migrated connectors and skills pages. Key updates include the addition of a new route for browser devices and a revamped interface that enhances user experience. Additionally, two existing bugs were fixed, improving the overall functionality of the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#793",
+      "title": "Enhance TikTok Direct Posting Capabilities in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "tiktok",
+        "features",
+        "updates",
+        "api",
+        "compliance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/793",
+      "summary": "This update introduces the ability to directly post videos to TikTok, enhancing user experience by allowing immediate publishing with customizable captions and visibility options. Key changes include the retention of draft paths, improved account data retrieval, and compliance with TikTok's stringent posting guidelines. The implementation has been verified with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#398",
+      "title": "Exciting TikTok Direct Post Feature Launched in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "tiktok",
+        "feature",
+        "backend",
+        "integration",
+        "update"
+      ],
+      "public": false,
+      "summary": "The TikTok integration now supports Direct Post functionality, allowing users to publish videos directly without opening the app. Additionally, new read scopes have been added to retrieve user profile and video statistics, enhancing the user experience. A minor fix was also implemented in the YAML configuration for better clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1045",
+      "title": "Fix node structure issue for accurate page rendering in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "rendering",
+        "structure",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where the `RootWebArea` was incorrectly rendering its children as siblings due to improper node slicing. The fix implements a breadth-first approach to ensure parent nodes are selected before their children, preserving the correct hierarchy. As a result, the page structure is now accurately represented, enhancing the user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#618",
+      "title": "Update OpenAI CLI for Transcription Features in Clis 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "transcription",
+        "cli",
+        "openai",
+        "update",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/618",
+      "summary": "This update aligns the OpenAI transcription CLI with the latest documentation specifications. Key changes include the addition of the `gpt-transcribe` model, support for multiple languages and keywords, and improved handling of non-JSON responses. The CLI and tests have been updated to ensure comprehensive coverage of these new features."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#1044",
       "title": "Fix screenshot issue when tabs are obscured in Frontend Web 🚀",
       "tags": [
