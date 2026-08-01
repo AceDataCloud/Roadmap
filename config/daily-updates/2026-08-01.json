@@ -3,6 +3,200 @@
   "date": "2026-08-01",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1520",
+      "title": "Enhance chat report visibility on hover in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "chat",
+        "ui",
+        "enhancement",
+        "accessibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1520",
+      "summary": "This update modifies the chat component to hide the report action until the full message row is hovered or focused. The report action remains visible on touch-only devices, improving user experience. Key changes include adjustments to the opacity and pointer events for the report entry."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1804",
+      "title": "Enhance User Action Confirmation Tool in Platform Service 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "aichat2",
+        "ui",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces the `request_action_confirmation` tool, which ensures users confirm irreversible actions like posting or transferring funds through a structured UI. It differentiates from the existing `request_user_consent` by prompting for confirmation before each action rather than just checking permissions. The implementation includes 13 new tests and maintains full test coverage with no regressions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#69",
+      "title": "Record August revenue liquidity addition in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "liquidity",
+        "revenue",
+        "amm",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/69",
+      "summary": "This update records the addition of 3,977,054.475684 ACE and 14.2 WSOL to the Pump.fun AMM pool on August 1. It includes the creation of 210.559931337 LP tokens and maintains consistency with existing LP history records. The total August revenue execution is approximately $5,736.79, nearing the 5% target."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1507",
+      "title": "Add Action Confirmation Card for Irreversible Actions in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "testing",
+        "i18n",
+        "tiktok"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1507",
+      "summary": "This update introduces the Action Confirmation Card to ensure users confirm irreversible actions, such as posting to TikTok, through a structured UI. The new component enhances user experience by providing a clear interface before executing actions, differentiating it from the existing Connector Consent Card. Additionally, the update includes extensive testing and internationalization support, ensuring a smooth rollout across various languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1519",
+      "title": "Enhance Site Language Selection in Nexior 🌍",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "i18n",
+        "localization",
+        "ui",
+        "settings",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1519",
+      "summary": "This update introduces a multi-select language editor in Site Settings, allowing site administrators to limit the interface languages available to visitors. The user language menu and SEO `hreflang` entries are now filtered based on the selected languages, with a fallback to English or the first enabled language if a saved locale is disabled. Additionally, all 18 localized UI strings have been added to enhance user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1252",
+      "title": "Enhance site language configuration in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "localization",
+        "backend",
+        "features",
+        "validation",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a new nullable `Site.supported_locales` field, allowing for configurable site languages. Key validations have been added to ensure locale codes are allowed, unique, and properly ordered. The changes enhance the flexibility of language support across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Roadmap#68",
+      "title": "Record August buyback and liquidity transactions in Roadmap 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Roadmap",
+        "buyback",
+        "liquidity",
+        "transactions",
+        "solana",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Roadmap/pull/68",
+      "summary": "This update records the August 1 allocation of Creator Fees, converting 3.026756339 WSOL into 822,797.636461 ACE. It also documents an $800.09 USDC buyback resulting in 3,002,287.77981 ACE and a liquidity addition of over 5.4 million ACE along with 20 WSOL. All transactions are linked to their respective on-chain Solscan entries for transparency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1517",
+      "title": "Enhance Task Previews and Speech Text Handling in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "bugfix",
+        "enhancement",
+        "kling",
+        "seedream"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1517",
+      "summary": "This update improves the spacing of task status and metadata cards across multiple components, ensuring a consistent user experience. Additionally, it enables the display of Kling speech text when historical talking-video tasks store user input in `request.text`. The Seedream component's previous workaround for spacing has been replaced with a unified content spacing rule."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1065",
+      "title": "Enhance Usage History to Last Seven Days in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "usage",
+        "improvement",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update modifies the usage history page to default to a rolling seven-day window, improving user experience by providing more relevant data at a glance. Existing URL ranges and shortcuts are preserved, ensuring a seamless transition for users. Validation has been completed with ESLint and TypeScript checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1066",
+      "title": "Enhance Docs Tab for Helm Deployments in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "deployment",
+        "frontend",
+        "documentation",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the documentation tab for Helm deployments by ensuring the correct token is displayed. The `applianceToken` now falls back to the exposure's bearer token when necessary, enhancing user experience. Additionally, WeChat-specific references have been removed, making the documentation more universal."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1515",
+      "title": "Enhance custom-domain routing for subsites in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "routing",
+        "subsite",
+        "testing",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1515",
+      "summary": "This update improves subsite management by allowing access through the first active custom domain. If no custom domain is available, it defaults to the standard origin. Additionally, focused regression tests have been added to ensure both routing paths function correctly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1812",
+      "title": "Fix caching for message streams in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "github-proxy",
+        "streaming",
+        "validation",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update addresses issues with the GitHub proxy's handling of cached message streams. It ensures that the correct input and cache usage metrics are emitted immediately during the message start phase, improving the accuracy of ApiUsage records. Validation tests confirm that the changes maintain compliance and performance standards."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#1063",
       "title": "Streamline Deployment Docs Access in Frontend Web 🚀",
       "tags": [
