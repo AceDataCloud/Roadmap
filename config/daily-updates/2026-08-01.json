@@ -3,6 +3,135 @@
   "date": "2026-08-01",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1510",
+      "title": "Revamp Digital Human Result Card with Enhanced Features in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "user-experience",
+        "digital-human",
+        "ui",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1510",
+      "summary": "This update finalizes the redesign of the digital human page by removing engine names and adding material previews along with remaining time indicators. Key improvements include enhanced success and failure states with additional tracking information, and a more informative waiting state that displays estimated time left for tasks. The changes aim to improve user experience and clarity during task processing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1508",
+      "title": "Revamped Digital Human Config Panel: Two-Step Input & Upload Preview in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "feature",
+        "refactor",
+        "improvement",
+        "ux"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1508",
+      "summary": "This update introduces a redesigned configuration panel for digital humans, simplifying the input process into two clear steps: 'Who Speaks' and 'What is Said'. Key improvements include the addition of upload previews, a new media input component, and enhanced user feedback mechanisms. The engine and resolution fields have been removed to streamline the experience, ensuring users can easily navigate the setup."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#624",
+      "title": "Enhance digitalhuman CLI Help with Latest API Updates in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "documentation",
+        "api",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/624",
+      "summary": "This update aligns the `digitalhuman` CLI help output with the latest Docs/OpenAPI contract for video generation. Key changes include clarifications on command options, marking certain flags as deprecated, and adding new examples to the documentation. Additionally, tests have been updated to ensure the help output reflects these changes accurately."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#506",
+      "title": "Launch New Digital Human MCP Server in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "mcp",
+        "digitalhuman",
+        "api",
+        "python",
+        "server"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/506",
+      "summary": "This update introduces the Digital Human MCP server, aligning it with the newly added `digitalhuman` service in the documentation. Key features include a standalone Python MCP server, API endpoints for video and voice processing, and structured polling for task management. The implementation ensures compatibility with OpenAPI specifications and enhances user experience with detailed task guidance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1506",
+      "title": "Fix token retrieval, favicon path, and upload generation issues in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "ui",
+        "favicon",
+        "upload",
+        "icon"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1506",
+      "summary": "This update addresses several key issues in the digital human page. It fixes the token retrieval for the 'View Code' popup, corrects the favicon path, and ensures that the upload generation button is functional during uploads. Additionally, a new service icon has been implemented to enhance visual consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1803",
+      "title": "Normalize Image and Video URLs for Digital Humans in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "api",
+        "testing",
+        "digitalhuman"
+      ],
+      "public": false,
+      "summary": "This update addresses the issue where photo-driven digital humans were returning a 400 error due to incorrect URL handling. The code now normalizes both `video_url` and `image_url`, ensuring that downstream processes always receive a valid `video_url`. Additionally, tests have been added to verify the correct behavior when both URLs are provided."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1249",
+      "title": "Fix pricing inconsistency in Backend 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "api",
+        "backend",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update addresses a pricing issue in the digital human video API where the 'heygem' engine was incorrectly charged at a lower rate while using the same compute as 'latentsync'. Key changes include modifying cost configurations to ensure a flat rate of 12 points for all engine types and updating OpenAPI specifications. New tests have been added to validate the pricing structure, ensuring consistency across requests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1003",
+      "title": "Update vue-tsc to 3.3.8 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "vue",
+        "typescript"
+      ],
+      "public": false,
+      "summary": "This update bumps the vue-tsc package from version 3.3.7 to 3.3.8, introducing support for vapor directives and upgrading TypeScript compatibility. Key files modified include package-lock.json and package.json, ensuring the latest features and improvements are integrated into the project."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#1248",
       "title": "Fix image download issue in Backend 🚀",
       "tags": [
