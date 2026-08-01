@@ -1,0 +1,521 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-08-01",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1044",
+      "title": "Fix screenshot issue when tabs are obscured in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "screenshot",
+        "frontend",
+        "testing",
+        "release"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where screenshots were returning empty when tabs were obscured or in the background. The solution implements a fallback to the rendering tree if the screenshot from the surface is empty, ensuring that valid screenshots are captured. The changes have been validated with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#616",
+      "title": "Webextrator CLI Sync Confirmed in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "sync",
+        "documentation",
+        "cli",
+        "verification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/616",
+      "summary": "This update confirms that the `webextrator` CLI is fully aligned with the latest upstream documentation. A thorough review of commands, request schemas, and endpoint paths showed no discrepancies, meaning no code changes were necessary. The CLI operations and options are already in sync with the documented features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#500",
+      "title": "Enhance OpenAI Transcription Features in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "openai",
+        "transcription",
+        "update",
+        "api",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/500",
+      "summary": "This update synchronizes the OpenAI transcription schema with the latest documentation, adding support for the `gpt-transcribe` model and new optional parameters like `languages` and `keywords`. It also improves multipart request handling to ensure correct serialization of repeated fields. Additionally, tool descriptions and tests have been updated to reflect these enhancements, ensuring a seamless integration for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#204",
+      "title": "Optimize Worker Startup Timing in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "optimization",
+        "performance",
+        "user-experience",
+        "windows",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update enhances the user experience by pre-warming the worker during the QR code scanning phase, significantly reducing the wait time from 21 seconds to approximately 5 seconds. Key changes include modifications to the lifecycle management and the addition of tests to ensure the worker starts efficiently without blocking user interaction. The implementation addresses the cold start issue on Windows, where the worker's startup time was previously a major bottleneck."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1233",
+      "title": "Introducing gpt-transcribe for Enhanced Transcription in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "transcription",
+        "gpt-transcribe",
+        "backend",
+        "cost",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update integrates the gpt-transcribe model for audio transcription, replacing the previous whisper-1 model. The new model offers a lower cost of $0.0059/min and improved accuracy for brand and person name recognition. Key changes include updated billing rules and documentation to reflect the new model's capabilities and pricing structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1791",
+      "title": "Switch to OpenAI Direct Connection for Transcriptions in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "transcription",
+        "openai",
+        "proxy",
+        "improvement",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update transitions the transcription service to use OpenAI's official direct connection, enhancing reliability and accuracy. The new setup utilizes the `gpt-transcribe` model, which offers improved recognition quality at a competitive price. Key changes include the implementation of a proxy for geo-restricted access and refined request handling for different models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1491",
+      "title": "Fix oversized file uploads to prevent freezing in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "upload",
+        "nginx",
+        "user-experience",
+        "frontend"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1491",
+      "summary": "This update addresses a critical issue where oversized file uploads would cause the progress bar to freeze, rendering the send button unusable. Key changes include implementing a unified upload size limit across components and enhancing error handling to ensure users receive immediate feedback when attempting to upload files exceeding the limit. Additionally, the Nginx configuration has been adjusted to support larger uploads, improving overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1041",
+      "title": "Boost Upload Limits and Timeout for Smoother Experience in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "upload",
+        "nginx",
+        "timeout",
+        "frontend",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update increases the upload body size limit from 30MB to 110MB, ensuring that large files can be processed without premature termination by nginx. Additionally, the timeout for file uploads has been extended to 300 seconds, allowing for smoother uploads of larger files. These changes aim to enhance user experience by preventing upload failures and improving reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1231",
+      "title": "Boost Upload Limit to 100MB with Clean Error Handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "upload",
+        "backend",
+        "error-handling",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update increases the upload limit from 28MB to 100MB, addressing issues where uploads would hang instead of returning an error when exceeding the limit. Key changes include modifications to the upload settings in the backend and updates to documentation. The improvements ensure that users receive a clean error response rather than experiencing a freeze during uploads."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1043",
+      "title": "Fix control banner blocking uploads in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "accessibility",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the control banner was obstructing the 'Upload Image' feature on the Xiaohongshu creator page. Key changes include setting `pointer-events` to none for the banner and adding `aria-hidden` to improve accessibility. All tests have passed successfully, ensuring a smoother user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1232",
+      "title": "Fix subscription access and cleanup logic in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "billing",
+        "cleanup",
+        "tests",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update removes the superuser bypass for deployment access, ensuring that all deployments adhere to subscription requirements. Additionally, it enhances the cleanup process for expired deployments across all workload providers, preventing unpaid instances from running indefinitely. New tests have been added to verify the functionality and ensure robust coverage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1790",
+      "title": "Enhance Task Security and Clean Up Responses in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "security",
+        "api",
+        "cleanup",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update improves the security of the `/tasks` endpoint by preventing internal orchestration data from being exposed to clients. Key changes include implementing a sanitization process for task documents and removing redundant timing information from responses. Additionally, new tests have been added to ensure that sensitive data is properly excluded while maintaining the integrity of customer-visible results."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1042",
+      "title": "Improve WeChat Logout Experience in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "wechat",
+        "frontend",
+        "ui",
+        "i18n",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update introduces a new 'signedOut' view for WeChat users who have been logged out, replacing the confusing spinner with a clear message. The change ensures users are informed about their logout status and can easily request a new QR code to log back in. Additionally, the update includes internationalization support for multiple languages, enhancing accessibility for a wider audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1789",
+      "title": "Enhance GitHub Proxy with Model Alias Support in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "proxy",
+        "model",
+        "alias",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a new model aliasing feature in the GitHub proxy, allowing the public model name `kimi-k3` to be seamlessly redirected to `claude-opus-4.8`. The implementation includes a new file for model aliases and ensures that users continue to see the original model name in responses. Additionally, the changes are covered by extensive tests to ensure reliability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#613",
+      "title": "Enhance transcribe command with streaming option in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "feature",
+        "transcription",
+        "cli",
+        "openai",
+        "streaming"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/613",
+      "summary": "This update introduces a new `--stream` option to the `transcribe` command, allowing users to receive partial transcription events. The change includes modifications to the command implementation and the addition of a test to ensure the new flag functions correctly. Users can now utilize this feature for more dynamic audio transcription experiences."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#611",
+      "title": "All CLI Tools Verified in Sync with Docs 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "docs",
+        "verification",
+        "openapi",
+        "sync"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/611",
+      "summary": "This update confirms that all 22 CLI subdirectories are aligned with the latest OpenAPI specifications following recent automated syncs in the upstream Docs. Key changes include updates to response fields and the addition of new endpoints, all of which have been verified without requiring code changes. All test suites passed successfully with zero lint errors, ensuring robust functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#495",
+      "title": "Enhance audio transcriptions with streaming support in M C Ps 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "audio",
+        "transcription",
+        "openai",
+        "streaming",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/495",
+      "summary": "This update introduces a new `stream` parameter to the audio transcriptions tool, allowing for streaming responses from the OpenAI API. The change is reflected in the `openai/tools/audio_tools.py` file, where the parameter is added to the `openai_transcribe_audio` function. Note that the `whisper-1` model does not support streaming and will return the complete result regardless of the parameter's value."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1490",
+      "title": "Revamped Browser Extension Card Layout in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "ux",
+        "enhancement",
+        "i18n",
+        "design"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1490",
+      "summary": "The browser extension card has been redesigned to span two columns, making it more prominent above the Android and iOS cards. This update enhances visibility and usability by providing clear installation instructions and a secondary button for accessing the installation guide. Additionally, internationalization keys have been added for better localization support."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1788",
+      "title": "Enhance Browser Failure Logging in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "logging",
+        "improvement",
+        "diagnostics",
+        "browser",
+        "error-handling"
+      ],
+      "public": false,
+      "summary": "This update improves the logging of browser command failures by including the specific cause of the failure alongside the browser state. Previously, logs only captured the state, making diagnosis difficult without accessing MongoDB. Now, the logs will provide clearer insights into issues, enhancing troubleshooting efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1230",
+      "title": "Enhance ASR Documentation with Stream Field Details in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "asr",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update adds a comprehensive explanation for the `stream` field in the ASR documentation, clarifying that it is not supported by the `whisper-1` model. Additionally, it specifies which official parameters are unsupported and outlines the conditions under which a 400 error will be returned. Compliance adjustments were also made to ensure customer-facing language is clear and appropriate."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1787",
+      "title": "Enhance Transcription API Error Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "api",
+        "error-handling",
+        "validation",
+        "transcription",
+        "openai"
+      ],
+      "public": false,
+      "summary": "This update aligns the transcription API with OpenAI's official specifications, addressing critical issues such as upstream error visibility and silent parameter drops. Key improvements include enhanced error reporting for 500 responses, validation for additional parameters, and a structured contract for request shapes. These changes ensure better debugging and compliance with OpenAI's standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1040",
+      "title": "Fix button click issues for better user experience in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "user-experience",
+        "diagnostics",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where buttons were incorrectly reported as 'possibly clicked', preventing the model from retrying actions. Key changes include improved error handling in the input engine and enhanced diagnostics for click failures. The version has been bumped to 0.7.20, ensuring users receive the latest fixes and improvements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#615",
+      "title": "Updated Unix Timestamps in WebExtractor Documentation in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "webextractor",
+        "api",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/615",
+      "summary": "This update modifies the `started_at` and `finished_at` fields in the WebExtractor documentation to use Unix floating-point seconds instead of ISO 8601 strings. The change aligns with the platform's timing fields and improves clarity in the examples provided. A total of 10 instances were updated across various documentation files."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#609",
+      "title": "Standardize Timestamp Formats in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "timestamp",
+        "fixtures",
+        "tests",
+        "clis",
+        "standardization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/609",
+      "summary": "This update aligns the timestamp formats in the conftest.py fixtures across four CLI tools: fish, maestro, openai, and webextrator. The changes replace ISO string representations with numerical values for 'started_at' and 'finished_at' fields, ensuring consistency with the platform's timing fields. All tests have passed successfully, confirming the integrity of the modifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#784",
+      "title": "Update Timestamp Format in Skills Documentation 📝",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "documentation",
+        "update",
+        "skills",
+        "timestamp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/784",
+      "summary": "The documentation for the turnstile skill has been updated to reflect the correct timestamp format. The 'started_at' and 'finished_at' fields in the response example have been changed from ISO strings to Unix floating-point seconds, aligning with the platform's timing fields. This change ensures consistency and accuracy in the documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#454",
+      "title": "Update fixture and spec snapshots for timestamp consistency in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "update",
+        "tests",
+        "specs",
+        "localization",
+        "timestamp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/454",
+      "summary": "This update aligns the `started_at` and `finished_at` fields to use Unix floating-point seconds across the platform, as per recent changes in the PlatformService. Key modifications were made in the fixture tests and three spec snapshots, ensuring that only the timing fields were updated without affecting localization. All tests passed successfully, confirming that there are no changes to the generated outputs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#491",
+      "title": "Update fixture timestamps to Unix format in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "update",
+        "fixture",
+        "timestamp",
+        "tests",
+        "consistency"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/491",
+      "summary": "This update aligns the 'started_at' and 'finished_at' fields in the fixture with the server's Unix timestamp format, enhancing consistency across the platform. Additionally, a minor correction was made to ensure that 'started_at' occurs before 'finished_at' by adjusting the timestamp by 12.34 seconds. All tests across fish, midjourney, openai, and webextrator have successfully passed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1785",
+      "title": "Update history fixture to use epoch seconds in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "testing",
+        "updates",
+        "epoch",
+        "fixtures"
+      ],
+      "public": false,
+      "summary": "The `_collect_history_fields()` function now outputs float epoch seconds, aligning the fixture with real outputs. This change ensures that the simulated data reflects accurate timestamps, enhancing the reliability of tests. Overall, 243 tests passed with 15 skipped."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1227",
+      "title": "Update render endpoint to use real timestamps in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "backend",
+        "webextrator",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update modifies the documentation for the `/webextrator/render` endpoint to replace string placeholders with actual numeric timestamps. The changes ensure that the `started_at` and `finished_at` fields are represented as numbers, preventing potential confusion for developers. Key adjustments were made in error response examples and asynchronous documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1229",
+      "title": "Enhance SMTP Bounce Handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "smtp",
+        "email",
+        "backend",
+        "fix",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a fix for handling hard bounces in SMTP by ensuring that rejected addresses are automatically added to the suppression list. Previously, these addresses were not being recorded, leading to unnecessary delivery attempts and wasted resources. The changes include modifications to the email worker service and new tests to validate the functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1226",
+      "title": "Fix visibility issues for speech recognition models in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "catalog",
+        "documentation",
+        "models",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update addresses multiple visibility issues for speech recognition models in the catalog and documentation. Key changes include correcting the model directory to include 'whisper-1', updating billing units for transcription models, and ensuring four speech documents are now visible in the documentation sidebar. These fixes enhance user experience by providing accurate information and access to all relevant models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1039",
+      "title": "Fix email status display for completed and cancelled campaigns in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "email",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where the status label for completed campaigns incorrectly displayed as '正在发送' (sending). Three new terminal states have been added: 'Completed', 'Cancelled', and 'Paused', ensuring accurate representation of campaign statuses. The progress bar remains unchanged, indicating the steps taken in the campaign process."
+    }
+  ]
+}
