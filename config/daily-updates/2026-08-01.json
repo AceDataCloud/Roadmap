@@ -3,6 +3,294 @@
   "date": "2026-08-01",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1799",
+      "title": "Enhance system prompts and fix dialect regression in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "bugfix",
+        "github-proxy",
+        "system-prompts",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature for per-model system prompts, allowing customized messages to be prepended to requests for specific models. Additionally, a regression issue from a previous update has been resolved, ensuring proper handling of dialect mismatches and client errors. The changes improve the overall functionality and user experience of the GitHub proxy layer."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#254",
+      "title": "Sunset of Browser Devices Page, Redirecting to Studio in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "redirect",
+        "cleanup",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "The old Browser Devices management page has been removed from AuthFrontend and users will now be redirected to the Studio interface. Key changes include the deletion of the BrowserDevices.vue component and updates to the user navigation. Existing bookmarks will redirect seamlessly to the new location, ensuring a smooth transition for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1053",
+      "title": "Update Connector and Skill Menus to Point to Studio in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "update",
+        "menu",
+        "studio",
+        "redirect"
+      ],
+      "public": false,
+      "summary": "The connector and skill menus have been updated to redirect users to the new Studio console, enhancing user experience. The previous links pointing to the old auth.acedata.cloud pages have been replaced with the new studio.acedata.cloud URLs. Additionally, the production value for BASE_URL_HUB has been updated to streamline access, while maintaining the OAuth application page unchanged."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1500",
+      "title": "Launch of Connectors, Skills, and Browser Devices in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "release",
+        "ui",
+        "testing",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1500",
+      "summary": "The connectors, skills, and browser devices pages are now fully available to all users, with the removal of the `connections-in-studio` feature flag. Key changes include the permanent display of sidebar entries and direct routing to Studio's own pages, enhancing user experience. Additionally, the timeout for electron tests has been increased to accommodate performance improvements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#331",
+      "title": "Custom API Domain Implementation Upgraded to Actionable Plan in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "api",
+        "custom-domain",
+        "implementation",
+        "security",
+        "index"
+      ],
+      "public": false,
+      "summary": "This update transitions the custom API domain plan from a pending status to an actionable implementation, allowing clients to make requests to their own API domains while maintaining global authentication and billing. Key changes include fixing index delays and clarifying the security model to prevent token misuse. The implementation will be rolled out in phases, ensuring a smooth transition for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1503",
+      "title": "Strip Comments from Built HTML for Security in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "security",
+        "build",
+        "html",
+        "comments",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1503",
+      "summary": "This update removes comments from built HTML files to prevent scanners from flagging them as potential information disclosures. Key changes include modifications to the build process that ensure only full-line comments are stripped, while preserving essential source comments and structural integrity. The build has been verified to function correctly with no errors reported."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1055",
+      "title": "Add Documentation Link to Manage Page in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "documentation",
+        "i18n",
+        "usability"
+      ],
+      "public": false,
+      "summary": "This update introduces a direct link to the documentation on the Manage page, ensuring users can access relevant resources regardless of the service provider. The implementation includes a new button that appears if a service has a documentation URL, enhancing usability for all deployment services. Additionally, internationalization support has been added for the new button across 12 languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#332",
+      "title": "Enhance TikTok Content Posting with UX Guidelines in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "tiktok",
+        "content-posting",
+        "ux-design",
+        "audit",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update introduces essential documentation for the TikTok Content Posting API, including audit application materials and UX design requirements. Key changes include the successful implementation of draft uploads, while direct posting remains blocked pending audit approval. The documentation aims to clarify the independent review processes and rectify current limitations in the user interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1054",
+      "title": "Enhance Testing with Real Extension in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "testing",
+        "playwright",
+        "bugfix",
+        "ci",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive testing approach using the actual built extension in a real Chrome environment, addressing six critical bugs that were previously undetected in mock tests. Key changes include the addition of a new Playwright configuration and tests that replicate real user interactions, ensuring a more robust validation process. The CI pipeline has also been updated to automatically run these tests, enhancing overall reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1448",
+      "title": "Clean Up Retired Estimate Skill in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cleanup",
+        "maintenance",
+        "tests",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update removes the orphaned estimate skill documentation and associated test assertions following the retirement of the cost-estimate feature. Legacy Mongo/billing guards for historical documents remain unchanged to ensure data integrity. The changes have been validated with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1786",
+      "title": "Enhance Timestamp Handling for Legacy Support in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "timestamp",
+        "legacy",
+        "deployment",
+        "testing",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update improves timestamp compatibility by decoding pre-migration ISO/BSON timestamps and preserving fractional `finished_at` values in digital-human tasks. It also introduces safeguards against stale deployment reruns, ensuring that only the latest production images are deployed. Comprehensive testing confirms that the changes have resolved previous issues without introducing new errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1794",
+      "title": "Fix channel leakage of upstream supplier info in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "security",
+        "bugfix",
+        "data-leak",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where the `channel` field was exposing upstream supplier names in the `/nano-banana/tasks` response. Along with `channel`, three additional router fields (`status`, `updated_at`, and `request_uri`) have been removed to prevent any internal data leakage. The fix has been validated through comprehensive testing to ensure compliance with internal security protocols."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1502",
+      "title": "Fix chat toolbar interaction issues in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "macos",
+        "ui",
+        "chat",
+        "toolbar"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1502",
+      "summary": "This update resolves an issue where the model selector in the chat toolbar on macOS was unresponsive due to being covered by an invisible drag area. The fix involves adding the `-webkit-app-region: no-drag` property to the affected elements, ensuring they can be clicked without interference. Additionally, misleading comments in the drag bar component have been corrected for clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1798",
+      "title": "Update Kimi-K3 to Use Claude Opus-5 in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "update",
+        "feature",
+        "deployment",
+        "configuration",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update changes the upstream mapping for `kimi-k3` from `claude-opus-4.8` to `claude-opus-5`, ensuring consistency in the deployment configuration. The `MODEL_ALIASES` is now explicitly defined in the manifest, allowing for easier model updates without code changes. Health checks confirm that the behavior remains consistent across both models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1501",
+      "title": "Align Report Icon with Action Buttons in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "bugfix",
+        "design",
+        "accessibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1501",
+      "summary": "This update addresses user feedback regarding the alignment and color of the report icon. The report icon is now vertically aligned with adjacent action buttons, and its color has been changed to match the secondary text color for consistency. Additionally, adjustments were made to ensure proper spacing in both result cards and chat bubbles."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1244",
+      "title": "Enhanced E2E Subscription Gate Validation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "e2e",
+        "testing",
+        "backend",
+        "validation",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces a new end-to-end validation script for subscription gate deployments, ensuring robust testing against real HTTP and cluster states. Key validations include confirming that non-subscribed applications are blocked, superuser bypasses are removed, and valid subscriptions remain active without unintended shutdowns. The script has successfully passed initial tests, reinforcing system integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1052",
+      "title": "Enhance Discord Management with Usage Docs Links in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "documentation",
+        "i18n",
+        "discord",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update adds links to usage documentation on the Discord management page, addressing user confusion about token usage and endpoint functionality. The links are integrated into both the deployed view and the setup wizard, ensuring users have easy access to necessary information. Internationalization support has been updated for multiple languages, enhancing accessibility for a broader audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1797",
+      "title": "Fix critical bugs in GitHub proxy handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "github-proxy",
+        "error-handling",
+        "testing",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update addresses three significant issues in the GitHub proxy: the `stop` sequence was previously discarded, illegal model requests returned incorrect error codes, and there was a misreporting of truncation for `claude-opus-5`. All fixes have been verified with extensive testing, ensuring proper error handling and accurate parameter forwarding. Additionally, the README has been updated to reflect known upstream limitations."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#1235",
       "title": "Documented Backfill Script for Legacy Deployments in Backend 🚀",
       "tags": [
