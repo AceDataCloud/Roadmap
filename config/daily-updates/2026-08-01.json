@@ -3,6 +3,53 @@
   "date": "2026-08-01",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1248",
+      "title": "Fix image download issue in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "backend",
+        "testing",
+        "image",
+        "download"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where users were unable to download staged images due to a mismatch in upload paths. The code now ensures that the necessary metadata is correctly handled, preventing the file picker from remaining open without any files. Additionally, new test cases have been added to verify that resources without metadata can still resolve successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#224",
+      "title": "Document LoadBalancerPassToTarget Requirement in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "documentation",
+        "deployment",
+        "gateway",
+        "kubernetes"
+      ],
+      "public": false,
+      "summary": "This update adds crucial documentation regarding the LoadBalancerPassToTarget setting for newly created CLBs. It highlights a common pitfall where public traffic is silently blocked due to this setting being false, despite all Kubernetes signals appearing healthy. The documentation aims to prevent future confusion and streamline the deployment process for similar proxies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#800",
+      "title": "Fix TikTok Direct Post Issue in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "bugfix",
+        "tiktok",
+        "userexperience",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/800",
+      "summary": "This update addresses a critical issue where the Direct Post feature was failing for all users due to an unapproved Content Posting API. The default path has now been changed to use the drafts/inbox, ensuring a smoother user experience. Additionally, the `FILE_UPLOAD` mode has been set as the default source, with necessary steps completed for successful uploads."
+    },
+    {
       "id": "gh:pr:AceDataCloud/AuthFrontend#256",
       "title": "Clean Up Unused Connection Keys in Frontend Web 🎉",
       "tags": [
