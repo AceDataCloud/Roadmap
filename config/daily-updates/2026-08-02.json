@@ -3,6 +3,38 @@
   "date": "2026-08-02",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1258",
+      "title": "Enhance Public Catalog with Service and Document Overrides in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "catalog",
+        "visibility",
+        "localization"
+      ],
+      "public": false,
+      "summary": "This update introduces functionality for `SiteServiceOverride` and `SiteDocumentOverride` to affect the public catalog, allowing white-label tenants to hide or rename services and documents. Key changes include a new utility for managing visibility, display titles, and sorting, ensuring that hidden items are excluded from list endpoints. Comprehensive tests have been added to validate these enhancements and ensure proper functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1074",
+      "title": "Enhance SSR for White-Label Branding in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "seo",
+        "ssr",
+        "branding",
+        "security",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces host-awareness for server-side rendering (SSR) in white-label sites, ensuring that each sub-site is indexed correctly by search engines. Key changes include modifications to the SEO URL handling, canonical tag generation, and site branding during SSR, which now dynamically adapts based on the request host. These improvements enhance security and prevent SEO poisoning by ensuring accurate branding and canonical links for each tenant."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#1073",
       "title": "Enhance Document Branding and API Host Visibility in Frontend Web 🚀",
       "tags": [
