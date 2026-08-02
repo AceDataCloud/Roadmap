@@ -3,6 +3,54 @@
   "date": "2026-08-02",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1257",
+      "title": "Enhance Security by Fixing DRF Router Issues in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "security",
+        "backend",
+        "drf",
+        "router",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical security issue where action-only viewsets were inadvertently exposing anonymous CRUD operations due to improper router configurations. By changing the inheritance from ModelViewSet to GenericViewSet, we ensure that only authorized actions are accessible, and new tests have been added to enforce this contract. The changes improve the overall security posture of the API endpoints."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1071",
+      "title": "Enhance Site Branding and Support Features in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "branding",
+        "frontend",
+        "features",
+        "i18n",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update introduces a new 'Branding and Support' tab, allowing site owners to customize their branding elements such as company name, copyright, and customer support channels. It also connects the customer support popover to the site's branding settings, ensuring that only the owner's channels are displayed. Additionally, the footer now correctly shows the owner's ICP filing number and copyright, enhancing compliance and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1256",
+      "title": "Enable Custom ICP Filing for Sub-sites in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "icp",
+        "branding",
+        "ci",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update allows sub-sites to declare their own ICP filing numbers, ensuring compliance with regulations in mainland China. A new `icp` key has been added to the `branding` whitelist, allowing site owners to display their unique filing numbers in the footer. Additionally, the `test_site_branding.py` has been integrated into the CI pipeline, enhancing testing coverage for branding functionalities."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#1072",
       "title": "Enhance White-Labeling: Prevent Internal Links in Frontend Web 🚀",
       "tags": [
