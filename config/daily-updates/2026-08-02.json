@@ -3,6 +3,37 @@
   "date": "2026-08-02",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#78",
+      "title": "Update Python Dependencies for Enhanced Performance in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "dependencies",
+        "update",
+        "python",
+        "x402"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/78",
+      "summary": "This PR updates several key Python dependencies, including `x402` from version 2.16.0 to 2.17.0, `tencentcloud-sdk-python` from 3.1.140 to 3.1.145, and `uvicorn` from 0.51.0 to 0.52.0. These updates bring performance improvements and new features, ensuring better compatibility and functionality within the x402 ecosystem."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1061",
+      "title": "Upgrade artifact upload action to version 7 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "update",
+        "actions"
+      ],
+      "public": false,
+      "summary": "This update bumps the actions/upload-artifact from version 4 to 7, introducing support for direct file uploads and upgrading the module to ESM. Key modifications were made in the CI and extension release workflows to utilize the new version. This change enhances the artifact upload process and ensures compatibility with the latest Node.js features."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1523",
       "title": "Fix chat components to render correctly in Nexior 🎉",
       "tags": [
