@@ -3,6 +3,101 @@
   "date": "2026-08-02",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1072",
+      "title": "Enhance White-Labeling: Prevent Internal Links in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "branding",
+        "white-label",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces a mechanism to ensure that white-label sites do not display links pointing to Ace Data Cloud's own resources. Key changes include the implementation of a centralized check to hide specific links and branding elements that could mislead users about ownership. The adjustments enhance the integrity of reseller sites by preventing any direct references to Ace Data Cloud's platforms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1070",
+      "title": "Revamp Site Detail Page with Underline Tabs in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "tabs",
+        "element-plus",
+        "navigation"
+      ],
+      "public": false,
+      "summary": "The site detail page has transitioned from a heavy `el-radio-group` button layout to a sleek Element Plus underline tab navigation. Each tab now serves purely as a navigation tool, with content displayed below to enhance performance and maintain a clean interface. This change improves user experience by allowing seamless tab sharing and navigation without cluttering the back stack."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1069",
+      "title": "Fix domain tab refresh issue and enhance DNS guidance in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "ui",
+        "dns",
+        "frontend",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where the Domains tab would display blank upon refresh, failing to provide necessary DNS configuration instructions. Key changes include enhancing the backend to ensure DNS guidance is consistently available, improving the UI styling for better readability, and implementing safeguards against missing IDs in the binding process. These improvements enhance user experience and ensure reliable domain setup instructions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#336",
+      "title": "Aligning White-Label Index Status with Main Branch in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "index",
+        "white-label",
+        "status",
+        "corrections",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update addresses discrepancies between the white-label index status and the actual state on the main branch. Key corrections include the closure of item 34, which was incorrectly marked as pending review, and several other items that have now been accurately reflected as merged or closed. Additionally, a new section has been added to track ongoing experience gaps revealed after the recent deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1254",
+      "title": "Fix Domains tab to show DNS instructions consistently in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "dns",
+        "serializer",
+        "testing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update resolves the issue where the Domains tab would appear blank after refreshing, failing to display DNS instructions. By elevating `dns_instructions` to a serializer field, it ensures that this information is consistently rendered across all read paths. Additionally, the CNAME target now dynamically resolves from the bound site, improving user experience and reducing the need for manual updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1524",
+      "title": "Fix language reset issue on refresh in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "i18n",
+        "testing",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1524",
+      "summary": "This update addresses a critical bug where the interface language reverted to English after a page refresh, despite user selection. The fix involves reading the LOCALE cookie directly during startup to ensure the user's language preference is maintained. Additionally, regression tests have been added to cover various scenarios, ensuring the functionality remains intact."
+    },
+    {
       "id": "gh:pr:AceDataCloud/FacilitatorX402#78",
       "title": "Update Python Dependencies for Enhanced Performance in x402 🚀",
       "tags": [
