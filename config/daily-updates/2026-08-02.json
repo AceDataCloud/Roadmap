@@ -3,6 +3,23 @@
   "date": "2026-08-02",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1523",
+      "title": "Fix chat components to render correctly in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "chat",
+        "element-plus",
+        "components",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1523",
+      "summary": "This update resolves a critical issue where the action confirmation card and TikTok publish forms were rendering without any interactive elements. By registering the necessary Element Plus components, all chat cards now display the appropriate inputs, selects, checkboxes, and buttons. A new test has been added to prevent similar issues in the future."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1522",
       "title": "Enhance Chat Card Styles and Functionality in Nexior 🎨",
       "tags": [
