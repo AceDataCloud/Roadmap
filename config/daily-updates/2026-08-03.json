@@ -3,6 +3,183 @@
   "date": "2026-08-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1083",
+      "title": "fix support page to show tenant contacts instead of ours in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "fix",
+        "frontend",
+        "support",
+        "seo",
+        "contacts"
+      ],
+      "public": false,
+      "summary": "This update corrects the support page to ensure that tenant users see their own contact information instead of our Discord invite and other channels. The changes include implementing `rebrandContent()` for the page body and adjusting the SEO URL to reflect the tenant's site. This prevents confusion for users landing on the support page and improves the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1265",
+      "title": "Fix sorting issue for pinned services in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "sorting",
+        "tests",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical bug where unpinned services were incorrectly sorted ahead of pinned ones due to a default value of 0. The fix introduces a new constant, UNPINNED_SORT_ORDER, ensuring that unconfigured rows sort after all pinned services. Two regression tests have been added to verify this behavior, enhancing the reliability of the sorting mechanism."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#626",
+      "title": "Enhance OpenAI Image Edits with Multiple Inputs in Clis 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "feature",
+        "cli",
+        "openai",
+        "images",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/626",
+      "summary": "This update allows the CLI to support multiple image URLs for the OpenAI image edit command, enhancing flexibility for users. The `--image-url` option is now repeatable, accommodating up to 16 URLs while maintaining support for single URL inputs. Additionally, validation has been added to reject requests exceeding the limit, ensuring robust functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#508",
+      "title": "Update OpenAI Image Edit Defaults in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "openai",
+        "image-editing",
+        "update",
+        "tests",
+        "default"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/508",
+      "summary": "This update modifies the OpenAI image-edit tool to set the default image size to 'auto' instead of '1024x1024', aligning with the latest OpenAPI specifications. Additionally, a focused regression test has been added to ensure the default request payload correctly includes 'size: \"auto\"'. These changes enhance the functionality and usability of the image-edit feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1266",
+      "title": "Update Documentation for Image Size Behavior in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "api",
+        "images",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update clarifies the behavior of the `size: auto` parameter in the image generation and editing APIs. Key changes include accurate descriptions in the documentation, reflecting how the model determines image dimensions based on input prompts. Additionally, the default size has been updated to 'auto' to preserve aspect ratios, enhancing user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1264",
+      "title": "Automate Free Credit Cutoff Process in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "automation",
+        "backend",
+        "cronjob",
+        "savings",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a new CronJob to automate the disabling of restricted applications, which was previously a manual process. The change addresses a significant gap where free credits were being consumed without proper oversight, resulting in a loss of 2790 credits. The implementation includes necessary safeguards and tests to ensure reliability and prevent future issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#402",
+      "title": "Enhanced Domain Blocking and Logging in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "security",
+        "logging",
+        "email",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update expands the blocked email domain list from 34 to 80, effectively preventing 714 suspicious registrations that previously slipped through. Additionally, logging has been improved for three interception points, allowing for better monitoring and alerting of blocked signups. These changes aim to enhance the security and efficiency of the registration process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1529",
+      "title": "Explicitly Send Size=Auto for OpenAI Image in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "api",
+        "i18n",
+        "openai",
+        "image",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1529",
+      "summary": "This update ensures that the size parameter is explicitly sent as 'auto' instead of being omitted, aligning with the OpenAPI documentation. Key changes include the addition of a new constant for 'auto' size, modifications to the ResolutionSelector component, and the introduction of a dedicated i18n key for the size option. The changes maintain existing behavior while improving clarity and consistency in the API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#803",
+      "title": "Fix session landing issue on consumer homepage in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "bugfix",
+        "navigation",
+        "testing",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/803",
+      "summary": "This update addresses the issue where sessions default to the consumer homepage when `initial_url` is not declared, leading to navigation inefficiencies and potential data loss during publishing. The `SKILL.md` file has been modified to include an explicit `initial_url`, ensuring users land on the correct creator page. Additionally, tests have been updated to validate this change, confirming that all assertions pass successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1082",
+      "title": "Fix incorrect attribution in origin drift guard in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "comments",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update corrects the comments in the origin drift guard, clarifying that the previous incident was due to a session renewal rather than a page redirect. The logic remains unchanged, ensuring that only our own navigation modifies the session's origin. All tests have passed successfully, confirming the integrity of the functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1820",
+      "title": "Fix session renewal failure leading to homepage redirects in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "session",
+        "renewal",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where session renewals were failing due to mismatched deadlines, causing users to be redirected to the homepage unexpectedly. Key changes include modifying the session manager to retry renewals and adjusting how deadlines are read from session records. A new test has been added to ensure that renewals can survive deadline discrepancies, improving overall session handling."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1819",
       "title": "Enhance Image Size Handling in Platform Service 🚀",
       "tags": [
