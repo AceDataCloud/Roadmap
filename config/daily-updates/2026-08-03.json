@@ -3,6 +3,52 @@
   "date": "2026-08-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1263",
+      "title": "Automate Cleanup of Expired Browser Transfers in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cleanup",
+        "backend",
+        "automation",
+        "maintenance"
+      ],
+      "public": false,
+      "summary": "This update integrates the `cleanup_browser_transfers` command into the daily cleanup CronJob, ensuring that expired browser transfer receipts are now properly removed. Previously, these receipts accumulated without being addressed, leading to potential clutter in the system. The implementation has been tested and confirmed to clear all expired entries effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1817",
+      "title": "Enhance Error Reporting for Relay Responses in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "relay",
+        "testing",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves error handling in the browser-relay by ensuring that detailed error messages are captured and reported instead of just the status codes. Key changes include modifications to the `post()` method to throw descriptive errors when relay requests fail. The implementation has been validated with new test cases, demonstrating a significant increase in passing tests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1081",
+      "title": "Fix stale origin issue during page navigation in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "navigation",
+        "frontend",
+        "testing",
+        "session"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where commands continued to execute on an outdated document after a page self-redirected. Key changes include real-time URL checks before command execution and adjustments to handle cases where the URL cannot be retrieved. The fix ensures that commands are only executed on authorized documents, improving session reliability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#1080",
       "title": "Empower Tenant Homepages with Custom Banners in Frontend Web 🎉",
       "tags": [
