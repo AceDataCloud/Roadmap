@@ -3,6 +3,199 @@
   "date": "2026-08-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1816",
+      "title": "Reordered Channels for Nano-Banana in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "update",
+        "configuration",
+        "routing",
+        "nano-banana"
+      ],
+      "public": false,
+      "summary": "The channel order for nano-banana has been updated to prioritize cqtai over mountsea. This change affects both the `/nano-banana` and `/nano-banana/tasks` routes, ensuring consistency across the board. All policies remain unchanged, and the configuration has been validated successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1528",
+      "title": "Remove external link icons from chat menu in Nexior 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "chat",
+        "ui",
+        "cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1528",
+      "summary": "This update removes the external link icons from the 'Skills' and 'Connections' dropdown items in the chat input menu, as both now navigate to internal pages. The change eliminates potential user confusion regarding navigation. Additionally, unused imports and styles related to external links have been cleaned up."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#258",
+      "title": "Fix WeChat Embedded Login White Screen in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "bugfix",
+        "weixin",
+        "oauth",
+        "frontend",
+        "mobile"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where the WeChat embedded login displayed a white screen on mobile devices. The solution involves redirecting the authorization process to the host application, allowing the WeChat client to handle the native consent interface correctly. Additionally, the URL construction for authorization has been streamlined for consistency across different paths."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1815",
+      "title": "Fix CI Hang with Jest in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "ci",
+        "jest",
+        "bugfix",
+        "mongodb",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where the CI process was hanging due to a persistent MongoDB connection in the `persister` module. By adding `forceExit: true` to the Jest configuration, the tests will now exit cleanly after completion. Additional changes include mocking new exports and replacing the `uuid` dependency with `crypto.randomUUID` for cleaner code."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1078",
+      "title": "Eliminate Brand Leakage for Tenants in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "branding",
+        "frontend",
+        "seo",
+        "pwa",
+        "tenant"
+      ],
+      "public": false,
+      "summary": "This update addresses critical branding issues by preventing the exposure of our logo, wordmark, and PWA identity to tenant sites. Key changes include modifying the Logo component to ensure tenants display their own branding, updating the manifest.json to reflect tenant-specific information, and implementing checks to remove any hardcoded references. These improvements enhance tenant customization and maintain brand integrity across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1261",
+      "title": "Fix call_id type to support uploads and screenshots in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "backend",
+        "migration",
+        "upload",
+        "screenshot"
+      ],
+      "public": false,
+      "summary": "This update changes the `call_id` field from a UUID to a string to align with the actual format used by the aichat2 model. This fix resolves the 400 errors encountered during uploads and screenshots, ensuring that the system correctly processes the call IDs. Additionally, the migration is safe and does not disrupt existing data integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1527",
+      "title": "Fix WeChat Login White Screen Issue in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "auth",
+        "fix",
+        "wechat",
+        "login",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1527",
+      "summary": "This update addresses a critical issue where the WeChat embedded browser would display a white screen during the login process. By implementing a postMessage mechanism, the authorization URL is now correctly handled, allowing the host to navigate the top window and display the native authorization interface. This change enhances user experience and ensures proper functionality within the WeChat environment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1077",
+      "title": "Refine Error Handling and Improve Diagnostics in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "diagnostics",
+        "error-handling",
+        "update",
+        "release"
+      ],
+      "public": false,
+      "summary": "This update removes the redundant resolve call that was misrepresenting diagnostics as fixes. Key changes include enhancements to error reporting and the retention of diagnostic capabilities, ensuring accurate status codes are sent to the cloud. The version has been updated to 0.7.31, with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1814",
+      "title": "Fix aspect ratio detection for base64 inputs in Platform Service 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "image-processing",
+        "aspect-ratio",
+        "cdn",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where images without an aspect ratio were defaulting to a 1:1 ratio, causing distortion. The fix involves reordering the processing of base64 images to ensure they are converted to CDN URLs before aspect ratio detection. Additionally, the default resolution is now set to 1K when omitted, aligning behavior across different channels."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1526",
+      "title": "Eliminate Brand Flash on White-Label Sites in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "fix",
+        "white-label",
+        "nexior",
+        "ui",
+        "performance"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1526",
+      "summary": "This update addresses the issue of brand flashing on white-label sites like www.juheai.ai during initial load. By implementing an inline script, the title and other brand-related metadata are now dynamically adjusted to reflect the tenant's domain, ensuring a seamless user experience. The changes enhance privacy for users while maintaining brand integrity for official domains."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1525",
+      "title": "New Forced Language Option for Site Settings in Nexior 🌐",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "i18n",
+        "settings",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1525",
+      "summary": "This update introduces a 'Forced Language' option in the site settings, allowing administrators to set a fixed interface language for all users. If not set, the system will continue to detect the language automatically. The implementation ensures that once a forced language is set, users cannot switch languages, enhancing consistency across the site."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1259",
+      "title": "Add Forced Locale for Site Interface Language in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "localization",
+        "backend",
+        "validation",
+        "site"
+      ],
+      "public": false,
+      "summary": "This update introduces a new `forced_locale` field to the Site model, allowing site administrators to set a fixed interface language. This change prevents the automatic detection of language by browsers, ensuring a consistent user experience. Additionally, validation methods have been implemented to ensure that the forced language is supported and to maintain cross-field consistency."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1813",
       "title": "Fix content rejection mapping to avoid failover retries in Platform Service 🚀",
       "tags": [
