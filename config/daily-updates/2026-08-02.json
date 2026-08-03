@@ -3,6 +3,37 @@
   "date": "2026-08-02",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1076",
+      "title": "Enhance Branding Control for Tenants in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "branding",
+        "frontend",
+        "tenant",
+        "seo",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update resolves issues with platform self-links, ensuring that tenants do not inadvertently display Ace Data Cloud branding when they haven't configured their own. Key changes include routing self-links through a new method, updating various components to use tenant-specific URLs, and ensuring that fallback branding only occurs for our own site. These improvements enhance the user experience for tenants and maintain brand integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1075",
+      "title": "Enhance SEO by Stripping Platform-Specific Tags in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "seo",
+        "frontend",
+        "ssr",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update addresses SEO issues by removing platform-specific `<head>` markers from tenant hosts, ensuring that search engines do not index unwanted branding. Key changes include the implementation of a new stripping function and enhancements to the SSR process, which now effectively handles canonical tags and improves the loading experience for tenants. The modifications have been validated through automated tests, confirming the removal of sensitive tags without affecting the main platform's functionality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#1002",
       "title": "Update vue-i18n to latest version in Frontend Web 🚀",
       "tags": [

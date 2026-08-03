@@ -1,0 +1,70 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-08-03",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1813",
+      "title": "Fix content rejection mapping to avoid failover retries in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "testing",
+        "performance",
+        "error-handling"
+      ],
+      "public": false,
+      "summary": "This update addresses the issue where error code 451 was incorrectly mapped to a 500 ApiError, causing unnecessary failover retries. Now, explicit content refusals will be mapped to a 403 ForbiddenError, reducing alert noise and improving system efficiency. Additionally, new tests have been added to ensure the correct handling of these scenarios."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1260",
+      "title": "Show Tenant's Selling Price for Packages in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "pricing",
+        "backend",
+        "update",
+        "serialization"
+      ],
+      "public": false,
+      "summary": "This update ensures that the tenant's selling price is displayed correctly when browsing packages, aligning it with the checkout price. Key changes include modifications to the `ServiceDetailSerializer` and `ApplicationSerializer` to utilize the same pricing logic, eliminating discrepancies. The implementation has been verified with additional tests to ensure accuracy and consistency across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#257",
+      "title": "Fix WeChat QR Code Login to Stay in Iframe in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "bugfix",
+        "auth",
+        "iframe",
+        "wechat",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where the WeChat QR code login would redirect the entire page when successful, instead of remaining within the embedded iframe. Key changes include setting the `self_redirect` parameter to 'true' and removing the `allow-top-navigation` permission from the iframe sandbox. These adjustments enhance user experience by preventing unwanted page navigation and ensuring a smoother login process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#79",
+      "title": "Fix context loss in bridge sessions for Claude in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "bugfix",
+        "claude",
+        "context",
+        "testing",
+        "improvement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/79",
+      "summary": "This update addresses an issue where bridge sessions were losing context when running with the 1M token model. Key changes include enhancements to the model directory to support the 1M context and adjustments to the resume functionality to ensure the correct model is used. Four new tests have been added to verify the changes and ensure stability."
+    }
+  ]
+}
