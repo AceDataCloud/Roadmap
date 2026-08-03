@@ -3,6 +3,22 @@
   "date": "2026-08-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1819",
+      "title": "Enhance Image Size Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "image",
+        "update",
+        "platform",
+        "service",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update modifies the image request handling to forward the size parameter as 'auto' instead of stripping it. Both the bananarouter and openaihk workers now allow the upstream to utilize the 'auto' size, improving the output quality based on the prompt. Comprehensive tests confirm that the changes maintain existing functionality while enhancing flexibility."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#1263",
       "title": "Automate Cleanup of Expired Browser Transfers in Backend 🚀",
       "tags": [
