@@ -3,6 +3,134 @@
   "date": "2026-08-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1086",
+      "title": "Fix Clickability of Text Labels in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "accessibility",
+        "frontend",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where text labels in the accessibility tree were unclickable due to incorrect hit-testing logic. The fix modifies the hit-test criteria to allow clicks on text nodes by considering both ancestor and descendant relationships. A new test has been added to ensure the functionality works as expected, resulting in all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1822",
+      "title": "Enhance Grant Rejection Clarity in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "logging",
+        "error-handling",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of grant rejections by introducing named error codes for each of the 11 distinct rejection scenarios. The response now includes structured details, allowing for better logging and debugging. This change addresses issues where different rejection reasons were indistinguishable, enhancing overall system transparency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#629",
+      "title": "Enhance Suno Task Retrieval with Batch Action in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "suno",
+        "cli",
+        "batch",
+        "update",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/629",
+      "summary": "This update modifies the Suno CLI to explicitly use the `retrieve_batch` action for batch task requests. The change ensures that the CLI sends the correct action along with the task IDs, improving the accuracy of batch task retrieval. Additionally, regression tests have been added to verify the complete request payload."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#403",
+      "title": "AI-Driven Domain Blocking Enhancements in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "ai",
+        "security",
+        "backend",
+        "updates",
+        "automation"
+      ],
+      "public": false,
+      "summary": "This update introduces an AI-based system for dynamically blocking disposable email domains, moving away from a static hardcoded list. A new CronJob aggregates registration data daily, allowing for real-time updates to the blocklist without code changes. Additionally, the exemption criteria for accounts have been refined to ensure genuine customers are not affected while effectively targeting abuse."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#512",
+      "title": "Update OpenAI Image Size Default to Auto in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "openai",
+        "image",
+        "update",
+        "specification",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/512",
+      "summary": "This update synchronizes the OpenAI specifications by changing the default image size for the `openai_generate_image` function from `1024x1024` to `auto`, aligning it with the documentation. The `openai_edit_image` function already used `auto`, ensuring consistency across tools. Additionally, tests have been added to verify this behavior, enhancing the reliability of image generation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1270",
+      "title": "Updated Voice Cloning Documentation for Clarity in Backend 🎤",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "voice-cloning",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update replaces broken audio examples in the voice cloning documentation with verified samples from our CDN, ensuring users have reliable resources. Key changes include a clarified audio duration cap, documentation of system-generated names, and a note on retrying failed requests. These improvements aim to enhance user experience and reduce errors during voice cloning."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#79",
+      "title": "Fix checksum handling for EVM call arguments in x402 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "bugfix",
+        "evm",
+        "checksum",
+        "x402",
+        "transactions"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/79",
+      "summary": "This update addresses a critical issue where X402 crypto top-ups were failing due to improper checksum handling of EVM call arguments. The fix ensures that both contract addresses and call arguments are checksummed, preventing local encoding errors that previously surfaced as misleading simulation failures. This change is expected to restore functionality for users experiencing transaction issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1084",
+      "title": "Enhance WeChat Setup Instructions in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "deployment",
+        "documentation",
+        "frontend",
+        "weixin",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the WeChat channel setup instructions by adding crucial prerequisites and safety defaults. Key changes include specifying the need to install and log in to the CLI tools, clarifying the implications of the default settings, and addressing the process for running background services. These enhancements aim to prevent user confusion and ensure a smoother setup experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#1083",
       "title": "fix support page to show tenant contacts instead of ours in Frontend Web 🚀",
       "tags": [
