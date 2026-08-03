@@ -3,6 +3,68 @@
   "date": "2026-08-03",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1080",
+      "title": "Empower Tenant Homepages with Custom Banners in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "frontend",
+        "banners",
+        "customization",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update allows tenant homepages to display their own banners instead of default ones. Key changes include dynamic hero backgrounds sourced from tenant-configured banners and the removal of product promotion slides for white-label storefronts. The implementation ensures that banner outages do not disrupt homepage visibility and enhances security for external links."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1818",
+      "title": "Enhance Responses Streaming Lifecycle in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "streaming",
+        "conformance",
+        "gpt-5",
+        "github-proxy"
+      ],
+      "public": false,
+      "summary": "This update fixes the responses streaming lifecycle for `gpt-5*` models routed through `github-proxy`, addressing issues that rendered them unusable from Codex CLI and OpenAI SDKs. Key changes include the addition of multiple event types to ensure proper delta attribution and item tracking, which resolves silent failures in streaming. Comprehensive tests have been added, with all 87 tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1262",
+      "title": "Expose Public Banner Feed for Tenant Homepages in Backend 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "api",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a public banner feed that allows tenant homepages to render site banners. The new `PublicSiteBannerListView` enables anonymous access while ensuring that tenant-specific data remains secure. Additionally, five new tests have been added to verify the functionality, with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1079",
+      "title": "Enhance Tenant Footer Privacy in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "privacy",
+        "compliance",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update prevents the display of our legal identity in tenant footers, addressing compliance issues related to ICP filings. Key changes include using the tenant's own ICP and ensuring that our branding is only shown on our own sites. The footer now dynamically adjusts based on the tenant's domain, enhancing privacy and compliance."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1816",
       "title": "Reordered Channels for Nano-Banana in Platform Service 🚀",
       "tags": [
