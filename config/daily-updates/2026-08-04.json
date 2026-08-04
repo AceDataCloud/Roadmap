@@ -3,6 +3,471 @@
   "date": "2026-08-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Skills#832",
+      "title": "Clarify Image Models in Skills Documentation 📝",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "documentation",
+        "ai",
+        "skills",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/832",
+      "summary": "This update removes the misleading `gemini-3.1-flash-image-preview` from the AI chat model documentation. It adds a clear note stating that image-generating models are not compatible with chat endpoints, directing users to the appropriate endpoints for image generation. This change aims to prevent incorrect model usage and improve user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1832",
+      "title": "Fix fallback issue with image model in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "testing",
+        "fallback",
+        "model",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update removes the image model `gemini-3.1-flash-image-preview` from the text fallback chain, preventing guaranteed failures during upstream outages. Additionally, two new tests were added to ensure that image models are not used as text fallbacks and do not have their own fallback chains. Overall, this enhances the reliability of the model fallback mechanism."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1282",
+      "title": "Fix import order issues in Backend ⚙️",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "tests",
+        "django",
+        "drf",
+        "ci"
+      ],
+      "public": false,
+      "summary": "This update resolves import order issues in two test files that caused failures when the DJANGO_SETTINGS_MODULE environment variable was not set. The DRF imports have been moved to ensure they are loaded after the Django setup, preventing collection errors. Additionally, a new guard has been added to automatically scan for similar issues in all test files, enhancing overall test reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#831",
+      "title": "Fix WeChat API Issues and Enhance Features in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "wechat",
+        "api",
+        "bugfix",
+        "enhancement",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/831",
+      "summary": "This update resolves critical issues with the WeChat API integration, including the removal of outdated endpoints that caused 404 errors. Key enhancements include the introduction of real @-mentions in messages, improved command handling, and new commands for managing Moments and group chats. Comprehensive testing has been implemented to ensure stability and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#407",
+      "title": "Enhanced Domain Review Process in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "backend",
+        "domain",
+        "agent",
+        "improvement",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update addresses two critical issues identified during the first production run. The agent now correctly references the database for blocked domains, preventing previously blocked domains from being re-evaluated. Additionally, the job failure logic has been refined to ensure successful runs are not marked as failures due to agent timeouts, improving overall reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1089",
+      "title": "Enhance Heartbeat Mechanism to Prevent Socket Failures in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "heartbeat",
+        "socket",
+        "service-worker",
+        "testing",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces a proactive heartbeat mechanism for the extension, sending a heartbeat every 20 seconds to prevent the service worker from being evicted due to inactivity. Key changes include modifications to the device relay and reconnect alarm logic, ensuring the socket remains active and reducing the risk of silent disconnections. Additionally, new tests have been added to validate the heartbeat functionality and ensure robust performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#650",
+      "title": "Sync Check Blocked for Suno Due to Missing OpenAPI Source in Clis 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "sync",
+        "blocker",
+        "openapi",
+        "suno",
+        "clis"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/650",
+      "summary": "The sync process for the `suno` CLI package was halted because the necessary OpenAPI source file, `openapi/suno.json`, is absent from the repository. This missing specification prevents safe code changes and requires either the addition of the OpenAPI file or equivalent content from `AceDataCloud/Docs` to proceed. Verification checks confirmed the absence of the required files."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#656",
+      "title": "Clarify duration variability in APIs 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "api",
+        "updates",
+        "audio"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/656",
+      "summary": "This update enhances the documentation for the audio generation API by clarifying that the duration of generated tracks can vary significantly between requests. It emphasizes that the duration parameter serves as a hint rather than a strict limit, and actual lengths may differ. Key changes were made to the integration guide to reflect these insights."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#532",
+      "title": "Sync suno MCP with latest Docs updates in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "openapi",
+        "suno",
+        "sync",
+        "updates",
+        "compatibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/532",
+      "summary": "This update aligns the `suno` MCP server with recent changes from the Docs/OpenAPI specifications. Key improvements include syncing tool definitions, updating request parameters, and ensuring response schemas reflect the latest documentation. Backward compatibility is maintained by extending accepted model values."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1831",
+      "title": "Fix missing required fields in Anthropic Messages response in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "api",
+        "testing",
+        "compliance"
+      ],
+      "public": false,
+      "summary": "This update addresses two critical compliance issues in the Anthropic Messages API. It ensures that the `citations` field is included in the response text block and modifies the handling of `cache_read_input_tokens` and `cache_creation_input_tokens` to meet the required specifications. Additionally, several tests have been updated to reflect these changes, improving overall API reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1288",
+      "title": "Update documentation on duration variability in Backend 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "backend",
+        "suno",
+        "audio"
+      ],
+      "public": false,
+      "summary": "This update enhances the documentation regarding the `duration` parameter for audio generation, clarifying that it serves as a guideline rather than a strict limit. It highlights that identical requests may yield significantly different durations, emphasizing the need for users to manage expectations and potentially adjust outputs post-generation. No code changes were made; this is purely a documentation improvement."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1287",
+      "title": "Implement Payment Health Monitoring in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "monitoring",
+        "payments",
+        "alerts",
+        "backend",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces a new CronJob that monitors payment attempts and successes across all payment channels. If a payment method has three or more attempts but zero successes within a 24-hour window, it triggers an alert to ensure silent outages are detected. This enhancement aims to improve visibility into payment failures, addressing a critical blind spot in the previous monitoring setup."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#530",
+      "title": "Gemini Docs Sync Verified — No Changes Needed in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docs",
+        "sync",
+        "gemini",
+        "no-change"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/530",
+      "summary": "The recent upstream Docs sync identified `gemini` as a changed service, but an investigation confirmed that there are no Gemini MCP servers in this monorepo. Key findings include the absence of a `gemini/` subdirectory and no relevant mappings in `sync.yaml`, ensuring no code changes are necessary. As a result, this issue can be closed as already in sync."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#646",
+      "title": "Streamline Chat Models by Removing Image Options in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "bugfix",
+        "cli",
+        "gemini",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/646",
+      "summary": "This update removes three image models from the chat model list, addressing compatibility issues with the upstream service. The CLI will now directly reject requests for these models, preventing unnecessary failures. Additionally, the README has been updated to guide users towards the native API for image generation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1286",
+      "title": "Refine model enum for chat/completions in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "api",
+        "openapi",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update removes three image models from the `chat/completions` enum, as they are not supported by any upstream services. The changes include modifications to the OpenAPI and cost API files, ensuring that the model collection remains stable while improving clarity in the code comments. Overall, the impact on billing and testing is minimal, with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#339",
+      "title": "Implement Soft Cutoff for Deployment Services in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "soft-cutoff",
+        "deployment",
+        "user-experience",
+        "billing",
+        "service-continuity"
+      ],
+      "public": false,
+      "summary": "This update introduces a new soft cutoff mechanism for deployment services, allowing users to maintain their pods active even after expiration. Users can now renew their service instantly without losing their session, addressing previous issues of abrupt shutdowns and session loss. The changes are designed to enhance user experience and service continuity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1830",
+      "title": "Clean Up Dead Code in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cleanup",
+        "refactor",
+        "tests",
+        "dead-code",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update removes the entirely unused `responsesShim.js` file and associated dead code from `server.js`, resulting in a net deletion of 1251 lines. Additionally, it migrates the `parseModelList` function and introduces direct tests for it, ensuring that the codebase remains clean and maintainable. The changes enhance the overall reliability of the test suite by eliminating tests that were covering non-executed code."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1829",
+      "title": "Enhance Codex Tool Support for Consistency Testing in Platform Service 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "codex",
+        "tools",
+        "testing",
+        "platform-service",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces support for Codex's code mode tools, addressing issues where certain tool types were not recognized, leading to failures in file operations. Key changes include modifications to the inbound and outbound processing logic to correctly parse and handle `additional_tools`, `custom`, and `namespace` types. Comprehensive live tests have been added to ensure conformance with the official OpenAPI specifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#645",
+      "title": "Update Default Model to Chirp V5.5 in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "update",
+        "suno",
+        "cli",
+        "default-model",
+        "config"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/645",
+      "summary": "The default model for the Suno CLI has been updated from chirp-v4-5 to chirp-v5-5. Key changes include updates to the configuration files, README, and test assertions to reflect this new default. This change will affect users who do not specify a model and do not set the SUNO_DEFAULT_MODEL environment variable."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1285",
+      "title": "Reverted privacy contact details update in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "privacy",
+        "revert",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update reverts the recent changes made to the privacy documentation regarding contact details. The previous version included a link to the support page, which has now been replaced with direct contact information for the support team. This change aims to streamline communication for users seeking assistance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1281",
+      "title": "Streamlined Risk Management for Restricted Applications in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "auth",
+        "risk-management",
+        "efficiency",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update merges the risk management process for disabling restricted applications into AuthBackend, enhancing efficiency by eliminating the need for separate CronJobs. The new system allows for immediate action on flagged accounts, ensuring that free credits are reclaimed promptly. Key files related to the old process have been removed, and the necessary adjustments have been made to maintain functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#406",
+      "title": "Streamlined Risk Management Pipeline for Enhanced Efficiency in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "backend",
+        "risk-management",
+        "optimization",
+        "pipeline",
+        "efficiency"
+      ],
+      "public": false,
+      "summary": "This update merges three separate CronJobs into a single streamlined pipeline for risk management, significantly reducing the time between decision-making and execution. Key enhancements include the addition of a new rule layer that operates independently of the model, ensuring that blatant cases of abuse are flagged immediately. The changes also improve database interactions and eliminate redundant jobs, optimizing overall system performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1284",
+      "title": "Reverted support contacts update in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "support",
+        "revert",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update reverts the recent changes made to the support documentation, restoring the previous contact information layout. Key additions include multiple contact methods such as Discord, X, and email, ensuring users can easily reach out for support. The documentation now reflects the original structure, enhancing clarity for users seeking assistance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1828",
+      "title": "Fix transient error handling for voice creation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "testing",
+        "network",
+        "retry",
+        "voice"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where network-level errors were not being retried correctly during voice creation. The solution involves wrapping the error handling to ensure that only whitelisted errors are processed for retries, while others are thrown as is. New tests have been added to validate the behavior, ensuring that the system remains robust and functional."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#518",
+      "title": "Suno MCP Server Verified Against OpenAPI Spec in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "verification",
+        "openapi",
+        "suno",
+        "mcp",
+        "sync"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/518",
+      "summary": "The verification process confirmed that the Suno MCP server's models, endpoints, and parameters are fully aligned with the current OpenAPI specification. Key components such as enums, action values, and request parameters were thoroughly checked, revealing no discrepancies. As a result, no code changes were necessary, ensuring seamless integration with the documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1531",
+      "title": "Launch of Capability-First Product Tour in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "product-tour",
+        "localization",
+        "ui",
+        "audit"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1531",
+      "summary": "This update introduces a new capability-first product tour at the `/intro` page, showcasing the platform's functionalities across six sections, including AI chat, images, video, music, production, and tools. The tour features localized screenshots and model cards, enhancing user understanding of available features. Additionally, the layout has been thoroughly audited for quality assurance, ensuring a seamless experience across multiple devices and languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1278",
+      "title": "Fix substring rules to ensure exact model pricing in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "billing",
+        "tests",
+        "jsonlogic",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update reorders the rules in `_chat_models.json` to prevent substring rules from overshadowing exact model pricing. The changes correct billing discrepancies for three models, ensuring accurate charges moving forward. A new regression test has been added to maintain the integrity of the pricing rules."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1276",
+      "title": "Enhance Gemini Probes to Exclude Image Models in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "e2e",
+        "gemini",
+        "backend",
+        "monitoring",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update modifies the Gemini end-to-end probes to utilize `stable_text_models()`, effectively excluding image models from text prompt evaluations. As a result, the number of models used in the chat enum decreases from 12 to 7, reducing false failure rates and improving monitoring accuracy. The change does not affect production functionality or pricing, focusing solely on internal probe adjustments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1826",
+      "title": "Fix audio upload retry logic and name handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "audio",
+        "retry",
+        "voice",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update resolves issues with the audio upload retry mechanism, ensuring that 'Audio upload failed' errors are now retried correctly in the ttapi. Additionally, it fixes the problem where the caller's name was being discarded, allowing user-supplied names to be retained in the response. These changes enhance the reliability of voice cloning operations and improve user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#1001",
       "title": "Update PostCSS to Latest Version in Frontend Web 🚀",
       "tags": [
