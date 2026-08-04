@@ -3,6 +3,262 @@
   "date": "2026-08-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#633",
+      "title": "Enhance Suno CLI Documentation and Sync Verification in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "documentation",
+        "suno",
+        "cli",
+        "api",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/633",
+      "summary": "This update verifies the Suno CLI's synchronization with the latest OpenAPI spec, confirming that all endpoints and request fields are correctly implemented. Key documentation updates include the addition of the `suno inspo <audio_id>` command and the `--duration` option for track length specification. These changes enhance usability and ensure alignment with the current API standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1060",
+      "title": "Upgrade Node setup workflow dependency in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "github-actions",
+        "dependencies",
+        "ci",
+        "node"
+      ],
+      "public": false,
+      "summary": "Updated GitHub Actions workflows to use actions/setup-node version 7 instead of version 6. The change applies to CI and extension release workflows while continuing to configure the same Node.js versions and npm caching behavior. This keeps the frontend automation workflows aligned with the latest setup-node release."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#208",
+      "title": "Revive WebSocket Message Publishing in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "websocket",
+        "real-time",
+        "polling",
+        "testing",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update restores the message publishing functionality for the `/ws` endpoint, which had been inactive since the removal of WeChat 3.x code. A new message pump has been implemented to poll the WeChat database every 3 seconds, ensuring that clients receive real-time updates without requiring any changes on their end. Additionally, comprehensive tests have been added to verify the reliability of the message delivery system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#404",
+      "title": "Stabilized risk agent startup and hardened CronJob validation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "risk-agent",
+        "cronjob",
+        "django",
+        "testing"
+      ],
+      "public": false,
+      "summary": "Fixed risk agent startup failures by pinning marshmallow below version 4 and supplying required placeholder settings for the CronJob environment. Added deployment regression tests to verify required settings, dependency compatibility, and credential placeholder usage. The dry-run completed successfully with the agent reviewing domains and producing risk decisions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#516",
+      "title": "Verified Suno MCP sync with OpenAPI spec in M C Ps ✅",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "suno",
+        "mcp",
+        "openapi",
+        "sync"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/516",
+      "summary": "Checked the Suno MCP server implementation against the updated Docs OpenAPI specification. Confirmed that models, actions, endpoints, and request parameters are already fully aligned with the spec. No code changes were required because the existing implementation already covers the update."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#632",
+      "title": "Enhance Duration Parameter Documentation in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "api",
+        "enhancement",
+        "suno"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/632",
+      "summary": "This update documents the `duration` parameter in the English API documentation, adding clarity on its usage and behavior. Key points include the distinction between request and response durations, and the handling of out-of-contract requests which now return explicit errors instead of being silently ignored. A runnable Python example is also included to aid developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#627",
+      "title": "Enhance Custom Command with Duration Option in Clis 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "feature",
+        "custom",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/627",
+      "summary": "This update introduces the `--duration` option to the custom command, allowing users to set a target track length between 10 and 360 seconds. The change ensures that the duration is only applicable in custom mode, preventing unnecessary errors in the generate command. Comprehensive tests have been added to verify the correct payload handling for both set and unset duration values."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#336",
+      "title": "Enhance Suno Tool with Duration Parameter in Dify 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "feature",
+        "suno",
+        "duration",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/336",
+      "summary": "This update introduces a new `duration` parameter to the Suno generation tool, allowing users to specify track lengths between 10 and 360 seconds. The parameter is declared as a number type, with internal handling to ensure it is treated as an integer. Comprehensive checks have been performed to validate the implementation across various input scenarios."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1530",
+      "title": "Empower Users with Custom Track Length in Nexior 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "i18n",
+        "suno",
+        "customization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1530",
+      "summary": "This update introduces a new track-length control in the Suno advanced parameters panel, allowing users to specify durations between 10 to 360 seconds for custom-mode generations. The feature is off by default and can be enabled via a switch, ensuring existing users maintain their current settings unless they opt in. Additionally, internationalization support has been added for 18 locales, enhancing accessibility for a broader audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#471",
+      "title": "Enhance Suno Clients with Duration Parameter in SDK 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "suno",
+        "sdk",
+        "update",
+        "feature",
+        "client"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/471",
+      "summary": "This update introduces a new `duration` parameter to the Suno provider across TypeScript, Python, and Go, allowing users to specify track lengths between 10 and 360 seconds. The change is part of a broader rollout and includes modifications to the generated client files, ensuring compatibility with existing functionality. All code checks have passed successfully, confirming the stability of the update."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#806",
+      "title": "Enhance Duration Parameter Documentation in Skills 📚",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "documentation",
+        "skills",
+        "update",
+        "parameters"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/806",
+      "summary": "This update documents the `duration` parameter as part of the rollout, adding it to the advanced-parameter table and including a gotcha entry. Key clarifications highlight the requirement for all three conditions to avoid errors and explain the distinction between the target and actual duration of clips. These changes aim to improve user understanding and implementation of the parameter."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#509",
+      "title": "Enhance Custom Music Generation with Duration Parameter in M C Ps 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "feature",
+        "api",
+        "music",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/509",
+      "summary": "This update introduces a new `duration` parameter to the `suno_generate_custom_music` function, allowing users to specify the target track length between 10 and 360 seconds. The change ensures that the parameter is only included in the API payload when set, improving the clarity of requests. Additionally, the model table has been updated to clarify the distinction between the maximum duration for unguided generation and the new parameter's limits."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1267",
+      "title": "Enhance Suno API with Duration Parameter in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "documentation",
+        "suno",
+        "backend",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces the `duration` parameter to the Suno API, allowing users to specify the desired length of audio tracks. The new parameter is documented in the OpenAPI specification and the development guide, ensuring clarity on its usage and constraints. This change addresses a previous issue where the parameter was accepted but ignored, enhancing the overall functionality of the audio generation process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1821",
+      "title": "Enhance Duration Control for Suno in Platform Service 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "suno",
+        "duration",
+        "update",
+        "testing",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update introduces support for a custom-mode duration parameter in the Suno audio generation process. Now, users can specify a duration between 10 and 360 seconds, which is correctly forwarded to upstream services, addressing a previous issue where the parameter was ignored. Additionally, the update includes new tests to ensure functionality and compliance with the expected behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#405",
+      "title": "Upgrade Extension Minimum Version to 0.7.33 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "upgrade",
+        "backend",
+        "browser",
+        "extension",
+        "stability"
+      ],
+      "public": false,
+      "summary": "This update raises the minimum browser extension version from 0.7.8 to 0.7.33 to prevent broken builds caused by outdated versions. Key changes include modifications to the settings and deployment files, ensuring that only compatible versions are allowed. The upgrade aims to enhance stability and user experience by enforcing a more stringent version requirement."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1825",
+      "title": "Enhance AuthBackend Error Reporting in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "auth",
+        "logging",
+        "relay"
+      ],
+      "public": false,
+      "summary": "This update improves the error reporting for authentication failures in the browser relay by including specific cause codes. Previously, users faced infinite reconnection loops without understanding the reason for rejection. Now, the system logs detailed cause codes, allowing for better diagnostics and user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#1273",
       "title": "Enhance Payment Failure Logging in Backend 🚀",
       "tags": [
