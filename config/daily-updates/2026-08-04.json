@@ -3,6 +3,54 @@
   "date": "2026-08-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1532",
+      "title": "Streamlined Site Capabilities Display in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "update",
+        "nexior",
+        "ui",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1532",
+      "summary": "The `/intro` page now accurately reflects only the capabilities enabled for each site, eliminating misleading information. Key changes include filtering sections and model cards based on site features, ensuring that users see relevant options. This update also addresses potential issues with disabled pages and improves the user experience by dynamically adjusting the displayed content."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1835",
+      "title": "Enhance owner preemption logic to eliminate reconnection delays in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "performance",
+        "owner-preemption",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update modifies the owner verification process to allow for the preemption of disconnected owners, addressing a significant reconnection delay issue. The previous hard check was removed, and a new responsive check was implemented to ensure only truly active connections are blocked. This change is expected to improve the success rate of device reconnections significantly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1090",
+      "title": "Enhance Heartbeat Validation in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "testing",
+        "service-worker",
+        "heartbeat",
+        "e2e",
+        "chromium"
+      ],
+      "public": false,
+      "summary": "This update introduces a new end-to-end test that verifies the heartbeat functionality within a real MV3 service worker environment. By utilizing a real Chromium context, the test ensures that heartbeats are sent within the critical 30-second window before the service worker is evicted. The results confirm that the heartbeat is indeed emitted, addressing a previous issue where sockets would fail after 35 seconds of inactivity."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Skills#832",
       "title": "Clarify Image Models in Skills Documentation 📝",
       "tags": [
