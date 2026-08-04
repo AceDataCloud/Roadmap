@@ -1,0 +1,167 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-08-04",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1273",
+      "title": "Enhance Payment Failure Logging in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "logging",
+        "payments",
+        "backend",
+        "testing",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the logging for payment verification and settlement failures in the X402 system. It adds warning logs that capture essential details such as the reason for failure and transaction specifics, ensuring better visibility for troubleshooting. Additionally, new tests have been implemented to validate the logging functionality and ensure no sensitive information is exposed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#80",
+      "title": "Enhance Payment Rejection Logging in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "logging",
+        "diagnostics",
+        "payments",
+        "x402",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/80",
+      "summary": "This update introduces detailed logging for payment rejections, capturing critical information such as the rejection reason, payer type, and signature details. By logging these elements, it significantly improves the diagnostics process, allowing for quicker triage of issues related to signature failures. The changes include modifications to the verification process and the addition of new tests to ensure reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#631",
+      "title": "Sync CLI Tools with Latest OpenAPI Updates in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "openapi",
+        "sync",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/631",
+      "summary": "This update aligns the `aichat`, `kimi`, and `suno` CLIs with the most recent OpenAPI changes, ensuring command coverage and accurate request shapes. Key adjustments include updated command options, corrected endpoint paths, and refreshed help summaries to reflect the latest API operations. The existing CLI architecture remains intact while enhancing compatibility with the updated specifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#514",
+      "title": "Sync and Verify Aichat, Kimi, and Suno Models in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "sync",
+        "verification",
+        "models",
+        "tests",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/514",
+      "summary": "This update ensures that the Aichat, Kimi, and Suno models are in sync with the latest documentation. Key changes include the removal of four retired Kimi K2 models and the addition of a new test to prevent these models from reappearing. The verification confirms that all endpoints and models are aligned with the specifications, enhancing the reliability of our API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#807",
+      "title": "Streamline Kimi Model Table by Removing Zero-Traffic Models in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "documentation",
+        "ai-chat",
+        "models",
+        "cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/807",
+      "summary": "This update removes four Kimi K2 models from the ai-chat SKILL.md documentation due to zero real calls over the past week. The models `kimi-k2-instruct-0905`, `kimi-k2-0905-preview`, `kimi-k2-turbo-preview`, and `kimi-k2-0711-preview` have been identified as inactive and are no longer listed. The remaining models, including `kimi-k3` and others, continue to be supported."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#510",
+      "title": "Streamline AiChat Models by Removing Zero-Traffic Kimi K2s in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "cleanup",
+        "models",
+        "aichat",
+        "efficiency"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/510",
+      "summary": "This update removes four Kimi K2 models from the public types in AiChatV2Model due to zero traffic over the past week. The models removed are `kimi-k2-instruct-0905`, `kimi-k2-turbo-preview`, `kimi-k2-0905-preview`, and `kimi-k2-0711-preview`. The remaining models continue to be supported, ensuring a more efficient model management system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1823",
+      "title": "Retire unused Kimi K2 models and update pricing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cleanup",
+        "pricing",
+        "models",
+        "fallbacks",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update removes four zero-traffic Kimi K2 models from the fallback configuration, ensuring a cleaner model management. Additionally, the pricing for Kimi K3 has been updated to reflect new rates, while maintaining price safety across fallback targets. The changes have been validated with successful test results."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1271",
+      "title": "Significant Cost Reduction for Kimi-K3 in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cost",
+        "pricing",
+        "backend",
+        "kimi-k3",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update implements a major price drop for the Kimi-K3 model, reducing input and output coefficients significantly. The new pricing aligns with official rates, offering a 40% reduction, which is expected to enhance customer acquisition. Additionally, the maximum credits have been adjusted to maintain consistent token usage without impacting real-world performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1269",
+      "title": "Retire Unused Kimi K2 Models in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cleanup",
+        "models",
+        "backend",
+        "maintenance"
+      ],
+      "public": false,
+      "summary": "This update removes four Kimi K2 legacy models that have shown zero real traffic over the past week. The models were only called by internal probes and do not impact the fallback mechanisms, ensuring system reliability. Key files have been updated to reflect these changes, streamlining the model configuration and billing rules."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1087",
+      "title": "Refactor WeChat Integration Card for Product-Specific Display in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "refactor",
+        "bugfix",
+        "i18n",
+        "frontend",
+        "wechat"
+      ],
+      "public": false,
+      "summary": "This update refactors the WeChat integration card to ensure it only displays for relevant products, addressing a critical bug in the rendering conditions. The card has been moved to a more appropriate location, and its naming has been updated to reflect its specific purpose. Additionally, outdated translations across multiple locales have been corrected to align with the new terminology."
+    }
+  ]
+}
