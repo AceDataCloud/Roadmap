@@ -3,6 +3,278 @@
   "date": "2026-08-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#639",
+      "title": "Align suno CLI with Latest OpenAPI Updates in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "openapi",
+        "updates",
+        "suno",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/639",
+      "summary": "This update ensures the suno CLI is fully synchronized with the latest OpenAPI contract, addressing potential API-surface drift. Key changes include updated command definitions, aligned request options, and corrected endpoint mappings. Additionally, command help text has been refreshed for improved user guidance, and tests have been adjusted to reflect the new command behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1827",
+      "title": "Updated Pricing Snapshots for Kimi K2 Models in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "pricing",
+        "updates",
+        "k2-models",
+        "synchronization",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update synchronizes the pricing snapshots for the Kimi K2 models following a significant price reduction. The new prices ensure that all alternatives remain cheaper than the original models, maintaining the pricing safety invariant. Additionally, the snapshot date has been corrected to reflect the latest changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#522",
+      "title": "Sync Suno MCP schema updates with OpenAPI changes in M C Ps 🔄",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "suno",
+        "openapi",
+        "mcp",
+        "schema"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/522",
+      "summary": "Updated the Suno MCP service to match the latest Docs OpenAPI contract, including request and response shapes, endpoint mappings, and parameter handling. Added newly supported model enum values while keeping existing aliases for compatibility. Changes were limited to the Suno service scope without unrelated refactors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1279",
+      "title": "Major Cost Adjustments for Kimi K2 Models in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cost",
+        "pricing",
+        "backend",
+        "api",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update implements significant price reductions for the Kimi K2 series, aligning API billing to a baseline of 40% of the official price. The pricing page has been corrected to reflect accurate display prices, ensuring consistency with actual discounts. Additionally, a new test has been added to enforce the business rule that prices must not exceed official rates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#209",
+      "title": "Enhance WebSocket E2E Testing in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "websocket",
+        "testing",
+        "ci",
+        "documentation",
+        "e2e"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive end-to-end test for the WebSocket functionality, ensuring that clients receive messages correctly. Key improvements include hard imports for dependencies and updates to the README documentation regarding the release process. The CI pipeline now includes explicit tests that validate the entire message flow, enhancing reliability and reducing silent failures."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1088",
+      "title": "Restore Crypto Top-Ups with Client Update in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "crypto",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps the x402-client version to 2026.804.0, addressing a critical issue that caused 100% failure in online crypto top-ups for 13 days. The fix includes the necessary EIP712Domain declaration, which was missing in the previous version, ensuring successful transaction signatures and restoring functionality for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1277",
+      "title": "Strengthened Kimi Caching Tests in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "testing",
+        "billing",
+        "kimi",
+        "backend",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update enhances the testing framework for Kimi's caching billing system without altering any billing rules. Key changes include dynamic reading of prompt coefficients to prevent hard-coded drift and the addition of a new test to ensure that cached billing never results in negative amounts. These improvements aim to maintain consistency and reliability in billing calculations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#337",
+      "title": "Kimi Code CLI Integration Report: Full Cycle Validation in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "integration",
+        "verification",
+        "documentation",
+        "security",
+        "billing"
+      ],
+      "public": false,
+      "summary": "This update presents a comprehensive end-to-end verification of the Kimi Code CLI with AceDataCloud, confirming its functionality as an OpenAI-compatible backend. Key findings include successful task execution with consistent token counting and billing accuracy, alongside the identification of a pricing gap and security concerns regarding API key exposure. The report adds valuable documentation without altering any existing code or configurations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#637",
+      "title": "Enhance suno CLI with title and style options in Clis 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "feature",
+        "suno",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/637",
+      "summary": "This update introduces `--title` and `--style` options to the `suno generate` command, aligning it with the existing API request schema. These parameters allow users to specify the title and music style for generated audio, enhancing the command's functionality. A regression test has also been added to ensure these options are correctly included in the outgoing request."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#635",
+      "title": "Suno CLI is perfectly in sync with OpenAPI spec in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "sync",
+        "openapi",
+        "suno",
+        "cli",
+        "verification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/635",
+      "summary": "The recent verification confirmed that the Suno CLI aligns seamlessly with the updated OpenAPI specification. All 13 paths and corresponding commands were compared, and no discrepancies were found, ensuring that the CLI reflects the current API accurately. This means no code changes were necessary, maintaining a smooth user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#520",
+      "title": "Update duration constraints and model limits in M C Ps 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "documentation",
+        "api",
+        "suno",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/520",
+      "summary": "This update corrects the duration constraints for the `suno_generate_custom_music` function and revises the model limit table in the documentation. The duration is now strictly defined for specific model and action combinations, ensuring clearer expectations for users. Additionally, the prompt and title limits have been updated to reflect accurate values for each model, enhancing the overall clarity of the API documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1275",
+      "title": "Update duration parameter details in Backend 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "suno",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update corrects the documentation for the `duration` parameter in the Suno audio generation feature. It clarifies that the parameter is a hint rather than a strict limit, and updates the conditions under which it operates, reflecting recent code changes. The documentation now accurately describes the expected behavior and potential variations in output length."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1274",
+      "title": "Revamp Support Contacts for Better Tenant Experience in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "support",
+        "backend",
+        "tenant",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update removes hardcoded contact information from the shared support document, addressing issues with tenant-specific support channels. The contact details are now dynamically provided through the Site branding schema, ensuring each tenant can direct customers to their own support resources. Additionally, the document link has been updated to a relative path to prevent redirection to the main site."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1824",
+      "title": "Enhanced Voice Cloning Error Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "voice-cloning",
+        "error-handling",
+        "retry-mechanism",
+        "platform-service",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces a retry mechanism for transient voice cloning errors, improving user experience by reducing unnecessary failures. Key changes include the implementation of a classification system for errors and a new retry logic that conserves resources while allowing for a second attempt on certain failures. The expected impact is a recovery of approximately 9% of previously failed requests within budget constraints."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1085",
+      "title": "Move support contacts to site configuration in Frontend Web 🔧",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "support",
+        "branding",
+        "contacts",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "Updated the support page to render contact details only from per-site branding configuration instead of shared document content. Simplified the contact visibility logic, added QR contact rendering support, and removed the old shared contact filtering approach. Updated ownership checks to enforce the new single-source contact model."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1272",
+      "title": "Fix Kimi Cache Pricing Calculation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "backend",
+        "pricing",
+        "k3",
+        "cache"
+      ],
+      "public": false,
+      "summary": "This update recalculates the Kimi K3 cached discount coefficient after rebasing on the latest main branch. The new coefficient is adjusted from -31.968 to -10.8, ensuring accurate billing and preventing potential losses. All tests have passed successfully, confirming the integrity of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/X402Client#40",
+      "title": "Fix EIP712Domain Declaration for Typed Data in X402 Client 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "X402Client",
+        "bugfix",
+        "eip712",
+        "typeddata",
+        "testing",
+        "release"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/X402Client/pull/40",
+      "summary": "This update addresses a critical issue where the `EIP712Domain` was not declared in the typed data, leading to a 13-day outage for crypto top-ups. Key changes include the addition of complete domain declarations for both `exact` and `upto` types, ensuring compatibility with MetaMask and ethers. All tests are now passing, and the next step involves releasing a new npm package to fully resolve the issue."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#633",
       "title": "Enhance Suno CLI Documentation and Sync Verification in Clis 🚀",
       "tags": [
