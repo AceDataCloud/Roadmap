@@ -3,6 +3,149 @@
   "date": "2026-08-04",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#643",
+      "title": "Enhance suno CLI with new generate options in Clis 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "suno",
+        "update",
+        "features",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/643",
+      "summary": "This update introduces new command options to the suno CLI's generate command, aligning it with the latest OpenAPI spec. Users can now specify vocal gender, negative styles, style influence, and audio weight, enhancing the customization of audio generation. Additionally, tests have been added to ensure these new options correctly map to the request fields."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#526",
+      "title": "Suno MCP Server Audit Confirms No Drift in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "audit",
+        "suno",
+        "openapi",
+        "mcp",
+        "sync"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/526",
+      "summary": "An audit was conducted to verify that the Suno MCP server's models, endpoints, and parameters align with the OpenAPI specification. All 13 endpoints were cross-checked, and it was confirmed that there is no drift between the implementation and the spec. As a result, no code changes were necessary."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#649",
+      "title": "Clarify Duration Contract Details in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "api",
+        "updates",
+        "clarification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/649",
+      "summary": "This update refines the documentation regarding the `duration` parameter in the audio generation API. Key changes include restoring the `10-360` range and custom mode as essential parts of the contract, while removing misleading phrases about variability. The documentation now accurately reflects the service's capabilities and limitations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1283",
+      "title": "Clarified Duration Contract Details in Backend 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "suno",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update revises the documentation regarding the `duration` parameter for the Suno audio generation service. Key changes include restoring the valid range of 10-360 seconds, clarifying that the duration is a hint rather than a strict requirement, and correcting previous inaccuracies about model capabilities. These adjustments aim to provide clearer expectations for users regarding audio generation outcomes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#338",
+      "title": "Comprehensive Capability Testing and Index Registration in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "testing",
+        "verification",
+        "bugfix",
+        "documentation",
+        "white-label"
+      ],
+      "public": false,
+      "summary": "This update includes a thorough verification of 52 capabilities on the white-label platform, with 48 passing and 4 identified issues, including one genuine bug and a data leak. Key changes involve enhanced testing coverage for various site paths, ensuring all functionalities are properly configured and verified. The findings have been documented in detail, providing insights into the testing methodology and results."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#524",
+      "title": "Suno MCP Verified Against OpenAPI Spec in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "verification",
+        "openapi",
+        "suno",
+        "mcp",
+        "docs"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/524",
+      "summary": "The Suno MCP has been successfully verified to align with the latest OpenAPI specification from the Docs repository. All endpoints and model enums were checked, confirming no discrepancies and ensuring that all required request parameters are present. This verification ensures the integrity of the Suno service without necessitating any code changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1280",
+      "title": "Updated Privacy Contact Details in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "privacy",
+        "docs",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update modifies the contact information in the privacy policy to direct users to the support page instead of displaying specific email and address details. The changes ensure that the privacy policy remains compliant while allowing each tenant to manage their own contact channels. The legal entity remains unchanged to maintain accountability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#210",
+      "title": "Fix XML Issues in Quoted Links and Document Gaps in Wisdom 🛠️",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "bugfix",
+        "documentation",
+        "tests",
+        "wisdom"
+      ],
+      "public": false,
+      "summary": "This update addresses a bug where the `quoted_text` in card references contained raw XML, which could disrupt LLM prompts. Additionally, it clarifies documentation regarding the `golden-promote` process, highlighting that it only affects new tenants and does not update service blueprints. Three new tests have been added to ensure the correct behavior of these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#340",
+      "title": "Resolved Endpoint Misuse and Testing Results in Index 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "bugfix",
+        "documentation",
+        "testing",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update clarifies the root cause of previous misjudgments regarding the `anthropic` provider, confirming that the issue stemmed from using the wrong endpoint rather than a platform defect. Additionally, the merged changes have been validated with successful online retests, showing consistent results across multiple tool and LLM calls, with significant cost savings from caching. Documentation has been updated to reflect these findings."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#639",
       "title": "Align suno CLI with Latest OpenAPI Updates in Clis 🚀",
       "tags": [
