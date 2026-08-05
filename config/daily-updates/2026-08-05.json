@@ -3,6 +3,219 @@
   "date": "2026-08-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1094",
+      "title": "Enhance Debugger Reclamation Process in Frontend Web 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "debugger",
+        "fix",
+        "frontend",
+        "chrome",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where the Chrome MV3 worker fails to reclaim debugger attachments after a restart. The fix ensures that if a tab is already attached, it will be reclaimed without unnecessary detachment, improving the stability of the debugging process. Additionally, the code now filters out hidden duplicate controls, enhancing user interaction on the Xiaohongshu creator page."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#662",
+      "title": "Align CLI with Latest OpenAPI Updates in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "openapi",
+        "updates",
+        "documentation",
+        "suno",
+        "seedream"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/662",
+      "summary": "The `seedream` and `suno` CLIs have been updated to reflect the latest documentation sync from PlatformBackend. Key changes include adjustments to command handlers, request option mappings, and endpoint path bindings to ensure consistency with the current OpenAPI specifications. These updates maintain existing command patterns while incorporating new requirements, ensuring a seamless user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#544",
+      "title": "Sync Seedream and Suno MCPs with Latest Docs OpenAPI Updates in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "sync",
+        "openapi",
+        "mcp",
+        "seedream",
+        "suno"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/544",
+      "summary": "This update aligns the MCP implementations for Seedream and Suno with the latest changes in the Docs OpenAPI. Key adjustments include updated model/provider enums, request parameter handling, and response shaping to ensure compatibility with the current platform APIs. The changes maintain existing behavior while introducing new options as specified in the documentation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#660",
+      "title": "Enhance CLI to Use Negative Tags in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "update",
+        "suno",
+        "api",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/660",
+      "summary": "This update modifies the CLI to send the `negative_tags` field instead of `style_negative` for both generate and custom commands. The existing `--negative-style` flag remains intact, ensuring backward compatibility. All related tests have passed successfully, confirming the changes are robust and ready for deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#502",
+      "title": "Enhance Suno SDK with Negative Tags Support in S D K 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "suno",
+        "sdk",
+        "update",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/502",
+      "summary": "This update regenerates the Python, TypeScript, and Go Suno provider clients to incorporate `negative_tags` in the public option names and outbound JSON. All SDKs have passed validation tests, ensuring functionality remains intact. The changes align the generated source with the stored Suno specification, paving the way for improved user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1540",
+      "title": "Enhance Suno with Negative Tags in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "suno",
+        "update",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1540",
+      "summary": "This update introduces the ability to send excluded styles through the canonical `negative_tags` field in Suno. The legacy `style_negative` field is still supported for historical task reuse, ensuring a smooth transition. Key components in the configuration and task preview have been updated to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#666",
+      "title": "Standardize negative_tags parameter in A P Is 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "docs",
+        "suno",
+        "api",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/666",
+      "summary": "This update introduces the `negative_tags` parameter to the public Suno excluded-style request field, replacing the previous `style_negative` alias. This change ensures compatibility while enhancing clarity for users. The update is additive and non-billing, allowing old clients to function without interruption during the rollout."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#842",
+      "title": "Standardize negative_tags in Skills 🎶",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "docs",
+        "suno",
+        "skills",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/842",
+      "summary": "This update standardizes the public Suno excluded-style request field to `negative_tags`, replacing the previous `style_negative` alias for better clarity and consistency. The change is additive and non-billing, ensuring that old clients will continue to function during the rollout. This modification enhances the music skill's ability to avoid specific styles or genres effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#345",
+      "title": "Enhance Suno Plugin with Negative Tags in Dify 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "feature",
+        "suno",
+        "plugin",
+        "update",
+        "dify"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/345",
+      "summary": "This update standardizes the Suno plugin by exposing the `negative_tags` field, replacing the previous `style_negative` alias. The changes ensure compatibility while enhancing functionality for users. The rollout is additive and non-billing, allowing old clients to continue operating seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#542",
+      "title": "Enhance MCP Tools with Negative Tags in M C Ps 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "feature",
+        "mcp",
+        "suno",
+        "audio",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/542",
+      "summary": "This update introduces the `negative_tags` feature in the Suno MCP tool schema and payload, aligning with the canonical API contract. Key modifications include updates to the audio tools and tests to ensure proper functionality of the new parameter. The changes enhance the customization options for audio generation, allowing users to exclude specific styles more effectively."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1301",
+      "title": "Update Suno Negative Tags Field in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "suno",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces the `negative_tags` field as the primary method for excluding styles in Suno, replacing the deprecated `style_negative` alias. The change ensures that runtime workers prioritize `negative_tags`, enhancing compatibility across various services. Validation confirms the successful integration of this new field into the public schema."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1853",
+      "title": "Standardize Negative Tags in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "suno",
+        "platform",
+        "update",
+        "standardization"
+      ],
+      "public": false,
+      "summary": "This update standardizes the public Suno excluded-style request field to `negative_tags`, ensuring consistency across the platform. The legacy `style_negative` will remain as a compatibility alias but will not take precedence. All affected TypeScript workers have been validated and compile successfully, maintaining backward compatibility for existing clients."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1538",
+      "title": "Streamline Logo Rendering from Site Config in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "branding",
+        "logo",
+        "nexior",
+        "fix",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1538",
+      "summary": "This update enhances the Logo component by ensuring it directly uses the Site's logo configuration, eliminating hostname-based branding decisions. The new logic applies uniformly across all domains, allowing for dynamic rendering of logos while maintaining fallback options. Comprehensive testing confirms that all branding scenarios are functioning correctly."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#1095",
       "title": "Enhance Solana Signing Process in Frontend Web 🚀",
       "tags": [
