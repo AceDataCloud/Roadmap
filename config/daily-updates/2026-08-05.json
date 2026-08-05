@@ -3,6 +3,137 @@
   "date": "2026-08-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1534",
+      "title": "Enhance Studio Capability Flags in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "enhancement",
+        "ui",
+        "i18n",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1534",
+      "summary": "This update ensures that the `/intro` page correctly reflects the enabled capabilities for all sites, including `studio.acedata.cloud`. Key changes include improved loading states, accurate filtering of model and product cards, and the use of appropriate screenshots based on enabled features. The misleading 'models' statistic has been replaced with 'available products' for clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1299",
+      "title": "Fix in-cluster client initialization for Helm deployment in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "deployment",
+        "helm",
+        "kubernetes",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where the in-cluster client was not explicitly initialized, causing connection errors during Helm operations. A new method, `get_k8s_networking_client()`, ensures that the Networking client is built only after the necessary configurations are loaded. The changes have been validated with 70 tests passing and a successful dry run on the discord-bot Ingress."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#341",
+      "title": "Final Implementation of Soft Cutoff Adjustments in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "deployment",
+        "ingress",
+        "billing",
+        "rbac",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update addresses the deployment issues caused by the AKS admission webhook, which prevented multiple Ingress entries with the same host/path. Key changes include adding a 302 redirect for all tenant Ingress to the purchase page, ensuring platform availability during billing, and implementing a strategy for handling RBAC failures. The adjustments align with user expectations for site-wide interception during payment issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1297",
+      "title": "Fix Ingress Design Flaw for AKS Deployment in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "fix",
+        "ingress",
+        "aks",
+        "deployment",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue with the Ingress configuration that caused deployment failures in AKS due to duplicate host/path entries. The solution simplifies the design by implementing a 302 redirect to the renewal page, ensuring compliance with user requirements for site-wide blocking. Additionally, it resolves several gaps in the deployment process, enhancing overall stability and security."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1296",
+      "title": "Fix payment method handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "monitoring",
+        "tests",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where orders without a payment method were incorrectly categorized as 'Unknown', triggering false alarms in production metrics. The fix excludes null payment method entries during data aggregation and adds a regression test to ensure these orders do not affect alarm triggers. The changes improve the accuracy of payment health metrics and enhance overall system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1843",
+      "title": "Enhance Claude Code System Context Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "bugfix",
+        "validation",
+        "metadata",
+        "system",
+        "ClaudeCode"
+      ],
+      "public": false,
+      "summary": "This update replaces the canonical system string with an ordered representation of `systemBlocks`, ensuring that Anthropic `cache_control` metadata is preserved during Messages routing. It promotes text-only Claude Code `system` and `developer` entries before validation, while maintaining strict error handling for unknown roles and non-text blocks. Overall, these changes improve the robustness and clarity of system context management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#656",
+      "title": "Enhance openai CLI with latest API updates in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "openai",
+        "cli",
+        "api",
+        "updates",
+        "compatibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/656",
+      "summary": "This update aligns the `openai` CLI package with the latest changes from the upstream Docs/OpenAPI. Key improvements include updated command mappings, request schema parity, and corrected endpoint paths, all while maintaining backward compatibility for existing users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#538",
+      "title": "Align OpenAI MCP Server with Latest Docs Updates in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "openai",
+        "mcp",
+        "api",
+        "updates",
+        "compatibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/538",
+      "summary": "This update synchronizes the OpenAI MCP server with the latest OpenAPI contract from AceDataCloud/Docs. Key changes include updates to provider/model enum coverage, request parameter shapes, and endpoint path mappings to ensure spec/code parity while maintaining backward compatibility. The existing MCP server architecture remains intact, with new support added without removing legacy paths."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#654",
       "title": "OpenAI CLI Verified for Docs Sync in Clis 🚀",
       "tags": [
