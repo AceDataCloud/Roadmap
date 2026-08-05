@@ -3,6 +3,54 @@
   "date": "2026-08-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1838",
+      "title": "Enhance OpenAI Response Billing Accuracy in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "openai",
+        "streaming",
+        "tests",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the accuracy of billing for OpenAI responses by reading authoritative usage data from the response stream. Key changes include preserving cached token details in JSON and streaming records, along with adding regression tests for both non-streaming and real-shape streaming usage. The adjustments aim to ensure that billing reflects actual usage more accurately, addressing previous discrepancies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1839",
+      "title": "Enhance Messages Reference Parity in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "testing",
+        "messages",
+        "differential",
+        "ci"
+      ],
+      "public": false,
+      "summary": "This update introduces a configurable live differential suite for Anthropic Messages, allowing for comprehensive comparisons of non-stream fields and tool usage. Key changes include aligning synthesized Message objects with nullable fields and ensuring optional reference credentials for CI and forks. The validation process confirmed 83 tests passed with no failures, ensuring robust functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1836",
+      "title": "Updated Model Mappings for Claude in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "model-mapping",
+        "gpt",
+        "claude",
+        "updates",
+        "production"
+      ],
+      "public": false,
+      "summary": "This update introduces new mappings for Claude families to their respective GPT fallback tiers. Key changes include routing `kimi-k3`, `claude-fable-5`, and `claude-opus-5` to `gpt-5.6-sol`, while Opus 4.5-4.8 aliases now point to `gpt-5.5`. The complete mapping is maintained in `modelAliases.js`, ensuring consistency across production environments."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#1293",
       "title": "Update Suno Consumption Rates to 0.56 Credits in Backend 🚀",
       "tags": [
