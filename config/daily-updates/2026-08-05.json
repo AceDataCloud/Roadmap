@@ -3,6 +3,235 @@
   "date": "2026-08-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1095",
+      "title": "Enhance Solana Signing Process in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "solana",
+        "frontend",
+        "payment",
+        "rpc",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update improves the Solana signing process by fetching the recent blockhash through the PlatformBackend proxy, eliminating the need for direct public RPC calls. It also builds the official v2 payment envelope locally, which helps avoid 403 errors during wallet signing. These changes enhance the reliability and security of the payment process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1537",
+      "title": "Revamp Presentation Header and Card Layout in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "design",
+        "responsive",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1537",
+      "summary": "The `/intro` page now features a streamlined presentation header with a single centered logo, removing unnecessary navigation elements. Additionally, product rows are now balanced across devices, ensuring a cleaner layout with up to five columns on desktop. Comprehensive testing confirms all changes are functioning as intended, enhancing user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#541",
+      "title": "Ensure Seedream Sync with Updated Docs in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "openapi",
+        "seedream",
+        "sync",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/541",
+      "summary": "This update verifies that the Seedream MCP aligns with the latest OpenAPI specifications. Key changes include the removal of deprecated models and parameters, ensuring that supported Seedream models and endpoint paths are consistent with the upstream spec. No source or test changes were necessary for this alignment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#343",
+      "title": "Streamline Seedream Plugin Options in Dify 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "seedream",
+        "update",
+        "plugin",
+        "dify",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/343",
+      "summary": "This update removes the unavailable Seedream 3.0 T2I and SeedEdit 3.0 options from the generate/edit tool forms. It introduces Seedream 5.0 Pro and 5.0 Lite to enhance functionality. Additionally, unsupported handling of `seed` and `guidance_scale` has been eliminated, ensuring smoother image generation processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#839",
+      "title": "Streamline Seedream Image Skills in Skills 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "seedream",
+        "skills",
+        "update",
+        "cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/839",
+      "summary": "This update removes the unavailable Seedream 3.0 T2I and SeedEdit 3.0 options from the canonical Seedream image skill. It also updates the image editing examples to utilize Seedream 5.0 Lite and eliminates unsupported parameters, ensuring clarity in model-specific sizes. These changes enhance the user experience by focusing on currently supported features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#663",
+      "title": "Streamline Seedream Documentation by Removing Outdated Models in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "api",
+        "updates",
+        "seedream"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/663",
+      "summary": "This update removes references to the unavailable Seedream 3.0 models from the API documentation, including the README and integration guide. The image editing examples have been updated to utilize the Seedream 5.0 Lite model and the current image array field. Additionally, the Coze schema has been aligned with the latest versions, enhancing clarity and usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#657",
+      "title": "Streamline CLI by Removing Unavailable Models in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "cleanup",
+        "models",
+        "documentation",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/657",
+      "summary": "This update removes the unavailable Seedream 3.0 T2I and SeedEdit 3.0 models from the CLI model list. The README and model help documentation have been updated accordingly, and regression tests have been added to ensure retired models remain excluded. This change enhances the clarity and usability of the CLI for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#539",
+      "title": "Streamline Seedream Tool Options in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "seedream",
+        "update",
+        "documentation",
+        "tools",
+        "cleanup"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/539",
+      "summary": "This update removes the unavailable Seedream 3.0 T2I and SeedEdit 3.0 options from public model literals, ensuring users have access only to supported models. The default image editing has been set to Seedream 5.0 Lite, and guidance for model editing and resolution capabilities has been corrected across various documentation. These changes enhance clarity and usability for users relying on the Seedream tools."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1536",
+      "title": "Streamline Seedream Options in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "seedream",
+        "cleanup",
+        "migration",
+        "testing",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1536",
+      "summary": "This update removes the unavailable Seedream 3.0 models from the Studio model picker and migrates any persisted configurations to supported defaults. Incompatible values are cleared during migration, and dead capability branches have been eliminated with added regression tests. The changes ensure a smoother user experience by focusing on currently supported models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1300",
+      "title": "Retire Seedream 3.0 Models in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "seedream",
+        "backend",
+        "api",
+        "documentation",
+        "pricing"
+      ],
+      "public": false,
+      "summary": "This update removes the Seedream 3.0 T2I and SeedEdit 3.0 models from the OpenAPI enum and customer-facing documentation. Additionally, it updates service pricing to exclude these retired models while maintaining hidden billing rules for historical settlements. The changes also correct model size guidance and image-editing examples to reflect current supported models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1851",
+      "title": "Retire outdated Seedream 3.0 models in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "seedream",
+        "models",
+        "update",
+        "platform",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update removes the unavailable Seedream 3.0 T2I and SeedEdit model IDs from the worker allowlist, ensuring that requests for these retired models are rejected with an HTTP 400 error. The existing Seedream 5.0 Pro, 5.0 Lite, 4.5, and 4.0 paths remain unchanged, maintaining service stability. This change is part of a coordinated withdrawal of Seedream v3 models to enhance overall performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1535",
+      "title": "Revamped Campaign Copy and Product Cards in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "copy",
+        "branding",
+        "localization",
+        "design"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1535",
+      "summary": "This update enhances the introductory page with a cohesive campaign voice, replacing admin-style headings with engaging, user-friendly titles. Each product card now features its canonical brand logo, improving recognition and consistency across the platform. The changes aim to create a more inviting experience for users while maintaining accurate capability listings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1850",
+      "title": "Fix heartbeat collision disconnects in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "heartbeat",
+        "relay",
+        "stability",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical issue where simultaneous heartbeat signals caused the relay to erroneously close healthy connections. The fix implements a rate limit specifically for unsolicited client heartbeats while allowing immediate ACKs from the relay, ensuring stable connections. Comprehensive tests confirm that the changes prevent the `heartbeat_rate_exceeded` error and maintain connection integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1093",
+      "title": "Fix config persistence to prevent outdated IP issues in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "vuex",
+        "frontend",
+        "network",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update removes `config` from the persisted state in Vuex to avoid issues with outdated IP addresses affecting region detection. Users switching networks or using VPNs will no longer face incorrect menu and payment option visibility. Key states like user, token, and currency remain intact while ensuring a smoother experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Index#342",
       "title": "Complete Protocol Parity Plan for GitHub Proxy in Index 🚀",
       "tags": [
