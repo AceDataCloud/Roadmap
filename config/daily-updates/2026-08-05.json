@@ -3,6 +3,100 @@
   "date": "2026-08-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#654",
+      "title": "OpenAI CLI Verified for Docs Sync in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "openai",
+        "cli",
+        "verification",
+        "docs",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/654",
+      "summary": "The OpenAI CLI has been thoroughly checked against the latest `openapi/openai.json` specification, confirming that no code changes are necessary. All supported endpoints, request fields, option mappings, and model enums have been validated, ensuring alignment with the current documentation. This update maintains the integrity of the CLI without any file modifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#528",
+      "title": "Sync suno with Docs OpenAPI and update CLI help text in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "sync",
+        "docs",
+        "cli",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/528",
+      "summary": "This update verifies that the `suno` service is in sync with the latest OpenAPI specifications, addressing a stale default model in the CLI help text. The only change made was updating the `SUNO_DEFAULT_MODEL` from `chirp-v4-5` to `chirp-v5-5`, ensuring accurate documentation without altering any code paths or tool signatures."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1295",
+      "title": "Enhance auto sizing for semantic canvas in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "backend",
+        "image-processing",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update documents the continuous-ratio semantic canvas planning for explicit `size=auto`, detailing how the platform prioritizes various standards and conventions. It clarifies support for non-preset ratios and ensures deterministic normalization to a 16-pixel grid. The changes improve the handling of image sizes, retaining fail-open behavior while distinguishing between explicit `auto` and omitted sizes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1840",
+      "title": "Enhance Auto Size Classification for Images in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "image-processing",
+        "gpt-5",
+        "auto-size",
+        "platform-service",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces a new classification system for `size=auto` prompts using `gpt-5.6-luna`, allowing for a continuous aspect ratio instead of fixed sizes. Key improvements include validation against common standards, normalization to provider limits, and async task handling for better performance. The implementation has been tested across multiple services, ensuring consistency and accuracy in image sizing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1841",
+      "title": "Enhance Cached Token Assertions in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "testing",
+        "performance",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update strengthens the cached-token recorder by ensuring that cached details are populated before both non-stream and streaming price calculations. Additionally, it verifies that the cost object is correctly injected into the response usage. The changes have passed focused usage tests and the full OpenAI worker suite, ensuring robust functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1842",
+      "title": "Enhance Reasoning Summaries and Model IDs in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "reasoning",
+        "model-ids",
+        "sse",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update preserves the `reasoning.summary` through canonical routing and emits the complete official reasoning-summary SSE lifecycle. Additionally, it normalizes display-only `[1m]` suffixes from public `/v1/models` IDs while maintaining internal capability discovery. These changes improve the clarity and usability of model IDs and enhance the overall response handling."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1838",
       "title": "Enhance OpenAI Response Billing Accuracy in Platform Service 🚀",
       "tags": [
