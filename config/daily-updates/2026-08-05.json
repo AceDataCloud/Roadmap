@@ -1,0 +1,179 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-08-05",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1293",
+      "title": "Update Suno Consumption Rates to 0.56 Credits in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "suno",
+        "billing",
+        "api",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update normalizes the remaining Suno consumption rates from 0.55 to 0.56 credits across various rules, including extend, underpainting, and artist consistency. The API billing and service display pricing have been aligned accordingly, ensuring no 0.55 values remain in the billing files. All related tests have passed successfully, confirming the integrity of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1290",
+      "title": "Enhance Soft Cutoff for Expired Deployments in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "deployment",
+        "billing",
+        "features",
+        "tests",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update extends the grace period for expired deployments from 3 to 7 days, allowing workloads to continue running without interruption. It introduces a soft cutoff mechanism that enables immediate unblocking upon payment, eliminating the need to wait for cron jobs. Additionally, the PR includes comprehensive tests to ensure compatibility and proper handling of various states."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#652",
+      "title": "Ensure Suno CLI Sync with Documentation in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "suno",
+        "cli",
+        "docs",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/652",
+      "summary": "This update verifies that the Suno CLI is fully synchronized with the latest documentation updates. All endpoints, actions, models, and request parameters have been confirmed to align with the current OpenAPI contract. Notably, the recent changes in the documentation were purely content updates, requiring no modifications to the CLI or tests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#534",
+      "title": "Update Suno MCP for OpenAPI Sync in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "openapi",
+        "suno",
+        "api",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/534",
+      "summary": "This update aligns the Suno MCP server with the latest OpenAPI changes, focusing on API-surface parity within the `suno/` package. Key enhancements include updated request parameter handling, model and enum coverage, and consistent response mapping to match current documentation. Backward compatibility is preserved while integrating new fields for improved functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1292",
+      "title": "Optimize Suno Consumption Rates in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "suno",
+        "cost",
+        "backend",
+        "optimization"
+      ],
+      "public": false,
+      "summary": "This update reduces Suno generation and consumption costs from 0.77 to 0.56 credits, and all stems consumption from 2.2 to 1.6 credits. The changes ensure that API billing and service display pricing remain aligned, while also updating relevant cost assertions. Comprehensive testing has confirmed that all related tests passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#408",
+      "title": "Enhanced Security Measures for Account Verification in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "security",
+        "verification",
+        "fraud",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update addresses critical vulnerabilities in account verification processes by refining the detection of fraudulent signups. Key changes include stricter rules for local-part username formats and improved conditions for identifying suspicious account patterns. The modifications aim to enhance the overall security and integrity of the authentication system."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1092",
+      "title": "Enhance Subscription Status Handling in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "deployment",
+        "subscription",
+        "i18n",
+        "refactor"
+      ],
+      "public": false,
+      "summary": "This update integrates subscription status directly from the backend, ensuring accurate representation of states like 'suspended' and 'reclaimed'. The BillingBar component has been refactored to eliminate hardcoded values and now displays relevant information for all subscription types, improving user experience. Additionally, internationalization has been updated to support new status messages across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1289",
+      "title": "Enhance Ingress Traffic Control for Expired Tenants in Backend 🚦",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "ingress",
+        "deployment",
+        "backend",
+        "traffic-control"
+      ],
+      "public": false,
+      "summary": "This update introduces a soft cutoff capability for Ingress traffic, allowing expired tenants to be redirected without stopping their workloads. Key changes include the implementation of a new method for blocking traffic at the Ingress level while preserving the runtime state of applications. The modifications ensure that expired tenants can renew their services seamlessly, improving user experience and operational efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1059",
+      "title": "Upgrade Python Setup Action to Version 7 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "ci-cd",
+        "python"
+      ],
+      "public": false,
+      "summary": "This update bumps the actions/setup-python from version 5 to 7 across the workflow files. Key enhancements include migration to ESM, improved error handling, and updated documentation. These changes will enhance the reliability and performance of Python setup in our CI/CD processes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1833",
+      "title": "Enhance API Compliance with OpenAI Standards in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "api",
+        "bugfix",
+        "testing",
+        "compliance",
+        "openai"
+      ],
+      "public": false,
+      "summary": "This update aligns our API response fields with the official OpenAI API by addressing five key discrepancies. Notable fixes include correcting the Responses stream to avoid sending extra `[DONE]` signals and adding missing fields like `instructions` and `service_tier`. A new test suite has been introduced to ensure ongoing compliance and catch any future discrepancies."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1834",
+      "title": "Reprioritize Channels for Better Output Quality in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "config",
+        "update",
+        "routing",
+        "performance"
+      ],
+      "public": false,
+      "summary": "The channel order for nano-banana has been updated to prioritize mountsea over cqtai, improving output quality. This change affects both the `/nano-banana` and `/nano-banana/tasks` routes while keeping all policies unchanged. The deployment script has also been corrected to reflect this new order, ensuring consistency across configurations."
+    }
+  ]
+}
