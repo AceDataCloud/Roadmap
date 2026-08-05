@@ -3,6 +3,119 @@
   "date": "2026-08-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1847",
+      "title": "Enhance Protocol Header Management in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "security",
+        "headers",
+        "proxy",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update enforces strict boundaries for protocol headers in the GitHub proxy. It allows only specific semantic request headers while stripping sensitive information like authorization and cookies. Additionally, it ensures that only relevant response headers are returned, improving security and compliance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1846",
+      "title": "Freeze request routing snapshots for stable model plans in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "github-proxy",
+        "routing",
+        "snapshot",
+        "debug",
+        "logging",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces immutable request-scoped snapshots capturing model capabilities and routing plans, ensuring consistency per request. It versions successful catalog refreshes and includes these versions in structured logs. Debug headers exposing routing details are now available only when explicitly requested, keeping default responses clean. Comprehensive tests validate the new snapshot behavior and debug header functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1845",
+      "title": "Enhance Proxy Security with Fail Closed on Unsupported States in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "security",
+        "proxy",
+        "feature",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a fail-closed mechanism for unsupported stateful features in the GitHub proxy. Key changes include rejecting specific response and message fields before any catalog or model requests, ensuring that only valid stateless values are accepted. The implementation enhances the reliability of the proxy by preventing incorrect state handling across replicas and restarts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1844",
+      "title": "Enhance Request Contracts for Stability in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "contracts",
+        "validation",
+        "github-proxy",
+        "features",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update pins the audited OpenAI and Anthropic contract revisions in a committed manifest, ensuring deterministic generation of runtime request contracts without external dependencies. Key changes include the removal of optional Responses `input`, the requirement of `model` across all protocols, and the acceptance of specific cache pre-warm requests. Validation tests confirm that all changes are functioning as intended."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1551",
+      "title": "Enhance Branding with Dynamic Site Copy in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "branding",
+        "site",
+        "dynamic",
+        "update",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1551",
+      "summary": "This update integrates dynamic site-specific titles and descriptions into the hero sections of the home and intro pages. Previously, fixed marketing strings were displayed, which did not reflect the actual branding of the site. Now, the site title and description are used as the primary content, with fallback options for unconfigured sites."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1856",
+      "title": "Enhance TikTok Publish Validation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "tiktok",
+        "validation",
+        "platform",
+        "updates",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update introduces validation for TikTok publish confirmations by exposing necessary creator and media fields in the action-confirmation tool schema. It ensures that malformed TikTok confirmations are rejected before conversation pauses, while maintaining compatibility with generic confirmations. Comprehensive tests have been conducted, achieving full pass rates across targeted and full worker test suites."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1539",
+      "title": "Enhance TikTok Publish Confirmation in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "tiktok",
+        "ui",
+        "localization",
+        "bugfix",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1539",
+      "summary": "This update redesigns the TikTok publish confirmation into a responsive media-and-settings review screen. Key improvements include media loading/error fallbacks, explicit validation reasons, and localized support across all languages. Additionally, incomplete creator-info payloads are now blocked to enhance user experience."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#1094",
       "title": "Enhance Debugger Reclamation Process in Frontend Web 🤖",
       "tags": [
