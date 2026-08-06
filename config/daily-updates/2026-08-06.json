@@ -3,6 +3,404 @@
   "date": "2026-08-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1859",
+      "title": "Ensure valid IANA time zones for scheduled tasks in Platform Service ⏰",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "timezone",
+        "validation",
+        "scheduled-tasks",
+        "aichat2",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update adds strict validation for scheduled task time zones in the aichat2 module, accepting only valid IANA zones like Asia/Shanghai, America/Los_Angeles, and UTC. It rejects missing, fixed-offset, or unknown zones before saving or scheduling tasks. Comprehensive tests now cover both cron and interval schedule validations, improving reliability and preventing scheduling errors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1309",
+      "title": "Enhance Time Zone Documentation for Scheduled Tasks in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "scheduled-tasks",
+        "time-zones",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update improves the documentation for scheduled tasks by detailing the IANA time-zone selector and its implications. It clarifies that saved time zones remain fixed, ensuring consistent wall-clock semantics for both cloud and local executions. Additionally, it explains the behavior of Daylight Saving Time and the use of jitter in cloud tasks, while local tasks operate without it."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1554",
+      "title": "Enhance Scheduled Tasks with Time Zone Support in Nexior 🌍",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "ui",
+        "testing",
+        "localization"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1554",
+      "summary": "This update introduces an explicit IANA time-zone picker for scheduled tasks, allowing users to select and display their preferred time zones. It ensures that tasks honor the saved time zone during desktop-local cron scheduling, including daylight saving time transitions. Additionally, the update includes validation for locale coverage and adds focused tests for the UI and scheduling functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#345",
+      "title": "Enhanced Remediation and Growth Plan for ACE in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "remediation",
+        "growth",
+        "documentation",
+        "compliance",
+        "planning"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive ACE remediation and growth plan based on the latest production audit. Key changes include the registration of two new P0 defects, improved documentation for compliance, and a focus on establishing a single canonical ACE roadmap. The plan aims to enhance operational transparency and ensure effective implementation across various platforms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1315",
+      "title": "Fix Telegram Migration Conflict in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "migration",
+        "telegram",
+        "backend",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update renumbers the unapplied Telegram service data migration from `0260` to `0262` to resolve conflicts with concurrent releases. It ensures that the production environment correctly applies the Telegram Service/API rows by depending on the current migration head. The changes have been verified against the production migration table."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1106",
+      "title": "Streamline Deployment Controls in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "deployment",
+        "ui",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update removes manual scaling controls from the deployment management page, simplifying the user interface. Additionally, obsolete frontend API client methods and component states have been eliminated, while maintaining read-only replica health status across all locales. These changes enhance the overall user experience and reduce complexity in deployment management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1305",
+      "title": "Streamline Deployment by Disabling Manual Scaling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "deployment",
+        "backend",
+        "testing",
+        "scaling",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update removes the public manual scaling endpoint for deployments, ensuring a more streamlined process. Provider-level scaling remains intact for subscription expiry suspension and renewal recovery. A new route regression test has been added to confirm the old endpoint is no longer accessible."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1306",
+      "title": "Enhance WeChat WebSocket API Documentation in Backend 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "webrtc",
+        "api",
+        "documentation",
+        "testing",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update registers the WeChat bot WebSocket stream as an appliance API documentation entry. It includes the generation of an OpenAPI 3 WebSocket handshake contract with authentication and event schema. Additionally, focused tests have been added to ensure the integrity of the generated specifications and migration mapping."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1109",
+      "title": "Introducing Telegram QR Login Wizard in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "telegram",
+        "deployment",
+        "localization",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update adds a Telegram-specific deployment wizard for tenants, enabling QR login and 2FA password management. Users will only see MCP/Bearer credentials after successful authentication, enhancing security. Additionally, complete translations have been implemented across all supported locales to ensure accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1314",
+      "title": "Updated Kimi Code Icon in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "migration",
+        "icon",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update replaces the Kimi Code sidebar icon with a new transparent-background PNG. A reversible data migration has been implemented to ensure the live Document reflects this change seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#81",
+      "title": "Enhance Model Selector Provenance in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "bugfix",
+        "improvement",
+        "testing",
+        "codingbridge"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/81",
+      "summary": "This update introduces significant improvements to how model selectors are handled in the Coding Bridge. Key changes include versioning the sidecar model contract and separating the model selector from the resolved model ID, ensuring accurate context during cross-device resumes. Additionally, legacy model values are treated as ambiguous to prevent incorrect assumptions, enhancing overall reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1311",
+      "title": "Deploy Telegram Account Proxy Service in Backend 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "telegram",
+        "api",
+        "backend",
+        "documentation",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces a new public Telegram personal-account Deployment Service, complete with QR-login REST OpenAPI contracts and cost rules. Additionally, it includes scripts for reproducible service specifications and bilingual documentation to enhance user accessibility. The changes aim to streamline the integration of personal Telegram accounts with AI and automation tools."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1860",
+      "title": "Enhance Telegram Bot with Per-Tenant Proxy in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "telegram",
+        "proxy",
+        "helm",
+        "mcp",
+        "rest",
+        "authentication"
+      ],
+      "public": false,
+      "summary": "This update introduces a per-tenant Telethon account proxy, enabling QR and 2FA login for enhanced security. Key features include Bearer-protected MCP and REST account operations, along with session persistence on a single-replica PVC. Additionally, an OCI Helm chart has been added to facilitate deployment using the shared nginx-router ingress."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#409",
+      "title": "Enhance Signup Controls for Better Security in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "signup",
+        "security",
+        "backend",
+        "updates",
+        "abuse"
+      ],
+      "public": false,
+      "summary": "This update introduces a new 10-per-24h limit on domain signups, complementing the existing 5-per-hour controls. The signup-abuse review pipeline will now run every four hours instead of daily, improving response times to potential abuse. Additionally, the term 'credits_reclaimed' has been updated to 'credits_frozen' to better reflect the status of disabled applications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1865",
+      "title": "Enhance Chat Handling for Production Parity in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "production",
+        "chat",
+        "testing",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update restores production native parity by ensuring the forced Responses model list is honored, even when the Copilot catalog overclaims Chat support. Key changes include adjusting the handling of `max_completion_tokens` to align with child-compatible requests and implementing extensive regression tests to validate the fixes. The modifications aim to improve the reliability of Chat interactions in production environments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1864",
+      "title": "Enhance Contract Compatibility in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "contract",
+        "compatibility",
+        "update",
+        "enhancement",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update enforces full contract compatibility by deriving and pinning a comprehensive OpenAI/Anthropic contract surface, including 1,836 atoms and various operational workflows. Key changes include the addition of legacy functions, improved semantic postconditions, and a shift to capability-based routing for requests. These enhancements aim to prevent misleading HTTP responses and ensure robust handling of diverse operational scenarios."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1313",
+      "title": "Improve webhook response handling and task ID extraction in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "webhook",
+        "backend",
+        "bugfix",
+        "logging",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update enhances webhook delivery by preserving the full response body for protocol parsing while continuing to log only a truncated snippet for display. It also fixes the Wisdom task-id extraction for durable announcement delivery. These changes improve reliability and debugging capabilities in webhook processing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1312",
+      "title": "Register private Hermes deployment service with secure tenant credentials in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "deployment",
+        "hermes",
+        "helm",
+        "security",
+        "credentials",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces a private Hermes Deployment Service using the Helm provider, featuring auto-provisioned global credentials and isolated secrets for Dashboard and API access. Tenant access is restricted to the Dashboard password, while model and signing secrets remain privileged. The change includes new migration scripts, enhanced deployment contracts, and comprehensive tests to ensure secure and reliable service deployment. Documentation for the private hosted beta flow has also been added."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1110",
+      "title": "Enhance Hermes Deployment Wizard and Dashboard Access in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "deployment",
+        "localization",
+        "dashboard",
+        "hermes"
+      ],
+      "public": false,
+      "summary": "This update introduces a three-step deployment wizard for Hermes, enhancing user experience with a streamlined setup process. Additionally, a new Dashboard credential card has been added, ensuring model and API signing secrets remain secure. The update also includes comprehensive localization support with maintained translations across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/DeploymentHermes#3",
+      "title": "Enhance metadata sync handling in Deployment Hermes 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "DeploymentHermes",
+        "fix",
+        "deployment",
+        "metadata",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update modifies the metadata synchronization process to skip syncing if the Hermes Service is not yet registered. This change prevents release failures after a successful OCI push, ensuring smoother deployments. The published chart has been verified to work correctly with the new logic."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/DeploymentHermes#2",
+      "title": "Fix GHCR Login with Actions Token in Deployment Hermes 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "DeploymentHermes",
+        "fix",
+        "workflow",
+        "ghcr",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "Updated the release workflow to use the repository-scoped Actions token for GHCR login, replacing the unset `GHCR_TOKEN` secret. This change addresses the login failure encountered during the first release attempt, ensuring smoother deployments moving forward."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/DeploymentHermes#1",
+      "title": "Exciting New Hermes Agent Deployment Chart in Deployment Hermes 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "DeploymentHermes",
+        "helm",
+        "deployment",
+        "kubernetes",
+        "hermes",
+        "charts"
+      ],
+      "public": false,
+      "summary": "This update introduces a dedicated per-tenant Hermes Agent StatefulSet chart, enhancing deployment capabilities for AceDataCloud. Key features include persistent state storage under `/opt/data`, a password-protected Dashboard via `nginx-router`, and seamless integration of model and dashboard secrets from Kubernetes. The chart has been published to GHCR and is ready for production use."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1555",
+      "title": "Revamp Routes for Enhanced Navigation in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "routes",
+        "navigation",
+        "update",
+        "verification",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1555",
+      "summary": "This update swaps the routes for the capability-first product presentation and the white-label business presentation. The `/home` route now leads to capabilities, while `/business` covers branding and pricing. All changes have been verified with successful regression tests and no errors across routes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1307",
+      "title": "Enhance Announcement Delivery with Webhooks in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "webhooks",
+        "announcements",
+        "backend",
+        "delivery",
+        "cronjob",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces the `announcement.published` webhook event and improves delivery reliability by persisting per-destination deliveries with retry and idempotency. Scheduled announcements are now dispatched via a CronJob, and ordinary edits to published announcements will no longer be re-broadcasted. Comprehensive tests have been added to ensure functionality and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1858",
+      "title": "Enhance Discord Webhook Message Handling in Platform Service 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "discord",
+        "webhook",
+        "deduplication",
+        "api",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces deduplication for Discord webhook messages by honoring the `Idempotency-Key` on the proxy message endpoint. It ensures that repeated announcement requests return the original delivery result while preserving the existing error mapping. The changes have been validated with all tests passing successfully."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Wisdom#211",
       "title": "Enhance Announcement Broadcasting Features in Wisdom 🚀",
       "tags": [
