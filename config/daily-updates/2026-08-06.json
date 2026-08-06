@@ -1,0 +1,70 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-08-06",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#211",
+      "title": "Enhance Announcement Broadcasting Features in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "broadcast",
+        "announcement",
+        "api",
+        "testing",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces an authenticated announcement broadcast endpoint that sends messages to configured WeChat groups while ensuring idempotency by deduplicating repeated announcement IDs. It also includes new tests to validate the functionality and robustness of the announcement broadcasting process. The production announcement appliance must be upgraded to this build before enabling the webhook."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#666",
+      "title": "Align kimi CLI with Latest OpenAPI Updates in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "openapi",
+        "updates",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/666",
+      "summary": "This update synchronizes the `kimi` CLI with the latest OpenAPI documentation, ensuring command definitions and options are accurately reflected. Key changes include adjustments to command descriptions and help text, as well as updates to command options for consistency with the API contract. Targeted tests have also been added to validate the new command behaviors and request mappings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#664",
+      "title": "Align CLI with Latest OpenAPI Updates in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "openapi",
+        "sync",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/664",
+      "summary": "This update syncs the `suno` CLI with the latest OpenAPI changes, ensuring command coverage and request mappings are accurate. Key adjustments include aligning command help text with operation summaries and maintaining backward compatibility with minimal changes. The update enhances clarity in spec-to-CLI mappings, reducing ambiguity for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#548",
+      "title": "Ensure Kimi Docs Sync is Unaffected in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docs",
+        "sync",
+        "verification",
+        "kimi"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/548",
+      "summary": "This update verifies that the Kimi Docs sync does not require any changes to the MCPs. The scope was confirmed by checking that the `openapi/kimi.json` defines the necessary endpoint without any local Kimi server needing updates. All unrelated MCP packages remain unchanged."
+    }
+  ]
+}

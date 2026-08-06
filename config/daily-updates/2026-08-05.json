@@ -3,6 +3,198 @@
   "date": "2026-08-05",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Index#344",
+      "title": "Revamp Scheduled-Task Templates in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "scheduled-tasks",
+        "templates",
+        "design",
+        "onboarding",
+        "referral"
+      ],
+      "public": false,
+      "summary": "This update introduces a new design for the scheduled-task template gallery along with a five-step onboarding wizard. Key features include defining instantiation rules, server-owned template snapshots, and runtime variables, as well as outlining Phase 2 referral campaigns. The implementation is organized into dependency-ordered PRs for better management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1303",
+      "title": "Enhance Kimi Code Integration Guide in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "kimi",
+        "integration",
+        "backend",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive Kimi Code integration guide, detailing CLI installation, Ace Data Cloud configuration, and usage instructions. Additionally, a new migration has been added to register the guide alongside existing resources, and a CDN-hosted favicon has been included. All changes have been verified with successful tests and live API checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1304",
+      "title": "Revamped Revenue Paths for Ace Data Cloud in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "revenue",
+        "white-label",
+        "API",
+        "promotion"
+      ],
+      "public": false,
+      "summary": "This update restructures the revenue model from three paths to two distinct business models: promoting Ace Data Cloud and operating a white-label platform. Key changes include the separation of the white-label Studio and API Platform, along with the introduction of new promotional tutorials and operational documentation. The API delivery methods have been streamlined, enhancing clarity and usability for developers and users alike."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1105",
+      "title": "Streamline Auto-Recharge Page by Removing Migration Notice in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "cleanup",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update removes the outdated payment migration warning from the auto-recharge page, enhancing user experience. Additionally, unused translations across all locales have been eliminated, ensuring cleaner code and improved maintainability. These changes contribute to a more seamless interaction for users managing their auto-recharge settings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1552",
+      "title": "Enhance TikTok Confirmation Branding in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "localization",
+        "branding",
+        "tiktok",
+        "i18n",
+        "ui"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1552",
+      "summary": "This update replaces the simulated music-note badge with the official TikTok brand glyph and localizes the TikTok confirmation title, summary, and action label based on the active Studio locale. Translations have been added across all supported locales, ensuring a consistent user experience. Comprehensive regression tests confirm that all changes are functioning as expected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1104",
+      "title": "Streamline Usage History to API Only in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "api",
+        "update",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update simplifies the Usage History page by removing the Type filter, ensuring it only displays API services. Additionally, it ignores the `type=Proxy` query parameter from old links to prevent access to the Proxy view. The API dropdown now exclusively shows interfaces belonging to the Api service type."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#80",
+      "title": "Enhance Transcript Recovery for Unsigned Thinking in Coding Bridge 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "transcripts",
+        "recovery",
+        "sdk",
+        "testing",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/80",
+      "summary": "This update introduces a robust mechanism to detect and safely resume unsigned thinking transcripts in the Agent SDK. Key changes include the creation of a deterministic recovery fork that removes only invalid thinking blocks while preserving essential data. Comprehensive testing confirms that the system now handles various edge cases effectively, ensuring a smoother user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1857",
+      "title": "Enhance Claude Alias Thinking Support in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "bugfix",
+        "github-proxy",
+        "claude",
+        "responses"
+      ],
+      "public": false,
+      "summary": "This update restores support for official Anthropic thinking shapes for configured Claude aliases, allowing requests to be routed through Responses reasoning. Key changes include handling enabled and adaptive thinking requests while ensuring fail-safe mechanisms for unknown shapes. The modifications enhance the functionality and reliability of the GitHub proxy for Claude models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1855",
+      "title": "Enhance GitHub Proxy for Mainstream Parity in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "improvement",
+        "testing",
+        "sse",
+        "proxy"
+      ],
+      "public": false,
+      "summary": "This update addresses critical gaps identified in the GitHub proxy by implementing fixes and adding regression coverage. Key improvements include normalization of token usage, enhanced parsing of Tornado SSE streams, and robust handling of endpoint mismatches. The changes ensure better compliance with mainstream models and improve overall system reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1852",
+      "title": "Enhance Lossless Protocol Conversion in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "protocol",
+        "codec",
+        "validation",
+        "cross-protocol"
+      ],
+      "public": false,
+      "summary": "This PR introduces a controlled native codec for models supporting the client protocol, ensuring the preservation of unknown extensions and metadata. It also implements a feature-aware cross-protocol planner that enforces lossless representations and fails on unsupported fields. Comprehensive validation has been performed, confirming the robustness of the new features and error handling mechanisms."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1849",
+      "title": "Enhance Usage Ledger for Dimensional Tracking in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "usage",
+        "ledger",
+        "billing",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update introduces a normalized dimensional usage ledger that consolidates Chat, Responses, and Messages usage. Key changes include separating input dimensions for uncached, cache-read, and cache-write, while maintaining authoritative billing totals. Additionally, fixes for cache double-counting ensure accurate client-visible usage metrics."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1848",
+      "title": "Enhance Streaming Terminal Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "streaming",
+        "fix",
+        "protocol",
+        "testing",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of streaming terminal states by tracking upstream terminal states and preserving the `response.incomplete` status. It ensures that protocol-native stream failures are emitted for various client types and that failed streams are closed cleanly. The changes enhance the robustness of the streaming functionality and have been validated with comprehensive test coverage."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1847",
       "title": "Enhance Protocol Header Management in Platform Service 🚀",
       "tags": [
