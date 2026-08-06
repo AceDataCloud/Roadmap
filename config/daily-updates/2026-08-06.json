@@ -3,6 +3,69 @@
   "date": "2026-08-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1116",
+      "title": "Enhance WebSocket Connection Handling in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "websocket",
+        "frontend",
+        "bugfix",
+        "localization",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update improves the WebSocket connection handling by introducing a distinct lifecycle model, allowing immediate feedback upon connection establishment. Users will now see a '101 · Connected' message right away, along with a waiting-for-events state. Additionally, the update ensures that all server frames are appended with their receive times and enhances error handling for connection issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1120",
+      "title": "Fix relay recovery serialization to prevent errors in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "relay",
+        "frontend",
+        "testing",
+        "stability"
+      ],
+      "public": false,
+      "summary": "This update addresses a critical bug where simultaneous reconnect and watchdog alarms could lead to a `BootstrapAlreadyUsedError`. The fix involves serializing the `reconnect` and `ensureConnected` processes within the DeviceRelay, ensuring that only one socket is created per bootstrap. Comprehensive tests confirm the effectiveness of this solution, enhancing the stability of the connection process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1871",
+      "title": "Introducing a Sleek New GitHub Proxy 2 in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "proxy",
+        "api",
+        "deployment",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces an isolated `github-proxy2` candidate that wraps `@jeffreycao/copilot-api@1.14.17`, enhancing the handling of Chat, Responses, and Messages. Key features include a direct bridge for Responses-only models and a focus on maintaining child usage without the need for a database or billing engine. The deployment ensures a smooth transition while preserving existing functionalities of the `github-proxy`."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1119",
+      "title": "Enhance Heartbeat Mechanism for MV3 Watchdog in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "heartbeat",
+        "mv3",
+        "frontend",
+        "watchdog"
+      ],
+      "public": false,
+      "summary": "This update addresses a bug where the MV3 Browser Agent socket's heartbeat was not sent due to Chrome suspending the timer. The fix modifies the existing watchdog to ensure a client heartbeat is sent, maintaining session policies while improving connection reliability. Verification tests have confirmed the effectiveness of the changes."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#1325",
       "title": "Enhance Browser Resource Handling in Backend 🚀",
       "tags": [
