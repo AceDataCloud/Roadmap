@@ -3,6 +3,54 @@
   "date": "2026-08-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#672",
+      "title": "Update GLM Model List in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "docs",
+        "update",
+        "glm",
+        "cli"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/672",
+      "summary": "The GLM documentation has been updated to include `glm-5.2` as the latest flagship model. The README now reflects the current OpenAPI model enum, showcasing `glm-5.2`, `glm-5`, and `glm-5-turbo`. Additionally, the quick-start example has been revised to demonstrate the use of `glm-5.2` for enhanced clarity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#554",
+      "title": "GLM MCP Validation Complete in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "validation",
+        "docs",
+        "openapi",
+        "mcp",
+        "sync"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/554",
+      "summary": "The GLM MCP has been successfully validated against the updated AceDataCloud Docs OpenAPI specification. Key checks confirmed that the `/glm/chat/completions` path and all 29 request properties align perfectly with the client interface, ensuring no changes are necessary for compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1322",
+      "title": "Enhance Private Hermes Deployment Service in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "deployment",
+        "hermes",
+        "backend",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update completes the private Hermes Deployment Service, ensuring no duplicate services are created. Key changes include the addition of stable Hermes icon and banner assets, translation keys for service details, and an updated integration guide. The service remains private, with no packages available, maintaining existing credential and billing paths."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Nexior#1558",
       "title": "Launch of Guided Template Center in Nexior 🚀",
       "tags": [
