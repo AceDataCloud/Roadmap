@@ -3,6 +3,38 @@
   "date": "2026-08-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Clis#674",
+      "title": "GLM CLI Alignment Verified in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "glossary",
+        "openapi",
+        "cli",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/674",
+      "summary": "The synchronization process confirmed that the GLM CLI is fully aligned with the current GLM OpenAPI specification. Key endpoints, including `/glm/chat/completions`, and model choices, such as `glm-5.2`, have been validated. The updates to the documentation do not affect the existing OpenAPI file or propose any changes to source or tests."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#556",
+      "title": "GLM MCP Sync Verified with Docs OpenAPI in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "glmsync",
+        "openapi",
+        "verification",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/556",
+      "summary": "The GLM service has been successfully reviewed against the current Docs OpenAPI contract following the upstream sync. Key confirmations include alignment of the `POST /glm/chat/completions` path and matching enums for model, `reasoning_effort`, and `service_tier`. All top-level request fields are correctly exposed and forwarded by the MCP client."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#672",
       "title": "Update GLM Model List in Clis 🚀",
       "tags": [
