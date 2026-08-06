@@ -3,6 +3,38 @@
   "date": "2026-08-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1325",
+      "title": "Enhance Browser Resource Handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "browser",
+        "security",
+        "backend",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a mechanism to derive safe filename extensions from receipt MIME types for browser resources. It sets the `Content-Disposition` header to ensure proper file naming during downloads, while also keeping unknown MIME types extensionless for security. Key tests have been added to verify these changes, enhancing the reliability of file handling in the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1118",
+      "title": "Enhance file input verification in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "extension",
+        "testing",
+        "release"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of controlled file inputs by dispatching composed input and change events after file selection. It ensures that the actual `input.files` list is accurately read back, preventing issues where the upload screen remains active despite successful API calls. The extension has been published as version 0.7.37 with enhanced testing coverage."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#1117",
       "title": "Enhance File Upload Notifications in Frontend Web 🚀",
       "tags": [
