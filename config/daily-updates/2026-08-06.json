@@ -3,6 +3,181 @@
   "date": "2026-08-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1117",
+      "title": "Enhance File Upload Notifications in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "file-upload",
+        "frontend",
+        "extension",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces native-equivalent bubbling `input` and `change` events after using `DOM.setFileInputFiles`, ensuring that controlled uploaders respond correctly. The extension has been published as version 0.7.36, maintaining all existing checks for resources. Comprehensive testing has confirmed that all unit tests passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1873",
+      "title": "Enhance Resource Management in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "testing",
+        "api",
+        "llm",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of staged browser upload resources across LLM turns in a single API request. It ensures that snapshot-first publish flows retain their upload credentials, preventing data loss. Additionally, a regression test has been added to verify the functionality, ensuring robust performance in production."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1115",
+      "title": "Enhance Telegram Management in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "telegram",
+        "frontend",
+        "deployment",
+        "management",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces a dedicated management interface for Telegram instances within the Deployment Manage page. Key features include embedded QR/2FA controls, streamlined subscription billing visibility, and focused configuration for initial deployments. The changes aim to improve user experience and operational efficiency for Telegram integrations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1324",
+      "title": "New Telegram Subscription Plans in Backend 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "telegram",
+        "subscriptions",
+        "backend",
+        "deployments",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces new 1, 7, and 30-day subscription plans for Telegram at competitive prices. The deployment subscription gating is now data-driven based on linked period packages, while free Helm deployments remain accessible without a linked package. Additionally, the Telegram seed script has been updated for reproducibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1114",
+      "title": "Enhance Hermes UI Component Registration in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "frontend",
+        "vue",
+        "element-plus",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update fixes the registration of Element Plus components in the Hermes UI, specifically in `Hermes.vue` and `HermesDashboardCard.vue`. By explicitly importing and registering the necessary components, the visual layout issues have been resolved, ensuring that the model catalog renders correctly within the UI. Additionally, a new contract has been added to enforce proper component registration for future development."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#412",
+      "title": "Update Browser Extension Requirement in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "browser",
+        "deployment",
+        "testing",
+        "settings"
+      ],
+      "public": false,
+      "summary": "This update requires the Browser Agent version 0.7.35 in both settings and production environments. It ensures consistency in deployment configurations and updates the relevant tests to reflect this change. The deployment will only proceed once PlatformFrontend 0.7.35 is available on the CDN."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1533",
+      "title": "Enhance SEO with Dynamic OG Images in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "seo",
+        "nginx",
+        "dynamic",
+        "images",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1533",
+      "summary": "This update introduces dynamic Open Graph and Twitter image metadata for tenant-specific URLs, ensuring crawlers receive the correct information without executing JavaScript. The static SPA placeholder has been replaced with an nginx rewrite, and runtime SEO updates are now consolidated on the share-card endpoint. These changes aim to improve the visibility and branding of tenant sites."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1113",
+      "title": "Enhance origin recovery after timeout in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "extension",
+        "frontend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of timed-out navigations by reconciling them with Chrome’s final live URL. It ensures that verified allowed origins are preserved for future snapshots, while unknown destinations are marked as 'unsettled'. The extension has been updated to version 0.7.35, enhancing stability and user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1323",
+      "title": "Enhance WebSocket Auth Documentation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "websocket",
+        "documentation",
+        "backend",
+        "api",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update clarifies the WebSocket authentication process by documenting the correct HTTP response codes. The handshake result for invalid tokens is now accurately noted as `403 Forbidden`, while valid tokens will still result in `101 Switching Protocols`. Additionally, tests have been updated to reflect these changes, ensuring robust validation of the API's behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1298",
+      "title": "Enhance Open Graph Card Generation in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "open-graph",
+        "localization",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a public endpoint for generating white-label Open Graph images, supporting both Chinese and English localizations. Key changes include the addition of a deterministic caching mechanism, a new orbit field for capability icons, and restrictions on remote logo downloads to approved CDN hosts. The implementation has been validated with extensive testing, ensuring reliability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1559",
+      "title": "Streamline Daily Release Process in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ci",
+        "release",
+        "automation",
+        "workflow",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1559",
+      "summary": "This update introduces a new daily aggregation process for Beachball/npm/GitHub releases, enhancing efficiency by reducing the frequency of releases to once per day. Key changes include maintaining automatic web deployments on every merge while holding GitHub Releases as drafts until all assets are attached. The independent mobile testing schedule has also been adjusted to follow the new release window."
+    },
+    {
       "id": "gh:pr:AceDataCloud/Clis#674",
       "title": "GLM CLI Alignment Verified in Clis 🚀",
       "tags": [
