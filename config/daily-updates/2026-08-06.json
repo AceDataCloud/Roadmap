@@ -3,6 +3,520 @@
   "date": "2026-08-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/Nexior#1558",
+      "title": "Launch of Guided Template Center in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "templates",
+        "localization",
+        "testing",
+        "scheduled-tasks"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1558",
+      "summary": "This update introduces a new guided template center for scheduled tasks, allowing users to create templates through a five-step wizard. Key features include reusing existing connector infrastructure, ensuring tasks remain disabled until successful testing, and localized content across multiple languages. The implementation is backed by extensive testing and validation to enhance user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1862",
+      "title": "Enhance AI Chat with Scheduled Task Templates in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "aichat",
+        "scheduler",
+        "templates",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a catalog of ten official scheduled-task templates for AI Chat, enhancing the existing scheduled-task endpoint with new actions like list, detail, and instantiate. It ensures that template instances remain disabled until they pass a manual test, promoting a robust testing process. Additionally, the platform-scheduler now respects a paused create status, improving task management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1556",
+      "title": "Enhance session model handling in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "session",
+        "model",
+        "coding-bridge",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1556",
+      "summary": "This update improves the handling of model selectors in Coding Bridge sessions by normalizing the `model_selector` field and ensuring that the correct launch selector is preserved during session resumption. Key changes include the introduction of a versioned selector provenance contract and adjustments to session state management, which prevents legacy resolved IDs from overriding explicit selectors. All tests have passed successfully, confirming the robustness of these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#82",
+      "title": "Streamline Selector Management in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "refactor",
+        "cleanup",
+        "models",
+        "tests",
+        "compatibility"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/82",
+      "summary": "This update refactors the session runtime state to exclusively use `model_selector`, removing the legacy `model` and `model_contract` fields. The changes enhance clarity by ensuring that only the resolved model is emitted, improving compatibility and reducing ambiguity in session data. All relevant tests have passed, confirming the stability of these modifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1321",
+      "title": "Enhance Telegram Bot with Assets and Landing Page in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "telegram",
+        "backend",
+        "assets",
+        "landing-page",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update adds display assets for the existing Telegram Bot service, including an icon and thumbnail, ensuring users see the correct visuals in their application list. Additionally, the placeholder Markdown introduction has been replaced with a responsive bilingual landing page, improving user experience. The seed script has also been updated to maintain idempotency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#411",
+      "title": "Update Browser Agent Minimum Version in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "browser",
+        "update",
+        "backend",
+        "compatibility"
+      ],
+      "public": false,
+      "summary": "This update raises the minimum required version of the Browser Agent to 0.7.34, ensuring compatibility with the latest features. The deployment settings have been adjusted accordingly, and tests have been verified with all passing. This change will enhance the overall stability and performance of the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#348",
+      "title": "Streamline Promotion Templates in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "templates",
+        "refactor",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update removes all growth and referral-specific elements from the scheduled template design, transforming promotion templates into standard templates that utilize the AceDataCloud MCP. Key changes include the elimination of fields like `growth`, `growth_capability`, and `referral_enabled`, ensuring a more generic and streamlined approach to template creation and usage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#852",
+      "title": "Enhance Publish Control Verification in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "publish",
+        "verification",
+        "skills",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/852",
+      "summary": "This update introduces a requirement for a fresh semantic Publish reference after final confirmation, preventing append-style recovery after field drift or failed writes. It also tightens the success proof criteria to ensure explicit success states, published destinations, or new note IDs. The changes improve the reliability of the publishing process in the Skills area."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1112",
+      "title": "Enhance Custom Publish Controls in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "accessibility",
+        "updates",
+        "custom-controls"
+      ],
+      "public": false,
+      "summary": "This update introduces visible declarative custom submit widgets through the existing semantic reference system, ensuring compliance with session and hit-test enforcement. The CDN extension has been bumped to version 0.7.34, and the `<xhs-publish-btn>` shape is now fully covered. These changes improve accessibility and functionality for the Browser Agent."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#670",
+      "title": "Enhance GLM Chat Options for OpenAPI Compatibility in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "glms",
+        "openapi",
+        "cli",
+        "features",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/670",
+      "summary": "This update synchronizes GLM chat options with the latest OpenAPI schema, adding several new parameters for enhanced functionality. Key additions include options for max completion tokens, reasoning effort, service tier, and more, all of which are now supported in the GLM CLI. Comprehensive tests have also been added to ensure the new features work seamlessly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#552",
+      "title": "Verify Docs Sync Status for GLM in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "docs",
+        "sync",
+        "glm",
+        "mcp"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/552",
+      "summary": "This update confirms that the GLM MCP server is in sync with the upstream OpenAPI contract, ensuring that the model enum, request parameters, endpoint path, and supported option enums are accurate. It also notes that there are no local MCP server directories for the `claude-code` and `codex` services, as well as no matching OpenAPI specs for these services. No source changes were necessary for this verification."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1308",
+      "title": "Enhance Codex Authentication and Coze Integration Guide in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "docs",
+        "authentication",
+        "integration",
+        "coze",
+        "codex",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update clarifies the Codex authentication modes and introduces a comprehensive guide for integrating Coze custom models. Key changes include explicit documentation of evidence boundaries, updates to the `ANTHROPIC_API_KEY` guidance, and the addition of contract tests to prevent authentication and protocol drift. Overall, these enhancements aim to improve user experience and reliability in the integration process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1107",
+      "title": "Enhance WebSocket API Documentation in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "documentation",
+        "websocket",
+        "api",
+        "frontend",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces significant improvements to the WebSocket API documentation. Key changes include the integration of bearer/API-key authentication, generation of WebSocket examples in JavaScript and Python, and the ability to connect/disconnect browser-compatible WebSockets. These enhancements ensure a more robust and user-friendly experience across deployment documentation and API code dialogs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1319",
+      "title": "Enhance Terminal Pod Security in Backend 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "security",
+        "backend",
+        "authentication",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update improves the security of terminal pod access by validating client-selected pods against the application's release selector. It ensures that only authorized containers can be accessed, preventing unauthorized access to other tenants' pods. The changes include modifications to the terminal consumer logic and the addition of new tests for authentication and pod isolation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1108",
+      "title": "Streamlined WeChat Agent Setup with Step-by-Step Guide in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "ui",
+        "i18n",
+        "deployment",
+        "wechat"
+      ],
+      "public": false,
+      "summary": "This update replaces the previous terminal-based WeChat AI setup with a user-friendly four-step guide using Element Plus. The new guide includes concise Markdown instructions, copyable commands, and safety tips, all translated into supported locales. Additionally, a regression contract test has been added to ensure functionality across all steps."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1870",
+      "title": "Enhance Hermes Workflow for Chart Releases in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "ci",
+        "hermes",
+        "workflow",
+        "documentation",
+        "metadata"
+      ],
+      "public": false,
+      "summary": "This update removes direct writes from the PlatformService CI into the Service table owned by PlatformBackend, ensuring a clearer boundary. The Hermes workflow is now focused on validating and publishing OCI artifacts, with documentation clarifying that Service metadata updates occur only after package verification. Additionally, a contract has been added to prevent future coupling with `PGSQL_*` and metadata sync."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1318",
+      "title": "Enhance Terminal Authentication Security in Backend 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "security",
+        "authentication",
+        "backend",
+        "jwt",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update improves terminal authentication by replacing unverified JWT payload decoding with robust signature and expiry validation. It ensures that platform-token expiry is checked before accepting connections and logs failures without exposing token contents. These changes significantly enhance security by preventing the forging of unsigned JWTs for unauthorized terminal access."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#410",
+      "title": "Enhance TikTok Connector Draft Capabilities in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "tiktok",
+        "connectors",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update improves the TikTok connector by stopping the advertisement of unaudited Direct Post capabilities. It ensures that connector suggestions now trigger a confirmed inbox/draft upload while retaining the necessary `video.publish` permission, clearly labeled with its audit gate. These changes enhance user clarity and functionality within the TikTok integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#849",
+      "title": "Enhance TikTok Draft Upload Reliability in Skills 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "tiktok",
+        "upload",
+        "drafts",
+        "skills",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/849",
+      "summary": "This update improves the TikTok integration by ensuring reliable draft uploads through a new confirmation process. A standard-library helper has been added for single-chunk file uploads and status polling. The changes affect three files, enhancing functionality while keeping direct posting disabled pending an audit."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1869",
+      "title": "Enhance CORS Handling for Platform Requests in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "cors",
+        "authentication",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update addresses a CORS issue that prevented the platform console from successfully making POST requests to the `/api/auth/qr` endpoint. By wrapping the Bearer middleware with a CORS layer, the OPTIONS preflight now receives the correct response, allowing for seamless authentication while maintaining security for anonymous POST requests. All tests have passed successfully, ensuring stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1867",
+      "title": "Enhance billing accuracy for aichat2 streams in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "aichat2",
+        "fix",
+        "tests",
+        "llm"
+      ],
+      "public": false,
+      "summary": "This update fixes a critical issue where non-BYOK aichat2 conversations recorded zero completion tokens, leading to HTTP 500 errors in billing. The fix involves enabling usage tracking for internal LLM calls and ensuring that scheduled runs can access accumulated usage data. Regression tests have been added to maintain coverage and ensure stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1868",
+      "title": "Deploying the New Hermes Chart in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "helm",
+        "deployment",
+        "kubernetes",
+        "workflow",
+        "hermes"
+      ],
+      "public": false,
+      "summary": "This update moves the Hermes per-tenant Helm chart source under the PlatformService repository and maintains the existing OCI contract for production. A new chart release workflow has been added, along with necessary contracts for rendering and Kubernetes dry-run. The deployment process ensures that the existing release remains online during the migration, enhancing the overall deployment strategy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#347",
+      "title": "Refine Scheduled Task Templates in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "scheduled-tasks",
+        "templates",
+        "aichat2",
+        "refinement",
+        "implementation"
+      ],
+      "public": false,
+      "summary": "This update corrects the scheduled-template plan boundary by ensuring that all template definitions and related tasks remain within the aichat2 scope. Key changes include the removal of PlatformBackend components from the initial phases and a streamlined implementation order focusing on PlatformService and Nexior. These adjustments aim to enhance the clarity and functionality of the scheduled tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1557",
+      "title": "Clarify Action Confirmation Messages in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "localization",
+        "ui",
+        "bugfix",
+        "i18n"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1557",
+      "summary": "This update modifies the confirmation message for actions to indicate that they are in progress rather than already completed. The change affects 19 files, including updates to 18 locale files to ensure consistency across all supported languages. No changes were made to runtime behavior, and all tests have passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1861",
+      "title": "Enhance Action Confirmation Validation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "validation",
+        "aichat2",
+        "tests",
+        "typescript",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update introduces a new validation mechanism for action confirmations, recognizing them as distinct paused-input types. Key changes include validating JSON structure, confirmation IDs, and handling idempotency conflicts for repeated submissions. The implementation affects two files, enhancing the conversation handler and adding focused tests to ensure reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1866",
+      "title": "Update Telegrambot PVC Size for Tencent CBS in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "telegrambot",
+        "pvc",
+        "update",
+        "tencent",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update raises the Telegram session PVC size from 1Gi to the Tencent CBS minimum of 10Gi. This change addresses a failure encountered with the first tenant PVC, ensuring compliance with the required disk size range. The OCI chart version 0.1.2 has been published with this correction."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1317",
+      "title": "Enhance Email Audiences by Excluding Restricted Accounts in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "email",
+        "audience",
+        "backend",
+        "migration",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a migration to mirror the `is_restricted` status from AuthBackend into email audience profiles. Restricted accounts are now excluded from all audience-related processes, improving the accuracy of audience counts and targeting. Additionally, regression tests have been added to ensure the integrity of the sync and audience refresh functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1111",
+      "title": "Enhance Email Draft Flow and Progress Feedback in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "email",
+        "frontend",
+        "ui",
+        "localization",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update improves the email campaign composer by keeping the draft flow open after saving, ensuring the send option is always available. A new localized progress overlay has been added to inform users when sending is in progress, while navigation and duplicate actions are disabled during backend operations. Additionally, interaction contract tests have been implemented and translations for all locales have been completed."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#668",
+      "title": "Update aichat model choices to align with Docs OpenAPI in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "aichat",
+        "cli",
+        "openapi",
+        "tests",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/668",
+      "summary": "This update synchronizes the aichat CLI model choices with the latest changes in the Docs OpenAPI specification. Removed models that are no longer present in the spec have been eliminated from the `MODELS2` list, and new tests have been added to ensure these models do not appear in the output. Additionally, validation tests confirm that attempts to use removed models are properly rejected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1316",
+      "title": "Enhance Security by Redacting Helm Secrets in Logs in Backend 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "security",
+        "helm",
+        "logging",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update improves security by redacting sensitive Helm arguments in logs, specifically those passed with `--set-string`, `--set-json`, and `--set-file`. The actual command execution remains unchanged, ensuring useful diagnostics while preventing exposure of secrets. Comprehensive tests have been added and successfully passed to verify the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#550",
+      "title": "Ensure AiChat MCP Sync with Updated Docs in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "sync",
+        "verification",
+        "docs",
+        "aichat"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/550",
+      "summary": "This update verifies the synchronization of the AiChat MCP with the latest upstream documentation. Key endpoints such as `/aichat/conversations` and `/aichat2/conversations` were confirmed to be accurately represented, with no changes required to the repository. The contract coverage, including model enums and request parameters, aligns with the current specifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#346",
+      "title": "Enhance Deployment Service Audit and Roadmap in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "audit",
+        "security",
+        "deployment",
+        "roadmap",
+        "index"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive audit of the Deployment Service control plane, covering critical components like PlatformBackend and Kubernetes. Key findings include 2 critical and 6 high-severity issues, alongside a phased roadmap for security remediation and system enhancements. The plan is now indexed in the README for better visibility and tracking."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1859",
       "title": "Ensure valid IANA time zones for scheduled tasks in Platform Service ⏰",
       "tags": [
