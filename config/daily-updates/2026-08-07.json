@@ -3,6 +3,135 @@
   "date": "2026-08-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1900",
+      "title": "Revamp cqtai for MiniMax H3 V2 integration in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "minimax",
+        "cqtai",
+        "integration",
+        "updates",
+        "billing"
+      ],
+      "public": false,
+      "summary": "This update replaces cqtai's legacy handler with a strict MiniMax-H3 contract, enhancing task management and error handling. Key changes include the introduction of a new routing system, improved task object creation, and support for 64 MB request parsing. Additionally, the resolution field is now forwarded to ensure accurate billing, while maintaining synchronous calls until task responses are finalized."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1101",
+      "title": "Update Sass to Latest Version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "frontend",
+        "sass",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update bumps the Sass dependency from version 1.101.0 to 1.102.0. The new version introduces the 2.4 gamma transfer function for rec2020, enhancing color accuracy as per the latest CSS Color 4 draft. This change ensures better compatibility and performance in styling across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#684",
+      "title": "Enhance Hailuo CLI with MiniMax H3 Features in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "api",
+        "video",
+        "task-management",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/684",
+      "summary": "This update synchronizes the Hailuo CLI with the MiniMax H3 API, introducing new features for video generation and task management. Key changes include support for various media roles, improved task deletion, and batch pagination. Additionally, the documentation and test coverage have been updated to reflect these enhancements."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1898",
+      "title": "Reverting Changes to Fix Proxy2 Requests in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "proxy2",
+        "revert",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update reverts the recent changes that caused all Proxy2 requests to fail with a `400 model_not_supported` error. The issue arose from incorrect handling of model IDs, which has now been corrected to forward the plain target ID. All tests have passed successfully, restoring functionality while further investigation into the original goal continues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#570",
+      "title": "Enhance MiniMax MCP with New OpenAPI Features in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "minimax",
+        "openapi",
+        "video",
+        "api",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/570",
+      "summary": "This update synchronizes the MiniMax MCP with the latest OpenAPI schema, introducing the `MiniMax-H3` model and a structured multimodal `content` payload. Key enhancements include the addition of `minimax_generate_video` for diverse input types, improved task operations like deletion, and refined metadata across documentation and tests. These changes aim to streamline video generation processes and improve user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1567",
+      "title": "Integrate MiniMax H3 V2 Contract in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "minimax",
+        "video",
+        "localization",
+        "update",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1567",
+      "summary": "This update implements the official MiniMax H3 V2 contract, enhancing video generation capabilities. Key changes include the adoption of official request and response shapes, validation of aspect ratios, and updates to task cards for improved user feedback. Additionally, all locales have been updated to reflect these changes, ensuring a seamless experience across different languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1335",
+      "title": "Official MiniMax H3 V2 Contract Published in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "minimax",
+        "api",
+        "backend",
+        "documentation",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces the official MiniMax H3 V2 contract, replacing the previous OpenAPI with a stricter model. Key changes include the publication of task and item responses, updates to billing with the case-sensitive model name, and comprehensive rewrites of guides in both Chinese and English. Compatibility inputs have been removed from public documentation to streamline the API usage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1891",
+      "title": "Enhance MiniMax H3 V2 Contract Integration in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "minimax",
+        "integration",
+        "update",
+        "api",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update implements the official MiniMax H3 V2 contract, ensuring that only approved request fields and content items are accepted. It introduces synchronous handling of task responses and exposes official task objects for various states, while also migrating historical records seamlessly. Comprehensive tests have been added to validate the new functionality."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#1139",
       "title": "Revamp of Dynamic Tenant Support Hub in Frontend Web 🚀",
       "tags": [
