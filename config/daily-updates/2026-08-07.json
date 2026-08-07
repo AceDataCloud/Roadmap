@@ -3,6 +3,215 @@
   "date": "2026-08-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1884",
+      "title": "Enhance Codex Model Exposure in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "codex",
+        "models",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update preserves the OpenAI-compatible `/v1/models` data array while exposing normalized entries as top-level models for Codex model-manager compatibility. It also includes tests to ensure both response fields are covered, improving the integration with VS Code Codex. This change addresses issues with model refresh errors in the Codex extension log."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#678",
+      "title": "Enhance hcaptcha CLI with rqdata support in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "hcaptcha",
+        "cli",
+        "update",
+        "documentation",
+        "feature"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/678",
+      "summary": "The hcaptcha CLI has been updated to support the optional `rqdata` field in token-generation requests. Users can now include `--rqdata TEXT` when using the `hcaptcha token` command, enhancing the flexibility of token requests. Additionally, documentation has been updated to reflect these changes, ensuring users have clear guidance on the new functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1332",
+      "title": "Enhanced MiniMax H3 Pricing for 768P and 2K Outputs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pricing",
+        "minimax",
+        "backend",
+        "updates",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update introduces resolution-aware pricing for the MiniMax H3 model, specifically for 768P and 2K video outputs. The pricing aligns with the largest-package USD rates, enhancing the billing structure. Additionally, documentation has been updated to reflect these changes, including the model catalog, OpenAPI specifications, and bilingual guides."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#564",
+      "title": "Enhance hCaptcha Token with rqdata Support in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "hcaptcha",
+        "api",
+        "update",
+        "documentation",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/564",
+      "summary": "This update introduces support for the optional `rqdata` parameter in the hCaptcha token API. The `hcaptcha_get_token` method has been modified to accept this new parameter, which is now included in the API payload. Additionally, the documentation has been updated to reflect this change, and a new test has been added to ensure proper token payload construction."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1129",
+      "title": "Fix custom domain tab rendering issue in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "vue",
+        "i18n",
+        "dns"
+      ],
+      "public": false,
+      "summary": "This update addresses a rendering issue in the custom domain tab by escaping the `@` character in DNS hints using Vue I18n interpolation. The fix ensures that the interpolated host-record marker displays correctly without causing syntax errors. All locales have been updated accordingly, enhancing the user experience across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1331",
+      "title": "Enhance hCaptcha API with rqdata support in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "hcaptcha",
+        "backend",
+        "enhancement",
+        "documentation"
+      ],
+      "public": false,
+      "summary": "This update exposes the optional `rqdata` field in the `POST /captcha/token/hcaptcha` API for Enterprise challenges, allowing for improved handling of specific captcha scenarios. The change maintains existing functionality for standard hCaptcha requests and includes documentation updates to reflect this new field. Additionally, regression tests have been added to ensure the integrity of the API contract."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1883",
+      "title": "Enhance MiniMax H3 Video Processing in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "minimax",
+        "video",
+        "kubernetes",
+        "cdn"
+      ],
+      "public": false,
+      "summary": "This update introduces MiniMax H3 handling to the ephone worker, enabling support for various video task modes including text, first-frame image, multi-image, and audio-guided formats at 768P and 2K resolutions. A dedicated Kubernetes secret has been implemented, and outputs are now directed to the AceDataCloud CDN. Additionally, isolated contract coverage and production manifests have been added to ensure robust deployment and testing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#226",
+      "title": "Enhance Wallet Usage Attribution in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "gateway",
+        "x402",
+        "identity",
+        "usdc"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature allowing signed x402 retries to carry an existing AceDataCloud Credential as an identity-only sidecar. It maintains USDC/x402 as the payment rail while attributing API usage and worker tasks to specific user/application/credential IDs. The actual payer wallet is now stored separately, ensuring a seamless experience for both authenticated and guest users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#227",
+      "title": "Enhance API Attribution for Auth Errors in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "bugfix",
+        "logging",
+        "api",
+        "authentication",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update improves the logging of authentication errors by accurately attributing them to the respective APIs. It resolves the original request path and HTTP method during asynchronous logging, ensuring that registered endpoints are correctly populated while maintaining the raw requested path for unknown routes. The changes are non-blocking, preserving existing authentication responses and billing behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#260",
+      "title": "Enhance hCaptcha Integration in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "hcaptcha",
+        "frontend",
+        "integration",
+        "feature-flag",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update connects the hCaptcha feature flag from the server to the AuthFrontend, ensuring that the hCaptcha is rendered correctly across various user flows, including registration and password resets. Key changes include routing API requests to PlatformBackend and implementing a fallback to Turnstile when hCaptcha is disabled. The integration has been validated with successful tests in production environments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1330",
+      "title": "Stop Unused Probes for Enhanced Coverage in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "probes",
+        "deployment",
+        "production",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update halts the Gemini native, Claude chat, and Claude Messages synthetic probes, as customer traffic now ensures adequate production coverage. Other probes remain unchanged, preserving their functionality and performance. The shared production credential for various workloads has also been maintained."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#415",
+      "title": "Enhance Email Signup Limits for Shared Providers in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "email",
+        "signup",
+        "backend",
+        "rate-limit",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces separate rate-limit buckets for shared email providers, allowing up to 30 events per hour and 250 events per day while maintaining strict limits for custom domains. The changes also include normalization for shared domains across various registration paths, enhancing the system's ability to manage signups effectively. A production audit revealed significant signup activity from shared domains, prompting these necessary adjustments."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1882",
+      "title": "Enhance Checker Outcome Preservation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "testing",
+        "performance",
+        "checker"
+      ],
+      "public": false,
+      "summary": "This update improves the preservation of grouped checker outcomes by ensuring that representative probe success and TTFT are retained during history event rebuilding. The changes also maintain existing failure behaviors and add regressions for better diagnostics. Validation tests have confirmed that all relevant checks passed successfully."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1881",
       "title": "Enhance OpenAI Checker Probes for Better Performance in Platform Service 🚀",
       "tags": [
