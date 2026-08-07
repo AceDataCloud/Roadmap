@@ -3,6 +3,216 @@
   "date": "2026-08-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#84",
+      "title": "Enhance Lighthouse Sponsor Inspection in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "lighthouse",
+        "solana",
+        "safety",
+        "fix",
+        "x402"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/84",
+      "summary": "This update allows the Phantom Lighthouse safety program to reference the sponsored Solana fee payer while maintaining restrictions for other programs. A regression test has been added to ensure that the Lighthouse can inspect account[0] without compromising security. This change addresses a critical production blocker for Solana payments, enhancing transaction safety and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1343",
+      "title": "Enhance Announcement Webhooks with Localization in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "localization",
+        "webhooks",
+        "backend",
+        "announcement",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces explicit localization for announcement webhooks, adding support for both Chinese (zh-CN) and English. The changes ensure that English announcements are delivered to Discord and Chinese announcements to WeChat, enhancing user engagement across platforms. Additionally, the update includes a new validation process for translations and improves webhook handling by stopping the indefinite polling of failed tasks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#350",
+      "title": "Revamp Token Billing with Protocol Awareness in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "token-billing",
+        "protocols",
+        "api",
+        "gemini",
+        "openai",
+        "billing"
+      ],
+      "public": false,
+      "summary": "This update introduces a comprehensive redesign of token billing by defining four protocol-owned usage families: OpenAI Chat, OpenAI Responses, Anthropic Messages, and Gemini GenerateContent. Key enhancements include the generation of family-specific JsonLogic catalogs, migration requirements for existing consumers, and the addition of first-class billing profiles and models. The changes aim to improve billing accuracy and streamline usage validation across various API protocols."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#229",
+      "title": "Enhanced Security: Redact Sensitive Payment Logs in Gateway 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "security",
+        "logging",
+        "redaction",
+        "payments",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update implements comprehensive redaction of sensitive payment information, including Bearer credentials and payment signatures, from logs. Key changes include the removal of raw `/auth` request bodies and enhanced recursive redaction of JSON fields. These improvements ensure that sensitive data is not exposed in logs, bolstering security before the next production validation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1571",
+      "title": "Enhance Automation Template Wizard in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "improvement",
+        "design",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1571",
+      "summary": "This update refines the automation template wizard by making it more compact on desktop and applying the configured primary color for completed steps. Additionally, it improves spacing between various elements like the test-run heading and actions, enhancing overall usability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1905",
+      "title": "Enhance Codex Tool Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "enhancement",
+        "testing",
+        "security",
+        "codex"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of Codex computer-use workflows by preserving essential headers and implementing a new credentialed live gate. Key changes include the addition of a contract test for native Responses and the introduction of a three-stage gate to enhance security and functionality. Overall, these enhancements ensure better integration and performance for Codex tools."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1904",
+      "title": "Fix skill slug usage in templates for smoother task creation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "templates",
+        "aichat2",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update resolves an issue where task creation was rejected due to incorrect skill slugs in scheduled templates. The GitHub project digest and weekly referral blog templates now use namespaced identifiers, ensuring compatibility with the AuthBackend. Additionally, a catalog contract test has been added to verify these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#349",
+      "title": "Launch of New Coding Plan Architecture in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "coding",
+        "architecture",
+        "subscription",
+        "API",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This update introduces the AceDataCloud Coding Plan subscription architecture, defining three pricing tiers and their respective credit limits. Key changes include a migration to a many-to-many relationship for API services, enabling better reuse of existing APIs and a streamlined purchase lifecycle. The RFC has been added to the plans index, ensuring a clear roadmap for implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1142",
+      "title": "Default New Announcements as Drafts in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "announcements",
+        "drafts",
+        "workflow",
+        "updates"
+      ],
+      "public": false,
+      "summary": "New announcements will now be created as unpublished drafts by default, streamlining the content creation process. This change preserves the existing workflow of saving Chinese drafts, generating English versions, and then publishing. The corresponding server-side rule has been enforced in the PlatformBackend to ensure consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#212",
+      "title": "Enhance announcement mention-all flexibility in Wisdom 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "announcement",
+        "flexibility",
+        "testing",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update allows the `mention_all` option in announcements to accept both `true` and `false` values, providing greater flexibility for users. The existing default behavior remains unchanged for callers that do not specify the field, ensuring compatibility with current production payloads. All relevant tests have passed, confirming the stability of the feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1570",
+      "title": "Enhance Footer to Reflect Tenant Branding in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "footer",
+        "branding",
+        "tests",
+        "nexior",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1570",
+      "summary": "This update modifies the public footer to display each tenant's site title and copyright instead of the default Ace Data Cloud values. Key changes include the implementation of custom copyright handling and the addition of regression tests for the footer component. The updates ensure that the footer accurately represents the branding of individual tenants, enhancing user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1903",
+      "title": "Enhance Developer Attribution for Public Models in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "developer",
+        "attribution",
+        "public-models",
+        "security",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update replaces the fixed identity prompt with dynamic developer attribution for public model families. It identifies Claude-family models as developed by Anthropic and Kimi models by Moonshot AI, while ensuring internal model details remain protected. All public aliases have been validated to exclude AceDataCloud branding."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1569",
+      "title": "Enhance Chat Contrast for Custom Colors in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "accessibility",
+        "theme",
+        "ui",
+        "contrast",
+        "scss"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1569",
+      "summary": "This update separates light and dark brand-tinted surface tokens from the primary palette, ensuring dark chat bubbles remain readable against various site colors. It also introduces WCAG contrast and CSS mapping regression coverage to maintain accessibility standards. The changes have been verified with successful test runs and a browser audit showing excellent contrast ratios."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1894",
       "title": "Expose DeepSeek V4 Flash Model in Platform Service 🚀",
       "tags": [
