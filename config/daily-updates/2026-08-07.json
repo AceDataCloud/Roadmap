@@ -1,0 +1,365 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-08-07",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1881",
+      "title": "Enhance OpenAI Checker Probes for Better Performance in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "openai",
+        "checker",
+        "performance",
+        "logging",
+        "http"
+      ],
+      "public": false,
+      "summary": "This update introduces an opt-in grouping for shared checker probes, allowing multiple aliases to share a single network probe while maintaining individual performance metrics. Key changes include improved error logging and the transition from WebSocket to HTTP for child Responses transport, enhancing stability and diagnostics. The rollout plan ensures minimal disruption while monitoring for correlated failures."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#414",
+      "title": "Update SMS Signature for Compliance in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "sms",
+        "backend",
+        "update",
+        "compliance"
+      ],
+      "public": false,
+      "summary": "This update changes the default Tencent SMS signature from '静觅科技' to '北京静觅网络科技' to align with approved standards. The SMS application ID and template handling remain unchanged, ensuring continuity in functionality. Validation tests have passed successfully, confirming the integrity of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#259",
+      "title": "Update SMS Templates for Compliance in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "sms",
+        "templates",
+        "frontend",
+        "update",
+        "compliance"
+      ],
+      "public": false,
+      "summary": "This update replaces outdated SMS templates with approved versions for domestic registration, password reset, and identity verification. The international template remains unchanged, ensuring consistency across user communications. Validation checks confirm no linting errors and proper type checking."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#684",
+      "title": "Enhance MiniMax API Integration in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "api",
+        "sync",
+        "update",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/684",
+      "summary": "This update maps the `minimax/` directory to the new public `AceDataCloud/MiniMaxAPI` repository, ensuring a seamless transition. Additionally, the API README now includes a link to the hosted MiniMax MCP, enhancing accessibility for users. A targeted sub-repo sync has also been triggered to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#561",
+      "title": "Enhance MiniMax README with API Reference in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "documentation",
+        "minimax",
+        "api",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/561",
+      "summary": "This update links the MiniMax MCP README to its public API reference, improving accessibility for users. Additionally, it triggers the mapping of the `minimax/` directory into the `AceDataCloud/MinimaxMCP` repository. These changes aim to streamline the integration process for developers."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#560",
+      "title": "Enhance MiniMax MCP Sync Configuration in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "sync",
+        "mcp",
+        "ci",
+        "deployment"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/560",
+      "summary": "This update registers the `minimax/` repository in the MCP monorepo mirror map and publishes it to `AceDataCloud/MinimaxMCP`. This change enables standalone CI and deployment processes to run smoothly for MiniMax. The sync configuration has been verified by parsing the `sync.yaml` file and confirming the mapping."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#676",
+      "title": "Align CLI with Latest Minimax API in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "minimax",
+        "api",
+        "update",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/676",
+      "summary": "This update synchronizes the `hailuo` CLI with the latest Minimax OpenAPI specifications, ensuring endpoint and model alignment. Key changes include updated paths for video and task endpoints, a refined model contract, and new request schema options for generating videos. Additionally, tests have been updated to reflect these changes, enhancing overall functionality and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1561",
+      "title": "Enhance Template Wizard Diagnostics in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "bugfix",
+        "enhancement",
+        "i18n",
+        "ui",
+        "diagnostics"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1561",
+      "summary": "This update improves the scheduled-template wizard by refining error handling and enhancing user guidance. Key changes include better diagnostics for remote MCP connections, clearer navigation prompts across multiple languages, and improved display of connection statuses. These enhancements aim to streamline the user experience and provide more actionable feedback during template setup."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1876",
+      "title": "Enhance MCP Connection Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "mcp",
+        "aichat2",
+        "platform",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update addresses a bug where the AceDataCloud remote MCP connections were incorrectly treated as skill account bindings. Key changes include exposing `execution_type` and `supports_task_binding` in the connection account metadata, ensuring that only skill-backed accounts can be bound while maintaining authorization for remote MCPs. The fix has been validated with production traces and successful TypeScript builds."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#82",
+      "title": "Enhance SVM Payment Verification in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "security",
+        "payments",
+        "verification",
+        "x402",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/82",
+      "summary": "This update replaces upstream SVM instruction assumptions with outcome-based verification, ensuring safer payment processing. Key changes include enforcing a single compute limit and price, requiring two signers, and rejecting invalid instructions that reference the fee payer. The modifications enhance security and compliance with the 402 challenge specifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#559",
+      "title": "MiniMax MCP Sync Verification Complete in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "verification",
+        "minimax",
+        "openapi",
+        "sync",
+        "docs"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/559",
+      "summary": "This update verifies the MiniMax MCP implementation against the latest OpenAPI specification, confirming that the server is already aligned with the required changes. Key elements such as model enums, endpoints, and request body fields were compared and found to be in sync, ensuring no source code changes were necessary. This verification enhances confidence in the current implementation's accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1124",
+      "title": "Enhance Email Delivery Event Pagination in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "pagination",
+        "email",
+        "frontend",
+        "update",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the email delivery event timeline by implementing server-side pagination, allowing users to fetch events in manageable chunks rather than a fixed set of 500. Key features include new page-size controls, accurate event metrics from backend aggregates, and compatibility with legacy responses during deployment. Additionally, a build-time pagination contract check has been added to ensure consistency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1327",
+      "title": "Enhance Email Delivery Event Pagination in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "pagination",
+        "api",
+        "backend",
+        "email",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update introduces pagination for the admin delivery event API, allowing for improved management of delivery events. Key changes include the addition of an opt-in page and page size options, while maintaining legacy support for the existing 500-item response. The implementation also covers campaign filtering and ensures compatibility and validation for better performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1563",
+      "title": "Introducing H3 Multimodal Video Workspace in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "localization",
+        "video",
+        "multimodal"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1563",
+      "summary": "This update adds a new `/minimax` workspace that supports text, up to 9 images, and 3 audio references for video creation. Key features include task polling, previews, downloads, pricing estimates, and SEO enhancements, all localized across 17 languages. The implementation has been verified with ESLint, MiniMax helper tests, and comprehensive i18n coverage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#681",
+      "title": "New MiniMax H3 API Guides Published in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "api",
+        "minimax",
+        "updates",
+        "guides"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/681",
+      "summary": "We've published comprehensive documentation for the MiniMax H3 API, including a new README, task retrieval, and video generation guides. Key features include detailed endpoint descriptions, sample requests, and pricing information for users. This update enhances accessibility and usability for developers integrating with our API."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#859",
+      "title": "Exciting New MiniMax H3 Video Generation Feature in Skills 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "feature",
+        "video",
+        "documentation",
+        "skills"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/859",
+      "summary": "This update introduces the MiniMax H3 Agent Skill, enabling the generation of videos from text, multiple images, and audio. Comprehensive documentation on limits, pricing, and async task workflows has also been added to enhance user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#347",
+      "title": "Exciting New MiniMax H3 Video Tools Added in Dify 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "video",
+        "multimodal",
+        "tools",
+        "plugins",
+        "development"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/347",
+      "summary": "This update introduces the MiniMax H3 Dify provider, enabling multimodal video generation and task retrieval. Key features include support for image/audio arrays, validation of credentials without incurring costs, and asynchronous processing capabilities. The addition enhances the functionality of Dify, making it easier to create and manage video content."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#557",
+      "title": "Exciting New MiniMax H3 MCP Server Features in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "minimax",
+        "mcp",
+        "oauth",
+        "docker",
+        "pypi",
+        "features"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/557",
+      "summary": "This update introduces a fully functional MiniMax H3 stdio/hosted OAuth MCP server, enhancing capabilities with text, multi-image, audio-guided, and task tools. It also includes comprehensive distribution metadata for PyPI, Docker/K8s, VS Code, and JetBrains. The implementation has passed all tests, ensuring a robust addition to the project."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1329",
+      "title": "Exciting New MiniMax H3 Video Service and Billing Features in Backend 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "minimax",
+        "video",
+        "billing",
+        "api",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces the MiniMax H3 video service catalog, complete with OpenAPI specifications and per-second billing at $0.25. Key enhancements include bilingual documentation, responsive service introductions, and comprehensive billing tests. All API cost tests have successfully passed, ensuring a robust integration."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#413",
+      "title": "Add MiniMax H3 OAuth Client in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "oauth",
+        "connectors",
+        "backend",
+        "minimax",
+        "feature"
+      ],
+      "public": false,
+      "summary": "This update introduces a unique first-party OAuth client for MiniMax H3, enhancing the Connector directory with its details. The implementation includes assertions for callback and client ownership, ensuring robust functionality. All related OAuth and Connector tests have successfully passed, confirming the stability of these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#225",
+      "title": "Enhance MiniMax Task Polling Exemption in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "minimax",
+        "exemption",
+        "testing",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update adds the `/minimax/tasks` endpoint to the free polling authorization and recording exemption. Additionally, a focused test has been implemented to lock the exemption contract, ensuring its reliability. These changes aim to improve the efficiency of task polling without incurring additional costs."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1880",
+      "title": "Enhance SSE Frame Preservation in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "sse",
+        "streaming",
+        "billing",
+        "regression",
+        "messages"
+      ],
+      "public": false,
+      "summary": "This update preserves blank lines in the Anthropic Messages SSE, ensuring each event/data pair remains a valid frame. It also extracts crucial token usage data for accurate streaming billing and introduces a focused lifecycle regression test. These changes aim to improve the reliability and efficiency of message handling in the service."
+    }
+  ]
+}
