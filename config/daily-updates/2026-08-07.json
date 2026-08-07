@@ -3,6 +3,286 @@
   "date": "2026-08-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/FacilitatorX402#83",
+      "title": "Automated Deployment for Facilitator in x402 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "FacilitatorX402",
+        "ci",
+        "deployment",
+        "automation",
+        "testing",
+        "safety"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/FacilitatorX402/pull/83",
+      "summary": "This update introduces automatic deployment for FacilitatorX402 when changes are pushed to the main branch, while retaining manual dispatch options. It ensures production deployments are serialized to prevent overlap and maintains the existing deployment sequence for safety. Additionally, a new workflow contract test has been added to validate triggers and concurrency settings."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1564",
+      "title": "Enhance MiniMax with Resolution Controls in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "localization",
+        "miniMax",
+        "pricing",
+        "controls"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1564",
+      "summary": "This update introduces new resolution pricing controls for MiniMax, allowing users to select between 768P and 2K options. Additionally, it mandates prompts in all MiniMax modes and includes AIGC watermark controls. The changes have been localized across 17 languages to ensure accessibility for a global audience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/SDK#524",
+      "title": "Enhance SDK with hcaptcha and captcha support in S D K 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "SDK",
+        "sdk",
+        "hcaptcha",
+        "captcha",
+        "python",
+        "typescript",
+        "go"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/SDK/pull/524",
+      "summary": "This update adds missing hcaptcha and captcha endpoints across Python, TypeScript, and Go SDKs, ensuring API surface parity. New resource paths and client wiring have been implemented, along with task endpoint routing synchronization. Comprehensive tests have also been added to validate the new functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1130",
+      "title": "Enhance Admin Diagnostics for Checker Failures in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "admin",
+        "diagnostics",
+        "localization",
+        "frontend",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update ensures that the admin interface always displays diagnostic information for failed checker events, even when no specific error details are available. Key changes include the addition of localized fallback messages for all supported languages and improvements to the diagnostic rendering logic. This enhancement will provide operators with clearer insights into failures, improving overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1885",
+      "title": "Enhance Error Diagnostics for OpenAI Checker in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "diagnostics",
+        "openai",
+        "platform-service",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the error handling for the OpenAI checker by ensuring that actionable diagnostics are preserved during failure events. Key changes include enforcing default values for `error_type` and `error_excerpt`, as well as cleaning up stale error fields on successful events. The modifications enhance the clarity of failure reasons provided to the admin console, thereby improving operational transparency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#562",
+      "title": "Enhance MiniMax with New Resolution and Watermark Features in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "enhancement",
+        "minimax",
+        "features",
+        "documentation",
+        "video"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/562",
+      "summary": "This update introduces 768P and 2K resolution options along with watermark parameters for all MiniMax MCP generation tools. It mandates prompts in every mode and requires images for audio guidance, ensuring a more robust user experience. Additionally, the exact resolution pricing has been published in the documentation for better transparency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1333",
+      "title": "Fix normalized resolution billing values in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "billing",
+        "minimax",
+        "backend",
+        "fix",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update aligns Gateway-normalized `768p` and `2k` values in MiniMax billing rules, ensuring accurate pricing. Regression tests have been added to cover the normalized payloads, and the `/price` endpoint now correctly returns 2.40283288 Credits for 768P × 4s. Additionally, a test overcharge has been refunded and ApiUsage corrected."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/APIs#685",
+      "title": "Enhance Pricing and Documentation in A P Is 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "APIs",
+        "documentation",
+        "api",
+        "pricing",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/APIs/pull/685",
+      "summary": "This update introduces detailed documentation for the 768P and 2K request fields, including the exact pricing for the largest package. Key changes include the requirement of a prompt in all modes and the addition of audio/image constraints. These enhancements aim to improve user experience and clarity in API usage."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#862",
+      "title": "Enhance Document Resolution Pricing in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "documentation",
+        "pricing",
+        "minimax",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/862",
+      "summary": "This update documents the pricing for 768P and 2K resolutions, along with watermark and required prompt rules. All generation examples have been updated to reflect these changes, ensuring clarity for users. These enhancements aim to improve user experience and understanding of the minimax video generation process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Dify#350",
+      "title": "Enhance MiniMax with Resolution Pricing Controls in Dify 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Dify",
+        "enhancement",
+        "minimax",
+        "dify",
+        "features",
+        "testing"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Dify/pull/350",
+      "summary": "This update introduces resolution and AIGC watermark controls for MiniMax Dify generation, enhancing user customization. It enforces prompt requirements and image/audio constraints while updating the payloads to be resolution-aware. Additionally, tests and documentation have been updated to reflect these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1888",
+      "title": "Streamline Responses Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "github-proxy",
+        "responses",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update enhances the github-proxy2 by omitting the `temperature` and `top_p` parameters when bridging to a Responses-only upstream model. It aligns the behavior with the established Responses dialect, improving compatibility and reducing HTTP 400 errors. The changes have been validated with successful test results, ensuring a smoother experience for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#682",
+      "title": "Confirmed hcaptcha CLI Parity with Latest Docs in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "hcaptcha",
+        "cli",
+        "openapi",
+        "audit",
+        "parity"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/682",
+      "summary": "This update verifies that the hcaptcha CLI is in full alignment with the latest OpenAPI documentation. A thorough audit was conducted, confirming that all endpoints and command options match the specifications without any need for code changes. The repository remains unchanged, ensuring stability while maintaining documentation accuracy."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1887",
+      "title": "Enhance GitHub Proxy to Handle Disabled Thinking in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "bugfix",
+        "github-proxy",
+        "testing",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update modifies the GitHub proxy to treat `enable_thinking: false` as a no-op when processing requests for Responses-only models. It ensures that requests with `enable_thinking: true` are still rejected to maintain correct reasoning semantics. Focused bridge tests have been added to cover both scenarios, improving the reliability of the service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1886",
+      "title": "Enhance Captcha Protection in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "security",
+        "captcha",
+        "update",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update implements a robust policy to block captcha token-solving requests targeting `acedata.cloud` and its subdomains. Key changes include the normalization of various URL formats to prevent hostname bypasses and the introduction of a new `PROTECTED_CAPTCHA_DOMAINS` setting. The update ensures a consistent rejection of unauthorized requests across multiple captcha services, enhancing security for all users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#546",
+      "title": "Update Suno Docs API Sync in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "api",
+        "update",
+        "suno",
+        "mcp",
+        "alignment"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/546",
+      "summary": "This update aligns the Suno OpenAPI by renaming the audio-generation exclusion field from `style_negative` to `negative_tags`. The MCP already forwards this updated field, ensuring no source changes are necessary. Regression tests confirm that the existing coverage effectively handles the new field."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#680",
+      "title": "Enhance CLI Video Options in Clis 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "minimax",
+        "video",
+        "update",
+        "documentation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/680",
+      "summary": "This update aligns the `hailuo` CLI with the latest OpenAPI specifications for the `minimax` service. Key changes include the addition of new request options for video generation, such as resolution and watermark settings, along with input constraints for image and audio URLs. The documentation and tests have also been updated to reflect these changes, ensuring a smoother user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#566",
+      "title": "Align MCP Video Tool Schema with Latest Docs in M C Ps 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "minimax",
+        "video",
+        "schema",
+        "update",
+        "docs",
+        "tests"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/566",
+      "summary": "This update synchronizes the `minimax` MCP server schema with the latest OpenAPI documentation, introducing new video-generation request fields while maintaining existing endpoint behavior. Key changes include the addition of `MinimaxResolution` and updates to the video tools to handle new parameters like `resolution` and `aigc_watermark`. The documentation and tests have also been aligned to reflect these enhancements."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1884",
       "title": "Enhance Codex Model Exposure in Platform Service 🚀",
       "tags": [
