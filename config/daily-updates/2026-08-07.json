@@ -3,6 +3,213 @@
   "date": "2026-08-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1139",
+      "title": "Revamp of Dynamic Tenant Support Hub in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "support",
+        "localization",
+        "seo",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update replaces the previous Markdown-based support page with a responsive support hub that pulls directly from site branding data. Key features include tenant-specific contact channels, localized content across 11 languages, and enhanced SEO capabilities. The new design ensures a seamless user experience while maintaining privacy by not exposing platform defaults."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1141",
+      "title": "Enhance Site Menu Actions in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "enhancement",
+        "navigation"
+      ],
+      "public": false,
+      "summary": "This update introduces a dedicated Menus action for each site row on the console, allowing users to deep-link directly to the site's menu settings. The existing Edit and Delete actions remain unchanged, and the action column has been widened to accommodate all controls seamlessly. These enhancements improve user navigation and functionality within the site management interface."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1140",
+      "title": "Enhance Menu Customization Features in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "menus",
+        "customization",
+        "translations",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces a new Menus tab for site management, allowing site owners to customize up to 8 ordered links in both public and console menus. Key changes include the application of `Site.nav` and `Site.console_nav`, options to hide certain console pages, and improved URL safety measures. Additionally, complete translations for 11 locales have been added to enhance accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1338",
+      "title": "Enhance Console Menu Overrides in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "backend",
+        "navigation",
+        "json",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update introduces a validated `Site.console_nav` JSON field for signed-in console sidebar overrides, ensuring a clear separation from the public `Site.nav`. It maintains legacy compatibility while enforcing URL safety rules and rejecting unsafe custom links. The backend changes are crucial for enabling immediate console menu editing in conjunction with the upcoming frontend deployment."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1897",
+      "title": "Enhance Proxy2 to Honor Live Context Variants in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "proxy",
+        "context",
+        "update",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update improves Proxy2 by routing all public aliases through the live context model IDs from the child catalog. It ensures that the requested public alias is preserved in client responses and honors the `[1m]` context for extended targets. All tests have passed successfully, confirming the robustness of these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1132",
+      "title": "Enhance DNS Record Copy Functionality in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "dns",
+        "copy",
+        "ui",
+        "standardization"
+      ],
+      "public": false,
+      "summary": "This update standardizes the copy functionality for DNS records by replacing text-based copy actions with a shared copy icon control. It also streamlines the API curl examples and deployment endpoint fields for both Telegram and Discord. Additionally, duplicate clipboard logic has been removed, and regression tests have been added to ensure the new controls function correctly."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1138",
+      "title": "Revamp Admin Management Features in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "admin",
+        "frontend",
+        "localization",
+        "ui",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update enhances the site administrator management by replacing raw UUID tags with responsive avatar cards that display user names and masked contact details. It introduces a privacy-safe user picker for searching by various identifiers, ensuring no duplicate administrators are added. Additionally, the update maintains immediate save semantics and includes localized guidance across multiple languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1133",
+      "title": "Streamline Tenant Experience by Hiding Flagship Features in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "tenant",
+        "features",
+        "branding",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update implements the shared `isOurOwnSite` ownership gate to restrict flagship features on tenant sites. Key changes include hiding referral earnings navigation, footer elements, and various service-card entries, along with redirecting specific routes back to the console root. The brand ownership regression suite has been extended to ensure comprehensive coverage, with all tests passing successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1136",
+      "title": "Revamp Pricing Preview for Better Clarity in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "pricing",
+        "responsive",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update enhances the site pricing preview by repositioning the display-currency helper for improved spacing and replacing the large pricing alert with a more compact status strip. Additionally, source-level regression checks have been added to ensure the integrity of the stacked helper and the new compact preview. These changes aim to streamline the user experience and maintain responsive design across various screen sizes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1134",
+      "title": "Enhance Branding Typography for Consistency in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "branding",
+        "typography",
+        "ui",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update refines the typography across the branding tab by unifying the font sizes to 12px for intro, section descriptions, and field hints. It also normalizes vertical spacing between helper text and form controls, improves toggle-row alignment, and ensures clean wrapping on narrow screens. All changes have passed validation checks, ensuring a consistent user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1131",
+      "title": "Enhance Inactive Account Handling in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "auth",
+        "ui",
+        "i18n",
+        "bugfix",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces a global handling mechanism for inactive accounts, featuring a non-dismissible localized dialog that informs users of account issues. It also clears stale authentication states and redirects users to the login page after acknowledgment. Additionally, the update suppresses duplicate error messages across various flows and includes support for 12 locales, ensuring a smooth user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1337",
+      "title": "Enhance inactive account handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "auth",
+        "error-handling",
+        "backend",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a stable `account_inactive` error code for inactive accounts, improving client guidance without needing to parse error messages. The changes include a new exception class and modifications to the authentication user state logic. Additionally, tests have been updated to ensure proper handling of this new error state."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1566",
+      "title": "Enhance MiniMax Video Controls in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "ui",
+        "video",
+        "enhancement",
+        "minimax",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1566",
+      "summary": "This update aligns the MiniMax video controls with the compact Veo/Kling selector pattern, improving user experience. Key changes include replacing the numeric duration stepper with a standard 4–15 second select and maintaining the Seedance-style segmented resolution control. Visual checks were performed on both desktop and mobile to ensure consistency."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1890",
       "title": "Enhance Model Identity Handling in Platform Service 🚀",
       "tags": [
