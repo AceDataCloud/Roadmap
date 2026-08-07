@@ -3,6 +3,86 @@
   "date": "2026-08-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1890",
+      "title": "Enhance Model Identity Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "identity",
+        "model",
+        "service",
+        "security",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces a dynamic identity instruction for public model aliases, ensuring that responses correctly identify the service as provided through AceDataCloud. Key changes include the enforcement of identity rules that prevent misrepresentation of the service and maintain customer instructions. The implementation has been validated with comprehensive tests, confirming the integrity of the new identity handling."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1334",
+      "title": "Enhance Auth Quarantine Enforcement in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "authentication",
+        "security",
+        "backend",
+        "jwt",
+        "tests"
+      ],
+      "public": false,
+      "summary": "This update implements strict checks on user authentication states before creating applications and credentials. Key changes include validating the `is_active` state of users, preventing the creation of stale JWTs, and ensuring that survey rewards are only granted to active users. The system now returns a controlled error response on authentication database failures, enhancing overall security and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#417",
+      "title": "Harden shared-email abuse quarantine and auth protections in Backend 🔒",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "auth",
+        "risk",
+        "quarantine",
+        "security",
+        "testing"
+      ],
+      "public": false,
+      "summary": "Added deterministic shared-email abuse detection with account-level quarantine rules and safer restoration ownership checks. Strengthened inactive-user enforcement across login, token refresh, OAuth flows, and SSO exchanges while improving risk pipeline scheduling and failure handling. Expanded validation coverage with adversarial tests and production dry-run verification."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1565",
+      "title": "Enhance MiniMax Uploads and Controls in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "ui",
+        "localization",
+        "uploads",
+        "media"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1565",
+      "summary": "This update replaces the MiniMax reference image/audio URL textareas with authenticated file uploads and media previews. It aligns various controls with the shared video-scenario field and updates all locales to remove obsolete pricing copy. Additionally, the uploaded previews are now synchronized with the parent state, improving user experience and functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1102",
+      "title": "Update wrangler to latest version in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "dependencies",
+        "update",
+        "frontend",
+        "wrangler"
+      ],
+      "public": false,
+      "summary": "This update bumps the wrangler package from version 4.113.0 to 4.118.0, introducing several minor changes and bug fixes. Key improvements include the addition of a --json flag for consistent output, enabling local observability capture by default, and enhancements to Workflow triggers. These updates aim to improve development efficiency and reliability."
+    },
+    {
       "id": "gh:pr:AceDataCloud/FacilitatorX402#83",
       "title": "Automated Deployment for Facilitator in x402 🚀",
       "tags": [
