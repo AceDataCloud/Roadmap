@@ -3,6 +3,88 @@
   "date": "2026-08-07",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1894",
+      "title": "Expose DeepSeek V4 Flash Model in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "openai",
+        "model",
+        "api",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces the `deepseek-v4-flash` model to the OpenAI-compatible models endpoint. It ensures that the model is correctly registered and available while maintaining protocol compatibility. Key verification tests confirm the model's presence and absence of any unintended entries."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1568",
+      "title": "Enhance MiniMax Tile Layout in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "minimax",
+        "ui",
+        "layout",
+        "bugfix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1568",
+      "summary": "This update allows MiniMax aspect-ratio tiles to wrap within the configuration sidebar, maintaining the existing 48px tile size. The arrangement now displays the options in a balanced 4 + 3 layout on narrow panels. A Beachball patch change file has also been added to support this functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1562",
+      "title": "Exciting New Wallet Payments for Image Scenarios in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "payments",
+        "usdc",
+        "wallet",
+        "nexior",
+        "image-generation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1562",
+      "summary": "This update introduces a feature-gated wallet payment option for image generation scenarios in Nexior, specifically for Nano Banana and GPT Image 2. Users can now select between Credits and Solana USDC directly from the interface, enhancing payment flexibility. The integration includes a reusable wallet picker and ensures a seamless experience for logged-in users while maintaining privacy for guest users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1342",
+      "title": "Enhance MiniMax Billing Accuracy in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "billing",
+        "api",
+        "tests",
+        "backend",
+        "miniMax"
+      ],
+      "public": false,
+      "summary": "This update aligns the MiniMax billing model with the normalized model value, ensuring accurate cost calculations. Key changes include modifications to the OpenAPI request and cost tests to reflect the correct model and resolution values. Validation confirms that the new setup successfully generates the expected credit amounts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1902",
+      "title": "Enhance Kling Error Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "kling",
+        "http-status",
+        "refactor",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update refines the error classification for Kling tasks, designating 'Image format is invalid' as an HTTP 400 error instead of a 500. The changes also relocate the Kling-specific error classifier into the contract module, ensuring its functionality is tested independently of worker infrastructure. These improvements aim to enhance the clarity of error reporting and reduce unnecessary server error alerts."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1900",
       "title": "Revamp cqtai for MiniMax H3 V2 integration in Platform Service 🚀",
       "tags": [
