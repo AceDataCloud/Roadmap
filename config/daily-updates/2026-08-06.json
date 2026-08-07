@@ -3,6 +3,196 @@
   "date": "2026-08-06",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformService#1878",
+      "title": "Exciting New MiniMax H3 Video Service Added in Platform Service 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "feature",
+        "minimax",
+        "video",
+        "api",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces the `POST /minimax/videos` endpoint, enabling the generation of MiniMax H3 videos with text, image, and audio guidance. Key enhancements include normalized async tasks, improved billing duration, and error handling, along with deployment to AceDataCloud CDN. Additionally, an isolated workload for the MiniMax service has been deployed, complete with contract tests in CI to ensure reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1127",
+      "title": "Enhance Submit Action Handling in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "bugfix",
+        "frontend",
+        "ui",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update addresses a bug in the `<xhs-publish-btn>` component where the click action was incorrectly biased towards the save action. The fix introduces a click bias that prioritizes the end-side click for submit actions, ensuring that the correct action is triggered. All tests have passed successfully, confirming the reliability of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1877",
+      "title": "Streamline Native Protocol Paths in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "refactor",
+        "performance",
+        "api",
+        "proxy",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update refactors the native Chat, Responses, and Messages requests for improved efficiency by preparing and normalizing them only once at the client boundary. It introduces the `POST /v1/messages/count_tokens` route with proxy authentication and public-model alias resolution while retaining the existing Chat-to-Responses bridge. The changes enhance performance and maintain compatibility without altering existing model routing behaviors."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1328",
+      "title": "Enhance email overview by separating active and historical queues in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "email",
+        "backend",
+        "fix",
+        "testing",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update addresses an issue where the email campaign overview inaccurately counted stale queued recipients from cancelled campaigns. The fix introduces a new aggregation for active recipients, specifically for campaigns that are currently running, while preserving historical data for backward compatibility. Additionally, regression tests have been added to ensure that cancelled campaigns do not appear in the active queue."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1126",
+      "title": "Enhance Email Delivery Status Clarity in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "email",
+        "frontend",
+        "localization",
+        "bugfix",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update improves the email campaign overview by clearly distinguishing the global sending switch from active delivery. The banner now accurately reflects whether campaigns are currently delivering, and the queued recipients are sourced from the backend. Additionally, all locales have been updated to ensure consistent messaging across different languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1125",
+      "title": "Enhance Email Settings Visuals in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "visual",
+        "frontend",
+        "ui",
+        "responsive",
+        "cleanup"
+      ],
+      "public": false,
+      "summary": "This update refines the email settings page by consolidating the readiness status and global sending toggle into a more compact area, reducing visual noise. It also implements a true three-column layout for provider, sender address, and sending domain, ensuring long addresses wrap safely. Additionally, the layout is optimized for responsiveness across desktop, tablet, and mobile devices, while cleaning up outdated styles."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1123",
+      "title": "Enhance Solana Payments with Buffer Polyfill in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "solana",
+        "buffer",
+        "frontend",
+        "payments",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a browser `Buffer` implementation to support Solana payments. It adds `buffer` as a direct runtime dependency and updates the X402 order contract check to ensure compatibility with the polyfill and the current client version. These changes enhance the reliability of payment processing on the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1875",
+      "title": "Enhance CORS Support for Discord Proxy in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "cors",
+        "discordbot",
+        "security",
+        "testing",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update allows authenticated Discord proxy calls from 'https://platform.acedata.cloud' while ensuring valid browser preflight requests are processed without compromising bearer token protection. Additionally, regression tests have been added to cover both preflight and authenticated responses, enhancing the reliability of the service."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1121",
+      "title": "Refine Discount Badge Logic in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "bugfix",
+        "ui",
+        "application"
+      ],
+      "public": false,
+      "summary": "This update improves the purchase page by ensuring that the discount badge is only displayed when the per-unit price is below 100%. The logic was adjusted to prevent misleading information for packages with equal pricing. All relevant tests have passed, confirming the stability of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1874",
+      "title": "Enhance Message Streaming Reliability in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "fix",
+        "streaming",
+        "messages",
+        "heartbeat",
+        "proxy"
+      ],
+      "public": false,
+      "summary": "This update introduces a mechanism to emit valid 'ping' events for Anthropic Messages when upstream streams are idle, preventing timeouts. The idle timer is reset with each real chunk received, and heartbeat timers are cleaned up on various terminal events. Additionally, the heartbeat interval can now be configured, enhancing the stability of message streaming."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1560",
+      "title": "Enhance Template Wizard for Scheduled Tasks in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "scheduled-tasks",
+        "template-wizard",
+        "bug-fix"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1560",
+      "summary": "This update automatically opens the template wizard when the `/chatgpt/scheduled` route includes a `template_category`, specifically preserving the marketing category from the referral-center CTA. Direct visits remain unaffected. The changes have been validated with successful tests and lint checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1872",
+      "title": "Enhance Template Testing and Delivery in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "template",
+        "testing",
+        "delivery",
+        "aichat2",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update tightens the testing gates for scheduled templates by ensuring omitted versions resolve to the latest catalog version and requiring concrete artifact evidence for controlled delivery templates. Personal WeChat and Blogger tests remain in draft mode, and the unattended template no longer has write capabilities, producing a reviewable message draft instead. These changes improve the reliability and safety of template management."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#1116",
       "title": "Enhance WebSocket Connection Handling in Frontend Web 🚀",
       "tags": [
