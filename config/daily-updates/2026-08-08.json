@@ -3,6 +3,215 @@
   "date": "2026-08-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/MCPs#572",
+      "title": "Updated AiChat Models with Latest Specs in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "models",
+        "update",
+        "specs",
+        "aichat",
+        "gemini",
+        "claude"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/572",
+      "summary": "This update synchronizes the AiChat model enums for Claude and Gemini with the latest OpenAPI specifications from upstream Docs. Key additions include several new Gemini models and enhanced contract coverage for model availability checks. The changes ensure that the AiChat server accurately reflects the current capabilities of these models."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1344",
+      "title": "Enhance API Service Relations in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "backend",
+        "migration",
+        "services",
+        "django"
+      ],
+      "public": false,
+      "summary": "This update introduces a new many-to-many relationship for API services while maintaining the legacy foreign key. It includes backfilling existing APIs with primary relations, enforcing unique constraints, and adding domain helpers for better management. The migration ensures that existing functionality remains intact during the transition."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#686",
+      "title": "Enhance Claude and Gemini CLIs with New OpenAPI Features in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "openapi",
+        "enhancement",
+        "gemini",
+        "claude"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/686",
+      "summary": "This update synchronizes the Claude and Gemini CLIs with the latest OpenAPI specifications. Key enhancements include new chat completion options for Claude and the introduction of native content generation commands for Gemini. These changes improve functionality and user experience by expanding available endpoints and request parameters."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1150",
+      "title": "Enhance USDC Settlement Display in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "usdc",
+        "localization",
+        "ui",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update improves the display of confirmed x402 USDC settlements by showing exact amounts instead of generic labels. It introduces transaction explorer links, categorizes records by status, and enhances the UI with localized support across 12 languages. Additionally, it addresses potential issues with stale responses and transaction labeling for better user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1352",
+      "title": "Revamp API Token Costs with Protocol-Specific Catalogs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "backend",
+        "cost",
+        "jsonlogic",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update introduces separate JsonLogic catalogs for each API protocol, enhancing clarity and precision in token cost calculations. The legacy monolithic catalog is no longer referenced, ensuring all endpoints utilize the new structure. Comprehensive validation confirms the integrity of the changes across all affected components."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1575",
+      "title": "Enhanced USDC Settlement Display in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "localization",
+        "payments",
+        "usdc",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1575",
+      "summary": "This update introduces the display of confirmed x402 USDC settlements as exact amounts, replacing previous placeholders. It also links supported Solana, Base, and SKALE transactions through a shared CAIP-2 allowlist and improves the distinction between settled, unconfirmed, failed, and legacy payment records. Additionally, payment details are now included in the usage dialog, with localization updates across 18 languages."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1906",
+      "title": "Enhance Usage Billing Alignment in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "api",
+        "gemini",
+        "usage",
+        "platform"
+      ],
+      "public": false,
+      "summary": "This update introduces a canonical internal record structure for usage billing, specifically for Chat Completions, Responses, Messages, and Gemini GenerateContent. Key changes include the normalization of cache write tokens and the capture of detailed usage metrics for Gemini. The public API formats remain unchanged, ensuring compatibility while improving internal processing efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1357",
+      "title": "Resolve migration conflicts for smoother backend rollout in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "migration",
+        "backend",
+        "deployment",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update introduces a new empty merge migration to connect `0269_invoice_public_upload` and `0269_site_logo_variants`, addressing issues that caused the `platform-backend:2942` rollout to crash. The changes ensure that conflicting migrations are resolved, allowing for a stable deployment while maintaining existing traffic. Validation checks confirm that there are no remaining conflicts."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1356",
+      "title": "Enhance x402 Settlement Metadata Tests in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "testing",
+        "metadata",
+        "api",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update introduces new tests to verify that API usage lists accurately preserve normalized x402 settlement metadata. Key changes include ensuring atomic USDC amounts are treated as strings and that request/response data remains redacted in list responses while being accessible in detailed views. The tests have passed successfully, confirming the integrity of these functionalities."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#239",
+      "title": "Enhance Payment Settlement Recording in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "enhancement",
+        "payments",
+        "settlement",
+        "api",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update introduces structured recording of settled usage payments, preserving key details such as the facilitator amount, network, transaction, and payer. Confirmed USDC settlement facts are now stored in `ApiUsage.metadata`, while incomplete successful settlements are marked as `unconfirmed`. Additionally, failed attempts are clearly separated from confirmed transactions, improving overall transaction integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#25",
+      "title": "Enhance Token Formatting with New Helpers in Common Frontend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "enhancement",
+        "token-formatting",
+        "frontend",
+        "release"
+      ],
+      "public": false,
+      "summary": "This update introduces a precision-safe atomic token formatter for usage history and maps supported CAIP-2 networks to allowlisted transaction explorers. The existing fixed-width token formatter contract has been preserved, and the package has been published as `@acedatacloud/core` version 0.19.1. Comprehensive validation has confirmed the stability and compatibility of these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Skills#871",
+      "title": "Enhance YouTube Skill with Robust Upload Features in Skills 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Skills",
+        "youtube",
+        "upload",
+        "tests",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Skills/pull/871",
+      "summary": "This update strengthens the YouTube skill by ensuring the `publish_artifact` tool remains accessible during uploads. It preserves crucial resumable-init headers and HTTP status codes to accurately report API errors on upload failures. Additionally, new contract tests have been added to ensure the safety of unattended uploads."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1149",
+      "title": "Launch Adaptive Logo Studio for Tenants in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "logo",
+        "frontend",
+        "i18n",
+        "adaptive",
+        "branding"
+      ],
+      "public": false,
+      "summary": "This update introduces a two-step workflow for tenant logos, including cropping, analysis, and preview options. It features smart adaptive themes and preserves PNG transparency during cropping. Additionally, the implementation supports translations across 11 locales, enhancing accessibility for diverse users."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#1355",
       "title": "Enhance Logo Processing with New APIs in Backend 🚀",
       "tags": [

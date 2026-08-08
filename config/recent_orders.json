@@ -1,7 +1,14 @@
 {
-  "as_of": "2026-08-08T08:12:55.287545+00:00",
+  "as_of": "2026-08-08T10:10:11.553805+00:00",
   "total": 20,
   "orders": [
+    {
+      "id": "c2bbe658-e****34497799db",
+      "created_at": "2026-08-08T09:33:58.916203+00:00",
+      "pay_way": "WechatPay",
+      "price": 0.01,
+      "description": "发票上传测试订单（0.10 CNY，不涉及真实支付）"
+    },
     {
       "id": "61e814de-a****4b40459e3f",
       "created_at": "2026-08-08T06:28:14.070748+00:00",
@@ -134,13 +141,6 @@
       "pay_way": "Card",
       "price": 15.0,
       "description": "Ace Data Cloud Credits x 100.0"
-    },
-    {
-      "id": "0c530a69-4****ba53d5dbe5",
-      "created_at": "2026-08-07T09:54:22.859708+00:00",
-      "pay_way": "WechatPay",
-      "price": 126.0,
-      "description": "Ace Data Cloud General Points Recharge - 1110 Credits"
     }
   ]
 }
