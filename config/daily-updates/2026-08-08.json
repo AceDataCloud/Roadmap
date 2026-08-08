@@ -1,0 +1,52 @@
+{
+  "$schema": "./day.schema.json",
+  "date": "2026-08-08",
+  "items": [
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1911",
+      "title": "Enhance Suno Job Handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "suno",
+        "post-processing",
+        "retry",
+        "ttapi",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces a mechanism to wait for Suno parent jobs to succeed before proceeding with post-processing tasks. Key changes include the addition of a retry strategy for various operations like WAV and MIDI, ensuring that intermediate job states do not interfere with the processing workflow. The implementation aims to improve reliability and efficiency in handling job responses."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1912",
+      "title": "Enhance Error Handling for Overflow in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "error-handling",
+        "github-proxy2",
+        "updates",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of nested prompt-token overflow responses in the github-proxy2. It ensures that the existing HTTP status and error envelope are preserved while providing a clear message for recoverable errors. Additionally, unrelated and malformed errors remain unchanged, enhancing overall error management."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1100",
+      "title": "Upgrade Vite to 8.2.0 in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "vite",
+        "upgrade",
+        "frontend",
+        "dependencies"
+      ],
+      "public": false,
+      "summary": "This update bumps Vite from version 7.3.2 to 8.2.0, bringing several new features and bug fixes. Key improvements include enhanced support for HMR and better handling of worker file updates. The changes are expected to improve the overall development experience and performance of the platform."
+    }
+  ]
+}
