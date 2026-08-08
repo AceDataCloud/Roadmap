@@ -3,6 +3,535 @@
   "date": "2026-08-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1370",
+      "title": "Enhance x402 Discount Contract Logic in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "discount",
+        "testing",
+        "metadata"
+      ],
+      "public": false,
+      "summary": "This update extends the x402 discount contract by locking atomic fields and updating frozen discount metadata to strings. It ensures that list responses continue to hide request/response details while exposing sanitized payloads. No changes were made to the production model, serializer, or migrations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1171",
+      "title": "Link Revenue Orders to Users in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "admin",
+        "navigation",
+        "revenue",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update enhances the admin revenue table by displaying user IDs for each order, allowing for easy navigation to user details. It includes deep-linking to the existing admin user query while ensuring that stale query responses do not disrupt the current user view. Additionally, the navigation contract has been added to the prebuild test suite, ensuring robust functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#243",
+      "title": "Enable x402 Usage Discounts in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "deployment",
+        "discounts",
+        "gateway",
+        "x402"
+      ],
+      "public": false,
+      "summary": "This update enables identity-bound x402 usage discounts following the successful rollout of compatibility with 5/5 replicas. The change is isolated to a single deployment environment variable, ensuring a smooth transition. The deployment YAML has been verified and parses successfully, with the necessary adjustments made to support this feature."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1367",
+      "title": "Enhance Document Overrides with Localization Features in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "localization",
+        "api",
+        "backend",
+        "features",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces localized document body overrides by extending the existing SiteDocumentOverride model with new fields for content mode and markdown. The API now returns locale-aware content, enhancing user experience for legal documents like Terms and Privacy. Comprehensive tests ensure stability and compliance with safety measures, including limits on raw HTML and markdown content length."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#242",
+      "title": "Implement Frozen Usage Discounts in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "discounts",
+        "billing",
+        "x402",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update introduces frozen usage discounts for the dedicated x402 host, allowing for a more controlled billing process. Key changes include the freezing of existing ConsumptionDiscounts and the addition of a new pricing module to handle these discounts. The rollout is designed to ensure safety with a default disabled flag, requiring a two-phase deployment approach."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1580",
+      "title": "Enhance Video Wallet Payments in Nexior 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "payments",
+        "video",
+        "solana",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1580",
+      "summary": "This update introduces Solana x402 wallet payment support across 12 standard video scenarios, including Luma, Pika, and Maestro. Key changes include maintaining authoritative request builders and supporting guest task polling without altering existing storage or behavior. The UI is controlled by a feature flag, ensuring a smooth rollout."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1164",
+      "title": "Enhance Branding Localization Features in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "localization",
+        "branding",
+        "frontend",
+        "features",
+        "ui"
+      ],
+      "public": false,
+      "summary": "This update introduces an auto-translation toggle for branding content, including company and customer service labels. It ensures that the editor hydrates from the branding source while preserving nested data during saves. Additionally, it binds contacts to stable IDs and maintains input consistency when toggling auto-translation, enhancing user experience and data integrity."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1368",
+      "title": "New Email Notification for Invoice Issuance in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "email",
+        "invoice",
+        "notification",
+        "backend",
+        "smtp"
+      ],
+      "public": false,
+      "summary": "This update introduces a new internal SMTP notification system that alerts users upon successful invoice issuance. Key changes include the addition of a durable `invoice.issued` event and a dedicated endpoint for sending emails, ensuring seamless communication without modifying existing endpoints. The implementation enhances the transactional email process, making it more efficient and reliable."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1169",
+      "title": "Enhance API Domain Previews for Custom Domains in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "api",
+        "frontend",
+        "custom-domain",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update allows previews to run on a specified custom API domain by passing the Active API-domain host as the base URL for live requests. Existing functionality remains intact for callers that do not specify a `requestBaseUrl`. Key components have been modified to support this feature, ensuring a seamless integration for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#241",
+      "title": "Enhance CORS Handling for Custom Domains in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "cors",
+        "api",
+        "deployment",
+        "testing",
+        "gateway"
+      ],
+      "public": false,
+      "summary": "This update replaces the upstream wildcard CORS header with the requesting portal origin for custom API-domain responses. It also ensures that the Caddy API proxy is applied and restarted during Gateway deployments, improving deployment reliability. Additionally, new regression tests have been added to validate the changes and ensure fast failure on configuration issues."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1914",
+      "title": "Enhance AI chat usage record retries in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "retry",
+        "ai",
+        "performance",
+        "testing",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of transient errors in the AI chat usage recording process. Key changes include implementing a retry mechanism for network errors and HTTP 5xx responses, while preserving the initial delay for database interactions. Comprehensive tests have confirmed the functionality, ensuring robust performance and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthFrontend#261",
+      "title": "Unify Success Feedback for Copy Actions in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "AuthFrontend",
+        "frontend",
+        "localization",
+        "ui",
+        "copy",
+        "feedback"
+      ],
+      "public": false,
+      "summary": "This update introduces a shared CircleCheck copy control across all frontends, streamlining the user experience. It replaces duplicated OAuth list and credential copy states, ensuring consistent feedback with a 3-second reset. Additionally, localized copy-failure messages have been added for all 18 supported languages, enhancing accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1157",
+      "title": "Unify Copy Success Feedback in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "accessibility",
+        "feedback",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update standardizes the copy success feedback across various components, including CircleCheck and tooltip messages. Key changes include a consistent 3-second reset for feedback, improved accessibility with aria labels, and stable layouts for text-button and code-block controls. The modifications enhance user experience by ensuring reliable feedback for copy actions throughout the application."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1577",
+      "title": "Unify Copy Success Feedback in Nexior 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "copy",
+        "feedback",
+        "ui",
+        "improvement",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1577",
+      "summary": "This update standardizes the success feedback for copy actions across various components in Nexior, including CircleCheck and chat sharing. Key changes include a consistent 3-second reset for feedback, suppression of false success messages, and removal of legacy code. The improvements enhance user experience by providing clear and accessible feedback during copy actions."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1576",
+      "title": "Enhance Logo and Favicon Studio in Nexior 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "logo",
+        "favicon",
+        "i18n",
+        "ui",
+        "enhancement"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1576",
+      "summary": "This update introduces a two-step smart Logo/Favicon studio to Site settings, allowing for improved logo management with light and dark variants. Default logos are now set to color-on-light and white-on-dark, while flat favicon backgrounds have been removed in favor of a single transparent color favicon. Additionally, real translations have been added across all generated locales, enhancing accessibility for users worldwide."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1153",
+      "title": "Enhance logo and favicon handling in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "logos",
+        "favicon",
+        "ui",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of adaptive logos and favicons by ensuring transparent logos maintain their smart-adaptive appearance. It decouples dark-mode variants from background removal and processes favicons through a consistent background analysis flow, preserving only the transparent color asset. Additionally, the favicon output is now optimized for high-DPI displays."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1364",
+      "title": "Enhance Site Branding Localization in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "localization",
+        "branding",
+        "backend",
+        "translations",
+        "ci"
+      ],
+      "public": false,
+      "summary": "This update extends the translation capabilities for site branding content, allowing localization of company, copyright, and contact labels. A new command for backfilling stable contact UUIDs has been introduced, along with improvements to preserve translation states during updates. CI coverage has also been expanded to ensure robust testing of the new features."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1168",
+      "title": "Enhance Support Page with Branded Banner in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "design",
+        "ui",
+        "support"
+      ],
+      "public": false,
+      "summary": "This update introduces a sleek, compact dark banner to the support page, aligning with the existing Models and X402 hero language. The design maintains a professional aesthetic with a consistent title scale and ensures compatibility across both light and dark themes. All existing content remains intact, enhancing the visual appeal without introducing new assets."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1358",
+      "title": "Streamline API Relations by Removing Legacy Foreign Key in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "cleanup",
+        "migration",
+        "api",
+        "backend"
+      ],
+      "public": false,
+      "summary": "This update removes the legacy `app_api.service_id` column following a successful M2M migration. It ensures that all APIs maintain a valid primary relation while preserving the `service` and `service_id` as read-only projections. The commit includes reversible SQL for potential rollback and has passed extensive validation checks."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1162",
+      "title": "Enhance API Selector Loading Experience in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "api",
+        "loading",
+        "user-experience",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update keeps the usage-history API selector visible while loading options, improving user experience. The dropdown now displays a loading state instead of a skeleton, ensuring a smoother interaction. Additionally, the behavior has been integrated into the existing prebuild contract gate."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1578",
+      "title": "Enhance API Selector Loading Experience in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "api",
+        "loading",
+        "ui",
+        "test"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1578",
+      "summary": "This update ensures that the usage-history API selector remains visible while options are preloading, improving user experience. Instead of displaying a skeleton, a loading state is shown inside the dropdown. Additionally, a new Vitest source contract has been added to validate these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1167",
+      "title": "Enhance Menu Localization and Order in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "localization",
+        "menu",
+        "frontend",
+        "navigation",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update introduces a unified sortable menu for both public and console navigation, allowing custom links to be prioritized over built-in ones while keeping admin-only links separate. Localization toggles have been added for each link, supported by raw zh-CN source projections and stable UUIDs. The changes enhance user experience by providing a more flexible and localized navigation structure."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1369",
+      "title": "Enhance Menu Localization and Order in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "localization",
+        "menu",
+        "backend",
+        "features",
+        "translations"
+      ],
+      "public": false,
+      "summary": "This update introduces stable custom-link UUIDs and allows mixed ordering for menu links in the Site navigation. A new localization endpoint has been added, enabling better management of menu translations while preserving existing functionality. The changes ensure compatibility with the old frontend and maintain atomic translation state across updates."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1908",
+      "title": "Enhance Thinking Summaries and Routing in Platform Service 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "routing",
+        "validation",
+        "performance",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update improves the routing of child Messages requests through the existing Responses bridge, enhancing compatibility and performance. It introduces support for various output configuration effort levels and ensures that replayable thinking signatures are preserved. Additionally, it enforces stricter validation for request parameters, improving overall service reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#690",
+      "title": "Ensure MiniMax H3 CLI Matches Documentation in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "documentation",
+        "api",
+        "cli",
+        "verification"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/690",
+      "summary": "This update confirms that the MiniMax H3 CLI is fully aligned with the latest documentation updates. Key areas such as API contract coverage for video generation and task actions have been verified, ensuring compliance with the OpenAPI specifications. No source changes are needed as the current implementation already meets the required standards."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1363",
+      "title": "Enhance Service Icons for Consistency in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "icons",
+        "cdn",
+        "services",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update ensures that the reusable service icon backfill mapping is complete for Claude Code, Codex, and Digital Human. The three `Service.icon_url` values have been applied directly to production without migration, utilizing CDN-hosted square icons for uniform catalog rendering. All changes were verified in production, confirming the expected outcomes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#240",
+      "title": "Streamline API Service Management in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "cleanup",
+        "api",
+        "gateway",
+        "authorization",
+        "performance"
+      ],
+      "public": false,
+      "summary": "This update removes the legacy `Api.service` mirror and all associated reads, simplifying the authorization rules to focus solely on enabled `ApiService` membership. It ensures that each API has exactly one enabled primary relation, enhancing data integrity and system performance. The cleanup has been validated with all tests passing, confirming no runtime issues remain."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#576",
+      "title": "Enhance Minimax Task Filters in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "minimax",
+        "filters",
+        "pagination",
+        "tasks",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/576",
+      "summary": "This update introduces new task-list pagination and creation-time filters for the Minimax Docs. The MCP task interface now supports parameters like `limit`, `offset`, `created_at_min`, and `created_at_max`, improving task retrieval efficiency. Additionally, polling behavior has been optimized to reduce delays for terminal task statuses."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1366",
+      "title": "Enhance logo processing with adaptive dark mode in Backend 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "logo",
+        "branding",
+        "backend",
+        "update",
+        "adaptive"
+      ],
+      "public": false,
+      "summary": "This update introduces an `adaptive_dark` logo output that maintains saturated brand colors while adjusting low-chroma black and gray text. The existing `dark` mode remains available for monochrome use. Comprehensive testing has confirmed the effectiveness of these changes, ensuring a seamless transition for clients."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1361",
+      "title": "Expanded MiniMax H3 Integration Guides in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "documentation",
+        "minimax",
+        "backend",
+        "integration",
+        "guides"
+      ],
+      "public": false,
+      "summary": "This update enhances the MiniMax H3 video integration documentation by adding comprehensive guides on token setup, use-case selection, and detailed task actions. It also includes three production-grade case studies showcasing various video outputs and clarifies key concepts without implying face recognition. The changes aim to improve user understanding and streamline the integration process."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#351",
+      "title": "Simplify Coding Plan Architecture for Better Reuse in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "documentation",
+        "architecture",
+        "coding-plan",
+        "refactor",
+        "api",
+        "index"
+      ],
+      "public": false,
+      "summary": "This update replaces the extensive 1,077-line Coding-specific architecture documentation with a streamlined 257-line RFC focused on reuse. Coding is now modeled as a standard database Service with three Period Packages, leveraging existing features like remaining_amount, expired_at, and Gateway billing. Several complex components such as entitlement, Redis quota, and dedicated UI have been removed, resulting in a net reduction of nearly 820 lines in documentation without affecting implementation or production databases."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1574",
+      "title": "Enhance Payment Options with Flux and QR Wallets in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "payments",
+        "flux",
+        "qrart",
+        "nexior"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1574",
+      "summary": "This update introduces Flux and QR wallet payment options to the x402 scenario selector, enhancing user experience by allowing direct server quotes and wallet submissions. Key components have been modified to retain selected pricing parameters, ensuring a seamless integration with existing functionalities. The changes have been validated with extensive testing, confirming stability and performance."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1165",
+      "title": "Enhance Bank Transfer Instructions in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "payments",
+        "ui",
+        "translations",
+        "frontend",
+        "user-experience"
+      ],
+      "public": false,
+      "summary": "This update clarifies bank transfer instructions by prominently displaying the exact frozen amount and currency required. It also explains that mismatched amounts or currencies cannot be credited automatically and provides user-friendly ACH/Fedwire routing details. Additionally, real translations have been added across all locales to improve accessibility for users."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#1365",
       "title": "Streamline Bank Routing Details in Backend 🚀",
       "tags": [
