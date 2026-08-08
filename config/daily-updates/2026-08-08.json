@@ -3,6 +3,369 @@
   "date": "2026-08-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1365",
+      "title": "Streamline Bank Routing Details in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "payments",
+        "backend",
+        "normalization",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update normalizes and deduplicates Airwallex routing codes while ensuring the first-seen order is preserved. It also separates SWIFT/BIC codes into their dedicated field and enhances the system's tolerance for malformed routing shapes, preventing disruptions in order details. Comprehensive tests have been added to validate these changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#238",
+      "title": "Enhance Payment Gateways with Cost Certainty in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "payments",
+        "x402",
+        "gateway",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature to gate payments based on cost certainty by reading x402 eligibility from the existing metadata. It ensures that requests fail closed for any missing or malformed policies, while also preserving user-selected parameters for accurate cost quoting. Additionally, it implements mutually exclusive payment types and records reconciliation telemetry for better tracking."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1155",
+      "title": "Enhance API Playground Routing for White-Label Sites in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "api",
+        "frontend",
+        "routing",
+        "white-label",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the routing for the white-label API playground by ensuring that document endpoint labels are routed through the verified `active_api_host`. It also standardizes the host used for generated snippets and live tests, preserving private deployment URLs. Additionally, the white-label document contract check has been updated to prevent discrepancies between display and execution."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1163",
+      "title": "Revamp Support Page Design in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "design",
+        "frontend",
+        "ui",
+        "update",
+        "support"
+      ],
+      "public": false,
+      "summary": "This update enhances the support page by replacing the dark graph-paper background with a light-first design and a more subtle brand wash. Key changes include a reduction of the support banner size, removal of misleading indicators, and the transformation of channels into compact responsive cards. The update maintains essential features like tenant-configured contacts and dark-mode support, ensuring a seamless user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1145",
+      "title": "Enhance Period Package Support in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "service",
+        "period",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces support for Period package purchases by leveraging existing Period Applications. The changes allow for the selection of the appropriate application type based on the availability of Period packages, while maintaining the global recharge path for Usage Services. Key files modified include the service detail page and the addition of a new script for validation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1353",
+      "title": "Enhance API Cost Management in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "cost",
+        "backend",
+        "policy",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update introduces a new explicit allowlist for request-priced x402 endpoints through the addition of `cost/x402_policy.json`. It ensures that all API policies are published atomically while maintaining existing metadata and cost rules. Validation has been successfully completed with over 1,000 tests passing, ensuring robust functionality without schema migrations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1156",
+      "title": "Enhance Auto-Translate Toggle Spacing in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "frontend",
+        "bugfix",
+        "design"
+      ],
+      "public": false,
+      "summary": "This update improves the layout of the auto-translate toggle by removing the negative right margin that previously encroached on the character counter. A new 4px right margin has been added to ensure the toggle is fully visible and aesthetically pleasing. These changes enhance the overall user interface experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1158",
+      "title": "Enhance API Domain Playground Experience in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "api",
+        "localization",
+        "ui",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update replaces the static API-domain curl block with a reusable real-key and API picker, allowing for dynamic code generation against the active custom domain. It also improves global application initialization and updates the UI translations across all locales, enhancing user experience and accessibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1159",
+      "title": "Enhance Bank Transfer Control in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "payments",
+        "frontend",
+        "feature",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update allows the server-side `ENABLE_BANK_TRANSFER` flag to directly control visibility, removing the unrelated URL/cookie tester opt-in requirement. The low-amount flag and amount threshold are retained, ensuring that only targeted users can access this feature while maintaining safety measures. Validation checks have passed successfully, confirming the integrity of the changes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1161",
+      "title": "Enhance Service Icon Handling in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "icons",
+        "testing",
+        "vue"
+      ],
+      "public": false,
+      "summary": "This update introduces a shared icon component for service overrides, ensuring consistent rendering across the application. It includes fallback initials for cases where icon data is missing or fails to load. Additionally, contract tests have been implemented to cover both table rows and the service picker, enhancing reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1160",
+      "title": "Unify Markup Inputs as Percentages in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "markup",
+        "frontend",
+        "localization",
+        "ui",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update standardizes site-wide markup inputs to percentage units, aligning them with per-service overrides. The conversion between percentage UI values and ratio API values now occurs only at the request boundary, enhancing clarity and usability. Additionally, all locale guidance has been updated to reflect these changes, ensuring consistency across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1362",
+      "title": "Restore API Service Type for Console Usages in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "backend",
+        "fix",
+        "tests",
+        "service"
+      ],
+      "public": false,
+      "summary": "This update fixes an issue where the API filter on the `/console/usages` page was not displaying options for APIs owned by `Api` services. The change includes adding `service.type` to the compact `/apis/` response and updating the test suite to ensure the integrity of this functionality. All related tests have passed successfully, confirming the fix."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#236",
+      "title": "Enhance Period Application Expiry Handling in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "auth",
+        "expiry",
+        "testing",
+        "production"
+      ],
+      "public": false,
+      "summary": "This update enforces expiry checks for Period Applications, ensuring they are only rejected when they have an explicit expired_at date that has passed. Legacy Period Applications with a NULL expiry remain unaffected, preserving their unlimited status. The changes include new validation tests and adjustments to the application logic to maintain production stability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#418",
+      "title": "Enhance YouTube Connector for Video Management in Backend 🎥",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "youtube",
+        "connector",
+        "backend",
+        "permissions",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces the `youtube.force-ssl` permission to the YouTube connector, allowing users to manage the visibility and deletion of their own videos. The permission is now exposed in the connection scope picker with clear descriptions. Additionally, new contract tests ensure that the permissions and requested scopes remain aligned, enhancing the overall functionality of the connector."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformGateway#232",
+      "title": "Enhance API Service Membership Handling in Gateway 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformGateway",
+        "feature",
+        "api",
+        "membership",
+        "gateway",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces significant improvements to the API service membership management. Key changes include the separation of primary and entry memberships, the addition of a new ApiService model, and the implementation of feature-flagged membership authorization. These enhancements aim to streamline membership resolution and improve overall application behavior."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1152",
+      "title": "Tighten Service Name and Alias Spacing in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "ui",
+        "design",
+        "fix"
+      ],
+      "public": false,
+      "summary": "This update removes the extra gap between service titles and aliases in the service customization list. It sets a compact line height to enhance the visual relationship between the two lines of text, specifically affecting only the first column of the table without impacting other lists or font sizes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1360",
+      "title": "Enhance Airwallex Payment Alerts in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "payments",
+        "alerts",
+        "backend",
+        "logging",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces stable CLS events for unmatched, possible-overpayment, and reversed Airwallex deposits. It also ensures that only normalized audit identifiers are logged after transaction commits and deduplicates alerts across webhook and reconciliation replays. These changes improve the reliability and clarity of payment processing notifications."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Clis#688",
+      "title": "Align Gemini CLI with Updated OpenAPI in Clis 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Clis",
+        "cli",
+        "openapi",
+        "documentation",
+        "updates"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Clis/pull/688",
+      "summary": "This update synchronizes the Gemini CLI with the latest changes in the OpenAPI contract. Key modifications include the removal of the unsupported `--cached-content` option and the restriction of `--video-url` to a single URL. Additionally, the README has been updated to reflect new commands and clarify the changes in API payloads."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/MCPs#574",
+      "title": "Sync MCP servers with updated Docs in M C Ps 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "MCPs",
+        "sync",
+        "docs",
+        "mcp",
+        "testing",
+        "validation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/MCPs/pull/574",
+      "summary": "This update focuses on synchronizing the MCP servers with the latest changes in the Gemini Docs service. Key tasks include inspecting the repository layout, comparing the OpenAPI spec with the local implementation, and applying necessary sync changes. Additionally, contract tests have been added or updated, and targeted linting and testing have been performed to ensure quality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1359",
+      "title": "Update Gemini Contract for Accurate Billing in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "gemini",
+        "billing",
+        "api",
+        "backend",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update aligns the Gemini contract with billable features by removing unsupported audio modalities and built-in tools from the public request schema. Key changes include the addition of an OpenAPI contract test and documentation of unsupported features, ensuring that the API responds with explicit errors for unsupported requests. The validation suite confirms that all tests pass, paving the way for a smooth rollout."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1349",
+      "title": "Enhance API Service Memberships in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "services",
+        "membership",
+        "backend",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update introduces a new mechanism for reading services through memberships in the API. Key changes include switching to enabled `ApiService` memberships, refining API service filters, and exporting a stable `service_api_mapping.json`. The internal handling of raw M2M memberships has been improved for clarity and efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1151",
+      "title": "Revamp Invoice Upload Page for Dark Mode in Frontend Web 🌙",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "ui",
+        "dark-mode",
+        "frontend",
+        "bugfix",
+        "visual",
+        "branding"
+      ],
+      "public": false,
+      "summary": "This update enhances the invoice upload page by fixing the dark mode display issues. The AceData wordmark is now used consistently, replacing the previous CDN logo and redundant text. Additionally, the UI has been updated to utilize Element Plus theme tokens for better visual coherence across different themes."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1913",
+      "title": "Implement Fail Closed for Unbillable Gemini Features in Platform Service 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "billing",
+        "gemini",
+        "validation",
+        "error-handling",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces a fail-closed mechanism for unbillable Gemini features, ensuring that requests for unsupported audio inputs and built-in tools return a 400 error before reaching the provider. Key changes include modifications to the GeminiHandler and the addition of validation tests to ensure compliance with billing protocols. The implementation aims to prevent incorrect billing for unsupported features while maintaining support for text and certain media types."
+    },
+    {
       "id": "gh:pr:AceDataCloud/MCPs#572",
       "title": "Updated AiChat Models with Latest Specs in M C Ps 🚀",
       "tags": [
