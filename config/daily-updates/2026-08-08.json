@@ -3,6 +3,358 @@
   "date": "2026-08-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/AuthBackend#420",
+      "title": "Preserve Verdict Alarm Marker in Backend 🚨",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "fix",
+        "backend",
+        "testing",
+        "alerts"
+      ],
+      "public": false,
+      "summary": "This update ensures that the existing 'agent produced no verdict' marker is retained when structured output is missing. A regression test has been added to link the runner failure path to the deployed CLS alarm query, maintaining alert coverage without altering the successful agent path. All tests have passed successfully."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/AuthBackend#419",
+      "title": "Enhance Risk Verdicts with Structured Output in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "AuthBackend",
+        "risk",
+        "backend",
+        "update",
+        "tests",
+        "enhancement"
+      ],
+      "public": false,
+      "summary": "This update requires the Claude CLI to return signup-risk verdicts in a structured format, improving clarity and reliability. The legacy verdict file is retained as a fallback, while output from failed runs is now rejected. Additional tests have been implemented to ensure the integrity of the output contract."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1915",
+      "title": "Enhance Message Handling in Platform Service 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "refactor",
+        "testing",
+        "messages",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update refines the message normalization process by making it capability-profile driven, improving the handling of unsupported message controls. Key changes include the consolidation of alias routing and facade profiles, and the preservation of native model passthrough while rejecting only malformed requests. Comprehensive testing confirms that all functionalities are intact and performance is optimized."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1376",
+      "title": "Enhance Document Visibility Handling in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "visibility",
+        "backend",
+        "tests",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update improves the handling of document visibility by ensuring that the default visibility is inherited based on the document's privacy status. The changes prevent private documents from being mistakenly marked as visible and ensure that the serializer correctly reflects the intended visibility. All tests have passed, confirming the stability of the implementation."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#27",
+      "title": "Release coding agent contracts in Common Frontend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "release",
+        "update",
+        "nexior",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update bumps the `@acedatacloud/core` package to version 0.20.0, ensuring that the merged `./coding-agent` subpath is now published for both Nexior and PlatformFrontend. The TypeScript build and 92 Vitest tests have successfully passed, and the package lock has been updated accordingly. Consumers will remain on version 0.19.1 until they choose to upgrade."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1374",
+      "title": "Enhance Deployment Status Reporting in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "deployment",
+        "backend",
+        "status",
+        "testing",
+        "api"
+      ],
+      "public": false,
+      "summary": "This update ensures that the `deployment-status` accurately reflects a terminal `reclaimed` state when resources are deleted. It also clears stale replicas, pods, and access URLs from the response, while preserving audit metadata. Comprehensive tests have been added to validate the new behavior and ensure reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1373",
+      "title": "Enhance billing guard for reclaimed deployments in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "billing",
+        "validation",
+        "backend",
+        "tests",
+        "deployment"
+      ],
+      "public": false,
+      "summary": "This update introduces a safeguard to prevent the renewal of deployments that have been reclaimed, ensuring that no payments can be processed without available resources. Key changes include the addition of validation logic in the order creation process and the implementation of focused tests to verify this behavior. The superuser path remains intact for operational compensations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Wisdom#213",
+      "title": "Enhance WeChat Security Verification in Wisdom 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Wisdom",
+        "security",
+        "web",
+        "ui",
+        "enhancement",
+        "login"
+      ],
+      "public": false,
+      "summary": "This update introduces a dedicated security-code form to the Wisdom login page, improving the user experience during WeChat security verification. It eliminates the need for QR codes when WeChat reports a security verification status and streamlines the verification process through the existing API. Additionally, the UI now maintains transitional login states, enhancing clarity for users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1582",
+      "title": "Enhance SERP with Solana x402 Wallet Payments in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "payments",
+        "serp",
+        "solana",
+        "vuex"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1582",
+      "summary": "This update introduces Solana x402 wallet payments to the synchronous SERP scenario, allowing for seamless wallet quotes and signed searches. Key changes include a unified request builder for quotes and submissions, while maintaining Vuex state management for error handling and payment cancellations. The implementation has been validated with comprehensive testing and linting, ensuring robust functionality."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1375",
+      "title": "Fix invoice order sorting issue in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "bugfix",
+        "invoice",
+        "backend",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update resolves a critical issue where the `_notify_invoice_issued` function was using a non-existent `created_at` field for sorting `InvoiceOrder`. The sorting has been corrected to use the actual related field `order__created_at` and `order_id`. Additionally, new tests have been added to ensure the integrity of the ORM paths and prevent similar issues in the future."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1581",
+      "title": "Enhance Wallet Payments for Kling and Digital Human in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "feature",
+        "payments",
+        "kling",
+        "digitalhuman",
+        "solana",
+        "x402"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1581",
+      "summary": "This update introduces Solana x402 wallet payments for Kling video generation, Kling talking-photo, Digital Human video generation, and voice cloning. Each endpoint now operates independently with its own quote and payload management, enhancing user experience while maintaining safety protocols. The changes ensure that Kling Motion remains Credits-only due to unpredictable output durations."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CommonFrontend#26",
+      "title": "Enhance Coding Agent Contracts in Common Frontend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CommonFrontend",
+        "feature",
+        "coding-agent",
+        "integration",
+        "testing",
+        "frontend"
+      ],
+      "public": false,
+      "summary": "This update introduces the `@acedatacloud/core/coding-agent` module, featuring stable action/event constants and DTOs for coding agents. Key functionalities include session management, streaming helpers, and rendering limits, all while maintaining app ownership of stores and routers. The changes are validated with comprehensive tests and are designed for seamless integration with Nexior and PlatformFrontend."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1371",
+      "title": "Disable Dynamic Exact Payments for Specific APIs in Backend 🚫",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "backend",
+        "billing",
+        "api",
+        "updates"
+      ],
+      "public": false,
+      "summary": "This update removes Kling Motion and Seedream from the Solana exact x402 allowlist due to their inability to provide final billable usage at authorization time. The changes ensure that both endpoints are excluded from dynamic exact payments, enhancing the reliability of billing processes. Validation tests have confirmed that the modifications are functioning as intended."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/CodingBridge#83",
+      "title": "Enhance Session Hosting Capabilities in Coding Bridge 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "CodingBridge",
+        "feature",
+        "session-hosting",
+        "embed",
+        "licensing",
+        "update"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/CodingBridge/pull/83",
+      "summary": "This update introduces the `coding_bridge.embed.SessionHost`, enabling servers to host Coding Bridge sessions using their own WebSocket/JWT transport. Key features include reusing the existing session registry and implementing provider allowlisting. Additionally, a commercial license option is added while maintaining AGPL-3.0-or-later for public users."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1917",
+      "title": "Enhance text-only message handling in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "openai",
+        "messages",
+        "platform-service"
+      ],
+      "public": false,
+      "summary": "This update introduces a new capability-scoped descriptor for `message_content_formats`, allowing for the normalization of text-only message content. It collapses lossless text-only block arrays into strings while preserving other content types. The implementation is currently disabled unless explicitly declared, ensuring backward compatibility."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1372",
+      "title": "Enhance Invoice Email Details in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "email",
+        "invoice",
+        "backend",
+        "updates",
+        "migration"
+      ],
+      "public": false,
+      "summary": "This update refines the invoice success email by removing the internal UUID and including the billing title, amount, and associated order numbers. Multiple orders are now displayed in the order of their creation, enhancing clarity for users. Additionally, a new migration has been added to update the webhook payload safely, ensuring a smooth transition and rollback capability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#354",
+      "title": "Designing an Internal Debug Agent in Index 🤖",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "docs",
+        "design",
+        "debug",
+        "planning"
+      ],
+      "public": false,
+      "summary": "This update introduces a design for a single-pod internal Claude Code debug workspace, enhancing the development environment without altering runtime code. Key changes include embedding the `coding-bridge` Python package and defining explicit implementation gates for licensing decisions. The new documentation outlines the structure and goals for the debug agent, ensuring a streamlined approach to debugging and testing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#352",
+      "title": "Finalize legal page overrides for white-label plans in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "legal",
+        "white-label",
+        "localization",
+        "documentation",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a dedicated configuration for Site Terms & Privacy, moving away from the generic Documents UI. Key changes include the addition of a backend-rendered default template and support for custom Markdown overrides, enhancing localization capabilities. The existing white-label plan has been updated with new evidence and validation results, ensuring consistency across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1170",
+      "title": "Enhance x402 Discount Breakdown in Frontend Web 🎉",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "discounts",
+        "ui",
+        "metadata",
+        "i18n"
+      ],
+      "public": false,
+      "summary": "This update introduces a detailed breakdown of the x402 discount, showcasing the normal-weight paid USDC, a struck-through list price, and an ACE/manual discount badge. Additionally, it modifies the transaction link placement and retains essential metadata for settlement status and business tags, ensuring legacy-row compatibility. The changes enhance user experience by providing clearer financial information."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1579",
+      "title": "Enhance x402 Quote Discounts in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "enhancement",
+        "discounts",
+        "x402",
+        "ui",
+        "api"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1579",
+      "summary": "This update introduces the ability to show frozen usage discounts on x402 quotes, ensuring ACE discounts are applied before signing. Key changes include improved display of paid USDC with discount badges and a refined layout for transaction actions. Additionally, legacy rows are now accurately represented without inferred pricing."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1166",
+      "title": "Enhance Site Legal Settings in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "legal",
+        "localization",
+        "ui",
+        "features"
+      ],
+      "public": false,
+      "summary": "This update introduces a dedicated 'Terms & Privacy' settings tab, allowing users to manage legal texts separately from the generic Documents UI. Users can now choose between default content or fully custom Markdown for both Terms and Privacy, with features like editing, safe previews, and localization support. The implementation reuses existing operators and ensures localization across all 11 UI locales, enhancing the overall user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Index#353",
+      "title": "Comprehensive Research on China Digital Invoice Providers in Index 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Index",
+        "research",
+        "documentation",
+        "invoice",
+        "China",
+        "providers",
+        "update"
+      ],
+      "public": false,
+      "summary": "This update introduces a detailed study on digital invoice providers in China, featuring a comparison of 16 suppliers including Tencent and Kingdee. Key additions include a POC readiness matrix, vendor decision cards, and a recommended provider-adapter architecture. The documentation has been corrected to reflect the current state of the invoice system and includes a generated PDF for easy reference."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformBackend#1370",
       "title": "Enhance x402 Discount Contract Logic in Backend 🚀",
       "tags": [
