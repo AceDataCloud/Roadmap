@@ -3,6 +3,70 @@
   "date": "2026-08-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1355",
+      "title": "Enhance Logo Processing with New APIs in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "api",
+        "logo",
+        "backend",
+        "features",
+        "testing"
+      ],
+      "public": false,
+      "summary": "This update introduces authenticated logo analysis and processing endpoints, enabling the detection of flat backgrounds and the generation of transparent PNG variants. It also enforces upload size limits and persists optional logo variants for better site customization. Comprehensive tests have been added to ensure functionality and reliability."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1147",
+      "title": "Enhance white-label branding for login redirects in Frontend Web 🎨",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "branding",
+        "authentication",
+        "frontend",
+        "updates",
+        "bugfix"
+      ],
+      "public": false,
+      "summary": "This update implements a robust solution for white-label branding during login redirects by forwarding the current site to AuthFrontend. A new helper function, `withCurrentSite`, is introduced to manage redirect and callback paths while maintaining the platform's branding. Additionally, a prebuild contract check has been added to ensure tenant branding is preserved across all authentication entry points."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1148",
+      "title": "New Invoice Upload Feature for Accountants in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "feature",
+        "invoice",
+        "frontend",
+        "public-upload",
+        "security"
+      ],
+      "public": false,
+      "summary": "This update introduces a new public upload page for invoices, allowing accountants to upload PDFs without needing a platform admin account. The page is accessible via a unique link that expires after three days, ensuring security and ease of use. Key changes include modifications to routing, API calls, and the addition of necessary UI elements for a seamless user experience."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformBackend#1354",
+      "title": "Enable Accountant Invoice Upload Without Login in Backend 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformBackend",
+        "feature",
+        "invoice",
+        "backend",
+        "security",
+        "upload"
+      ],
+      "public": false,
+      "summary": "This update introduces a new feature allowing accountants to upload invoices without needing admin credentials. Each pending or processing invoice will generate a temporary upload token valid for three days, streamlining the process and enhancing user experience. The implementation includes robust security measures and ensures that all uploads are properly validated and tracked."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformFrontend#1144",
       "title": "Streamline White-Label Navigation by Hiding Flagship Links in Frontend Web 🚀",
       "tags": [
