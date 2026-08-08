@@ -3,6 +3,70 @@
   "date": "2026-08-08",
   "items": [
     {
+      "id": "gh:pr:AceDataCloud/PlatformFrontend#1144",
+      "title": "Streamline White-Label Navigation by Hiding Flagship Links in Frontend Web 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformFrontend",
+        "frontend",
+        "navigation",
+        "white-label",
+        "improvement"
+      ],
+      "public": false,
+      "summary": "This update removes flagship links such as platform ranking, connectors, skills, and OAuth apps from the white-label console navigation. It also prevents direct access to the platform ranking admin page and enhances the brand ownership regression check. These changes aim to improve the user experience for white-label sites."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1572",
+      "title": "Streamline Template Creation Process in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "template",
+        "update",
+        "localization",
+        "enhancement",
+        "automation"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1572",
+      "summary": "This update simplifies the automation-template wizard, reducing it from five steps to three: choose, configure, and connect. It also introduces a new mechanism for creating template tasks that are disabled until they are explicitly activated, enhancing user experience and control. Additionally, all 18 locales have been updated to reflect these changes, ensuring consistency across the platform."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/PlatformService#1910",
+      "title": "Strengthen Template Activation Checks in Platform Service 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "PlatformService",
+        "enhancement",
+        "aichat2",
+        "testing",
+        "validation"
+      ],
+      "public": false,
+      "summary": "This update enforces successful manual-run evidence for every template activation path, ensuring more reliable state updates. Controlled-delivery artifact checks have been applied to both direct state updates and the dedicated enable action. Additionally, the state and template_tested_at are now persisted in a single update for improved efficiency."
+    },
+    {
+      "id": "gh:pr:AceDataCloud/Nexior#1573",
+      "title": "Enhance Console Usage for API Services in Nexior 🚀",
+      "tags": [
+        "github",
+        "pr",
+        "Nexior",
+        "console",
+        "api",
+        "usage",
+        "filter",
+        "test"
+      ],
+      "public": true,
+      "url": "https://github.com/AceDataCloud/Nexior/pull/1573",
+      "summary": "This update refines the console usage page by limiting it to API services only, removing the obsolete API/Proxy selector. It introduces filters for the API picker and hides usage actions for non-API applications while maintaining global balance usage. Additionally, a new source contract test has been added to ensure the functionality works as intended."
+    },
+    {
       "id": "gh:pr:AceDataCloud/PlatformService#1911",
       "title": "Enhance Suno Job Handling in Platform Service 🚀",
       "tags": [
